@@ -1,0 +1,82 @@
+Below is the final mathematical derivation of the scalar‐potential dynamics for UCFT. In our UCFT SU(5) framework the complete scalar potential is assumed to take the form
+
+\[
+\begin{aligned}
+V &= V_\Phi + V_\Sigma + V_H + V_{\rm mix},\\[1mm]
+V_\Phi &= m_\Phi^2\,\mathrm{Tr}\bigl[\Phi^2\bigr] \;+\; \lambda_\Phi\,\Bigl(\mathrm{Tr}\bigl[\Phi^2\bigr]\Bigr)^2,\\[1mm]
+V_\Sigma &= m_\Sigma^2\,\mathrm{Tr}\bigl[\Sigma^2\bigr] \;+\; \lambda_\Sigma\,\Bigl(\mathrm{Tr}\bigl[\Sigma^2\bigr]\Bigr)^2,\\[1mm]
+V_H &= m_H^2\,(H\,\bar{H}) \;+\; \lambda_H\,\Bigl(H\,\bar{H}\Bigr)^2,\\[1mm]
+V_{\rm mix} &= \lambda_{\rm mix}\,\mathrm{Tr}\bigl[\Phi^2\bigr]\, (H\,\bar{H})\,.
+\end{aligned}
+\]
+
+For the clock field \(\Phi\) (which is in the adjoint representation of SU(5)), we assume that the potential \(V_\Phi\) drives spontaneous symmetry breaking. In the standard analysis one chooses a gauge where
+
+\[
+\langle \Phi \rangle \;=\; v\,\mathrm{diag}(2,2,2,-3,-3)\,.
+\]
+
+Then, one obtains
+
+\[
+\mathrm{Tr}\bigl[\langle \Phi\rangle^2\bigr] \;=\; 3\,(2^2) \;+\; 2\,((-3)^2) \;=\; 12 \;+\; 18 \;=\; 30\,v^2\,.
+\]
+
+Inserting this into the adjoint potential, we have
+
+\[
+V_\Phi\bigl(\langle \Phi\rangle\bigr) \;=\; m_\Phi^2\,(30\,v^2) \;+\; \lambda_\Phi\,(30\,v^2)^2 \;=\; 30\,m_\Phi^2\,v^2 \;+\; 900\,\lambda_\Phi\,v^4\,.
+\]
+
+Minimizing with respect to \(v\) (assuming \(v\neq 0\)) gives
+
+\[
+\frac{dV_\Phi}{dv}= 60\,m_\Phi^2\,v \;+\; 3600\,\lambda_\Phi\,v^3 \;=\; 0\,,
+\]
+so that
+
+\[
+v^2 \;=\; -\frac{m_\Phi^2}{60\,\lambda_\Phi}\,,
+\]
+with the requirement \(m_\Phi^2<0\) and \(\lambda_\Phi>0\) for a stable vacuum.
+
+In our UCFT, the mixed term
+
+\[
+V_{\rm mix} \;=\; \lambda_{\rm mix}\,\mathrm{Tr}\bigl[\Phi^2\bigr]\,(H\,\bar{H})
+\]
+provides different mass contributions to the components of \(H\) and \(\bar{H}\). Inserting the VEV of \(\Phi\) we have
+
+\[
+V_{\rm mix} \to 30\,\lambda_{\rm mix}\,v^2\,(H\,\bar{H})\,.
+\]
+
+This term, in combination with the Higgs potential \(V_H\), is responsible for the doublet–triplet splitting via the missing–partner mechanism. (In particular, the color–triplet components acquire a large mass proportional to \(\lambda_{\rm mix}\,v^2\) whereas the doublet components remain light.)
+
+Finally, for the \(\Sigma\) field (which is a \(\mathbf{50}\) of SU(5)), one typically assumes
+
+\[
+\langle\Sigma\rangle = 0\,,
+\]
+so that it does not participate in the symmetry breaking but instead is used to generate a heavy mass for the color–triplet Higgs via its interactions.
+
+In summary, the complete scalar potential that governs UCFT is
+
+\[
+\boxed{
+\begin{aligned}
+V &= m_\Phi^2\,\mathrm{Tr}[\Phi^2] + \lambda_\Phi\,\Bigl(\mathrm{Tr}[\Phi^2]\Bigr)^2
++ m_\Sigma^2\,\mathrm{Tr}[\Sigma^2] + \lambda_\Sigma\,\Bigl(\mathrm{Tr}[\Sigma^2]\Bigr)^2\\[1mm]
+&\quad + m_H^2\,(H\,\bar{H}) + \lambda_H\,(H\,\bar{H})^2
++ \lambda_{\rm mix}\,\mathrm{Tr}[\Phi^2]\,(H\,\bar{H})\,,
+\end{aligned}
+}
+\]
+with
+\[
+\langle\Phi\rangle = v\,\mathrm{diag}(2,2,2,-3,-3), \quad \mathrm{Tr}[\langle\Phi\rangle^2]=30\,v^2,\quad v^2 = -\frac{m_\Phi^2}{60\,\lambda_\Phi}\,.
+\]
+
+This mathematical derivation fully specifies the dynamics of the scalar sector in UCFT. It determines the symmetry breaking pattern, provides the mass splitting required by the missing–partner mechanism, and sets the stage for computing the scalar RGEs (which can then be derived symbolically by PyR@TE from the complete model file).
+
+This completes step 2.
