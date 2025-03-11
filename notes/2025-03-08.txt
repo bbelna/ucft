@@ -1,0 +1,14 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Summary of Remaining Work}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Ongoing or upcoming tasks in UCFT include:
+\begin{itemize}
+  \item \textbf{Exact Structure Constants and Coset Geometry}: Finalize the numerical and symbolic derivation of $N_{\alpha,\beta}$ and the full expansions of $g_{\alpha\beta}(\pi)$, ensuring correct normalization.
+  \item \textbf{Higher-Order Interactions}: Include higher-derivative terms (e.g.\ from integrating out heavy states) and determine their phenomenological impact.
+  \item \textbf{Anomaly Cancellation Nuances}: Explore mixed anomalies more thoroughly, check viability of the Green--Schwarz mechanism, and identify minimal matter sets for complete anomaly cancellation.
+  \item \textbf{Renormalization Group (RG) Analyses}: Compute one- and two-loop beta functions for gauge couplings and the clock field couplings, tracking the evolution from high to low scales.
+  \item \textbf{Phenomenological Scans}: Investigate $Z^\prime$ signals, exotic fermion mass ranges, and possible LHC/HL-LHC or future collider detections.
+  \item \textbf{Cosmology}: Study potential inflationary scenarios, cosmic defects, and dark matter sectors in detail.
+  \item \textbf{String/M-theory Embeddings}: Seek explicit compactifications (e.g.\ in heterotic $E_8\times E_8$ or F-theory) yielding $E_6$ and further breakings consistent with UCFT.
+\end{itemize}
