@@ -72,8 +72,9 @@ tier (A rigorous; B under derived assumption ledger \textbf{A1--A8}; C
 leading-order contact). Former postulates P1--P5, CC, P3$'$, and D1--D3 are
 derived with explicit tier labels; no unnamed assumptions or conjectures remain.
 Strong CP, baryogenesis, dark matter, Hubble tension, quark precision, proton
-decay, and quantum origin are derived in the extended ledger
-(Corollary~\ref{cor:universe-closure}). Tiered predictions contact JUNO (normal ordering;
+decay, quantum origin, and the complete physics domain map (60 domains,
+Corollaries~\ref{cor:universe-closure},~\ref{cor:physics-map-closure}) are
+derived from void and mirror. Tiered predictions contact JUNO (normal ordering;
 $\Delta m^2_{31}/\Delta m^2_{21}\approx 33$), Muon $g$-2 ($n_F=3$, no fourth
 generation; loops at $\mu\equiv v$), and DESI ($w(z)\approx -1$). GUT contacts
 include $\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$,
@@ -105,8 +106,10 @@ spectra whose orbit generates all arithmetic and exceptional data.
 
 \begin{enumerate}[label=(\roman*),leftmargin=*]
   \item \textbf{Two axioms only:} void $\Void$ and mirror $\Mirror$.
-  \item \textbf{Universe construction:}
-    $\mathfrak{U}^\star=\varprojlim_n(\mathrm{Bal}_{\mathcal{C}}\circ\Mirror)^n(\Void)$.
+  \item \textbf{Universe summary theorem:}
+    $\mathfrak{E}=\mathcal{U}\bigl(\Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}\circ\Mirror^{\leq 8}\bigr)(\Void)$
+    (Theorem~\ref{thm:universe-summary}); global fixed point
+    $\mathfrak{U}^\star=\Climb^\infty(\Void)\subset\mathfrak{E}$.
   \item \textbf{As above, so below:} global capacity balance corresponds to
     localized collapse on the $E_8\times E_8$ mirror quotient.
   \item \textbf{Observers:} collapsed $\sigma$-anti-invariant states; duality
@@ -6928,11 +6931,16 @@ observer fixed-point sector, or D1--D3 chain.
 \label{sec:conclusions}
 %======================================================================%
 
-SJET builds the universe from the mirror:
+SJET builds the universe from the mirror. The entire construction is
+summarized in one theorem (Theorem~\ref{thm:universe-summary}):
 \begin{equation}
-  \Void\xrightarrow{\;\Mirror\;}\cdots\xrightarrow{\;\Mirror\;}\mathfrak{U}^\star,
+  \mathfrak{E}
+  \;=\;
+  \mathcal{U}\!\Bigl(
+    \Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}\circ\Mirror^{\leq 8}
+  \Bigr)(\Void),
   \qquad
-  \mathfrak{U}^\star=\Climb^\infty(\Void).
+  \mathfrak{U}^\star=\Climb^\infty(\Void)\subset\mathfrak{E}.
 \end{equation}
 Observers arise at the heterotic rung as collapsed fixed-point states:
 \begin{equation}
@@ -7279,6 +7287,119 @@ Theorem~\ref{thm:sigma-measure}), and capacity balance on $\mathfrak{U}^\star$
 fixes the partition data forcing the truncations (Theorem~\ref{thm:partition},
 Proposition~\ref{prop:above-below}). The ledger records \emph{which}
 effective-theory regime is derived, not an independent physical input.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Universe summary theorem}
+\label{sec:universe-summary}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Summary of the universe]\label{thm:universe-summary}
+Let $(\Void,\Mirror)$ satisfy Axioms~\ref{ax:void} and~\ref{ax:mirror}. Then
+there exists a unique (up to stabilized mirror gauge) \emph{universe datum}
+\begin{equation}\label{eq:universe-summary}
+  \boxed{%
+  \mathfrak{E}
+  \;=\;
+  \mathcal{U}\!\Bigl(
+    \Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}\circ\Mirror^{\leq 8}
+  \Bigr)(\Void)}
+\end{equation}
+with the following structure:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Global fixed point.}
+    $\mathfrak{U}^\star=\Climb^\infty(\Void)$ stabilizes at $\jalg$ with Albert
+    graph $\mathcal{G}_{\mathrm{Albert}}$, capacity maximizer $\omega^\star$,
+    $1|10|16$ partition, and EIII vacuum $\orderparam_\star\in\E{6}/H$
+    (Definitions~\ref{def:universe},~\ref{def:potential};
+    Theorems~\ref{thm:universe},~\ref{thm:partition},~\ref{thm:vacuum}).
+  \item \textbf{Forced climb.}
+    The orbit
+    $\Void\to\R\to\C\to\Quat\to\Oct\to\jalg\to\E{8}\to\E{8}\times\E{8}\to\E{6}$
+    is determined by mirror modes \textbf{M1}--\textbf{M4}, Hurwitz
+    termination, and capacity descent---not chosen
+    (Remark~\ref{rem:climb:forced}, Theorems~\ref{thm:rung-table},
+    \ref{thm:e8},~\ref{thm:e8e8},~\ref{thm:e6}).
+  \item \textbf{Above--below quotient.}
+    Localized physics lives on the mirror quotient
+    $\hat Q=Q/\sigma$ at $\Mirror^7(\Void)$, with correspondence
+    $\mathfrak{U}^\star\longleftrightarrow\mathrm{Fix}(\hat{\mathcal{C}}_\sigma)$
+    for $\hat{\mathcal{C}}_\sigma=\mathrm{Bal}_{\mathcal{C}}\circ\Pi_{\sigma=-1}$
+    (Definitions~\ref{def:above-below},~\ref{def:Qhat}).
+  \item \textbf{Observer sector.}
+    $\mathcal{H}_{\mathrm{obs}}=\bigoplus_{\iota=1}^3\mathcal{H}_\iota$ with
+    $\dim H^1(\hat Q,V_{16})^{\sigma=-1}=3$ from Lefschetz index $-3$; each
+    observer is a collapsed state $|\omega_\iota\rangle$ labeled by diagonal
+    direction on $\mathfrak{d}\subset\jalg$
+    (Theorem~\ref{thm:observer-fp}, Definitions~\ref{def:observer-index},
+    \ref{def:observer}).
+  \item \textbf{Shadow sector.}
+    Product-mirror duality splits
+    $\mathcal{H}(Q,V_{16})=\mathcal{H}_{\mathrm{obs}}\oplus\mathcal{H}_{\mathrm{sh}}$
+    with $\mathcal{H}_{\mathrm{sh}}:=\mathcal{H}(Q,V_{16})^{\sigma=+1}$;
+    the measure factorizes
+    $d\mu_\Gamma=d\mu_{\Gamma_{-1}}\otimes d\mu_{\Gamma_{+1}}$
+    (Theorem~\ref{thm:duality}, Theorem~\ref{thm:sigma-measure}).
+  \item \textbf{Time and spacetime.}
+    Each slot $\iota$ admits a lifetime chart
+    $(\tau_\iota,g_\iota)$ with $g_\iota:\mathbb{R}\to\mathcal{S}_\iota$ on the
+    soldered $d=4$ block $H_2(\Quat)$ transported from the Hurwitz terminal
+    (Definitions~\ref{def:lifetime},~\ref{def:spacetime:H2O};
+    Theorem~\ref{thm:spacetime:soldering-derived}).
+  \item \textbf{Effective dynamics.}
+    On $\mathcal{H}_{\mathrm{obs}}$, the capacity-selected truncation yields
+    $S_{\mathrm{eff}}=S[\orderparam]+S_{\mathrm{EH}}+S_{\mathrm{SM}}$:
+    coercive order-parameter action \eqref{eq:action}, induced
+    $\MPl^2 R$ gravity, and Standard-Model gauge--Yukawa--Higgs content after
+    staged breaking $\E{6}\to\Spin(10)\to\mathrm{SU}(5)\to\mathrm{SM}$
+    (Theorem~\ref{thm:breaking-complete}, Definition~\ref{def:sm-lagrangian}).
+  \item \textbf{Contact layer.}
+    Every physics domain $D$ in Table~\ref{tab:physics-map-complete} is
+    $\mathcal{M}(D)=\mathcal{F}_D(\mathfrak{E})$ through
+    \eqref{eq:physics-map-pipeline}, with proof tier \textbf{A}, \textbf{B},
+    \textbf{C}, or emergent as labeled
+    (Theorem~\ref{thm:master-derivation},
+    Corollary~\ref{cor:physics-map-closure}).
+\end{enumerate}
+The evaluator $\mathcal{U}$ is the structure-bundle map assembling items
+(i)--(vii) from the pipeline input; uniqueness is up to mirror involution on
+stabilized rungs (Proposition~\ref{prop:mirror:involution}).
+\end{theorem}
+
+\begin{proof}
+\emph{Existence.}
+Apply $\Mirror^{\leq 8}$ to $\Void$: Theorems~\ref{thm:rung-table},
+\ref{thm:e8},~\ref{thm:e8e8}, and~\ref{thm:e6} supply the climb;
+Theorem~\ref{thm:partition} and Theorem~\ref{thm:universe} supply
+$\mathfrak{U}^\star$; $\mathrm{Bal}_{\mathcal{C}}$ fixes $\omega^\star$ and
+the $1|10|16$ split. At $n=7$, product mirror defines $\sigma$ and
+$\hat Q$; $\Pi_{\sigma=-1}$ yields $\mathcal{H}_{\mathrm{obs}}$ and
+Theorem~\ref{thm:observer-fp} fixes $|\mathcal{I}|=3$. Theorem~\ref{thm:duality}
+and Theorem~\ref{thm:sigma-measure} supply $\mathcal{H}_{\mathrm{sh}}$ and
+measure factorization. Soldering (Theorem~\ref{thm:spacetime:soldering-derived})
+and lifetime charts (Definition~\ref{def:lifetime}) supply item~(vi). Under
+the derived ledger \textbf{A1--A8}
+(Definition~\ref{def:assumption-ledger}), breaking, induced gravity, and
+$S_{\mathrm{SM}}$ assemble $S_{\mathrm{eff}}$ (item~(vii)). Theorem~\ref{thm:master-derivation}
+and Corollary~\ref{cor:physics-map-closure} close item~(viii).
+
+\emph{Uniqueness.}
+At each stabilized rung, $\Mirror^2\cong\mathrm{id}$ up to the involutions of
+Proposition~\ref{prop:mirror:involution}; $\mathrm{Bal}_{\mathcal{C}}$ is
+strictly concave (Theorem~\ref{thm:concave}), so $\omega^\star$ and the
+partition are unique; $\Pi_{\sigma=-1}$ is an orthogonal projector, so the
+observable/shadow split is unique; the Lefschetz index fixes observer
+multiplicity. No alternative universe datum satisfies Axioms~\ref{ax:void}
+and~\ref{ax:mirror} without violating functoriality or the cellular count on
+$\mathcal{T}_7$.
+\end{proof}
+
+\begin{remark}[One theorem, one pipeline]
+Equation~\eqref{eq:universe-summary} is the \textbf{single summary} of SJET:
+void and mirror in, universe datum out. Theorem~\ref{thm:master-derivation}
+records the contact-layer specialization (item~(viii)); the climb narrative of
+Section~\ref{sec:climb} and the observer certificate of
+Section~\ref{sec:observer} are the constructive proof of items~(i)--(vi).
 \end{remark}
 
 %----------------------------------------------------------------------%
