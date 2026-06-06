@@ -26,15 +26,17 @@ $\Mirror^6(\Void)=\E{8}$ & Theorem & Freudenthal & \ref{thm:ladder:e8} \\
 $\Mirror^7(\Void)=\E{8}\times\E{8}$ & Theorem & prod.\ mirror & \ref{thm:ladder:e8e8} \\
 $\Mirror^8(\Void)=\E{6}$ & Theorem & Cartan mirror & \ref{thm:ladder:e6} \\
 $\chi(S_6),\chi(S_7),\chi(S_8)=248,496,78$ & Theorem & chart dim $\chi$ & \ref{thm:ladder:stone-e8} \\
-$\mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}\simeq\mathbf{Obs}^{\mathrm{climb}}$ & Cor. & rungs $0$--$8$ & \ref{cor:void-mirror:global-equiv} \\
-$\Climb^\infty(\Void)\cong\jalg$ & Theorem & 27 stable & \ref{thm:foundations:stone-lift} \\
+$\mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}\simeq\mathbf{Obs}^{\mathrm{climb}}$ & Cor. & sync.\ pack. & \ref{cor:void-mirror:global-equiv} \\
+$\Climb^\infty(\Void)\cong\jalg$ & Theorem & lift; sketch & \ref{thm:foundations:stone-lift} \\
 Capacity concavity & Theorem & log-sum-exp & \ref{thm:ladder:concave} \\
-$1|10|16$ partition & Theorem & concave dual & \ref{thm:ladder:capacity-jordan} \\
-Potential from $\capacity$ & Theorem & sharp limit & \ref{thm:dynamics:potential} \\
-EIII vacuum & Theorem & EIII coercivity & \ref{thm:dynamics:vacuum} \\
+$1|10|16$ partition & Theorem & sketch & \ref{thm:ladder:capacity-jordan} \\
+Potential from $\capacity$ & Theorem & sketch & \ref{thm:dynamics:potential} \\
+EIII vacuum & Theorem & sketch & \ref{thm:dynamics:vacuum} \\
 Three $\mathbf{16}$ cells at $\Mirror^7$ & Prop. & $k\leq3$, $k\geq3$ & \ref{prop:sm:capacity7} \\
 Coset mirror $16\leftrightarrow\overline{16}$ & Prop. & $U(1)$ charge & \ref{prop:ladder:e6branch} \\
-Anomaly cancellation & Theorem & $16-80+64$; GS $-1$ & \ref{thm:gauge-gravity:gs} \\
+Anomaly (1 gen.) & Theorem & $16-80+64$; GS $-1$ & \ref{thm:gauge-gravity:gs} \\
+Anomaly ($n_F=3$) & Prop. & $3\times\mathbf{27}$ & \ref{prop:gauge-gravity:anomaly-nF} \\
+GS mixed ($n_F=3$) & Prop. & $-3\to0$; sketch & \ref{prop:gauge-gravity:gs-nF} \\
 $b_0(3)=12$ & Theorem & \eqref{eq:gauge-gravity:b0} & \ref{thm:gauge-gravity:beta-g} \\
 $\mathfrak{U}^\star=\Climb^\infty(\Void)$ & Theorem & under P1,P2,P4 & \ref{thm:dynamics:universe} \\
 \midrule
@@ -53,7 +55,7 @@ $\Lambda_{\mathrm{cc}}$ & Postulate & tuned; no-go & \ref{post:gauge-gravity:cc}
 OS reconstruction & Theorem & if RP & \ref{thm:spacetime:OS} \\
 RP (semiclassical EIII) & Theorem & $\mu^2>0$ & \ref{thm:spacetime:rp-semiclassical} \\
 RP (nonperturbative) & Postulate & P5 & \ref{post:spacetime:P5} \\
-Mirror quotient $h^1=3$ & Theorem & index & \ref{thm:sm:h1} \\
+Mirror quotient $h^1=3$ & Theorem & P2; index & \ref{thm:sm:h1} \\
 Heterotic $h^1=3$ & Corroboration & string & \ref{rem:sm:heterotic} \\
 \bottomrule
 \end{tabular}
@@ -75,12 +77,17 @@ Dimensions: $78=45+1+16+16$; $27=1+10+16$; $32=28+4$.
 %----------------------------------------------------------------------%
 
 \textbf{Unconditional (void $+$ mirror):} ladder through $\E{6}$; Albert
-graph; capacity partition; potential and EIII vacuum; composite gauge;
-anomaly cancellation; Sakharov $\MPl$; one-loop $\kappa_\star$ and extended
-FRG Jacobian (Table~\ref{tab:gauge-gravity:jacobian}).
+graph; chart synchronization packaging on rungs $0$--$8$
+(Corollary~\ref{cor:void-mirror:global-equiv}); capacity partition;
+potential and EIII vacuum (proof sketches); composite gauge; one-generation
+anomaly arithmetic (Theorem~\ref{thm:gauge-gravity:gs}); Sakharov $\MPl$;
+one-loop $\kappa_\star$ and extended FRG Jacobian
+(Table~\ref{tab:gauge-gravity:jacobian}).
 
 \textbf{Conditional on P2:} $n_F=3$ (Theorem~\ref{thm:sm:three-families}, via
-Proposition~\ref{prop:sm:capacity7} sketch).
+Proposition~\ref{prop:sm:capacity7} sketch); $h^1=3$
+(Theorem~\ref{thm:sm:h1}); $n_F=3$ anomalies/GS
+(Propositions~\ref{prop:gauge-gravity:anomaly-nF}, \ref{prop:gauge-gravity:gs-nF}).
 
 \textbf{Postulates (not derivable):} P1 soldering; P2 chirality;
 P3$'$ flavon hierarchy; P4 GUT--Higgs; P5 reflection positivity; tuned

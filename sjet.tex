@@ -77,8 +77,9 @@ cascade $0\to\E{8}\to\E{8}\times\E{8}\to\E{6}\to\cdots\to 0$; capacity
 balancing on the mirror-refined graph is the \emph{derived} selection principle,
 not an independent axiom. At the $\E{6}$ rung we prove vacuum selection on
 EIII, composite $\Spin(10)\times U(1)$ gauge theory with anomaly cancellation,
-and induced gravitation; postulates P1, P2, P4, P5 complete SM descent
-(three families derived; P1/P2 not promotable from mirror). Conditional ToE
+and induced gravitation; postulates P1, P2, P3$'$, P4, and nonperturbative P5
+complete SM descent (three families and semiclassical reflection positivity
+derived; P1/P2 not promotable from mirror). Conditional ToE
 closure is recorded in Section~\ref{sec:conclusions:toe}. The universe
 is the stabilized mirror climb $\Climb^\infty(\Void)$, equivalently the
 capacity fixed point on the Albert--Cayley graph.
@@ -108,12 +109,16 @@ two-fold:
 Everything else --- graphs, Albert algebra, capacity dual, $\E{6}$ potential,
 gauge sector, induced gravitation, anomaly cancellation --- is \textbf{derived}
 from $\Mirror^n(\Void)$ and capacity balancing on mirror-refined partitions.
-Physical postulates P1, P2, P3$'$, P4, P5 (soldering, chiral matter, flavon
-hierarchy, GUT--Higgs, reflection positivity) remain the honest boundary
-between proved mathematics
-and four-dimensional quantum field theory; three families are \textbf{derived}
-(Theorem~\ref{thm:sm:three-families}), not postulated. P1 and P2 were checked
-for derivation from mirror stabilisation and \emph{not} promoted
+Physical postulates P1, P2, P3$'$, P4, and nonperturbative P5 (soldering,
+chiral matter, flavon hierarchy, GUT--Higgs, full reflection positivity)
+remain the honest boundary between proved mathematics and four-dimensional
+quantum field theory. Three families are \textbf{derived}
+(Theorem~\ref{thm:sm:three-families}, conditional on P2); semiclassical
+reflection positivity on EIII is \textbf{derived}
+(Theorem~\ref{thm:spacetime:rp-semiclassical}, under P1 and one-loop CW mass);
+Postulate~P5 governs only the nonperturbative completion
+(Proposition~\ref{prop:spacetime:rp-nogo}). P1 and P2 were checked for
+derivation from mirror stabilisation and \emph{not} promoted
 (Propositions~\ref{prop:spacetime:p1-nogo}, \ref{prop:sm:p2-nogo}).
 Section~\ref{sec:conclusions:toe} records the conditional ToE closure ledger.
 
@@ -143,7 +148,8 @@ balanced partition at each level (BAMLP), not a separate axiom.
   \item \textbf{Theorem} --- proved from Axioms~1--2 and standard mathematics.
   \item \textbf{Derived} --- explicit construction from mirror climb (no extra
     postulate).
-  \item \textbf{Postulate} --- added four-dimensional physics (P1, P2, P3$'$, P4, P5, CC), named once.
+  \item \textbf{Postulate} --- added four-dimensional physics (P1, P2, P3$'$, P4,
+    nonperturbative P5, CC); semiclassical RP is derived, not postulated.
   \item \textbf{Conjecture} --- motivated but not controlled.
 \end{itemize}
 
@@ -2048,6 +2054,39 @@ The gauge $\beta$-function count in \eqref{eq:gauge-gravity:b0} uses
 $n_F=3$ as the number of chiral families, yielding $b_0=12$.
 \end{proposition}
 
+\begin{proposition}[Mixed Green--Schwarz with $n_F=3$ replicas]
+\label{prop:gauge-gravity:gs-nF}
+Assume $n_F=3$ and Postulate~\ref{post:sm:P2}. Summing three replicas of the
+embedded $\mathbf{27}$ arithmetic of Theorem~\ref{thm:gauge-gravity:gs},
+\begin{equation}\label{eq:gauge-gravity:gs-nF-cubic}
+  \mathcal{A}_{U(1)^3}^{(3\,\mathrm{gen})}
+  = 3\bigl(16\cdot1^3+10\cdot(-2)^3+1\cdot4^3\bigr)=0,
+\end{equation}
+and the mixed anomaly coefficient is
+\begin{equation}\label{eq:gauge-gravity:gs-nF-mixed}
+  \mathcal{A}_{U(1)\cdot\Spin(10)^2}^{(3\,\mathrm{gen})}
+  = 3\cdot(-1)=-3.
+\end{equation}
+A single Green--Schwarz counterterm $\propto\mathrm{tr}(F\wedge F)\,B$ with
+$B$ in the $\mathbf{1}_{+4}$ sector of \eqref{eq:foundations:27branch} cancels
+the \emph{total} mixed polynomial: the axion couples to the summed gauge
+curvature once, absorbing all three replica contributions. This is standard
+for one axion per $U(1)$ factor in the $\mathbf{27}$; the coset scalar
+$\mathbf{1}_{+4}$ supplies that mode. What remains \emph{input} is that each
+generation carries the full $1+10+16$ partners (not only the chiral
+$\mathbf{16}$ of P2); P4 supplies the Higgs content completing the breaking
+chain.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+Linearity of the anomaly polynomial in fermion and scalar representations;
+three identical embedded $\mathbf{27}$s per
+Proposition~\ref{prop:gauge-gravity:anomaly-nF}. The Green--Schwarz mechanism
+with one $B$ shifts $\mathcal{A}_{U(1)\cdot\Spin(10)^2}$ by $+3$ when
+$\partial B\propto\mathrm{tr}(F\wedge F)$ with the normalization of
+Theorem~\ref{thm:gauge-gravity:gs}; see~\cite{GreenSchwarz1984}.
+\end{proof}
+
 %----------------------------------------------------------------------%
 \subsection{Induced gravity}
 \label{sec:gauge-gravity:gravity}
@@ -2459,27 +2498,29 @@ therefore stabilizes at three families.
 \end{corollary}
 
 \begin{theorem}[Mirror quotient cohomology]\label{thm:sm:h1}
-Let $\mathcal{T}_7$ be the stabilized Albert tower at $\Mirror^7(\Void)$
-(Definition~\ref{def:appendix:tower7}), $\hat Q$ its mirror-symmetric
-complexification, and $V_{16}$ the holomorphic $\mathbf{16}$-bundle of
-Definition~\ref{def:appendix:Qhat}. Then
+Assume Postulate~\ref{post:sm:P2} (chiral matter, no $\overline{\mathbf{16}}$
+partners). Let $\mathcal{T}_7$ be the stabilized Albert tower at
+$\Mirror^7(\Void)$ (Definition~\ref{def:appendix:tower7}), $\hat Q$ its
+mirror-symmetric complexification, and $V_{16}$ the holomorphic
+$\mathbf{16}$-bundle of Definition~\ref{def:appendix:Qhat}. Then
 \begin{equation}\label{eq:sm:h1}
   h^1(\hat Q,V_{16}) \;=\; 3
 \end{equation}
 by the mirror-quotient index theorem (Theorem~\ref{thm:appendix:mirror-index}).
 The count matches Theorem~\ref{thm:sm:three-families} and the heterotic
 correspondence~\cite{Witten1985} without importing string theory as primitive
-data.
+data. This is a \textbf{theorem conditional on P2}: Lemma~\ref{lem:appendix:cellular}
+uses P2 to exclude $\sigma$-invariant $\overline{\mathbf{16}}$ partners.
 \end{theorem}
 
 \begin{proof}
 Theorem~\ref{thm:appendix:mirror-index} computes the $\sigma$-anti-invariant
 Dolbeault cohomology on the quotient $\hat Q=Q/\sigma$. The cellular model
 (Lemma~\ref{lem:appendix:cellular}) gives three independent classes, one per
-diagonal direction of Lemma~\ref{lem:sm:rank3}; the Stone lift
+diagonal direction of Lemma~\ref{lem:sm:rank3}, under P2; the Stone lift
 (Proposition~\ref{prop:appendix:stone-lift}) carries them to $Q$; the
 Atiyah--Bott equivariant index~\cite{AtiyahBott1966} identifies the quotient
-count. No step uses heterotic axioms.
+count. No heterotic axioms are imported.
 \end{proof}
 
 \begin{proposition}[No-go: P2 is not derivable from mirror stabilisation]
@@ -2503,7 +2544,7 @@ The exceptional rungs $\Mirror^6(\Void)=\E{8}$ and
 $\Mirror^7(\Void)=\E{8}\times\E{8}$ are Theorems~\ref{thm:ladder:e8} and
 \ref{thm:ladder:e8e8}; family number follows from void, mirror, and capacity
 once chiral matter is postulated (P2); the geometric cohomology route is
-Theorem~\ref{thm:sm:h1}. Stone refinement at $\E{8}$ is
+Theorem~\ref{thm:sm:h1} (also conditional on P2). Stone refinement at $\E{8}$ is
 Theorem~\ref{thm:ladder:stone-e8}.
 \end{remark}
 
@@ -2599,15 +2640,17 @@ $\Mirror^6(\Void)=\E{8}$ & Theorem & Freudenthal & \ref{thm:ladder:e8} \\
 $\Mirror^7(\Void)=\E{8}\times\E{8}$ & Theorem & prod.\ mirror & \ref{thm:ladder:e8e8} \\
 $\Mirror^8(\Void)=\E{6}$ & Theorem & Cartan mirror & \ref{thm:ladder:e6} \\
 $\chi(S_6),\chi(S_7),\chi(S_8)=248,496,78$ & Theorem & chart dim $\chi$ & \ref{thm:ladder:stone-e8} \\
-$\mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}\simeq\mathbf{Obs}^{\mathrm{climb}}$ & Cor. & rungs $0$--$8$ & \ref{cor:void-mirror:global-equiv} \\
-$\Climb^\infty(\Void)\cong\jalg$ & Theorem & 27 stable & \ref{thm:foundations:stone-lift} \\
+$\mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}\simeq\mathbf{Obs}^{\mathrm{climb}}$ & Cor. & sync.\ pack. & \ref{cor:void-mirror:global-equiv} \\
+$\Climb^\infty(\Void)\cong\jalg$ & Theorem & lift; sketch & \ref{thm:foundations:stone-lift} \\
 Capacity concavity & Theorem & log-sum-exp & \ref{thm:ladder:concave} \\
-$1|10|16$ partition & Theorem & concave dual & \ref{thm:ladder:capacity-jordan} \\
-Potential from $\capacity$ & Theorem & sharp limit & \ref{thm:dynamics:potential} \\
-EIII vacuum & Theorem & EIII coercivity & \ref{thm:dynamics:vacuum} \\
+$1|10|16$ partition & Theorem & sketch & \ref{thm:ladder:capacity-jordan} \\
+Potential from $\capacity$ & Theorem & sketch & \ref{thm:dynamics:potential} \\
+EIII vacuum & Theorem & sketch & \ref{thm:dynamics:vacuum} \\
 Three $\mathbf{16}$ cells at $\Mirror^7$ & Prop. & $k\leq3$, $k\geq3$ & \ref{prop:sm:capacity7} \\
 Coset mirror $16\leftrightarrow\overline{16}$ & Prop. & $U(1)$ charge & \ref{prop:ladder:e6branch} \\
-Anomaly cancellation & Theorem & $16-80+64$; GS $-1$ & \ref{thm:gauge-gravity:gs} \\
+Anomaly (1 gen.) & Theorem & $16-80+64$; GS $-1$ & \ref{thm:gauge-gravity:gs} \\
+Anomaly ($n_F=3$) & Prop. & $3\times\mathbf{27}$ & \ref{prop:gauge-gravity:anomaly-nF} \\
+GS mixed ($n_F=3$) & Prop. & $-3\to0$; sketch & \ref{prop:gauge-gravity:gs-nF} \\
 $b_0(3)=12$ & Theorem & \eqref{eq:gauge-gravity:b0} & \ref{thm:gauge-gravity:beta-g} \\
 $\mathfrak{U}^\star=\Climb^\infty(\Void)$ & Theorem & under P1,P2,P4 & \ref{thm:dynamics:universe} \\
 \midrule
@@ -2626,7 +2669,7 @@ $\Lambda_{\mathrm{cc}}$ & Postulate & tuned; no-go & \ref{post:gauge-gravity:cc}
 OS reconstruction & Theorem & if RP & \ref{thm:spacetime:OS} \\
 RP (semiclassical EIII) & Theorem & $\mu^2>0$ & \ref{thm:spacetime:rp-semiclassical} \\
 RP (nonperturbative) & Postulate & P5 & \ref{post:spacetime:P5} \\
-Mirror quotient $h^1=3$ & Theorem & index & \ref{thm:sm:h1} \\
+Mirror quotient $h^1=3$ & Theorem & P2; index & \ref{thm:sm:h1} \\
 Heterotic $h^1=3$ & Corroboration & string & \ref{rem:sm:heterotic} \\
 \bottomrule
 \end{tabular}
@@ -2648,12 +2691,17 @@ Dimensions: $78=45+1+16+16$; $27=1+10+16$; $32=28+4$.
 %----------------------------------------------------------------------%
 
 \textbf{Unconditional (void $+$ mirror):} ladder through $\E{6}$; Albert
-graph; capacity partition; potential and EIII vacuum; composite gauge;
-anomaly cancellation; Sakharov $\MPl$; one-loop $\kappa_\star$ and extended
-FRG Jacobian (Table~\ref{tab:gauge-gravity:jacobian}).
+graph; chart synchronization packaging on rungs $0$--$8$
+(Corollary~\ref{cor:void-mirror:global-equiv}); capacity partition;
+potential and EIII vacuum (proof sketches); composite gauge; one-generation
+anomaly arithmetic (Theorem~\ref{thm:gauge-gravity:gs}); Sakharov $\MPl$;
+one-loop $\kappa_\star$ and extended FRG Jacobian
+(Table~\ref{tab:gauge-gravity:jacobian}).
 
 \textbf{Conditional on P2:} $n_F=3$ (Theorem~\ref{thm:sm:three-families}, via
-Proposition~\ref{prop:sm:capacity7} sketch).
+Proposition~\ref{prop:sm:capacity7} sketch); $h^1=3$
+(Theorem~\ref{thm:sm:h1}); $n_F=3$ anomalies/GS
+(Propositions~\ref{prop:gauge-gravity:anomaly-nF}, \ref{prop:gauge-gravity:gs-nF}).
 
 \textbf{Postulates (not derivable):} P1 soldering; P2 chirality;
 P3$'$ flavon hierarchy; P4 GUT--Higgs; P5 reflection positivity; tuned
@@ -2707,24 +2755,26 @@ the narrowed nonperturbative gap P5 (Section~\ref{sec:conclusions:toe}).
 From Axioms~\ref{ax:void-mirror:void}--\ref{ax:void-mirror:mirror} alone
 (standard mathematics included): the mirror climb through Hurwitz and
 exceptional rungs (Theorems~\ref{thm:void-mirror:table},
-\ref{thm:ladder:e8}--\ref{thm:ladder:e6}); global categorical equivalence
-$\mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}\simeq\mathbf{Obs}^{\mathrm{climb}}$
-on rungs $0$--$8$ with profinite-limit identification
-(Corollary~\ref{cor:void-mirror:global-equiv},
-Theorems~\ref{thm:void-mirror:equiv-ext}, \ref{thm:ladder:stone-e8});
+\ref{thm:ladder:e8}--\ref{thm:ladder:e6}); chart synchronization packaging
+on rungs $0$--$8$ (Corollary~\ref{cor:void-mirror:global-equiv},
+Theorems~\ref{thm:void-mirror:equiv-ext}, \ref{thm:ladder:stone-e8};
+Remark~\ref{rem:void-mirror:sync-pack});
 Albert graph and Stone lift;
-$1|10|16$ capacity partition; $\E{6}$ potential and EIII vacuum;
-composite $\Spin(10)\times U(1)$ gauge theory; Green--Schwarz anomaly
-cancellation; Sakharov induced Planck mass; one-loop
+$1|10|16$ capacity partition; $\E{6}$ potential and EIII vacuum (proof
+sketches); composite $\Spin(10)\times U(1)$ gauge theory; one-generation
+Green--Schwarz anomaly arithmetic (Theorem~\ref{thm:gauge-gravity:gs});
+Sakharov induced Planck mass; one-loop
 $\kappa_\star=96\pi^2/5$ under truncation (i)--(iv)
 (Theorem~\ref{thm:gauge-gravity:kappa-oneloop}); extended FRG Jacobian
 spectrum (Proposition~\ref{prop:gauge-gravity:jacobian},
 Table~\ref{tab:gauge-gravity:jacobian}).
 
-\paragraph{Derived conditional on one postulate.}
-Three families $n_F=3$ (Theorem~\ref{thm:sm:three-families}) follow from
-void, mirror, and capacity \emph{once} chiral matter is postulated (P2).
-Former Postulate~P3 is retired.
+\paragraph{Derived conditional on P2.}
+Three families $n_F=3$ (Theorem~\ref{thm:sm:three-families}), mirror-quotient
+$h^1(\hat Q,V_{16})=3$ (Theorem~\ref{thm:sm:h1}), and the $n_F=3$ Green--Schwarz
+extension (Propositions~\ref{prop:gauge-gravity:anomaly-nF},
+\ref{prop:gauge-gravity:gs-nF}) follow from void, mirror, and capacity
+\emph{once} chiral matter is postulated (P2). Former Postulate~P3 is retired.
 
 \paragraph{Postulates that remain.}
 \begin{center}

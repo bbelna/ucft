@@ -25,14 +25,16 @@ The climb operator is \(\mathsf{C}=\mathrm{Bal}_{\mathcal{C}}\circ\mathsf{M}\) (
 | 7 | \(E_8\times E_8\) | 496 (product mirror) |
 | 8 | \(E_6\) | 78 (Cartan mirror) |
 
-**Derived from axioms:** Albert graph, \(E_6\) potential, gauge sector, capacity dual, global Stone equivalence (rungs 0–8), Stone chart dimensions \(\chi(S_6),\chi(S_7),\chi(S_8)=248,496,78\) (not point cardinality), mirror-quotient \(h^1=3\), Sakharov induced gravity, anomaly cancellation, one-loop \(\kappa_\star=96\pi^2/5\), extended FRG Jacobian \(\{+2,+2,+2,-2,-4\}\), semiclassical reflection positivity on EIII, **three families** (\(n_F=3\), conditional on P2 via `prop:sm:capacity7` sketch).
+**Derived from axioms:** Albert graph, \(E_6\) potential, gauge sector, capacity dual, chart synchronization packaging (rungs 0–8), Stone chart dimensions \(\chi(S_6),\chi(S_7),\chi(S_8)=248,496,78\) (not point cardinality), one-generation anomaly arithmetic, Sakharov induced gravity, one-loop \(\kappa_\star=96\pi^2/5\), extended FRG Jacobian \(\{+2,+2,+2,-2,-4\}\), semiclassical reflection positivity on EIII.
+
+**Conditional on P2:** three families (\(n_F=3\), `thm:sm:three-families`); mirror-quotient \(h^1=3\) (`thm:sm:h1`); \(n_F=3\) anomaly/GS extension (`prop:gauge-gravity:anomaly-nF`, `prop:gauge-gravity:gs-nF`).
 
 ## Conditional ToE closure
 
 | Status | Content |
 |--------|---------|
-| **Unconditional** | Mirror climb, Albert/\(E_6\) dynamics, gauge, induced \(\bar M_{\mathrm{Pl}}\), FRG Jacobian table |
-| **Conditional on P2** | Three chiral families |
+| **Unconditional** | Mirror climb, chart sync packaging, Albert/\(E_6\) dynamics (sketches), gauge, 1-gen anomalies, induced \(\bar M_{\mathrm{Pl}}\), FRG Jacobian |
+| **Conditional on P2** | Three chiral families; \(h^1=3\); \(n_F=3\) GS extension |
 | **Postulates (not derivable)** | P1 soldering; P2 chirality; P3′ flavon hierarchy; P4 GUT–Higgs; P5 nonperturbative RP; tuned \(\Lambda_{\mathrm{cc}}\) (`post:gauge-gravity:cc`) |
 | **Derived (semiclassical)** | Reflection positivity on EIII (`thm:spacetime:rp-semiclassical`) |
 | **No-go** | P1 from mirror (`prop:spacetime:p1-nogo`); P2 from mirror (`prop:sm:p2-nogo`); CC from axioms (`prop:gauge-gravity:cc-nogo`) |
