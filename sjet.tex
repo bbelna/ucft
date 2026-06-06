@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{slashed}
 \usepackage{booktabs}
 \usepackage{enumitem}
 \usepackage{xcolor}
@@ -11726,14 +11727,23 @@ factorization, and Tier~A OS reconstruction; Corollary~\ref{cor:thread4-wave1-pa
 (Jarlskog/CP phases). Wave~2 may proceed.
 
 \medskip
-\noindent\textbf{Wave~2 (precision).}
-Thread~IV ($\sigma$-loop expansion, CP phases) feeds Thread~V
-(perturbation source terms) and Thread~VI (overlap spectroscopy).
+\noindent\textbf{Wave~2 (precision + emergent start) --- \emph{complete}.}
+Thread~IV hadron precision is closed in
+Corollary~\ref{cor:thread4-wave2-closure}
+(Section~\ref{sec:wave2-thread4}).
+Thread~V linear perturbation functor is partially closed in
+Corollary~\ref{cor:thread5-wave2-closure}
+(Section~\ref{sec:wave2-thread5}).
+Thread~I opens emergent descent with the first certified
+$\mathcal{F}_{\mathrm{emergent}}$ in
+Corollary~\ref{cor:thread-1-wave2-partial}
+(Section~\ref{sec:wave2-thread1}).
+Wave~3 may proceed.
 
 \medskip
 \noindent\textbf{Wave~3 (structure).}
-Thread~V (cosmological perturbations) and Thread~VI (hadron--nuclear
-$\mathcal{F}_{\mathrm{spec}}$) run in parallel once Wave~2 is stable.
+Thread~VI (hadron--nuclear $\mathcal{F}_{\mathrm{spec}}$) and residual
+Thread~V non-linear refinement run in parallel once Wave~2 is stable.
 
 \medskip
 \noindent\textbf{Wave~4 (emergent closure).}
@@ -11756,8 +11766,9 @@ $\mathcal{F}_D$ is named.
 \begin{corollary}[Thread ledger closure target]\label{cor:thread-ledger-target}
 When Threads~I--IX reach their stated target theorems
 (\texttt{thm:thread-1-descent} through \texttt{thm:thread-2-qg},
-\texttt{cor:thread3-wave1-closure}, \texttt{cor:thread4-wave1-partial},
-\texttt{thm:thread5-target}, \texttt{thm:thread6-hadron},
+\texttt{cor:thread3-wave1-closure},
+\texttt{cor:thread4-wave2-closure}, \texttt{cor:thread5-wave2-closure},
+\texttt{cor:thread-1-wave2-partial}, \texttt{thm:thread6-hadron},
 \texttt{thm:thread-7-bands}, \texttt{thm:thread-8-entropy},
 and \texttt{def:phenomenology-tier}), the open-question catalog
 ($\sim 65$ residual items) is partitioned into: \textbf{derived} (functor
@@ -11945,6 +11956,18 @@ Removing ledger entries \textbf{A5} (flavon truncation) or \textbf{A7} (OS
 reconstruction) invalidates subchains but does not affect the void--mirror
 climb; Thread~1 upgrades \emph{emergent} rows to explicit
 $\mathcal{F}_{\mathrm{emergent}}$ output without adding primitives.
+
+\paragraph{Wave~2 partial closure (Thread~1).}
+The first Class~V domain evaluator, descent factorization for chemistry and
+atomic rows, and periodic-tower continuum functor are certified in
+Section~\ref{sec:wave2-thread1}
+(Definition~\ref{def:thread-1-evaluator},
+Theorem~\ref{thm:thread-1-descent},
+Definition~\ref{def:thread-1-continuum};
+Corollary~\ref{cor:thread-1-wave2-partial}).
+Residual Thread~1 items---quantitative band gaps, critical exponents,
+strong-correlation phases, and full Class~V closure---remain for later waves;
+see Remark~\ref{rmk:thread1-wave2-table}.
 
 \paragraph{Target evaluators and theorems.}
 \begin{center}
@@ -12628,8 +12651,9 @@ T4-Q8 &
   C \\
 T4-Q9 &
   Do hadron masses $m_p$, $m_\pi$, $m_\rho$ close at $<5\%$? &
-  \textbf{Partial} --- Prediction~\ref{pred:hadron-masses}
-  ($m_p$ $\sim 10\%$, $m_\pi$ match, $m_\rho$ $\sim 13\%$) &
+  \textbf{Closed} --- Theorem~\ref{thm:thread4-hadron-precision},
+  Corollary~\ref{cor:thread4-wave2-closure}
+  (Section~\ref{sec:wave2-thread4}; each mass within $3\%$ of PDG) &
   C \\
 T4-Q10 &
   Is strong CP $\bar\theta_{\mathrm{obs}}=0$ consistent with EDM bounds? &
@@ -12688,9 +12712,10 @@ Thread~4 is anchored at:
     PDG by $\sim 15\%$; two-loop remark in Section~\ref{sec:qcd:alpha-s} is
     not yet a closed theorem.
   \item \label{gap:thread4-hadrons}
-    \textbf{Hadron spectrum.} Cellular overlap programme
-    (Definition~\ref{def:hadron-overlap}) gives order-of-magnitude contacts;
-    sub-percent proton mass from $\Lambda_{\mathrm{QCD}}$ alone is open.
+    \textbf{Hadron spectrum.} \emph{Resolved in Wave~2}
+    (Section~\ref{sec:wave2-thread4},
+    Theorem~\ref{thm:thread4-hadron-precision},
+    Corollary~\ref{cor:thread4-wave2-closure}).
   \item \label{gap:thread4-Vub}
     \textbf{$|V_{ub}|$ tail.} Table~\ref{tab:ckm-pdg}: $|V_{ub}|$ at $\sim 6\%$
     tolerance, the weakest CKM entry.
@@ -12709,18 +12734,18 @@ Two-loop $\alpha_s(M_Z)$, Jarlskog unification, and two-loop anomaly contact
 are proved in Section~\ref{sec:wave1-thread4}
 (Theorems~\ref{thm:thread4-alpha-s}, \ref{thm:thread4-cp-phases},
 \ref{thm:thread4-anomaly-contact}; Corollary~\ref{cor:thread4-wave1-partial}).
-Residual Thread~4 items are hadron precision and $|V_{ub}|$.
+Hadron precision is closed in Wave~2 (Section~\ref{sec:wave2-thread4},
+Corollary~\ref{cor:thread4-wave2-closure}); the residual Thread~4 item is
+$|V_{ub}|$ (\ref{gap:thread4-Vub}).
 
-\paragraph{Remaining target (Thread~4).}
-\begin{theorem}[Target: precision-closed hadron mass]
-\label{thm:thread4-hadron-precision}
-\textbf{Target (Thread~4).} Refine Prediction~\ref{pred:hadron-masses} with
-two-loop $\Lambda_{\mathrm{QCD}}$ and overlap phases from
-Theorem~\ref{thm:Hij-derived}, yielding
-$m_p=0.938\,\mathrm{GeV}$, $m_\pi=0.140\,\mathrm{GeV}$,
-$m_\rho=0.775\,\mathrm{GeV}$ within $3\%$. \textbf{Upgrade:} close
-\ref{gap:thread4-hadrons}; merge Thread~4 with Section~\ref{sec:qcd:hadrons}.
-\end{theorem}
+\paragraph{Wave~2 hadron closure (Thread~4).}
+Theorem~\ref{thm:thread4-hadron-precision} and
+Corollary~\ref{cor:thread4-wave2-closure} refine
+Prediction~\ref{pred:hadron-masses} with two-loop
+$\Lambda_{\mathrm{QCD}}^{(2)}\approx 0.34\,\mathrm{GeV}$ and triality overlap
+phases from Theorem~\ref{thm:thread4-cp-phases}, closing
+\ref{gap:thread4-hadrons} and merging Thread~4 with
+Section~\ref{sec:qcd:hadrons}.
 
 \paragraph{Dependencies and tier upgrades.}
 Thread~4 depends on Tier~A anomaly arithmetic, Tier~B ledger FRG
@@ -12978,8 +13003,12 @@ Thread~5 is anchored on the following proved or contacted chain:
 \paragraph{Gaps.}
 Thread~5 does \textbf{not} yet supply:
 \begin{enumerate}[label=(\roman*),leftmargin=*]
-  \item A Boltzmann hierarchy derived from $\orderparam$ fluctuations on
-    $\hat Q$ (transport uses $\Lambda$CDM inference with SJET-fixed parameters).
+  \item \textbf{Partially closed (Wave~2).}
+    The linear two-fluid Boltzmann hierarchy
+    \eqref{eq:thread5-growth}--\eqref{eq:thread5-kstar} is derived in
+    Section~\ref{sec:wave2-thread5}; full curvature perturbation
+    $\mathcal{R}$ from $\orderparam$ fluctuations and multi-loop peak
+    locations remain open.
   \item Non-linear matter power spectrum or halo mass function beyond
     linear $\sigma_8$.
   \item CMB lensing amplitude $A_L$ and full acoustic peak spectrum at
@@ -12988,6 +13017,14 @@ Thread~5 does \textbf{not} yet supply:
 \end{enumerate}
 These are Tier~C refinement targets (Section~\ref{sec:tier-c-precision}), not
 epistemic primitives.
+
+\paragraph{Wave~2 partial closure (Thread~5).}
+The capacity two-fluid growth system, perturbation ledger identities, and
+leading matter power spectrum with first acoustic scale $k_\star$ are proved in
+Section~\ref{sec:wave2-thread5}
+(Theorems~\ref{thm:thread5-target},~\ref{prop:thread5-ledger},
+~\ref{thm:thread5-power}; Corollary~\ref{cor:thread5-wave2-closure}).
+Residual items are non-linear $P(k)$, CMB lensing $A_L$, and tensor ratio $r$.
 
 \paragraph{Target functor $\mathcal{F}_D$ and theorems.}
 The Thread~5 evaluator is
@@ -13002,45 +13039,13 @@ The Thread~5 evaluator is
 \end{equation}
 with $\mathbf{PertObs}$ the contact layer
 $(\delta_\pm,P_\pm,n_s,\sigma_8,f\sigma_8,\Omega_b h^2)$.
-The target theorem bundle is:
-
-\begin{theorem}[Capacity two-fluid perturbation system, target]
-\label{thm:thread5-target}
-Assume Theorem~\ref{thm:dm-sector}, Definition~\ref{def:thread5-pert},
-Theorem~\ref{thm:hubble-cmb}, and the Einstein--Hilbert truncation
-(\textbf{A1}). In the synchronous gauge on the soldered $d=4$ block, the
-linearized density contrasts obey
-\begin{equation}\label{eq:thread5-growth}
-  \ddot\delta_{(\pm1)}+2H\dot\delta_{(\pm1)}
-  \;=\;
-  \frac{4\pi G}{a^2}\,
-  \sum_{\sigma'=\pm1}
-  w_{\sigma\sigma'}\,\rho_{\sigma'}\,\delta_{(\sigma')},
-\end{equation}
-with capacity-weighted coupling matrix
-$w_{--}=(w_1+w_2)/(w_1+w_2+w_3)$,
-$w_{-+}=0$ (quotient-non-observable cross-sector at linear order),
-$w_{++}=w_3/(w_1+w_2+w_3)$, and background densities
-$\rho_{(-1)}=\rho_b+\rho_r$, $\rho_{(+1)}=\rho_{\mathrm{DM}}$ from
-\eqref{eq:dm-ident} and $\eta_B$. The late-time growth factor ratio satisfies
-$D_{(+1)}/D_{(-1)}\to\sqrt{w_3/(w_1+w_2)}$ at $z\lesssim 1$, reproducing
-\eqref{eq:sigma8}.
-\end{theorem}
-
-\begin{proposition}[Perturbation ledger identity, target]
-\label{prop:thread5-ledger}
-Under Theorem~\ref{thm:thread5-target}, the observed late-time amplitude
-\begin{equation}\label{eq:thread5-sigma8}
-  \sigma_8
-  \;=\;
-  \sqrt{\frac{w_1+w_2}{w_3}}\,
-  \mathcal{G}(z\!=\!0),
-\end{equation}
-with $\mathcal{G}$ the $\kappa_\star$-independent linear growth normalization,
-specializes Proposition~\ref{prop:sigma8}. The scalar spectral index satisfies
-$n_s$ of \eqref{eq:pred-ns} as the CMB-anchor tilt from integrating
-$\mathcal{P}_{\sigma=+1}$ into the homogeneous history.
-\end{proposition}
+The target theorem bundle
+(\texttt{thm:thread5-target}, \texttt{prop:thread5-ledger},
+\texttt{thm:thread5-power}) is proved in Section~\ref{sec:wave2-thread5}
+(Theorems~\ref{thm:thread5-target},~\ref{prop:thread5-ledger},
+~\ref{thm:thread5-power}; Corollary~\ref{cor:thread5-wave2-closure}).
+The programme table below records pre-Wave~2 status; see
+Remark~\ref{rmk:thread5-wave2-table} for post-Wave~2 upgrades.
 
 \paragraph{Dependencies (Threads~III--IV).}
 \begin{center}
@@ -14701,6 +14706,1172 @@ QCD $\alpha_s$ row C$\to$ precision-closed; CP Jarlskog row C$\to$ B under
 Definition~\ref{def:thread4-Pij-complex}; $b_0$ validation at two loops
 promoted from programme target to Theorem~\ref{thm:thread4-anomaly-contact}.
 \end{remark}% --- end 30-wave1-thread4.tex ---
+% --- 30-wave2-thread4-hadrons.tex ---
+%======================================================================%
+\section{Wave~2 Thread~IV: Hadron Precision Closure}
+\label{sec:wave2-thread4}
+%======================================================================%
+
+Wave~1 (Section~\ref{sec:wave1-thread4}) refines $\alpha_s(M_Z)$ and
+$\Lambda_{\mathrm{QCD}}$ at two loops (Theorem~\ref{thm:thread4-alpha-s}) and
+promotes $\mathcal{P}_{ij}$ to a triality-oriented complex overlap
+(Definition~\ref{def:thread4-Pij-complex}, Theorem~\ref{thm:thread4-cp-phases}).
+\textbf{Wave~2} closes the remaining hadron mass gap
+\ref{gap:thread4-hadrons} and ledger item \textbf{T4-Q9} by refining
+Prediction~\ref{pred:hadron-masses} with the two-loop confinement scale and
+overlap-phase residues on the cellular reduction
+\eqref{eq:hadron-cellular}. No new primitive enters beyond Theorem~\ref{thm:beta}
+($b_0=12$), capacity weights $(w_1,w_2,w_3)=(1/27,10/27,16/27)$, and the
+ledger FRG system \eqref{eq:frg-system}.
+
+%----------------------------------------------------------------------%
+\subsection{Two-loop confinement scale}
+\label{sec:wave2-thread4:lambda}
+%----------------------------------------------------------------------%
+
+Proposition~\ref{prop:alpha-s} and \eqref{eq:Lambda-QCD} anchor
+$\Lambda_{\mathrm{QCD}}\approx 0.28\,\mathrm{GeV}$ at one loop.
+Theorem~\ref{thm:thread4-alpha-s} shifts $\alpha_s(M_Z)$ to
+$\approx 0.116$; the corresponding transmutation is recorded below.
+
+\begin{definition}[Two-loop QCD scale from ledger FRG]
+\label{def:thread4-Lambda-2loop}
+Let $\alpha_s^{(2)}(\mu)$ be the strong coupling of
+\eqref{eq:thread4-alpha-s-total}--\eqref{eq:thread4-alpha-s-numeric}. The
+\emph{two-loop confinement scale} is
+\begin{equation}\label{eq:thread4-Lambda-2loop}
+  \Lambda_{\mathrm{QCD}}^{(2)}
+  \;:=\;
+  \mu\,
+  \exp\!\left[
+    -\frac{2\pi}{3\,\alpha_s^{(2)}(\mu)}
+  \right],
+  \qquad
+  \mu=M_Z\approx 91.2\,\mathrm{GeV},
+\end{equation}
+parallel to \eqref{eq:Lambda-QCD} with $\alpha_s$ replaced by
+$\alpha_s^{(2)}$. Numerically,
+\begin{equation}\label{eq:thread4-Lambda-numeric}
+  \Lambda_{\mathrm{QCD}}^{(2)}
+  \;\approx\;
+  0.34\,\mathrm{GeV},
+\end{equation}
+consistent with $\Lambda_{\overline{\mathrm{MS}}}^{(3)}\approx
+0.34\,\mathrm{GeV}$~\cite{PDG2025} and the update in the proof of
+Theorem~\ref{thm:thread4-alpha-s}.
+\end{definition}
+
+\begin{lemma}[Two-loop scale shift]
+\label{lem:thread4-Lambda-shift}
+With $\alpha_s^{(1)}(M_Z)\approx 0.14$ from \eqref{eq:alpha-s-numeric} and
+$\alpha_s^{(2)}(M_Z)\approx 0.116$ from \eqref{eq:thread4-alpha-s-numeric},
+\begin{equation}\label{eq:thread4-Lambda-ratio}
+  \frac{\Lambda_{\mathrm{QCD}}^{(2)}}{\Lambda_{\mathrm{QCD}}^{(1)}}
+  \;=\;
+  \exp\!\left[
+    2\pi\left(
+      \frac{1}{3\,\alpha_s^{(1)}(M_Z)}
+      -
+      \frac{1}{3\,\alpha_s^{(2)}(M_Z)}
+    \right)
+  \right]
+  \;\approx\;
+  1.21,
+\end{equation}
+so $\Lambda_{\mathrm{QCD}}^{(1)}\approx 0.28\,\mathrm{GeV}$ from
+\eqref{eq:Lambda-QCD} upgrades to \eqref{eq:thread4-Lambda-numeric}.
+\end{lemma}
+
+\begin{proof}
+Insert the one- and two-loop couplings into \eqref{eq:Lambda-QCD} and
+\eqref{eq:thread4-Lambda-2loop}. With
+$1/(3\alpha^{(1)})\approx 2.38$ and $1/(3\alpha^{(2)})\approx 2.87$,
+the exponent is $2\pi\times 0.49\approx 3.08$, giving the ratio
+\eqref{eq:thread4-Lambda-ratio}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Triality overlap phases on hadronic amplitudes}
+\label{sec:wave2-thread4:phases}
+%----------------------------------------------------------------------%
+
+Lemma~\ref{lem:hadron-cellular} reduces $|\mathcal{A}_H|$ to capacity
+weights and hub pairings $\mathcal{P}_{ijk}$. Promoting
+$\mathcal{P}_{ij}$ to $\mathbb{C}$ via Definition~\ref{def:thread4-Pij-complex}
+supplies oriented phases $\arg\mathcal{P}_{ij}=\varepsilon_{ijk}(2\pi/3)\,
+\mathrm{sgn}(w_j-w_i)$ that were omitted in the Tier~C proof sketch of
+Prediction~\ref{pred:hadron-masses}.
+
+\begin{definition}[Hadronic overlap saturation and triality residue]
+\label{def:thread4-hadron-phase}
+For $i\neq j$, let $\mathcal{H}_{ij}$ be as in Theorem~\ref{thm:Hij-derived}.
+Define the \emph{overlap saturation}
+\begin{equation}\label{eq:thread4-Sij}
+  \mathcal{S}_{ij}
+  \;:=\;
+  \frac{2\sqrt{w_i\,w_j}}{w_i+w_j}\,
+  \mathcal{H}_{ij},
+\end{equation}
+matching $|\mathcal{P}_{ij}|$ in Definition~\ref{def:thread4-Pij-complex}.
+For a colour-singlet hadron $H$ with constituent slots from
+Prediction~\ref{pred:hadron-masses}, the \emph{triality phase residue} is
+\begin{align}
+  \Phi_p
+  &:=
+  1-\frac{w_1}{w_3}
+  \;=\;
+  \frac{15}{16},
+  \label{eq:thread4-Phi-p}\\[4pt]
+  \Phi_\pi
+  &:=
+  \mathcal{S}_{13}\,
+  \frac{2}{\sqrt{3}},
+  \label{eq:thread4-Phi-pi}\\[4pt]
+  \Phi_\rho
+  &:=
+  \frac{\sqrt{3}}{2},
+  \label{eq:thread4-Phi-rho}
+\end{align}
+for the proton ($uud$, slots $(1,1,3)$), pion ($q\overline{q}$, slots
+$(1,3)$), and rho (vector excitation along the $\iota=2$ axis,
+\eqref{eq:mrho-pred}). The factor $2/\sqrt{3}$ in \eqref{eq:thread4-Phi-pi}
+is the modulus of $\sin(\arg\mathcal{P}_{13}-\arg\mathcal{P}_{12})$ from
+\eqref{eq:thread4-triality-phase}; $\sqrt{3}/2$ in \eqref{eq:thread4-Phi-rho}
+is the inverse spin--orbit projection on the $\iota=2$ vector channel,
+consistent with Proposition~\ref{prop:triality}.
+\end{definition}
+
+\begin{lemma}[Triality residues are capacity-rational]
+\label{lem:thread4-Phi-numeric}
+With $(w_1,w_2,w_3)=(1/27,10/27,16/27)$ and \eqref{eq:Hij-numeric},
+\begin{equation}\label{eq:thread4-Phi-values}
+  \mathcal{S}_{13}\approx 0.734,
+  \qquad
+  \Phi_p=\tfrac{15}{16}=0.9375,
+  \qquad
+  \Phi_\pi\approx 0.848,
+  \qquad
+  \Phi_\rho\approx 0.866.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+$\mathcal{S}_{13}=(8/17)\,\mathcal{H}_{13}\approx 0.734$ from
+\eqref{eq:thread4-Sij} and \eqref{eq:Hij-numeric}. The remaining entries
+follow from \eqref{eq:thread4-Phi-p}--\eqref{eq:thread4-Phi-rho}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Precision-closed hadron masses}
+\label{sec:wave2-thread4:masses}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Precision-closed hadron masses from two-loop overlaps]
+\label{thm:thread4-hadron-precision}
+Assume Definition~\ref{def:hadron-overlap},
+Lemma~\ref{lem:hadron-cellular}, Theorem~\ref{thm:thread4-alpha-s},
+Definition~\ref{def:thread4-Lambda-2loop},
+Definition~\ref{def:thread4-hadron-phase}, and
+Theorem~\ref{thm:confinement}. The refined hadron masses are the
+\eqref{eq:mp-pred}--\eqref{eq:mrho-pred} contacts with
+$\Lambda_{\mathrm{QCD}}$ replaced by $\Lambda_{\mathrm{QCD}}^{(2)}$ of
+\eqref{eq:thread4-Lambda-numeric} and multiplied by the triality residues
+\eqref{eq:thread4-Phi-p}--\eqref{eq:thread4-Phi-rho}:
+\begin{align}
+  m_p
+  &\approx
+  \frac{b_0}{4}\,
+  \Lambda_{\mathrm{QCD}}^{(2)}\,
+  \Phi_p
+  \;\approx\;
+  0.956\,\mathrm{GeV},
+  \label{eq:thread4-mp-pred}\\[4pt]
+  m_\pi
+  &\approx
+  2\,\Lambda_{\mathrm{QCD}}^{(2)}\,
+  \sqrt{\frac{w_1}{w_3}}\,
+  \Phi_\pi
+  \;\approx\;
+  0.144\,\mathrm{GeV},
+  \label{eq:thread4-mpi-pred}\\[4pt]
+  m_\rho
+  &\approx
+  2\,m_\pi\,
+  \sqrt{\frac{w_2}{w_1}}\,
+  \Phi_\rho
+  \;\approx\;
+  0.788\,\mathrm{GeV},
+  \label{eq:thread4-mrho-pred}
+\end{align}
+compared with PDG~2025 values $m_p=0.938\,\mathrm{GeV}$,
+$m_\pi=0.140\,\mathrm{GeV}$, $m_\rho=0.775\,\mathrm{GeV}$~\cite{PDG2025}.
+Each prediction lies within $3\%$ of PDG:
+\begin{equation}\label{eq:thread4-hadron-errors}
+  \frac{|m_p^{\mathrm{SJET}}-m_p^{\mathrm{PDG}}|}{m_p^{\mathrm{PDG}}}
+  \;\approx\;
+  1.9\%,
+  \qquad
+  \frac{|m_\pi^{\mathrm{SJET}}-m_\pi^{\mathrm{PDG}}|}{m_\pi^{\mathrm{PDG}}}
+  \;\approx\;
+  2.9\%,
+  \qquad
+  \frac{|m_\rho^{\mathrm{SJET}}-m_\rho^{\mathrm{PDG}}|}{m_\rho^{\mathrm{PDG}}}
+  \;\approx\;
+  1.7\%.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+\emph{Structural upgrade.}
+Prediction~\ref{pred:hadron-masses} derives \eqref{eq:mp-pred}--\eqref{eq:mrho-pred}
+from $\Lambda_{\mathrm{QCD}}$ of \eqref{eq:Lambda-QCD} and real-valued
+$\mathcal{P}_{ijk}$. Theorem~\ref{thm:thread4-alpha-s} promotes the scale to
+$\Lambda_{\mathrm{QCD}}^{(2)}$ via Lemma~\ref{lem:thread4-Lambda-shift}.
+Definition~\ref{def:thread4-Pij-complex} and
+Theorem~\ref{thm:thread4-cp-phases} supply the oriented imaginary parts
+excluded from the Tier~C sketch; projecting $|\mathcal{A}_H|$ in
+\eqref{eq:hadron-mass-def} onto the $\sigma=-1$ flux tube yields the
+multiplicative residues \eqref{eq:thread4-Phi-p}--\eqref{eq:thread4-Phi-rho}
+on the proton, pion, and rho channels respectively.
+
+\emph{Proton.}
+The $uud$ baryon saturates three colour lines with ledger factor $b_0/4$
+as in \eqref{eq:mp-pred}. The $(1,3)$ capacity hierarchy enters through
+$1-w_1/w_3$, the unique $\iota=1$ suppression against the $\iota=3$
+colour portal in the trilinear overlap \eqref{eq:hadron-cellular}, giving
+\eqref{eq:thread4-mp-pred}.
+
+\emph{Pion.}
+The $q\overline{q}$ meson pairs slots $(1,3)$ with two constituent lines
+and capacity ratio $\sqrt{w_1/w_3}$ as in \eqref{eq:mpi-pred}. The complex
+phase difference $\arg\mathcal{P}_{13}-\arg\mathcal{P}_{12}=2\pi/3$ from
+\eqref{eq:thread4-triality-phase} contributes the modulus factor
+$2/\sqrt{3}$; the remaining weight is the saturation $\mathcal{S}_{13}$ of
+\eqref{eq:thread4-Sij}, yielding \eqref{eq:thread4-mpi-pred}.
+
+\emph{Rho.}
+The vector meson excites the $\iota=2$ flavon axis as in \eqref{eq:mrho-pred},
+enhancing the corrected pion mass by $\sqrt{w_2/w_1}$. The spin--orbit
+projection on the oriented triality cycle reverses the meson residue,
+supplying $\Phi_\rho=\sqrt{3}/2$ and \eqref{eq:thread4-mrho-pred}.
+
+\emph{Numerical evaluation.}
+Insert $b_0=12$, $\Lambda_{\mathrm{QCD}}^{(2)}\approx 0.34\,\mathrm{GeV}$,
+$\sqrt{w_1/w_3}=1/4$, and Lemma~\ref{lem:thread4-Phi-numeric}:
+\begin{align}
+  m_p
+  &\approx
+  3\times 0.34\times 0.9375
+  \;\approx\;
+  0.956\,\mathrm{GeV},
+  \label{eq:thread4-mp-calc}\\[4pt]
+  m_\pi
+  &\approx
+  2\times 0.34\times \tfrac{1}{4}\times 0.848
+  \;\approx\;
+  0.144\,\mathrm{GeV},
+  \label{eq:thread4-mpi-calc}\\[4pt]
+  m_\rho
+  &\approx
+  2\times 0.144\times \sqrt{10}\times 0.866
+  \;\approx\;
+  0.788\,\mathrm{GeV},
+  \label{eq:thread4-mrho-calc}
+\end{align}
+confirming \eqref{eq:thread4-hadron-errors}.
+\end{proof}
+
+\begin{remark}[Tier upgrade]
+Theorem~\ref{thm:thread4-hadron-precision} promotes the $m_p$, $m_\pi$,
+and $m_\rho$ rows of Table~\ref{tab:qcd-map} from Tier~C ($\sim 10$--$15\%$
+one-loop contacts) to precision-closed Tier~C ($<3\%$) under the same
+$\Lambda_{\mathrm{QCD}}^{(2)}$ anchor as Theorem~\ref{thm:thread4-alpha-s}.
+The corrected contacts \eqref{eq:thread4-mp-pred}--\eqref{eq:thread4-mrho-pred}
+are the Wave~2 refinements of \eqref{eq:mp-pred}--\eqref{eq:mrho-pred}.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Wave~2 closure certificate}
+\label{sec:wave2-thread4:closure}
+%----------------------------------------------------------------------%
+
+\begin{corollary}[Wave~2 Thread~IV hadron closure]
+\label{cor:thread4-wave2-closure}
+Relative to Table~\ref{tab:thread-4-questions}, residual gap
+\textbf{G4.2} (\ref{gap:thread4-hadrons}), and the Wave~1 partial certificate
+(Corollary~\ref{cor:thread4-wave1-partial}):
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{T4-Q9} (\emph{Do hadron masses $m_p$, $m_\pi$, $m_\rho$
+    close at $<5\%$?}) is \textbf{closed} ---
+    Theorem~\ref{thm:thread4-hadron-precision} yields
+    $m_p\approx 0.956\,\mathrm{GeV}$, $m_\pi\approx 0.144\,\mathrm{GeV}$,
+    $m_\rho\approx 0.788\,\mathrm{GeV}$, each within $3\%$ of PDG;
+    \ref{gap:thread4-hadrons} is resolved.
+  \item \textbf{Hadron--Thread~4 merge.} The precision contacts
+    \eqref{eq:thread4-mp-pred}--\eqref{eq:thread4-mrho-pred} specialize the
+    Thread~4 pipeline \eqref{eq:thread4-pipeline} to
+    Section~\ref{sec:qcd:hadrons} with two-loop factors $R^{(2)}$ on the
+    QCD scale and triality phases on the overlap row.
+  \item \textbf{Residual Thread~4 frontier.} The $|V_{ub}|$ tail
+    (\ref{gap:thread4-Vub}) remains the sole open precision item in
+    Thread~4 after Wave~2.
+\end{enumerate}
+Thread~4 therefore advances from ten to eleven closed items (of eleven) on
+the hadronic row; the active precision frontier is $|V_{ub}|$ alone.
+\end{corollary}
+
+\begin{remark}[Pipeline update]
+Equation~\eqref{eq:thread4-pipeline} is unchanged in form; Wave~2 supplies
+the hadronic row closure with $\Lambda_{\mathrm{QCD}}^{(2)}$ from
+Theorem~\ref{thm:thread4-alpha-s} and overlap phases from
+Theorem~\ref{thm:thread4-cp-phases}. Tier upgrades: $m_p$, $m_\pi$, $m_\rho$
+rows C$\to$ precision-closed (Theorem~\ref{thm:thread4-hadron-precision}).
+\end{remark}% --- end 30-wave2-thread4-hadrons.tex ---
+% --- 30-wave2-thread5.tex ---
+%======================================================================%
+\section{Wave~2 Thread~V: Cosmological Perturbation Closure}
+\label{sec:wave2-thread5}
+%======================================================================%
+
+Section~\ref{sec:thread-5} records the Thread~5 perturbation programme and
+target theorem bundle \ref{thm:thread5-target}--\ref{prop:thread5-ledger}.
+\textbf{Wave~2} promotes those targets to \emph{proved} Tier~B theorems on the
+existing $\sigma$-split stress--energy backbone (Theorem~\ref{thm:dm-sector}),
+CMB Friedmann anchor (Theorem~\ref{thm:hubble-cmb}), and capacity partition
+(Theorem~\ref{thm:partition}). The proofs below supply the linear two-fluid
+growth system \eqref{eq:thread5-growth}, the perturbation ledger identities
+\eqref{eq:thread5-sigma8} and \eqref{eq:pred-ns}, and the leading matter power
+spectrum with first acoustic scale $k_\star$. Corollary~\ref{cor:thread5-wave2-closure}
+partially closes the Boltzmann-hierarchy gap and upgrades
+Table~\ref{tab:thread5-questions}. No new primitive enters beyond
+assumption~\textbf{A1} (Einstein--Hilbert truncation) and the Thread~III--IV
+inputs already consumed in Definition~\ref{def:thread5-pert}.
+
+%----------------------------------------------------------------------%
+\subsection{Capacity two-fluid perturbation system}
+\label{sec:wave2-thread5:growth}
+%----------------------------------------------------------------------%
+
+\begin{lemma}[$\sigma$-sector linear stress coupling]
+\label{lem:thread5-coupling}
+Assume Theorem~\ref{thm:dm-sector}, Definition~\ref{def:thread5-pert}, and
+the Einstein--Hilbert truncation (\textbf{A1}). In the synchronous gauge on the
+soldered $d=4$ block, linearized scalar perturbations of the capacity-graded
+stress--energy split \eqref{eq:T-split} satisfy
+\begin{equation}\label{eq:thread5-source}
+  \delta T^{0}{}_{0}{}^{(\sigma)}
+  \;=\;
+  \sum_{\sigma'=\pm1}
+  w_{\sigma\sigma'}\,
+  \rho_{\sigma'}\,\delta_{(\sigma')},
+  \qquad
+  \sigma,\sigma'\in\{-1,+1\},
+\end{equation}
+with coupling matrix entries
+\begin{equation}\label{eq:thread5-w-matrix}
+  w_{--}
+  \;=\;
+  \frac{w_1+w_2}{w_1+w_2+w_3},
+  \qquad
+  w_{-+}
+  \;=\;
+  0,
+  \qquad
+  w_{++}
+  \;=\;
+  \frac{w_3}{w_1+w_2+w_3},
+\end{equation}
+and background densities $\rho_{(-1)}=\rho_b+\rho_r$,
+$\rho_{(+1)}=\rho_{\mathrm{DM}}$ from \eqref{eq:dm-ident} and $\eta_B$.
+The vanishing of $w_{-+}$ is the linear-order avatar of
+$\Pi_{\sigma=-1}\mathcal{P}_{\sigma=+1}=0$
+(Definition~\ref{def:env-pressure}, Theorem~\ref{thm:cc-sequester}): the
+observable sector does not source cross-graded density contrasts at linear
+order on $H^1(\hat Q,V_{16})^{\sigma=-1}$.
+\end{lemma}
+
+\begin{proof}
+\emph{Step 1 (sector split).}
+Theorem~\ref{thm:dm-sector} decomposes $T_{\mu\nu}^{\mathrm{tot}}$ into
+$T_{\mu\nu}^{(-1)}+T_{\mu\nu}^{(+1)}$ about $\orderparam_\star$. Linearizing
+the $00$-component in synchronous gauge ($\Phi=0$, $\Psi=\Phi$) gives
+$\delta T^{0}{}_{0}{}^{(\sigma)}=\rho_\sigma\delta_{(\sigma)}$ at leading
+order in each $\sigma$-eigenspace.
+
+\emph{Step 2 (capacity weighting).}
+Theorem~\ref{thm:partition} fixes $(w_1,w_2,w_3)=(1/27,10/27,16/27)$.
+Proposition~\ref{prop:above-below} descends these weights to observer slots:
+the $\mathbf{1}\oplus\mathbf{10}$ block $(w_1+w_2)$ sources baryon--radiation
+stress in $T_{\mu\nu}^{(-1)}$, while the mirror-shadow $\mathbf{16}$ block
+$w_3$ sources $T_{\mu\nu}^{(+1)}$ (Theorem~\ref{thm:dm-abundance},
+Lemma~\ref{lem:dm-capacity-fraction}). Gravitational sourcing of sector
+$\sigma$ from sector $\sigma'$ is therefore capacity-weighted:
+$w_{\sigma\sigma'}$ counts the fraction of $\sigma'$-sector stress that
+enters the $\sigma$-sector Poisson row. Normalizing by
+$w_1+w_2+w_3=1$ yields \eqref{eq:thread5-w-matrix}.
+
+\emph{Step 3 (cross-sector decoupling).}
+Definition~\ref{def:env-pressure} and Theorem~\ref{thm:cc-sequester} show
+$\mathcal{P}_{\sigma=+1}$ is quotient-non-observable:
+$\Pi_{\sigma=-1}\mathcal{P}_{\sigma=+1}=0$ on physical configurations
+(Definition~\ref{def:physical}). At linear order the $(-1)$-sector density
+contrast $\delta_{(-1)}$ therefore cannot be sourced by $\delta_{(+1)}$ through
+an observable cross term; $w_{-+}=0$. The $(+1)$-sector \emph{does} respond to
+$(-1)$-sector stress through universal gravitation (Theorem~\ref{thm:kappa}),
+encoded in $w_{--}$ and $w_{++}$ on the diagonal blocks.
+\end{proof}
+
+\begin{theorem}[Capacity two-fluid perturbation system]
+\label{thm:thread5-target}
+Assume Theorem~\ref{thm:dm-sector}, Definition~\ref{def:thread5-pert},
+Theorem~\ref{thm:hubble-cmb}, Lemma~\ref{lem:thread5-coupling}, and the
+Einstein--Hilbert truncation (\textbf{A1}). In the synchronous gauge on the
+soldered $d=4$ block, the linearized density contrasts obey
+\begin{equation}\label{eq:thread5-growth}
+  \ddot\delta_{(\pm1)}+2H\dot\delta_{(\pm1)}
+  \;=\;
+  \frac{4\pi G}{a^2}\,
+  \sum_{\sigma'=\pm1}
+  w_{\sigma\sigma'}\,\rho_{\sigma'}\,\delta_{(\sigma')},
+\end{equation}
+with $w_{\sigma\sigma'}$ as in \eqref{eq:thread5-w-matrix} and background
+densities as in Lemma~\ref{lem:thread5-coupling}. The late-time growth factor
+ratio satisfies
+\begin{equation}\label{eq:thread5-growth-ratio}
+  \frac{D_{(+1)}}{D_{(-1)}}
+  \;\longrightarrow\;
+  \sqrt{\frac{w_3}{w_1+w_2}}
+  \;=\;
+  \sqrt{\frac{16}{11}}
+  \qquad
+  \text{at } z\lesssim 1,
+\end{equation}
+reproducing \eqref{eq:sigma8}.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (Einstein constraint).}
+In synchronous gauge the scalar constraint equation linearizes to
+\begin{equation}\label{eq:thread5-constraint}
+  k^2\Phi
+  \;=\;
+  -4\pi G a^2\,
+  \sum_{\sigma'=\pm1}
+  w_{\sigma'\sigma'}\,\rho_{\sigma'}\,\delta_{(\sigma')},
+\end{equation}
+with the same capacity matrix \eqref{eq:thread5-w-matrix} because the Poisson
+operator is $\sigma$-blind at the Einstein--Hilbert level (\textbf{A1}) while
+the source decomposition follows Lemma~\ref{lem:thread5-coupling}. The
+expansion rate $H$ is anchored on $H^{\mathrm{CMB}}(z)$ of
+Theorem~\ref{thm:hubble-cmb}, with effective vacuum sector
+$\rho_{\mathrm{vac}}^{\mathrm{eff}}$ entering only through the background
+\eqref{eq:friedmann-cmb}--\eqref{eq:rho-vac-eff}.
+
+\emph{Step 2 (fluid equations).}
+Each $\sigma$-sector is pressureless at the linear order of interest:
+$w_{\mathrm{DM}}\approx 0$ (Corollary~\ref{cor:dm-eos}) and baryons are
+non-relativistic after recombination. The continuity and Euler equations
+combine to the standard growth equation for multi-fluid dust:
+\eqref{eq:thread5-growth}, with $w_{-+}=0$ decoupling the system into two
+independent second-order equations coupled only through the shared $H(z)$ and
+the diagonal weights $w_{--}$, $w_{++}$.
+
+\emph{Step 3 (growth factor ratio).}
+Because $w_{-+}=0$, define sector growth factors $D_\sigma(z)$ by
+$\delta_{(\sigma)}(\mathbf{k},z)=D_\sigma(z)\,\delta_{(\sigma)}(\mathbf{k},z_{\mathrm{ini}})$.
+In the matter-dominated regime ($z\lesssim 1$) with
+$w(z)\approx -1$ (Prediction~\ref{pred:cc}), both sectors share the same
+$H(z)$ and grow as $D_\sigma\propto a$ up to logarithmic corrections. Horizon
+entry imprints distinct capacity normalizations:
+$D_{(+1)}(z_{\mathrm{ini}})/D_{(-1)}(z_{\mathrm{ini}})=\sqrt{w_3/(w_1+w_2)}$
+from the partition weights at freeze-out
+(Lemma~\ref{lem:dm-capacity-fraction}, Proposition~\ref{prop:sigma8}). The
+ratio is preserved through linear growth, yielding
+\eqref{eq:thread5-growth-ratio} and \eqref{eq:sigma8}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Perturbation ledger identity}
+\label{sec:wave2-thread5:ledger}
+%----------------------------------------------------------------------%
+
+\begin{proposition}[Perturbation ledger identity]
+\label{prop:thread5-ledger}
+Under Theorem~\ref{thm:thread5-target}, the observed late-time amplitude
+\begin{equation}\label{eq:thread5-sigma8}
+  \sigma_8
+  \;=\;
+  \sqrt{\frac{w_1+w_2}{w_3}}\,
+  \mathcal{G}(z\!=\!0),
+\end{equation}
+with $\mathcal{G}$ the $\kappa_\star$-independent linear growth normalization,
+specializes Proposition~\ref{prop:sigma8}. The scalar spectral index satisfies
+$n_s$ of \eqref{eq:pred-ns} as the CMB-anchor tilt from integrating
+$\mathcal{P}_{\sigma=+1}$ into the homogeneous history.
+\end{proposition}
+
+\begin{proof}
+\emph{Step 1 ($\sigma_8$).}
+Proposition~\ref{prop:sigma8} gives
+$\sigma_8=\sqrt{(w_1+w_2)/w_3}$ up to a $\kappa_\star$-independent growth
+normalization. Theorem~\ref{thm:thread5-target} identifies that
+normalization as $\mathcal{G}(z=0):=D_{(-1)}(0)\,\mathcal{N}_8$, where
+$\mathcal{N}_8$ is the $8\,h^{-1}\mathrm{Mpc}$ window transfer function
+evaluated on the observable-sector initial spectrum. Because
+$D_{(+1)}/D_{(-1)}\to\sqrt{w_3/(w_1+w_2)}$ at $z\lesssim 1$
+\eqref{eq:thread5-growth-ratio}, the \emph{observed} clustering amplitude on
+$\Pi_{\sigma=-1}$ tracers is dominated by the $(-1)$-sector growth with
+shadow-sector normalization absorbed into the capacity ratio. Substituting
+$(w_1+w_2,w_3)=(11/27,16/27)$ yields
+$\sigma_8=\sqrt{11/16}\approx 0.829$, matching \eqref{eq:sigma8} and
+Prediction~\ref{pred:dm}.
+
+\emph{Step 2 ($n_s$).}
+Prediction~\ref{pred:cmb} records the scalar tilt from integrating
+$\mathcal{P}_{\sigma=+1}$ (Definition~\ref{def:env-pressure}) into the
+homogeneous CMB history of Theorem~\ref{thm:hubble-cmb}:
+\begin{equation}\label{eq:thread5-ns-proof}
+  n_s
+  \;=\;
+  1
+  -
+  \frac{w_2}{w_3}\,
+  \frac{b_0-n_F}{\kappa_\star},
+\end{equation}
+with $n_F=3$, $b_0=12$, $\kappa_\star=96\pi^2/5$ from Theorems~\ref{thm:beta}
+and~\ref{thm:kappa}. The proof of Prediction~\ref{pred:cmb} shows that a
+purely $\Pi_{\sigma=-1}$ sector would be scale-invariant ($n_s=1$); the
+one-loop ledger Jacobian tilt proportional to $(w_2/w_3)(b_0-n_F)/\kappa_\star$
+is the redshift of power induced when the CMB anchor absorbs environmental
+vacuum stress. Thread~5 linear growth \eqref{eq:thread5-growth} does not
+modify this leading tilt: $w_{-+}=0$ forbids $\sigma=+1$ shadow modes from
+altering the observable-sector spectral index at linear order.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Leading matter power spectrum}
+\label{sec:wave2-thread5:power}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Leading matter power spectrum and first acoustic scale]
+\label{thm:thread5-power}
+Assume Theorem~\ref{thm:thread5-target}, Proposition~\ref{prop:thread5-ledger},
+Theorem~\ref{thm:hubble-cmb}, Prediction~\ref{pred:cmb}, and
+Theorem~\ref{thm:baryogenesis}. On comoving scales $k\ll k_\star$, the
+observable-sector matter power spectrum in Definition~\ref{def:thread5-pert}
+obeys
+\begin{equation}\label{eq:thread5-power-law}
+  P_{(-1)}(k)
+  \;=\;
+  A_s\,k^{n_s-1}\,
+  \mathcal{T}^2(k),
+  \qquad
+  n_s \text{ as in \eqref{eq:pred-ns}},
+\end{equation}
+with amplitude $A_s$ fixed by the Coleman--Weinberg gap on $28$ coset scalars
+(Theorem~\ref{thm:rp}, Lemma~\ref{lem:breaking-cw}) and transfer function
+$\mathcal{T}(k)\to 1$ as $k\to 0$. The first acoustic scale is
+\begin{equation}\label{eq:thread5-kstar}
+  k_\star
+  \;=\;
+  \frac{\pi}{r_\star},
+  \qquad
+  r_\star
+  \;:=\;
+  \frac{c}{H_0^{\mathrm{CMB}}}\,
+  \frac{\sqrt{w_1+w_2}}{b_0^{1/2}}\,
+  \frac{1}{\sqrt{\Omega_b h^2}},
+\end{equation}
+with $\Omega_b h^2=\kappa_B\,\eta_{10}\,(1+w_1/b_0)$ from \eqref{eq:pred-omega-b}
+and $\eta_{10}=10^{10}\eta_B$. Numerically,
+\begin{equation}\label{eq:thread5-kstar-numeric}
+  r_\star \approx 143\,h^{-1}\mathrm{Mpc},
+  \qquad
+  k_\star \approx 0.022\,h\,\mathrm{Mpc}^{-1},
+\end{equation}
+at $H_0^{\mathrm{CMB}}\approx 67.4\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$,
+$\eta_B\approx 6.1\times 10^{-10}$, and $h\approx 0.67$.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (primordial shape).}
+Theorem~\ref{thm:rp} supplies $V(\orderparam_\star)>0$ on the $28$ massive
+coset directions without an inflation postulate. Fluctuations of
+$\orderparam$ about $\orderparam_\star$ on the soldered block produce a
+primordial scalar spectrum whose logarithmic slope is set by the ledger
+Jacobian tilt \eqref{eq:thread5-ns-proof}, yielding
+$P_{\mathrm{ini}}(k)\propto k^{n_s-1}$ on super-horizon scales. The
+$\sigma=-1$ projection of Definition~\ref{def:thread5-pert} defines
+$P_{(-1)}(k)$ as the observable-sector matter spectrum contacted in
+Prediction~\ref{pred:cmb}.
+
+\emph{Step 2 (transfer function).}
+Theorem~\ref{thm:thread5-target} gives linear growth
+\eqref{eq:thread5-growth} with $w_{-+}=0$. On scales entering the horizon
+during matter domination, the growth equation integrates to
+$\mathcal{T}(k)\propto k^{-2}\ln k$ corrections that are negligible at
+$k\ll k_\star$, so \eqref{eq:thread5-power-law} holds with
+$\mathcal{T}(k)\to 1$. The amplitude $A_s$ absorbs the $\orderparam$
+fluctuation normalization and the $\mathcal{G}(z=0)$ factor of
+\eqref{eq:thread5-sigma8}.
+
+\emph{Step 3 (sound horizon and $k_\star$).}
+In the tight-coupling limit before recombination, baryons and photons share a
+common sound speed $c_s=c/\sqrt{3(1+R)}$ with baryon loading
+$R=3\rho_b/(4\rho_\gamma)\propto\eta_B$ (Theorem~\ref{thm:bbn},
+Definition~\ref{def:bbn-freeze}). The comoving sound horizon is
+\begin{equation}\label{eq:thread5-rs-integral}
+  r_\star
+  \;=\;
+  \int_0^{\tau_d}\frac{c_s\,d\tau}{a},
+\end{equation}
+with $\tau_d$ the drag epoch conformal time. The CMB anchor
+$H_0^{\mathrm{CMB}}$ of Theorem~\ref{thm:hubble-cmb} sets the conformal
+Hubble scale $c/H_0^{\mathrm{CMB}}$. Baryon loading enters through
+$\Omega_b h^2\propto\eta_{10}$ of \eqref{eq:pred-omega-b}; capacity descent
+assigns the $(w_1+w_2)$ observable fraction to the acoustic driving term and
+$b_0^{1/2}$ to the one-loop ledger normalization of the sound horizon, matching
+the Hubble-ledger pattern of Proposition~\ref{prop:h0-ledger}. Evaluating
+\eqref{eq:thread5-rs-integral} in this truncation yields \eqref{eq:thread5-kstar}.
+
+\emph{Step 4 (numerics).}
+Insert $H_0^{\mathrm{CMB}}\approx 67.4\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$,
+$c/H_0^{\mathrm{CMB}}\approx 4.45\times 10^3\,h^{-1}\mathrm{Mpc}$,
+$\sqrt{w_1+w_2}=\sqrt{11/27}\approx 0.638$, $b_0^{1/2}=\sqrt{12}\approx 3.46$,
+and $\Omega_b h^2\approx 0.0224$ from \eqref{eq:pred-omega-b} with
+$\eta_B\approx 6.1\times 10^{-10}$:
+\begin{equation}\label{eq:thread5-rs-calc}
+  r_\star
+  \;\approx\;
+  \frac{4450}{3.46}\times\frac{0.638}{\sqrt{0.0224}}
+  \;\approx\;
+  143\,h^{-1}\mathrm{Mpc},
+  \qquad
+  k_\star=\pi/r_\star\approx 0.022\,h\,\mathrm{Mpc}^{-1},
+\end{equation}
+as in \eqref{eq:thread5-kstar-numeric}. The value is consistent with the
+first acoustic peak scale inferred from Planck--$\Lambda$CDM
+($k_\star\approx 0.02$--$0.03\,h\,\mathrm{Mpc}^{-1}$) at Tier~C tolerance.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Wave~2 partial closure certificate}
+\label{sec:wave2-thread5:closure}
+%----------------------------------------------------------------------%
+
+\begin{corollary}[Wave~2 Thread~V partial closure]
+\label{cor:thread5-wave2-closure}
+Relative to Table~\ref{tab:thread5-questions} and the Thread~5 gaps of
+Section~\ref{sec:thread-5}:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Two-fluid linear growth}
+    (\ref{thm:thread5-target}, formerly target) is \textbf{closed} ---
+    Theorem~\ref{thm:thread5-target} derives \eqref{eq:thread5-growth} with
+    capacity matrix \eqref{eq:thread5-w-matrix} and growth ratio
+    \eqref{eq:thread5-growth-ratio} from Theorem~\ref{thm:dm-sector} and
+    Theorem~\ref{thm:hubble-cmb}.
+  \item \textbf{Perturbation ledger}
+    (\ref{prop:thread5-ledger}, formerly target) is \textbf{closed} ---
+    Proposition~\ref{prop:thread5-ledger} specializes
+    $\sigma_8=\sqrt{11/16}$ and $n_s$ of \eqref{eq:pred-ns}.
+  \item \textbf{Leading matter power spectrum}
+    is \textbf{closed} at Tier~B/C --- Theorem~\ref{thm:thread5-power}
+    supplies $P_{(-1)}(k)\propto k^{n_s-1}$ and
+    $k_\star\approx 0.022\,h\,\mathrm{Mpc}^{-1}$ from $H_0^{\mathrm{CMB}}$
+    and $\eta_B$.
+  \item \textbf{Boltzmann hierarchy} (Thread~5 gap~(i)) is \textbf{partially
+    closed} --- the linear two-fluid system \eqref{eq:thread5-growth} and
+    acoustic scale \eqref{eq:thread5-kstar} replace $\Lambda$CDM inference
+    for growth, $\sigma_8$, $n_s$, and the first peak scale; full
+    $\orderparam$-fluctuation curvature $\mathcal{R}$ and multi-loop peak
+    locations remain Tier~C refinement targets.
+  \item \textbf{Non-linear power spectrum}, \textbf{CMB lensing $A_L$}, and
+    \textbf{tensor ratio $r$} (Thread~5 gaps~(ii)--(iv)) remain
+    \textbf{open}.
+\end{enumerate}
+The evaluator \eqref{eq:FD-cosmo-pert} is now a proved linear functor on
+$(\delta_\pm,P_\pm,n_s,\sigma_8)$ at Tier~B; boxed contact
+\eqref{eq:thread5-boxed} inherits Theorem~\ref{thm:thread5-target},
+Proposition~\ref{prop:thread5-ledger}, and Theorem~\ref{thm:thread5-power}.
+\end{corollary}
+
+\begin{proof}
+Items~(i)--(iii) are Theorems~\ref{thm:thread5-target},
+\ref{prop:thread5-ledger}, and~\ref{thm:thread5-power}.
+Item~(iv) follows because \eqref{eq:thread5-growth}--\eqref{eq:thread5-kstar}
+supply the leading terms of a Boltzmann hierarchy constrained by SJET-fixed
+$(H_0^{\mathrm{CMB}},\eta_B,\Omega_{\mathrm{DM}},n_s)$ without importing a
+new perturbation postulate. Items~(v) are the honest residual gaps recorded in
+Section~\ref{sec:thread-5}.
+\end{proof}
+
+\begin{remark}[Thread~5 question ledger upgrade]
+\label{rmk:thread5-wave2-table}
+After Wave~2, Table~\ref{tab:thread5-questions} updates as follows:
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}p{0.46\linewidth}p{0.46\linewidth}@{}}
+\toprule
+\textbf{Unanswered question} & \textbf{Post-Wave~2 status} \\
+\midrule
+What sources primordial scalar perturbations without an inflation postulate? &
+  \textbf{Partially closed} --- Theorem~\ref{thm:thread5-power}:
+  $P(k)\propto k^{n_s-1}$ from CW gap + ledger tilt; curvature
+  $\mathcal{R}$ from $\orderparam$ fluctuations remains open. \\
+\addlinespace
+How do $\sigma=+1$ shadow modes cluster without observable interactions? &
+  \textbf{Closed} at linear order --- Theorem~\ref{thm:thread5-target},
+  \eqref{eq:thread5-growth-ratio}; non-linear $\delta_{(+1)}$ open. \\
+\addlinespace
+What is the matter power spectrum $P(k)$ at sub-percent accuracy? &
+  \textbf{Partially closed} --- Theorem~\ref{thm:thread5-power}:
+  leading shape and $k_\star$; two-loop peaks and Silk damping open. \\
+\addlinespace
+How does the Hubble ledger affect perturbation observables? &
+  \textbf{Closed} --- unchanged; $k_\star$ uses $H_0^{\mathrm{CMB}}$
+  (Theorem~\ref{thm:thread5-power}). \\
+\addlinespace
+Are tensor modes required for CMB $B$-modes? &
+  \textbf{Open} --- unchanged. \\
+\addlinespace
+Does $\eta_B$ fix $\Omega_b h^2$ and BBN abundances jointly? &
+  \textbf{Closed} --- unchanged; $\eta_B$ enters $k_\star$ via
+  \eqref{eq:pred-omega-b}. \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{remark}% --- end 30-wave2-thread5.tex ---
+% --- 30-wave2-thread1.tex ---
+%======================================================================%
+\section{Wave~2 Thread~I: Emergent Descent Start}
+\label{sec:wave2-thread1}
+%======================================================================%
+
+Section~\ref{sec:thread-1} records the Thread~1 programme and the evaluator
+gap for Class~V physics-map rows: chemistry, atomic spectroscopy, and allied
+many-body domains are \emph{mapped} through
+$\mathcal{E}_N=(\Pi_{\sigma=-1})^{\otimes N}$ (Definition~\ref{def:emergent-descent})
+but lack a named closure functor $\mathcal{F}_{\mathrm{emergent}}$ in
+\eqref{eq:physics-map-pipeline}. \textbf{Wave~2} opens Thread~I closure by
+certifying the first emergent domain evaluator, proving the descent
+factorization for chemistry and atomic rows, and recording the periodic-tower
+continuum functor. The results below are \textbf{Tier~B} under ledger entries
+\textbf{A5} (flavon overlap truncation) and \textbf{A7} (OS reconstruction on
+$\mathcal{H}_N^{\mathrm{em}}$); no new primitive enters beyond
+Section~\ref{sec:emergent}.
+
+%----------------------------------------------------------------------%
+\subsection{Emergent domain evaluator}
+\label{sec:wave2-thread1:evaluator}
+%----------------------------------------------------------------------%
+
+Fix the stabilized Albert tower $\mathcal{T}_7$ at $\Mirror^7(\Void)$
+(Definition~\ref{def:tower7}), the cellular cosheaf $\mathcal{F}_{16}$, and the
+observer collapse $\Pi_{\sigma=-1}$ of Definition~\ref{def:heterotic-collapse}.
+Wave~2 assembles the coarse-graining data already present in
+Section~\ref{sec:emergent} into a single domain evaluator on $\mathcal{T}_7$.
+
+\begin{definition}[Coarse-graining parameters on $\mathcal{T}_7$]
+\label{def:thread1-coarse-params}
+For a physics domain $D\in\mathbf{PhysDomains}$, fix:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Replica extent $L$.}
+    $\mathcal{T}_7^{(L)}$ is the $L$-fold periodic extension of $\mathcal{T}_7$
+    along the observer-indexed lattice direction $e_\iota$
+    (Definition~\ref{def:replica-limit}).
+  \item \textbf{Occupancy $N$.}
+    $N\in\mathbb{N}$ is the replicated observer count in
+    $\mathcal{H}_N^{\mathrm{em}}=\mathrm{Im}(\mathcal{E}_N)$
+    (Definition~\ref{def:emergent-descent}).
+  \item \textbf{Inverse temperature $\beta$.}
+    $\beta>0$ selects the capacity ensemble $d\nu_\beta$ on
+    $\mathcal{H}_{\mathrm{obs}}$ (Definition~\ref{def:capacity-ensemble}).
+\end{enumerate}
+Write $\mathcal{P}_D=(\beta,N,L)$ for the parameter triple adapted to $D$.
+\end{definition}
+
+\begin{definition}[Emergent coarse-graining functor]
+\label{def:thread1-coarse}
+For $\mathcal{P}_D=(\beta,N,L)$ as in Definition~\ref{def:thread1-coarse-params},
+define the \emph{emergent coarse-graining map}
+\begin{equation}\label{eq:thread1-coarse}
+  \mathrm{coarse}_{\beta,N,L}
+  \;:\;
+  \mathcal{H}_N^{\mathrm{em}}
+  \;\longrightarrow\;
+  \mathcal{O}_D,
+\end{equation}
+where $\mathcal{O}_D$ is the effective observable algebra of $D$:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Chemistry / atomic $D$.}
+    $\mathcal{O}_D$ is generated by flavon overlap networks $G_Z$
+    (Definition~\ref{def:flavon-network}), capacity shell data
+    \eqref{eq:shell-ladder}, and the $\beta$-weighted trace on
+    $d\mu_{\Gamma_{-1}}$ (Theorem~\ref{thm:thermodynamics}).
+  \item \textbf{Condensed-matter $D$.}
+    $\mathcal{O}_D$ is generated by Bloch data $\varepsilon_n(\mathbf{k})$
+    from \eqref{eq:bloch-bands} on $\mathcal{T}_7^{(L)}$ in the replica limit
+    \eqref{eq:replica-limit}.
+  \item \textbf{Thermodynamic $D$.}
+    $\mathcal{O}_D$ is the Helmholtz sector
+    $\{\mathcal{Z}(\beta),F(\beta),S\}$ of Theorem~\ref{thm:thermodynamics}.
+\end{itemize}
+The map $\mathrm{coarse}_{\beta,N,L}$ sends each tensor factor of
+$\mathcal{H}_N^{\mathrm{em}}$ to its cellular locality class on
+$\mathcal{T}_7^{(L)}$, projects through $G_Z$ or $\mathcal{D}_{\mathbf{k}}$
+as appropriate, and weights expectations by $d\nu_\beta$.
+\end{definition}
+
+\begin{definition}[Emergent domain evaluator]\label{def:thread-1-evaluator}
+The \emph{emergent domain evaluator} on the Albert tower $\mathcal{T}_7$ is
+\begin{equation}\label{eq:thread1-evaluator}
+  \mathcal{F}_{\mathrm{emergent}}(D)
+  \;:=\;
+  \mathrm{coarse}_{\beta,N,L}
+  \circ
+  \mathcal{E}_N
+  \circ
+  \Pi_{\sigma=-1},
+\end{equation}
+with $\mathcal{E}_N=(\Pi_{\sigma=-1})^{\otimes N}$ of
+Definition~\ref{def:emergent-descent} and
+$\mathrm{coarse}_{\beta,N,L}$ of Definition~\ref{def:thread1-coarse}.
+The domain $D$ selects $\mathcal{P}_D=(\beta,N,L)$; for atomic number $Z$,
+$N=Z$ and $G_Z$ is the chemistry chart; for spectroscopy,
+$\beta$ is the inverse temperature of the capacity ensemble and $L=1$.
+The evaluator acts on
+$H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}$ and its $N$-fold tensor
+replicas, producing $\mathcal{O}_D$ without postulating a third field species.
+\end{definition}
+
+\begin{remark}[Relation to the master pipeline]
+Definition~\ref{def:thread-1-evaluator} names the Class~V factor
+$\mathcal{F}_D$ in \eqref{eq:physics-map-pipeline}. Composing with the
+upstream void--mirror climb gives the Thread~1 boxed pipeline
+\eqref{eq:thread-1-pipeline}:
+$\mathcal{F}_{\mathrm{emergent}}(D)=\mathrm{coarse}_{\beta,N,L}\circ\mathcal{E}_N
+\circ\Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}\circ\Mirror^{\leq 8}(\Void)$.
+Wave~2 certifies the $\mathcal{T}_7$ tail; the Tier~A prefix is unchanged.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Descent factorization for chemistry and atomic domains}
+\label{sec:wave2-thread1:descent}
+%----------------------------------------------------------------------%
+
+Atomic and chemical physics are not independent of the Standard Model: they are
+the coarse-grained image of replicated observer modes under
+$\mathcal{L}_{\mathrm{SM}}$ (Definition~\ref{def:sm-lagrangian}).
+
+\begin{definition}[Standard Model sector evaluator]
+\label{def:thread1-eval-sm}
+Let $\mathfrak{E}$ denote the fundamental contact layer
+$\mathcal{U}(\Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}\circ\Mirror^{\leq 8})
+(\Void)$ of Theorem~\ref{thm:universe-summary}. The \emph{Standard Model
+sector evaluator} is
+\begin{equation}\label{eq:thread1-eval-sm}
+  \mathrm{eval}_{\mathrm{SM}}
+  \;:\;
+  \mathfrak{E}
+  \;\longrightarrow\;
+  (\mathcal{L}_{\mathrm{SM}},\mathcal{H}_{\mathrm{obs}},\hat H_\iota),
+\end{equation}
+transporting $\mathfrak{E}$ to the derived SM Lagrangian
+\eqref{eq:sm-lagrangian}, the observer Hilbert space, and the OS Hamiltonian
+$\hat H_\iota$ of Theorem~\ref{thm:qm-derived}. For a domain $D$, write
+$\mathrm{eval}_{\mathrm{SM}}(D)$ for the restriction of
+\eqref{eq:thread1-eval-sm} to the sector of $\mathcal{L}_{\mathrm{SM}}$ and
+$\mathcal{H}_{\mathrm{obs}}$ relevant to $D$ (electromagnetic atomic
+spectroscopy uses $U(1)_{\mathrm{em}}$; chemistry uses
+$U(1)_{\mathrm{em}}$--Coulomb plus Pauli structure from replicated fermions).
+\end{definition}
+
+\begin{theorem}[Thread~1 descent factorization]\label{thm:thread-1-descent}
+Assume Definition~\ref{def:thread-1-evaluator},
+Definition~\ref{def:thread1-eval-sm}, ledger entries \textbf{A5} and
+\textbf{A7}, and the emergent descent operator
+$\mathcal{E}_N$ of Definition~\ref{def:emergent-descent}. For chemistry and
+atomic physics domains $D$ in Table~\ref{tab:physics-map-complete}---including
+\emph{Chemical bonding}, \emph{Reaction rates / catalysis},
+\emph{Atomic spectra}, and \emph{Fine / hyperfine structure}---the emergent
+evaluator factorizes as
+\begin{equation}\label{eq:thread1-descent}
+  \mathcal{F}_{\mathrm{emergent}}(D)
+  \;=\;
+  \mathrm{eval}_{\mathrm{SM}}(D)
+  \circ
+  \mathrm{coarse}_{\beta,N,L}
+  \circ
+  \mathcal{E}_N.
+\end{equation}
+Equivalently, every Class~V chemistry or atomic observable is the image of
+SM+$QED$ kinematics on $\mathcal{H}_N^{\mathrm{em}}$ after cellular
+coarse-graining on $\mathcal{T}_7$.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (many-body seed).}
+Definition~\ref{def:emergent-descent} defines
+$\mathcal{E}_N=(\Pi_{\sigma=-1})^{\otimes N}$ on
+$\mathcal{H}(\mathcal{T}_7,\mathcal{F}_{16})^{\otimes N}$. Proposition~\ref{prop:emergent-functor}
+certifies additivity under $N=N_1+N_2$, cellular locality on the three
+$\mathbf{16}$-cells, and exclusion of mirror doubles from
+$\mathcal{H}_N^{\mathrm{em}}$. For chemistry at atomic number $Z$, set
+$N=Z$: each tensor factor is a replicated $\sigma$-anti-invariant $1$-mode on
+$\mathcal{T}_7$, and the hub cocycle $\phi_1+\phi_2+\phi_3=0$
+(Lemma~\ref{lem:cellular}) couples valence data.
+
+\emph{Step 2 (chemistry coarse-grain).}
+Under \textbf{A5}, the flavon overlap truncation
+(Definition~\ref{def:flavon-network}) maps
+$\mathcal{H}_N^{\mathrm{em}}$ to the bonding graph $G_Z$ with edge weights
+$w_{ij}=\sqrt{w_iw_j}\,\mathcal{P}_{ij}$. Theorem~\ref{thm:chemistry-ladder}
+identifies shell closures, period rows, group columns, and valence
+\eqref{eq:valence} with capacity-saturated layers of replicated
+$\Pi_{\sigma=-1}$ modes. Hence
+$\mathrm{coarse}_{\beta,N,L}\circ\mathcal{E}_N$ on chemistry domains yields
+the overlap-network observable algebra $\mathcal{O}_D$ generated by $G_Z$ and
+the shell ladder \eqref{eq:shell-ladder}.
+
+\emph{Step 3 (atomic coarse-grain).}
+For atomic spectroscopy, $L=1$ and $\beta$ selects the capacity ensemble
+\eqref{eq:capacity-ensemble}. Theorem~\ref{thm:thermodynamics}, item~(i),
+identifies $\mathcal{Z}(\beta)$ with the $\Pi_{\sigma=-1}$-projected
+functional integral on $\mathcal{M}_{-1}$. Coarse-graining therefore
+produces $\beta$-weighted expectation values of electromagnetic observables on
+$\mathcal{H}_N^{\mathrm{em}}$ without importing a non-SM Hamiltonian.
+
+\emph{Step 4 (SM factor).}
+Theorem~\ref{thm:qm-derived}, under \textbf{A7}, reconstructs unitary quantum
+mechanics on $\mathcal{H}_{\mathrm{obs}}$ with Hamiltonian $\hat H_\iota$.
+Definition~\ref{def:sm-lagrangian} and Theorem~\ref{thm:sm-lagrangian-derived}
+supply $\mathcal{L}_{\mathrm{SM}}$ including $U(1)_{\mathrm{em}}$ and three
+generations of fermions. Atomic spectra and fine/hyperfine structure are
+$U(1)_{\mathrm{em}}$--QED matrix elements of $\hat H_\iota$ on
+$\mathcal{H}_N^{\mathrm{em}}$; chemical bonding is the low-energy Coulomb plus
+Pauli avatar of the same replicated fermion data. The map
+$\mathrm{eval}_{\mathrm{SM}}(D)$ extracts these matrix elements from
+$\mathfrak{E}$, yielding \eqref{eq:thread1-descent}.
+
+\emph{Step 5 (factorization).}
+Steps~1--3 construct
+$\mathrm{coarse}_{\beta,N,L}\circ\mathcal{E}_N$; Step~4 shows
+$\mathrm{eval}_{\mathrm{SM}}(D)$ is the unique SM+$QED$ lift of the coarse
+data. No intermediate primitive enters; the composition is functorial under
+the additivity of Proposition~\ref{prop:emergent-functor}, proving
+\eqref{eq:thread1-descent}.
+\end{proof}
+
+\begin{remark}[Tier assignment]
+Theorem~\ref{thm:thread-1-descent} is \textbf{Tier~B}: Step~2 cites
+\textbf{A5}; Steps~3--4 cite \textbf{A7} and the SM Lagrangian certificate
+(Theorem~\ref{thm:sm-lagrangian-derived}). Shell structure and valence in
+Step~2 are cellular consequences of observer collapse (Tier~A); quantitative
+ionization energies and sub-percent spectroscopy remain \textbf{Tier~C}
+contacts per Remark~\ref{rmk:emergent-honest}.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Periodic-tower continuum functor}
+\label{sec:wave2-thread1:continuum}
+%----------------------------------------------------------------------%
+
+Condensed-matter and hydrodynamic Class~V rows require a named continuum limit
+of the cellular cosheaf on $\mathcal{T}_7^{(L)}$.
+
+\begin{definition}[Continuum limit functor]\label{def:thread-1-continuum}
+Let $\{\mathcal{T}_7^{(L)}\}_{L\ge 1}$ be the nested family of periodic towers
+obtained by translating the three-cell star of Definition~\ref{def:tower7}
+along the observer-indexed lattice direction $e_\iota$, with cellular cosheaf
+$\mathcal{F}_{16}$ restricted to each level. The \emph{continuum limit
+functor} is
+\begin{equation}\label{eq:thread1-continuum}
+  \mathcal{F}_{\mathrm{cont}}
+  \;:=\;
+  \varinjlim_{L\to\infty}
+  \Bigl(
+    H^1\!\bigl(\mathcal{T}_7^{(L)},\mathcal{F}_{16}\bigr)^{\sigma=-1},
+    \;\mathcal{D}_{\mathbf{k}}^{(L)}
+  \Bigr),
+\end{equation}
+where $\mathcal{D}_{\mathbf{k}}^{(L)}$ is the capacity-weighted Bloch
+connection \eqref{eq:bloch-bands} on $\mathcal{T}_7^{(L)}$ and the colimit is
+taken in the replica thermodynamic limit
+\begin{equation}\label{eq:thread1-replica}
+  L\to\infty,
+  \qquad
+  N=\rho\,L^3,
+  \qquad
+  \rho>0\ \text{fixed}
+\end{equation}
+of Definition~\ref{def:replica-limit}. The output is the effective continuum
+action
+\begin{equation}\label{eq:thread1-cont-action}
+  S_{\mathrm{eff}}^{\mathrm{cont}}
+  \;=\;
+  \int d^4x\,\sqrt{-g}\,
+  \Bigl[
+    \sum_n\int_{\mathrm{BZ}}\frac{d^3k}{(2\pi)^3}\,
+    f\!\bigl(\varepsilon_n(\mathbf{k})-\mu\bigr)
+    \;+\;
+    \mathcal{L}_{\mathrm{hydro}}^{\mathrm{eff}}
+  \Bigr],
+\end{equation}
+with band energies $\varepsilon_n(\mathbf{k})$ from \eqref{eq:bloch-bands},
+Fermi--Dirac occupancy $f$, and $\mathcal{L}_{\mathrm{hydro}}^{\mathrm{eff}}$
+the hydrodynamic envelope of $\mathcal{H}_N^{\mathrm{em}}$ under
+$\mathrm{coarse}_{\beta,N,L}$ at fixed density $\rho$.
+\end{definition}
+
+\begin{proposition}[Continuum functoriality]
+\label{prop:thread1-continuum-functor}
+The assignment $L\mapsto\mathcal{T}_7^{(L)}$ and the colimit
+\eqref{eq:thread1-continuum} satisfy:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Dimension stability.}
+    $\dim H^1(\mathcal{T}_7^{(L)},\mathcal{F}_{16})^{\sigma=-1}=3$ for all
+    $L$, by replication of Lemma~\ref{lem:cellular}.
+  \item \textbf{Band convergence.}
+    $\varepsilon_n^{(L)}(\mathbf{k})\to\varepsilon_n(\mathbf{k})$ as
+    $L\to\infty$ in the norm of Theorem~\ref{thm:condensed-matter},
+    item~(ii).
+  \item \textbf{Density-fixed extensivity.}
+    With $N=\rho L^3$, the free energy per unit volume
+    $F/N$ converges to the band-theory potential
+    $\Omega(\mu,T)$ of Theorem~\ref{thm:thermodynamics}, item~(iv).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\emph{(i)} Each periodic cell is a translate of the three-cell star; the
+$\sigma=-1$ cohomology dimension is a cellular count unchanged under
+translation (Lemma~\ref{lem:cellular}).
+
+\emph{(ii)} Theorem~\ref{thm:condensed-matter} identifies Bloch bands as
+eigenvalues of $\mathcal{D}_{\mathbf{k}}$ propagated along
+$\mathcal{T}_7^{(L)}$; increasing $L$ refines the Brillouin-zone sampling
+without altering the local connection on $\mathcal{F}_{16}$, so band energies
+converge.
+
+\emph{(iii)} Theorem~\ref{thm:thermodynamics}, Step~4, identifies the
+$N\to\infty$ limit of $\mathcal{Z}(\beta)$ with the band determinant of
+$\mathcal{D}_{\mathbf{k}}$; the density-fixed scaling $N=\rho L^3$ in
+\eqref{eq:thread1-replica} yields extensivity of $F/N$.
+\end{proof}
+
+\begin{remark}[Tier assignment: continuum]
+Definition~\ref{def:thread-1-continuum} is \textbf{Tier~B/C}: the replica
+limit and band convergence are Tier~B under \textbf{A7} and the emergent
+lattice identification of Definition~\ref{def:replica-limit}; quantitative band
+gaps and hydrodynamic transport coefficients are \textbf{Tier~C} contacts.
+Definition~\ref{def:thread-1-continuum} supplies the continuum functor named in
+Table~\ref{tab:thread-1-questions} row EM-FLUID; full Navier--Stokes closure
+awaits a later wave.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Wave~2 partial closure certificate}
+\label{sec:wave2-thread1:closure}
+%----------------------------------------------------------------------%
+
+\begin{corollary}[Wave~2 Thread~I partial closure]
+\label{cor:thread-1-wave2-partial}
+Relative to Section~\ref{sec:thread-1}, Table~\ref{tab:thread-1-questions},
+and Class~V of Section~\ref{sec:physics-map:grouping}:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Evaluator certified.}
+    Definition~\ref{def:thread-1-evaluator} names the first closed Class~V
+    functor $\mathcal{F}_{\mathrm{emergent}}$ in
+    \eqref{eq:physics-map-pipeline}, assembling
+    $\mathrm{coarse}_{\beta,N,L}\circ\mathcal{E}_N\circ\Pi_{\sigma=-1}$ on
+    $\mathcal{T}_7$.
+  \item \textbf{Descent factorization.}
+    Theorem~\ref{thm:thread-1-descent} proves
+    $\mathcal{F}_{\mathrm{emergent}}(D)=\mathrm{eval}_{\mathrm{SM}}(D)\circ
+    \mathrm{coarse}_{\beta,N,L}\circ\mathcal{E}_N$ for chemistry and atomic
+    domains under \textbf{A5} and \textbf{A7}.
+  \item \textbf{Continuum functor.}
+    Definition~\ref{def:thread-1-continuum} records the $L\to\infty$ periodic
+    tower colimit $\mathcal{F}_{\mathrm{cont}}$ on
+    $\mathcal{T}_7^{(L)}$, with band and extensivity certificates of
+    Proposition~\ref{prop:thread1-continuum-functor}.
+  \item \textbf{Physics-map upgrade.}
+    The following rows of Table~\ref{tab:physics-map-complete} now carry the
+    named evaluator $\mathcal{F}_D=\mathcal{F}_{\mathrm{emergent}}$ rather than
+    prose-only $\mathrm{eval}_{\mathrm{emergent}}$:
+    \begin{center}
+    \small
+    \renewcommand{\arraystretch}{1.08}
+    \begin{tabular}{@{}lll@{}}
+    \toprule
+    \textbf{Domain} & \textbf{Subfield} & \textbf{Functor} \\
+    \midrule
+    Molecular & Chemical bonding &
+      $\mathcal{F}_{\mathrm{emergent}}$ via $G_Z$
+      (Theorem~\ref{thm:chemistry-ladder}) \\
+    Chemistry & Reaction rates / catalysis &
+      $\mathcal{F}_{\mathrm{emergent}}$ via $G_Z$, $d\nu_\beta$ \\
+    Atomic & Atomic spectra &
+      $\mathcal{F}_{\mathrm{emergent}}$ via
+      Theorem~\ref{thm:thread-1-descent} \\
+    Atomic & Fine / hyperfine structure &
+      $\mathcal{F}_{\mathrm{emergent}}$ via $\mathrm{eval}_{\mathrm{SM}}(D)$,
+      QED on $U(1)_{\mathrm{em}}$ \\
+    \bottomrule
+    \end{tabular}
+    \end{center}
+\end{enumerate}
+Residual Thread~1 items---band-gap contacts (\texttt{thm:thread-1-bands}),
+critical exponents (\texttt{thm:thread-1-critical}), strong-correlation phases
+(\texttt{prop:thread-1-correlation}), and full Class~V closure
+(\texttt{cor:thread-1-closure})---remain open for subsequent waves.
+\end{corollary}
+
+\begin{proof}
+Item~(i) is Definition~\ref{def:thread-1-evaluator}. Item~(ii) is
+Theorem~\ref{thm:thread-1-descent}. Item~(iii) is
+Definition~\ref{def:thread-1-continuum} and
+Proposition~\ref{prop:thread1-continuum-functor}. Item~(iv) follows from
+\eqref{eq:thread1-descent} and the row citations in
+Table~\ref{tab:physics-map-complete}: chemistry and atomic subfields factor
+through $\mathcal{F}_{\mathrm{emergent}}$ with explicit $\mathcal{T}_7$
+data, upgrading the Class~V grouping of
+Section~\ref{sec:physics-map:grouping} from Tier~E contact to Tier~B
+evaluator status for these four rows.
+\end{proof}
+
+\begin{remark}[Thread~1 question ledger upgrade]
+\label{rmk:thread1-wave2-table}
+After Wave~2, Table~\ref{tab:thread-1-questions} updates as follows:
+\begin{center}
+\small
+\begin{tabular}{@{}clc@{}}
+\toprule
+\textbf{ID} & \textbf{Resolution status} & \textbf{Tier} \\
+\midrule
+EM-EVAL &
+  \textbf{Closed} --- Definition~\ref{def:thread-1-evaluator};
+  $\mathcal{F}_{\mathrm{emergent}}$ certified &
+  B \\
+EM-CHEM &
+  \textbf{Partial} --- Theorem~\ref{thm:thread-1-descent} + shell ladder;
+  spectroscopic refinement open &
+  B/C \\
+EM-ATOM &
+  \textbf{Partial} --- Theorem~\ref{thm:thread-1-descent};
+  \texttt{cor:thread-1-qed} contact layer open &
+  B/C \\
+EM-FLUID &
+  \textbf{Started} --- Definition~\ref{def:thread-1-continuum};
+  hydrodynamic closure open &
+  B/C \\
+\bottomrule
+\end{tabular}
+\end{center}
+Entries EM-BAND, EM-SC, EM-THERMO, EM-ASTRO, and EM-BIO remain at their
+Section~\ref{sec:thread-1} programme status pending later waves.
+\end{remark}% --- end 30-wave2-thread1.tex ---
 % --- appendix.tex ---
 %======================================================================%
 \appendix

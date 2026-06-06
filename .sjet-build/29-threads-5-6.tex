@@ -126,8 +126,12 @@ Thread~5 is anchored on the following proved or contacted chain:
 \paragraph{Gaps.}
 Thread~5 does \textbf{not} yet supply:
 \begin{enumerate}[label=(\roman*),leftmargin=*]
-  \item A Boltzmann hierarchy derived from $\orderparam$ fluctuations on
-    $\hat Q$ (transport uses $\Lambda$CDM inference with SJET-fixed parameters).
+  \item \textbf{Partially closed (Wave~2).}
+    The linear two-fluid Boltzmann hierarchy
+    \eqref{eq:thread5-growth}--\eqref{eq:thread5-kstar} is derived in
+    Section~\ref{sec:wave2-thread5}; full curvature perturbation
+    $\mathcal{R}$ from $\orderparam$ fluctuations and multi-loop peak
+    locations remain open.
   \item Non-linear matter power spectrum or halo mass function beyond
     linear $\sigma_8$.
   \item CMB lensing amplitude $A_L$ and full acoustic peak spectrum at
@@ -136,6 +140,14 @@ Thread~5 does \textbf{not} yet supply:
 \end{enumerate}
 These are Tier~C refinement targets (Section~\ref{sec:tier-c-precision}), not
 epistemic primitives.
+
+\paragraph{Wave~2 partial closure (Thread~5).}
+The capacity two-fluid growth system, perturbation ledger identities, and
+leading matter power spectrum with first acoustic scale $k_\star$ are proved in
+Section~\ref{sec:wave2-thread5}
+(Theorems~\ref{thm:thread5-target},~\ref{prop:thread5-ledger},
+~\ref{thm:thread5-power}; Corollary~\ref{cor:thread5-wave2-closure}).
+Residual items are non-linear $P(k)$, CMB lensing $A_L$, and tensor ratio $r$.
 
 \paragraph{Target functor $\mathcal{F}_D$ and theorems.}
 The Thread~5 evaluator is
@@ -150,45 +162,13 @@ The Thread~5 evaluator is
 \end{equation}
 with $\mathbf{PertObs}$ the contact layer
 $(\delta_\pm,P_\pm,n_s,\sigma_8,f\sigma_8,\Omega_b h^2)$.
-The target theorem bundle is:
-
-\begin{theorem}[Capacity two-fluid perturbation system, target]
-\label{thm:thread5-target}
-Assume Theorem~\ref{thm:dm-sector}, Definition~\ref{def:thread5-pert},
-Theorem~\ref{thm:hubble-cmb}, and the Einstein--Hilbert truncation
-(\textbf{A1}). In the synchronous gauge on the soldered $d=4$ block, the
-linearized density contrasts obey
-\begin{equation}\label{eq:thread5-growth}
-  \ddot\delta_{(\pm1)}+2H\dot\delta_{(\pm1)}
-  \;=\;
-  \frac{4\pi G}{a^2}\,
-  \sum_{\sigma'=\pm1}
-  w_{\sigma\sigma'}\,\rho_{\sigma'}\,\delta_{(\sigma')},
-\end{equation}
-with capacity-weighted coupling matrix
-$w_{--}=(w_1+w_2)/(w_1+w_2+w_3)$,
-$w_{-+}=0$ (quotient-non-observable cross-sector at linear order),
-$w_{++}=w_3/(w_1+w_2+w_3)$, and background densities
-$\rho_{(-1)}=\rho_b+\rho_r$, $\rho_{(+1)}=\rho_{\mathrm{DM}}$ from
-\eqref{eq:dm-ident} and $\eta_B$. The late-time growth factor ratio satisfies
-$D_{(+1)}/D_{(-1)}\to\sqrt{w_3/(w_1+w_2)}$ at $z\lesssim 1$, reproducing
-\eqref{eq:sigma8}.
-\end{theorem}
-
-\begin{proposition}[Perturbation ledger identity, target]
-\label{prop:thread5-ledger}
-Under Theorem~\ref{thm:thread5-target}, the observed late-time amplitude
-\begin{equation}\label{eq:thread5-sigma8}
-  \sigma_8
-  \;=\;
-  \sqrt{\frac{w_1+w_2}{w_3}}\,
-  \mathcal{G}(z\!=\!0),
-\end{equation}
-with $\mathcal{G}$ the $\kappa_\star$-independent linear growth normalization,
-specializes Proposition~\ref{prop:sigma8}. The scalar spectral index satisfies
-$n_s$ of \eqref{eq:pred-ns} as the CMB-anchor tilt from integrating
-$\mathcal{P}_{\sigma=+1}$ into the homogeneous history.
-\end{proposition}
+The target theorem bundle
+(\texttt{thm:thread5-target}, \texttt{prop:thread5-ledger},
+\texttt{thm:thread5-power}) is proved in Section~\ref{sec:wave2-thread5}
+(Theorems~\ref{thm:thread5-target},~\ref{prop:thread5-ledger},
+~\ref{thm:thread5-power}; Corollary~\ref{cor:thread5-wave2-closure}).
+The programme table below records pre-Wave~2 status; see
+Remark~\ref{rmk:thread5-wave2-table} for post-Wave~2 upgrades.
 
 \paragraph{Dependencies (Threads~III--IV).}
 \begin{center}

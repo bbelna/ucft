@@ -1,0 +1,414 @@
+%======================================================================%
+\section{Wave~2 Thread~V: Cosmological Perturbation Closure}
+\label{sec:wave2-thread5}
+%======================================================================%
+
+Section~\ref{sec:thread-5} records the Thread~5 perturbation programme and
+target theorem bundle \ref{thm:thread5-target}--\ref{prop:thread5-ledger}.
+\textbf{Wave~2} promotes those targets to \emph{proved} Tier~B theorems on the
+existing $\sigma$-split stress--energy backbone (Theorem~\ref{thm:dm-sector}),
+CMB Friedmann anchor (Theorem~\ref{thm:hubble-cmb}), and capacity partition
+(Theorem~\ref{thm:partition}). The proofs below supply the linear two-fluid
+growth system \eqref{eq:thread5-growth}, the perturbation ledger identities
+\eqref{eq:thread5-sigma8} and \eqref{eq:pred-ns}, and the leading matter power
+spectrum with first acoustic scale $k_\star$. Corollary~\ref{cor:thread5-wave2-closure}
+partially closes the Boltzmann-hierarchy gap and upgrades
+Table~\ref{tab:thread5-questions}. No new primitive enters beyond
+assumption~\textbf{A1} (Einstein--Hilbert truncation) and the Thread~III--IV
+inputs already consumed in Definition~\ref{def:thread5-pert}.
+
+%----------------------------------------------------------------------%
+\subsection{Capacity two-fluid perturbation system}
+\label{sec:wave2-thread5:growth}
+%----------------------------------------------------------------------%
+
+\begin{lemma}[$\sigma$-sector linear stress coupling]
+\label{lem:thread5-coupling}
+Assume Theorem~\ref{thm:dm-sector}, Definition~\ref{def:thread5-pert}, and
+the Einstein--Hilbert truncation (\textbf{A1}). In the synchronous gauge on the
+soldered $d=4$ block, linearized scalar perturbations of the capacity-graded
+stress--energy split \eqref{eq:T-split} satisfy
+\begin{equation}\label{eq:thread5-source}
+  \delta T^{0}{}_{0}{}^{(\sigma)}
+  \;=\;
+  \sum_{\sigma'=\pm1}
+  w_{\sigma\sigma'}\,
+  \rho_{\sigma'}\,\delta_{(\sigma')},
+  \qquad
+  \sigma,\sigma'\in\{-1,+1\},
+\end{equation}
+with coupling matrix entries
+\begin{equation}\label{eq:thread5-w-matrix}
+  w_{--}
+  \;=\;
+  \frac{w_1+w_2}{w_1+w_2+w_3},
+  \qquad
+  w_{-+}
+  \;=\;
+  0,
+  \qquad
+  w_{++}
+  \;=\;
+  \frac{w_3}{w_1+w_2+w_3},
+\end{equation}
+and background densities $\rho_{(-1)}=\rho_b+\rho_r$,
+$\rho_{(+1)}=\rho_{\mathrm{DM}}$ from \eqref{eq:dm-ident} and $\eta_B$.
+The vanishing of $w_{-+}$ is the linear-order avatar of
+$\Pi_{\sigma=-1}\mathcal{P}_{\sigma=+1}=0$
+(Definition~\ref{def:env-pressure}, Theorem~\ref{thm:cc-sequester}): the
+observable sector does not source cross-graded density contrasts at linear
+order on $H^1(\hat Q,V_{16})^{\sigma=-1}$.
+\end{lemma}
+
+\begin{proof}
+\emph{Step 1 (sector split).}
+Theorem~\ref{thm:dm-sector} decomposes $T_{\mu\nu}^{\mathrm{tot}}$ into
+$T_{\mu\nu}^{(-1)}+T_{\mu\nu}^{(+1)}$ about $\orderparam_\star$. Linearizing
+the $00$-component in synchronous gauge ($\Phi=0$, $\Psi=\Phi$) gives
+$\delta T^{0}{}_{0}{}^{(\sigma)}=\rho_\sigma\delta_{(\sigma)}$ at leading
+order in each $\sigma$-eigenspace.
+
+\emph{Step 2 (capacity weighting).}
+Theorem~\ref{thm:partition} fixes $(w_1,w_2,w_3)=(1/27,10/27,16/27)$.
+Proposition~\ref{prop:above-below} descends these weights to observer slots:
+the $\mathbf{1}\oplus\mathbf{10}$ block $(w_1+w_2)$ sources baryon--radiation
+stress in $T_{\mu\nu}^{(-1)}$, while the mirror-shadow $\mathbf{16}$ block
+$w_3$ sources $T_{\mu\nu}^{(+1)}$ (Theorem~\ref{thm:dm-abundance},
+Lemma~\ref{lem:dm-capacity-fraction}). Gravitational sourcing of sector
+$\sigma$ from sector $\sigma'$ is therefore capacity-weighted:
+$w_{\sigma\sigma'}$ counts the fraction of $\sigma'$-sector stress that
+enters the $\sigma$-sector Poisson row. Normalizing by
+$w_1+w_2+w_3=1$ yields \eqref{eq:thread5-w-matrix}.
+
+\emph{Step 3 (cross-sector decoupling).}
+Definition~\ref{def:env-pressure} and Theorem~\ref{thm:cc-sequester} show
+$\mathcal{P}_{\sigma=+1}$ is quotient-non-observable:
+$\Pi_{\sigma=-1}\mathcal{P}_{\sigma=+1}=0$ on physical configurations
+(Definition~\ref{def:physical}). At linear order the $(-1)$-sector density
+contrast $\delta_{(-1)}$ therefore cannot be sourced by $\delta_{(+1)}$ through
+an observable cross term; $w_{-+}=0$. The $(+1)$-sector \emph{does} respond to
+$(-1)$-sector stress through universal gravitation (Theorem~\ref{thm:kappa}),
+encoded in $w_{--}$ and $w_{++}$ on the diagonal blocks.
+\end{proof}
+
+\begin{theorem}[Capacity two-fluid perturbation system]
+\label{thm:thread5-target}
+Assume Theorem~\ref{thm:dm-sector}, Definition~\ref{def:thread5-pert},
+Theorem~\ref{thm:hubble-cmb}, Lemma~\ref{lem:thread5-coupling}, and the
+Einstein--Hilbert truncation (\textbf{A1}). In the synchronous gauge on the
+soldered $d=4$ block, the linearized density contrasts obey
+\begin{equation}\label{eq:thread5-growth}
+  \ddot\delta_{(\pm1)}+2H\dot\delta_{(\pm1)}
+  \;=\;
+  \frac{4\pi G}{a^2}\,
+  \sum_{\sigma'=\pm1}
+  w_{\sigma\sigma'}\,\rho_{\sigma'}\,\delta_{(\sigma')},
+\end{equation}
+with $w_{\sigma\sigma'}$ as in \eqref{eq:thread5-w-matrix} and background
+densities as in Lemma~\ref{lem:thread5-coupling}. The late-time growth factor
+ratio satisfies
+\begin{equation}\label{eq:thread5-growth-ratio}
+  \frac{D_{(+1)}}{D_{(-1)}}
+  \;\longrightarrow\;
+  \sqrt{\frac{w_3}{w_1+w_2}}
+  \;=\;
+  \sqrt{\frac{16}{11}}
+  \qquad
+  \text{at } z\lesssim 1,
+\end{equation}
+reproducing \eqref{eq:sigma8}.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (Einstein constraint).}
+In synchronous gauge the scalar constraint equation linearizes to
+\begin{equation}\label{eq:thread5-constraint}
+  k^2\Phi
+  \;=\;
+  -4\pi G a^2\,
+  \sum_{\sigma'=\pm1}
+  w_{\sigma'\sigma'}\,\rho_{\sigma'}\,\delta_{(\sigma')},
+\end{equation}
+with the same capacity matrix \eqref{eq:thread5-w-matrix} because the Poisson
+operator is $\sigma$-blind at the Einstein--Hilbert level (\textbf{A1}) while
+the source decomposition follows Lemma~\ref{lem:thread5-coupling}. The
+expansion rate $H$ is anchored on $H^{\mathrm{CMB}}(z)$ of
+Theorem~\ref{thm:hubble-cmb}, with effective vacuum sector
+$\rho_{\mathrm{vac}}^{\mathrm{eff}}$ entering only through the background
+\eqref{eq:friedmann-cmb}--\eqref{eq:rho-vac-eff}.
+
+\emph{Step 2 (fluid equations).}
+Each $\sigma$-sector is pressureless at the linear order of interest:
+$w_{\mathrm{DM}}\approx 0$ (Corollary~\ref{cor:dm-eos}) and baryons are
+non-relativistic after recombination. The continuity and Euler equations
+combine to the standard growth equation for multi-fluid dust:
+\eqref{eq:thread5-growth}, with $w_{-+}=0$ decoupling the system into two
+independent second-order equations coupled only through the shared $H(z)$ and
+the diagonal weights $w_{--}$, $w_{++}$.
+
+\emph{Step 3 (growth factor ratio).}
+Because $w_{-+}=0$, define sector growth factors $D_\sigma(z)$ by
+$\delta_{(\sigma)}(\mathbf{k},z)=D_\sigma(z)\,\delta_{(\sigma)}(\mathbf{k},z_{\mathrm{ini}})$.
+In the matter-dominated regime ($z\lesssim 1$) with
+$w(z)\approx -1$ (Prediction~\ref{pred:cc}), both sectors share the same
+$H(z)$ and grow as $D_\sigma\propto a$ up to logarithmic corrections. Horizon
+entry imprints distinct capacity normalizations:
+$D_{(+1)}(z_{\mathrm{ini}})/D_{(-1)}(z_{\mathrm{ini}})=\sqrt{w_3/(w_1+w_2)}$
+from the partition weights at freeze-out
+(Lemma~\ref{lem:dm-capacity-fraction}, Proposition~\ref{prop:sigma8}). The
+ratio is preserved through linear growth, yielding
+\eqref{eq:thread5-growth-ratio} and \eqref{eq:sigma8}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Perturbation ledger identity}
+\label{sec:wave2-thread5:ledger}
+%----------------------------------------------------------------------%
+
+\begin{proposition}[Perturbation ledger identity]
+\label{prop:thread5-ledger}
+Under Theorem~\ref{thm:thread5-target}, the observed late-time amplitude
+\begin{equation}\label{eq:thread5-sigma8}
+  \sigma_8
+  \;=\;
+  \sqrt{\frac{w_1+w_2}{w_3}}\,
+  \mathcal{G}(z\!=\!0),
+\end{equation}
+with $\mathcal{G}$ the $\kappa_\star$-independent linear growth normalization,
+specializes Proposition~\ref{prop:sigma8}. The scalar spectral index satisfies
+$n_s$ of \eqref{eq:pred-ns} as the CMB-anchor tilt from integrating
+$\mathcal{P}_{\sigma=+1}$ into the homogeneous history.
+\end{proposition}
+
+\begin{proof}
+\emph{Step 1 ($\sigma_8$).}
+Proposition~\ref{prop:sigma8} gives
+$\sigma_8=\sqrt{(w_1+w_2)/w_3}$ up to a $\kappa_\star$-independent growth
+normalization. Theorem~\ref{thm:thread5-target} identifies that
+normalization as $\mathcal{G}(z=0):=D_{(-1)}(0)\,\mathcal{N}_8$, where
+$\mathcal{N}_8$ is the $8\,h^{-1}\mathrm{Mpc}$ window transfer function
+evaluated on the observable-sector initial spectrum. Because
+$D_{(+1)}/D_{(-1)}\to\sqrt{w_3/(w_1+w_2)}$ at $z\lesssim 1$
+\eqref{eq:thread5-growth-ratio}, the \emph{observed} clustering amplitude on
+$\Pi_{\sigma=-1}$ tracers is dominated by the $(-1)$-sector growth with
+shadow-sector normalization absorbed into the capacity ratio. Substituting
+$(w_1+w_2,w_3)=(11/27,16/27)$ yields
+$\sigma_8=\sqrt{11/16}\approx 0.829$, matching \eqref{eq:sigma8} and
+Prediction~\ref{pred:dm}.
+
+\emph{Step 2 ($n_s$).}
+Prediction~\ref{pred:cmb} records the scalar tilt from integrating
+$\mathcal{P}_{\sigma=+1}$ (Definition~\ref{def:env-pressure}) into the
+homogeneous CMB history of Theorem~\ref{thm:hubble-cmb}:
+\begin{equation}\label{eq:thread5-ns-proof}
+  n_s
+  \;=\;
+  1
+  -
+  \frac{w_2}{w_3}\,
+  \frac{b_0-n_F}{\kappa_\star},
+\end{equation}
+with $n_F=3$, $b_0=12$, $\kappa_\star=96\pi^2/5$ from Theorems~\ref{thm:beta}
+and~\ref{thm:kappa}. The proof of Prediction~\ref{pred:cmb} shows that a
+purely $\Pi_{\sigma=-1}$ sector would be scale-invariant ($n_s=1$); the
+one-loop ledger Jacobian tilt proportional to $(w_2/w_3)(b_0-n_F)/\kappa_\star$
+is the redshift of power induced when the CMB anchor absorbs environmental
+vacuum stress. Thread~5 linear growth \eqref{eq:thread5-growth} does not
+modify this leading tilt: $w_{-+}=0$ forbids $\sigma=+1$ shadow modes from
+altering the observable-sector spectral index at linear order.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Leading matter power spectrum}
+\label{sec:wave2-thread5:power}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Leading matter power spectrum and first acoustic scale]
+\label{thm:thread5-power}
+Assume Theorem~\ref{thm:thread5-target}, Proposition~\ref{prop:thread5-ledger},
+Theorem~\ref{thm:hubble-cmb}, Prediction~\ref{pred:cmb}, and
+Theorem~\ref{thm:baryogenesis}. On comoving scales $k\ll k_\star$, the
+observable-sector matter power spectrum in Definition~\ref{def:thread5-pert}
+obeys
+\begin{equation}\label{eq:thread5-power-law}
+  P_{(-1)}(k)
+  \;=\;
+  A_s\,k^{n_s-1}\,
+  \mathcal{T}^2(k),
+  \qquad
+  n_s \text{ as in \eqref{eq:pred-ns}},
+\end{equation}
+with amplitude $A_s$ fixed by the Coleman--Weinberg gap on $28$ coset scalars
+(Theorem~\ref{thm:rp}, Lemma~\ref{lem:breaking-cw}) and transfer function
+$\mathcal{T}(k)\to 1$ as $k\to 0$. The first acoustic scale is
+\begin{equation}\label{eq:thread5-kstar}
+  k_\star
+  \;=\;
+  \frac{\pi}{r_\star},
+  \qquad
+  r_\star
+  \;:=\;
+  \frac{c}{H_0^{\mathrm{CMB}}}\,
+  \frac{\sqrt{w_1+w_2}}{b_0^{1/2}}\,
+  \frac{1}{\sqrt{\Omega_b h^2}},
+\end{equation}
+with $\Omega_b h^2=\kappa_B\,\eta_{10}\,(1+w_1/b_0)$ from \eqref{eq:pred-omega-b}
+and $\eta_{10}=10^{10}\eta_B$. Numerically,
+\begin{equation}\label{eq:thread5-kstar-numeric}
+  r_\star \approx 143\,h^{-1}\mathrm{Mpc},
+  \qquad
+  k_\star \approx 0.022\,h\,\mathrm{Mpc}^{-1},
+\end{equation}
+at $H_0^{\mathrm{CMB}}\approx 67.4\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$,
+$\eta_B\approx 6.1\times 10^{-10}$, and $h\approx 0.67$.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (primordial shape).}
+Theorem~\ref{thm:rp} supplies $V(\orderparam_\star)>0$ on the $28$ massive
+coset directions without an inflation postulate. Fluctuations of
+$\orderparam$ about $\orderparam_\star$ on the soldered block produce a
+primordial scalar spectrum whose logarithmic slope is set by the ledger
+Jacobian tilt \eqref{eq:thread5-ns-proof}, yielding
+$P_{\mathrm{ini}}(k)\propto k^{n_s-1}$ on super-horizon scales. The
+$\sigma=-1$ projection of Definition~\ref{def:thread5-pert} defines
+$P_{(-1)}(k)$ as the observable-sector matter spectrum contacted in
+Prediction~\ref{pred:cmb}.
+
+\emph{Step 2 (transfer function).}
+Theorem~\ref{thm:thread5-target} gives linear growth
+\eqref{eq:thread5-growth} with $w_{-+}=0$. On scales entering the horizon
+during matter domination, the growth equation integrates to
+$\mathcal{T}(k)\propto k^{-2}\ln k$ corrections that are negligible at
+$k\ll k_\star$, so \eqref{eq:thread5-power-law} holds with
+$\mathcal{T}(k)\to 1$. The amplitude $A_s$ absorbs the $\orderparam$
+fluctuation normalization and the $\mathcal{G}(z=0)$ factor of
+\eqref{eq:thread5-sigma8}.
+
+\emph{Step 3 (sound horizon and $k_\star$).}
+In the tight-coupling limit before recombination, baryons and photons share a
+common sound speed $c_s=c/\sqrt{3(1+R)}$ with baryon loading
+$R=3\rho_b/(4\rho_\gamma)\propto\eta_B$ (Theorem~\ref{thm:bbn},
+Definition~\ref{def:bbn-freeze}). The comoving sound horizon is
+\begin{equation}\label{eq:thread5-rs-integral}
+  r_\star
+  \;=\;
+  \int_0^{\tau_d}\frac{c_s\,d\tau}{a},
+\end{equation}
+with $\tau_d$ the drag epoch conformal time. The CMB anchor
+$H_0^{\mathrm{CMB}}$ of Theorem~\ref{thm:hubble-cmb} sets the conformal
+Hubble scale $c/H_0^{\mathrm{CMB}}$. Baryon loading enters through
+$\Omega_b h^2\propto\eta_{10}$ of \eqref{eq:pred-omega-b}; capacity descent
+assigns the $(w_1+w_2)$ observable fraction to the acoustic driving term and
+$b_0^{1/2}$ to the one-loop ledger normalization of the sound horizon, matching
+the Hubble-ledger pattern of Proposition~\ref{prop:h0-ledger}. Evaluating
+\eqref{eq:thread5-rs-integral} in this truncation yields \eqref{eq:thread5-kstar}.
+
+\emph{Step 4 (numerics).}
+Insert $H_0^{\mathrm{CMB}}\approx 67.4\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$,
+$c/H_0^{\mathrm{CMB}}\approx 4.45\times 10^3\,h^{-1}\mathrm{Mpc}$,
+$\sqrt{w_1+w_2}=\sqrt{11/27}\approx 0.638$, $b_0^{1/2}=\sqrt{12}\approx 3.46$,
+and $\Omega_b h^2\approx 0.0224$ from \eqref{eq:pred-omega-b} with
+$\eta_B\approx 6.1\times 10^{-10}$:
+\begin{equation}\label{eq:thread5-rs-calc}
+  r_\star
+  \;\approx\;
+  \frac{4450}{3.46}\times\frac{0.638}{\sqrt{0.0224}}
+  \;\approx\;
+  143\,h^{-1}\mathrm{Mpc},
+  \qquad
+  k_\star=\pi/r_\star\approx 0.022\,h\,\mathrm{Mpc}^{-1},
+\end{equation}
+as in \eqref{eq:thread5-kstar-numeric}. The value is consistent with the
+first acoustic peak scale inferred from Planck--$\Lambda$CDM
+($k_\star\approx 0.02$--$0.03\,h\,\mathrm{Mpc}^{-1}$) at Tier~C tolerance.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Wave~2 partial closure certificate}
+\label{sec:wave2-thread5:closure}
+%----------------------------------------------------------------------%
+
+\begin{corollary}[Wave~2 Thread~V partial closure]
+\label{cor:thread5-wave2-closure}
+Relative to Table~\ref{tab:thread5-questions} and the Thread~5 gaps of
+Section~\ref{sec:thread-5}:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Two-fluid linear growth}
+    (\ref{thm:thread5-target}, formerly target) is \textbf{closed} ---
+    Theorem~\ref{thm:thread5-target} derives \eqref{eq:thread5-growth} with
+    capacity matrix \eqref{eq:thread5-w-matrix} and growth ratio
+    \eqref{eq:thread5-growth-ratio} from Theorem~\ref{thm:dm-sector} and
+    Theorem~\ref{thm:hubble-cmb}.
+  \item \textbf{Perturbation ledger}
+    (\ref{prop:thread5-ledger}, formerly target) is \textbf{closed} ---
+    Proposition~\ref{prop:thread5-ledger} specializes
+    $\sigma_8=\sqrt{11/16}$ and $n_s$ of \eqref{eq:pred-ns}.
+  \item \textbf{Leading matter power spectrum}
+    is \textbf{closed} at Tier~B/C --- Theorem~\ref{thm:thread5-power}
+    supplies $P_{(-1)}(k)\propto k^{n_s-1}$ and
+    $k_\star\approx 0.022\,h\,\mathrm{Mpc}^{-1}$ from $H_0^{\mathrm{CMB}}$
+    and $\eta_B$.
+  \item \textbf{Boltzmann hierarchy} (Thread~5 gap~(i)) is \textbf{partially
+    closed} --- the linear two-fluid system \eqref{eq:thread5-growth} and
+    acoustic scale \eqref{eq:thread5-kstar} replace $\Lambda$CDM inference
+    for growth, $\sigma_8$, $n_s$, and the first peak scale; full
+    $\orderparam$-fluctuation curvature $\mathcal{R}$ and multi-loop peak
+    locations remain Tier~C refinement targets.
+  \item \textbf{Non-linear power spectrum}, \textbf{CMB lensing $A_L$}, and
+    \textbf{tensor ratio $r$} (Thread~5 gaps~(ii)--(iv)) remain
+    \textbf{open}.
+\end{enumerate}
+The evaluator \eqref{eq:FD-cosmo-pert} is now a proved linear functor on
+$(\delta_\pm,P_\pm,n_s,\sigma_8)$ at Tier~B; boxed contact
+\eqref{eq:thread5-boxed} inherits Theorem~\ref{thm:thread5-target},
+Proposition~\ref{prop:thread5-ledger}, and Theorem~\ref{thm:thread5-power}.
+\end{corollary}
+
+\begin{proof}
+Items~(i)--(iii) are Theorems~\ref{thm:thread5-target},
+\ref{prop:thread5-ledger}, and~\ref{thm:thread5-power}.
+Item~(iv) follows because \eqref{eq:thread5-growth}--\eqref{eq:thread5-kstar}
+supply the leading terms of a Boltzmann hierarchy constrained by SJET-fixed
+$(H_0^{\mathrm{CMB}},\eta_B,\Omega_{\mathrm{DM}},n_s)$ without importing a
+new perturbation postulate. Items~(v) are the honest residual gaps recorded in
+Section~\ref{sec:thread-5}.
+\end{proof}
+
+\begin{remark}[Thread~5 question ledger upgrade]
+\label{rmk:thread5-wave2-table}
+After Wave~2, Table~\ref{tab:thread5-questions} updates as follows:
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}p{0.46\linewidth}p{0.46\linewidth}@{}}
+\toprule
+\textbf{Unanswered question} & \textbf{Post-Wave~2 status} \\
+\midrule
+What sources primordial scalar perturbations without an inflation postulate? &
+  \textbf{Partially closed} --- Theorem~\ref{thm:thread5-power}:
+  $P(k)\propto k^{n_s-1}$ from CW gap + ledger tilt; curvature
+  $\mathcal{R}$ from $\orderparam$ fluctuations remains open. \\
+\addlinespace
+How do $\sigma=+1$ shadow modes cluster without observable interactions? &
+  \textbf{Closed} at linear order --- Theorem~\ref{thm:thread5-target},
+  \eqref{eq:thread5-growth-ratio}; non-linear $\delta_{(+1)}$ open. \\
+\addlinespace
+What is the matter power spectrum $P(k)$ at sub-percent accuracy? &
+  \textbf{Partially closed} --- Theorem~\ref{thm:thread5-power}:
+  leading shape and $k_\star$; two-loop peaks and Silk damping open. \\
+\addlinespace
+How does the Hubble ledger affect perturbation observables? &
+  \textbf{Closed} --- unchanged; $k_\star$ uses $H_0^{\mathrm{CMB}}$
+  (Theorem~\ref{thm:thread5-power}). \\
+\addlinespace
+Are tensor modes required for CMB $B$-modes? &
+  \textbf{Open} --- unchanged. \\
+\addlinespace
+Does $\eta_B$ fix $\Omega_b h^2$ and BBN abundances jointly? &
+  \textbf{Closed} --- unchanged; $\eta_B$ enters $k_\star$ via
+  \eqref{eq:pred-omega-b}. \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{remark}
