@@ -9,7 +9,7 @@ inline() { echo "% --- $1 ---"; cat "$BUILD/$1"; echo "% --- end $1 ---"; }
   for u in 01-introduction.tex 02-foundations.tex 03-ladder.tex 04-arena.tex \
            04-dynamics.tex 05-spacetime.tex 06-gauge-gravity.tex \
            07-standard-model.tex 08-verification.tex 09-conclusions.tex \
-           10-appendix.tex; do
+           10-appendix.tex 11-axiomatic-physics.tex; do
     inline "$u"
   done
   cat "$BUILD/bibliography.tex"

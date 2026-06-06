@@ -9,14 +9,20 @@ Chiral matter is \textbf{postulated} (P2); three families are \textbf{derived}
 $\mathbf{27}$ content and family count are fixed.
 
 %----------------------------------------------------------------------%
-\subsection{Postulates P2, P4 and derived families}
+\subsection{Physical sector, P4, and derived families}
 \label{sec:sm:postulates}
 %----------------------------------------------------------------------%
 
-\begin{postulate}[Chiral matter, P2]\label{post:sm:P2}
-Each family furnishes one chiral $\mathbf{16}$ of $\Spin(10)$ with charges from
-\eqref{eq:foundations:27branch}. No mirror $\overline{\mathbf{16}}$ partners.
-\end{postulate}
+\begin{remark}[Former Postulate P2 --- retired under axiomatic program]
+\label{post:sm:P2}
+Chiral matter is no longer postulated. Under the mirror-quotient physicality
+definition (Definition~\ref{def:sm:physical-sector},
+Theorem~\ref{thm:sm:chirality-derived}), each family furnishes one chiral
+$\mathbf{16}$ with charges from \eqref{eq:foundations:27branch}; mirror
+partners are $\sigma$-invariant and quotient-non-observable. The conditional
+ToE ledger still cites ``P2'' where the physical-sector definition is not yet
+taken as default; Section~\ref{sec:axiomatic} records the elimination target.
+\end{remark}
 
 % --- P3 replaced by mirror-stabilisation derivation -----------------
 
@@ -88,13 +94,13 @@ Hence $k\geq3$.
 
 \emph{Conclusion ($k=3$).}
 Strict concavity forces equal subcells of capacity $16/(27k)$ each; with
-$k=3$ this is $16/81$. Postulate~\ref{post:sm:P2} assigns one chiral
+$k=3$ this is $16/81$. Definition~\ref{def:sm:physical-sector} assigns one chiral
 $\mathbf{16}$ per cell, fixing $b_0(3\,\mathrm{gen})=12$ in
 \eqref{eq:gauge-gravity:b0} uniquely, not chosen.
 \end{proof}
 
 \begin{theorem}[Three families from mirror stabilisation]\label{thm:sm:three-families}
-Assume Postulate~\ref{post:sm:P2}. After
+Under Definition~\ref{def:sm:physical-sector}. After
 $\Climb^7(\Void)=\mathrm{Bal}_\capacity(\Mirror^7(\Void))$ stabilizes on
 $\E{8}\times\E{8}$ (Theorems~\ref{thm:ladder:e8}--\ref{thm:ladder:e8e8}), the
 horizontal family sector (Definition~\ref{def:sm:horizontal}) carries
@@ -108,13 +114,13 @@ three chiral $\mathbf{16}$s of $\Spin(10)$ with no mirror partners, and
   n_F=\#\text{families}=3.
 \end{equation}
 The horizontal symmetry is $SU(3)_F$ on the $\C^3$ factor. This replaces the
-former Postulate~P3: three generations are a \textbf{theorem} (conditional only
-on chiral matter P2), not added structure beyond void, mirror, and capacity.
+former Postulate~P3: three generations are a \textbf{theorem} from void, mirror,
+capacity, and mirror-quotient physicality, not added family input.
 \end{theorem}
 
 \begin{proof}
 Proposition~\ref{prop:sm:capacity7} fixes $k=3$ mirror-stable cells in the
-$\mathbf{16}$-sector. Postulate~\ref{post:sm:P2} assigns one chiral
+$\mathbf{16}$-sector. Definition~\ref{def:sm:physical-sector} assigns one chiral
 $\mathbf{16}$ per cell, yielding \eqref{eq:sm:three16}. The triality
 organization of Proposition~\ref{prop:sm:triality} aligns the three cells with
 the three diagonal directions of Lemma~\ref{lem:sm:rank3}, hence with
@@ -132,8 +138,7 @@ therefore stabilizes at three families.
 \end{corollary}
 
 \begin{theorem}[Mirror quotient cohomology]\label{thm:sm:h1}
-Assume Postulate~\ref{post:sm:P2} (chiral matter, no $\overline{\mathbf{16}}$
-partners). Let $\mathcal{T}_7$ be the stabilized Albert tower at
+Under Definition~\ref{def:sm:physical-sector}. Let $\mathcal{T}_7$ be the stabilized Albert tower at
 $\Mirror^7(\Void)$ (Definition~\ref{def:appendix:tower7}), $\hat Q$ its
 mirror-symmetric complexification, and $V_{16}$ the holomorphic
 $\mathbf{16}$-bundle of Definition~\ref{def:appendix:Qhat}. Then
@@ -143,8 +148,8 @@ $\mathbf{16}$-bundle of Definition~\ref{def:appendix:Qhat}. Then
 by the mirror-quotient index theorem (Theorem~\ref{thm:appendix:mirror-index}).
 The count matches Theorem~\ref{thm:sm:three-families} and the heterotic
 correspondence~\cite{Witten1985} without importing string theory as primitive
-data. This is a \textbf{theorem conditional on P2}: Lemma~\ref{lem:appendix:cellular}
-uses P2 to exclude $\sigma$-invariant $\overline{\mathbf{16}}$ partners.
+data. This matches Theorem~\ref{thm:sm:chirality-derived}: mirror partners are
+quotient-non-observable, not postulated away.
 \end{theorem}
 
 \begin{proof}

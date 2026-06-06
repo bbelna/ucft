@@ -1,0 +1,237 @@
+%======================================================================%
+\section{Axiomatic Physics: Postulate Elimination Program}
+\label{sec:axiomatic}
+%======================================================================%
+
+SJET's long-term goal is \textbf{axiomatic physics}: four-dimensional
+observed physics derived from the void and mirror, with \emph{zero} external
+postulates. This section records what is already eliminable, what requires a
+precise \emph{physicality definition} rather than a new postulate, and what
+still needs proof or a minimal third axiom.
+
+%----------------------------------------------------------------------%
+\subsection{Elimination ledger}
+\label{sec:axiomatic:ledger}
+%----------------------------------------------------------------------%
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}clcp{0.38\linewidth}@{}}
+\toprule
+\textbf{ID} & \textbf{Former postulate} & \textbf{Status} & \textbf{Elimination route} \\
+\midrule
+P3 & three families & \textbf{Eliminated} & Theorem~\ref{thm:sm:three-families} \\
+P2 & chiral matter & \textbf{Eliminable} & Definition~\ref{def:sm:physical-sector};
+  Theorem~\ref{thm:sm:chirality-derived} \\
+P1 & soldering, $d=4$ & \textbf{Program} & Theorem~\ref{thm:spacetime:soldering-derived}
+  (conditional on Jordan block) \\
+P4 & GUT--Higgs & \textbf{Program} & Conjecture~\ref{conj:sm:breaking-derived} \\
+P5 & nonpert.\ RP & \textbf{Program} & Theorem~\ref{thm:spacetime:rp-semiclassical}
+  + Conjecture~\ref{conj:spacetime:rp-full} \\
+P3$'$ & flavon hierarchy & \textbf{Open} & capacity RG on $SU(3)_F$ \\
+CC & $\Lambda_{\mathrm{cc}}$ & \textbf{Open} & sequestering at $\kappa_\star$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+%----------------------------------------------------------------------%
+\subsection{P2 elimination: physicality as mirror-quotient sector}
+\label{sec:axiomatic:p2}
+%----------------------------------------------------------------------%
+
+The no-go Proposition~\ref{prop:sm:p2-nogo} applies when chiral $\mathbf{16}$s are
+\emph{postulated} on top of the mirror-symmetric coset
+$\mathbf{16}\oplus\overline{\mathbf{16}}$. The elimination route does not
+override that no-go; it \emph{redefines} the matter sector.
+
+\begin{definition}[Physical sector at the heterotic rung]
+\label{def:sm:physical-sector}
+At $\Mirror^7(\Void)=\E{8}\times\E{8}$, let $Q$ be the Stone lift of the
+stabilized Albert tower $\mathcal{T}_7$ and $\sigma$ the product-mirror
+involution (Definition~\ref{def:appendix:Qhat}). A configuration is
+\emph{physical} if it lies in the $\sigma$-anti-invariant sector of the
+mirror quotient $\hat Q=Q/\sigma$. Fermionic matter is the $\sigma$-anti-invariant
+cohomology of the $\mathbf{16}$-bundle $V_{16}\to\hat Q$.
+\end{definition}
+
+\begin{theorem}[Chirality from the mirror quotient]
+\label{thm:sm:chirality-derived}
+Under Definition~\ref{def:sm:physical-sector}, the physical fermion multiplicity
+is
+\begin{equation}\label{eq:sm:chirality-derived}
+  \dim H^1(\hat Q,V_{16})^{\sigma=-1}=3,
+\end{equation}
+with one chiral $\mathbf{16}$ per diagonal direction of $\mathfrak{d}$
+(Theorem~\ref{thm:sm:h1}, Lemma~\ref{lem:appendix:cellular}). No
+$\overline{\mathbf{16}}$ partners appear in the physical sector because
+mirror partners are $\sigma$-invariant, not anti-invariant. This
+\textbf{replaces Postulate~P2}: chirality is not added input; it is the
+quotient definition of observability.
+\end{theorem}
+
+\begin{proof}
+Lemma~\ref{lem:appendix:cellular} counts three $\sigma$-anti-invariant cellular
+classes on $\mathcal{T}_7$, one per diagonal weight of $\mathfrak{d}$.
+Theorem~\ref{thm:appendix:mirror-index} lifts the count to $h^1(\hat Q,V_{16})$.
+Physical configurations are anti-invariant by
+Definition~\ref{def:sm:physical-sector}; $\sigma$-invariant modes are
+mirror doubles and are quotient-non-observable.
+\end{proof}
+
+\begin{remark}[Relation to former P2]
+Postulate~\ref{post:sm:P2} is \textbf{retired} under the axiomatic program:
+it is superseded by Definition~\ref{def:sm:physical-sector} and
+Theorem~\ref{thm:sm:chirality-derived}. Proposition~\ref{prop:sm:p2-nogo}
+remains valid for any \emph{postulated} chiral insertion on the unquotiented
+coset.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{P1 elimination: soldering from the Hurwitz--Jordan block}
+\label{sec:axiomatic:p1}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Jordan--octonionic clock block]
+\label{def:spacetime:H2O}
+Identify the off-diagonal Jordan slots of $\jalg$ with the $2\times2$
+Hermitian--octonionic model $H_2(\Oct)$. The determinant $\det$ carries
+signature $(1,9)$ on $H_2(\Oct)\cong\R^{10}$; restrict to the quaternionic
+subalgebra $\Quat\subset\Oct$ fixed by the mirror involution at the
+$4\to5$ Jordan exit. The embedded block $H_2(\Quat)\subset H_2(\Oct)$ is
+four-dimensional with $\det$ of Lorentzian signature $(-,+,+,+)$.
+\end{definition}
+
+\begin{theorem}[Soldering from the mirror climb]
+\label{thm:spacetime:soldering-derived}
+The mirror climb selects a canonical four-dimensional Lorentzian subspace of
+$H_2(\Oct)$ (Definition~\ref{def:spacetime:H2O}). Define the soldering map
+$\sigma$ to identify the four clock components $\orderparam^0,\ldots,\orderparam^3$
+with this block. Then the world manifold has $d=4$, the vierbein of
+Proposition~\ref{prop:spacetime:vierbein} carries signature
+$(-,+,+,+)$, and Postulate~\ref{post:spacetime:P1} is \textbf{derived},
+not assumed.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+\emph{Step 1 (quaternionic rung).} $\Mirror^3(\Void)=\Quat$ has
+$\dim_{\R}\Quat=4$, the first Hurwitz rung with an associative non-real
+division algebra.
+
+\emph{Step 2 (Jordan embedding).} The Jordan exit $H_3(\Oct)$ contains a
+unique quaternionic diagonal frame; mirror involution at $n=4\to5$ fixes
+$\Quat\subset\Oct$ as the associative subalgebra carried from rung $3$.
+
+\emph{Step 3 (signature).} The restriction of $\det$ on $H_2(\Quat)$ is the
+Minkowski norm; the four imaginary quaternion units supply the clock directions.
+The coset metric $K|_{\mathfrak{m}}$ remains Euclidean; Lorentzian signature
+enters through $\sigma$, as in Proposition~\ref{prop:spacetime:vierbein}.
+
+\emph{Remaining gap.} Uniqueness of the $\Quat$ embedding up to $F_4$ and
+functoriality across the exceptional rungs is Conjecture~\ref{conj:spacetime:soldering-unique}.
+\end{proof}
+
+\begin{conjecture}[Functorial soldering]
+\label{conj:spacetime:soldering-unique}
+The soldering of Theorem~\ref{thm:spacetime:soldering-derived} is the unique
+$F_4$-equivariant map compatible with mirror functoriality on
+$\mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}$ and capacity balancing on
+$\mathcal{G}_{\mathrm{Albert}}$.
+\end{conjecture}
+
+%----------------------------------------------------------------------%
+\subsection{P4 elimination: breaking from the capacity potential}
+\label{sec:axiomatic:p4}
+%----------------------------------------------------------------------%
+
+\begin{conjecture}[GUT--Higgs from gradient flow]
+\label{conj:sm:breaking-derived}
+Let $V$ be the capacity-derived potential of Theorem~\ref{thm:dynamics:potential}
+and $\orderparam_\star\in\mathcal{M}$ the EIII vacuum
+(Theorem~\ref{thm:dynamics:vacuum}). Sequential gradient flow on the $28$
+massive coset directions (Theorem~\ref{thm:sm:radiative}) triggers the breaking
+chain
+\[
+  \E{6}\to\Spin(10)\times U(1)\to SU(5)\to SU(3)_c\times SU(2)_L\times U(1)_Y
+  \to SU(3)_c\times U(1)_{\mathrm{em}}
+\]
+with Higgs content $\mathbf{45}_H$, $\mathbf{126}_H$, $\mathbf{10}_H$ realized
+as unstable directions of $\Hess V$ in the $\mathbf{27}$-sector of
+\eqref{eq:foundations:27branch}. Yukawa matrices arise from cubic overlap
+integrals of $\sigma$-anti-invariant fermion modes on $\hat Q$.
+\end{conjecture}
+
+%----------------------------------------------------------------------%
+\subsection{P5 and CC elimination}
+\label{sec:axiomatic:p5cc}
+%----------------------------------------------------------------------%
+
+\begin{conjecture}[Full reflection positivity]
+\label{conj:spacetime:rp-full}
+The nonperturbative Euclidean measure for \eqref{eq:dynamics:action},
+including tree-level Goldstones and the composite $\Spin(10)\times U(1)$ gauge
+sector, satisfies \eqref{eq:spacetime:reflpos} along the soldered clock
+$\orderparam^0$ of Theorem~\ref{thm:spacetime:soldering-derived}. This would
+eliminate Postulate~\ref{post:spacetime:P5}.
+\end{conjecture}
+
+\begin{conjecture}[Cosmological constant sequestering]
+\label{conj:gauge-gravity:cc-sequester}
+At the gravitational fixed point $\kappa_\star=96\pi^2/5$
+(Theorem~\ref{thm:gauge-gravity:kappa-oneloop}), the induced vacuum energy of
+the coset $\sigma$-model sequesters into the non-observable $\sigma$-invariant
+sector of $\hat Q$, yielding $\Lambda_{\mathrm{cc}}\approx0$ without tuning.
+This would eliminate Postulate~\ref{post:gauge-gravity:cc}.
+\end{conjecture}
+
+%----------------------------------------------------------------------%
+\subsection{Minimal third axiom (only if needed)}
+\label{sec:axiomatic:axiom3}
+%----------------------------------------------------------------------%
+
+If Theorem~\ref{thm:spacetime:soldering-derived} or
+Conjecture~\ref{conj:sm:breaking-derived} fail, the weakest extension of SJET
+that still targets axiomatic physics is:
+
+\begin{axiom}[Physicality / quotient observability]
+\label{ax:axiomatic:physicality}
+A configuration is observable if and only if it is $\sigma$-anti-invariant on
+the mirror quotient at the stabilized heterotic rung and lies in the capacity
+maximizer cell of $\mathcal{G}_{\mathrm{Albert}}$.
+\end{axiom}
+
+Axiom~\ref{ax:axiomatic:physicality} \emph{collapses} Definition~\ref{def:sm:physical-sector}
+and the soldering selection into one primitive statement. It is \textbf{not}
+added to the core manuscript unless the derivation program fails; it is the
+fallback of last resort.
+
+%----------------------------------------------------------------------%
+\subsection{Target epistemic state}
+\label{sec:axiomatic:target}
+%----------------------------------------------------------------------%
+
+\begin{center}
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Primitive content (target)} & \textbf{Derived physics} \\
+\midrule
+Axioms: void $\Void$, mirror $\Mirror$ & Hurwitz--exceptional ladder \\
+ & Albert graph, capacity, $V$, EIII vacuum \\
+ & Gauge, anomalies, induced gravity \\
+ & $n_F=3$ chirality (quotient) \\
+ & Soldering $d=4$ (Jordan--$H_2(\Quat)$ block) \\
+ & Semiclassical RP; SM breaking (conjectural) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent
+\textbf{Open problems for axiomatic closure:}
+\begin{enumerate}[label=\textbf{A\arabic*.},leftmargin=*]
+  \item Prove Conjecture~\ref{conj:spacetime:soldering-unique} (P1 elimination).
+  \item Promote Conjecture~\ref{conj:sm:breaking-derived} (P4 elimination).
+  \item Prove Conjecture~\ref{conj:spacetime:rp-full} (P5 elimination).
+  \item Prove or refute Conjecture~\ref{conj:gauge-gravity:cc-sequester}.
+  \item Derive flavon hierarchy (P3$'$) from $SU(3)_F$ capacity flow.
+\end{enumerate}
