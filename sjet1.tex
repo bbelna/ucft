@@ -1,0 +1,426 @@
+\documentclass[aps,prd,onecolumn,amsmath,amssymb,nofootinbib,12pt]{revtex4-2}
+\usepackage{amsthm,mathtools,booktabs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black}
+\theoremstyle{plain}\newtheorem{theorem}{Theorem}[section]\newtheorem{proposition}[theorem]{Proposition}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+
+\begin{document}
+
+\title{Stone--Jordan Exceptional Theory I: Exceptional-Algebra Structure behind the Standard-Model Skeleton---An Auditable Synthesis}
+\author{Brandon Belna}
+\affiliation{Independent researcher}
+\date{\today}
+
+\begin{abstract}
+We assemble, in one auditable place, the chain of \emph{known} algebraic facts that links normed division algebras, the exceptional Jordan (Albert) algebra $J_3(\mathbb{O})$, and the exceptional Lie groups $F_4$ and $E_6$ to the representation-theoretic ``skeleton'' of the Standard Model. We prove (or cite, with explicit attribution) only what is genuinely true: Hurwitz's classification of normed division algebras and the sedenion obstruction; the correspondence between $2\times2$ Hermitian matrices over $\mathbb{R},\mathbb{C},\mathbb{H},\mathbb{O}$ and Minkowski space in dimensions $3,4,6,10$ (with the explicit correction that $H_2(\mathbb{H})$ is six-dimensional and that ordinary $4$D Minkowski space is $H_2(\mathbb{C})$); the branchings $\mathbf{27}=\mathbf{1}+\mathbf{10}+\mathbf{16}$ and $\mathbf{16}=\mathbf{10}+\bar{\mathbf 5}+\mathbf 1$ together with the EIII coset $E_6/(\mathrm{Spin}(10)\times U(1))$ whose real tangent space is $\mathbf{16}\oplus\overline{\mathbf{16}}$; and the canonical tree-level value $\sin^2\theta_W=3/8$, stated with its renormalization-group caveat. None of these embeddings is new: each is standard since work of the 1930s--1980s, with modern syntheses by Baez, Baez--Huerta, Furey, Todorov--Dubois-Violette, Boyle, and Manogue--Dray--Wilson. The paper makes no mass fits, predicts no coupling, and does \emph{not} derive the Standard Model. Its only contribution is organizational: a single ``void/mirror'' heuristic that motivates the chain, and a transparent ledger that cleanly separates the proven structural facts from a conjectural dynamical program (capacity selection of the algebraic partition, observer/family counting, a mirror-functor generation mechanism, and emergent dynamics), which we record as explicit open problems rather than results.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+\label{sec:intro}
+
+\subsection{A heuristic organizing motivation}
+
+The mathematics collected here was, for the author, motivated by a deliberately informal picture, which we label \emph{heuristic} and use only as a narrative thread, never as an argument. Imagine a structureless ``void'' equipped with a single involutive operation---a ``mirror'' $M$---and ask what minimal algebraic worlds are forced once one demands that the mirror be compatible with a multiplicative norm. The mnemonic is only this: the normed/composition property survives exactly four doublings ($\mathbb{R},\mathbb{C},\mathbb{H},\mathbb{O}$) and then fails at the sedenions, and physics is imagined to live near that wall. We do \emph{not} claim that iterating an involution derives or ``selects'' these algebras---Cayley--Dickson doubling does not preserve norm-composition (Prop.~\ref{prop:CD}, Rem.~\ref{rem:mirror}), so the picture is a narrative thread about where the good structure stops existing, not a selection principle. The genuine selection question is left entirely open (Conj.~\ref{conj:capacity}); the slogan is suggestive and proves nothing.
+
+We immediately flag two ways the slogan can mislead, and we correct both below. First, the naive expectation that a ``mirror'' obeys $M^2=\mathrm{id}$ as an algebra symmetry is false beyond the octonions: in every Cayley--Dickson algebra conjugation \emph{is} an involutive anti-automorphism with $x^{**}=x$, but the alternative law and the automorphism/triality structure that make this useful break at the sedenions (Sec.~\ref{sec:F1}). Second, the slogan must not be read as a derivation of dynamics; the entire dynamical content is relegated to the open-problem ledger of Sec.~\ref{sec:ledger}.
+
+\subsection{What this paper proves and what it leaves open}
+
+This paper proves nothing new. Every load-bearing statement below is either a classical theorem, restated with a short proof or a citation, or a standard branching rule from the unified-model-building literature. Concretely, we establish (by citation or short argument):
+\begin{itemize}
+\item the Hurwitz classification of normed division algebras as $\mathbb{R},\mathbb{C},\mathbb{H},\mathbb{O}$ and the failure of the normed/composition and alternative properties at the sedenions (Sec.~\ref{sec:F1});
+\item the identification of $H_2(\mathbb{A})$ with $(n+2)$-dimensional Minkowski space for $n=\dim_\mathbb{R}\mathbb{A}\in\{1,2,4,8\}$, giving dimensions $3,4,6,10$, with the explicit correction that the quaternionic case is \emph{six}-dimensional and that ordinary $4$D spacetime is the \emph{complex} case (Sec.~\ref{sec:F2});
+\item the $E_6$ branchings $\mathbf{27}=\mathbf{1}+\mathbf{10}+\mathbf{16}$, the EIII coset decomposition $\mathbf{32}=\mathbf{16}\oplus\overline{\mathbf{16}}$, the grand-unification chain $E_6\to\mathrm{SO}(10)\to\mathrm{SU}(5)\to\mathrm{SM}$, the identification of one generation with the $\mathbf{16}$, and the $\mathrm{Spin}(10)$ tensor products including $\mathbf{16}\times\mathbf{16}=\mathbf{10}+\mathbf{120}+\mathbf{126}$ (Sec.~\ref{sec:F3});
+\item the tree-level value $\sin^2\theta_W=3/8$ in canonical GUT normalization, together with the honest statement that this is a high-scale boundary condition, not the measured number, and that the one-loop coefficient $b_0$ is content-dependent (Sec.~\ref{sec:F4}).
+\end{itemize}
+
+What we leave open is everything dynamical. We do not derive which algebra ``wins,'' why there are three generations, how a mirror operation could generate matter, or what the equations of motion are. These are collected as explicit conjectures and open problems in Sec.~\ref{sec:ledger} and are \emph{not} claimed as results.
+
+\subsection{Honest relation to prior work}
+
+The division-algebra and exceptional-group approach to particle physics is old and well developed, and we claim no priority over any of it. The octonionic origin of $\mathrm{SU}(3)$ color via $G_2=\mathrm{Aut}(\mathbb{O})$ is due to G\"unaydin and G\"ursey~\cite{GunaydinGursey1973}. $E_6$ grand unification with a generation in the $\mathbf{27}$ is due to G\"ursey, Ramond and Sikivie~\cite{GRS1976}. The group-theoretic identity $\sin^2\theta_W=3/8$ and its renormalization-group running originate with Georgi--Glashow~\cite{GeorgiGlashow1974} and Georgi--Quinn--Weinberg~\cite{GeorgiQuinnWeinberg1974}. The spacetime correspondence $H_2(\mathbb{A})\cong\mathbb{R}^{1,n+1}$ dates to Kugo--Townsend~\cite{KugoTownsend1983} and Sudbery~\cite{Sudbery1984}, streamlined by Baez--Huerta~\cite{BaezHuertaSUSY}. The branching tables are catalogued by Slansky~\cite{Slansky1981}, and the entire ``Standard Model as representation theory'' viewpoint is presented cleanly by Baez~\cite{Baez2002} and Baez--Huerta~\cite{BaezHuerta2010}. More recent programs include the complex-octonion $\mathrm{Cl}(6)$ constructions of Furey~\cite{Furey2014,Furey2016} and Stoica~\cite{Stoica2018}; the exceptional Jordan algebra constructions of Todorov--Dubois-Violette~\cite{TodorovDV2018} and Boyle~\cite{Boyle2020}; and the explicit octonionic $E_8$ organization of Manogue--Dray--Wilson~\cite{MDW2022}. For contrast we note the $E_8$ ``theory of everything'' proposals of Lisi~\cite{Lisi2007,Lisi2010} and the Distler--Garibaldi no-go theorem~\cite{DistlerGaribaldi} that constrains them. Because all four embeddings used here and the value $3/8$ are pre-existing and standard, the present paper is a synthesis with an explicit honesty ledger, not a source of new physics or new mathematics.
+
+\section{Division algebras, the Albert algebra $J_3(\mathbb{O})$, and the exceptional series}
+\label{sec:F1}
+
+\subsection{Normed division algebras and the Hurwitz wall}
+
+\begin{definition}
+A \emph{composition algebra} (normed division algebra) over $\mathbb{R}$ is a unital $\mathbb{R}$-algebra $\mathbb{A}$ equipped with a nondegenerate quadratic form $N$ satisfying $N(xy)=N(x)N(y)$ for all $x,y\in\mathbb{A}$.
+\end{definition}
+
+\begin{theorem}[Hurwitz]
+\label{thm:hurwitz}
+The only finite-dimensional real composition algebras with identity are $\mathbb{R},\mathbb{C},\mathbb{H},\mathbb{O}$, of real dimensions $1,2,4,8$. Here $\mathbb{R}$ and $\mathbb{C}$ are commutative and associative, $\mathbb{H}$ is associative but noncommutative, and $\mathbb{O}$ is neither commutative nor associative but is alternative (any subalgebra generated by two elements is associative).
+\end{theorem}
+
+\begin{proof}
+This is Hurwitz's composition-algebra theorem~\cite{Hurwitz1923}; the modern proof shows that multiplicativity of the norm forces $\dim_\mathbb{R}\mathbb{A}\in\{1,2,4,8\}$. See Baez~\cite[Sec.~2--3]{Baez2002}, Conway--Smith~\cite{ConwaySmith2003}, or Springer--Veldkamp~\cite{SpringerVeldkamp2000}.
+\end{proof}
+
+\begin{remark}
+We are careful with terminology. Hurwitz's theorem concerns \emph{normed} (composition) division algebras with identity. The statement that any finite-dimensional real division algebra (no zero divisors, not necessarily normed or unital) has dimension $1,2,4,$ or $8$ is a separate, topological theorem of Bott--Milnor--Kervaire; it does not force isomorphism with $\mathbb{R},\mathbb{C},\mathbb{H},\mathbb{O}$. We use only the Hurwitz statement.
+\end{remark}
+
+\subsection{Cayley--Dickson doubling and the sedenion obstruction}
+
+\begin{proposition}[Cayley--Dickson loss of properties]
+\label{prop:CD}
+The Cayley--Dickson construction doubles an algebra $A$ with conjugation to $A^2$ via $(a,b)(c,d)=(ac-d^{*}b,\,da+bc^{*})$ and $(a,b)^{*}=(a^{*},-b)$. Iterating from $\mathbb{R}$ gives $\mathbb{R}\to\mathbb{C}\to\mathbb{H}\to\mathbb{O}\to\mathbb{S}$ (sedenions, $\dim 16$). At each step a property is lost: $\mathbb{C}$ loses order, $\mathbb{H}$ loses commutativity, $\mathbb{O}$ loses associativity (retaining alternativity), and $\mathbb{S}$ loses the alternative law and the normed-composition/division property: the sedenions contain zero divisors, e.g.
+\begin{equation}
+(e_1+e_{10})(e_5+e_{14})=0,
+\end{equation}
+so $\mathbb{S}$ is not a division algebra and $N(xy)=N(x)N(y)$ fails.
+\end{proposition}
+
+\begin{proof}
+The construction and its properties are standard (Schafer~\cite{Schafer1966}; Baez~\cite[Sec.~2.2]{Baez2002}). Existence of sedenion zero divisors is due to Moreno~\cite{Moreno1998} and Cawagas~\cite{Cawagas2004}.
+\end{proof}
+
+\begin{remark}[The naive ``mirror $M^2=\mathrm{id}$'' fails]
+\label{rem:mirror}
+In \emph{every} Cayley--Dickson algebra, including $\mathbb{S}$ and beyond, conjugation $x\mapsto x^{*}$ is an involutive anti-automorphism: $x^{**}=x$ and $(xy)^{*}=y^{*}x^{*}$. Thus the conjugation map itself always squares to the identity. The heuristic ``mirror'' picture of Sec.~\ref{sec:intro} can therefore be salvaged only if $M$ means precisely this conjugation. It \emph{fails} if $M$ is read as an order-two algebra automorphism tied to multiplication: once alternativity is lost, the left/right multiplication operators $L_x,R_x$ need not square to scalars (in $\mathbb{S}$, $L_x$ is not even injective for zero divisors), and the bimodule/triality symmetries of $\mathbb{O}$ break. The correct statement is that conjugation is always an order-two involution; what breaks at dimension $16$ is the alternative law and the attendant norm/automorphism structure, not the involutivity of conjugation.
+\end{remark}
+
+This is the precise sense in which ``physics lives at a wall'': the normed-composition chain terminates at $\mathbb{O}$ ($\dim 8$), and the next double is already pathological.
+
+\subsection{The Albert algebra and the exceptional groups}
+
+\begin{definition}
+Let $h_3(\mathbb{O})=J_3(\mathbb{O})$ denote the set of $3\times3$ octonion-Hermitian matrices ($X=X^{*}$, $*$ the conjugate-transpose) with the Jordan product $X\circ Y=\tfrac12(XY+YX)$.
+\end{definition}
+
+\begin{theorem}[Albert; Jordan--von Neumann--Wigner]
+\label{thm:albert}
+$J_3(\mathbb{O})$ is a formally real, simple, finite-dimensional Jordan algebra of real dimension $27$. It is the unique \emph{exceptional} simple Jordan algebra, i.e.\ not isomorphic to a Jordan algebra of associative matrices under the anticommutator, precisely because $\mathbb{O}$ is nonassociative.
+\end{theorem}
+
+\begin{proof}
+The dimension count is $3$ (real diagonal entries) $+\;3\times8$ (octonionic off-diagonal entries) $=3+24=27$. Exceptionality and the classification are due to Jordan--von Neumann--Wigner~\cite{JvNW1934} and Albert~\cite{Albert1934}; see Baez~\cite[Sec.~3]{Baez2002} and Springer--Veldkamp~\cite[Ch.~5]{SpringerVeldkamp2000}.
+\end{proof}
+
+\begin{remark}
+We emphasize $\dim J_3(\mathbb{O})=27$, not $26$ or $24$. The trace-zero subspace $J_3(\mathbb{O})_0$ has dimension $26$; it is a distinct object: the $\mathbf{26}$ of $F_4$ (the trace-zero representation) and the $\mathfrak{f}_4$-module coset in $\mathfrak{e}_6=\mathfrak{f}_4\oplus J_3(\mathbb{O})_0$. The minimal nontrivial irreducible representation of $E_6$ is the $\mathbf{27}$, which is irreducible under $E_6$: the reduced structure group preserves the cubic determinant but \emph{not} the linear trace, so the $26$-dimensional trace-zero subspace is not $E_6$-invariant and is not an $E_6$ representation.
+\end{remark}
+
+\begin{theorem}[Chevalley--Schafer]
+\label{thm:f4e6}
+The automorphism group of $J_3(\mathbb{O})$ (linear maps preserving the Jordan product) is the compact, connected, simply connected exceptional Lie group $F_4$, of dimension $52$; equivalently $\mathrm{der}\,J_3(\mathbb{O})=\mathfrak{f}_4$. $F_4$ fixes the identity and acts transitively on rank-one idempotents with stabilizer $\mathrm{Spin}(9)$, so $\mathbb{OP}^2=F_4/\mathrm{Spin}(9)$. The cubic determinant (Freudenthal) form on $J_3(\mathbb{O})$ is preserved by the real exceptional group of type $E_6$, of dimension $78$ (the reduced structure group); $F_4$ is the subgroup of the structure group also fixing the identity, and Lie-algebraically $\mathfrak{e}_6=\mathfrak{f}_4\oplus J_3(\mathbb{O})_0$ with $52+26=78$.
+\end{theorem}
+
+\begin{proof}
+Chevalley--Schafer~\cite{ChevalleySchafer1950}; Freudenthal; Jacobson~\cite{Jacobson1968}; Baez~\cite[Sec.~4.2,~4.4]{Baez2002}; Springer--Veldkamp~\cite[Ch.~7]{SpringerVeldkamp2000}.
+\end{proof}
+
+\begin{remark}
+$\mathrm{Aut}(J_3(\mathbb{O}))=F_4$ (dimension $52$) is the Jordan-product-preserving group; the determinant-preserving structure group is $E_6$ (dimension $78$). These must not be confused. The dimensions of the compact exceptional groups are $G_2=14$, $F_4=52$, $E_6=78$, $E_7=133$, $E_8=248$, obtained as $\dim=\mathrm{rank}+\#\text{roots}$ (e.g.\ $E_8$: $8+240=248$); the common slip of quoting $240$ (the root count) as $\dim E_8$ is to be avoided~\cite{FultonHarris1991}.
+\end{remark}
+
+\section{Spacetime from $2\times2$ Hermitian matrices over division algebras}
+\label{sec:F2}
+
+\begin{theorem}[Minkowski space from $H_2(\mathbb{A})$]
+\label{thm:H2A}
+Let $\mathbb{A}\in\{\mathbb{R},\mathbb{C},\mathbb{H},\mathbb{O}\}$ with $n=\dim_\mathbb{R}\mathbb{A}$. The space $H_2(\mathbb{A})$ of $2\times2$ Hermitian matrices over $\mathbb{A}$ is a real vector space of dimension $n+2$, and the determinant
+\begin{equation}
+\det\begin{pmatrix} t+x & y\\ y^{*} & t-x\end{pmatrix}=t^2-x^2-|y|^2,\qquad y\in\mathbb{A},
+\end{equation}
+is a nondegenerate quadratic form of Lorentzian signature. Hence $H_2(\mathbb{A})\cong\mathbb{R}^{1,n+1}$, Minkowski space of dimension $n+2$.
+\end{theorem}
+
+\begin{proof}
+A Hermitian $2\times2$ matrix has the displayed form with $t,x\in\mathbb{R}$ and $y\in\mathbb{A}$, giving $1+1+n=n+2$ real parameters. The determinant $t^2-x^2-y^{*}y=t^2-x^2-|y|^2$ has one positive and $n+1$ negative directions, i.e.\ signature $(1,n+1)$. The formula is unambiguous even when $\mathbb{A}$ is noncommutative or nonassociative. See Baez--Huerta~\cite[Sec.~3]{BaezHuertaSUSY} and Sudbery~\cite{Sudbery1984}.
+\end{proof}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lcccl}
+\toprule
+$\mathbb{A}$ & $n=\dim_\mathbb{R}\mathbb{A}$ & $\dim H_2(\mathbb{A})=n+2$ & signature & spacetime\\
+\midrule
+$\mathbb{R}$ & $1$ & $3$ & $(1,2)$ & $\mathbb{R}^{1,2}$ (3D)\\
+$\mathbb{C}$ & $2$ & $4$ & $(1,3)$ & $\mathbb{R}^{1,3}$ (ordinary 4D)\\
+$\mathbb{H}$ & $4$ & $6$ & $(1,5)$ & $\mathbb{R}^{1,5}$ (6D)\\
+$\mathbb{O}$ & $8$ & $10$ & $(1,9)$ & $\mathbb{R}^{1,9}$ (10D)\\
+\bottomrule
+\end{tabular}
+\caption{The corrected, standard correspondence between $H_2(\mathbb{A})$ and Minkowski space. Note that $H_2(\mathbb{H})$ is \emph{six}-dimensional and that ordinary $4$D Minkowski space is the \emph{complex} block $H_2(\mathbb{C})$.}
+\label{tab:H2A}
+\end{table}
+
+\begin{remark}[Two corrections we insist on]
+\label{rem:dimcorrect}
+First, $H_2(\mathbb{H})$ is six-dimensional, with signature $(1,5)$: the off-diagonal quaternionic entry contributes $\dim_\mathbb{R}\mathbb{H}=4$ real directions, so $\dim=1+1+4=6$. It is \emph{not} four-dimensional, and the quaternionic case is not the case of ordinary spacetime. Second, ordinary $4$D Minkowski space $\mathbb{R}^{1,3}$ is the \emph{complex} case $H_2(\mathbb{C})$ ($\dim=1+1+2=4$), with $\mathrm{SL}(2,\mathbb{C})=\mathrm{Spin}(1,3)$. Throughout, signatures are written as (timelike, spacelike)$=(1,n+1)$, and $\mathrm{Spin}(1,n+1)$ and $\mathrm{Spin}(n+1,1)$ denote the same group (the choice is conventional).
+\end{remark}
+
+\begin{proposition}[Spin groups]
+\label{prop:spin}
+Determinant-preserving $\mathbb{A}$-linear transformations of $H_2(\mathbb{A})$ realize the double cover of the Lorentz group on the $(n+2)$-dimensional vector representation:
+\begin{equation}
+\mathrm{SL}(2,\mathbb{R})=\mathrm{Spin}(1,2),\quad \mathrm{SL}(2,\mathbb{C})=\mathrm{Spin}(1,3),\quad \mathrm{SL}(2,\mathbb{H})=\mathrm{Spin}(1,5).
+\end{equation}
+For $\mathbb{A}=\mathbb{O}$ the symbol ``$\mathrm{SL}(2,\mathbb{O})$'' is heuristic only---it is not a Lie group, since $\mathbb{O}$ is nonassociative (see Dray--Manogue~\cite{DrayManogue} for the octonionic $\mathrm{SL}(2,\mathbb{O})$/$E_6$ spinor formalism)---but $\mathrm{Spin}(9,1)$ nonetheless acts on the $10$-dimensional vector representation $H_2(\mathbb{O})$ and on $16$-dimensional spinor representations.
+\end{proposition}
+
+\begin{proof}
+$\mathrm{SL}(2,\mathbb{A})$ preserves the determinant (the Minkowski metric) and acts on the $n+2$ vector representation, identifying it with the vector representation of $\mathrm{Spin}(n+1,1)$~\cite[p.~7]{BaezHuertaSUSY}. The octonionic caveat (nonassociativity, and $\dim\mathrm{SO}(9,1)=45$ versus only $32$ real components of a $2\times2$ octonionic matrix) is discussed by Sudbery~\cite{Sudbery1984} and Baez~\cite{Baez2002}.
+\end{proof}
+
+\begin{remark}
+Spinors in this framework are elements of $\mathbb{A}^2$, of real dimension $2n$; the pairing $\mathbb{A}^2\times\mathbb{A}^2\to H_2(\mathbb{A})$ reproduces the Clifford/$\gamma$-matrix structure. The vanishing of the relevant trilinear (the ``three-psi'' identity) holds exactly in dimensions $3,4,6,10$, which is why classical super-Yang--Mills and the Green--Schwarz superstring are supersymmetric precisely there~\cite{KugoTownsend1983,Evans1988,BaezHuertaSUSY}. Note that the vector representation $H_2(\mathbb{A})$ (dimension $n+2$) and the spinor representation $\mathbb{A}^2$ (real dimension $2n$) are distinct; for $\mathbb{O}$ they are $10$ and $16$ respectively. Octonionic Hermitian matrices can fail to have real eigenvalues~\cite{DrayJaneskyManogue2000}, but the determinant formula is unaffected.
+\end{remark}
+
+\section{The $E_6$ fundamental and the Standard-Model skeleton}
+\label{sec:F3}
+
+\subsection{The $\mathbf{27}$ and the EIII coset}
+
+\begin{proposition}[Branching of the $\mathbf{27}$]
+\label{prop:27}
+Under $E_6\supset\mathrm{Spin}(10)\times U(1)$,
+\begin{equation}
+\mathbf{27}=\mathbf{1}_{(+4)}+\mathbf{10}_{(-2)}+\mathbf{16}_{(+1)},
+\end{equation}
+in Slansky's integer normalization, and the adjoint splits as
+\begin{equation}
+\mathbf{78}=\mathbf{45}_{(0)}+\mathbf{1}_{(0)}+\mathbf{16}_{(-3)}+\overline{\mathbf{16}}_{(+3)},
+\end{equation}
+i.e.\ $\mathfrak{e}_6=\mathfrak{so}(10)\oplus\mathbb{R}\oplus\mathbf{16}\oplus\overline{\mathbf{16}}$. The charges are traceless: $1\cdot4+10\cdot(-2)+16\cdot1=0$.
+\end{proposition}
+
+\begin{proof}
+Standard branching tables of Slansky~\cite{Slansky1981}; dimension checks $1+10+16=27$ and $45+1+16+16=78$. The $\mathbf{16},\overline{\mathbf{16}}$ are the Weyl spinor of $\mathrm{Spin}(10)$ and its conjugate.
+\end{proof}
+
+\begin{proposition}[The EIII coset]
+\label{prop:EIII}
+The exceptional Hermitian symmetric space $\mathrm{EIII}=E_{6(-14)}/(\mathrm{Spin}(10)\cdot U(1))$ has real dimension $78-(45+1)=32$ and complex dimension $16$, rank $2$. Its isotropy (tangent) representation, as a real representation, is
+\begin{equation}
+\mathbf{32}=\mathbf{16}\oplus\overline{\mathbf{16}},
+\end{equation}
+the complex $\mathrm{Spin}(10)$ spinor plus its conjugate, with holonomy $\mathrm{Spin}(10)\cdot U(1)\subset U(16)$.
+\end{proposition}
+
+\begin{proof}
+This follows from the symmetric decomposition $\mathfrak{e}_6=\mathfrak{k}\oplus\mathfrak{m}$ with $\mathfrak{k}=\mathfrak{so}(10)\oplus\mathfrak{u}(1)$ and $\mathfrak{m}=\mathbf{16}\oplus\overline{\mathbf{16}}$, the same off-diagonal blocks as in Proposition~\ref{prop:27}. See Helgason~\cite{Helgason2001}.
+\end{proof}
+
+\begin{remark}[No ``$28+4$'' branching]
+\label{rem:no284}
+The honest representation-theoretic statement is $\mathbf{32}=\mathbf{16}\oplus\overline{\mathbf{16}}$ under $\mathrm{Spin}(10)\times U(1)$. Any split such as ``$28+4$'' (e.g.\ a choice of four internal plus twenty-eight directions) is an \emph{extra} physical or geometric assumption, not a $\mathrm{Spin}(10)\times U(1)$ branching, and we do not present it as one.
+\end{remark}
+
+\subsection{The grand-unification chain and one generation}
+
+\begin{proposition}[Breaking chain and one generation]
+\label{prop:chain}
+$E_6\supset\mathrm{SO}(10)\times U(1)\supset\mathrm{SU}(5)\times U(1)\times U(1)\supset\mathrm{SU}(3)_c\times\mathrm{SU}(2)_L\times U(1)_Y$ is the canonical maximal-subgroup chain of chiral grand unification, each step a regular embedding. Under $\mathrm{SU}(5)$,
+\begin{equation}
+\mathbf{16}=\mathbf{10}+\bar{\mathbf 5}+\mathbf 1,
+\end{equation}
+where the $\mathbf{10}$ holds $(Q,u^c,e^c)$, the $\bar{\mathbf 5}$ holds $(d^c,L)$, and the singlet is the right-handed neutrino $\nu_R$; this is one anomaly-free generation. The full $\mathbf{27}=\mathbf{16}_{(+1)}+\mathbf{10}_{(-2)}+\mathbf{1}_{(+4)}$ contains, beyond this generation, only vectorlike exotics (the extra $\mathbf{10}+\mathbf{1}$), not a fourth chiral family; such $E_6$ exotics and their associated $Z'$ phenomenology are reviewed in~\cite{Langacker2008}.
+\end{proposition}
+
+\begin{proof}
+Branching tables of Slansky~\cite{Slansky1981}; the $\mathrm{SU}(5)$ step is Georgi--Glashow~\cite{GeorgiGlashow1974}; the synthesis is in Baez--Huerta~\cite{BaezHuerta2010}.
+\end{proof}
+
+\begin{proposition}[$\mathrm{Spin}(10)$ spinor products]
+\label{prop:so10prod}
+For $\mathrm{Spin}(10)$,
+\begin{equation}
+\mathbf{16}\times\mathbf{16}=\mathbf{10}_s+\mathbf{120}_a+\mathbf{126}_s,\qquad \mathbf{16}\times\overline{\mathbf{16}}=\mathbf{1}+\mathbf{45}+\mathbf{210},
+\end{equation}
+with $\mathbf{10}$ and $\mathbf{126}$ symmetric and $\mathbf{120}$ antisymmetric; both sides total $256=16^2$.
+\end{proposition}
+
+\begin{proof}
+Slansky~\cite[Table~42]{Slansky1981}. The dimensions are $\mathbf{45}=\binom{10}{2}$ (adjoint), $\mathbf{120}=\binom{10}{3}$, $\mathbf{210}=\binom{10}{4}$, and $\mathbf{126}=\tfrac12\binom{10}{5}$ (a complex self-dual rank-five form). Note $\mathbf{16}\times\mathbf{16}$ contains no $\mathrm{Spin}(10)$ singlet, whereas $\mathbf{16}\times\overline{\mathbf{16}}$ does.
+\end{proof}
+
+\begin{remark}
+The historical origin of $E_6$ unification with a generation in the $\mathbf{27}$ is G\"ursey--Ramond--Sikivie~\cite{GRS1976}; $E_6$ has complex (non-self-conjugate) representations, so $\mathbf{27}$ and $\overline{\mathbf{27}}$ are inequivalent, with $\overline{\mathbf{27}}=\mathbf{1}_{(-4)}+\mathbf{10}_{(+2)}+\overline{\mathbf{16}}_{(-1)}$.
+\end{remark}
+
+\section{The unification observable $\sin^2\theta_W=3/8$}
+\label{sec:F4}
+
+\begin{proposition}[Trace ratio in canonical GUT normalization]
+\label{thm:weinberg}
+\emph{Given} the canonical $\mathrm{SU}(5)$ hypercharge normalization $T_Y=\sqrt{3/5}\,Y$ (a convention/model choice, not an algebraic output), equivalently $g_1^2=\tfrac53 g'^2$, the trace ratio at the scale where $\mathrm{SU}(5)$ is unbroken yields
+\begin{equation}
+\sin^2\theta_W=\frac{g'^2}{g^2+g'^2}=\frac{\mathrm{Tr}(T_3^2)}{\mathrm{Tr}(Q^2)}=\frac{1}{1+5/3}=\frac{3}{8}.
+\end{equation}
+This is a high-scale boundary value conditioned on the normalization, not the measured low-energy number (Rem.~\ref{rem:running}).
+\end{proposition}
+
+\begin{proof}
+Using $Q=T_3+Y$ and the normalization condition $\mathrm{Tr}(T_Y^2)=\mathrm{Tr}(T_3^2)$ over a complete $\mathrm{SU}(5)$ multiplet gives $\mathrm{Tr}(Q^2)=(1+\tfrac53)\,\mathrm{Tr}(T_3^2)$, hence $\sin^2\theta_W=1/(1+\tfrac53)=3/8$. Concretely on $\bar{\mathbf 5}=(d^c:\text{3 colors},\,Y=+\tfrac13)\oplus(L=(\nu,e),\,Y=-\tfrac12)$,
+\begin{equation}
+\mathrm{Tr}(T_3^2)=\tfrac14+\tfrac14=\tfrac12,\qquad
+\mathrm{Tr}(Q^2)=3\cdot(\tfrac13)^2+0+(-1)^2=\tfrac13+1=\tfrac43,
+\end{equation}
+so the ratio is $(1/2)/(4/3)=3/8$. This is Georgi--Quinn--Weinberg~\cite{GeorgiQuinnWeinberg1974}.
+\end{proof}
+
+\begin{remark}[Honest scale caveat]
+\label{rem:running}
+The value $3/8$ is a tree-level boundary condition at $M_\text{GUT}$, valid only while $\mathrm{SU}(5)$ (or larger) is unbroken; it is \emph{not} the measured number. Renormalization-group running to $M_Z$ yields the experimental
+\begin{equation}
+\sin^2\theta_W^{\overline{\rm MS}}(M_Z)=0.23122\pm0.00006
+\end{equation}
+(PDG, $\hat s_Z^2$)~\cite{PDG2024}. The amount of running, and whether the three couplings actually meet, depends entirely on the matter and scalar content between $M_Z$ and $M_\text{GUT}$: non-supersymmetric $\mathrm{SU}(5)$ does not unify precisely, while the MSSM spectrum does much better. The hypercharge normalization $T_Y=\sqrt{3/5}\,Y$ is the load-bearing input; a different (non-GUT) normalization changes the number.
+\end{remark}
+
+\begin{remark}[Content-dependence of $b_0$, and a flagged SJET pitfall]
+\label{rem:b0}
+The one-loop gauge beta function is $\beta(g)=-(g^3/16\pi^2)\,b_0$ with
+\begin{equation}
+b_0=\tfrac{11}{3}C_2(G)-\tfrac43\kappa\sum_F T(R_F)-\tfrac13\sum_S T(R_S),\qquad \kappa=\tfrac12\ \text{(Weyl)},
+\end{equation}
+where $T(\text{fund }\mathrm{SU}(N))=\tfrac12$, $T(\text{adj})=C_2(G)=N$, $T(\text{singlet})=0$~\cite{Jones1974,MachacekVaughn1983}. Every term is a Dynkin index of a \emph{named} representation, so $b_0$ is content-dependent and is not a universal constant. We explicitly flag the earlier (over-claimed) ``$b_0=12=(88-24-28)/3$'' construction: a scalar contribution entered as a \emph{coset dimension} (e.g.\ $\dim E_6/F_4=78-52=26$) is not a Dynkin index and does not in general equal $\sum_S T(R_S)$. Such a value is therefore a model assumption about field content, not an output of the Lie algebra, and we record it as such rather than as a result.
+\end{remark}
+
+\begin{remark}[$F_4$ is non-chiral]
+\label{rem:f4chiral}
+$F_4$ has only real representations, hence cannot produce a chiral spectrum; embedding $\mathrm{SU}(3)\times\mathrm{SU}(2)\times U(1)$ directly into $F_4$ does not reproduce the correct hypercharges. The chiral content enters through the complexification $E_6$ and its complex $\mathbf{27}$. $F_4$ enters the program as $\mathrm{Aut}(J_3(\mathbb{O}))$ and $E_6$ as the reduced structure group of $J_3(\mathbb{O})$; the chiral physics must be routed through $E_6\to\mathrm{SO}(10)\to\mathrm{SU}(5)$.
+\end{remark}
+
+\section{Theorem/conjecture ledger}
+\label{sec:ledger}
+
+The point of this paper is the transparency of Table~\ref{tab:ledger}: the structural facts of Secs.~\ref{sec:F1}--\ref{sec:F4} are proven (or standard), whereas the dynamical program is conjectural and is stated below only as open problems.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{p{0.46\textwidth} p{0.46\textwidth}}
+\toprule
+\textbf{Proven / standard (this paper, by citation)} & \textbf{Conjectural / open (not claimed)}\\
+\midrule
+Hurwitz: normed division algebras are $\mathbb{R},\mathbb{C},\mathbb{H},\mathbb{O}$ (Thm.~\ref{thm:hurwitz}); sedenion zero divisors (Prop.~\ref{prop:CD}).
+& Capacity/selection principle: \emph{why} a particular algebra or partition is dynamically singled out (Conj.~\ref{conj:capacity}).\\[2pt]
+$\dim J_3(\mathbb{O})=27$; $\mathrm{Aut}=F_4$, structure group $E_6$ (Thms.~\ref{thm:albert},~\ref{thm:f4e6}).
+& Observer/family count: \emph{why} three generations (Conj.~\ref{conj:families}).\\[2pt]
+$H_2(\mathbb{A})\cong\mathbb{R}^{1,n+1}$, dims $3,4,6,10$; $H_2(\mathbb{H})$ is 6D; 4D is $H_2(\mathbb{C})$ (Thm.~\ref{thm:H2A}, Rem.~\ref{rem:dimcorrect}).
+& Mirror-functor generation: a precise functor whose action ``creates'' matter content (Conj.~\ref{conj:mirror}).\\[2pt]
+$\mathbf{27}=\mathbf{1}+\mathbf{10}+\mathbf{16}$; $\mathbf{16}=\mathbf{10}+\bar{\mathbf5}+\mathbf1$; $\mathbf{32}=\mathbf{16}\oplus\overline{\mathbf{16}}$ (Props.~\ref{prop:27},~\ref{prop:EIII},~\ref{prop:chain}).
+& Emergent dynamics: equations of motion / a Lagrangian derived from the algebraic data (Conj.~\ref{conj:dynamics}).\\[2pt]
+$\mathbf{16}\times\mathbf{16}=\mathbf{10}+\mathbf{120}+\mathbf{126}$ (Prop.~\ref{prop:so10prod}); $\sin^2\theta_W=3/8$ as a normalization-conditioned high-scale trace ratio (Prop.~\ref{thm:weinberg}).
+& Whether any of the above can yield a falsifiable low-energy prediction beyond the known RG analysis.\\
+\bottomrule
+\end{tabular}
+\caption{The honesty ledger. Left: structural facts, all pre-existing and standard. Right: the dynamical program, recorded as open problems, not results.}
+\label{tab:ledger}
+\end{table}
+
+\begin{conjecture}[Capacity selection of the partition]
+\label{conj:capacity}
+There exists a well-posed variational or information-theoretic ``capacity'' principle whose extremization singles out one normed division algebra (or one partition of $J_3(\mathbb{O})$, or one symmetry-breaking pattern of $E_6$) as physically realized. \emph{Status: open.} No such principle is established here; the heuristic of Sec.~\ref{sec:intro} does not constitute one.
+\end{conjecture}
+
+\begin{conjecture}[Observer/family count]
+\label{conj:families}
+The number of fermion generations equals three for a structural reason internal to the octonionic/Jordan data (e.g.\ via $\mathrm{SO}(8)$ triality, three off-diagonal octonionic slots of $J_3(\mathbb{O})$, or the $\mathrm{Cl}(6)$ ideal structure). \emph{Status: open and contested.} Triality- and $\mathrm{Cl}(6)$-based generation counting (Furey~\cite{Furey2014}; Boyle~\cite{Boyle2020}; Todorov--Dubois-Violette~\cite{TodorovDV2018}) is an active but model-dependent research theme, not a theorem.
+\end{conjecture}
+
+\begin{conjecture}[Mirror-functor generation mechanism]
+\label{conj:mirror}
+The heuristic ``mirror'' of Sec.~\ref{sec:intro} can be promoted to a precise functor (an involution on a suitable category) whose iteration reproduces the division-algebra chain and generates the matter representations. \emph{Status: open.} As Remark~\ref{rem:mirror} shows, the only canonical order-two map available---Cayley--Dickson conjugation---loses its useful (alternative/triality) structure at $\mathbb{S}$, so even formulating the conjecture precisely is part of the open problem.
+\end{conjecture}
+
+\begin{conjecture}[Emergent dynamics]
+\label{conj:dynamics}
+There is a dynamical theory (action principle and equations of motion) whose kinematic data are exactly the algebraic structures of Secs.~\ref{sec:F1}--\ref{sec:F4} and which reproduces Standard-Model dynamics. \emph{Status: open.} This paper supplies only kinematic/representation-theoretic scaffolding; no dynamics is derived, and we make no mass, mixing, or coupling predictions.
+\end{conjecture}
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+We have collected, with correct dimensions and signatures and with explicit citations, the standard algebraic facts that connect normed division algebras, the Albert algebra $J_3(\mathbb{O})$, and the exceptional groups $F_4$ and $E_6$ to the representation-theoretic skeleton of the Standard Model. The corrections we insisted upon---that the normed chain ends at $\mathbb{O}$ because the sedenions have zero divisors (with conjugation nonetheless remaining an involution), that $H_2(\mathbb{H})$ is six- rather than four-dimensional and that ordinary $4$D spacetime is $H_2(\mathbb{C})$, that the EIII tangent space is $\mathbf{16}\oplus\overline{\mathbf{16}}$ and not ``$28+4$,'' and that $\sin^2\theta_W=3/8$ is a high-scale boundary value with content-dependent running---are exactly the places where over-claiming is easy. None of the mathematics is new. The contribution is solely organizational: a single explicitly heuristic motivation, and a transparent ledger that separates what is proven from a dynamical program that remains entirely conjectural. This is a synthesis and an open-problem statement, not a derivation of physics; accordingly it belongs in a foundations / mathematical-physics venue rather than as a claim of new falsifiable prediction.
+
+\begin{thebibliography}{99}
+
+\bibitem{Baez2002} J.~C.~Baez, ``The Octonions,'' Bull.\ Amer.\ Math.\ Soc.\ (N.S.) \textbf{39} (2002), 145--205 (errata \textbf{42} (2005), 213). arXiv:math/0105155.
+
+\bibitem{Hurwitz1923} A.~Hurwitz, ``\"Uber die Komposition der quadratischen Formen,'' Math.\ Ann.\ \textbf{88} (1923), 1--25 (posthumous; work dated 1898).
+
+\bibitem{JvNW1934} P.~Jordan, J.~von Neumann, and E.~Wigner, ``On an algebraic generalization of the quantum mechanical formalism,'' Ann.\ of Math.\ \textbf{35}, no.~1 (1934), 29--64.
+
+\bibitem{Albert1934} A.~A.~Albert, ``On a certain algebra of quantum mechanics,'' Ann.\ of Math.\ \textbf{35}, no.~1 (1934), 65--73.
+
+\bibitem{ChevalleySchafer1950} C.~Chevalley and R.~D.~Schafer, ``The exceptional simple Lie algebras $F_4$ and $E_6$,'' Proc.\ Natl.\ Acad.\ Sci.\ USA \textbf{36}, no.~2 (1950), 137--141.
+
+\bibitem{Schafer1966} R.~D.~Schafer, \emph{An Introduction to Nonassociative Algebras}, Pure and Applied Mathematics 22, Academic Press, New York, 1966 (Dover reprint 1995).
+
+\bibitem{SpringerVeldkamp2000} T.~A.~Springer and F.~D.~Veldkamp, \emph{Octonions, Jordan Algebras and Exceptional Groups}, Springer Monographs in Mathematics, Springer, Berlin, 2000.
+
+\bibitem{Jacobson1968} N.~Jacobson, \emph{Structure and Representations of Jordan Algebras}, Amer.\ Math.\ Soc.\ Colloquium Publications 39, AMS, Providence, RI, 1968.
+
+\bibitem{ConwaySmith2003} J.~H.~Conway and D.~A.~Smith, \emph{On Quaternions and Octonions: Their Geometry, Arithmetic, and Symmetry}, A K Peters, Natick, MA, 2003.
+
+\bibitem{FultonHarris1991} W.~Fulton and J.~Harris, \emph{Representation Theory: A First Course}, Graduate Texts in Mathematics 129, Springer, New York, 1991.
+
+\bibitem{Moreno1998} G.~Moreno, ``The zero divisors of the Cayley--Dickson algebras over the real numbers,'' Bol.\ Soc.\ Mat.\ Mexicana (3) \textbf{4} (1998), 13--28.
+
+\bibitem{Cawagas2004} R.~E.~Cawagas, ``On the structure and zero divisors of the Cayley--Dickson sedenion algebra,'' Discuss.\ Math.\ Gen.\ Algebra Appl.\ \textbf{24} (2004), 251--265.
+
+\bibitem{BaezHuertaSUSY} J.~C.~Baez and J.~Huerta, ``Division Algebras and Supersymmetry I,'' in \emph{Superstrings, Geometry, Topology, and C*-algebras}, Proc.\ Sympos.\ Pure Math.\ 81, AMS, Providence, 2010, pp.~65--80 (arXiv:0909.0551); ``\ldots II,'' Adv.\ Theor.\ Math.\ Phys.\ \textbf{15} (2011), 1373--1410 (arXiv:1003.3436).
+
+\bibitem{Sudbery1984} A.~Sudbery, ``Division algebras, (pseudo)orthogonal groups and spinors,'' J.\ Phys.\ A: Math.\ Gen.\ \textbf{17}, no.~5 (1984), 939--955.
+
+\bibitem{KugoTownsend1983} T.~Kugo and P.~Townsend, ``Supersymmetry and the division algebras,'' Nucl.\ Phys.\ B \textbf{221}, no.~2 (1983), 357--380.
+
+\bibitem{Evans1988} J.~M.~Evans, ``Supersymmetric Yang--Mills theories and division algebras,'' Nucl.\ Phys.\ B \textbf{298}, no.~1 (1988), 92--108.
+
+\bibitem{DrayJaneskyManogue2000} T.~Dray, J.~Janesky, and C.~A.~Manogue, ``Octonionic Hermitian matrices with non-real eigenvalues,'' Adv.\ Appl.\ Clifford Algebras \textbf{10} (2000), 193--216. arXiv:math/0006069.
+
+\bibitem{Slansky1981} R.~Slansky, ``Group theory for unified model building,'' Phys.\ Rep.\ \textbf{79}, no.~1 (1981), 1--128.
+
+\bibitem{Helgason2001} S.~Helgason, \emph{Differential Geometry, Lie Groups, and Symmetric Spaces}, Graduate Studies in Mathematics 34, AMS, 2001 (corrected reprint of the 1978 Academic Press edition); classification of irreducible Hermitian symmetric spaces, type EIII.
+
+\bibitem{Langacker2008} P.~Langacker, ``The Physics of Heavy $Z'$ Gauge Bosons,'' Rev.\ Mod.\ Phys.\ \textbf{81} (2009), 1199; arXiv:0801.1345.
+
+\bibitem{GeorgiGlashow1974} H.~Georgi and S.~L.~Glashow, ``Unity of All Elementary-Particle Forces,'' Phys.\ Rev.\ Lett.\ \textbf{32} (1974), 438--441.
+
+\bibitem{GeorgiQuinnWeinberg1974} H.~Georgi, H.~R.~Quinn, and S.~Weinberg, ``Hierarchy of Interactions in Unified Gauge Theories,'' Phys.\ Rev.\ Lett.\ \textbf{33} (1974), 451--454.
+
+\bibitem{PDG2024} S.~Navas \emph{et al.}\ (Particle Data Group), ``Review of Particle Physics,'' Phys.\ Rev.\ D \textbf{110}, 030001 (2024); Electroweak Model section, $\hat s_Z^2=\sin^2\theta_W(M_Z)=0.23122\pm0.00006$.
+
+\bibitem{MachacekVaughn1983} M.~E.~Machacek and M.~T.~Vaughn, ``Two-Loop Renormalization Group Equations in a General Quantum Field Theory: (I) Wave Function Renormalization,'' Nucl.\ Phys.\ B \textbf{222} (1983), 83.
+
+\bibitem{Jones1974} D.~R.~T.~Jones, ``Two-loop diagrams in Yang--Mills theory,'' Nucl.\ Phys.\ B \textbf{75} (1974), 531.
+
+\bibitem{GunaydinGursey1973} M.~G\"unaydin and F.~G\"ursey, ``Quark structure and octonions,'' J.\ Math.\ Phys.\ \textbf{14} (1973), 1651--1667.
+
+\bibitem{GRS1976} F.~G\"ursey, P.~Ramond, and P.~Sikivie, ``A universal gauge theory model based on $E_6$,'' Phys.\ Lett.\ B \textbf{60} (1976), 177--180.
+
+\bibitem{BaezHuerta2010} J.~C.~Baez and J.~Huerta, ``The Algebra of Grand Unified Theories,'' Bull.\ Amer.\ Math.\ Soc.\ (N.S.) \textbf{47} (2010), 483--552; arXiv:0904.1556.
+
+\bibitem{Furey2014} C.~Furey, ``Generations: three prints, in colour,'' J.\ High Energy Phys.\ \textbf{2014} (10), 046; arXiv:1405.4601.
+
+\bibitem{Furey2016} C.~Furey, ``Standard model physics from an algebra?'', PhD thesis, University of Waterloo (2015); arXiv:1611.09182.
+
+\bibitem{Stoica2018} O.~C.~Stoica, ``Leptons, Quarks, and Gauge from the Complex Clifford Algebra $\mathbb{C}\ell_6$,'' Adv.\ Appl.\ Clifford Algebras \textbf{28} (2018), 52; arXiv:1702.04336.
+
+\bibitem{TodorovDV2018} I.~Todorov and M.~Dubois-Violette, ``Deducing the symmetry of the standard model from the automorphism and structure groups of the exceptional Jordan algebra,'' Int.\ J.\ Mod.\ Phys.\ A \textbf{33} (2018), 1850118; arXiv:1806.09450.
+
+\bibitem{Boyle2020} L.~Boyle, ``The Standard Model, The Exceptional Jordan Algebra, and Triality,'' arXiv:2006.16265 (2020); published in Quantum Reports \textbf{2} (2020).
+
+\bibitem{DrayManogue} T.~Dray and C.~A.~Manogue, ``Octonionic Cayley spinors and $E_6$,'' Comment.\ Math.\ Univ.\ Carolin.\ \textbf{51} (2010), 193--207, and related work on $\mathrm{SL}(2,\mathbb{O})$ and octonionic Dirac equations.
+
+\bibitem{MDW2022} C.~A.~Manogue, T.~Dray, and R.~A.~Wilson, ``Octions: An $E_8$ description of the Standard Model,'' J.\ Math.\ Phys.\ \textbf{63} (2022), 081703; arXiv:2204.05310.
+
+\bibitem{Lisi2007} A.~G.~Lisi, ``An Exceptionally Simple Theory of Everything,'' arXiv:0711.0770 (2007).
+
+\bibitem{Lisi2010} A.~G.~Lisi, ``An Explicit Embedding of Gravity and the Standard Model in $E_8$,'' arXiv:1006.4908 (2010).
+
+\bibitem{DistlerGaribaldi} J.~Distler and S.~Garibaldi, ``There is no `Theory of Everything' inside $E_8$,'' Comm.\ Math.\ Phys.\ \textbf{298} (2010), 419--436; arXiv:0905.2658.
+
+\end{thebibliography}
+
+\end{document}

@@ -8,6 +8,10 @@
 *.out
 *.toc
 *.synctex.gz
+*Notes.bib
+
+# Workflow scratch / intermediate artifacts
+build/
 
 # Python
 .venv/
