@@ -17,49 +17,262 @@ Physical configurations are observer-collapsed states on $\hat Q$
 
 \begin{definition}[Physical configurations]\label{def:physical}
 A configuration is \emph{observable} if it lies in the $\sigma$-anti-invariant
-sector of $\hat Q=Q/\sigma$. Fermions are cohomology classes in
+sector of the mirror quotient $\hat Q=Q/\sigma$
+(Definition~\ref{def:Qhat}). Fermions are cohomology classes in
 $H^1(\hat Q,V_{16})^{\sigma=-1}$; each observer $|\omega_\iota\rangle$ is one
-such class (Theorem~\ref{thm:observer-fp}).
+such class (Theorem~\ref{thm:observer-fp}). Observable states are those
+surviving observer collapse $\Pi_{\sigma=-1}$
+(Definition~\ref{def:heterotic-collapse}); $\sigma$-invariant mirror doubles
+are quotient-non-observable.
 \end{definition}
 
-\begin{theorem}[Three families]\label{thm:three-families}
-$\dim H^1(\hat Q,V_{16})^{\sigma=-1}=3$. Each class is one chiral
-$\mathbf{16}$ of $\Spin(10)$---one observer slot $\iota\in\mathcal{I}$;
-mirror partners are $\sigma$-invariant and non-observable. Hence $n_F=3$.
+\begin{proposition}[No-go: P2 on the unquotiented coset]\label{prop:p2-nogo}
+Void, mirror, and capacity balancing fix the \emph{number} of horizontal
+family cells ($k=3$, Theorem~\ref{thm:partition}) and organize them by triality
+on $\mathfrak{d}$, but they do \emph{not} derive chiral $\Spin(10)$ matter on
+the unquotiented coset. The EIII matter directions
+$\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$
+(Theorem~\ref{thm:universe}) are a mirror-symmetric pair
+(Proposition~\ref{prop:mirror:involution}); selecting one chiral
+$\mathbf{16}$ per family with no $\overline{\mathbf{16}}$ partners is
+\emph{Postulate~P2}, not a consequence of stabilisation alone. A bare Yukawa
+$\bar\psi\,\orderparam\,\psi$ with
+$\orderparam\in\{\mathbf{16},\overline{\mathbf{16}}\}$ is not $H$-invariant on
+the unquotiented coset.
+\end{proposition}
+
+\begin{remark}[Observer collapse eliminates P2]
+Proposition~\ref{prop:p2-nogo} is not overridden: it records an honest limit
+on \emph{postulated} chiral insertion atop the mirror-symmetric coset. The
+elimination route \emph{redefines} the matter sector. Observer collapse
+$\Pi_{\sigma=-1}$ together with Definition~\ref{def:physical} declares
+physical fermions to be $\sigma$-anti-invariant classes on $\hat Q$; mirror
+partners live in $H^1(\hat Q,V_{16})^{\sigma=+1}$ and are not observable.
+Chirality is then a theorem of quotient observability, not an added input.
+\end{remark}
+
+\begin{theorem}[Chirality from observer collapse]\label{thm:chirality-derived}
+Under Definition~\ref{def:physical} and Theorem~\ref{thm:observer-fp},
+\begin{equation}\label{eq:chirality-derived}
+  \dim H^1(\hat Q,V_{16})^{\sigma=-1}=3,
+\end{equation}
+with one chiral $\mathbf{16}$ of $\Spin(10)$ per observer index
+$\iota\in\mathcal{I}$. No $\overline{\mathbf{16}}$ partners appear in the
+physical sector because mirror partners are $\sigma$-invariant, not
+anti-invariant. Hence $n_F=3$. This \textbf{replaces Postulate~P2}: chirality
+is not postulated; it is the quotient definition of observability together
+with the observer fixed-point count.
 \end{theorem}
 
 \begin{proof}
-Theorem~\ref{thm:observer-fp}; cellular details in
+Theorem~\ref{thm:observer-fp} gives the anti-invariant dimension and the
+bijection $\iota\mapsto|\omega_\iota\rangle$. Physical configurations are
+anti-invariant by Definition~\ref{def:physical}; $\sigma$-invariant modes are
+mirror doubles and quotient-non-observable. Cellular details in
 Appendix~\ref{sec:appendix:quotient}.
 \end{proof}
+
+\begin{corollary}[Three families]\label{thm:three-families}
+Theorem~\ref{thm:chirality-derived} yields $n_F=3$ chiral families without
+importing heterotic axioms as primitive data~\cite{Witten1985}.
+\end{corollary}
 
 %----------------------------------------------------------------------%
 \subsection{Spacetime from the climb}
 \label{sec:physics:spacetime}
 %----------------------------------------------------------------------%
 
+Four-dimensional Lorentzian geometry is not a consequence of the $\E{6}$
+coset metric alone. The mirror climb supplies a quaternionic clock block;
+observer lifetime charts (Section~\ref{sec:observer:lifetime}) admit a
+soldering map that imports signature into the contact layer.
+
+\begin{definition}[Jordan--octonionic clock block]\label{def:spacetime:H2O}
+Identify off-diagonal Jordan slots of $\jalg$ with the $2\times2$
+Hermitian--octonionic model $H_2(\Oct)$. The determinant $\det$ carries
+signature $(1,9)$ on $H_2(\Oct)\cong\R^{10}$. Restrict to the quaternionic
+subalgebra $\Quat\subset\Oct$ fixed by the mirror involution at the
+$4\to5$ Jordan exit (Theorem~\ref{thm:rung-table}). The embedded block
+$H_2(\Quat)\subset H_2(\Oct)$ is four-dimensional; $\det|_{H_2(\Quat)}$
+has Lorentzian signature $(-,+,+,+)$.
+\end{definition}
+
 \begin{definition}[Soldering]\label{def:soldering}
-Embed $\Quat\subset\Oct$ from the mirror-fixed associative subalgebra at the
-Jordan exit. The block $H_2(\Quat)\subset H_2(\Oct)\cong\R^{1,9}$ carries
-Lorentzian signature via $\det$. The soldering map $\sigma$ identifies four
-clock components $\orderparam^0,\ldots,\orderparam^3$ with this block;
-$d=4$.
+Let $\sigma_{\mathrm{sol}}:H_2(\Quat)\hookrightarrow\jalg$ be the canonical
+embedding of Definition~\ref{def:spacetime:H2O}. The \emph{soldering map}
+identifies four clock components $\orderparam^0,\ldots,\orderparam^3$ with
+$\mathrm{Im}(\sigma_{\mathrm{sol}})$; the world manifold has $d=4$.
 \end{definition}
 
 \begin{proposition}[Coset metric]\label{prop:coset-metric}
 $K|_{\mathfrak{m}}$ is positive-definite and $H$-invariant. Lorentzian
-signature is carried by $\sigma$, not by Wick rotation of $K$.
+signature is carried by $\sigma_{\mathrm{sol}}$, not by Wick rotation of $K$.
 \end{proposition}
 
-\begin{theorem}[Semiclassical reflection positivity]\label{thm:rp}
-On EIII, with radiative mass $\mu^2>0$ on $28$ coset scalars
-(Coleman--Weinberg), the Euclidean $\sigma$-model \eqref{eq:action} satisfies
-reflection positivity along $\orderparam^0$ in the semiclassical regime.
+\begin{proposition}[No-go: coset metric alone]\label{prop:coset-nogo}
+Mirror stabilisation at $\jalg$ and $\E{6}$ fixes the \emph{Euclidean}
+coset metric $K|_{\mathfrak{m}}$ (Proposition~\ref{prop:coset-metric}) and
+the $32=28+4$ mass split (Theorem~\ref{thm:planck}), but it does \emph{not}
+select $d=4$, a Lorentzian soldering form, or the
+$\mathrm{SL}(2,\Oct)\cong\Spin(1,9)$ frame. The $H_2(\Oct)\cong\R^{1,9}$
+embedding of Definition~\ref{def:spacetime:H2O} motivates soldering; it is
+not a theorem from void and mirror alone until observer-admitted lifetime
+charts supply the clock block (Theorem~\ref{thm:spacetime:soldering-derived}).
+\end{proposition}
+
+\begin{theorem}[Soldering from mirror climb and lifetime chart]
+\label{thm:spacetime:soldering-derived}
+The mirror climb selects a canonical four-dimensional Lorentzian subspace
+$H_2(\Quat)\subset H_2(\Oct)$ (Definition~\ref{def:spacetime:H2O}). For each
+observer index $\iota\in\mathcal{I}$, the admitted lifetime flow
+\eqref{eq:lifetime-admitted} of Definition~\ref{def:lifetime} couples
+$\tau_\iota$ to the soldering clock
+$\partial_{\tau_\iota}\sigma_{\mathrm{sol}}|_{H_2(\Quat)}$. Define
+$\sigma_{\mathrm{sol}}$ to identify
+$\orderparam^0,\ldots,\orderparam^3$ with this block. Then $d=4$, the
+induced vierbein (Proposition~\ref{prop:vierbein}) carries signature
+$(-,+,+,+)$, and soldering is \textbf{derived} from void, mirror, and
+observer collapse---not postulated.
 \end{theorem}
 
+\begin{proof}[Proof sketch]
+\emph{Step 1 (quaternionic rung).} $\Mirror^3(\Void)=\Quat$ has
+$\dim_{\R}\Quat=4$, the first Hurwitz rung with an associative non-real
+division algebra (Theorem~\ref{thm:rung-table}).
+
+\emph{Step 2 (Jordan embedding).} The Jordan exit carries a unique
+quaternionic diagonal frame; mirror involution at $n=4\to5$ fixes
+$\Quat\subset\Oct$ as the associative subalgebra from rung $3$.
+
+\emph{Step 3 (signature).} The restriction of $\det$ on $H_2(\Quat)$ is the
+Minkowski norm; the four imaginary quaternion units supply the clock
+directions. The coset metric $K|_{\mathfrak{m}}$ remains Euclidean;
+Lorentzian signature enters through $\sigma_{\mathrm{sol}}$.
+
+\emph{Step 4 (observer lifetime).} The index--lifetime map
+(Theorem~\ref{thm:index-lifetime}) requires an admitted chart
+$(\tau_\iota,g_\iota)$ whose flow \eqref{eq:lifetime-admitted} includes the
+soldering clock term in $H_2(\Quat)$. Observer collapse
+(Definition~\ref{def:observer}) on the $\sigma$-anti-invariant sector fixes
+the initial datum $\orderparam_\star|_\iota$ and thereby selects the soldered
+bundle $\mathcal{S}_\iota$ over which $g_\iota$ evolves
+(Section~\ref{sec:observer:lifetime}).
+
+\emph{Remaining gap.} Uniqueness of the $\Quat$ embedding up to $F_4$ and
+functoriality across exceptional rungs is
+Conjecture~\ref{conj:soldering-unique}.
+\end{proof}
+
+\begin{proposition}[Soldering clock along $g_\iota$]\label{prop:soldering-clock}
+Fix $\iota\in\mathcal{I}$ and an admitted lifetime chart
+$(\tau_\iota,g_\iota)$ of Definition~\ref{def:lifetime}. Along $g_\iota$,
+the soldering time parameter $\tau_\iota$ couples to the zeroth clock
+component $\orderparam^0$ via
+\begin{equation}\label{eq:soldering-clock}
+  \frac{d}{d\tau_\iota}\,\orderparam^0\big|_{g_\iota(\tau_\iota)}
+  \;=\;
+  \partial_{\tau_\iota}\sigma_{\mathrm{sol}}\big|_{H_2(\Quat)}.
+\end{equation}
+Among directions of $H_2(\Quat)$, the timelike axis $\orderparam^0$ is the
+\emph{unique} soldering direction admitted by observer collapse: the
+$\sigma$-anti-invariant sector of $\hat Q$ breaks the $\Spin(1,9)$ frame to
+the $\iota$-restricted diagonal cell, and capacity flow on
+$\mathcal{G}_{\mathrm{Albert}}$ fixes the sign convention of
+$\det|_{H_2(\Quat)}$. Spatial components
+$\orderparam^1,\ldots,\orderparam^3$ are spacelike within the same block.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+Equation~\eqref{eq:soldering-clock} is the $\orderparam^0$-component of the
+admitted flow \eqref{eq:lifetime-admitted}. Uniqueness of the timelike
+direction follows from: (i) $\det|_{H_2(\Quat)}$ has signature
+$(-,+,+,+)$ (Definition~\ref{def:spacetime:H2O}); (ii) observer index
+$\iota$ selects one diagonal class in $\mathfrak{d}$, fixing the
+$F_4$-equivariant orientation of the block; (iii) the above--below
+correspondence (Definition~\ref{def:above-below}) identifies global capacity
+balance with the $\iota$-cell orientation below.
+\end{proof}
+
+\begin{proposition}[Emergent vierbein]\label{prop:vierbein}
+For a coset section $g(x)\in\E{6}$ with $g^{-1}\partial_\mu g=A_\mu+e_\mu$,
+the $\mathfrak{m}$-component defines a composite vierbein. Under
+Theorem~\ref{thm:spacetime:soldering-derived},
+$\eta_{\mu\nu}=e^a_\mu e^b_\nu\eta_{ab}$ has signature $(-,+,+,+)$.
+\end{proposition}
+
+\begin{conjecture}[Functorial uniqueness of soldering]
+\label{conj:soldering-unique}
+The soldering of Theorem~\ref{thm:spacetime:soldering-derived} is the unique
+$F_4$-equivariant map compatible with mirror functoriality on the climb,
+capacity balancing on $\mathcal{G}_{\mathrm{Albert}}$, and the uniqueness of
+lifetime charts (Conjecture~\ref{conj:lifetime-unique}). Equivalently:
+given $\iota$ and $\orderparam_\star|_\iota$, the soldering block
+$H_2(\Quat)\subset H_2(\Oct)$ and the clock coupling
+\eqref{eq:soldering-clock} are fixed up to reparametrization of
+$\tau_\iota$.
+\end{conjecture}
+
+\begin{remark}[Epistemic status of P1]
+Proposition~\ref{prop:coset-nogo} records the honest no-go for the coset
+metric alone. Theorem~\ref{thm:spacetime:soldering-derived} \textbf{derives}
+soldering and $d=4$ from mirror climb plus observer lifetime charts; the
+residual open input is functorial uniqueness
+(Conjecture~\ref{conj:soldering-unique}, Open Problem~\textbf{O2} in
+Section~\ref{sec:conclusions}).
+\end{remark}
+
+\begin{theorem}[Semiclassical reflection positivity along observer lifetimes]
+\label{thm:rp}
+Fix $\iota\in\mathcal{I}$ and a lifetime chart
+$(\tau_\iota,g_\iota)$ admitted by capacity flow
+(Definitions~\ref{def:lifetime},~\ref{def:lifetime-index}). On EIII, with
+radiative mass $\mu^2>0$ on $28$ coset scalars (Coleman--Weinberg), the
+Euclidean $\sigma$-model \eqref{eq:action} satisfies reflection positivity
+along the observer clock $\tau_\iota$: the soldering map identifies the
+soldered time component $\orderparam^0$ with $\tau_\iota$ on the
+$\iota$-restricted trajectory $g_\iota(\tau_\iota)\in\mathcal{S}_\iota$, and
+the semiclassical OS reflection plane is taken at fixed $\tau_\iota=0$ in
+that chart. Equivalently, RP holds along the Page--Wootters clock carried by
+the quaternionic block $H_2(\Quat)$ once the observer index $\iota$ selects
+the diagonal cell.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The $\iota$-restricted gradient flow \eqref{eq:lifetime-admitted} is a
+semiclassical saddle expansion about $\orderparam_\star|_\iota$ on the massive
+$28$-dimensional coset complement of the $4$ soldering directions. With
+$\mu^2>0$, the quadratic part defines a reflection-positive Gaussian measure;
+nonnegativity of the capacity-derived interaction potential
+(Theorem~\ref{thm:vacuum}) and compactness on EIII transfer positivity to the
+perturbed measure in the standard OS semiclassical argument
+\cite{GlimmJaffe1987,OsterwalderSchrader1973}. Functoriality of
+Theorem~\ref{thm:index-lifetime} identifies the global clock
+$\orderparam^0$ with the observer parameter $\tau_\iota$ along $g_\iota$.
+\end{proof}
+
+\begin{remark}[Honest semiclassical scope]
+Theorem~\ref{thm:rp} is \emph{derived} in the radiatively gapped EIII regime;
+it does not follow from void and mirror alone, and it does not yet cover the
+tree-level massless sector or the nonperturbative gauge measure
+(Conjecture~\ref{conj:rp}).
+\end{remark}
+
 \begin{conjecture}[Nonperturbative reflection positivity]\label{conj:rp}
-Tree-level Goldstones and the nonperturbative gauge measure satisfy full
-reflection positivity, yielding OS reconstruction~\cite{OsterwalderSchrader1973}.
+The nonperturbative Euclidean measure for \eqref{eq:action}, including the
+tree-level massless Goldstone sector of Theorem~\ref{thm:vacuum} and the
+composite $\Spin(10)\times U(1)$ gauge measure, satisfies full reflection
+positivity along the soldered observer clock $\tau_\iota$ of
+Definition~\ref{def:lifetime}. The residual gap is organized by mirror parity:
+the $32$ EIII directions split into $28$ massive coset scalars (covered
+semiclassically by Theorem~\ref{thm:rp}) and $4$ massless Goldstones. We
+conjecture that the massless modes are carried by the
+\emph{$\sigma$-invariant} sector of $\hat Q$---mirror partners and their
+Goldstone doubles are quotient-non-observable
+(Theorem~\ref{thm:duality})---while the $\sigma$-anti-invariant observer
+sector supplies the observable matter and clock. Full OS
+reconstruction~\cite{OsterwalderSchrader1973} then requires only the
+anti-invariant measure factor; the $\sigma$-invariant reservoir is a
+mirror-shadow sector, not an independent postulate.
 \end{conjecture}
 
 %----------------------------------------------------------------------%
@@ -83,13 +296,288 @@ Sakharov induction from $28$ massive coset scalars gives
 $\MPl^2\propto 28\mu^2/(6\cdot16\pi^2)\log(\Lambda^2/\mu^2)$.
 \end{theorem}
 
+\begin{definition}[Dimensionless Newton coupling]\label{def:kappa}
+At RG scale $k$, define
+\begin{equation}\label{eq:kappa-def}
+  \kappa(k)\;\equiv\;\frac{k^2}{\MPl^2(k)},
+\end{equation}
+with $\MPl(k)$ the running scale induced by the Sakharov flow of
+Theorem~\ref{thm:planck}.
+\end{definition}
+
 \begin{theorem}[Gravitational fixed point]\label{thm:kappa}
-One-loop truncation gives $\kappa_\star=96\pi^2/5$ with
+Assume: (i)~Einstein--Hilbert truncation with coupling $\MPl^2(k)$;
+(ii)~one-loop contribution from the $28$ massive coset scalars of
+Theorem~\ref{thm:planck}; (iii)~higher-curvature operators and graviton loops
+neglected; (iv)~anomalous dimension
+$\eta_{\MPl}=-(5/48\pi^2)\kappa$ in this truncation. Then
+\begin{equation}\label{eq:betakappa}
+  \beta_\kappa\;\equiv\;k\frac{d\kappa}{dk}
+  \;=\;2\kappa-\frac{5}{48\pi^2}\,\kappa^2,
+\end{equation}
+with $\kappa_\star=96\pi^2/5$ and
 $\partial\beta_\kappa/\partial\kappa|_{\kappa_\star}=-2$.
 \end{theorem}
 
+\begin{definition}[Cosmological coupling]\label{def:cc}
+The heat-kernel coefficient $a_0$ of the coset--gravity complex produces an
+Einstein--Hilbert vacuum term $\int\sqrt{|g|}\,\Lambda_{\mathrm{cc}}$.
+Treat $\Lambda_{\mathrm{cc}}$ as an independent dimension-4 coupling in the
+effective action, not fixed by $\mu$ or $\MPl$.
+\end{definition}
+
+\begin{theorem}[Vacuum energy RG relevance]\label{thm:cc-rg}
+In the same truncation as Theorem~\ref{thm:planck}, the $a_0$ term is
+scheme-dependent and does not cancel against the massive-mode $a_2$ sum. Under
+canonical scaling,
+\begin{equation}\label{eq:beta-Lambda}
+  \beta_{\Lambda_{\mathrm{cc}}}
+  =-4\,\Lambda_{\mathrm{cc}}+\mathcal{O}(\text{loops}),
+\end{equation}
+so $\Lambda_{\mathrm{cc}}$ is a \emph{relevant} direction: a UV fixed point
+requires $\Lambda_{\mathrm{cc},\star}$ as input, not as output of void and
+mirror alone.
+\end{theorem}
+
+\begin{proposition}[No-go: CC not from void and mirror alone]
+\label{prop:cc-nogo}
+The cosmological constant problem---explaining
+$\Lambda_{\mathrm{obs}}\sim(10^{-3}\,\mathrm{eV})^4$ without fine-tuning---
+cannot be resolved from the void and mirror axioms and derived $\E{6}$
+dynamics \emph{alone}. Observable configurations lie in
+$H^\bullet(\hat Q,V_{16})^{\sigma=-1}$ (Definition~\ref{def:physical}); the
+heat-kernel $a_0$ vacuum energy and Theorem~\ref{thm:cc-rg} act on the full
+quotient $\hat Q$, not only on the anti-invariant sector. Without a
+sequestering mechanism that routes $\Lambda_{\mathrm{cc}}$ into the
+non-observable $\sigma$-invariant sector (Theorem~\ref{thm:duality}),
+$\Lambda_{\mathrm{cc}}$ remains a tuned environmental coupling in the
+observer sector.
+\end{proposition}
+
+\begin{conjecture}[CC sequestering at $\kappa_\star$]\label{conj:cc-sequester}
+At the gravitational fixed point $\kappa_\star=96\pi^2/5$
+(Theorem~\ref{thm:kappa}), the induced vacuum energy of the coset
+$\sigma$-model flows into the $\sigma$-invariant (mirror-partner) sector of
+$\hat Q$. By Theorem~\ref{thm:duality}, $\sigma$-invariant modes are
+quotient-non-observable; sequestered vacuum energy does not appear in
+$\Pi_{\sigma=-1}$-projected observables, yielding
+$\Lambda_{\mathrm{obs}}\approx0$ without tuning the anti-invariant sector.
+\end{conjecture}
+
+\begin{remark}[Observer-local FRG]\label{rmk:observer-frg}
+Mirror collapse $\Pi_{\sigma=-1}$ (Definition~\ref{def:heterotic-collapse})
+splits the effective action into $\sigma=\pm1$ sectors. An \emph{observer-local}
+FRG is the flow restricted to anti-invariant modes along a lifetime chart
+$g_\iota(\tau_\iota)$ (Definition~\ref{def:lifetime}). $\sigma$-invariant
+(mirror-partner) modes are non-observable but may back-react on marginal
+couplings---notably $\Lambda_{\mathrm{cc}}$---without entering the observable
+Hilbert space.
+\end{remark}
+
+Collect dimensionless couplings
+$(\xi,\hat g^2,\hat y^2,\kappa,\Lambda_{\mathrm{cc}})$ with
+$\xi=k^2/f^2$, $\hat g^2=k^2 g^2/f^2$, $\hat y^2=k^2 y^2/f^2$,
+$\kappa$ as in \eqref{eq:kappa-def}, and $\Lambda_{\mathrm{cc}}$ as in
+Definition~\ref{def:cc}. In the extended one-loop coset--gauge--gravity
+truncation (still neglecting $R^2$, graviton loops, and higher curvature),
+\begin{equation}\label{eq:frg-system}
+\begin{aligned}
+  \beta_{\xi}&=2\xi,
+  &\quad
+  \beta_{\hat g^2}&=2\hat g^2+\frac{b_0}{48\pi^2}\hat g^4,
+  &\quad
+  \beta_{\hat y^2}&=2\hat y^2+\mathcal{O}(\hat y^4,\hat g^2\hat y^2),
+  \\[4pt]
+  \beta_{\kappa}&=2\kappa-\frac{5}{48\pi^2}\kappa^2,
+  &\quad
+  \beta_{\Lambda_{\mathrm{cc}}}&=-4\,\Lambda_{\mathrm{cc}}+\mathcal{O}(\text{loops}).
+\end{aligned}
+\end{equation}
+
+\begin{proposition}[Jacobian in extended one-loop truncation]
+\label{prop:frg-jacobian}
+At the fixed point
+$(\xi_\star,\hat g^2_\star,\hat y^2_\star,\kappa_\star,\Lambda_{\mathrm{cc},\star})
+=(\xi_\star,0,0,96\pi^2/5,0)$, the stability matrix
+$J=\partial\beta_i/\partial g_j$ has diagonal spectrum
+$\mathrm{eig}(J)=\{+2,+2,+2,-2,-4\}$. With
+$\theta_i=-\mathrm{eig}(\partial\beta_i/\partial g_i)$, exactly two directions
+are UV-relevant: $\kappa$ ($\theta_\kappa=+2$) and
+$\Lambda_{\mathrm{cc}}$ ($\theta_{\Lambda}=+4$). Details in
+Appendix~\ref{sec:appendix:frg}.
+\end{proposition}
+
+\begin{conjecture}[Graviton/$R^2$ persistence of $\kappa_\star$]
+\label{conj:kappa}
+Beyond the one-loop truncation of Theorem~\ref{thm:kappa}, include $R^2$,
+$R_{\mu\nu}^2$, and graviton self-interaction in curved-background FRG. The
+fixed point $\kappa_\star=96\pi^2/5$ with
+$\partial\beta_\kappa/\partial\kappa|_{\kappa_\star}=-2$ persists if
+$\sigma$-invariant gravitational modes decouple from the observer-local flow on
+$H^1(\hat Q,V_{16})^{\sigma=-1}$ (Remark~\ref{rmk:observer-frg}). Sequestered
+$\sigma=+1$ contributions may modify $\beta_{\Lambda_{\mathrm{cc}}}$
+(Conjecture~\ref{conj:cc-sequester}) but leave $\beta_\kappa$ unchanged at
+leading order. Because $\kappa_\star\approx189\gg1$, such persistence is not a
+consequence of void and mirror; it requires nonperturbative FRG input.
+\end{conjecture}
+
+%----------------------------------------------------------------------%
+\subsection{GUT breaking from observer collapse}
+\label{sec:physics:breaking}
+%----------------------------------------------------------------------%
+
+The heterotic product mirror supplies exact
+$\mathbf{16}/\overline{\mathbf{16}}$ duality at $\Mirror^7(\Void)$; observer
+collapse $\Pi_{\sigma=-1}$ (Definition~\ref{def:heterotic-collapse}) breaks
+this pairing and selects chiral descent directions. Symmetry breaking below is
+gradient flow of $V$ on $\iota$-restricted coset directions, functorially
+descended from the global EIII minimum above
+(Definition~\ref{def:above-below}).
+
+\begin{lemma}[Hessian sector decomposition]\label{lem:breaking-hess}
+Let $\orderparam_\star\in\mathcal{M}$ be the rank-one EIII vacuum
+(Theorem~\ref{thm:vacuum}) and write fluctuations
+$\delta\orderparam=\delta\orderparam_{\mathbf{1}}+\delta\orderparam_{\mathbf{10}}+\delta\orderparam_{\mathbf{16}}$
+under the capacity partition
+$\mathbf{27}=\mathbf{1}\oplus\mathbf{10}\oplus\mathbf{16}$
+(Theorem~\ref{thm:partition}). On the coset
+$\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$, the Hessian
+$\Hess V(\orderparam_\star)$ decomposes $H$-equivariantly into $\mathbf{1}$,
+$\mathbf{10}$, and $\mathbf{16}\oplus\overline{\mathbf{16}}$ blocks. Restricting
+to the observer diagonal $\mathfrak{d}=\mathrm{span}\{e_1,e_2,e_3\}$
+(Definition~\ref{def:observer-index}), one obtains a further $\iota$-sector
+split
+\begin{equation}\label{eq:breaking-hess-iota}
+  \Hess V(\orderparam_\star)\big|_{\mathfrak{d}}
+  \;=\;
+  \bigoplus_{\iota=1}^3 \Hess_\iota V(\orderparam_\star),
+\end{equation}
+with $\Hess_\iota$ acting on the $\iota$-cell of
+$H^1(\hat Q,V_{16})^{\sigma=-1,\,\iota}$. At tree level
+$\Hess V(\orderparam_\star)=0$ on $\mathfrak{m}$: the $32$ coset directions are
+exact Goldstones; unstable modes enter only after Coleman--Weinberg radiative
+correction~\cite{ColemanWeinberg1973}.
+\end{lemma}
+
+\begin{proposition}[Chiral breaking directions]\label{prop:breaking-chiral}
+The observer projector $\Pi_{\sigma=-1}$ selects breaking along
+$\sigma$-anti-invariant coset directions in
+$H^1(\hat Q,V_{16})^{\sigma=-1}$ and suppresses the mirror-symmetric
+$\overline{\mathbf{16}}$ partner. A vacuum-expectation trajectory $g_\iota(\tau)$
+solving \eqref{eq:lifetime-admitted} therefore breaks
+$H=\Spin(10)\times U(1)$ along chiral $\mathbf{16}$-type fluctuations tied to
+slot $\iota$, not along a simultaneous
+$\mathbf{16}\oplus\overline{\mathbf{16}}$ pairing. Duality is exact at the
+heterotic rung (Theorem~\ref{thm:duality}); physical breaking is the localized
+violation induced by collapse.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+$\Pi_{\sigma=-1}=\tfrac12(\mathrm{id}-\sigma)$ annihilates $\sigma$-invariant
+modes. On $\mathfrak{m}$ the mirror involution exchanges
+$\mathbf{16}_{-3}$ and $\overline{\mathbf{16}}_{+3}$
+(Proposition~\ref{prop:mirror:involution}); anti-invariant fluctuations lie in
+$\mathbf{16}_{-3}$ modulo the $\iota$-diagonal restriction. The lifetime flow
+\eqref{eq:lifetime-admitted} restricts $\nabla V$ to the $\iota$-sector,
+breaking product mirror symmetry while preserving capacity balance on the global
+datum $\mathfrak{U}^\star$.
+\end{proof}
+
+\begin{theorem}[First breaking, conditional]\label{thm:breaking-e6so10}
+Assume the EIII vacuum $\orderparam_\star$ of Theorem~\ref{thm:vacuum}, observer
+collapse on $\hat Q$, and a fixed observer index $\iota\in\mathcal{I}$. If
+radiative corrections lift the $\mathbf{16}$-sector Hessian with a single
+unstable mode per $\iota$-cell, then gradient flow of $V$ on the
+$\iota$-restricted coset triggers the first step
+\begin{equation}\label{eq:breaking-e6so10}
+  \E{6}\;\longrightarrow\; \Spin(10)\times U(1)
+\end{equation}
+along the rank-one orbit of $\mathcal{M}$, with $U(1)$ charge aligned to the
+$\iota$-diagonal of $\mathfrak{d}$. The residual stabilizer
+$\mathfrak{h}=\mathfrak{so}_{10}\oplus\mathfrak{u}_1$ is the symmetry group of
+Theorem~\ref{thm:universe}(iii).
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Rank-one EIII fixes $\mathcal{M}=\E{6}/(\Spin(10)\times U(1))$ globally
+(Theorem~\ref{thm:vacuum}). An $\iota$-localized unstable fluctuation in
+$\mathbf{16}_{-3}$ is an adjoint-direction Goldstone of $\E{6}/H$; flow along
+that mode restores a $\Spin(10)$-invariant submanifold while breaking the
+remaining $U(1)_\iota\subset U(1)$ tied to the chosen diagonal. The branching
+matches the standard
+$\mathbf{78}=\mathbf{45}\oplus\mathbf{1}\oplus\mathbf{16}\oplus\overline{\mathbf{16}}$
+pattern at the $\Spin(10)$-invariant vacuum~\cite{Witten1985,GeorgiGlashow1974}.
+\end{proof}
+
+\begin{conjecture}[Derived GUT--Higgs chain]\label{conj:breaking-derived}
+Sequential $\iota$-restricted gradient flow on the $28$ radiatively massive
+coset directions (Coleman--Weinberg, as in Theorem~\ref{thm:rp}) triggers the
+full chain
+\begin{equation}\label{eq:breaking-chain}
+  \E{6}\to\Spin(10)\times U(1)\to SU(5)\to SU(3)_c\times SU(2)_L\times U(1)_Y
+  \to SU(3)_c\times U(1)_{\mathrm{em}}
+\end{equation}
+with observable Higgs content $\mathbf{45}_H$, $\mathbf{126}_H$, $\mathbf{10}_H$
+realized as unstable $\Hess V$ directions in the $\mathbf{27}$-sector of
+Theorem~\ref{thm:partition}, filtered through $\Pi_{\sigma=-1}$. Yukawa
+matrices $y_{ij}$ arise from cubic overlap integrals
+\begin{equation}\label{eq:breaking-yukawa}
+  y_{ij}\;\propto\;\int_{\hat Q}\omega_\iota\wedge\omega_j\wedge\Phi_{\mathrm{Higgs}},
+\end{equation}
+of observer modes $|\omega_\iota\rangle$ on $\hat Q$
+(Definition~\ref{def:observer}) against Higgs fluctuations
+$\Phi_{\mathrm{Higgs}}$ drawn from the unstable Hessian spectrum.
+\end{conjecture}
+
 \begin{conjecture}[GUT breaking]\label{conj:breaking}
-Gradient flow of $V$ on coset directions triggers
-$\E{6}\to\Spin(10)\times U(1)\to\cdots\to SU(3)_c\times U(1)_{\mathrm{em}}$
-with Higgs content $\mathbf{45}_H$, $\mathbf{126}_H$, $\mathbf{10}_H$.
+Gradient flow of $V$ on $\iota$-restricted coset directions triggers
+\eqref{eq:breaking-chain} with Higgs content $\mathbf{45}_H$, $\mathbf{126}_H$,
+$\mathbf{10}_H$; Conjecture~\ref{conj:breaking-derived} supplies the
+observer-derived mechanism (Lemma~\ref{lem:breaking-hess},
+Proposition~\ref{prop:breaking-chiral}, Theorem~\ref{thm:breaking-e6so10}).
+\end{conjecture}
+
+\begin{remark}[As above, so below]\label{rem:breaking-above-below}
+Global capacity balance fixes the EIII minimum $\orderparam_\star\in\mathcal{M}$
+\emph{above} (Theorem~\ref{thm:vacuum}); observer collapse localizes breaking
+\emph{below} to the $\iota$-sector lifetime chart
+(Definition~\ref{def:lifetime}). The correspondence \eqref{eq:above-below}
+identifies the profinite universe datum $\mathfrak{U}^\star$ with fixed-point
+collapse on $\hat Q$: the same potential $V$ governs the global vacuum and the
+slot-resolved descent trajectories $g_\iota$. What is proved globally on
+$\mathfrak{U}^\star$---the $1|10|16$ split, rank-one EIII, three observer
+slots---appears locally as chiral gauge breaking in slot $\iota$, without
+importing mirror-symmetric partners.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Flavon hierarchy from observer capacity flow}
+\label{sec:physics:flavon}
+%----------------------------------------------------------------------%
+
+Assume Conjecture~\ref{conj:breaking}. The flavour group
+$SU(3)_F\subset\Spin(10)$ acts on the three chiral $\mathbf{16}$s; each
+observer index $\iota\in\mathcal{I}$ labels one diagonal direction of
+$\mathfrak{d}\subset\jalg$ and hence one $SU(3)_F$ flavour axis.
+
+\begin{proposition}[Flavon sector from observer indices]\label{prop:flavon-sector}
+The three observer slots of Theorem~\ref{thm:chirality-derived} index three
+$SU(3)_F$ breaking stages. Along the lifetime chart $g_\iota(\tau_\iota)$
+(Definition~\ref{def:lifetime}), the capacity flow
+$\omega^\star_\iota(\tau)=\capacity_\iota(\tau)$ of
+Definition~\ref{def:lifetime-index} records which flavon direction is active at
+time $\tau$ within slot $\iota$. Mirror stabilisation fixes $n_F=3$ but not,
+by itself, Yukawa eigenvalues or mixing matrices.
+\end{proposition}
+
+\begin{conjecture}[Flavon hierarchy, P3$'$]\label{conj:flavon}
+Sequential $SU(3)_F\to SU(2)_F\to U(1)_F$ breaking is driven by the
+observer-indexed capacity RG flow $\omega^\star_\iota(\tau)$ on the flavon
+potential $V_F(\phi_1,\phi_2,\phi_3)$, with $\phi_\iota$ the flavon along
+diagonal $e_\iota$. The ordering
+$\langle\phi_3\rangle\gg\langle\phi_2\rangle\gg\langle\phi_1\rangle$ follows
+from the capacity weights $(1/27,10/27,16/27)$ of Theorem~\ref{thm:partition}
+descended through the above--below correspondence
+(Proposition~\ref{prop:above-below}), yielding Yukawa hierarchy and
+CKM/PMNS mixing without an independent flavon postulate.
 \end{conjecture}

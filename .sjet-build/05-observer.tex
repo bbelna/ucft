@@ -118,7 +118,7 @@ $\sigma$-anti-invariant cohomology class, not a postulated particle insertion.
 Observers arise at $\Mirror^7(\Void)=\E{8}\times\E{8}$, not at the void and
 not at $\E{6}$. The heterotic rung is the first rung with enough mirror
 symmetry for a $\mathbb{Z}_2$ quotient and three independent anti-invariant
-$1$-classes (Theorem~\ref{thm:three-families}). Descent to $\E{6}$ supplies
+$1$-classes (Theorem~\ref{thm:chirality-derived}). Descent to $\E{6}$ supplies
 dynamics; the observer slots are already fixed on $\hat Q$.
 \end{remark}
 
@@ -131,8 +131,13 @@ dynamics; the observer slots are already fixed on $\hat Q$.
 Let $Q$ be the Stone lift of the stabilized Albert tower at
 $\Mirror^7(\Void)$ and $\sigma$ the product-mirror involution. The
 \emph{mirror quotient} is $\hat Q=Q/\sigma$. The holomorphic
-$\mathbf{16}$-bundle $V_{16}\to\hat Q$ is  the continuum limit of the
-cellular cosheaf on the $1|10|16$ partition.
+$\mathbf{16}$-bundle $V_{16}\to\hat Q$ is the continuum limit of the
+cellular cosheaf on the $1|10|16$ partition. A mode is \emph{observable}
+iff it lies in the $\sigma$-anti-invariant sector after observer collapse
+$\Pi_{\sigma=-1}$; this is the below-level avatar of global capacity balance
+\eqref{eq:above-below}. The quotient is therefore an \emph{observer-theoretic}
+construction: physics is not on $Q$ but on the collapsed branch selected by
+$\hat{\mathcal{C}}_\sigma$.
 \end{definition}
 
 \begin{theorem}[Observer fixed-point theorem]\label{thm:observer-fp}
@@ -193,7 +198,7 @@ $\mathcal{G}_{\mathrm{Albert}}$ when
   \;=\;
   -K^{-1}\nabla V\bigl(g_\iota(\tau_\iota)\bigr)\big|_{\iota}
   \;+\;
-  \partial_{\tau_\iota}\sigma\big|_{H_2(\Quat)},
+  \partial_{\tau_\iota}\sigma_{\mathrm{sol}}\big|_{H_2(\Quat)},
 \end{equation}
 with $K$ the $H$-invariant coset metric and the second term the soldering
 clock in the quaternionic block.
@@ -210,6 +215,31 @@ recording which observer ($\iota$), which time ($\tau$), and which capacity
 cell the trajectory occupies. Two lifetimes are the same iff their indices
 $\Lambda$ agree.
 \end{definition}
+
+\begin{proposition}[Capacity as dual mirror of lifetime index]
+\label{prop:capacity-lifetime-dual}
+The capacity functional $\capacity$ of Definition~\ref{def:capacity} is the
+\emph{dual mirror} of mirror doubling: $\Mirror$ refines sectors;
+$\mathrm{Bal}_{\mathcal{C}}$ balances them to the unique maximizer
+$\omega^\star$. The lifetime index $\Lambda(\iota,\tau)$ is the
+\emph{temporal} avatar of this balance on the heterotic rung: for each observer
+$\iota$, the chart $g_\iota$ tracks the $\iota$-cell weight
+$\omega^\star_\iota$ along admitted flow \eqref{eq:lifetime-admitted}. Above,
+$\mathrm{Bal}_{\mathcal{C}}$ fixes the global partition $(1/27,10/27,16/27)$;
+below, $\Lambda$ records which cell an individual observer occupies at time
+$\tau$. This partially closes the ``capacity not forced'' gap: capacity is not
+an independent physical postulate but the balancing dual of $\Mirror$,
+instantiated per observer through the lifetime index.
+\end{proposition}
+
+\begin{remark}[Epistemic status]
+Proposition~\ref{prop:capacity-lifetime-dual} does not prove that every
+admitted trajectory must use $\mathrm{Bal}_{\mathcal{C}}$ weights---that
+remains tied to Axiom~\ref{ax:mirror} and the universe fixed point
+(Definition~\ref{def:universe}). It \emph{does} identify capacity with
+observer-level time evolution once the above--below correspondence
+\eqref{eq:above-below} is accepted.
+\end{remark}
 
 \begin{theorem}[Index--lifetime mapping]\label{thm:index-lifetime}
 For each $\iota\in\mathcal{I}$ there exists a maximal lifetime interval
@@ -230,7 +260,7 @@ $\iota$-restricted coset. Functoriality follows because
 $\mathrm{Bal}_{\mathcal{C}}$ at $n=8$ fixes $\omega^\star$ and hence the
 initial datum $\orderparam_\star|_\iota$; soldering
 (Definition~\ref{def:soldering}) supplies the clock direction
-$\partial_{\tau_\iota}\subset H_2(\Quat)$.
+$\partial_{\tau_\iota}\sigma_{\mathrm{sol}}\subset H_2(\Quat)$.
 \end{proof}
 
 \begin{conjecture}[Uniqueness of lifetime chart]\label{conj:lifetime-unique}

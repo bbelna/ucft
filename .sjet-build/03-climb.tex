@@ -7,6 +7,26 @@
   \Void\to\R\to\C\to\Quat\to\Oct\to\jalg\to\E{8}\to\E{8}\times\E{8}\to\E{6}\to\cdots\to\Void
 \end{equation}
 
+\begin{remark}[Climb sequence forced, not chosen]\label{rem:climb:forced}
+The orbit \eqref{eq:climb:unified} is fixed by void, mirror, and capacity---not
+by importing string-theory rungs. \emph{Functoriality}
+(Definition~\ref{def:mirror}) restricts each step to modes
+\textbf{M1}--\textbf{M4} of Definition~\ref{def:mirror:modes}. \emph{Hurwitz
+terminal} at $n=4$ (Theorem~\ref{thm:rung-table}) forces the Jordan exit at
+$n=5$ and anchors the associative subalgebra $\Quat\subset\Oct$ used below in
+soldering (Definition~\ref{def:soldering}). On the stabilized Albert tower,
+automorphism mirror closes at $\E{8}$ ($n=6$), product mirror is the unique
+\textbf{M4} doubling on a simple Lie rung ($n=7$), and Cartan mirror is the
+capacity-balanced collapse back to the $\jalg$ structure group ($n=8$,
+Theorem~\ref{thm:e6}). \emph{Observer-slot requirement:} three independent
+$\sigma$-anti-invariant classes in $H^1(\hat Q,V_{16})$ arise only after the
+heterotic product quotient at $\Mirror^7(\Void)$ (Proposition~\ref{prop:climb:minimal-heterotic},
+Section~\ref{sec:observer}); descent to $\E{6}$ supplies dynamics but does not
+create the slot space. The above--below correspondence
+(Definition~\ref{def:above-below}) ties each rung choice to a localized datum on
+$\hat Q$.
+\end{remark}
+
 %----------------------------------------------------------------------%
 \subsection{Division rungs}
 \label{sec:climb:division}
@@ -53,9 +73,39 @@ Freudenthal diagonal $\mathfrak{M}(\Oct,\Oct)=\mathfrak{e}_8$ yields:
 Automorphism mirror on the octonion--Jordan pair gives $\E{8}$, $d_6=248$.
 \end{theorem}
 
+\begin{definition}[Lie product mirror]\label{def:prod-mirror}
+On a stabilized exceptional rung with Lie group $G$, the \emph{product mirror}
+is $\Mirror_{\mathrm{prod}}(G):=G\times G$ with involution
+$\sigma:(g_1,g_2)\mapsto(g_2,g_1)$ exchanging factors---mode~\textbf{M4} at the
+Lie level, functorially analogous to Boolean doubling at $n=0\to1$.
+\end{definition}
+
 \begin{theorem}[$\Mirror^7(\Void)=\E{8}\times\E{8}$]\label{thm:e8e8}
 Product mirror $\Mirror_{\mathrm{prod}}(G)=G\times G$ gives $d_7=496$.
 \end{theorem}
+
+\begin{proposition}[Minimal heterotic rung for three observer slots]\label{prop:climb:minimal-heterotic}
+$\Mirror^7(\Void)=\E{8}\times\E{8}$ is the \emph{minimal} mirror rung supporting
+three observer slots: $\dim H^1(\hat Q,V_{16})^{\sigma=-1}=3$
+(Theorem~\ref{thm:observer-fp}). At $n\leq6$ there is no product-mirror
+$\mathbb{Z}_2$ quotient on the stabilized datum, hence no
+$\Pi_{\sigma=-1}$ observer sector (Section~\ref{sec:observer:definition}). At
+$n=8$ the heterotic doubling is already capacity-collapsed to $\E{6}$
+(Theorem~\ref{thm:e6}), so the three $1$-classes are fixed on $\hat Q$ at
+$n=7$ and only transported below by descent. Thus observer multiplicity is a
+\emph{below}-level consequence of the \emph{above} product mirror at the
+seventh rung.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+For $n\leq6$, $\Mirror^n(\Void)$ is a single simple Lie datum or division
+algebra; involution stabilizes within one chart, not across a heterotic pair.
+For $n=7$, $\sigma$ acts on $Q$ and antiholomorphically on $V_{16}$; the
+equivariant Lefschetz index on $H^1(Q,V_{16})$ counts three anti-invariant
+contributions (Section~\ref{sec:observer:fixed-point}). For $n=8$,
+$\Pi_{\mathrm{het}}:\E{8}\times\E{8}\to\E{6}$ preserves the slot basis on
+$\hat Q$ while reducing the gauge group.
+\end{proof}
 
 \begin{theorem}[$\Mirror^8(\Void)=\E{6}$]\label{thm:e6}
 Cartan mirror after capacity descent on the Albert graph gives $d_8=78$,
@@ -63,13 +113,55 @@ $H=\Spin(10)\times U(1)$, $\mathcal{M}=\E{6}/H$ (EIII), $\dim\mathcal{M}=32$.
 \end{theorem}
 
 \begin{proof}[Proof sketches]
-\emph{$E_8$:} couple pre-projection octonion data to $J_3(\mathbb{O})$ via
-Freudenthal--Tits~\cite{Freudenthal1954,Tits1966}.
-\emph{$E_8\times E_8$:} functorial product involution.
-\emph{$E_6$:} capacity-balanced collapse of heterotic product to reduced
-structure group of $\jalg$ with branching
-$\mathbf{27}=\mathbf{1}\oplus\mathbf{10}\oplus\mathbf{16}$.
+\emph{$E_8$ (Steps 1--3).}
+\emph{(i)} On $\jalg$, the stabilizer tower $G_2\subset F_4\subset\E{6}$ is
+mirror-refined; the octonion measure before Jordan projection carries an
+automorphism mirror $\Mirror_{\mathrm{aut}}$ coupling the two $\Oct$ sectors.
+\emph{(ii)} Freudenthal--Tits identifies
+$\mathfrak{M}(\Oct,\Oct)=\mathfrak{e}_8$ as the unique simply connected simple
+Lie algebra closed under this coupling; $G_2\times F_4\subset\E{8}$ is maximal
+among candidates containing the tower together with the mirrored octonion
+sector~\cite{Freudenthal1954,Tits1966}.
+\emph{(iii)} $d_6=248$; Stone chart dimension $\chi(S_6)=248$
+(Definition~\ref{def:chart-dim}).
+
+\emph{$E_8\times E_8$ (Steps 1--2).}
+\emph{(i)} Apply $\Mirror_{\mathrm{prod}}$ (Definition~\ref{def:prod-mirror})
+to the stabilized datum of Theorem~\ref{thm:e8}; functoriality of $\Mirror$
+gives $\Mirror^7(\Void)=\Mirror(\Mirror^6(\Void))\cong\E{8}\times\E{8}$.
+\emph{(ii)} $d_7=2\cdot248=496$; involutivity
+(Proposition~\ref{prop:mirror:involution}) holds factorwise, with $\sigma$
+implementing $\Mirror^2\cong\mathrm{id}$ up to diagonal gauge.
+
+\emph{$E_6$ (Steps 1--3).}
+\emph{(i)} On $\E{8}\times\E{8}$, the diagonal embedding
+$\delta:\E{8}\hookrightarrow\E{8}\times\E{8}$ is the $\sigma$-stabilized
+subgroup; $\mathrm{Bal}_{\mathcal{C}}$ on $\mathcal{G}_{\mathrm{Albert}}$ at
+the $\jalg$ rung fixes the $1|10|16$ partition
+(Theorem~\ref{thm:partition}).
+\emph{(ii)} Among exceptional groups, only $\E{6}$ admits
+$H=\Spin(10)\times U(1)$ with branching
+$\mathbf{27}=\mathbf{1}\oplus\mathbf{10}\oplus\mathbf{16}$ and coset mirror
+$\mathbf{16}\leftrightarrow\overline{\mathbf{16}}$; heterotic collapse is
+indexed by the rank-$3$ diagonal of $\jalg$, not by the two $\E{8}$ factors
+(Proposition~\ref{prop:climb:minimal-heterotic}).
+\emph{(iii)} $d_8=\dim\E{6}=78$, $\mathcal{M}=\E{6}/H$ (EIII),
+$\dim\mathcal{M}=32$.
 \end{proof}
+
+\begin{proposition}[Exceptional mirror steps]\label{prop:climb:exceptional}
+At $n\geq6$ on the stabilized $\jalg$ rung, $\Mirror$ acts as:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item $\E{8}$: automorphism mirror on the octonion--Jordan pair
+    (Theorem~\ref{thm:e8});
+  \item $\E{8}\times\E{8}$: Lie product mirror $\Mirror_{\mathrm{prod}}$
+    (Theorem~\ref{thm:e8e8}, Definition~\ref{def:prod-mirror});
+  \item $\E{6}$: Cartan mirror after capacity descent
+    (Theorem~\ref{thm:e6});
+  \item $\E{6}\to H=\Spin(10)\times U(1)$: coset stabilization on EIII;
+  \item $\cdots\to\Void$: collapse after electroweak breaking.
+\end{enumerate}
+\end{proposition}
 
 \begin{definition}[Chart dimension]\label{def:chart-dim}
 At $n\geq6$, $\chi(S_n)=\dim A_n\in\{248,496,78\}$; profinite $|S_n|$ is
