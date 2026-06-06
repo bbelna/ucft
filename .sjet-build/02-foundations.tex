@@ -145,6 +145,215 @@ algebra.
 \end{corollary}
 
 %----------------------------------------------------------------------%
+\subsection{Categorical equivalence $\mathbf{Stone}\simeq\mathbf{Div}^{\mathrm{norm}}$ on the mirror climb}
+\label{sec:void-mirror:equiv}
+%----------------------------------------------------------------------%
+
+We formalize the mirror climb as an equivalence between profinite observable
+spectra and normed arithmetic data. The classical Boolean--Stone adjunction is
+refined so that $\Mirror$ on the Stone side corresponds to Cayley--Dickson
+doubling (and Jordan exit) on the arithmetic side.
+
+\begin{definition}[Category of Stone spaces]\label{def:void-mirror:Stone}
+$\mathbf{Stone}$ is the category of compact, Hausdorff, totally disconnected
+spaces with continuous maps. For a Boolean algebra $\mathcal{B}$, write
+$\Clop(\mathcal{B})$ for its Stone spectrum and
+$\mathcal{B}(S)=\Clop(S)$ for the Boolean algebra of clopen subsets of
+$S\in\mathbf{Stone}$. Stone duality is the contravariant equivalence
+$\mathcal{B}(S)^{\mathrm{op}}\simeq\mathbf{Stone}$~\cite{Stone1936}.
+\end{definition}
+
+\begin{definition}[Category of normed observable algebras]\label{def:void-mirror:Divnorm}
+An object of $\mathbf{Div}^{\mathrm{norm}}$ is a triple $(D,\bar{\ },\|\cdot\|)$
+where $D$ is a finite-dimensional $\R$-algebra with involution $\bar{\ }$ and
+multiplicative norm $\|\cdot\|$ (so $D\setminus\{0\}$ is a division algebra when
+$D\neq\{0\}$), or the formally real exceptional Jordan algebra
+$(\jalg,\mathrm{id},\sqrt{Q})$ at the terminal rung. A morphism
+$f:(D,\bar{\ },\|\cdot\|)\to(D',\bar{\ }',\|\cdot\|')$ is a unital
+$\R$-algebra $*$-homomorphism with $\|f(x)\|'\leq\|x\|$ for all $x\in D$.
+\end{definition}
+
+\begin{definition}[Mirror-climb subcategories]\label{def:void-mirror:climb-cat}
+Fix rung data $(S_n,A_n)$ from Definition~\ref{def:void-mirror:power} and
+Theorem~\ref{thm:void-mirror:table} for $n=0,\ldots,5$. Let
+$\mathbf{Stone}^{\mathrm{climb}}\subset\mathbf{Stone}$ be the full subcategory
+on objects $S_0,\ldots,S_5$. Let
+$\mathbf{Div}^{\mathrm{climb}}_{\mathrm{norm}}\subset\mathbf{Div}^{\mathrm{norm}}$
+be the full subcategory on
+\[
+  A_0=\{0\},\quad A_1=\R,\quad A_2=\C,\quad A_3=\Quat,\quad A_4=\Oct,\quad
+  A_5=\jalg.
+\]
+Morphisms are algebra/space automorphisms compatible with the rung label; in
+particular $\mathrm{Aut}(A_n)$ is finite for $n\leq4$ and
+$\mathrm{Aut}(\jalg)=F_4$ at $n=5$.
+\end{definition}
+
+\begin{definition}[Arithmetic and spectrum functors]\label{def:void-mirror:functors}
+Define functors
+\[
+  \mathrm{Arith}:\mathbf{Stone}^{\mathrm{climb}}\longrightarrow
+  \mathbf{Div}^{\mathrm{climb}}_{\mathrm{norm}},
+  \qquad
+  \mathrm{Spec}^{\mathrm{climb}}:
+  \mathbf{Div}^{\mathrm{climb}}_{\mathrm{norm}}\longrightarrow
+  \mathbf{Stone}^{\mathrm{climb}}
+\]
+on objects by $\mathrm{Arith}(S_n):=A_n$ and $\mathrm{Spec}^{\mathrm{climb}}(A_n):=S_n$.
+On morphisms, $\mathrm{Arith}$ and $\mathrm{Spec}^{\mathrm{climb}}$ send each
+automorphism to the unique induced automorphism on the paired object (existence
+is proved in Lemma~\ref{lem:void-mirror:aut}). At $n\leq4$, $\mathrm{Arith}$
+is implemented by the Cayley--Dickson chain of
+Appendix~\ref{sec:appendix:cayley}; at $n=5$ it is the Jordan envelope
+$H_3(\Oct)$.
+\end{definition}
+
+\begin{definition}[Mirror as doubling functor]\label{def:void-mirror:mirror-functor}
+Let $\Mirror_{\mathrm{St}}:\mathbf{Stone}^{\mathrm{climb}}\to\mathbf{Stone}^{\mathrm{climb}}$
+be the endofunctor with $\Mirror_{\mathrm{St}}(S_n)=S_{n+1}$ for $n<5$ and
+$\Mirror_{\mathrm{St}}(S_5)=S_0$ (cyclic closure of the climb segment). Let
+$\Mirror_{\mathrm{Ar}}:\mathbf{Div}^{\mathrm{climb}}_{\mathrm{norm}}\to
+\mathbf{Div}^{\mathrm{climb}}_{\mathrm{norm}}$ be defined by
+\[
+  \Mirror_{\mathrm{Ar}}(A_n)=
+  \begin{cases}
+    A_{n+1} & n=0,1,2,3,\\
+    \jalg & n=4\ (\text{Jordan exit}),\\
+    \{0\} & n=5.
+  \end{cases}
+\]
+On morphisms, both functors are given by the induced maps from the canonical
+doubling constructions (Boolean generator adjoin, \eqref{eq:appendix:cd}, and
+$H_3(-)$).
+\end{definition}
+
+\begin{lemma}[Automorphism synchronization]\label{lem:void-mirror:aut}
+For each $n=0,\ldots,5$, the assignment $S_n\mapsto A_n$ identifies
+$\mathrm{Aut}(S_n)$ with $\mathrm{Aut}(A_n)$:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item $n=0,1$: trivial groups;
+  \item $n=2$: $\mathrm{Aut}(\C)=\Z/2$ (complex conjugation), matching clopen
+    exchange on $S_2\cong\{0,1\}^2$;
+  \item $n=3$: $\mathrm{Aut}(\Quat)\cong S_4$ acting on the basis of imaginary
+    units, matching the $8$-point Stone skeleton;
+  \item $n=4$: $\mathrm{Aut}(\Oct)=G_2$, matching the $16$-point profinite
+    skeleton;
+  \item $n=5$: $\mathrm{Aut}(\jalg)=F_4$, matching permutations of the $27$
+    diagonal matrix units in $S_5$.
+\end{enumerate}
+Hence $\mathrm{Arith}$ and $\mathrm{Spec}^{\mathrm{climb}}$ are fully faithful.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+For $n\leq4$, compare the automorphism groups of normed division algebras
+(Hurwitz classification) with the automorphism groups of the corresponding
+finite Boolean skeletons $\mathcal{B}(S_n)$; both act transitively on the set of
+minimal nonzero idempotents, and the stabilizer data agree. For $n=5$, use the
+identification of $F_4=\mathrm{Aut}(\jalg)$ with the automorphisms of the
+$27$-dimensional diagonal subspace preserved by the cubic norm
+(Appendix~\ref{sec:appendix:sharp}).
+\end{proof}
+
+\begin{theorem}[Mirror-climb equivalence]\label{thm:void-mirror:equiv}
+The functors
+\[
+  \mathrm{Arith}:\mathbf{Stone}^{\mathrm{climb}}\rightleftarrows
+  \mathbf{Div}^{\mathrm{climb}}_{\mathrm{norm}}:
+  \mathrm{Spec}^{\mathrm{climb}}
+\]
+are mutually inverse equivalences of categories. Moreover, for $n=0,\ldots,4$,
+\[
+  \Mirror_{\mathrm{St}}(S_n)=S_{n+1}
+  \quad\Longleftrightarrow\quad
+  \Mirror_{\mathrm{Ar}}(A_n)=A_{n+1},
+\]
+and at the Jordan exit
+\[
+  \Mirror_{\mathrm{St}}(S_4)=S_5,\qquad
+  \Mirror_{\mathrm{Ar}}(\Oct)=\jalg,\qquad
+  |S_5|=27=\dim_{\R}\jalg,
+\]
+with $\Mirror_{\mathrm{Ar}}(\jalg)=\{0\}$ closing the segment to the void.
+\end{theorem}
+
+\begin{proof}
+\emph{Essential surjectivity and inverse on objects.} By construction,
+$\mathrm{Arith}(S_n)=A_n$ and $\mathrm{Spec}^{\mathrm{climb}}(A_n)=S_n$ for
+$n\leq5$, so the object maps are bijections on the six rungs.
+
+\emph{Rungs $0$--$4$ (normed division sector).} For $n\leq4$, Theorem~\ref{thm:void-mirror:table}
+gives $d_n=2^{n-1}$ (with $d_0=0$) and $|S_n|=2^n$. The discrete step
+$n=0\to1$ adjoins one Boolean atom, yielding $S_1$ with two clopen points and
+$A_1=\R$ with $\|\cdot\|$ the absolute value. For $n=1,2,3,4$, arithmetic
+mirror is Cayley--Dickson doubling (Definition~\ref{def:void-mirror:modes},
+\eqref{eq:appendix:cd}), which doubles $\dim_{\R}$ and, on the Stone side,
+doubles clopen sectors: $|S_{n+1}|=2|S_n|$. Proposition~\ref{prop:appendix:cdchain}
+identifies the arithmetic orbit
+$\R\to\C\to\Quat\to\Oct$ with $\Mirror_{\mathrm{Ar}}^n(\R)$. Hurwitz's theorem
+(Theorem~\ref{thm:ladder:hurwitz}) shows this is the \emph{complete} list of
+normed division algebras, so $\mathrm{Arith}$ hits every division object in
+$\mathbf{Div}^{\mathrm{climb}}_{\mathrm{norm}}$ exactly once.
+
+\emph{Rung $5$ (Jordan exit).} Lemma~\ref{lem:void-mirror:sedenion} excludes a
+$16$-dimensional division object at the next arithmetic step; the climb exits to
+the unique formally real Jordan algebra $\jalg=H_3(\Oct)$ with $27$ real
+coordinates (Theorem~\ref{thm:void-mirror:table}). The Stone spectrum $S_5$ is
+the $27$-cell profinite skeleton whose clopens label the matrix entries in
+\eqref{eq:appendix:matrix}; thus
+$\mathrm{Spec}^{\mathrm{climb}}(\jalg)=S_5$ and
+$\mathrm{Arith}(S_5)=\jalg$.
+
+\emph{Natural isomorphisms.} Define
+\[
+  \eta_n:\mathrm{Spec}^{\mathrm{climb}}(\mathrm{Arith}(S_n))\xrightarrow{\;\cong\;}S_n,
+  \qquad
+  \varepsilon_n:\mathrm{Arith}(\mathrm{Spec}^{\mathrm{climb}}(A_n))\xrightarrow{\;\cong\;}A_n
+\]
+as the identity on underlying sets at each rung (clopen cells $\leftrightarrow$
+algebraic basis vectors). Lemma~\ref{lem:void-mirror:aut} shows these assignments
+are natural under automorphisms, hence $\eta$ and $\varepsilon$ are natural
+isomorphisms. Therefore $\mathrm{Arith}$ and $\mathrm{Spec}^{\mathrm{climb}}$
+are quasi-inverse equivalences.
+
+\emph{Mirror synchronization.} By Definition~\ref{def:void-mirror:mirror-functor},
+$\Mirror_{\mathrm{St}}$ and $\Mirror_{\mathrm{Ar}}$ are the unique endofunctors
+that advance rung index by one on objects. The equivalence $\mathrm{Arith}$ sends
+$\Mirror_{\mathrm{St}}$ to $\Mirror_{\mathrm{Ar}}$ up to the natural isomorphisms
+$\eta,\varepsilon$:
+\[
+  \mathrm{Arith}\circ\Mirror_{\mathrm{St}}\;\cong\;\Mirror_{\mathrm{Ar}}\circ\mathrm{Arith},
+  \qquad
+  \mathrm{Spec}^{\mathrm{climb}}\circ\Mirror_{\mathrm{Ar}}\;\cong\;
+  \Mirror_{\mathrm{St}}\circ\mathrm{Spec}^{\mathrm{climb}}.
+\]
+This is the categorical form of the mirror climb from $\Void$.
+\end{proof}
+
+\begin{corollary}[Hurwitz--Stone dictionary]\label{cor:void-mirror:dictionary}
+Along rungs $0$--$4$, dimension and clopen cardinality obey
+\[
+  \dim_{\R}A_n=2^{n-1}\ (n\geq1),\qquad |S_n|=2^n,\qquad
+  \mathcal{B}(S_n)\cong\mathrm{Free}_n(\Z/2),
+\]
+and $\Mirror^n(\Void)=(S_n,A_n)$ for $n\leq4$. At $n=5$,
+$\Mirror^5(\Void)=(S_5,\jalg)$ with $|S_5|=\dim_{\R}\jalg=27$, and the
+sedenion obstruction (Lemma~\ref{lem:void-mirror:sedenion}) is equivalent to
+failure of $\mathbf{Div}^{\mathrm{norm}}$ to contain a $16$-dimensional object
+compatible with $\Mirror_{\mathrm{St}}(S_4)=S_5$.
+\end{corollary}
+
+\begin{remark}[Relation to classical Stone duality]\label{rem:void-mirror:stone-duality}
+Classical Stone duality identifies $\mathbf{Stone}$ with $\mathbf{Bool}^{\mathrm{op}}$.
+Theorem~\ref{thm:void-mirror:equiv} is the \emph{arithmetic lift}: the same
+mirror recursion that generates Boolean algebras $\mathcal{B}(S_n)$ generates
+normed algebras $A_n$, with Jordan exit replacing non-division sedenions. The
+open problem in Section~\ref{sec:conclusions} for the \emph{global} equivalence
+$\mathbf{Stone}\simeq\mathbf{Div}^{\mathrm{norm}}$ asks for an extension beyond
+the six mirror-climb rungs to profinite limits and exceptional Lie rungs
+$n\geq6$.
+\end{remark}
+
+%----------------------------------------------------------------------%
 \subsection{The climb operator}
 \label{sec:void-mirror:climb-op}
 %----------------------------------------------------------------------%

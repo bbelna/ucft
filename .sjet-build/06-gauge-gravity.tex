@@ -77,11 +77,47 @@ The four soldering directions are protected by diffeomorphism and local Lorentz
 Ward identities, not by $\Hess V$.
 \end{theorem}
 
-\begin{remark}[Cosmological constant]
-The $a_0$ term yields an uncancelled $\Lambda^4$ vacuum energy. SJET does not
-solve the cosmological constant problem; $\Lambda_{\mathrm{cc}}$ is a tuned
-relevant coupling.
-\end{remark}
+\begin{definition}[Cosmological coupling]
+\label{def:gauge-gravity:cc}
+The heat-kernel coefficient $a_0$ of the coset--gravity complex produces an
+Einstein--Hilbert vacuum term $\int\sqrt{|g|}\,\Lambda_{\mathrm{cc}}$.
+Treat $\Lambda_{\mathrm{cc}}$ as an independent dimension-4 coupling in the
+effective action, not fixed by $\mu$ or $\MPl$.
+\end{definition}
+
+\begin{theorem}[Sakharov vacuum energy and RG relevance]
+\label{thm:gauge-gravity:cc-rg}
+In the same truncation as Theorem~\ref{thm:gauge-gravity:planck}, the
+$a_0$ term is scheme-dependent and does not cancel against the massive-mode
+$a_2$ sum \eqref{eq:gauge-gravity:planck}. Under canonical scaling,
+$\Lambda_{\mathrm{cc}}$ is a \emph{relevant} direction:
+\begin{equation}\label{eq:gauge-gravity:beta-Lambda}
+  \beta_{\Lambda_{\mathrm{cc}}}
+  =-4\,\Lambda_{\mathrm{cc}}+\mathcal{O}(\text{loops}),
+\end{equation}
+so a UV fixed point requires $\Lambda_{\mathrm{cc},\star}$ as an input, not
+an output of the void--mirror axioms.
+\end{theorem}
+
+\begin{postulate}[Tuned cosmological constant]
+\label{post:gauge-gravity:cc}
+The observed vacuum energy is carried by $\Lambda_{\mathrm{cc}}$ set by hand
+at the matching scale. No naturalness or cancellation mechanism is claimed
+within SJET.
+\end{postulate}
+
+\begin{proposition}[No-go: CC not derivable from SJET]
+\label{prop:gauge-gravity:cc-nogo}
+The cosmological constant problem --- explaining
+$\Lambda_{\mathrm{obs}}\sim(10^{-3}\,\mathrm{eV})^4$ without fine-tuning ---
+cannot be resolved from Axioms~\ref{ax:void-mirror:void}--\ref{ax:void-mirror:mirror}
+and the derived $\E{6}$ dynamics alone. The $a_0$ vacuum energy,
+Theorem~\ref{thm:gauge-gravity:cc-rg}, and
+Postulate~\ref{post:gauge-gravity:cc} inherit the Standard-Model-plus-gravity
+status: $\Lambda_{\mathrm{cc}}$ is an environmental coupling. Any dynamical
+solution (e.g.\ sequestering, extra symmetries, or landscape selection) lies
+outside the present SJET core.
+\end{proposition}
 
 %----------------------------------------------------------------------%
 \subsection{Renormalization group}
@@ -105,8 +141,81 @@ The one-generation anchor ($n_F=1$, $n_S=2$) gives $b_0(1\,\mathrm{gen})=26$.
 The gauge sector is asymptotically free ($\hat g^2_\star=0$).
 \end{theorem}
 
-\begin{conjecture}[Gravitational UV fixed point]\label{conj:gauge-gravity:kappa}
-A truncated RG gives $\beta_\kappa=2\kappa-(5/48\pi^2)\kappa^2$ with
-UV-attractive $\kappa_\star=96\pi^2/5$. This one-loop result is indicative,
-not rigorous~\cite{Reuter1998}.
+\begin{definition}[Dimensionless Newton coupling]
+\label{def:gauge-gravity:kappa}
+At RG scale $k$, define the dimensionless gravitational coupling by
+\begin{equation}\label{eq:gauge-gravity:kappa-def}
+  \kappa(k)\;\equiv\;\frac{k^2}{\MPl^2(k)},
+\end{equation}
+with $\MPl(k)$ the running scale induced by the Sakharov flow of
+Theorem~\ref{thm:gauge-gravity:planck}.
+\end{definition}
+
+\begin{theorem}[One-loop $\kappa$-flow under explicit truncation]
+\label{thm:gauge-gravity:kappa-oneloop}
+Assume:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item the effective action is truncated to the Einstein--Hilbert term with
+    coupling $\MPl^2(k)$;
+  \item the only gravitational loop contribution at one loop comes from
+    integrating out the $28$ massive coset scalars of
+    Theorem~\ref{thm:gauge-gravity:planck} (Sakharov sector);
+  \item higher-curvature operators and graviton loops are neglected;
+  \item the anomalous dimension $\eta_{\MPl}=-(5/48\pi^2)\kappa$ in this
+    truncation~\cite{Reuter1998}.
+\end{enumerate}
+Then
+\begin{equation}\label{eq:gauge-gravity:betakappa}
+  \beta_\kappa\;\equiv\;k\frac{d\kappa}{dk}
+  \;=\;2\kappa-\frac{5}{48\pi^2}\,\kappa^2,
+\end{equation}
+with a nontrivial zero $\kappa_\star=96\pi^2/5$ and slope
+$\partial\beta_\kappa/\partial\kappa|_{\kappa_\star}=-2$ (UV attractive
+along $\kappa$ in the asymptotic-safety convention of
+Remark~\ref{rmk:gauge-gravity:kappa-convention}).
+\end{theorem}
+
+\begin{proof}
+With \eqref{eq:gauge-gravity:kappa-def} and
+$\MPl^2(k)\propto k^{\eta_{\MPl}}$ in the truncation,
+$\beta_\kappa=2\kappa-\kappa\,\eta_{\MPl}$. Substituting
+$\eta_{\MPl}=-(5/48\pi^2)\kappa$ yields
+\eqref{eq:gauge-gravity:betakappa}. Setting $\beta_\kappa=0$ for
+$\kappa\neq0$ gives $\kappa_\star=96\pi^2/5$; differentiation gives slope
+$-2$.
+\end{proof}
+
+\begin{remark}[Convention]
+\label{rmk:gauge-gravity:kappa-convention}
+We use $\theta_i=-\mathrm{eig}(\partial\beta_i/\partial g_j)$: a direction
+is UV-attractive (relevant) iff its stability eigenvalue is negative, hence
+$\theta_\kappa=+2$ at $\kappa_\star$.
+\end{remark}
+
+\begin{conjecture}[Gravitational UV fixed point beyond one loop]
+\label{conj:gauge-gravity:kappa}
+The interacting fixed point $\kappa_\star=96\pi^2/5$ of
+Theorem~\ref{thm:gauge-gravity:kappa-oneloop} survives when
+higher-curvature operators, graviton loops, and gauge--gravity back-reaction
+are included in a curved-background functional RG. This is \emph{not} a
+consequence of the SJET axioms; it requires external FRG input.
 \end{conjecture}
+
+\begin{proposition}[No-go: asymptotic safety not derivable from axioms]
+\label{prop:gauge-gravity:kappa-nogo}
+The void--mirror axioms and Sakharov Theorem~\ref{thm:gauge-gravity:planck}
+fix the \emph{induced} Planck mass and its one-loop running under the
+hypotheses of Theorem~\ref{thm:gauge-gravity:kappa-oneloop}, but they do
+\emph{not} supply a controlled nonperturbative existence proof of an
+interacting UV fixed point. In particular:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item $\kappa_\star\approx189\gg1$ lies outside weak-coupling control;
+  \item the truncation (i)--(iv) is not derived from
+    Axioms~\ref{ax:void-mirror:void}--\ref{ax:void-mirror:mirror};
+  \item scheme dependence of $a_0$ and $a_2$ propagates into
+    $\beta_\kappa$ beyond leading order.
+\end{enumerate}
+Promoting $\kappa_\star$ to a theorem requires Conjecture~\ref{conj:gauge-gravity:kappa}
+or an equivalent FRG postulate; otherwise the one-loop result is the
+honest terminal statement within SJET.
+\end{proposition}

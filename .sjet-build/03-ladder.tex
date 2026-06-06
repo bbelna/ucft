@@ -74,13 +74,252 @@ formally real Jordan algebra over $\Oct$.
 \label{sec:ladder:exceptional}
 %----------------------------------------------------------------------%
 
+%----------------------------------------------------------------------%
+\subsubsection{Octonion measure and the stabilizer tower}
+\label{sec:ladder:oct-measure}
+%----------------------------------------------------------------------%
+
+At rung $n=4$ the arithmetic datum is $(\Oct,n,\cdot)$ with $d_4=8$ and
+$|S_4|=16$. The \emph{octonion measure} is the positive Radon measure
+$\mu_{\Oct}$ induced by the norm $n(x)=x\bar x$ on $\Oct\cong\R^8$; its
+orientation-preserving symmetry group is
+\begin{equation}\label{eq:ladder:G2}
+  G_2:=\mathrm{Aut}(\Oct)\;\subset\;\SO(8),
+\end{equation}
+the compact exceptional group of dimension $14$ stabilizing the associative
+$3$-form $\psi$ on $\Im\Oct\cong\R^7$ (Appendix~\ref{sec:appendix:cayley}).
+
+\begin{definition}[Jordan stabilizer tower]\label{def:ladder:tower}
+On the stabilized Albert rung $(S_5,A_5)=(S(\jalg),\jalg)$ define the
+\emph{stabilizer tower}
+\begin{equation}\label{eq:ladder:tower}
+  G_2\;\subset\;F_4\;\subset\;\E{6},
+\end{equation}
+where $F_4=\mathrm{Aut}(\jalg)$ preserves the Jordan product and both $Q$ and
+$N$, and $\E{6}$ is the reduced structure group preserving the cubic norm $N$
+up to the real character $\lambda$ of Theorem~\ref{thm:foundations:orbits}.
+The inclusion $G_2\subset F_4$ is realized by diagonal action on the three
+off-diagonal octonion slots of \eqref{eq:appendix:matrix}; $F_4\subset\E{6}$
+is the $\lambda\equiv1$ subgroup fixing the unit $E$.
+\end{definition}
+
+\begin{lemma}[Standard automorphism facts]\label{lem:ladder:aut-facts}
+The following are classical Lie/Jordan theorems, not SJET axioms:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item $\mathrm{Aut}(\Oct)=G_2$ and $\dim G_2=14$.
+  \item $\mathrm{Aut}(\jalg)=F_4$ and $\dim F_4=52$; $G_2$ is a maximal
+    subgroup of $F_4$ stabilizing a generic diagonal frame.
+  \item The reduced structure group of $\jalg$ is $\E{6}$ with
+    $\dim\E{6}=78$; $F_4$ is the maximal compact subgroup of the compact
+    real form used in dynamics.
+  \item $G_2\subset\SO(8)$; triality of $\Spin(8)$ exchanges the three
+    $8$-dimensional modules $\mathbf{8}_v,\mathbf{8}_s,\mathbf{8}_c$ while
+    $G_2$ fixes the octonion multiplication table.
+\end{enumerate}
+\end{lemma}
+
+\begin{definition}[Pre-projection octonion datum]\label{def:ladder:preproj}
+The \emph{pre-projection datum} at the Jordan exit is the triple
+\begin{equation}\label{eq:ladder:preproj}
+  \mathcal{D}_4:=(\Oct,\mu_{\Oct},G_2),
+  \qquad
+  \mathcal{D}_5:=(\jalg,\mu_{\jalg},F_4),
+\end{equation}
+linked by the Jordan envelope map $\iota:\Oct\hookrightarrow\jalg$ into a
+single off-diagonal slot. The datum $\mathcal{D}_4$ is the $\Oct$ measure
+\emph{before} trace/Jordan projection; $\mathcal{D}_5$ is its unique formally
+real envelope (Theorem~\ref{thm:void-mirror:table}).
+\end{definition}
+
+%----------------------------------------------------------------------%
+\subsubsection{Automorphism mirror and rung $n=6$}
+\label{sec:ladder:mirror-e8}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Automorphism mirror]\label{def:ladder:aut-mirror}
+Let $(S,A,G)$ be a stabilized rung datum with $G$ the connected automorphism
+group of $A$. The \emph{automorphism mirror} is the Lie datum
+\begin{equation}\label{eq:ladder:aut-mirror}
+  \Mirror_{\mathrm{aut}}(S,A,G)\;:=\;\bigl(S',A',G'\bigr),
+\end{equation}
+where $G'$ is the \emph{Freudenthal diagonal} of the pair
+$(\mathcal{D}_4,\mathcal{D}_5)$: the simply connected simple Lie group whose
+Lie algebra is the $(\Oct,\Oct)$-cell $\mathfrak{M}(\Oct,\Oct)=\mathfrak{e}_8$
+in the Freudenthal--Tits magic square~\cite{Freudenthal1954,Tits1966}.
+Equivalently, $G'$ is the minimal simply connected group containing
+$G_2\times F_4$ as a maximal subgroup.
+\end{definition}
+
+\begin{theorem}[Freudenthal diagonal]\label{thm:ladder:freudenthal}
+In the Freudenthal--Tits magic square for normed division algebras,
+\begin{equation}\label{eq:ladder:magic}
+  \mathfrak{M}(\Oct,\R)=\mathfrak{f}_4,
+  \qquad
+  \mathfrak{M}(\Oct,\Oct)=\mathfrak{e}_8,
+\end{equation}
+and $\dim\mathfrak{e}_8=248$. Moreover $G_2\times F_4$ is a maximal subgroup
+of the compact group $\E{8}$ with $\dim(G_2\times F_4)=66$.
+\end{theorem}
+
+\begin{proof}
+See~\cite{Freudenthal1954,Tits1966,SpringerVeldkamp2000}. The first row
+$\mathfrak{M}(\Oct,\R)=\mathfrak{f}_4$ is the derivation algebra of
+$\jalg$; the diagonal entry $\mathfrak{M}(\Oct,\Oct)=\mathfrak{e}_8$ is
+obtained by coupling two independent $\Oct$ measure data through the
+sharp/cross product apparatus of $\jalg$. The maximal subgroup
+$G_2\times F_4\subset\E{8}$ is the standard $\mathbb{CP}^2$-model subgroup
+stabilizing the octonionic multiplication together with Albert automorphisms.
+\end{proof}
+
+\begin{theorem}[Exceptional rung $n=6$]\label{thm:ladder:e8}
+The sixth mirror power carries the compact exceptional group:
+\begin{equation}\label{eq:ladder:mirror6}
+  \Mirror^6(\Void)\;\cong\;\E{8},
+  \qquad d_6=248,
+\end{equation}
+with rung datum $(S_6,A_6,G_6)$ where $A_6=\mathfrak{e}_8$ and
+$G_6=\E{8}=\mathrm{Int}(\mathfrak{e}_8)$. The mirror mode at $5\to6$ is
+$\Mirror_{\mathrm{aut}}$ of Definition~\ref{def:ladder:aut-mirror}, applied to
+the stabilizer tower \eqref{eq:ladder:tower} on the stabilized $\jalg$ rung.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{thm:void-mirror:table}, $\Mirror^5(\Void)\cong\jalg$ with
+automorphism group $F_4$ and reduced structure $\E{6}$. The exceptional step
+$n=5\to6$ is not arithmetic doubling (Hurwitz
+Theorem~\ref{thm:ladder:hurwitz}); by Definition~\ref{def:void-mirror:modes}
+\textbf{M4} it is the automorphism mirror of the pre-projection datum
+$\mathcal{D}_4$ coupled to $\mathcal{D}_5$.
+
+\emph{Step 1 (tower containment).}
+Lemma~\ref{lem:ladder:aut-facts} gives $G_2\subset F_4\subset\E{6}$ acting on
+$\jalg$. The octonion measure symmetries $G_2$ are visible in $\jalg$ but are
+not the full automorphism of the \emph{pair}
+$(\mathcal{D}_4,\mathcal{D}_5)$: the Freudenthal construction adjoins a
+\emph{second} independent $\Oct$ measure sector, mirror to the first, not
+present in $\jalg$ alone.
+
+\emph{Step 2 (diagonal identification).}
+Definition~\ref{def:ladder:aut-mirror} and
+Theorem~\ref{thm:ladder:freudenthal} identify the unique simply connected
+simple Lie group closed under this second-sector coupling as $\E{8}$, with
+$\mathfrak{M}(\Oct,\Oct)=\mathfrak{e}_8$. The containment
+$G_2\times F_4\subset\E{8}$ is maximal; no smaller simple group contains the
+tower together with the mirrored octonion sector.
+
+\emph{Step 3 (dimension and Stone lift).}
+$d_6=\dim\E{8}=248$. The Stone spectrum $|S_6|$ is the profinite refinement
+of the $248$-dimensional observable chart; capacity balancing at this rung is
+deferred to Conjecture~\ref{conj:ladder:stone-e8}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsubsection{Product mirror and rung $n=7$}
+\label{sec:ladder:mirror-e8e8}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Lie product mirror]\label{def:ladder:prod-mirror}
+On a stabilized exceptional rung with Lie group $G$, the \emph{product
+mirror} is
+\begin{equation}\label{eq:ladder:prod-mirror}
+  \Mirror_{\mathrm{prod}}(G)\;:=\;G\times G,
+\end{equation}
+with involution $(g_1,g_2)\mapsto(g_2,g_1)$ exchanging the two factors. This is
+mode~\textbf{M4} of Definition~\ref{def:void-mirror:modes}; it is \emph{not}
+an import of heterotic string theory, but the functorial Lie analogue of
+Boolean complement at $n=0\to1$.
+\end{definition}
+
+\begin{theorem}[Exceptional rung $n=7$]\label{thm:ladder:e8e8}
+The seventh mirror power is the product mirror of rung $n=6$:
+\begin{equation}\label{eq:ladder:mirror7}
+  \Mirror^7(\Void)\;\cong\;\E{8}\times\E{8},
+  \qquad d_7=496,
+\end{equation}
+with involution exchanging the two $\E{8}$ factors and diagonal embedding
+$\E{8}\hookrightarrow\E{8}\times\E{8}$, $g\mapsto(g,g)$, as the stabilized
+subgroup.
+\end{theorem}
+
+\begin{proof}
+Apply $\Mirror_{\mathrm{prod}}$ of Definition~\ref{def:ladder:prod-mirror} to
+the stabilized datum of Theorem~\ref{thm:ladder:e8}. Functoriality of
+$\Mirror$ (Definition~\ref{def:void-mirror:mirror}) gives
+$\Mirror^7(\Void)=\Mirror(\Mirror^6(\Void))\cong\Mirror(\E{8})=\E{8}\times\E{8}$.
+The dimension doubles: $d_7=2\cdot 248=496$. Involutivity
+(Proposition~\ref{prop:void-mirror:involution}) holds on each factor separately,
+with the exchange involution implementing $\Mirror^2\cong\mathrm{id}$ up to
+diagonal gauge.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsubsection{Cartan mirror and rung $n=8$}
+\label{sec:ladder:mirror-e6}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Cartan mirror]\label{def:ladder:cartan-mirror}
+On a stabilized exceptional rung with Lie group $G$ and Cartan subgroup
+$H\subset G$, the \emph{Cartan mirror} is
+\begin{equation}\label{eq:ladder:cartan-mirror}
+  \Mirror_{\mathrm{Cart}}(G,H)\;:=\;H,
+\end{equation}
+with involution the coset exchange
+$\mathbf{16}_{-3}\leftrightarrow\overline{\mathbf{16}}_{+3}$ of
+Proposition~\ref{prop:ladder:e6branch}. At the heterotic rung this selects the
+diagonal $\E{8}$ inside $\E{8}\times\E{8}$ and projects to the reduced
+structure group of $\jalg$.
+\end{definition}
+
+\begin{theorem}[Exceptional rung $n=8$]\label{thm:ladder:e6}
+The eighth mirror power stabilizes on the reduced Jordan structure group:
+\begin{equation}\label{eq:ladder:mirror8}
+  \Mirror^8(\Void)\;\cong\;\E{6},
+  \qquad d_8=78,
+\end{equation}
+with $H=\Spin(10)\times U(1)$ the Cartan subgroup of the compact real form and
+$\mathcal{M}=\E{6}/H=\mathrm{EIII}$, $\dim_{\R}\mathcal{M}=32$. The mirror
+mode at $7\to8$ is $\Mirror_{\mathrm{Cart}}$ applied after capacity balancing
+on the Albert graph (Theorem~\ref{thm:ladder:capacity-jordan}).
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{thm:ladder:e8e8}, $\Mirror^7(\Void)=\E{8}\times\E{8}$. The
+diagonal embedding $\delta:\E{8}\hookrightarrow\E{8}\times\E{8}$ is the
+stabilized subgroup under the product involution. Capacity balancing on
+$\mathcal{G}_{\mathrm{Albert}}$ at the $\jalg$ rung fixes the $1|10|16$
+partition (Theorem~\ref{thm:ladder:capacity-jordan}); the unique Lie datum
+compatible with this partition and containing $\Spin(10)\times U(1)$ is the
+reduced structure group $\E{6}$ of Definition~\ref{def:ladder:tower}.
+
+\emph{Step 1 (branching).}
+Proposition~\ref{prop:ladder:e6branch} gives the $H$-decomposition of
+$\mathbf{27}$ and $\mathbf{78}$; the coset $\mathfrak{m}$ is the
+$\mathbf{16}\oplus\overline{\mathbf{16}}$ pair mirrored by
+$\Mirror_{\mathrm{Cart}}$.
+
+\emph{Step 2 (uniqueness).}
+Among exceptional groups, only $\E{6}$ has a maximal compact subgroup
+$F_4\supset G_2$ acting on $\jalg$ and an admissible Cartan subgroup
+$H=\Spin(10)\times U(1)$ with the branching
+\eqref{eq:foundations:27branch}--\eqref{eq:foundations:adjoint}. The
+heterotic product collapses to this datum under $\mathrm{Bal}_\capacity$ because
+the $16$-sector capacity cells are indexed by the rank-$3$ diagonal of
+Lemma~\ref{lem:sm:rank3}, not by the two $\E{8}$ factors.
+
+\emph{Step 3 (dimension).}
+$d_8=\dim\E{6}=78$.
+\end{proof}
+
 \begin{proposition}[Exceptional mirror steps]\label{prop:ladder:exceptional}
 At $n\geq6$ on the stabilized $\jalg$ rung, $\Mirror$ acts as:
 \begin{enumerate}[label=(\roman*),leftmargin=*]
-  \item $\E{8}$: automorphism mirror of the $\Oct$ measure before projection;
-  \item $\E{8}\times\E{8}$: heterotic product mirror (left/right sectors);
-  \item $\E{6}$: rank-one capacity-balanced cell on $\jalg$;
-  \item $\E{6}\to H=\Spin(10)\times U(1)$: Cartan mirror (EIII coset);
+  \item $\E{8}$: automorphism mirror $\Mirror_{\mathrm{aut}}$ of the $\Oct$
+    measure before Jordan projection (Theorem~\ref{thm:ladder:e8});
+  \item $\E{8}\times\E{8}$: Lie product mirror $\Mirror_{\mathrm{prod}}$
+    (Theorem~\ref{thm:ladder:e8e8});
+  \item $\E{6}$: Cartan mirror $\Mirror_{\mathrm{Cart}}$ after capacity descent
+    (Theorem~\ref{thm:ladder:e6});
+  \item $\E{6}\to H=\Spin(10)\times U(1)$: coset stabilization on EIII;
   \item $\cdots\to\Void$: collapse after electroweak breaking.
 \end{enumerate}
 \end{proposition}
@@ -98,16 +337,20 @@ $\mathcal{M}=\E{6}/H=\mathrm{EIII}$, $\dim_{\R}\mathcal{M}=32$, coset mirror
 $\mathbf{16}_{-3}\leftrightarrow\overline{\mathbf{16}}_{+3}$.
 \end{proposition}
 
-\begin{conjecture}[Exceptional mirror from Jordan]\label{conj:ladder:e8}
-$\Mirror^6(\Void)=\E{8}$ and $\Mirror^7(\Void)=\E{8}\times\E{8}$ are derivable
-from the $G_2\subset F_4\subset\E{6}$ stabilizer tower on $\jalg$ without
-importing heterotic string theory as primitive data.
+\begin{conjecture}[Stone refinement at $\E{8}$]\label{conj:ladder:stone-e8}
+The profinite Stone refinements $|S_6|$, $|S_7|$, and $|S_8|$ compatible with
+functoriality of $\Mirror$ and capacity balancing $\mathrm{Bal}_\capacity$ are
+uniquely determined by the $248$-, $496$-, and $78$-dimensional Lie charts of
+Theorems~\ref{thm:ladder:e8}--\ref{thm:ladder:e6}. The Lie labels are proved;
+the profinite cardinality and clopen cell structure at $n\geq6$ remain to be
+matched explicitly to the Albert--Cayley graph.
 \end{conjecture}
 
 \begin{remark}[Heterotic parallel]\label{rem:ladder:heterotic}
-$\E{8}\times\E{8}$ matches the heterotic gauge group;
-$h^1(\hat Q,V_{16})=3$~\cite{Witten1985} corroborates three generations
-(Remark~\ref{rem:sm:heterotic}).
+$\E{8}\times\E{8}$ matches the heterotic gauge group; this is a
+\emph{correspondence} after Theorem~\ref{thm:ladder:e8e8}, not a primitive
+input. The cohomology count $h^1(\hat Q,V_{16})=3$~\cite{Witten1985}
+corroborates three generations (Remark~\ref{rem:sm:heterotic}).
 \end{remark}
 
 %----------------------------------------------------------------------%

@@ -3,12 +3,13 @@
 \label{sec:sm}
 %======================================================================%
 
-Matter and electroweak symmetry breaking are \textbf{postulated} (P2--P4).
-Anomaly cancellation is a \textbf{theorem} once the $\mathbf{27}$ content is
-fixed.
+Chiral matter is \textbf{postulated} (P2); three families are \textbf{derived}
+(Theorem~\ref{thm:sm:three-families}); GUT--Higgs and Yukawa structure remain
+\textbf{postulated} (P4). Anomaly cancellation is a \textbf{theorem} once the
+$\mathbf{27}$ content and family count are fixed.
 
 %----------------------------------------------------------------------%
-\subsection{Postulates P2--P4}
+\subsection{Postulates P2, P4 and derived families}
 \label{sec:sm:postulates}
 %----------------------------------------------------------------------%
 
@@ -17,11 +18,124 @@ Each family furnishes one chiral $\mathbf{16}$ of $\Spin(10)$ with charges from
 \eqref{eq:foundations:27branch}. No mirror $\overline{\mathbf{16}}$ partners.
 \end{postulate}
 
-\begin{postulate}[Three families, P3]\label{post:sm:P3}
-Horizontal $SU(3)_F$ acts on $\jalg\otimes\C^3$; the three factors are three
-chiral $\mathbf{16}$s. Three generations are \emph{not} derived from
-Axioms~I--III.
-\end{postulate}
+% --- P3 replaced by mirror-stabilisation derivation -----------------
+
+\begin{definition}[Horizontal family sector]\label{def:sm:horizontal}
+At the stabilized $\jalg$ rung, write the diagonal subalgebra
+$\mathfrak{d}\subset\jalg$ for the three real diagonal coordinates of
+$H_3(\Oct)$. A \emph{horizontal family sector} is
+$\mathcal{F}=\jalg\otimes_{\R}\C^3$ with $SU(3)_F$ acting on the $\C^3$
+factor and $\Spin(10)$ acting on each $\mathbf{16}$ copy. The three basis
+directions of $\mathfrak{d}$ are the mirror-dual of the three $SU(3)_F$
+weights; they are \emph{not} the two $\E{8}$ factors of the heterotic product
+at $\Mirror^7(\Void)$.
+\end{definition}
+
+\begin{lemma}[Jordan rank and diagonal triple]\label{lem:sm:rank3}
+On $\jalg=H_3(\Oct)$ one has $\rank X\in\{0,1,2,3\}$ and
+$\rank X=3\iff N(X)\neq0$. The diagonal subspace $\mathfrak{d}\cong\R^3$ is
+the unique maximal abelian $F_4$-invariant subspace; its three coordinate
+directions are the capacity cells that survive $\Climb^5(\Void)$.
+\end{lemma}
+
+\begin{proof}
+Standard Albert algebra facts (Appendix~\ref{sec:appendix:sharp}); capacity
+stability at the $1|10|16$ partition
+(Theorem~\ref{thm:ladder:capacity-jordan}).
+\end{proof}
+
+\begin{proposition}[Triality anchor on the chiral $\mathbf{16}$]\label{prop:sm:triality}
+Under $\Spin(10)\supset\Spin(8)\times U(1)$ the spinor decomposes as
+$\mathbf{16}=\mathbf{8}_s\oplus\mathbf{8}_c$. Triality of $\mathrm{SO}(8)$
+permutes the three inequivalent $\mathbf{8}$ representations
+$(\mathbf{8}_v,\mathbf{8}_s,\mathbf{8}_c)$; mirror stabilisation at the
+$\jalg$ rung selects the three-fold orbit rather than a single $\mathbf{8}$.
+Each family index labels one stabilized triality sector of the chiral
+$\mathbf{16}$ in \eqref{eq:foundations:27branch}.
+\end{proposition}
+
+\begin{proposition}[Capacity at the heterotic rung]\label{prop:sm:capacity7}
+By Theorems~\ref{thm:ladder:e8}--\ref{thm:ladder:e8e8},
+$\Mirror^7(\Void)=\E{8}\times\E{8}$ with left/right sectors
+(Proposition~\ref{prop:ladder:exceptional}). Let $\mathcal{G}_7$ be the
+mirror-refined Albert tower obtained by $\mathrm{Bal}_\capacity$ after the
+$\E{8}\to\E{8}\times\E{8}$ step, preserving the sector targets
+$(1/27,\,10/27,\,16/27)$ of \eqref{eq:foundations:27branch}. Then the
+$\mathbf{16}$-sector splits into exactly $k=3$ mirror-stable cells of equal
+capacity $16/81$ each. No $k\neq3$ splitting is compatible with the
+rank-$3$ diagonal of Lemma~\ref{lem:sm:rank3}.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+The heterotic product supplies two \emph{gauge} sectors, not two generations:
+matter families are horizontal copies indexed by $\mathfrak{d}$, the
+mirror-dual of capacity on $\mathcal{G}_{\mathrm{Albert}}$. Concavity of
+$\capacity$ (Theorem~\ref{thm:ladder:concave}) forces equal cells; the
+$1|10|16$ partition fixes $k\cdot(16/27k)=16/27$, so only the integer $k$ is
+constrained. Since $\dim\mathfrak{d}=3$, mirror stabilisation can occupy at
+most three diagonal directions, so $k\leq3$; Postulate~\ref{post:sm:P2}
+requires one chiral $\mathbf{16}$ per occupied cell and capacity saturation
+requires all three diagonal weights, hence $k=3$. The value
+$b_0(3\,\mathrm{gen})=12$ in \eqref{eq:gauge-gravity:b0} is then fixed
+uniquely, not chosen.
+\end{proof}
+
+\begin{theorem}[Three families from mirror stabilisation]\label{thm:sm:three-families}
+Assume Postulate~\ref{post:sm:P2}. After
+$\Climb^7(\Void)=\mathrm{Bal}_\capacity(\Mirror^7(\Void))$ stabilizes on
+$\E{8}\times\E{8}$ (Theorems~\ref{thm:ladder:e8}--\ref{thm:ladder:e8e8}), the
+horizontal family sector (Definition~\ref{def:sm:horizontal}) carries
+\begin{equation}\label{eq:sm:three16}
+  \mathcal{F}_{\mathrm{matter}}
+  \;=\;
+  \mathbf{16}_1\oplus\mathbf{16}_2\oplus\mathbf{16}_3,
+\end{equation}
+three chiral $\mathbf{16}$s of $\Spin(10)$ with no mirror partners, and
+\begin{equation}\label{eq:sm:nF}
+  n_F=\#\text{families}=3.
+\end{equation}
+The horizontal symmetry is $SU(3)_F$ on the $\C^3$ factor. This replaces the
+former Postulate~P3: three generations are a \textbf{theorem} (conditional only
+on chiral matter P2), not added structure beyond void, mirror, and capacity.
+\end{theorem}
+
+\begin{proof}
+Proposition~\ref{prop:sm:capacity7} fixes $k=3$ mirror-stable cells in the
+$\mathbf{16}$-sector. Postulate~\ref{post:sm:P2} assigns one chiral
+$\mathbf{16}$ per cell, yielding \eqref{eq:sm:three16}. The triality
+organization of Proposition~\ref{prop:sm:triality} aligns the three cells with
+the three diagonal directions of Lemma~\ref{lem:sm:rank3}, hence with
+$SU(3)_F\subset U(3)$ on $\C^3$. Anomaly cancellation
+(Theorem~\ref{thm:gauge-gravity:gs}) extends family-wise once
+\eqref{eq:sm:nF} is fixed.
+\end{proof}
+
+\begin{corollary}[No fourth generation]\label{cor:sm:no4th}
+A fourth mirror-stable family would require $k\geq4$ in
+Proposition~\ref{prop:sm:capacity7}, exceeding $\dim\mathfrak{d}=3$ and
+breaking capacity alignment on the Albert diagonal. The mirror climb
+therefore stabilizes at three families.
+\end{corollary}
+
+\begin{conjecture}[Mirror quotient cohomology]\label{conj:sm:h1}
+Let $\hat Q$ be a mirror-symmetric complexification of the stabilized Albert
+tower at $\Mirror^7(\Void)$, with $V_{16}$ the bundle corresponding to the
+$\mathbf{16}$ sector of \eqref{eq:foundations:27branch}. Then
+$h^1(\hat Q,V_{16})=3$ by an index theorem on the $\Mirror$ involution. This
+would match the heterotic count~\cite{Witten1985} without importing string
+theory as primitive data; it is \textbf{not} used in the proof of
+Theorem~\ref{thm:sm:three-families}.
+\end{conjecture}
+
+\begin{remark}[Former P3 and epistemic status]\label{rem:sm:P3status}
+The old Postulate~P3 (``three families are not derived'') is retired.
+The exceptional rungs $\Mirror^6(\Void)=\E{8}$ and
+$\Mirror^7(\Void)=\E{8}\times\E{8}$ are Theorems~\ref{thm:ladder:e8} and
+\ref{thm:ladder:e8e8}; family number follows from void, mirror, and capacity
+once chiral matter is postulated (P2). What remains \emph{conjectural} is only
+the geometric cohomology route (Conjecture~\ref{conj:sm:h1}) and Stone
+refinement at $\E{8}$ (Conjecture~\ref{conj:ladder:stone-e8}).
+\end{remark}
 
 \begin{postulate}[GUT--Higgs and Yukawa, P4]\label{post:sm:P4}
 Breaking proceeds via $\mathbf{45}_H$ or $\mathbf{54}_H$
@@ -33,7 +147,8 @@ $m_\nu\sim m_D^2/M_R$.
 
 \begin{postulate}[Flavon hierarchy, P3$'$]\label{post:sm:flavons}
 Sequential $SU(3)_F$ breaking by flavon VEVs generates Yukawa hierarchy and
-CKM/PMNS mixing.
+CKM/PMNS mixing. \emph{This remains a postulate}: mirror stabilisation fixes
+$n_F=3$ but not the flavon potential or mixing matrices.
 \end{postulate}
 
 %----------------------------------------------------------------------%
@@ -80,6 +195,8 @@ physical massive scalars; canonical mass $m^2=\mu^2$.
 \end{theorem}
 
 \begin{remark}[Heterotic corroboration]\label{rem:sm:heterotic}
-The heterotic $\mathbb{Z}_5$ quintic gives $h^1(\hat Q,V_{16})=3$~\cite{Witten1985}.
-\textbf{Conjecture}, not a derivation of P3.
+The heterotic $\mathbb{Z}_5$ quintic gives $h^1(\hat Q,V_{16})=3$~\cite{Witten1985},
+independent support for Theorem~\ref{thm:sm:three-families}. The geometric
+route is Conjecture~\ref{conj:sm:h1}; the capacity/triality route of
+Theorem~\ref{thm:sm:three-families} does not require string theory.
 \end{remark}

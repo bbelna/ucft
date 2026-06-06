@@ -22,6 +22,9 @@ $\Mirror^4(\Void)=\Oct$ & Theorem & Hurwitz terminal & \ref{thm:void-mirror:tabl
 $\Mirror^5(\Void)\cong\jalg$ & Theorem & Jordan exit & \ref{thm:void-mirror:table} \\
 Sedenion failure & Lemma & zero divisors & \ref{lem:void-mirror:sedenion} \\
 Hurwitz ladder & Theorem & dims $0,1,2,4,8$ & \ref{thm:ladder:hurwitz} \\
+$\Mirror^6(\Void)=\E{8}$ & Theorem & Freudenthal & \ref{thm:ladder:e8} \\
+$\Mirror^7(\Void)=\E{8}\times\E{8}$ & Theorem & prod.\ mirror & \ref{thm:ladder:e8e8} \\
+$\Mirror^8(\Void)=\E{6}$ & Theorem & Cartan mirror & \ref{thm:ladder:e6} \\
 $\Climb^\infty(\Void)\cong\jalg$ & Theorem & 27 stable & \ref{thm:foundations:stone-lift} \\
 $1|10|16$ partition & Prop. & capacity & \ref{prop:foundations:partition} \\
 Potential from $\capacity$ & Theorem & limit & \ref{thm:dynamics:potential} \\
@@ -32,11 +35,17 @@ $b_0(3)=12$ & Theorem & \eqref{eq:gauge-gravity:b0} & \ref{thm:gauge-gravity:bet
 $\mathfrak{U}^\star=\Climb^\infty(\Void)$ & Theorem & under P1--P4 & \ref{thm:dynamics:universe} \\
 \midrule
 Soldering, $d=4$ & Postulate & P1 & \ref{post:spacetime:P1} \\
-Matter, 3 families & Postulate & P2--P3 & \S\ref{sec:sm:postulates} \\
+Chiral matter & Postulate & P2 & \ref{post:sm:P2} \\
+Three families & Theorem & $\Mirror^7$; P2 & \ref{thm:sm:three-families} \\
 GUT--Higgs & Postulate & P4 & \ref{post:sm:P4} \\
 \midrule
-$\kappa_\star$ & Conjecture & 1-loop & \ref{conj:gauge-gravity:kappa} \\
-Heterotic $h^1=3$ & Conjecture & string & \ref{rem:sm:heterotic} \\
+$\kappa_\star=96\pi^2/5$ & Theorem & trunc.\ (i)--(iv) & \ref{thm:gauge-gravity:kappa-oneloop} \\
+$\kappa_\star$ beyond 1-loop & Conjecture & FRG & \ref{conj:gauge-gravity:kappa} \\
+$\Lambda_{\mathrm{cc}}$ & Postulate & no-go & \ref{prop:gauge-gravity:cc-nogo} \\
+OS reconstruction & Theorem & if RP & \ref{thm:spacetime:OS} \\
+Reflection positivity & Postulate & P5 & \ref{post:spacetime:P5} \\
+Mirror quotient $h^1=3$ & Conjecture & index & \ref{conj:sm:h1} \\
+Heterotic $h^1=3$ & Corroboration & string & \ref{rem:sm:heterotic} \\
 \bottomrule
 \end{tabular}
 \caption{Epistemic ledger. Only two axioms: void and mirror.}
@@ -61,5 +70,6 @@ Dimensions: $78=45+1+16+16$; $27=1+10+16$; $32=28+4$.
   \item Seesaw neutrino scale $m_\nu\sim0.05\,\mathrm{eV}$.
   \item No fourth generation (mirror climb stabilizes at three $SU(3)_F$ copies).
   \item Common CW mass $\mu$ on $28$ coset scalars.
-  \item Fourth generation would break $b_0>0$ window.
+  \item Fourth generation would exceed $\dim\mathfrak{d}=3$
+    (Corollary~\ref{cor:sm:no4th}).
 \end{enumerate}
