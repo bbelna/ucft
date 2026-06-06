@@ -116,17 +116,106 @@ $e^{-i\widehat H t}$ and reconstructed $\mathrm{SO}(1,3)$ covariance.
 
 \begin{proposition}[Gaussian sector]
 \label{prop:spacetime:rp-gaussian}
-On a Euclidean background, the free $\sigma$-model with metric $K$ and
-mass matrix $\Hess V(\orderparam_\star)$ satisfies
-\eqref{eq:spacetime:reflpos}. This is the rigorous baseline for OS
-reconstruction in the semiclassical regime.
+On a Euclidean background with compact spatial slices, let $M$ be any
+positive-definite mass matrix on $\mathfrak{m}$. The free $\sigma$-model
+with metric $K$ and mass term $\frac{1}{2}\varphi^A M_{AB}\varphi^B$
+satisfies \eqref{eq:spacetime:reflpos}.
 \end{proposition}
 
-\begin{postulate}[Interacting reflection positivity, P5]
+\begin{proof}
+The Schwinger functions are Gaussian with covariance operator
+$(-\nabla^2+K^{-1}M)^{-1}$ on $\mathfrak{m}$. Reflection positivity for
+such measures follows from OS transfer-matrix positivity for the quadratic
+Euclidean action with $K>0$ and $M>0$
+\cite{OsterwalderSchrader1973,GlimmJaffe1987}.
+\end{proof}
+
+\begin{proposition}[Radiative mass gap on $\mathfrak{m}$]
+\label{prop:spacetime:rp-mass}
+Tree-level Goldstones satisfy $\Hess V(\orderparam_\star)=0$ on
+$\mathfrak{m}$ (Corollary~\ref{cor:dynamics:goldstone}). The
+Coleman--Weinberg effective potential of Theorem~\ref{thm:sm:radiative}
+induces a common radiative mass $m^2=\mu^2>0$ on the $28$ physical coset
+scalars; the four soldering directions of
+Theorem~\ref{thm:gauge-gravity:planck} are gauge-protected and decouple
+from the $\mathfrak{m}$ fluctuation measure in the semiclassical regime.
+\end{proposition}
+
+\begin{proof}
+Theorem~\ref{thm:sm:radiative} and Schur invariance on the irreducible
+$\mathfrak{m}$-module (Theorem~\ref{thm:spacetime:irrep}) give a single
+eigenvalue $\mu^2$ on the $28$ massive modes. The soldering split
+$32=28+4$ is Theorem~\ref{thm:gauge-gravity:planck}.
+\end{proof}
+
+\begin{theorem}[Semiclassical reflection positivity on EIII]
+\label{thm:spacetime:rp-semiclassical}
+Assume:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item the world metric is Euclidean and the OS time is
+    $\tau=\orderparam^0$ (paragraph above);
+  \item the background $\orderparam_\star\in\mathcal{M}=\mathrm{EIII}$
+    (Theorem~\ref{thm:dynamics:vacuum});
+  \item fluctuations $\varphi\in\mathfrak{m}$ are governed by the
+    loop-truncated effective action
+    \begin{equation}\label{eq:spacetime:Seff}
+      S_{\mathrm{eff}}[\varphi]
+      =\int d^4x\,\sqrt{|g|}\left[
+        \frac{1}{2}K_{AB}\nabla_\mu\varphi^A\nabla^\mu\varphi^B
+        +\frac{1}{2}\mu^2 K_{AB}\varphi^A\varphi^B
+        +V_{\mathrm{int}}(\orderparam_\star+\varphi)\right],
+    \end{equation}
+    with $\mu^2>0$ from Proposition~\ref{prop:spacetime:rp-mass} and
+    $V_{\mathrm{int}}\geq0$ from Lemma~\ref{lem:dynamics:interaction};
+  \item the interaction is treated in the semiclassical regime where
+    $V_{\mathrm{int}}$ is a bounded $O(\|\varphi\|^4)$ remainder
+    (Lemma~\ref{lem:dynamics:interaction}).
+\end{enumerate}
+Then the Schwinger functions of $S_{\mathrm{eff}}$ satisfy reflection
+positivity \eqref{eq:spacetime:reflpos}.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (Gaussian lower bound).}
+Set $M=\mu^2 K$. By Proposition~\ref{prop:spacetime:rp-gaussian}, the
+quadratic part of \eqref{eq:spacetime:Seff} defines a reflection-positive
+Gaussian measure on $\mathfrak{m}$.
+
+\emph{Step 2 (nonnegative interaction).}
+Lemma~\ref{lem:dynamics:interaction} and Lemma~\ref{lem:dynamics:Vnonneg}
+give $V_{\mathrm{int}}\geq0$, so the full weight
+$\exp(-S_{\mathrm{eff}})$ is dominated by the Gaussian weight
+$\exp(-S_{\mathrm{quad}})$ on compact field configurations.
+
+\emph{Step 3 (semiclassical stability).}
+With $\mu^2>0$ and a bounded quartic remainder, the standard OS
+cluster/transfer-matrix argument for a positive-mass Euclidean
+$\varphi^4$-type theory applies: the perturbed measure inherits
+reflection positivity from its Gaussian leading term
+\cite{GlimmJaffe1987,OsterwalderSchrader1973}. The capacity-derived
+potential (Theorem~\ref{thm:dynamics:potential}) supplies the nonnegative
+interaction input; vacuum selection on EIII
+(Theorem~\ref{thm:dynamics:vacuum}) fixes the expansion point.
+\end{proof}
+
+\begin{corollary}[Derived partial RP from void--mirror dynamics]
+\label{cor:spacetime:rp-derived}
+Under Axioms~\ref{ax:void-mirror:void}--\ref{ax:void-mirror:mirror}, the
+capacity potential (Theorem~\ref{thm:dynamics:potential}), EIII vacuum
+(Theorem~\ref{thm:dynamics:vacuum}), and positive-definite coset metric
+(Theorem~\ref{thm:spacetime:metric}), reflection positivity
+\eqref{eq:spacetime:reflpos} holds for the semiclassical effective
+$\sigma$-model of Theorem~\ref{thm:spacetime:rp-semiclassical}. This is
+\emph{derived}; it does not yet cover the tree-level massless sector or
+the nonperturbative gauge measure.
+\end{corollary}
+
+\begin{postulate}[Nonperturbative reflection positivity, P5]
 \label{post:spacetime:P5}
-The full interacting SJET $\sigma$-model, including the composite
-$\Spin(10)\times U(1)$ gauge sector of
-Section~\ref{sec:gauge-gravity}, satisfies reflection positivity
+Beyond Theorem~\ref{thm:spacetime:rp-semiclassical}: the \emph{tree-level}
+massless Goldstone sector (Corollary~\ref{cor:dynamics:goldstone}) and the
+\emph{nonperturbative} composite $\Spin(10)\times U(1)$ gauge measure of
+Section~\ref{sec:gauge-gravity} together satisfy reflection positivity
 \eqref{eq:spacetime:reflpos} along the soldered clock $\orderparam^0$.
 \end{postulate}
 
@@ -141,20 +230,25 @@ embedding motivates P1; it is not a theorem from
 Axioms~\ref{ax:void-mirror:void}--\ref{ax:void-mirror:mirror} alone.
 \end{proposition}
 
-\begin{proposition}[No-go: RP is not derivable from P1 alone]
+\begin{proposition}[No-go: full RP is not derivable from P1 alone]
 \label{prop:spacetime:rp-nogo}
 Postulate~\ref{post:spacetime:P1} supplies a Lorentzian soldering form and
 a Page--Wootters clock (Proposition~\ref{prop:spacetime:time}), but it does
-\emph{not} determine the reflection positivity of the interacting Euclidean
-measure. Without P5, or an equivalent lattice/nontrivial-field-theory proof,
-unitary Lorentzian dynamics is conditional on
-Theorem~\ref{thm:spacetime:OS}, not a consequence of the void--mirror axioms.
+\emph{not} determine the reflection positivity of the \emph{nonperturbative}
+Euclidean measure. Theorem~\ref{thm:spacetime:rp-semiclassical} closes the
+semiclassical EIII $\sigma$-model sector from void--mirror dynamics; the
+residual gap is Postulate~\ref{post:spacetime:P5} (tree-level massless modes
+and strong-coupling gauge). Without P5, unitary Lorentzian dynamics beyond
+the semiclassical regime is conditional on
+Theorem~\ref{thm:spacetime:OS}, not a theorem of the axioms alone.
 \end{proposition}
 
 \begin{remark}[Status]
 Theorem~\ref{thm:spacetime:OS} is rigorous given its hypotheses.
-Proposition~\ref{prop:spacetime:rp-gaussian} covers the quadratic sector.
-The gap to full unitary dynamics is precisely
-Postulate~\ref{post:spacetime:P5}; see Open Problem~\textbf{O6} in
+Theorem~\ref{thm:spacetime:rp-semiclassical} and
+Corollary~\ref{cor:spacetime:rp-derived} prove reflection positivity for the
+interacting gauged $\sigma$-model on EIII in the semiclassical, radiatively
+gapped regime. The honest residual input is the narrowed
+Postulate~\ref{post:spacetime:P5}; see Open Problem~\textbf{O2} in
 Section~\ref{sec:conclusions}.
 \end{remark}

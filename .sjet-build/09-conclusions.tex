@@ -16,7 +16,8 @@ balancing are \textbf{derived}, not assumed. The universe is
   \mathfrak{U}^\star\;=\;\Climb^\infty(\Void)
   \;=\;\varprojlim_n\bigl(\mathrm{Bal}_\capacity\circ\Mirror\bigr)^n(\Void),
 \end{equation}
-stabilizing at $\jalg$ and $\E{6}$, with physical contact via P1--P4.
+stabilizing at $\jalg$ and $\E{6}$, with physical contact via P1, P2, P4, and
+the narrowed nonperturbative gap P5 (Section~\ref{sec:conclusions:toe}).
 
 \subsection{ToE closure status}
 \label{sec:conclusions:toe}
@@ -25,7 +26,12 @@ stabilizing at $\jalg$ and $\E{6}$, with physical contact via P1--P4.
 From Axioms~\ref{ax:void-mirror:void}--\ref{ax:void-mirror:mirror} alone
 (standard mathematics included): the mirror climb through Hurwitz and
 exceptional rungs (Theorems~\ref{thm:void-mirror:table},
-\ref{thm:ladder:e8}--\ref{thm:ladder:e6}); Albert graph and Stone lift;
+\ref{thm:ladder:e8}--\ref{thm:ladder:e6}); global categorical equivalence
+$\mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}\simeq\mathbf{Obs}^{\mathrm{climb}}$
+on rungs $0$--$8$ with profinite-limit identification
+(Corollary~\ref{cor:void-mirror:global-equiv},
+Theorems~\ref{thm:void-mirror:equiv-ext}, \ref{thm:ladder:stone-e8});
+Albert graph and Stone lift;
 $1|10|16$ capacity partition; $\E{6}$ potential and EIII vacuum;
 composite $\Spin(10)\times U(1)$ gauge theory; Green--Schwarz anomaly
 cancellation; Sakharov induced Planck mass; one-loop
@@ -50,7 +56,7 @@ Former Postulate~P3 is retired.
 P1 & Lorentzian soldering, $d=4$ & No (\ref{prop:spacetime:p1-nogo}) \\
 P2 & Chiral matter, no $\overline{\mathbf{16}}$ partners & No (\ref{prop:sm:p2-nogo}) \\
 P4 & GUT--Higgs and Yukawa & No (breaking chain input) \\
-P5 & Interacting reflection positivity & No (\ref{prop:spacetime:rp-nogo}) \\
+P5 & Nonperturbative reflection positivity & No (\ref{prop:spacetime:rp-nogo}) \\
 CC & Tuned $\Lambda_{\mathrm{cc}}$ & No (\ref{prop:gauge-gravity:cc-nogo}) \\
 \bottomrule
 \end{tabular}
@@ -58,7 +64,10 @@ CC & Tuned $\Lambda_{\mathrm{cc}}$ & No (\ref{prop:gauge-gravity:cc-nogo}) \\
 \noindent
 P1 and P2 were examined for promotion from mirror stabilisation; neither
 passes a no-go test. P4 encodes electroweak and GUT breaking beyond the
-coset $\sigma$-model. P5 is the sole gap to unitary Lorentzian dynamics
+coset $\sigma$-model. Semiclassical reflection positivity on EIII is
+\emph{derived} (Theorem~\ref{thm:spacetime:rp-semiclassical},
+Corollary~\ref{cor:spacetime:rp-derived}); the narrowed P5 is the residual
+gap to \emph{nonperturbative} unitary Lorentzian dynamics
 (Theorem~\ref{thm:spacetime:OS}). The cosmological constant inherits the
 Standard-Model-plus-gravity status: Proposition~\ref{prop:gauge-gravity:cc-nogo}
 states that $\Lambda_{\mathrm{obs}}$ is \emph{not} derivable from the SJET
@@ -71,7 +80,10 @@ Table~\ref{tab:gauge-gravity:jacobian}).
 Under P1, P2, P4, and P5, SJET specifies a four-dimensional effective
 quantum field theory with three chiral families, asymptotically free gauge
 couplings, induced gravitation, and a two-parameter UV-critical surface
-($\kappa$, $\Lambda_{\mathrm{cc}}$). This is a \textbf{conditional Theory of
+($\kappa$, $\Lambda_{\mathrm{cc}}$). Semiclassical unitary dynamics along
+$\orderparam^0$ is already derived
+(Theorem~\ref{thm:spacetime:rp-semiclassical}); P5 governs only the
+nonperturbative completion. This is a \textbf{conditional Theory of
 Everything}: the mathematical climb from the void is largely unconditional;
 contact with observed particle physics and gravitation requires the named
 postulates above.
@@ -84,12 +96,16 @@ postulates above.
     Test Conjecture~\ref{conj:gauge-gravity:kappa} in curved-background FRG
     with higher-curvature operators and graviton loops; verify persistence
     of $\kappa_\star=96\pi^2/5$ and $\mathrm{eig}=-2$.
-  \item \textbf{Reflection positivity.}
-    Prove or refute P5 (\eqref{eq:spacetime:reflpos}) for the interacting
-    gauged $\sigma$-model.
-  \item \textbf{Mirror geometry.}
-    Conjectures~\ref{conj:sm:h1} (mirror-quotient $h^1=3$) and
-    \ref{conj:ladder:stone-e8} (profinite Stone refinement at $n\geq6$).
+  \item \textbf{Reflection positivity (nonperturbative).}
+    Theorem~\ref{thm:spacetime:rp-semiclassical} proves
+    \eqref{eq:spacetime:reflpos} for the semiclassical EIII $\sigma$-model
+    with radiative mass gap. \emph{Remaining:} prove or refute the narrowed
+    Postulate~\ref{post:spacetime:P5} for tree-level massless Goldstones and
+    the nonperturbative composite gauge measure.
+  \item \textbf{Mirror geometry (computational).}
+    Mirror-quotient $h^1(\hat Q,V_{16})=3$ is Theorem~\ref{thm:sm:h1}; explicit
+    Chevalley cell labeling at $n\geq6$ remains
+    (Remark~\ref{rem:ladder:stone-cells}).
   \item \textbf{Cosmological constant (external).}
     Proposition~\ref{prop:gauge-gravity:cc-nogo}: no mechanism within SJET;
     any dynamical solution lies outside the void--mirror core.

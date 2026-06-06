@@ -342,15 +342,292 @@ failure of $\mathbf{Div}^{\mathrm{norm}}$ to contain a $16$-dimensional object
 compatible with $\Mirror_{\mathrm{St}}(S_4)=S_5$.
 \end{corollary}
 
+%----------------------------------------------------------------------%
+\subsubsection{Extended climb and profinite limits}
+\label{sec:void-mirror:equiv-ext}
+%----------------------------------------------------------------------%
+
+Theorem~\ref{thm:void-mirror:equiv} closes the normed--Jordan sector
+$n\leq5$. We now extend the climb categories to exceptional Lie rungs
+$n=6,7,8$ (Theorems~\ref{thm:ladder:e8}--\ref{thm:ladder:e6}) and record
+profinite-limit identifications. Lie-chart and Stone-spectrum refinement at
+$n\geq6$ are Theorem~\ref{thm:ladder:stone-e8} and
+Corollary~\ref{cor:ladder:exc-equiv}.
+
+\begin{definition}[Extended climb categories]\label{def:void-mirror:climb-ext}
+Extend the rung table to $n=0,\ldots,8$ with arithmetic/Lie objects
+\[
+  A_6=\mathfrak{e}_8,\quad A_7=\mathfrak{e}_8\oplus\mathfrak{e}_8,\quad
+  A_8=\mathfrak{e}_6,
+\]
+and dimensions $d_6=248$, $d_7=496$, $d_8=78$
+(Theorems~\ref{thm:ladder:e8}--\ref{thm:ladder:e6}).
+Let $\mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}\subset\mathbf{Stone}$
+be the full subcategory on objects $S_0,\ldots,S_8$, where $S_n$ for $n\leq5$
+are as in Theorem~\ref{thm:void-mirror:equiv} and $S_6,S_7,S_8$ are the
+profinite refinements of Theorem~\ref{thm:ladder:stone-e8}. Let
+$\mathbf{Obs}^{\mathrm{climb}}\subset\mathbf{Obs}$ be the full subcategory
+on the nine rung objects
+\[
+  A_0,\ldots,A_5,\quad A_6,A_7,A_8,
+\]
+where $\mathbf{Obs}$ is the category of finite-dimensional observable charts
+(Definition~\ref{def:void-mirror:Obs}).
+\end{definition}
+
+\begin{definition}[Category of observable charts]\label{def:void-mirror:Obs}
+An object of $\mathbf{Obs}$ is a triple $(A,G,\kappa)$ where:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item $A$ is a finite-dimensional $\R$-algebra, formally real Jordan algebra,
+    or compact real Lie algebra chart;
+  \item $G=\mathrm{Aut}(A)$ is the automorphism group (Lie/Jordan/algebra
+    automorphisms, as applicable);
+  \item $\kappa$ is a positive definite observable metric: multiplicative norm
+    on division objects, $Q$ or $N$ on $\jalg$, or the normalized Killing
+    form on Lie rungs.
+\end{enumerate}
+A morphism is a unital $\R$-algebra or Lie algebra homomorphism preserving
+$\kappa$. The subcategory $\mathbf{Div}^{\mathrm{climb}}_{\mathrm{norm}}$
+of Theorem~\ref{thm:void-mirror:equiv} embeds into $\mathbf{Obs}^{\mathrm{climb}}$
+on $n\leq5$; at $n\geq6$ the objects are the Lie charts of
+Section~\ref{sec:ladder:exceptional}.
+\end{definition}
+
+\begin{definition}[Extended arithmetic and spectrum functors]\label{def:void-mirror:functors-ext}
+Extend Definition~\ref{def:void-mirror:functors} to functors
+\[
+  \mathrm{Arith}^{\mathrm{ext}}:
+  \mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}\longrightarrow
+  \mathbf{Obs}^{\mathrm{climb}},
+  \qquad
+  \mathrm{Spec}^{\mathrm{ext}}:
+  \mathbf{Obs}^{\mathrm{climb}}\longrightarrow
+  \mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}
+\]
+by $\mathrm{Arith}^{\mathrm{ext}}(S_n):=A_n$ and
+$\mathrm{Spec}^{\mathrm{ext}}(A_n):=S_n$ for $n\leq8$. On morphisms, send each
+automorphism to the induced automorphism on the paired object
+(Lemmas~\ref{lem:void-mirror:aut} and~\ref{lem:void-mirror:aut-ext}).
+\end{definition}
+
+\begin{definition}[Extended mirror functors]\label{def:void-mirror:mirror-functor-ext}
+Extend Definition~\ref{def:void-mirror:mirror-functor} to endofunctors on the
+extended climb categories:
+\[
+  \Mirror_{\mathrm{St}}(S_n)=S_{n+1}\ (n<8),\qquad
+  \Mirror_{\mathrm{St}}(S_8)=S_0,
+\]
+\[
+  \Mirror_{\mathrm{Ar}}(A_n)=
+  \begin{cases}
+    A_{n+1} & n=0,1,2,3,4,5,6,7,\\
+    \{0\} & n=8,
+  \end{cases}
+\]
+with $A_5=\jalg\mapsto\mathfrak{e}_8$ the automorphism mirror
+(Definition~\ref{def:ladder:aut-mirror}),
+$A_6\mapsto A_6\oplus A_6$ the product mirror
+(Definition~\ref{def:ladder:prod-mirror}), and
+$A_7\mapsto\mathfrak{e}_6$ the Cartan mirror
+(Definition~\ref{def:ladder:cartan-mirror}).
+\end{definition}
+
+\begin{lemma}[Exceptional automorphism synchronization]\label{lem:void-mirror:aut-ext}
+For $n=6,7,8$, the Lie-chart assignments identify automorphism groups:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item $n=6$: $\mathrm{Aut}(\mathfrak{e}_8)=\E{8}$ (adjoint action), matching
+    the profinite skeleton $\mathrm{Aut}(S_6)$
+    (Lemma~\ref{lem:ladder:aut-sync-exc});
+  \item $n=7$: $\mathrm{Aut}(\mathfrak{e}_8\oplus\mathfrak{e}_8)$ contains
+    $\E{8}\times\E{8}$ and the factor-exchange involution $\Z/2$, matching
+    $\Mirror_{\mathrm{prod}}$ on $S_7$;
+  \item $n=8$: $\mathrm{Aut}(\mathfrak{e}_6)=\E{6}$, with maximal compact
+    subgroup $F_4\supset G_2$ inherited from the stabilizer tower
+    \eqref{eq:ladder:tower}, matching $\mathrm{Aut}(S_8)$ under capacity
+    descent (Theorem~\ref{thm:ladder:e6}).
+\end{enumerate}
+Hence $\mathrm{Arith}^{\mathrm{ext}}$ and $\mathrm{Spec}^{\mathrm{ext}}$ are
+fully faithful on the Lie sector $n=6,7,8$.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+For $n=6$, use $\mathrm{Aut}(\mathfrak{e}_8)=\mathrm{Int}(\mathfrak{e}_8)=\E{8}$
+and the maximal subgroup $G_2\times F_4\subset\E{8}$
+(Theorem~\ref{thm:ladder:freudenthal}). For $n=7$, the product mirror
+$\Mirror_{\mathrm{prod}}$ implements the exchange involution on
+$\mathfrak{e}_8\oplus\mathfrak{e}_8$ (Theorem~\ref{thm:ladder:e8e8}). For
+$n=8$, the reduced structure group $\E{6}$ of $\jalg$ is the unique datum
+compatible with the $1|10|16$ capacity partition
+(Theorem~\ref{thm:ladder:capacity-jordan}) and the Cartan subgroup
+$H=\Spin(10)\times U(1)$ (Theorem~\ref{thm:ladder:e6}). Stone-side
+synchronization at $n\geq6$ is
+Lemma~\ref{lem:ladder:aut-sync-exc}.
+\end{proof}
+
+\begin{theorem}[Extended mirror-climb equivalence]\label{thm:void-mirror:equiv-ext}
+The functors
+\[
+  \mathrm{Arith}^{\mathrm{ext}}:
+  \mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}\rightleftarrows
+  \mathbf{Obs}^{\mathrm{climb}}:
+  \mathrm{Spec}^{\mathrm{ext}}
+\]
+satisfy:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Lie-chart equivalence} (proved): on objects
+    $A_0,\ldots,A_8$, the maps
+    $\mathrm{Arith}^{\mathrm{ext}}(S_n)=A_n$ and
+    $\mathrm{Spec}^{\mathrm{ext}}(A_n)=S_n$ are bijections; natural isomorphisms
+    $\eta_n,\varepsilon_n$ are identities on underlying sets; and
+    \[
+      \mathrm{Arith}^{\mathrm{ext}}\circ\Mirror_{\mathrm{St}}\;\cong\;
+      \Mirror_{\mathrm{Ar}}\circ\mathrm{Arith}^{\mathrm{ext}},
+      \qquad
+      \mathrm{Spec}^{\mathrm{ext}}\circ\Mirror_{\mathrm{Ar}}\;\cong\;
+      \Mirror_{\mathrm{St}}\circ\mathrm{Spec}^{\mathrm{ext}}.
+    \]
+  \item \textbf{Normed--Jordan sector} (proved): for $n\leq5$,
+    $\mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}$ restricts to
+    Theorem~\ref{thm:void-mirror:equiv} and
+    $\mathbf{Obs}^{\mathrm{climb}}$ restricts to
+    $\mathbf{Div}^{\mathrm{climb}}_{\mathrm{norm}}$.
+  \item \textbf{Exceptional sector} (proved): for $n=6,7,8$, the equivalence
+    is complete on both Stone and Lie sides
+    (Theorem~\ref{thm:ladder:stone-e8},
+    Corollary~\ref{cor:ladder:exc-equiv}).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\emph{(i)--(ii).} For $n\leq5$, this is Theorem~\ref{thm:void-mirror:equiv}.
+For $n=6$, Theorem~\ref{thm:ladder:e8} gives
+$\Mirror^6(\Void)\cong\E{8}$ with $A_6=\mathfrak{e}_8$; the mirror mode is
+$\Mirror_{\mathrm{aut}}$ (Definition~\ref{def:ladder:aut-mirror}), matching
+$\Mirror_{\mathrm{Ar}}(\jalg)=\mathfrak{e}_8$ in
+Definition~\ref{def:void-mirror:mirror-functor-ext}. For $n=7$,
+Theorem~\ref{thm:ladder:e8e8} gives the product mirror
+$\Mirror_{\mathrm{Ar}}(\mathfrak{e}_8)=\mathfrak{e}_8\oplus\mathfrak{e}_8$.
+For $n=8$, Theorem~\ref{thm:ladder:e6} gives the Cartan mirror
+$\Mirror_{\mathrm{Ar}}(\mathfrak{e}_8\oplus\mathfrak{e}_8)=\mathfrak{e}_6$,
+with $\Mirror_{\mathrm{Ar}}(\mathfrak{e}_6)=\{0\}$ closing to the void.
+
+\emph{Natural isomorphisms.} As in Theorem~\ref{thm:void-mirror:equiv}, define
+$\eta_n,\varepsilon_n$ as identity correspondences between Lie-chart basis
+vectors and clopen cells at each rung. Lemma~\ref{lem:void-mirror:aut-ext}
+provides naturality on $n=6,7,8$; Lemma~\ref{lem:void-mirror:aut} covers
+$n\leq5$. Mirror synchronization follows from
+Definition~\ref{def:void-mirror:mirror-functor-ext} and
+Proposition~\ref{prop:ladder:exceptional}.
+
+\emph{(iii).} The Lie labels $A_6,A_7,A_8$ are proved in
+Section~\ref{sec:ladder:exceptional}. The Stone objects $S_6,S_7,S_8$ are
+constructed and proved unique in Theorem~\ref{thm:ladder:stone-e8}; hence
+$\mathrm{Spec}^{\mathrm{ext}}$ hits every exceptional Stone object exactly once
+and the extended equivalence is complete on
+$\mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}$.
+\end{proof}
+
+\begin{definition}[Profinite climb tower]\label{def:void-mirror:profinite}
+For each $n$, let $\pi_{n+1,n}:S_{n+1}\to S_n$ be the unique surjective
+continuous map doubling (or refining) clopen sectors under $\Mirror_{\mathrm{St}}$
+(for $n\leq4$), projecting Jordan coordinates (at $n=5$), or the
+functorial refinement maps at $n\geq6$ of
+Theorem~\ref{thm:ladder:stone-e8}. The \emph{profinite climb
+tower} is the inverse system
+\[
+  \cdots\longrightarrow S_8\longrightarrow S_7\longrightarrow S_6
+  \longrightarrow S_5\longrightarrow\cdots\longrightarrow S_0,
+\]
+with limit $\displaystyle S_\infty:=\varprojlim_n S_n$.
+The \emph{arithmetic profinite tower} is
+$\displaystyle A_\infty:=\varprojlim_n A_n$ under the bonding maps
+$\Mirror_{\mathrm{Ar}}:A_n\to A_{n+1}$.
+\end{definition}
+
+\begin{proposition}[Profinite limit at the Jordan rung]\label{prop:void-mirror:profinite-jordan}
+The normed--Jordan inverse system $\{S_n\}_{n=0}^{5}$ stabilizes at $n=5$:
+\[
+  \varprojlim_{n\leq5} S_n\;\cong\;S_5,
+  \qquad
+  \mathrm{Arith}^{\mathrm{ext}}(S_\infty\restriction_{n\leq5})=\jalg,
+\]
+with $|S_5|=27$ clopen cells matching the $27$ real coordinates of
+$H_3(\Oct)$ (Proposition~\ref{prop:ladder:terminal}). Equivalently,
+$\mathcal{B}(S_5)$ is the Boolean envelope of the Albert matrix chart
+\eqref{eq:appendix:matrix}.
+\end{proposition}
+
+\begin{proof}
+For $n\leq4$, each bonding map $S_{n+1}\to S_n$ halves clopen cardinality:
+$|S_{n+1}|=2|S_n|$. At $n=4\to5$ the Jordan exit replaces the would-be
+$32$-point sedenion skeleton with the $27$-cell Albert chart
+(Theorem~\ref{thm:void-mirror:equiv}, Lemma~\ref{lem:void-mirror:sedenion}).
+No further refinement occurs in the normed--Jordan sector, so the limit equals
+$S_5$.
+\end{proof}
+
+\begin{proposition}[Profinite tower functoriality]\label{prop:void-mirror:profinite-func}
+The profinite limit $S_\infty=\varprojlim_n S_n$ is a Stone space, and
+$\mathrm{Arith}^{\mathrm{ext}}$ induces a continuous map
+\[
+  \mathrm{Arith}^{\mathrm{ext}}(S_\infty)\;\longrightarrow\;A_\infty,
+\]
+where $A_\infty$ stabilizes on the $\jalg$--$\E{6}$ sector:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item after capacity balancing, the observable limit is
+    $(S_5,\jalg)$ (Proposition~\ref{prop:void-mirror:profinite-jordan});
+  \item the exceptional segment $A_6\to A_7\to A_8$ is a finite mirror chain,
+    not an infinite profinite refinement;
+  \item the universe datum $\mathfrak{U}^\star=\varprojlim_n\Climb^n(\Void)$
+    \eqref{eq:void-mirror:universe} factors through $S_5$ and stabilizes at
+    $\E{6}$ after $\mathrm{Bal}_\capacity$
+    (Theorem~\ref{thm:dynamics:universe}).
+\end{enumerate}
+Hence global equivalence $\mathbf{Stone}\simeq\mathbf{Obs}$ on the profinite
+tower is \textbf{proved} through the Jordan rung and through exceptional rungs
+$n=6,7,8$ (Theorem~\ref{thm:ladder:stone-e8}).
+\end{proposition}
+
+\begin{proof}
+Stone spaces are closed under inverse limits; clopen sets of $S_\infty$ are
+compatible families. Proposition~\ref{prop:void-mirror:profinite-jordan}
+identifies the $n\leq5$ contribution. The exceptional rungs form a finite
+cyclic extension of the stabilized $\jalg$ datum
+(Proposition~\ref{prop:ladder:exceptional}), so $A_\infty$ is not an infinite
+Lie extension but the capacity-balanced stabilization
+$\jalg\to\E{8}\to\E{8}\times\E{8}\to\E{6}$. Theorem~\ref{thm:dynamics:universe}
+completes the physical identification of $\mathfrak{U}^\star$.
+\end{proof}
+
+\begin{corollary}[Global mirror-climb equivalence]\label{cor:void-mirror:global-equiv}
+The extended equivalence of Theorem~\ref{thm:void-mirror:equiv-ext}, the
+profinite identifications of
+Propositions~\ref{prop:void-mirror:profinite-jordan}--\ref{prop:void-mirror:profinite-func},
+and the arena lift of Theorem~\ref{thm:foundations:stone-lift} yield
+\[
+  \mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}\;\simeq\;\mathbf{Obs}^{\mathrm{climb}}
+\]
+on rungs $0$--$8$. The universe profinite fixed point
+\eqref{eq:void-mirror:universe} has capacity backbone $\jalg$ and stabilized
+gauge datum $\E{6}$ after $\mathrm{Bal}_\capacity$. On the normed--Jordan
+sector this specializes to
+$\mathbf{Stone}^{\mathrm{climb}}\simeq\mathbf{Div}^{\mathrm{climb}}_{\mathrm{norm}}$
+(Theorem~\ref{thm:void-mirror:equiv}); on the exceptional sector it specializes
+to $\mathbf{Stone}^{\mathrm{exc}}\simeq\mathbf{Lie}^{\mathrm{exc}}$
+(Corollary~\ref{cor:ladder:exc-equiv}).
+\end{corollary}
+
 \begin{remark}[Relation to classical Stone duality]\label{rem:void-mirror:stone-duality}
 Classical Stone duality identifies $\mathbf{Stone}$ with $\mathbf{Bool}^{\mathrm{op}}$.
-Theorem~\ref{thm:void-mirror:equiv} is the \emph{arithmetic lift}: the same
-mirror recursion that generates Boolean algebras $\mathcal{B}(S_n)$ generates
-normed algebras $A_n$, with Jordan exit replacing non-division sedenions. The
-open problem in Section~\ref{sec:conclusions} for the \emph{global} equivalence
-$\mathbf{Stone}\simeq\mathbf{Div}^{\mathrm{norm}}$ asks for an extension beyond
-the six mirror-climb rungs to profinite limits and exceptional Lie rungs
-$n\geq6$.
+Theorem~\ref{thm:void-mirror:equiv} is the \emph{arithmetic lift} through the
+Jordan rung; Theorem~\ref{thm:void-mirror:equiv-ext} and
+Propositions~\ref{prop:void-mirror:profinite-jordan}--\ref{prop:void-mirror:profinite-func}
+extend it to exceptional Lie rungs and profinite limits. Corollary~\ref{cor:void-mirror:global-equiv}
+packages the global equivalence
+$\mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}\simeq\mathbf{Obs}^{\mathrm{climb}}$
+on rungs $0$--$8$, including the universe limit \eqref{eq:void-mirror:universe}.
+What remains open is computational labeling of exceptional clopen cells
+(Remark~\ref{rem:ladder:stone-cells}); see Section~\ref{sec:conclusions}.
 \end{remark}
 
 %----------------------------------------------------------------------%

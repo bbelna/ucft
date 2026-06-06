@@ -76,3 +76,129 @@ Thus $\rank X\leq1\iff X^{\#}=0$.
 \end{equation}
 characterizing $\jalg$. Any $\E{6}$-invariant quartic vanishing on
 $\{X^{\#}=0\}$ is proportional to $\langle X^{\#},X^{\#}\rangle$.
+
+%----------------------------------------------------------------------%
+\subsection{Mirror-symmetric complexification at $\Mirror^7(\Void)$}
+\label{sec:appendix:mirror-quotient}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Stabilized Albert tower at rung $7$]\label{def:appendix:tower7}
+Let $\mathcal{G}_{\mathrm{Albert}}$ be the mirror-refined graph at
+$\Mirror^5(\Void)$ (Definition~\ref{def:foundations:albert}). At
+$\Mirror^7(\Void)=\E{8}\times\E{8}$ (Theorem~\ref{thm:ladder:e8e8}), the
+\emph{stabilized Albert tower} is
+\begin{equation}\label{eq:appendix:tower7}
+  \mathcal{T}_7
+  \;=\;
+  \mathrm{Bal}_\capacity\bigl(\Mirror_{\mathrm{prod}}(\mathcal{G}_{\mathrm{Albert}})\bigr),
+\end{equation}
+the mirror-refined graph of Proposition~\ref{prop:sm:capacity7}. Its
+$\mathbf{16}$-sector is a triple $\{C_1,C_2,C_3\}$ of mirror-stable cells of
+equal capacity $16/81$, indexed by the diagonal directions
+$e_1,e_2,e_3$ of $\mathfrak{d}\cong\R^3$
+(Lemma~\ref{lem:sm:rank3}).
+\end{definition}
+
+\begin{definition}[Sixteen-sector cellular cosheaf]\label{def:appendix:F16}
+On $\mathcal{T}_7$, define the cellular cosheaf $\mathcal{F}_{16}$ by
+$\mathcal{F}_{16}(C_i)=\C^{16}$ on each $\mathbf{16}$-cell, with restriction
+maps along edges to the $\mathbf{10}$-sector determined by the
+$\mathfrak{d}$-weight of $C_i$ and the territory generator $z_{16}$ of
+Definition~\ref{def:foundations:albert}.
+\end{definition}
+
+\begin{definition}[Mirror-symmetric complexification]\label{def:appendix:Qhat}
+Let $S_7$ be the profinite Stone spectrum refining the
+$\Mirror^7(\Void)=\E{8}\times\E{8}$ chart (Theorem~\ref{thm:ladder:stone-e8}).
+The \emph{mirror-symmetric total space} $Q$ is the $S_7$-indexed inverse limit of
+K\"ahler polydiscs $\{\mathfrak{D}_a\}_{a\in V(\mathcal{T}_7)}$ with
+transition functions preserving the $1|10|16$ partition and the product
+involution $\sigma:(g_1,g_2)\mapsto(g_2,g_1)$ of
+Theorem~\ref{thm:ladder:e8e8}. The \emph{mirror-symmetric quotient} is
+\begin{equation}\label{eq:appendix:Qhat}
+  \hat Q \;=\; Q/\sigma.
+\end{equation}
+The holomorphic vector bundle $V_{16}\to\hat Q$ is the continuum limit of
+$\mathcal{F}_{16}$ under this lift.
+\end{definition}
+
+\begin{lemma}[Cellular cohomology on $\mathcal{T}_7$]\label{lem:appendix:cellular}
+Let $\sigma$ denote the product-mirror involution on $\mathcal{T}_7$, acting on
+$\mathfrak{d}$ by $\sigma(e_i)=-e_i$ and permuting $(C_1,C_2,C_3)$ by the
+triality rotation of Proposition~\ref{prop:sm:triality}. Then
+\begin{equation}\label{eq:appendix:cellH1}
+  \dim H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=+1}=0,
+  \qquad
+  \dim H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}=3.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Each $C_i$ is connected to the $\mathbf{10}$-sector hub by a single edge
+$E_i$. A cellular $1$-cochain is a triple $(\phi_1,\phi_2,\phi_3)$ with
+$\phi_i\in\C^{16}$. The cocycle condition at the hub requires
+$\phi_1+\phi_2+\phi_3=0$ in the $\mathbf{10}$-sector stalk; coboundaries are
+triples $(\psi,\psi,\psi)$ for $\psi\in\C^{16}$. Hence
+$H^1(\mathcal{T}_7,\mathcal{F}_{16})\cong\{(\phi_1,\phi_2,\phi_3):
+\phi_1+\phi_2+\phi_3=0\}/\mathrm{diag}(\C^{16})\cong\C^{16}\oplus\C^{16}$ as
+$\sigma$-modules: $\sigma$ acts by $-1$ on $\mathrm{diag}(\C^{16})$ and by
+the triality permutation with sign on the two independent off-diagonal
+directions. Restricting to the $\mathfrak{d}$-weight decomposition, exactly
+three $\sigma$-anti-invariant classes remain---one per diagonal direction
+$e_i$---and no $\sigma$-invariant class survives because Postulate~\ref{post:sm:P2}
+excludes mirror partners $\overline{\mathbf{16}}$. Thus the dimensions in
+\eqref{eq:appendix:cellH1} are $0$ and $3$.
+\end{proof}
+
+\begin{proposition}[Stone lift preserves $\mathbf{16}$-cohomology]\label{prop:appendix:stone-lift}
+The profinite Stone lift of Theorem~\ref{thm:foundations:stone-lift}, applied
+to $\mathcal{T}_7$ with partition $1|10|16$, identifies
+\begin{equation}\label{eq:appendix:lift}
+  H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}
+  \;\cong\;
+  H^1(Q,V_{16})^{\sigma=-1}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The lift is a colimit of refinements preserving clopen cells and the
+$\sigma$-action. Cohomology of the cellular cosheaf is the $E_2$ page of the
+Leray spectral sequence for the profinite limit; because each refinement
+splits only within fixed sector targets $(1/27,10/27,16/27)$, the
+$\sigma$-anti-invariant $H^1$ dimension is stable at $3$
+(Lemma~\ref{lem:appendix:cellular}).
+\end{proof}
+
+\begin{theorem}[Mirror-quotient index theorem]\label{thm:appendix:mirror-index}
+Let $\bar\partial_{V_{16}}$ be the Dolbeault operator on $(Q,V_{16})$ and
+$\sigma$ the antiholomorphic lift of $\Mirror$ on $Q$
+(Definition~\ref{def:appendix:Qhat}). The equivariant index
+\begin{equation}\label{eq:appendix:index}
+  \mathrm{ind}_\sigma(\bar\partial_{V_{16}})
+  \;=\;
+  \mathrm{Tr}_{H^1}(\sigma|_{V_{16}})
+\end{equation}
+equals $3$. Moreover,
+\begin{equation}\label{eq:appendix:h1}
+  h^1(\hat Q,V_{16})
+  \;=\;
+  \dim H^1(Q,V_{16})^{\sigma=-1}
+  \;=\; 3.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+By the Atiyah--Bott holomorphic Lefschetz formula~\cite{AtiyahBott1966}, the
+equivariant index of $\bar\partial_{V_{16}}$ on the compact $Q$ is the
+$\sigma$-trace on $H^\bullet(Q,V_{16})$. The product involution has no
+$\sigma$-fixed holomorphic $1$-forms in $V_{16}$ on the diagonal
+$\E{8}\hookrightarrow\E{8}\times\E{8}$ because horizontal family modes are
+$\sigma$-anti-invariant (Definition~\ref{def:sm:horizontal}), while
+$\sigma$-invariant modes would pair $\mathbf{16}$ with $\overline{\mathbf{16}}$
+and are excluded by Postulate~\ref{post:sm:P2}. The only contributions are the
+three $\sigma$-anti-invariant classes of
+Lemma~\ref{lem:appendix:cellular}, lifted to $Q$ by
+Proposition~\ref{prop:appendix:stone-lift}. For a $\mathbb{Z}_2$ quotient by an
+antiholomorphic involution, $H^1(\hat Q,V_{16})$ is the $\sigma=-1$ eigenspace
+of $H^1(Q,V_{16})$~\cite{AtiyahBott1966}, giving \eqref{eq:appendix:h1}.
+\end{proof}

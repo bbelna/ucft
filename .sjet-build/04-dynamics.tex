@@ -48,6 +48,47 @@ $\Hess V(\orderparam_\star)=0$ on $\mathfrak{m}$: $32$ exact Goldstones at tree
 level.
 \end{corollary}
 
+\begin{lemma}[Nonnegativity of the capacity potential]\label{lem:dynamics:Vnonneg}
+With $\alpha,\beta,\gamma>0$ and $k\geq2$ even in \eqref{eq:dynamics:V},
+$V(X)\geq0$ for all $X\in\jalg$. On the sharp locus $\rank X\leq1$
+(Lemma~\ref{lem:dynamics:sharp}) the sharp term vanishes; global minima lie on
+$\mathcal{M}=\mathrm{EIII}$ (Theorem~\ref{thm:dynamics:vacuum}), not at the
+origin.
+\end{lemma}
+
+\begin{proof}
+Each summand in \eqref{eq:dynamics:V} is nonnegative:
+$\langle X^{\#},X^{\#}\rangle\geq0$,
+$\beta[\Tr(X^2)-c_2]^2\geq0$, and $\gamma\,\Tr(X^2)^k\geq0$ for even $k$.
+\end{proof}
+
+\begin{lemma}[Interaction remainder at EIII]\label{lem:dynamics:interaction}
+Fix $\orderparam_\star\in\mathcal{M}$ and write
+$\orderparam=\orderparam_\star+\varphi$ with $\varphi\in\mathfrak{m}$ normal
+coordinates. Set $V_{\min}=V(\orderparam_\star)$ and
+$V_{\mathrm{int}}=V-V_{\min}$. Then $V_{\mathrm{int}}\geq0$,
+$V_{\mathrm{int}}(\varphi=0)=0$, and
+$\Hess V_{\mathrm{int}}(\orderparam_\star)=0$ on $\mathfrak{m}$
+(Corollary~\ref{cor:dynamics:goldstone}). The first nonzero terms in the
+$\mathfrak{m}$-expansion are $O(\|\varphi\|^4)$, governed by
+$(\alpha,\beta,\gamma,k)$.
+\end{lemma}
+
+\begin{proof}
+$V_{\mathrm{int}}\geq0$ from Lemma~\ref{lem:dynamics:Vnonneg}. Vanishing of
+the quadratic part follows from Corollary~\ref{cor:dynamics:goldstone}. The
+quartic leading behaviour is the standard Taylor remainder when the Hessian
+vanishes on the fluctuation directions.
+\end{proof}
+
+\begin{proposition}[Euclidean action bounded below]\label{prop:dynamics:action-bounded}
+On a Euclidean world background, the action \eqref{eq:dynamics:action}
+satisfies $S[\orderparam]\geq0$ whenever $V(\orderparam)\geq0$. In
+particular, for the capacity-derived potential of
+Theorem~\ref{thm:dynamics:potential}, $S[\orderparam]\geq
+\int d^4x\,\sqrt{|g|}\,\frac{1}{2}K_{AB}\nabla_\mu\orderparam^A\nabla^\mu\orderparam^B$.
+\end{proposition}
+
 %----------------------------------------------------------------------%
 \subsection{$\sigma$-model action}
 \label{sec:dynamics:action}

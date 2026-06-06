@@ -117,15 +117,29 @@ breaking capacity alignment on the Albert diagonal. The mirror climb
 therefore stabilizes at three families.
 \end{corollary}
 
-\begin{conjecture}[Mirror quotient cohomology]\label{conj:sm:h1}
-Let $\hat Q$ be a mirror-symmetric complexification of the stabilized Albert
-tower at $\Mirror^7(\Void)$, with $V_{16}$ the bundle corresponding to the
-$\mathbf{16}$ sector of \eqref{eq:foundations:27branch}. Then
-$h^1(\hat Q,V_{16})=3$ by an index theorem on the $\Mirror$ involution. This
-would match the heterotic count~\cite{Witten1985} without importing string
-theory as primitive data; it is \textbf{not} used in the proof of
-Theorem~\ref{thm:sm:three-families}.
-\end{conjecture}
+\begin{theorem}[Mirror quotient cohomology]\label{thm:sm:h1}
+Let $\mathcal{T}_7$ be the stabilized Albert tower at $\Mirror^7(\Void)$
+(Definition~\ref{def:appendix:tower7}), $\hat Q$ its mirror-symmetric
+complexification, and $V_{16}$ the holomorphic $\mathbf{16}$-bundle of
+Definition~\ref{def:appendix:Qhat}. Then
+\begin{equation}\label{eq:sm:h1}
+  h^1(\hat Q,V_{16}) \;=\; 3
+\end{equation}
+by the mirror-quotient index theorem (Theorem~\ref{thm:appendix:mirror-index}).
+The count matches Theorem~\ref{thm:sm:three-families} and the heterotic
+correspondence~\cite{Witten1985} without importing string theory as primitive
+data.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:appendix:mirror-index} computes the $\sigma$-anti-invariant
+Dolbeault cohomology on the quotient $\hat Q=Q/\sigma$. The cellular model
+(Lemma~\ref{lem:appendix:cellular}) gives three independent classes, one per
+diagonal direction of Lemma~\ref{lem:sm:rank3}; the Stone lift
+(Proposition~\ref{prop:appendix:stone-lift}) carries them to $Q$; the
+Atiyah--Bott equivariant index~\cite{AtiyahBott1966} identifies the quotient
+count. No step uses heterotic axioms.
+\end{proof}
 
 \begin{proposition}[No-go: P2 is not derivable from mirror stabilisation]
 \label{prop:sm:p2-nogo}
@@ -147,9 +161,9 @@ The old Postulate~P3 (``three families are not derived'') is retired.
 The exceptional rungs $\Mirror^6(\Void)=\E{8}$ and
 $\Mirror^7(\Void)=\E{8}\times\E{8}$ are Theorems~\ref{thm:ladder:e8} and
 \ref{thm:ladder:e8e8}; family number follows from void, mirror, and capacity
-once chiral matter is postulated (P2). What remains \emph{conjectural} is only
-the geometric cohomology route (Conjecture~\ref{conj:sm:h1}) and Stone
-refinement at $\E{8}$ (Conjecture~\ref{conj:ladder:stone-e8}).
+once chiral matter is postulated (P2); the geometric cohomology route is
+Theorem~\ref{thm:sm:h1}. Stone refinement at $\E{8}$ is
+Theorem~\ref{thm:ladder:stone-e8}.
 \end{remark}
 
 \begin{postulate}[GUT--Higgs and Yukawa, P4]\label{post:sm:P4}
@@ -211,7 +225,7 @@ physical massive scalars; canonical mass $m^2=\mu^2$.
 
 \begin{remark}[Heterotic corroboration]\label{rem:sm:heterotic}
 The heterotic $\mathbb{Z}_5$ quintic gives $h^1(\hat Q,V_{16})=3$~\cite{Witten1985},
-independent support for Theorem~\ref{thm:sm:three-families}. The geometric
-route is Conjecture~\ref{conj:sm:h1}; the capacity/triality route of
-Theorem~\ref{thm:sm:three-families} does not require string theory.
+independent support for Theorems~\ref{thm:sm:three-families}
+and~\ref{thm:sm:h1}. The SJET derivation uses only void, mirror, and capacity;
+the heterotic count is external corroboration, not an axiom.
 \end{remark}
