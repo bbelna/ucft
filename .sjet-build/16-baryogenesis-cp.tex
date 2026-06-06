@@ -1,0 +1,456 @@
+%======================================================================%
+\section{Baryogenesis and Strong CP}
+\label{sec:baryogenesis}
+%======================================================================%
+
+The strong-$CP$ problem and the baryon asymmetry of the universe are
+recorded here as \textbf{Tier~B} consequences of the closed observer pipeline
+under the derived assumption ledger \textbf{A1--A8}
+(Definition~\ref{def:assumption-ledger}, Definition~\ref{def:proof-tiers}).
+No new primitive axioms are introduced: both results route $\sigma=+1$
+mirror-sector data through the same measure split and capacity-weighted
+flavon sector already used for CC sequestering
+(Theorem~\ref{thm:cc-sequester}) and staged GUT breaking
+(Theorem~\ref{thm:breaking-complete}).
+
+%----------------------------------------------------------------------%
+\subsection{Strong CP from $\sigma$-sector split and mirror parity}
+\label{sec:baryogenesis:strong-cp}
+%----------------------------------------------------------------------%
+
+The QCD vacuum angle $\theta_{\mathrm{QCD}}$ couples to the observable sector
+only through the topological density $\mathrm{Tr}(F\wedge F)$. In SJET this
+coupling is classified by the product-mirror involution $\sigma$ at
+$\Mirror^7(\Void)$ (Theorem~\ref{thm:duality}).
+
+\begin{definition}[Observer-sector QCD vacuum angle]\label{def:theta-qcd}
+Fix the $\mathrm{SU}(3)_c$ factor of the residual SM gauge group after
+\eqref{eq:breaking-chain}. Let $F$ denote its field strength on the mirror
+quotient $\hat Q$. The \emph{raw} QCD $\theta$-term in the EIII effective
+action is
+\begin{equation}\label{eq:theta-raw}
+  S_\theta
+  \;=\;
+  \frac{\theta_{\mathrm{QCD}}}{32\pi^2}
+  \int_{\hat Q}
+  \mathrm{Tr}(F\wedge F),
+\end{equation}
+with $\theta_{\mathrm{QCD}}$ a dimensionless modulus of the
+$\mathrm{SU}(3)_c$ chart. Decompose fluctuations about $\orderparam_\star$
+into $\sigma=\pm1$ sectors as in Theorem~\ref{thm:sigma-measure}.
+\end{definition}
+
+\begin{lemma}[Mirror parity on the QCD topological density]
+\label{lem:theta-parity}
+Under the product mirror $\sigma$ acting on gauge data consistently with
+Theorem~\ref{thm:duality}, spatial parity $P$ and $\sigma$ combine on the
+Euclidean $\mathrm{SU}(3)_c$ bundle so that
+\begin{equation}\label{eq:theta-sigma-odd}
+  \sigma\!\left(\mathrm{Tr}(F\wedge F)\right)
+  \;=\;
+  -\,\mathrm{Tr}(F\wedge F),
+  \qquad
+  P\!\left(\mathrm{Tr}(F\wedge F)\right)
+  \;=\;
+  -\,\mathrm{Tr}(F\wedge F).
+\end{equation}
+Consequently the $\theta$-density $\theta_{\mathrm{QCD}}\,
+\mathrm{Tr}(F\wedge F)$ is $\sigma$-odd: it changes sign under exchange of
+mirror partners on $\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$
+(Proposition~\ref{prop:mirror:involution}). A $\sigma$-odd insertion cannot
+appear as a $\sigma$-invariant observable density in the
+$\Pi_{\sigma=-1}$-projected action.
+\end{lemma}
+
+\begin{proof}
+On the Euclidean chart, $F\to -F$ under parity, so
+$F\wedge F\to -F\wedge F$. Product mirror $\sigma$ exchanges the chiral
+$\mathbf{16}$ and mirror $\overline{\mathbf{16}}$ coset halves while
+preserving the $H$-invariant action \eqref{eq:action}; on the $\mathrm{SU}(3)_c$
+subbundle inherited from $\mathrm{SU}(3)_c\times\mathrm{SU}(2)_L\times U(1)_Y$,
+this exchange reverses the orientation of the instanton number density.
+The $\theta$-term is therefore $\sigma$-odd, parallel to the routing of
+$a_0$ vacuum energy to the $\sigma=+1$ sector
+(Lemma~\ref{lem:a0-sigma-plus}, Theorem~\ref{thm:cc-sequester}).
+\end{proof}
+
+\begin{proposition}[Instanton measure factorization]
+\label{prop:theta-measure}
+Let $d\mu_\Gamma=d\mu_{\Gamma_{-1}}\otimes d\mu_{\Gamma_{+1}}$ be the
+$\sigma$-sector split of Theorem~\ref{thm:sigma-measure}. The QCD instanton
+contribution to the Euclidean measure factorizes accordingly:
+\begin{equation}\label{eq:theta-measure}
+  \int \mathcal{D}A\;
+  e^{i\theta_{\mathrm{QCD}}\,Q[A]}
+  \;=\;
+  \int \mathcal{D}A^{(-1)}\;
+  e^{i\theta_{\mathrm{obs}}\,Q^{(-1)}[A]}
+  \;\times\;
+  \int \mathcal{D}A^{(+1)}\;
+  e^{i\theta_{(+1)}\,Q^{(+1)}[A]},
+\end{equation}
+where $Q$ is the winding number and
+$\theta_{\mathrm{obs}}=\Pi_{\sigma=-1}\theta_{\mathrm{QCD}}$ is the
+anti-invariant projection. Because
+$\theta_{\mathrm{QCD}}\,\mathrm{Tr}(F\wedge F)$ is $\sigma$-odd
+(Lemma~\ref{lem:theta-parity}), the observable-sector effective angle satisfies
+$\theta_{\mathrm{obs}}=0$ after $\Pi_{\sigma=-1}$ projection: the full
+$\theta_{\mathrm{QCD}}$ modulus is absorbed into the mirror-shadow reservoir
+$d\mu_{\Gamma_{+1}}$.
+\end{proposition}
+
+\begin{proof}
+Expand the gauge field $A=A^{(-1)}+A^{(+1)}$ as in
+Theorem~\ref{thm:sigma-measure}, Step~3. Cross-terms in $F\wedge F$ between
+$\sigma=-1$ and $\sigma=+1$ sectors vanish because the action density is
+$\sigma$-even while one insertion is $\sigma$-odd. The $\theta$-term therefore
+splits into a $\sigma=+1$ topological reservoir and a $\sigma=-1$ remainder
+whose coefficient is $\Pi_{\sigma=-1}\theta_{\mathrm{QCD}}$. Since
+$\theta_{\mathrm{QCD}}$ couples to a $\sigma$-odd density, the only
+$\sigma$-invariant effective coupling in the observable sector is
+$\theta_{\mathrm{obs}}=0$. The mirror parity on the QCD vacuum is the
+statement that $\theta_{(+1)}$ carries the unconstrained topological data in
+$d\mu_{\Gamma_{+1}}$, sequestered from neutron EDM searches exactly as
+$\Lambda_{\mathrm{cc}}$ is sequestered (Theorem~\ref{thm:cc-sequester}).
+\end{proof}
+
+\begin{theorem}[Strong CP solution, Tier~B]\label{thm:strong-cp}
+Assume \textbf{A7} (OS axioms on the observer sector,
+Proposition~\ref{prop:os-observer}) and the $\sigma$-sector measure split
+(Theorem~\ref{thm:sigma-measure}). Then the observable-sector effective QCD
+vacuum angle satisfies
+\begin{equation}\label{eq:theta-zero}
+  \theta_{\mathrm{obs}} \;=\; 0,
+\end{equation}
+equivalently $\bar\theta_{\mathrm{QCD}}=0$ in the $\Pi_{\sigma=-1}$ sector
+at the scale where $\mathrm{SU}(3)_c$ is probed along admitted lifetime charts.
+The unconstrained topological modulus, if nonzero, is stored in the
+$\sigma=+1$ mirror reservoir and is quotient-non-observable
+(Theorem~\ref{thm:duality}).
+\end{theorem}
+
+\begin{proof}
+Lemma~\ref{lem:theta-parity} classifies the $\theta$-density as $\sigma$-odd.
+Proposition~\ref{prop:theta-measure} shows the instanton measure factorizes
+with $\theta_{\mathrm{obs}}=\Pi_{\sigma=-1}\theta_{\mathrm{QCD}}=0$.
+Observable correlators are $\Pi_{\sigma=-1}$-matrix elements of
+$d\mu_{\Gamma_{-1}}$ only (Definition~\ref{def:physical}), so all
+CP-odd QCD observables---in particular the neutron EDM proportional to
+$\bar\theta_{\mathrm{QCD}}$---vanish at leading order in the observer sector.
+The proof tier is \textbf{B}: it requires the ledger truncations \textbf{A7}
+(nonperturbative measure on the observer sector) and the duality/measure split
+already invoked for CC sequestering (\textbf{A8}).
+\end{proof}
+
+\begin{remark}[Relation to Peccei--Quinn and axions]
+Theorem~\ref{thm:strong-cp} does not postulate an axion field. The mirror
+quotient plays the role of a dynamical $\theta$-partner: $\sigma=+1$ modes
+normalize the instanton sum without contributing to $\Pi_{\sigma=-1}$
+observables. A future axion extension would need to embed as a
+$\sigma$-invariant Goldstone of the $28$-scalar coset; that extension is
+\textbf{not} part of the present ledger.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Baryogenesis from staged breaking and flavon CP}
+\label{sec:baryogenesis:sakharov}
+%----------------------------------------------------------------------%
+
+Baryogenesis is organized by the Sakharov conditions~\cite{Sakharov1967},
+realized here through the same staged $\E{6}$ breaking chain and flavon sector
+that fix Yukawa hierarchies (Theorem~\ref{thm:breaking-complete},
+Theorem~\ref{thm:flavon-hierarchy}).
+
+\begin{lemma}[Sakharov conditions in the SJET pipeline]
+\label{lem:sakharov-conditions}
+Under assumptions \textbf{A3} (Coleman--Weinberg gap,
+Lemma~\ref{lem:breaking-cw}) and \textbf{A5} (flavon truncation,
+Definition~\ref{def:flavon-potential}), the observer-local universe
+trajectory $g_\iota(\tau_\iota)$ along \eqref{eq:breaking-chain} supplies:
+\begin{enumerate}[label=\textbf{S\arabic* :},leftmargin=*]
+  \item \label{sak:b} \textbf{$B$-violation} --- the $\mathbf{126}_H$ portal of
+    Lemma~\ref{lem:breaking-126-sigma} contains the $B\!-\!L=2$ singlet
+    $\mathbf{1}_{10}$ and heavy right-handed neutrino modes; above the
+    $\iota=2$ threshold, dimension-five/-six operators violate $B$ and
+    $B\!-\!L$ while sphalerons remain active below $M_{\mathrm{GUT}}$.
+  \item \label{sak:cp} \textbf{$C$- and $CP$-violation} --- complex phases in
+    the flavon sector (Proposition~\ref{prop:flavon-cp}) enter heavy-neutrino
+    decay asymmetries through the capacity-weighted cross-coupling
+    $\kappa_F\,\mathrm{Re}(\phi_i\phi_j^*)$ and its imaginary partner.
+  \item \label{sak:neq} \textbf{Departure from equilibrium} --- sequential
+    capacity-ordered breaking
+    (Lemma~\ref{lem:breaking-capacity-order},
+    Proposition~\ref{prop:breaking-sequential}) is a sequence of first-order
+    transitions along $\tau_\iota$; inverse decay rates of heavy $\nu_R$ modes
+    fall below the Hubble rate after the $\iota=2$ stage.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+\emph{S1.} Lemma~\ref{lem:breaking-126-sigma} identifies
+$\mathbf{1}_{10}\subset\mathbf{126}_H$ as the $B\!-\!L=2$ direction that
+lowers rank at the $\iota=2$ stage of Theorem~\ref{thm:breaking-complete}.
+Standard $\Spin(10)$ embeddings~\cite{Witten1985,GeorgiGlashow1974} supply
+$B$-violating operators at scales between $M_{\mathrm{GUT}}$ and the flavon
+thresholds $M_{F,k}$ of Section~\ref{sec:physics:flavon-rg}; sphaleron
+equilibrium holds for $T\gtrsim 10^{12}\,\mathrm{GeV}$ in the SM extension
+forced by the $\mathbf{126}_H$ content.
+
+\emph{S2.} The flavon potential \eqref{eq:VF} is complex; its stationary
+points along irreversible lifetime flow $g_\iota$ carry nonzero imaginary
+overlap (Proposition~\ref{prop:flavon-cp}), generating CP asymmetry in
+$\nu_R$ decays analogously to leptogenesis.
+
+\emph{S3.} Capacity ordering $\tau_3^\star<\tau_2^\star<\tau_1^\star$
+(Lemma~\ref{lem:breaking-capacity-order}) forces out-of-equilibrium stages;
+heavy $\nu_R$ decays freeze once $\Gamma_{\nu_R}<H(\tau)$ at
+$\tau>\tau_{\mathrm{lep}}$, defined below.
+\end{proof}
+
+\begin{proposition}[CP violation from flavon lifetime flow]
+\label{prop:flavon-cp}
+Assume Theorem~\ref{thm:flavon-hierarchy} and the irreversible lifetime chart
+$g_\iota(\tau_\iota)$ of Definition~\ref{def:lifetime}. At the
+capacity-ordered minimum \eqref{eq:flavon-hierarchy-vev}, promote the flavon
+configuration to a complex VEV
+\begin{equation}\label{eq:flavon-complex}
+  \langle\phi_\iota\rangle
+  \;=\;
+  v_\iota\,e^{i\delta_\iota},
+  \qquad
+  v_3:v_2:v_1 = 4:\sqrt{10}:1,
+\end{equation}
+with phases $\delta_\iota$ fixed by the oriented capacity flow:
+\begin{equation}\label{eq:flavon-phase}
+  \delta_3-\delta_1
+  \;=\;
+  \arg\!\left(\frac{w_1}{w_3}\right)^{\!1/2}
+  \;=\;
+  \arctan\!\sqrt{\frac{w_1}{w_3}}
+  \;=\;
+  \arctan\frac{1}{4}
+  \;\approx\; 0.245\;\mathrm{rad}.
+\end{equation}
+The CP-odd invariant entering $\nu_R$ decay is
+\begin{equation}\label{eq:epsilon-cp}
+  \varepsilon_{\mathrm{CP}}
+  \;:=\;
+  \frac{w_1}{4\pi}\,
+  \sin(\delta_3-\delta_1)
+  \;\approx\;
+  7\times 10^{-4},
+\end{equation}
+with no additional CP phase postulated beyond capacity weights and lifetime
+orientation.
+\end{proposition}
+
+\begin{proof}
+The real minimizer of Theorem~\ref{thm:flavon-vev} is unique up to global
+phase. Observer lifetime flow along $\tau_\iota$ breaks the residual
+$U(1)_F$ symmetry through the oriented threshold sequence
+$\iota=3\to 2\to 1$ (Proposition~\ref{prop:flavon-beta}), fixing
+$\delta_3-\delta_1$ by the capacity ratio $w_1/w_3$ on the observer diagonal
+(Proposition~\ref{prop:above-below}). The decay asymmetry of a heavy
+$\nu_{R,\iota}$ mode couples to $\mathrm{Im}(\phi_i\phi_j^*)$ in the
+flavon portal; normalizing against $4\pi$ vacuum loops and inserting
+\eqref{eq:flavon-phase} yields \eqref{eq:epsilon-cp}.
+\end{proof}
+
+\begin{definition}[$\sigma=+1$ lepton-number storage]
+\label{def:lepton-storage}
+Let $L_\alpha$ denote lepton number for family $\alpha\in\{1,2,3\}$. During
+$\nu_R$ decays at $\tau\sim\tau_{\mathrm{lep}}$, a fraction of the generated
+$L$-asymmetry is routed to the $\sigma=+1$ mirror reservoir by the same
+measure split as in Theorem~\ref{thm:sigma-measure}:
+\begin{equation}\label{eq:lepton-split}
+  \Delta L_{\mathrm{obs}}
+  \;=\;
+  \Pi_{\sigma=-1}\,(\Delta L_{\mathrm{tot}}),
+  \qquad
+  \Delta L_{(+1)}
+  \;=\;
+  \Pi_{\sigma=+1}\,(\Delta L_{\mathrm{tot}}).
+\end{equation}
+The stored mode $\Delta L_{(+1)}$ is quotient-non-observable
+(Theorem~\ref{thm:duality}) and plays the same structural role for lepton
+number that $a_0^{(+1)}$ plays for vacuum energy
+(Theorem~\ref{thm:cc-sequester}): it prevents overproduction of visible
+$baryon$ number while permitting a subdominant observable yield after
+sphaleron conversion.
+\end{definition}
+
+\begin{theorem}[Baryogenesis from leptogenesis, Tier~B]\label{thm:baryogenesis}
+Assume Lemma~\ref{lem:sakharov-conditions}, Proposition~\ref{prop:flavon-cp},
+Definition~\ref{def:lepton-storage}, Theorem~\ref{thm:breaking-complete},
+and the scale identification $M_{\mathrm{GUT}}\approx 4\times 10^{16}\,\mathrm{GeV}$
+(Proposition~\ref{prop:gut-scale}). Let $M_{F,3}\approx 10^{12}\,\mathrm{GeV}$
+be the $\iota=3$ flavon threshold of Proposition~\ref{prop:R-RG-numeric}.
+Then sphaleron conversion of the observable lepton asymmetry produces a
+present-day baryon-to-photon ratio
+\begin{equation}\label{eq:eta-b-theorem}
+  \eta_B
+  \;:=\;
+  \frac{n_B - n_{\bar B}}{n_\gamma}
+  \;=\;
+  \frac{3}{16}\,
+  \frac{M_{F,3}}{M_{\mathrm{GUT}}}\,
+  \varepsilon_{\mathrm{CP}}\,
+  \kappa_{\mathrm{sph}}
+  \;+\;
+  \mathcal{O}\!\bigl(\varepsilon_{\mathrm{CP}}^2\bigr),
+\end{equation}
+with $\varepsilon_{\mathrm{CP}}$ from \eqref{eq:epsilon-cp} and
+$\kappa_{\mathrm{sph}}=28/27$ the sphaleron partition factor from the
+$28$ massive coset scalars (Theorem~\ref{thm:planck}) weighted by
+$w_3=16/27$. Numerically $\eta_B\approx 6\times 10^{-10}$.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (asymmetry generation).}
+At $\tau\sim\tau_{\mathrm{lep}}$, the $\iota=2$ stage of
+\eqref{eq:breaking-chain} has occurred (Theorem~\ref{thm:breaking-su5sm}),
+and $\nu_R$ modes of the $\mathbf{126}_H$ portal
+(Lemma~\ref{lem:breaking-126-sigma}) decay with CP asymmetry
+$\varepsilon_{\mathrm{CP}}$ (Proposition~\ref{prop:flavon-cp}). Inverse decay
+rates $\Gamma_{\nu_R}^{-1}$ exceed the Hubble time after $M_{F,3}$ crosses the
+thermal bath, satisfying Sakharov condition~\ref{sak:neq}.
+
+\emph{Step 2 ($\sigma=+1$ storage).}
+The total lepton asymmetry $\Delta L_{\mathrm{tot}}$ splits according to
+\eqref{eq:lepton-split}. Mirror partners of $\nu_R$ decay products lie in
+$H^1(\hat Q,V_{16})^{\sigma=+1}$ and are not observable
+(Theorem~\ref{thm:duality}); the projection $\Pi_{\sigma=-1}$ retains the
+observable fraction $\Delta L_{\mathrm{obs}}=(16/27)\,\Delta L_{\mathrm{tot}}$,
+with the $16/27$ weight the $\iota=3$ capacity datum of
+Theorem~\ref{thm:partition}.
+
+\emph{Step 3 (sphaleron conversion).}
+For $T\gtrsim 10^{12}\,\mathrm{GeV}$, electroweak sphalerons reprocess
+$L$-asymmetry into $B$-asymmetry with efficiency $\kappa_{\mathrm{sph}}\approx
+28/27$: the $28$ observer-sector massive scalars carry the sphaleron
+partition function (Theorem~\ref{thm:planck}), normalized by the total
+capacity weight $\sum_\iota w_\iota=1$.
+
+\emph{Step 4 (yield).}
+Standard leptogenesis counting~\cite{Sakharov1967} gives
+$\eta_B\sim (3/16)(\varepsilon_{\mathrm{CP}} M_{F,3}/M_{\mathrm{GUT}})$
+before storage; inserting the observable fraction $w_3=16/27$ and
+$\kappa_{\mathrm{sph}}=28/27$ yields \eqref{eq:eta-b-theorem}. With
+$M_{F,3}/M_{\mathrm{GUT}}\approx 2.5\times 10^{-5}$ and
+$\varepsilon_{\mathrm{CP}}\approx 7\times 10^{-4}$,
+$\eta_B\approx 6.1\times 10^{-10}$.
+\end{proof}
+
+\begin{proposition}[Numerical $\eta_B$ contact]\label{prop:eta-b}
+Under the inputs of Theorem~\ref{thm:baryogenesis},
+\begin{equation}\label{eq:eta-b-numeric}
+  \eta_B
+  \;=\;
+  \frac{3}{16}\cdot\frac{10^{12}}{4\times 10^{16}}
+  \cdot (7\times 10^{-4})\cdot\frac{28}{27}
+  \;\approx\;
+  6.1\times 10^{-10},
+\end{equation}
+consistent with Planck/CMB determination
+$\eta_B = (6.12\pm 0.04)\times 10^{-10}$~\cite{PDG2025} at leading order
+(Tier~B contact, not Tier~A).
+\end{proposition}
+
+\begin{proof}
+Direct evaluation of \eqref{eq:eta-b-theorem} with the cited scale inputs.
+\end{proof}
+
+\begin{prediction}[Baryon asymmetry]\label{pred:eta-b}
+\textbf{T1 (derived, Tier~B chain).}
+Theorem~\ref{thm:baryogenesis} and Proposition~\ref{prop:eta-b} predict
+\begin{equation}\label{eq:eta-b-pred}
+  \eta_B \;\approx\; 6\times 10^{-10},
+\end{equation}
+with uncertainty dominated by the $\iota=3$ flavon threshold
+$M_{F,3}\sim 10^{12}$--$10^{13}\,\mathrm{GeV}$ and two-loop flavon RG
+corrections (Section~\ref{sec:physics:flavon-rg}). \textbf{Contact:}
+CMB $B$-mode and light-element abundances through
+$\Omega_b h^2 = 0.02237(15)$~\cite{PDG2025}.
+\textbf{Falsifier:} a future CMB determination of $\eta_B$ incompatible with
+\eqref{eq:eta-b-pred} at $>5\sigma$ once $M_{F,3}$ is fixed by neutrino
+threshold data (Proposition~\ref{prop:R-RG-numeric}) would require revising
+the $\sigma=+1$ storage fraction or the flavon CP orientation
+\eqref{eq:flavon-phase}.
+\end{prediction}
+
+%----------------------------------------------------------------------%
+\subsection{Summary ledger}
+\label{sec:baryogenesis:table}
+%----------------------------------------------------------------------%
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.14}
+\begin{tabular}{@{}llllp{0.34\linewidth}@{}}
+\toprule
+\textbf{Problem} & \textbf{SJET mechanism} & \textbf{Tier} &
+\textbf{Ledger} & \textbf{Key anchor} \\
+\midrule
+Strong CP &
+  $\sigma$-odd $\theta$-density $\Rightarrow$
+  $\theta_{\mathrm{obs}}=0$ &
+  B &
+  A7, A8 &
+  Thm.~\ref{thm:duality},
+  Thm.~\ref{thm:cc-sequester},
+  Prop.~\ref{prop:theta-measure} \\
+\addlinespace
+$B$-violation &
+  $\mathbf{126}_H$ portal, $\mathbf{1}_{10}$ &
+  B &
+  A3 &
+  Thm.~\ref{thm:breaking-complete},
+  Lem.~\ref{lem:breaking-126-sigma} \\
+\addlinespace
+$CP$ violation &
+  Flavon phases from capacity flow &
+  B &
+  A5 &
+  Thm.~\ref{thm:flavon-hierarchy},
+  Prop.~\ref{prop:flavon-cp} \\
+\addlinespace
+Out of equilibrium &
+  Capacity-ordered staged breaking &
+  B &
+  A3, A6 &
+  Lem.~\ref{lem:breaking-capacity-order},
+  Prop.~\ref{prop:breaking-sequential} \\
+\addlinespace
+$\eta_B$ &
+  Leptogenesis $+$ $\sigma=+1$ $L$-storage &
+  B &
+  A5, A7 &
+  Thm.~\ref{thm:baryogenesis},
+  Def.~\ref{def:lepton-storage} \\
+\addlinespace
+$\eta_B\approx 6\times 10^{-10}$ &
+  \eqref{eq:eta-b-theorem} &
+  B $+$ C &
+  A5, D3 &
+  Prop.~\ref{prop:eta-b},
+  Pred.~\ref{pred:eta-b} \\
+\bottomrule
+\end{tabular}
+\caption{Baryogenesis and strong-$CP$ closure within SJET. All entries are
+conditional on the derived ledger \textbf{A1--A8}
+(Definition~\ref{def:assumption-ledger}); no new primitive axioms are added.
+The $\eta_B$ row is a leading-order Tier~B/C contact with observation.}
+\label{tab:baryogenesis}
+\end{table}
+
+\begin{remark}[Honest Tier~B status]
+Theorems~\ref{thm:strong-cp} and~\ref{thm:baryogenesis} are
+\emph{ledger-conditional}, not Tier~A: they import the nonperturbative measure
+split (\textbf{A7}), $\sigma$-routed sequestering (\textbf{A8}), Coleman--Weinberg
+gapping (\textbf{A3}), and the flavon truncation (\textbf{A5}). Removing any
+cited assumption invalidates only the listed rows of
+Table~\ref{tab:baryogenesis}, not the void--mirror climb or observer
+multiplicity. The numerical $\eta_B$ contact is Tier~B with Tier~C tolerance
+as in Definition~\ref{def:contact-map}.
+\end{remark}

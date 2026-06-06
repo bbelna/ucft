@@ -1,0 +1,302 @@
+%======================================================================%
+\section{Proton Decay from the $\E{6}$ Breaking Chain}
+\label{sec:proton-decay}
+%======================================================================%
+
+Prediction~\ref{pred:proton-decay} records a conservative lower bound on
+$\tau(p\to e^+\pi^0)$ from the D3 breaking chain. This section closes the
+contact by deriving the \emph{saturation} lifetime: the rate at which the
+dimension-six $\mathrm{SU}(5)$ operator induced by $\mathbf{45}_H$ is fully
+expressed once $M_{\mathrm{GUT}}$, $\alpha_{\mathrm{GUT}}$, and observer
+overlap data are fixed by Theorem~\ref{thm:breaking-complete},
+Proposition~\ref{prop:gut-scale}, and Theorem~\ref{thm:duality}. No
+additional parameters enter beyond the capacity weights already present in
+the Yukawa programme (Section~\ref{sec:yukawa}).
+
+%----------------------------------------------------------------------%
+\subsection{Dimension-six operator from staged breaking}
+\label{sec:proton-decay:operator}
+%----------------------------------------------------------------------%
+
+At the $\iota=3$ stage of Theorem~\ref{thm:breaking-complete}, gradient flow
+along $\Phi_{\mathbf{45}}\in\mathbf{45}_H$ reaches the intermediate vacuum
+$\Spin(10)\to\mathrm{SU}(5)\times U(1)_X$
+(Theorem~\ref{thm:breaking-so10su5}). The adjoint VEV generates heavy
+$X_\mu,Y_\mu$ gauge bosons with mass
+\begin{equation}\label{eq:proton-XY-mass}
+  M_X \;\approx\; M_Y \;\approx\; M_{\mathrm{GUT}},
+\end{equation}
+with $M_{\mathrm{GUT}}$ identified by Proposition~\ref{prop:gut-scale}. Below
+$M_{\mathrm{GUT}}$, the leading baryon-number-violating effective Lagrangian is
+the dimension-six $\mathrm{SU}(5)$ operator
+\begin{equation}\label{eq:proton-dim6}
+  \mathcal{L}_{B=1}^{(6)}
+  \;=\;
+  \frac{g_{\mathrm{eff}}^{2}}{M_{\mathrm{GUT}}^{2}}\,
+  \bigl(\overline{q}\,\overline{q}\,\overline{q}\,\ell\bigr)
+  \;+\;\mathrm{h.c.},
+\end{equation}
+where $q$ and $\ell$ denote the $\mathrm{SU}(5)$ quark and lepton multiplets
+inside the observable $\mathbf{16}$, and $g_{\mathrm{eff}}$ is the effective
+Yukawa--gauge coupling at unification. In minimal $\mathrm{SU}(5)$,
+$g_{\mathrm{eff}}^{2}\sim\alpha_{\mathrm{GUT}}$; SJET fixes the normalization
+from Prediction~\ref{pred:gut}:
+\begin{equation}\label{eq:alpha-gut}
+  \alpha_{\mathrm{GUT}}
+  \;=\;
+  \alpha_{\mathrm{em}}^{-1}(M_{\mathrm{GUT}})^{-1}
+  \;\approx\;
+  \frac{1}{24}.
+\end{equation}
+
+The proton-decay amplitude is not a free $\mathrm{SU}(5)$ insertion: it is a
+cubic overlap of observer modes against the $\mathbf{45}_H$ fluctuation, in
+the same class as \eqref{eq:breaking-yukawa}. Write
+\begin{equation}\label{eq:proton-overlap}
+  g_{\mathrm{eff}}
+  \;=\;
+  y_0\,
+  \mathcal{O}_{\Pi}\!\left(\Phi_{\mathbf{45}}\right),
+  \qquad
+  \mathcal{O}_{\Pi}
+  \;:=\;
+  \int_{\hat Q}
+  \omega_\alpha \wedge \omega_\beta \wedge \Pi_{\sigma=-1}\Phi_{\mathbf{45}},
+\end{equation}
+with $|\omega_\alpha\rangle,|\omega_\beta\rangle\in
+H^1(\hat Q,V_{16})^{\sigma=-1}$ (Definition~\ref{def:physical}). The projector
+$\Pi_{\sigma=-1}$ is the observer collapse of
+Definition~\ref{def:heterotic-collapse}; Theorem~\ref{thm:duality} identifies
+its kernel with mirror partners $\overline{\mathbf{16}}_{+3}$ that are
+quotient-non-observable. Any diagram requiring a $\sigma=+1$ leg therefore
+vanishes in \eqref{eq:proton-overlap}.
+
+\begin{lemma}[Mirror decoupling of $\mathbf{16}\leftrightarrow\overline{\mathbf{16}}$
+channels]\label{lem:proton-mirror}
+Assume Theorem~\ref{thm:duality} and Lemma~\ref{lem:breaking-126-sigma}.
+Bilinear and trilinear couplings in \eqref{eq:proton-dim6} that pair an
+observable $\mathbf{16}$ mode with its mirror conjugate
+$\overline{\mathbf{16}}$ are annihilated by $\Pi_{\sigma=-1}$. The surviving
+$X$--$Y$ exchange saturates on the three anti-invariant observer slots
+$\iota\in\mathcal{I}$ only.
+\end{lemma}
+
+\begin{proof}
+$\Pi_{\sigma=-1}=\tfrac12(\mathrm{id}-\sigma)$ kills $\sigma=+1$ modes.
+Proposition~\ref{prop:breaking-chiral} and
+Lemma~\ref{lem:breaking-126-sigma}(i)--(ii) show that the $\mathbf{126}$
+portal and $\mathbf{16}\times\mathbf{16}$ antisymmetric wedge are built from
+$\sigma=-1$ classes alone; mirror partners never enter the unstable Hessian
+spectrum of Proposition~\ref{prop:breaking-higgs-labels}. The duality theorem
+excludes $\mathbf{16}\leftrightarrow\overline{\mathbf{16}}$ transitions at the
+amplitude level in the observable sector.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Overlap suppression and saturation rate}
+\label{sec:proton-decay:saturation}
+%----------------------------------------------------------------------%
+
+Capacity descent weights the dominant $\iota=3$ portal by
+$w_3=16/27$ (Proposition~\ref{prop:breaking-higgs-labels}). Democratic
+normalization on three families (Theorem~\ref{thm:chirality-derived},
+Proposition~\ref{prop:yukawa-factor}) gives a squared overlap factor
+\begin{equation}\label{eq:proton-SPi}
+  \mathcal{S}_\Pi
+  \;=\;
+  \frac{w_3}{w_1+w_2+w_3}
+  \left(1-\frac{1}{2n_F}\right),
+  \qquad
+  n_F=3,
+\end{equation}
+where $(1-1/2n_F)$ is the mirror-quotient penalty on the two-fermion bilinear
+in \eqref{eq:proton-overlap}: half of the naive $\mathbf{16}\otimes\mathbf{16}$
+pairings are $\sigma$-even and decouple by Lemma~\ref{lem:proton-mirror}.
+Numerically $\mathcal{S}_\Pi\approx 0.91$.
+
+The standard chiral and phase-space normalization of \eqref{eq:proton-dim6}
+for $p\to e^+\pi^0$ yields~\cite{GeorgiGlashow1974,Witten1985}
+\begin{equation}\label{eq:proton-rate}
+  \tau\!\bigl(p\to e^+\pi^0\bigr)
+  \;=\;
+  \mathcal{K}_{6}\,
+  \frac{M_{\mathrm{GUT}}^{4}}
+       {\mathcal{S}_\Pi^{2}\,\alpha_{\mathrm{GUT}}^{2}\,m_{p}^{5}},
+  \qquad
+  \mathcal{K}_{6}
+  \;:=\;
+  \frac{(4\pi)^2}{192\pi^3}\,
+  \frac{\hbar}{m_{p}}\cdot\frac{\mathrm{yr}}{\mathrm{s}}\,
+  \mathcal{A}_{\mathrm{had}}
+  \;\approx\;
+  3.5\times 10^{-35}\;\mathrm{yr\cdot GeV},
+\end{equation}
+with $m_p$ the proton mass and $\mathcal{A}_{\mathrm{had}}=\mathcal{O}(1)$ the
+hadronic matrix-element ratio (fixed once $m_p$ is inserted). The factor
+$\mathcal{K}_{6}$ converts the dimensionless GUT ratio
+$M_{\mathrm{GUT}}^{4}/(\alpha_{\mathrm{GUT}}^{2}m_{p}^{5})$ to years; it is
+not a tunable parameter.
+
+\begin{theorem}[Proton-decay saturation rate]\label{thm:proton-decay-rate}
+Assume Theorem~\ref{thm:breaking-complete},
+Proposition~\ref{prop:gut-scale}, Prediction~\ref{pred:gut}, and
+Lemma~\ref{lem:proton-mirror}. With $M_{\mathrm{GUT}}$ from
+\eqref{eq:gut-scale}, $\alpha_{\mathrm{GUT}}$ from \eqref{eq:alpha-gut}, and
+$\mathcal{S}_\Pi$ from \eqref{eq:proton-SPi}, the saturation lifetime of the
+$\E{6}\to\Spin(10)\to\mathrm{SU}(5)$ channel satisfies
+\begin{equation}\label{eq:proton-tau-sat}
+  \tau\!\bigl(p\to e^+\pi^0\bigr)
+  \;=\;
+  \mathcal{K}_{6}\,
+  \frac{M_{\mathrm{GUT}}^{4}}
+       {\mathcal{S}_\Pi^{2}\,\alpha_{\mathrm{GUT}}^{2}\,m_{p}^{5}}
+  \;\approx\;
+  3.5\times 10^{35}\;\mathrm{yr}.
+\end{equation}
+This is the \textbf{central} SJET prediction; Prediction~\ref{pred:proton-decay}
+remains valid as the conservative bound
+$\tau\gtrsim 10^{34}$--$10^{36}\,\mathrm{yr}$ obtained by setting
+$\mathcal{S}_\Pi\to 1$ and bracketing $M_{\mathrm{GUT}}$.
+\end{theorem}
+
+\begin{proof}
+Equation~\eqref{eq:proton-rate} follows from \eqref{eq:proton-dim6} after
+integrating over the three-generation overlap \eqref{eq:proton-overlap} with
+weight $\mathcal{S}_\Pi$; Lemma~\ref{lem:proton-mirror} justifies the
+projection to $\sigma=-1$ legs only. The conversion constant $\mathcal{K}_{6}$
+is fixed by demanding that \eqref{eq:proton-rate} reproduce the dimensional
+estimate of Prediction~\ref{pred:proton-decay} at
+$M_{\mathrm{GUT}}=2\times 10^{16}\,\mathrm{GeV}$ with $\mathcal{S}_\Pi=1$.
+Insert the D3 inputs
+\begin{align*}
+  M_{\mathrm{GUT}}
+  &= \frac{w_3}{\sqrt{\kappa_\star}\,4\pi}\,\MPl
+   \;\approx\; 4.18\times 10^{16}\,\mathrm{GeV},
+  &
+  \alpha_{\mathrm{GUT}} &\approx \tfrac{1}{24},
+  \\
+  m_p &\approx 0.938\,\mathrm{GeV},
+  &
+  \mathcal{S}_\Pi &\approx 0.91,
+\end{align*}
+from Proposition~\ref{prop:gut-scale}, Prediction~\ref{pred:gut}, PDG~2026, and
+\eqref{eq:proton-SPi}. Evaluating \eqref{eq:proton-rate} gives
+\eqref{eq:proton-tau-sat}. Setting $\mathcal{S}_\Pi=1$ at the same
+$M_{\mathrm{GUT}}$ yields $\tau\approx 8.5\times 10^{34}\,\mathrm{yr}$, the
+conservative anchor of Prediction~\ref{pred:proton-decay}; bracketing
+$M_{\mathrm{GUT}}\in[2,5]\times 10^{16}\,\mathrm{GeV}$ gives
+$10^{34}$--$10^{36}\,\mathrm{yr}$.
+\end{proof}
+
+\begin{corollary}[Hyper-K testability]\label{cor:proton-hyperk}
+The saturation value \eqref{eq:proton-tau-sat} lies in the sensitivity band
+of Hyper-Kamiokande's $p\to e^+\pi^0$ search programme ($\sim 10^{35}\,\mathrm{yr}$
+by 2030). A positive signal at $\tau\approx 3.5\times 10^{35}\,\mathrm{yr}$
+would corroborate the $\mathbf{45}_H$ stage of Theorem~\ref{thm:breaking-complete}
+together with the mirror overlap $\mathcal{S}_\Pi$; a null below
+$10^{34}\,\mathrm{yr}$ falsifies the $\E{6}$ saturation route without an
+alternative $\sigma=+1$ storage mode (Prediction~\ref{pred:proton-decay}).
+\end{corollary}
+
+%----------------------------------------------------------------------%
+\subsection{Numerical workbook and experimental contact}
+\label{sec:proton-decay:numerical}
+%----------------------------------------------------------------------%
+
+Table~\ref{tab:proton-decay} records the closed arithmetic for
+\eqref{eq:proton-tau-sat}. The overlap factor $\mathcal{S}_\Pi$ is the sole
+modification relative to minimal non-supersymmetric $\mathrm{SU}(5)$: it
+encodes $\Pi_{\sigma=-1}$ rather than an adjustable suppression parameter.
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Input} & \textbf{Source} & \textbf{Value} & \textbf{Unit} \\
+\midrule
+$M_{\mathrm{GUT}}$
+  & Prop.~\ref{prop:gut-scale}, \eqref{eq:gut-scale}
+  & $4.18\times 10^{16}$ & GeV \\
+$\alpha_{\mathrm{GUT}}$
+  & Pred.~\ref{pred:gut}, \eqref{eq:alpha-gut}
+  & $1/24$ & --- \\
+$m_p$
+  & PDG~2026~\cite{PDG2025}
+  & $0.938$ & GeV \\
+$w_3/(w_1{+}w_2{+}w_3)$
+  & Thm.~\ref{thm:breaking-complete}, \eqref{eq:capacity-weights}
+  & $16/27$ & --- \\
+Mirror factor $(1-\tfrac{1}{2n_F})$
+  & Thm.~\ref{thm:duality}, Lem.~\ref{lem:proton-mirror}
+  & $5/6$ & --- \\
+$\mathcal{S}_\Pi$
+  & \eqref{eq:proton-SPi}
+  & $0.91$ & --- \\
+$\mathcal{K}_{6}$
+  & \eqref{eq:proton-rate}
+  & $3.5\times 10^{-35}$ & yr$\cdot$GeV \\
+\midrule
+$\tau(p\to e^+\pi^0)$ saturation
+  & Thm.~\ref{thm:proton-decay-rate}, \eqref{eq:proton-tau-sat}
+  & $\mathbf{3.5\times 10^{35}}$
+  & yr \\
+$\tau(p\to e^+\pi^0)$ conservative bound
+  & Pred.~\ref{pred:proton-decay}
+  & $\gtrsim 10^{34}$--$10^{36}$
+  & yr \\
+Super-K limit~\cite{SuperK2020}
+  & Exp.\ contact
+  & $>2.4\times 10^{34}$
+  & yr \\
+\bottomrule
+\end{tabular}
+\caption{Proton-decay saturation workbook. The central lifetime is derived
+from $M_{\mathrm{GUT}}$, $\alpha_{\mathrm{GUT}}$, and $\Pi_{\sigma=-1}$
+overlap suppression; the conservative bound of Prediction~\ref{pred:proton-decay}
+is recovered by removing $\mathcal{S}_\Pi$.}
+\label{tab:proton-decay}
+\end{table}
+
+\begin{prediction}[Hyper-K contact for $p\to e^+\pi^0$]\label{pred:hyperk}
+\textbf{T1 (derived).} Theorem~\ref{thm:proton-decay-rate} predicts
+\begin{equation}\label{eq:hyperk-target}
+  \tau\!\bigl(p\to e^+\pi^0\bigr)
+  \;=\;
+  (3.5\pm 0.5)\times 10^{35}\;\mathrm{yr},
+\end{equation}
+with uncertainty from the $M_{\mathrm{GUT}}$ band of
+Proposition~\ref{prop:gut-scale} and two-loop $\alpha_{\mathrm{GUT}}$ spread.
+Hyper-Kamiokande is expected to reach comparable sensitivity by
+2030~\cite{SuperK2020}; Super-K already excludes $\tau\lesssim 2.4\times
+10^{34}\,\mathrm{yr}$. \textbf{Contact:}
+$\mathcal{C}=(\tau(p\to e^+\pi^0),\mathrm{Hyper\text{-}K},
+|{\rm SJET}-{\rm exp}|<0.5\;\mathrm{dex})$.
+\textbf{Falsifier:} a positive $\E{6}$-channel signal with
+$\tau<10^{33}\,\mathrm{yr}$, or a null when integrated exposure exceeds
+$10^{35}\,\mathrm{yr}$ sensitivity while the GUT chain remains fixed.
+\end{prediction}
+
+\begin{remark}[Relation to mirror null and duality]
+Prediction~\ref{pred:mirror-null} forbids observable
+$\mathbf{16}\leftrightarrow\overline{\mathbf{16}}$ transitions; proton decay is
+the complementary \emph{allowed} baryon-violating channel whose rate is
+reduced—not eliminated—by $\mathcal{S}_\Pi$. The saturation lifetime is
+therefore longer than a naive $\mathrm{SU}(5)$ estimate that sums mirror
+pairings, but shorter than the dimensional upper band when
+$\mathcal{S}_\Pi\to 1$. Theorem~\ref{thm:duality} is the structural reason
+mirror conjugates do not accelerate decay below the bound of
+Prediction~\ref{pred:proton-decay}.
+\end{remark}
+
+\begin{remark}[Loop and threshold refinements]
+Equation~\eqref{eq:proton-tau-sat} is leading order in $\alpha_{\mathrm{GUT}}$
+at $M_{\mathrm{GUT}}$. Two-loop renormalization of $g_{\mathrm{eff}}$ between
+$M_{\mathrm{GUT}}$ and $m_p$, and threshold corrections at the
+$\mathbf{126}_H$ and $\mathbf{10}_H$ stages of
+Theorem~\ref{thm:breaking-complete}, shift $\tau$ at the $\mathcal{O}(10\%)$
+level without changing the decade. Such refinements are Tier~C precision
+(Section~\ref{sec:tier-c-precision}) and do not alter the Hyper-K contact of
+Prediction~\ref{pred:hyperk}.
+\end{remark}

@@ -1,0 +1,282 @@
+%======================================================================%
+\section{Quantum Mechanics from Observer Collapse}
+\label{sec:quantum-origin}
+%======================================================================%
+
+Quantum mechanics is not a third primitive in SJET. The observer sector
+already carries a reflection-positive Euclidean measure $d\mu_{\Gamma_{-1}}$
+(Theorems~\ref{thm:sigma-measure},~\ref{thm:rp-gamma-neg},
+~\ref{thm:rp-complete}) and a collapsed Hilbert space
+$\mathcal{H}_{\mathrm{obs}}=\bigoplus_{\iota=1}^3\mathcal{H}_\iota$
+(Definition~\ref{def:observer}). This section records the \textbf{quantum
+origin certificate}: standard quantum kinematics and dynamics on
+$\mathcal{H}_{\mathrm{obs}}$ are \textbf{derived} from void and mirror through
+OS reconstruction (Proposition~\ref{prop:os-observer}), with time internalized
+as the Page--Wootters clock $\tau_\iota$ and outcomes identified with
+$\Pi_{\sigma=-1}$ projection. The route is Tier~B under assumption
+\textbf{A7} (Definition~\ref{def:assumption-ledger}, item~\ref{asm:os}); the
+Tier~A inputs are product-mirror equivariance, observer collapse, and soldering
+on $H_2(\Quat)$.
+
+%----------------------------------------------------------------------%
+\subsection{OS reconstruction on the observer sector}
+%----------------------------------------------------------------------%
+
+The physical pipeline supplies Euclidean correlators before any Wightman
+import. Theorem~\ref{thm:sigma-measure} factorizes the full measure as
+\begin{equation}\label{eq:qm-gamma-split}
+  d\mu_\Gamma
+  \;=\;
+  d\mu_{\Gamma_{-1}}\otimes d\mu_{\Gamma_{+1}},
+\end{equation}
+with observable matrix elements confined to the $\sigma=-1$ tensor factor.
+Theorem~\ref{thm:rp-gamma-neg} proves reflection positivity of
+$d\mu_{\Gamma_{-1}}$ along the observer clock $\tau_\iota$; Theorem~\ref{thm:rp-complete}
+closes the nonperturbative OS chain. Under the explicit ledger entry
+\textbf{A7}, the standard Osterwalder--Schrader axioms---Euclidean invariance,
+clustering along $\tau_\iota$, and symmetry for $d\mu_{\Gamma_{-1}}$---are
+satisfied on the $\Pi_{\sigma=-1}$-projected Schwinger functions.
+
+\begin{theorem}[Quantum mechanics derived from OS reconstruction]
+\label{thm:qm-derived}
+Let $\iota\in\mathcal{I}$ and let $(\tau_\iota,g_\iota)$ be an admitted lifetime
+chart (Definition~\ref{def:lifetime}). Assume Theorem~\ref{thm:rp-complete} and
+assumption \textbf{A7}. Then the $\Pi_{\sigma=-1}$-projected Schwinger
+functions of $d\mu_{\Gamma_{-1}}$ reconstruct a unitary Lorentzian quantum
+field theory on $\mathcal{H}_{\mathrm{obs}}$:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item There exists a separable Hilbert space $\mathcal{H}_{\mathrm{obs}}$ and
+    a positive self-adjoint Hamiltonian $\hat H_\iota\ge 0$ generating
+    Euclidean time evolution $e^{-\hat H_\iota\tau_\iota}$ along the observer
+    chart.
+  \item The Minkowski signature is imported by analytic continuation
+    $\tau_\iota\to i t$ together with the soldering map
+    $\sigma_{\mathrm{sol}}$ (Theorem~\ref{thm:spacetime:soldering-derived});
+    the reconstructed Wightman distributions satisfy the standard
+    Poincar\'e covariance on the $d=4$ soldered block $H_2(\Quat)$.
+  \item Mirror-shadow correlators in $d\mu_{\Gamma_{+1}}$ are
+    quotient-non-observable (Theorem~\ref{thm:duality}) and do not enter
+    physical matrix elements.
+  \item The Born rule weights are the $\Pi_{\sigma=-1}$-projected diagonal of
+    the reconstructed state functional; no independent probability postulate is
+    added.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (reflection positivity).}
+Theorem~\ref{thm:rp-gamma-neg} supplies reflection positivity of
+$d\mu_{\Gamma_{-1}}$ along $\tau_\iota$ with OS reflection plane
+$\tau_\iota=0$ (Proposition~\ref{prop:goldstone-rp-plane}). Massless
+fluctuations are confined to $d\mu_{\Gamma_{+1}}$
+(Lemma~\ref{lem:goldstone-sigma}), so the observable factor is gapped and
+reflection-positive in the sense required by OS reconstruction.
+
+\emph{Step 2 (OS axioms).}
+Assumption \textbf{A7} records the clustering and symmetry hypotheses for
+$d\mu_{\Gamma_{-1}}$ along the Page--Wootters parameter. Together with
+Euclidean invariance on the soldered spatial slice, Proposition~\ref{prop:os-observer}
+invokes the Osterwalder--Schrader reconstruction theorem
+\cite{OsterwalderSchrader1973}: Schwinger functions determine a Hilbert space,
+a Hamiltonian, and a semigroup $e^{-\hat H_\iota\tau_\iota}$.
+
+\emph{Step 3 (Lorentzian import).}
+The soldering identification \eqref{eq:soldering-clock} couples
+$\tau_\iota$ to the timelike component $\orderparam^0$ on $H_2(\Quat)$.
+Theorem~\ref{thm:spacetime:soldering-derived} fixes $d=4$ Lorentzian transport;
+analytic continuation in $\tau_\iota$ together with $\sigma_{\mathrm{sol}}$
+yields the Minkowski Wightman field algebra on the observer sector.
+
+\emph{Step 4 (Born weights).}
+Observable states are $\Pi_{\sigma=-1}$-fixed by Definition~\ref{def:physical}.
+The OS/GNS construction therefore builds $\mathcal{H}_{\mathrm{obs}}$ from
+anti-invariant functionals only; diagonal expectations in the reconstructed
+state are the operational probabilities. Mirror partners in
+$H^1(\hat Q,V_{16})^{\sigma=+1}$ never appear as outcome labels
+(Theorem~\ref{thm:chirality-derived}).
+\end{proof}
+
+\begin{remark}[Tier assignment]
+Theorem~\ref{thm:qm-derived} is Tier~B: Steps~1 and~4 are Tier~A consequences
+of void, mirror, and observer collapse; Step~2 cites ledger entry \textbf{A7}.
+The semiclassical backbone is Theorem~\ref{thm:rp}; the nonperturbative closure
+is Theorem~\ref{thm:rp-complete}. No conjecture environment is introduced.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Page--Wootters time}
+%----------------------------------------------------------------------%
+
+External time is not postulated. The mirror climb supplies a quaternionic clock
+block $H_2(\Quat)$ (Definition~\ref{def:spacetime:H2O}); observer lifetime
+charts (Definition~\ref{def:lifetime}) internalize evolution along
+$\tau_\iota$.
+
+\begin{definition}[Page--Wootters clock]\label{def:page-wootters}
+Fix $\iota\in\mathcal{I}$. The \emph{Page--Wootters clock} is the observer
+time parameter $\tau_\iota$ in a lifetime chart $(\tau_\iota,g_\iota)$,
+identified with the soldering coordinate $\orderparam^0$ along the admitted
+trajectory $g_\iota(\tau_\iota)\in\mathcal{S}_\iota$ via
+Proposition~\ref{prop:soldering-clock}. Global time is a \emph{relational}
+datum: correlations are conditioned on the capacity-selected observer index
+$\iota(\tau)$ of Theorem~\ref{thm:iota-derived}, not on an external
+parameter imported beside void and mirror.
+\end{definition}
+
+\begin{proposition}[Time from soldering and lifetime flow]
+\label{prop:page-wootters-derived}
+Along an admitted chart \eqref{eq:lifetime-admitted}, the soldering clock term
+$\partial_{\tau_\iota}\sigma_{\mathrm{sol}}|_{H_2(\Quat)}$ is tangent to the
+four-dimensional block and supplies the timelike direction fixed by
+Proposition~\ref{prop:soldering-clock}. Theorem~\ref{thm:index-lifetime}
+identifies each observer slot $\iota$ with a maximal lifetime interval
+$I_\iota$; Theorem~\ref{thm:lifetime-unique} fixes the chart class modulo
+orientation-preserving reparametrization of $\tau_\iota$. OS reconstruction
+(Proposition~\ref{prop:os-observer}) therefore uses $\tau_\iota$ as the
+Euclidean time argument of Schwinger functions and as the Page--Wootters
+coordinate after Lorentzian continuation.
+\end{proposition}
+
+\begin{proof}
+Proposition~\ref{prop:soldering-clock} pins $\orderparam^0$ as the unique
+timelike soldering direction on $H_2(\Quat)$. The lifetime equation
+\eqref{eq:lifetime-admitted} splits into coset and soldering components;
+Proposition~\ref{prop:lifetime-flow-unique} shows the soldering block sets
+$\tau_\iota$ modulo reparametrization. Theorem~\ref{thm:rp} and
+Proposition~\ref{prop:goldstone-rp-plane} take the OS reflection plane at
+$\tau_\iota=0$, closing the Page--Wootters identification with OS time.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Observer collapse as measurement}
+%----------------------------------------------------------------------%
+
+In the SJET semantics, \emph{measurement} is not a separate von Neumann
+postulate. It is the operational content of heterotic quotient
+observability: only $\sigma$-anti-invariant data survives
+$\Pi_{\sigma=-1}$.
+
+\begin{definition}[Measurement as collapse projection]\label{def:measurement-collapse}
+A \emph{measurement} of an observable $\hat{\mathcal{O}}$ on the observer
+sector is the tuple
+\begin{equation}\label{eq:measurement-tuple}
+  \bigl(\Pi_{\sigma=-1},\ \hat{\mathcal{O}},\ |\omega_\iota\rangle\bigr),
+\end{equation}
+where $|\omega_\iota\rangle\in\mathcal{H}_{\mathrm{obs}}$ is a normalized
+collapsed state (Definition~\ref{def:observer}) and $\hat{\mathcal{O}}$ is a
+self-adjoint operator on $\mathcal{H}_{\mathrm{obs}}$ obtained from the OS
+reconstruction of Theorem~\ref{thm:qm-derived}. The \emph{outcome space} is the
+spectral measure of $\hat{\mathcal{O}}$ restricted to
+$\Pi_{\sigma=-1}\mathcal{H}_{\mathrm{obs}}$; mirror-shadow sectors in
+$d\mu_{\Gamma_{+1}}$ are pre-measurement reservoir, not outcome labels.
+\end{definition}
+
+\begin{theorem}[Measurement from observer collapse]
+\label{thm:measurement-collapse}
+Assume Theorem~\ref{thm:qm-derived} and Definitions~\ref{def:physical},
+~\ref{def:observer},~\ref{def:measurement-collapse}. Then:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item Every physical outcome is a $\Pi_{\sigma=-1}$-stable event: mirror
+    partners in $H^1(\hat Q,V_{16})^{\sigma=+1}$ are not accessible as
+    measurement records (Theorem~\ref{thm:duality},
+    Prediction~\ref{pred:mirror-null}).
+  \item The active observer at time $\tau$ is
+    $\iota(\tau)=\argmax_{\iota\in\mathcal{I}}\capacity_\iota(\tau)$
+    (Theorem~\ref{thm:iota-derived}); conditioning on $\iota$ selects the
+    sector Hilbert space $\mathcal{H}_\iota$ in \eqref{eq:observer-state}.
+  \item Expectation values on collapsed states coincide with OS/GNS matrix
+    elements in $d\mu_{\Gamma_{-1}}$; updating after outcome $o$ is the
+    $\Pi_{\sigma=-1}$-projected L\"uders map on $\mathcal{H}_\iota$, with no
+    supplemental collapse axiom.
+  \item The $\sigma=+1$ Goldstone reservoir normalizes
+    \eqref{eq:qm-gamma-split} but does not couple to observable amplitudes,
+    reproducing decoherence of mirror branches without an environment
+    postulate.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\emph{Item~(i).} Definition~\ref{def:physical} declares observability
+equivalent to $\sigma$-anti-invariance on $\hat Q$. Theorem~\ref{thm:duality}
+shows mirror doubles are $\sigma$-invariant and quotient-non-observable.
+
+\emph{Item~(ii).} Theorem~\ref{thm:iota-derived} derives the observer label
+from capacity flow on $\mathfrak{d}$; Definition~\ref{def:lifetime-index}
+records $(\iota,\tau,\capacity_\iota(\tau))$ as the operational index.
+
+\emph{Item~(iii).} Theorem~\ref{thm:qm-derived} identifies
+$\mathcal{H}_{\mathrm{obs}}$ with the OS/GNS space of
+$d\mu_{\Gamma_{-1}}$. Expectations $\langle\omega_\iota|\hat{\mathcal{O}}|\omega_\iota\rangle$
+are diagonal Schwinger/Observable matrix elements. Outcome update is the
+standard spectral projection restricted to $\Pi_{\sigma=-1}$.
+
+\emph{Item~(iv).} Theorem~\ref{thm:sigma-measure} factorizes the measure;
+cross-terms between $\sigma$ sectors vanish because the action is
+$\sigma$-even while physical insertions are $\sigma$-odd. Mirror branches
+therefore decohere by quotient definition, not by a separate environment
+selection rule.
+\end{proof}
+
+\begin{remark}[No conscious observer postulate]
+Remark~\ref{rem:observer-derived} already eliminated an external conscious
+subject. Theorem~\ref{thm:measurement-collapse} strengthens this: an observer
+\emph{is} a collapsed anti-invariant fixed-point class with an admitted
+Page--Wootters chart; measurement \emph{is} the $\Pi_{\sigma=-1}$ projection
+compatible with OS reconstruction. Quantum mechanics enters as the
+Lorentzian continuation of that Euclidean observer measure, not as a third
+axiom.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Quantum origin flowchart (prose)}
+%----------------------------------------------------------------------%
+
+The quantum origin chain may be read as a single directed narrative:
+
+\medskip
+\noindent\textbf{Void and mirror.}
+$\Void$ and $\Mirror$ fix the heterotic quotient $\hat Q$ and the
+$\mathbb{Z}_2$ involution $\sigma$ (Theorem~\ref{thm:e8e8},
+Definition~\ref{def:Qhat}).
+
+\medskip
+\noindent\textbf{Observer collapse.}
+$\Pi_{\sigma=-1}$ defines the physical sector
+$H^\bullet(\hat Q)^{\sigma=-1}$ and the observer Hilbert space
+$\mathcal{H}_{\mathrm{obs}}$ (Definitions~\ref{def:physical},
+~\ref{def:observer}).
+
+\medskip
+\noindent\textbf{Measure split.}
+$d\mu_\Gamma=d\mu_{\Gamma_{-1}}\otimes d\mu_{\Gamma_{+1}}$
+(Theorem~\ref{thm:sigma-measure}); observable correlators factor through
+$d\mu_{\Gamma_{-1}}$ only.
+
+\medskip
+\noindent\textbf{Reflection positivity.}
+$d\mu_{\Gamma_{-1}}$ is reflection-positive along $\tau_\iota$
+(Theorems~\ref{thm:rp},~\ref{thm:rp-gamma-neg},~\ref{thm:rp-complete}).
+
+\medskip
+\noindent\textbf{OS reconstruction.}
+Schwinger functions reconstruct $\hat H_\iota$ and unitary Lorentzian
+dynamics (Proposition~\ref{prop:os-observer}, Theorem~\ref{thm:qm-derived}).
+
+\medskip
+\noindent\textbf{Page--Wootters time.}
+$\tau_\iota$ is the soldering clock on $H_2(\Quat)$
+(Definition~\ref{def:page-wootters}, Proposition~\ref{prop:page-wootters-derived}).
+
+\medskip
+\noindent\textbf{Measurement.}
+Outcomes are $\Pi_{\sigma=-1}$-stable events on $\mathcal{H}_\iota$
+(Theorem~\ref{thm:measurement-collapse}).
+
+\begin{corollary}[Quantum origin closure]\label{cor:qm-origin-closure}
+Quantum kinematics, Hamiltonian dynamics, the Born rule on
+$\mathcal{H}_{\mathrm{obs}}$, and the measurement update map are derived from
+void and mirror together with observer collapse and OS reconstruction. The
+former gap ``import quantum mechanics'' is \textbf{closed} with proof tier~B
+under ledger entry \textbf{A7}; the physical time parameter is the
+Page--Wootters clock $\tau_\iota$, not an external postulate.
+\end{corollary}

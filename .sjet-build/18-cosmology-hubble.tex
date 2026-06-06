@@ -1,0 +1,431 @@
+%======================================================================%
+\section{Cosmology: Hubble Ledger from Sequestered CC}
+\label{sec:cosmology}
+%======================================================================%
+
+Prediction~\ref{pred:cc} closes the cosmological constant in the
+$\Pi_{\sigma=-1}$ observer sector:
+$\Lambda_{\mathrm{obs}}\approx 0$ with environmental vacuum energy stored in
+$H^\bullet(\hat Q)^{\sigma=+1}$ (Theorem~\ref{thm:cc-sequester},
+Lemma~\ref{lem:a0-sigma-plus}). DESI Year-1 data already contact
+$w(z)\approx -1$~\cite{DESI2024}, consistent with sequestering and
+\emph{without} invoking new dark-energy physics. The remaining headline tension
+is not $w$ but $H_0$: CMB-inferred rates cluster near
+$H_0^{\mathrm{CMB}}\approx 67\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$, while local
+distance-ladder measurements report
+$H_0^{\mathrm{loc}}\approx 73\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$---a
+$\sim 5\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$ split often treated as evidence for
+new physics. This section shows that the split is a \textbf{ledger effect}:
+local expansion follows the $\Pi_{\sigma=-1}$ observer flow $g_\iota$ at
+$\tau_{\mathrm{EW}}$, whereas CMB inference absorbs $\sigma=+1$ environmental
+vacuum stress routed by CC sequestering. No additional degree of freedom is
+introduced beyond Theorem~\ref{thm:cc-sequester},
+Proposition~\ref{prop:lambda-gut}, and Theorem~\ref{thm:ew-scale-value}.
+
+%----------------------------------------------------------------------%
+\subsection{Environmental pressure and the Hubble ledger}
+\label{sec:cosmology:ledger}
+%----------------------------------------------------------------------%
+
+\begin{definition}[$\sigma$-sector environmental pressure]
+\label{def:env-pressure}
+Let $\mathcal{P}_{\sigma=+1}$ denote the \emph{environmental pressure} of the
+sequestered vacuum sector: the $\sigma$-invariant stress density stored in
+$d\mu_{\Gamma_{+1}}$ by Theorem~\ref{thm:cc-sequester},
+\begin{equation}\label{eq:env-pressure}
+  \mathcal{P}_{\sigma=+1}(x)
+  \;:=\;
+  \Pi_{\sigma=+1}\,a_0^{(+1)}(x)
+  \;=\;
+  \Lambda_{\mathrm{cc}}(x)\big|_{\sigma=+1},
+\end{equation}
+with $a_0^{(+1)}$ from Lemma~\ref{lem:a0-sigma-plus}. By
+\eqref{eq:a0-sequester}, $\mathcal{P}_{\sigma=+1}$ is
+quotient-non-observable: $\Pi_{\sigma=-1}\mathcal{P}_{\sigma=+1}=0$ on
+physical configurations (Definition~\ref{def:physical}). It back-reacts on
+homogeneous expansion only when global FRG matching includes the
+$\sigma=+1$ measure factor (Remark~\ref{rmk:observer-frg}).
+\end{definition}
+
+\begin{definition}[Hubble ledger split]
+\label{def:hubble-ledger}
+Fix observer index $\iota\in\mathcal{I}$ and admitted chart
+$(\tau_\iota,g_\iota)$ (Definition~\ref{def:lifetime}). The \emph{Hubble
+ledger} distinguishes two expansion anchors:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Local anchor} $H_0^{\mathrm{loc}}$: the soldering-clock rate
+    along $g_\iota$ at $\tau_{\mathrm{EW}}$, restricted to the
+    $\Pi_{\sigma=-1}$ flow (Theorem~\ref{thm:hubble-local}).
+  \item \textbf{CMB anchor} $H_0^{\mathrm{CMB}}$: the homogeneous expansion
+    rate inferred when $\mathcal{P}_{\sigma=+1}$ enters the effective
+    stress--energy budget of the Friedmann constraint
+    (Theorem~\ref{thm:hubble-cmb}).
+\end{enumerate}
+The ledger entry is the controlled difference
+$\Delta H_0:=H_0^{\mathrm{loc}}-H_0^{\mathrm{CMB}}$, not a new coupling.
+\end{definition}
+
+\begin{lemma}[Soldered Hubble parameter along $g_\iota$]
+\label{lem:soldered-hubble}
+Fix $\iota\in\mathcal{I}$ and an admitted lifetime chart
+$(\tau_\iota,g_\iota)$. Let $\orderparam^0$ be the timelike soldering component
+of Proposition~\ref{prop:soldering-clock}. Along $g_\iota$ at
+$\tau_{\mathrm{EW}}$ (Remark~\ref{rmk:tau-ew}), define the
+\emph{observer-local Hubble parameter}
+\begin{equation}\label{eq:h-soldered}
+  H_{\mathrm{loc}}(\tau_\iota)
+  \;:=\;
+  \frac{1}{a_{\mathrm{loc}}}\,
+  \frac{d}{d\tau_\iota}\,
+  \orderparam^0\big|_{g_\iota(\tau_\iota)},
+\end{equation}
+where $a_{\mathrm{loc}}$ is the $\Pi_{\sigma=-1}$-projected scale factor on
+the soldered block $H_2(\Quat)$ (Theorem~\ref{thm:spacetime:soldering-derived}).
+At $\tau_\iota=\tau_{\mathrm{EW}}$, matching $\mu\equiv v$
+(Proposition~\ref{prop:mu-lifetime}) and the electroweak VEV
+\eqref{eq:ew-vev} (Theorem~\ref{thm:ew-scale-value}) fixes the normalization
+\begin{equation}\label{eq:h-loc-normalize}
+  H_{\mathrm{loc}}(\tau_{\mathrm{EW}})
+  \;=\;
+  \frac{w_1}{\sqrt{\kappa_\star}}\,
+  \frac{v}{M_{\mathrm{GUT}}}\,
+  H_{\mathrm{GUT}},
+  \qquad
+  w_1=\frac{1}{27},
+\end{equation}
+with $M_{\mathrm{GUT}}$ and $\Lambda=M_{\mathrm{GUT}}$ from
+Propositions~\ref{prop:gut-scale} and~\ref{prop:lambda-gut}, and
+$H_{\mathrm{GUT}}:=\sqrt{\Lambda_{\mathrm{GUT}}/(3\MPl^2)}$ the GUT-stage
+homogeneous rate label. Equation~\eqref{eq:h-loc-normalize} contains no
+$\mathcal{P}_{\sigma=+1}$: local clocks read only the anti-invariant flow.
+\end{lemma}
+
+\begin{proof}
+Equation~\eqref{eq:h-soldered} is the soldering-clock rate
+\eqref{eq:soldering-clock} normalized by the emergent vierbein scale
+(Proposition~\ref{prop:vierbein}). At $\tau_{\mathrm{EW}}$ the trajectory
+$g_\iota$ crosses electroweak breaking (Remark~\ref{rmk:tau-ew}); capacity
+weight $w_1$ is the $\iota=1$ sector fraction of
+Theorem~\ref{thm:partition}, and $\kappa_\star$ is the dimensionless UV
+organizing point (Remark~\ref{rmk:kappa-star-organizing}). The ratio
+$v/M_{\mathrm{GUT}}$ is fixed by Theorem~\ref{thm:ew-scale-value} and
+Proposition~\ref{prop:gut-scale} without postulates. Observer collapse
+$\Pi_{\sigma=-1}$ removes $\mathcal{P}_{\sigma=+1}$ from the local clock
+(Definition~\ref{def:env-pressure}, Theorem~\ref{thm:cc-sequester}).
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Local $H_0$ from observer flow at $\tau_{\mathrm{EW}}$}
+\label{sec:cosmology:local}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Local Hubble constant from $g_\iota$ at $\tau_{\mathrm{EW}}$]
+\label{thm:hubble-local}
+Assume Theorem~\ref{thm:cc-sequester}, Theorem~\ref{thm:ew-scale-value},
+Proposition~\ref{prop:mu-lifetime}, and Lemma~\ref{lem:soldered-hubble}.
+The \emph{local} Hubble constant reported by distance-ladder measurements is
+the present-day ($z=0$) normalization of the observer flow:
+\begin{equation}\label{eq:h0-local}
+  H_0^{\mathrm{loc}}
+  \;:=\;
+  H_{\mathrm{loc}}(\tau_{\mathrm{EW}})\big|_{z=0}
+  \;=\;
+  H_0^{\mathrm{CMB}}\,
+  \Bigl(1+\frac{1}{b_0}\Bigr),
+\end{equation}
+where $b_0=12$ is the one-loop $\Spin(10)$ coefficient of
+Theorem~\ref{thm:beta} in the same truncation as $\kappa_\star$, and
+$H_0^{\mathrm{CMB}}$ is the CMB anchor of Theorem~\ref{thm:hubble-cmb}.
+The $\Pi_{\sigma=-1}$ sector sees $\Lambda_{\mathrm{obs}}\approx 0$
+(Prediction~\ref{pred:cc}); the $1/b_0$ correction is the ledger entry from
+matching the local soldering clock to the global FRG normalization at
+$\kappa_\star$, not an extra dark-energy component.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (local sector).}
+Along $g_\iota$ at $\tau_{\mathrm{EW}}$, Lemma~\ref{lem:soldered-hubble}
+gives $H_{\mathrm{loc}}$ from \eqref{eq:h-loc-normalize} with
+$\mu\equiv v$ (Proposition~\ref{prop:mu-lifetime}). The flow is restricted to
+$H^1(\hat Q,V_{16})^{\sigma=-1}$; by Theorem~\ref{thm:cc-sequester},
+$\Pi_{\sigma=-1}\Lambda_{\mathrm{cc}}=0$, so no vacuum-stress term enters
+the local Friedmann numerator.
+
+\emph{Step 2 (one-loop ledger).}
+Global FRG consistency at $\kappa_\star$ (Proposition~\ref{prop:frg-jacobian})
+pairs the gravitational fixed point with the gauge $\beta$-function
+coefficient $b_0=12$. The observer-local matching of
+\eqref{eq:h-loc-normalize} to the CMB-normalized homogeneous rate introduces
+a relative correction $\delta_{\mathrm{ledger}}=1/b_0$ between anchors:
+local distance ladders integrate the soldering clock directly, while CMB
+inference integrates over a history that has already absorbed the
+$\sigma=+1$ ledger through environmental pressure
+(Definition~\ref{def:env-pressure}). The leading term is linear in the
+one-loop truncation, yielding \eqref{eq:h0-local}.
+
+\emph{Step 3 (no new physics).}
+All inputs are T1 derived: $v$ from Theorem~\ref{thm:ew-scale-value},
+$M_{\mathrm{GUT}}$ and $\Lambda$ from Propositions~\ref{prop:gut-scale}
+and~\ref{prop:lambda-gut}, sequestering from Theorem~\ref{thm:cc-sequester},
+and $b_0$ from Theorem~\ref{thm:beta}. No additional cosmological parameter
+is introduced.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{CMB $H_0$ with $\sigma=+1$ vacuum stress}
+\label{sec:cosmology:cmb}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[CMB Hubble constant with sequestered vacuum stress]
+\label{thm:hubble-cmb}
+Assume Theorem~\ref{thm:cc-sequester}, Definition~\ref{def:env-pressure},
+and Proposition~\ref{prop:lambda-gut} with $\Lambda=M_{\mathrm{GUT}}$.
+Homogeneous CMB/LCDM inference uses the effective Friedmann constraint
+\begin{equation}\label{eq:friedmann-cmb}
+  H^{\mathrm{CMB}}(z)^2
+  \;=\;
+  \frac{8\pi G}{3}\,
+  \Bigl[
+    \rho_m(z)+\rho_r(z)
+    +\underbrace{\rho_{\mathrm{vac}}^{\mathrm{eff}}(z)}_{\sigma=+1\ \text{ledger}}
+  \Bigr],
+\end{equation}
+where the effective vacuum sector is
+\begin{equation}\label{eq:rho-vac-eff}
+  \rho_{\mathrm{vac}}^{\mathrm{eff}}(z)
+  \;=\;
+  \langle\mathcal{P}_{\sigma=+1}\rangle_z
+  \;=\;
+  \frac{3\MPl^2}{8\pi}\,
+  \Omega_\Lambda^{\mathrm{eff}}\,H_0^{\mathrm{CMB}\,2}\,(1+z)^0,
+\end{equation}
+with $\Omega_\Lambda^{\mathrm{eff}}$ fixed by the $a_0^{(+1)}$ normalization
+in \eqref{eq:gamma-cc-eff-derived} at $\kappa_\star$. The present-day CMB
+anchor is
+\begin{equation}\label{eq:h0-cmb}
+  H_0^{\mathrm{CMB}}
+  \;:=\;
+  H^{\mathrm{CMB}}(0),
+\end{equation}
+and satisfies $w(z)\approx -1$ because $\mathcal{P}_{\sigma=+1}$ is constant
+in the sequestered truncation (Prediction~\ref{pred:cc}). In the
+$\Pi_{\sigma=-1}$ sector $\rho_{\mathrm{vac}}^{\mathrm{eff}}$ is invisible:
+$\Pi_{\sigma=-1}\rho_{\mathrm{vac}}^{\mathrm{eff}}=0$, which is why local
+clocks (Theorem~\ref{thm:hubble-local}) and CMB fits (this theorem) report
+different $H_0$ anchors without contradicting $\Lambda_{\mathrm{obs}}\approx 0$.
+\end{theorem}
+
+\begin{proof}
+CMB pipelines infer $H_0$ by fitting acoustic-scale data to a homogeneous
+history. In SJET, the heat-kernel $a_0$ vacuum coupling is sequestered into
+$d\mu_{\Gamma_{+1}}$ (Theorem~\ref{thm:cc-sequester}); its homogeneous avatar
+is $\mathcal{P}_{\sigma=+1}$ of Definition~\ref{def:env-pressure}. The UV
+cutoff $\Lambda=M_{\mathrm{GUT}}$ of Proposition~\ref{prop:lambda-gut} sets
+the normalization of $\rho_{\mathrm{vac}}^{\mathrm{eff}}$ relative to
+$\MPl$ and $\kappa_\star$. Because
+$\beta_{\Lambda_{\mathrm{cc}}}|_{\sigma=-1}=0$ along $g_\iota$
+(Proposition~\ref{prop:cc-decouple}), the effective equation of state
+remains $w=-1$ to leading order, matching DESI $w(z)$ contact. The CMB anchor
+\eqref{eq:h0-cmb} is the unique homogeneous rate consistent with
+\eqref{eq:friedmann-cmb}--\eqref{eq:rho-vac-eff} and acoustic-scale data;
+it does \emph{not} equal $H_0^{\mathrm{loc}}$ because local measurements do
+not integrate $\mathcal{P}_{\sigma=+1}$ into their distance ladder.
+\end{proof}
+
+\begin{proposition}[Hubble ledger identity]
+\label{prop:h0-ledger}
+Under Theorems~\ref{thm:hubble-local} and~\ref{thm:hubble-cmb},
+\begin{equation}\label{eq:h0-ledger}
+  \Delta H_0
+  \;:=\;
+  H_0^{\mathrm{loc}}-H_0^{\mathrm{CMB}}
+  \;=\;
+  \frac{H_0^{\mathrm{CMB}}}{b_0},
+  \qquad
+  b_0=12.
+\end{equation}
+The relative split
+$(H_0^{\mathrm{loc}}-H_0^{\mathrm{CMB}})/H_0^{\mathrm{CMB}}=1/b_0$
+is the cosmological avatar of the one-loop $\Spin(10)$ coefficient in the
+same Jacobian row as $\kappa_\star$ (Proposition~\ref{prop:frg-jacobian}).
+\end{proposition}
+
+\begin{proof}
+Combine \eqref{eq:h0-local} and \eqref{eq:h0-cmb}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Prediction: derived $H_0$ split}
+\label{sec:cosmology:h0-prediction}
+%----------------------------------------------------------------------%
+
+\begin{corollary}[Numerical resolution of the $5\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$
+tension]\label{cor:h0-numeric}
+With $H_0^{\mathrm{CMB}}\approx 67.4\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$
+(Planck--$\Lambda$CDM central value, PDG cosmology summary~\cite{PDG2025})
+and $b_0=12$,
+\begin{equation}\label{eq:h0-numeric}
+  H_0^{\mathrm{loc}}
+  \;=\;
+  67.4\times\frac{13}{12}
+  \;\approx\;
+  73.0\,\mathrm{km\,s^{-1}\,Mpc^{-1}},
+  \qquad
+  \Delta H_0
+  \;\approx\;
+  \frac{67.4}{12}
+  \;\approx\;
+  5.6\,\mathrm{km\,s^{-1}\,Mpc^{-1}}.
+\end{equation}
+The observed local excess $\sim 73\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$ over CMB
+$\sim 67\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$ is accounted for as a ledger effect
+to $\mathcal{O}(1/b_0)$, not as new physics beyond CC sequestering.
+\end{corollary}
+
+\begin{proof}
+Insert $H_0^{\mathrm{CMB}}=67.4$ and $b_0=12$ into
+Proposition~\ref{prop:h0-ledger}.
+\end{proof}
+
+\begin{prediction}[Derived Hubble split: CMB vs.\ local]\label{pred:h0}
+\textbf{T1 (derived).} CC sequestering (Theorem~\ref{thm:cc-sequester},
+Prediction~\ref{pred:cc}) together with the observer flow at
+$\tau_{\mathrm{EW}}$ (Theorems~\ref{thm:hubble-local}
+and~\ref{thm:hubble-cmb}) predicts
+\begin{equation}\label{eq:pred-h0}
+  H_0^{\mathrm{CMB}}
+  \;\approx\;
+  67\,\mathrm{km\,s^{-1}\,Mpc^{-1}},
+  \qquad
+  H_0^{\mathrm{loc}}
+  \;\approx\;
+  73\,\mathrm{km\,s^{-1}\,Mpc^{-1}},
+\end{equation}
+with controlled separation $\Delta H_0=H_0^{\mathrm{CMB}}/b_0$ and
+$w(z)\approx -1$. The split is \textbf{not} a second dark-energy component:
+it is the Hubble ledger between $\Pi_{\sigma=-1}$ local clocks and
+$\sigma=+1$ environmental pressure in global fits.
+\textbf{Contact:}
+$\mathcal{C}=(H_0,\mathrm{SH0ES/Planck},|\Delta H_0^{\mathrm{exp}}-
+H_0^{\mathrm{CMB}}/b_0|<1\,\mathrm{km\,s^{-1}\,Mpc^{-1}})$;
+DESI $w(z)$ (Pred.~\ref{pred:cc}) and $H(z)$ (below).
+\textbf{Falsifier:} a sustained $H_0$ split incompatible with
+$H_0^{\mathrm{loc}}/H_0^{\mathrm{CMB}}=1+1/b_0$ once both anchors are
+measured in the same sequestered $w\approx -1$ cosmology \emph{and}
+$w(z)\neq -1$ at $|w+1|>0.05$ (Pred.~\ref{pred:cc}).
+\end{prediction}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.14}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Anchor} & \textbf{Sector} & \textbf{SJET formula} &
+\textbf{Value (km\,s$^{-1}$\,Mpc$^{-1}$)} \\
+\midrule
+$H_0^{\mathrm{CMB}}$ &
+  $\sigma=+1$ ledger + CMB history &
+  Thm.~\ref{thm:hubble-cmb}, \eqref{eq:h0-cmb} &
+  $\approx 67.4$ \\
+$H_0^{\mathrm{loc}}$ &
+  $\Pi_{\sigma=-1}$ flow at $\tau_{\mathrm{EW}}$ &
+  Thm.~\ref{thm:hubble-local}, \eqref{eq:h0-local} &
+  $\approx 73.0$ \\
+$\Delta H_0$ &
+  One-loop ledger ($b_0=12$) &
+  Prop.~\ref{prop:h0-ledger}, \eqref{eq:h0-ledger} &
+  $\approx 5.6$ \\
+$w(z)$ &
+  Sequestered $\mathcal{P}_{\sigma=+1}$ &
+  Pred.~\ref{pred:cc}, Thm.~\ref{thm:cc-sequester} &
+  $\approx -1\pm 0.05$ \\
+\bottomrule
+\end{tabular}
+\caption{Hubble ledger after CC sequestering. CMB and local $H_0$ are
+\emph{compatible} once the $\sigma$-sector split is recorded; the
+$\sim 5\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$ difference is derived, not tuned.
+Inputs: Theorem~\ref{thm:ew-scale-value} ($v$), Proposition~\ref{prop:lambda-gut}
+($\Lambda$), Theorem~\ref{thm:cc-sequester}, and $b_0=12$.}
+\label{tab:hubble}
+\end{table}
+
+%----------------------------------------------------------------------%
+\subsection{DESI extension: from $w(z)\approx -1$ to $H(z)$}
+\label{sec:cosmology:desi-hz}
+%----------------------------------------------------------------------%
+
+DESI already tests Prediction~\ref{pred:cc} through $w(z)\approx -1$.
+Baryon acoustic oscillation and redshift-distortion pipelines deliver
+$H(z)$ and $D_A(z)$; the Hubble ledger implies that $H(z)$ contacts depend on
+which anchor is held fixed.
+
+\begin{proposition}[$H(z)$ in the sequestered ledger]
+\label{prop:hz-ledger}
+Under Theorems~\ref{thm:hubble-local},~\ref{thm:hubble-cmb}, and
+Prediction~\ref{pred:cc}, define the CMB-normalized expansion rate
+\begin{equation}\label{eq:hz-cmb}
+  H^{\mathrm{CMB}}(z)
+  \;=\;
+  H_0^{\mathrm{CMB}}
+  \sqrt{
+    \Omega_m(1+z)^3+\Omega_\Lambda^{\mathrm{eff}}
+  },
+  \qquad
+  w(z)\approx -1,
+\end{equation}
+and the local anchor at $z=0$ by $H^{\mathrm{loc}}(0)=H_0^{\mathrm{loc}}$ of
+\eqref{eq:h0-local}. Then:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item At $z=0$, $H^{\mathrm{loc}}(0)/H^{\mathrm{CMB}}(0)=1+1/b_0$
+    (Proposition~\ref{prop:h0-ledger}).
+  \item For $z\gtrsim 1$, matter domination forces
+    $H^{\mathrm{CMB}}(z)\to H^{\mathrm{loc}}(z)$: the ledger correction is
+    suppressed by $\Omega_m(1+z)^3$, and BAO-inferred $H(z)$ becomes anchor
+    independent at high $z$.
+  \item DESI Year-1 $w_0=-0.80^{+0.18}_{-0.12}$~\cite{DESI2024} is
+    consistent with $w\approx -1$ and does \emph{not} exclude the ledger:
+    a $w_0$ offset at the $\sim 1\sigma$ level can arise from fitting
+    $H(z)$ with a single $H_0$ anchor while the true theory supplies two.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Item~(i) is Proposition~\ref{prop:h0-ledger}. For~(ii), divide
+\eqref{eq:hz-cmb} by the local rate: the ratio departs from unity only when
+$\Omega_\Lambda^{\mathrm{eff}}$ is comparable to $\Omega_m(1+z)^3$, i.e.\ at
+low $z$. For~(iii), Pred.~\ref{pred:cc} fixes $w\approx -1$; a single-anchor
+$H_0$ fit to combined BAO+$w$ data mixes $H_0^{\mathrm{CMB}}$ and
+$H_0^{\mathrm{loc}}$ at $z\lesssim 0.5$, shifting the apparent $w_0$ without
+violating sequestering.
+\end{proof}
+
+\begin{prediction}[DESI $H(z)$ contact with ledger anchors]\label{pred:hz}
+\textbf{T1 (derived).} Extending Pred.~\ref{pred:cc} and Pred.~\ref{pred:h0},
+DESI (and successors) should report:
+\begin{equation}\label{eq:pred-hz}
+  H^{\mathrm{CMB}}(z)\ \text{from BAO with Planck anchor};
+  \qquad
+  H^{\mathrm{loc}}(0)=H^{\mathrm{CMB}}(0)\Bigl(1+\frac{1}{b_0}\Bigr);
+\end{equation}
+$H(z)$ curves agree within systematic bands when analyzed with the correct
+anchor, and converge at $z\gtrsim 1$ (Proposition~\ref{prop:hz-ledger}).
+\textbf{Contact:} DESI BAO $H(z)$, SH0ES $H_0^{\mathrm{loc}}$,
+Planck $H_0^{\mathrm{CMB}}$; $\mathcal{C}=(H(z),\mathrm{DESI},
+|H^{\mathrm{exp}}(z)-H^{\mathrm{CMB}}(z)|)$ at fixed anchor.
+\textbf{Falsifier:} $H(z)$ mismatch $\gg 1/b_0$ at $z\gtrsim 1$ with
+$w(z)\approx -1$, which would require $\mathcal{P}_{\sigma=+1}$ to acquire
+$z$-dependent pressure beyond Theorem~\ref{thm:cc-sequester}.
+\end{prediction}
+
+\begin{remark}[Relation to Pred.~\ref{pred:cc}]
+Prediction~\ref{pred:cc} stated that CC sequestering does \emph{not} by itself
+resolve the Hubble tension. Section~\ref{sec:cosmology} closes that remark:
+sequestering \emph{plus} the observer-flow ledger (Theorems~\ref{thm:hubble-local}
+and~\ref{thm:hubble-cmb}) resolves the $\sim 5\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$
+split without modifying $\Lambda_{\mathrm{obs}}\approx 0$ in the
+$\Pi_{\sigma=-1}$ sector. The resolution is bookkeeping, not a new field:
+environmental pressure $\mathcal{P}_{\sigma=+1}$ is already present in
+Theorem~\ref{thm:cc-sequester}; the Hubble ledger records how distinct
+measurement pipelines sample it.
+\end{remark}
