@@ -1,82 +1,103 @@
 %======================================================================%
-\section{Division and Exceptional Ladders}
+\section{The Mirror Climb: Division and Exceptional Ladders}
 \label{sec:ladder}
 %======================================================================%
 
-The profinite tower carries standard arithmetic structure. Neither ladder is
-postulated; both organize the identification map
-Theorem~\ref{thm:foundations:stone-lift}.
+The ladders are not postulated. They are the orbit of $\Void$ under
+$\Mirror$ (Axiom~\ref{ax:void-mirror:mirror}).
 
 %----------------------------------------------------------------------%
-\subsection{Hurwitz ladder}
+\subsection{Unified climb}
+\label{sec:ladder:unified}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Unified ladder]\label{def:ladder:unified}
+The \emph{unified mirror climb} is the sequence
+\begin{equation}\label{eq:ladder:unified}
+  \Void
+  \;\xrightarrow{\Mirror}\;
+  \R\;\xrightarrow{\Mirror}\;\C\;\xrightarrow{\Mirror}\;\Quat
+  \;\xrightarrow{\Mirror}\;\Oct\;\xrightarrow{\Mirror}\;\jalg
+  \;\xrightarrow{\Mirror}\;\E{8}\;\xrightarrow{\Mirror}\;\E{8}\times\E{8}
+  \;\xrightarrow{\Mirror}\;\E{6}\;\xrightarrow{\;\cdots\;}\;\Void.
+\end{equation}
+Each arrow is $\Mirror$ at the appropriate rung, followed by
+$\mathrm{Bal}_\capacity$ where a partition is required.
+\end{definition}
+
+%----------------------------------------------------------------------%
+\subsection{Hurwitz rung (proved)}
 \label{sec:ladder:hurwitz}
 %----------------------------------------------------------------------%
 
 \begin{theorem}[Hurwitz]\label{thm:ladder:hurwitz}
-The only finite-dimensional normed division algebras over $\R$ are, up to
-isomorphism,
+Mirror doubling in the normed division category produces only
 \[
-  \R,\quad\C,\quad\Quat,\quad\Oct,
+  0,\;\R,\;\C,\;\Quat,\;\Oct
 \]
-of dimensions $1,2,4,8$. No bilinear composition law extends beyond $\Oct$.
+of dimensions $0,1,2,4,8$. The next mirror $\Mirror(\Oct)$ fails (sedenions):
+the climb \emph{must} exit to the Jordan rung $\jalg=H_3(\Oct)$, dimension $27$.
 \end{theorem}
 
 \begin{proposition}[Terminal Jordan rung]\label{prop:ladder:terminal}
-The algebra $\jalg=H_3(\Oct)$ is the unique formally real Jordan algebra whose
-off-diagonal entries carry octonionic multiplication and whose dimension is
-$27=1+8+8+8+2$. The Stone lift identifies the profinite limit with this terminal
-rung.
+$\jalg$ is the unique formally real Jordan algebra compatible with the $\Oct$
+mirror at the terminal division step. The Stone limit
+$\varprojlim_n\Mirror^n(\Void)$ stabilizes at $27$ coordinates.
 \end{proposition}
 
 %----------------------------------------------------------------------%
-\subsection{Exceptional cascade}
+\subsection{Exceptional rung}
 \label{sec:ladder:exceptional}
 %----------------------------------------------------------------------%
 
-\begin{definition}[Exceptional cascade]\label{def:ladder:cascade}
-Write the symmetry-reduction chain
-\begin{equation}\label{eq:ladder:cascade}
-  \E{8}\to\E{8}\times\E{8}\to\E{6}\to\E{5}\to\E{4},
-\end{equation}
-with $\E{7}$, $F_4$, $G_2$ as intermediate stabilizers of norm data on the
-Albert tower. SJET dynamics are anchored at the $\E{6}$ node.
-\end{definition}
+\begin{proposition}[Exceptional mirror steps]\label{prop:ladder:exceptional}
+At the Jordan rung, $\Mirror$ acts as:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item $\E{8}$: maximal automorphism mirror of the $\Oct$ measure before
+    projection to $\jalg$;
+  \item $\E{8}\times\E{8}$: heterotic product mirror (left/right sectors);
+  \item $\E{6}$: rank-one capacity-balanced cell on $\jalg$;
+  \item $\E{6}\to H=\Spin(10)\times U(1)$: Cartan mirror (coset EIII);
+  \item $\cdots\to\Void$: collapse after electroweak breaking.
+\end{enumerate}
+\end{proposition}
 
 \begin{proposition}[Branchings at $\E{6}$]\label{prop:ladder:e6branch}
-Under $H=\Spin(10)\times U(1)$, the branchings are
-\eqref{eq:foundations:27branch}--\eqref{eq:foundations:adjoint}. The coset
-$\E{6}/H$ is EIII, $\dim_{\R}\mathcal{M}=32$.
+Under $H=\Spin(10)\times U(1)$,
+\begin{equation}\label{eq:foundations:27branch}
+  \mathbf{27}=\mathbf{1}_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1},
+\end{equation}
+\begin{equation}\label{eq:foundations:adjoint}
+  \mathbf{78}=\mathbf{45}_0\oplus\mathbf{1}_0
+  \oplus\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3},
+\end{equation}
+and $\mathcal{M}=\E{6}/H=\mathrm{EIII}$ has $\dim_{\R}\mathcal{M}=32$. The coset
+mirror is $\mathbf{16}_{-3}\leftrightarrow\overline{\mathbf{16}}_{+3}$.
 \end{proposition}
 
 \begin{remark}[Heterotic parallel]\label{rem:ladder:heterotic}
-The product $\E{8}\times\E{8}$ matches the heterotic gauge group. The
-$\mathbb{Z}_5$ orbifold quintic compactification gives
-$h^1(\hat Q,V_{16})=3$~\cite{Witten1985}, corroborating three generations
-(Remark~\ref{rem:sm:heterotic}). This is a \textbf{conjecture}, not a derivation.
+$\E{8}\times\E{8}$ matches the heterotic gauge group;
+$h^1(\hat Q,V_{16})=3$~\cite{Witten1985} corroborates three generations
+(Remark~\ref{rem:sm:heterotic}). \textbf{Conjecture.}
 \end{remark}
 
 %----------------------------------------------------------------------%
-\subsection{Capacity functional}
+\subsection{Capacity as dual mirror}
 \label{sec:ladder:capacity}
 %----------------------------------------------------------------------%
 
 \begin{definition}[Capacity functional]\label{def:ladder:capacity}
-For $\omega\in\R^k$, workload $\mu$, and costs $c_i(a)$,
+On a mirror-refined graph $\mathcal{G}$ with costs $c_i$ and workload $\mu$,
 \begin{equation}\label{eq:ladder:capacity}
-  \capacity(\omega)=-\sum_{a\in V}\mu(a)\log\!\Bigl(\sum_{i=1}^k
+  \capacity(\omega)=-\sum_{a\in V}\mu(a)\log\!\Bigl(\sum_{i}
   e^{c_i(a)-\omega_i}\Bigr).
 \end{equation}
+This is the \emph{dual mirror} of $\Mirror$: where $\Mirror$ doubles sectors,
+$\capacity$ balances them.
 \end{definition}
 
 \begin{theorem}[Concavity and dual existence]\label{thm:ladder:concave}
 $\capacity$ is strictly concave on $\{\omega:\sum_i\omega_i=0\}$. For targets
-$m_i>0$, $\sum_i m_i=1$, there exists a unique $\omega^\star$ with
+$m_i>0$, $\sum_i m_i=1$, there exists unique $\omega^\star$ with
 $\partial\capacity/\partial\omega_i(\omega^\star)=m_i$.
 \end{theorem}
-
-\begin{proof}
-The Hessian $\partial^2\capacity/\partial\omega_i\partial\omega_j$ is negative
-semidefinite and negative definite on the sum-zero hyperplane (standard entropy
-concavity). Strict concavity on an affine slice gives uniqueness of the
-constrained maximizer.
-\end{proof}

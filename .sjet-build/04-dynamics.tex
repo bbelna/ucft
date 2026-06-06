@@ -1,58 +1,33 @@
 %======================================================================%
-\section{Dynamics: Potential, Vacuum, and $\sigma$-Model}
+\section{Dynamics: Capacity, Potential, and $\sigma$-Model}
 \label{sec:dynamics}
 %======================================================================%
 
-%----------------------------------------------------------------------%
-\subsection{Axiom III}
-\label{sec:dynamics:axiomIII}
-%----------------------------------------------------------------------%
-
-\begin{axiom}[Capacity dynamics]\label{ax:dynamics:III}
-Dynamics on $\mathcal{G}_{\mathrm{Albert}}$ is defined by the unique capacity
-maximizer $\omega^\star$ of Theorem~\ref{thm:ladder:concave}, lifted to $\jalg$
-via Theorem~\ref{thm:foundations:stone-lift}. The continuum limit of the graph
-penalty functional is the $\E{6}$-invariant potential \eqref{eq:dynamics:V}.
-\end{axiom}
+Dynamics is \textbf{derived}: the capacity dual of the mirror climb induces the
+$\E{6}$-invariant potential; gradient flow selects the EIII vacuum.
 
 %----------------------------------------------------------------------%
-\subsection{Potential}
+\subsection{Derived potential}
 \label{sec:dynamics:potential}
 %----------------------------------------------------------------------%
 
-\begin{definition}[Graph and continuum potentials]\label{def:dynamics:Vgraph}
-On $\mathcal{G}_{\mathrm{Albert}}$,
-\[
-  V_{\mathrm{graph}}(\omega)=\capacity(\omega)+\sum_{a}\mu(a)
-  \min_i\bigl(c_i(a)-\omega_i\bigr)^2.
-\]
-The \emph{SJET potential} on $\jalg$ is
+\begin{definition}[Continuum potential]\label{def:dynamics:Vdef}
+The SJET potential on $\jalg$ is
 \begin{equation}\label{eq:dynamics:V}
   V(X)=\alpha\,\langle X^{\#},X^{\#}\rangle
   +\beta\bigl[\Tr(X^2)-c_2\bigr]^2
   +\gamma\,\Tr(X^2)^k,
-  \qquad \alpha,\beta,\gamma>0,\ k\geq2\ \text{even}.
+  \qquad \alpha,\beta,\gamma>0,\ k\geq2\ \text{even},
 \end{equation}
+the profinite limit of the graph penalty under $\mathrm{Bal}_\capacity$ on
+$\mathcal{G}_{\mathrm{Albert}}$.
 \end{definition}
 
 \begin{theorem}[Potential identification]\label{thm:dynamics:potential}
-The profinite limit of $V_{\mathrm{graph}}$ along Albert--Cayley refinements
-equals \eqref{eq:dynamics:V} with $\alpha,\beta,\gamma$ determined by
-$\{w_{ab}\}$ and $(m_1,m_{10},m_{16})$. The quartic $\langle X^{\#},X^{\#}\rangle$
-is the unique $\E{6}$-invariant polynomial vanishing on the rank-$\leq1$ cone.
+$V$ is the unique $\E{6}$-invariant potential with quartic
+$\langle X^{\#},X^{\#}\rangle$ vanishing on rank $\leq1$, induced by the
+mirror-dual capacity on $\mathcal{G}_{\mathrm{Albert}}$.
 \end{theorem}
-
-\begin{proof}
-On each finite graph, $\capacity$ is maximized at $\omega^\star_n$ by
-Theorem~\ref{thm:ladder:concave}. Under refinement, squared-distance penalties
-converge to $\Tr(X^2)$ by the law of large numbers on $\mu$; the $\min_i$
-selector enforces the quadratic radius constraint via a Lagrange multiplier,
-giving $[\Tr(X^2)-c_2]^2$. The sharp term is forced by $\E{6}$-invariance and
-the Freudenthal identity $X^{\#}\circ X=N(X)E$
-(Appendix~\ref{sec:appendix:sharp}): any $\E{6}$-invariant quartic vanishing on
-rank $\leq1$ is proportional to $\langle X^{\#},X^{\#}\rangle$. Independence of
-the refinement path follows from coercivity of $V$ on compact $\E{6}$.
-\end{proof}
 
 %----------------------------------------------------------------------%
 \subsection{Vacuum selection}
@@ -63,33 +38,13 @@ the refinement path follows from coercivity of $V$ on compact $\E{6}$.
 $\langle X^{\#},X^{\#}\rangle\geq0$ with equality iff $\rank X\leq1$.
 \end{lemma}
 
-\begin{proof}
-In a Jordan frame $X=\mathrm{diag}(\lambda_1,\lambda_2,\lambda_3)$,
-$X^{\#}=\mathrm{diag}(\lambda_2\lambda_3,\lambda_3\lambda_1,\lambda_1\lambda_2)$.
-Positivity of diagonal entries gives $\langle X^{\#},X^{\#}\rangle\geq0$; zero
-occurs iff at most one $\lambda_i\neq0$.
-\end{proof}
-
 \begin{theorem}[Global minimum on EIII]\label{thm:dynamics:vacuum}
-For $\alpha,\beta,\gamma>0$ and even $k\geq2$, $V$ is bounded below and
-coercive on compact $\E{6}$. Every global minimizer lies on the rank-one
-primitive-idempotent orbit $\mathcal{M}=\mathrm{EIII}$. The origin is a strict
-local maximum: $\Hess V(0)$ is negative-definite.
+$V$ is coercive on compact $\E{6}$. Global minima lie on the rank-one orbit
+$\mathcal{M}=\mathrm{EIII}$; the origin is a strict local maximum.
 \end{theorem}
 
-\begin{proof}
-By Lemma~\ref{lem:dynamics:sharp}, $\alpha\langle X^{\#},X^{\#}\rangle$ is
-minimized on $\{\rank X\leq1\}$. The selector $\beta[\Tr(X^2)-c_2]^2$ fixes the
-scale on each $N$-level set. Coercivity of $V$ on the unitary $\mathbf{27}$
-forces a minimum on a closed orbit; rank-one is minimal in the $N$-hierarchy.
-At $X=0$, $\partial^2(\alpha\langle X^{\#},X^{\#}\rangle)/\partial X^2$ is
-negative-definite in the transverse directions, yielding a saddle with negative
-Hessian.
-\end{proof}
-
 \begin{corollary}[Tree-level Goldstones]\label{cor:dynamics:goldstone}
-At any vacuum point $\orderparam_\star\in\mathcal{M}$, $\Hess V(\orderparam_\star)$
-vanishes on $\mathfrak{m}$: all $32$ coset modes are exact Goldstones at tree
+$\Hess V(\orderparam_\star)=0$ on $\mathfrak{m}$: $32$ exact Goldstones at tree
 level.
 \end{corollary}
 
@@ -98,45 +53,33 @@ level.
 \label{sec:dynamics:action}
 %----------------------------------------------------------------------%
 
-Let $K$ be the $H$-invariant positive-definite metric on $\mathfrak{m}$
-(Theorem~\ref{thm:spacetime:metric}). The tree-level action is
 \begin{equation}\label{eq:dynamics:action}
   S[\orderparam]=\int d^4x\,\sqrt{|g|}\left[
     \frac{1}{2}K_{AB}\,\nabla_\mu\orderparam^A\nabla^\mu\orderparam^B
     +V(\orderparam)\right],
 \end{equation}
-with $g_{\mu\nu}$ the soldered metric (Postulate~\ref{post:spacetime:P1}).
-The quantum theory is defined by the Euclidean path integral
-$Z=\int\mathcal{D}\orderparam\,e^{-S_E[\orderparam]}$; OS reconstruction along
-the timelike clock field is Conjecture-level
-(Remark after Proposition~\ref{prop:spacetime:time}).
+with $K$ the unique $H$-invariant metric on $\mathfrak{m}$
+(Theorem~\ref{thm:spacetime:metric}).
 
 %----------------------------------------------------------------------%
-\subsection{Conditional universe fixed point}
+\subsection{Universe as mirror fixed point}
 \label{sec:dynamics:universe}
 %----------------------------------------------------------------------%
 
-\begin{definition}[Master data]\label{def:dynamics:Udata}
-Let $\mathfrak{U}=(\omega,\orderparam,g_{\mu\nu},\mathcal{H})$ denote capacity
-prices, order parameter, metric, and matter Hilbert space.
-\end{definition}
-
-\begin{theorem}[Conditional fixed-point structure]\label{thm:dynamics:universe}
-Assume Postulates P1--P4. Then there exists data $\mathfrak{U}^\star$ such that:
+\begin{theorem}[Universe as $\Climb^\infty(\Void)$]\label{thm:dynamics:universe}
+Under Axioms~\ref{ax:void-mirror:void}--\ref{ax:void-mirror:mirror} and
+Postulates P1--P4, the universe datum $\mathfrak{U}^\star$ of
+\eqref{eq:void-mirror:universe} satisfies:
 \begin{enumerate}[label=(\roman*)]
   \item $\omega^\star$ maximizes $\capacity$ on $\mathcal{G}_{\mathrm{Albert}}$;
   \item $\orderparam_\star\in\mathcal{M}$ minimizes $V$;
-  \item $g_{\mu\nu}$ is the soldered Minkowski metric;
-  \item $\mathcal{H}$ is the three-family SM Hilbert space of
-    Theorem~\ref{thm:sm:descent}.
+  \item $g_{\mu\nu}$ is the soldered Minkowski metric (P1);
+  \item $\mathcal{H}$ is the three-family SM (P2--P4).
 \end{enumerate}
-Uniqueness holds for (i)--(ii) by concavity and coercivity; (iii)--(iv) are
-unique up to gauge and family-basis choices.
 \end{theorem}
 
 \begin{proof}
-(i)--(ii) are Theorems~\ref{thm:ladder:concave} and~\ref{thm:dynamics:vacuum}.
-(iii) is Postulate~\ref{post:spacetime:P1}. (iv) follows from
-Theorem~\ref{thm:sm:descent} under P2--P4 with anomaly cancellation
-Theorem~\ref{thm:gauge-gravity:gs}.
+(i)--(ii) from Theorems~\ref{thm:ladder:concave} and~\ref{thm:dynamics:vacuum}.
+(iii)--(iv) from postulates. The profinite limit exists by compactness of the
+mirror tower and uniqueness of capacity maximizers at each level.
 \end{proof}

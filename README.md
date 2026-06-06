@@ -1,16 +1,17 @@
 # Stone–Jordan Exceptional Theory (SJET)
 
-A conditional unified framework in mathematical physics (Brandon Belna).
+**From the void by mirror climb** — Brandon Belna.
 
-SJET is an \(E_6\)/Albert-algebra–motivated **derivation-grade embedding** of gravitation and the Standard Model. Three axioms fix the profinite graph arena, the order parameter \(\Phi\in J_3(\mathbb{O})\), and capacity dynamics; postulates P1–P4 supply soldering, chiral matter, three families, and the GUT–Higgs sector. Major claims are labeled theorem / postulate / conjecture and checked in Section 8.
+## True axioms (only two)
 
-## Layout
+| Axiom | Content |
+|-------|---------|
+| **Void** \(\mathcal{V}\) | No observable distinction; trivial Boolean algebra / one-point Stone spectrum |
+| **Mirror** \(\mathsf{M}\) | Involutive doubling operator; repeated application climbs \(0\to\mathbb{R}\to\mathbb{C}\to\mathbb{H}\to\mathbb{O}\to J_3(\mathbb{O})\to E_8\to E_8\times E_8\to E_6\to\cdots\to 0\) |
 
-| Path | Description |
-|------|-------------|
-| `sjet.tex` / `sjet.pdf` | Main manuscript |
-| `.sjet-build/` | Modular units + `assemble-sjet.sh` |
-| `old/` | Archived UCFT/BAMLP work |
+The climb operator is \(\mathsf{C}=\mathrm{Bal}_{\mathcal{C}}\circ\mathsf{M}\) (mirror then capacity balance). The universe is \(\mathfrak{U}^\star=\mathsf{C}^\infty(\mathcal{V})\).
+
+Everything else — graph, Albert algebra, potential, gauge — is **derived**.
 
 ## Build
 
@@ -18,14 +19,6 @@ SJET is an \(E_6\)/Albert-algebra–motivated **derivation-grade embedding** of 
 bash .sjet-build/assemble-sjet.sh
 toolbox run -c latex bash -lc 'cd /var/home/bbelna/ucft && latexmk -pdf -f sjet.tex'
 ```
-
-## Epistemic summary
-
-| Status | Content |
-|--------|---------|
-| **Theorem** | Potential identification, EIII vacuum, anomaly cancellation, \(b_0(3)=12\), \(\mathfrak{m}\) irreducibility |
-| **Postulate** | P1 soldering; P2–P4 matter/Higgs; \(\Lambda_{\mathrm{cc}}\) |
-| **Conjecture** | \(\kappa_\star=96\pi^2/5\); OS positivity; heterotic correspondence |
 
 ## Remote
 

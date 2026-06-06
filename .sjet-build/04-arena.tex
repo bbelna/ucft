@@ -1,0 +1,63 @@
+%======================================================================%
+\section{Derived Arena: Graph, Albert Algebra, Order Parameter}
+\label{sec:foundations}
+%======================================================================%
+
+This section contains no new axioms. The Albert--Cayley graph, Stone lift, and
+order parameter are \textbf{derived} from $\Climb^\infty(\Void)$.
+
+%----------------------------------------------------------------------%
+\subsection{Albert--Cayley graph}
+\label{sec:foundations:albert-graph}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Albert--Cayley graph]\label{def:foundations:albert}
+At the $\jalg$ rung of \eqref{eq:ladder:unified}, the mirror-refined graph
+$\mathcal{G}_{\mathrm{Albert}}=(V,E,w)$ has $V=\{1,\ldots,27\}$ (basis of
+$\jalg$), edges where $\partial_a\partial_b\Tr(X^2)\not\equiv0$, uniform
+$\mu$, and territory generators $z_1,z_{10},z_{16}$ for the sectors of
+\eqref{eq:foundations:27branch}.
+\end{definition}
+
+\begin{proposition}[BAMLP partition]\label{prop:foundations:partition}
+Capacity maximization with targets $(1/27,10/27,16/27)$ yields cells of sizes
+$1$, $10$, $16$, matching \eqref{eq:foundations:27branch}.
+\end{proposition}
+
+%----------------------------------------------------------------------%
+\subsection{Stone lift}
+\label{sec:foundations:lift}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Profinite Stone limit]\label{thm:foundations:stone-lift}
+Mirror-refined towers $\{\mathcal{G}_n\}$ preserving the $1|10|16$ partition
+satisfy
+\[
+  \mathrm{Lift}(\mathcal{G}_\infty)\;\cong\;\jalg,
+  \qquad
+  S_\infty=\varprojlim_n\mathrm{Spec}(\mathcal{B}(\mathcal{G}_n)).
+\]
+\end{theorem}
+
+%----------------------------------------------------------------------%
+\subsection{Order parameter (derived)}
+\label{sec:foundations:orderparam}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Order parameter]\label{def:foundations:orderparam}
+The \emph{order parameter} is the smooth section $\orderparam:M^4\to\jalg$
+transforming in $\mathbf{27}$ of compact $\E{6}$. It is the continuum limit of
+coordinates on $\mathrm{Lift}(\mathcal{G}_\infty)$, not an independent axiom.
+\end{definition}
+
+\begin{theorem}[Invariants and orbits]\label{thm:foundations:orbits}
+Only $N(X)=\det X$ is $\E{6}$-invariant (up to character); $Q(X)=\Tr(X^2)$ is
+$F_4$-invariant only. Real orbits are classified by $\rank X$ and $N(X)$;
+$\rank X\leq1\iff X^{\#}=0$ (Appendix~\ref{sec:appendix:sharp}).
+\end{theorem}
+
+\begin{proposition}[Vacuum manifold]\label{prop:foundations:eiii}
+The breaking orbit is $\mathcal{M}=\E{6}/H=\mathrm{EIII}$,
+$\dim_{\R}\mathcal{M}=32$, with coset tangent
+$\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$.
+\end{proposition}

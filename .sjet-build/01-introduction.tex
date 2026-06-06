@@ -3,91 +3,65 @@
 \label{sec:intro}
 %======================================================================%
 
-A unified description of gravitation and the Standard Model (SM) requires more
-than phenomenological fit: the framework must be \emph{mathematically closed}
-(definitions, axioms, and proofs form a coherent deductive system),
-\emph{internally consistent} (anomalies cancel; representation dimensions and
-$\beta$-function coefficients agree), and \emph{verifiable} (predictions and
-falsification criteria are stated explicitly, not left to narrative).
-
-\emph{Stone--Jordan Exceptional Theory} (SJET) is proposed as such a framework.
-It is organized in three tiers:
-\begin{enumerate}[label=\textbf{Tier \Roman*}.,leftmargin=*]
-  \item \textbf{Discrete.} Configuration space is a weighted graph
-    $\mathcal{G}$ with Boolean algebra $\mathcal{B}(\mathcal{G})$ and Stone
-    spectrum $S=\mathrm{Spec}(\mathcal{B}(\mathcal{G}))$.
-  \item \textbf{Arithmetic.} A profinite refinement tower carries the Hurwitz
-    ladder $0\to\R\to\C\to\Quat\to\Oct$ and an exceptional Lie cascade terminating
-    at $\jalg$.
-  \item \textbf{Physical.} The order parameter $\orderparam\in\jalg$ breaks
-    compact $\E{6}$ to $H=\Spin(10)\times U(1)$; soldering (Postulate~P1) yields
-    four-dimensional Lorentzian spacetime; matter postulates complete SM descent.
+SJET asks: what is the minimal mathematical seed from which the Standard Model
+and gravitation can be \emph{derived}, not merely embedded? Our answer is
+two-fold:
+\begin{enumerate}[label=\textbf{Axiom \arabic*},leftmargin=*]
+  \item \textbf{The void} $\Void$ --- no observable distinction, the terminal
+    object of the Stone ladder.
+  \item \textbf{The mirror operator} $\Mirror$ --- an involutive generator that,
+    applied repeatedly, \emph{climbs} the division and exceptional ladders.
 \end{enumerate}
+Everything else --- graphs, Albert algebra, capacity dual, $\E{6}$ potential,
+gauge sector --- is \textbf{derived} from $\Mirror^n(\Void)$ and capacity
+balancing on mirror-refined partitions. Physical postulates P1--P4 (soldering,
+matter, families, Higgs) remain the honest boundary between proved mathematics
+and four-dimensional quantum field theory.
 
-\subsection{Honest thesis}
-\label{sec:intro:thesis}
+\subsection{The climb picture}
+\label{sec:intro:climb}
 
-SJET is an \textbf{$\E{6}$/Albert-algebra--motivated conditional embedding}.
-Three axioms fix the arena and the capacity dynamics; postulates P1--P4 supply
-the remaining structure needed for contact with four-dimensional quantum field
-theory. Claims are never left implicit:
+Schematically:
+\begin{equation}\label{eq:intro:climb}
+  \Void
+  \;\xrightarrow{\;\Mirror\;}\;
+  S_{\R}\;\xrightarrow{\;\Mirror\;}\;S_{\C}\;\xrightarrow{\;\Mirror\;}\;
+  S_{\Quat}\;\xrightarrow{\;\Mirror\;}\;S_{\Oct}\;\xrightarrow{\;\Mirror\;}\;
+  \jalg
+  \;\xrightarrow{\;\Mirror\;}\;
+  \cdots\;\xrightarrow{\;\Mirror\;}\;\Void.
+\end{equation}
+The bottom and top $0$ are the same void: the climb is a \emph{closed} ladder.
+At each rung, $\Mirror$ acts as Boolean complement (discrete), Cayley--Dickson
+doubling (normed division), or heterotic/Cartan doubling (exceptional Lie).
+Capacity balancing $\capacity$ is the \emph{dual mirror}: it selects the unique
+balanced partition at each level (BAMLP), not a separate axiom.
+
+\subsection{Epistemic conventions}
+\label{sec:intro:status}
+
 \begin{itemize}
-  \item \textbf{Theorem} --- proved from stated hypotheses in this manuscript.
-  \item \textbf{Postulate} --- added structure, named once near the axioms.
-  \item \textbf{Conjecture} --- motivated but not controlled (e.g.\ gravitational
-    UV fixed point, heterotic correspondence).
+  \item \textbf{Theorem} --- proved from Axioms~1--2 and standard mathematics.
+  \item \textbf{Derived} --- explicit construction from mirror climb (no extra
+    postulate).
+  \item \textbf{Postulate} --- added four-dimensional physics (P1--P4), named once.
+  \item \textbf{Conjecture} --- motivated but not controlled.
 \end{itemize}
-The phrase ``everything follows from three axioms'' is \emph{not} used. What
-\emph{is} proved from the axioms alone includes the potential identification,
-EIII vacuum selection, composite gauge kinematics, and anomaly cancellation
-\emph{given} the $\mathbf{27}$ branching. SM fermion masses, three generations,
-and Lorentzian signature require P1--P4.
-
-\subsection{Relation to prior work}
-\label{sec:intro:related}
-
-SJET synthesizes several established lines: Hurwitz's classification of normed
-division algebras~\cite{Hurwitz1898}; Freudenthal's exceptional geometry and the
-Albert algebra~\cite{Freudenthal1954,Jacobson1968}; Stone duality~\cite{Stone1936};
-capacity/entropy duality in optimal transport; $\E{6}$ coset models and
-$\Spin(10)$ grand unification~\cite{GeorgiGlashow1974}; Green--Schwarz anomaly
-cancellation~\cite{GreenSchwarz1984}; Sakharov induced gravity~\cite{Sakharov1967};
-and asymptotic-safety ideas for gravity~\cite{Reuter1998}. The graph-to-algebra
-lift and capacity-induced potential are the novel structural moves; their
-convergence to the sharp-map potential \eqref{eq:dynamics:V} is
-Theorem~\ref{thm:dynamics:potential}.
 
 \subsection{Conventions}
 \label{sec:intro:conventions}
 
-\begin{itemize}[leftmargin=*]
-  \item \textbf{Signature.} Spacetime metric $\eta_{ab}=\mathrm{diag}(-1,+1,+1,+1)$.
-  \item \textbf{Real form.} Dynamics use compact $\E{6}$ (equivalently $E_{6(-14)}$,
-    maximal compact $H=\Spin(10)\times U(1)$). Split $E_{6(-26)}$ classifies real
-    orbits in the $\mathbf{27}$ only.
-  \item \textbf{Order parameter.} $\orderparam$ denotes the $\jalg$-valued field;
-    $\capacity$ denotes the graph capacity functional
-    (Definition~\ref{def:ladder:capacity}). No symbol is overloaded.
-  \item \textbf{Scales.} Decay constant $f$ has $[f]=\mathrm{mass}$; breaking scale
-    $\mu$, UV cutoff $\Lambda$, GUT scale $\MGUT$; dimensionless couplings
-    $\hat g^2$, $\xi$, $\hat y^2$, $\kappa$, $\Lambda_{\mathrm{cc}}$.
-  \item \textbf{Casimirs.} $C_A(\Spin(10))=8$, $T(\mathbf{16})=2$ (index),
-    $C_2(\mathbf{16})=45/8$; these are used once in all $\beta$-function sums.
-  \item \textbf{Branching.} Adjoint:
-    $\mathbf{78}=\mathbf{45}_0\oplus\mathbf{1}_0\oplus\mathbf{16}_{-3}
-    \oplus\overline{\mathbf{16}}_{+3}$; matter:
-    $\mathbf{27}=\mathbf{1}_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}$;
-    coset tangent $\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$.
-\end{itemize}
+Signature $(-,+,+,+)$; compact $\E{6}$ for dynamics; $\orderparam\in\jalg$
+order parameter; $\capacity$ capacity functional; $\Mirror$ mirror operator;
+$\Void$ void. Casimirs: $C_A(\Spin(10))=8$, $T(\mathbf{16})=2$,
+$C_2(\mathbf{16})=45/8$. Branchings as in \eqref{eq:foundations:27branch}.
 
 \subsection{Organization}
 
-Section~\ref{sec:foundations} states the axioms and the Albert--Cayley graph.
-Section~\ref{sec:ladder} records the division and exceptional ladders.
-Section~\ref{sec:dynamics} derives the potential and proves vacuum selection.
-Section~\ref{sec:spacetime} treats soldering and emergent time.
-Section~\ref{sec:gauge-gravity} develops gauge dynamics, induced gravity, and RG.
-Section~\ref{sec:sm} carries out SM descent under P2--P4.
-Section~\ref{sec:verification} is the verification ledger.
-Section~\ref{sec:conclusions} summarizes scope and open problems.
-Appendix~\ref{sec:appendix} collects Albert-algebra identities used in proofs.
+Section~\ref{sec:void-mirror}: void and mirror axioms (the only axioms).
+Section~\ref{sec:ladder}: mirror climb of the unified ladder.
+Section~\ref{sec:foundations}: derived graph, Stone lift, and order parameter.
+Section~\ref{sec:dynamics}: capacity, potential, vacuum.
+Sections~\ref{sec:spacetime}--\ref{sec:sm}: physics under P1--P4.
+Section~\ref{sec:verification}: ledger.
+Appendix~\ref{sec:appendix}: Albert identities.

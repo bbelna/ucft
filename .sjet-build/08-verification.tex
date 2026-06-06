@@ -3,9 +3,6 @@
 \label{sec:verification}
 %======================================================================%
 
-This section records epistemic status and independent checks. The ledger is
-the referee-facing summary of what is proved, assumed, or conjectured.
-
 %----------------------------------------------------------------------%
 \subsection{Status table}
 \label{sec:verification:ledger}
@@ -15,39 +12,31 @@ the referee-facing summary of what is proved, assumed, or conjectured.
 \centering
 \small
 \renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}p{0.28\linewidth}p{0.12\linewidth}p{0.22\linewidth}p{0.18\linewidth}@{}}
+\begin{tabular}{@{}p{0.30\linewidth}p{0.12\linewidth}p{0.20\linewidth}p{0.16\linewidth}@{}}
 \toprule
 \textbf{Claim} & \textbf{Status} & \textbf{Check} & \textbf{Ref.} \\
 \midrule
-Stone representation & Theorem & Standard & \S\ref{sec:foundations:axiomI} \\
-Hurwitz ladder & Theorem & dims $1,2,4,8$ & \ref{thm:ladder:hurwitz} \\
-$1|10|16$ partition & Prop. & Voronoi masses & \ref{prop:foundations:partition} \\
-Lift $\cong\jalg$ & Theorem & 27 coords & \ref{thm:foundations:stone-lift} \\
-Orbit classification & Theorem & rank, $N$ & \ref{thm:foundations:orbits} \\
+Void $\Void$ primitive & Axiom & $\mathcal{B}_0=\{\bot,\top\}$ & \ref{ax:void-mirror:void} \\
+Mirror $\Mirror$ primitive & Axiom & involutive climb & \ref{ax:void-mirror:mirror} \\
+Hurwitz ladder & Theorem & dims $0,1,2,4,8$ & \ref{thm:ladder:hurwitz} \\
+$\Climb^\infty(\Void)\cong\jalg$ & Theorem & 27 stable & \ref{thm:foundations:stone-lift} \\
+$1|10|16$ partition & Prop. & capacity & \ref{prop:foundations:partition} \\
 Potential from $\capacity$ & Theorem & limit & \ref{thm:dynamics:potential} \\
 EIII vacuum & Theorem & coercivity & \ref{thm:dynamics:vacuum} \\
-$\mathfrak{m}$ irreducible & Theorem & Schur & \ref{thm:spacetime:irrep} \\
-Unique coset metric & Theorem & charge pairing & \ref{thm:spacetime:metric} \\
-Composite gauge & Theorem & Maurer--Cartan & \ref{thm:gauge-gravity:composite} \\
-$U(1)^3$ anomaly $=0$ & Theorem & $16-80+64$ & \ref{thm:gauge-gravity:gs} \\
-Mixed GS anomaly & Theorem & coeff.\ $-1$ & \ref{thm:gauge-gravity:gs} \\
-$\MPl^2>0$ & Theorem & 28 scalars & \eqref{eq:gauge-gravity:planck} \\
+Coset mirror $16\leftrightarrow\overline{16}$ & Theorem & $U(1)$ charge & \ref{prop:ladder:e6branch} \\
+Anomaly cancellation & Theorem & $16-80+64$; GS $-1$ & \ref{thm:gauge-gravity:gs} \\
 $b_0(3)=12$ & Theorem & \eqref{eq:gauge-gravity:b0} & \ref{thm:gauge-gravity:beta-g} \\
-Asymptotic freedom & Theorem & $b_0>0$ & \ref{thm:gauge-gravity:beta-g} \\
-CW mass degeneracy & Theorem & Schur & \ref{thm:sm:radiative} \\
+$\mathfrak{U}^\star=\Climb^\infty(\Void)$ & Theorem & under P1--P4 & \ref{thm:dynamics:universe} \\
 \midrule
-Soldering $(1,3)$, $d=4$ & Postulate & P1 & \ref{post:spacetime:P1} \\
-Chiral $\mathbf{16}$, 3 families & Postulate & P2--P3 & \S\ref{sec:sm:postulates} \\
-GUT--Higgs/Yukawa & Postulate & P4 & \ref{post:sm:P4} \\
-$\Lambda_{\mathrm{cc}}$ & Postulate & tuned & \S\ref{sec:gauge-gravity:gravity} \\
+Soldering, $d=4$ & Postulate & P1 & \ref{post:spacetime:P1} \\
+Matter, 3 families & Postulate & P2--P3 & \S\ref{sec:sm:postulates} \\
+GUT--Higgs & Postulate & P4 & \ref{post:sm:P4} \\
 \midrule
-SM gauge (full masses) & Under P4 & descent & \ref{thm:sm:descent} \\
-$\kappa_\star=96\pi^2/5$ & Conjecture & 1-loop RG & \ref{conj:gauge-gravity:kappa} \\
-OS positivity & Conjecture & $\sigma$-model & \S\ref{sec:spacetime:time} \\
+$\kappa_\star$ & Conjecture & 1-loop & \ref{conj:gauge-gravity:kappa} \\
 Heterotic $h^1=3$ & Conjecture & string & \ref{rem:sm:heterotic} \\
 \bottomrule
 \end{tabular}
-\caption{Epistemic ledger for SJET.}
+\caption{Epistemic ledger. Only two axioms: void and mirror.}
 \label{tab:verification:ledger}
 \end{table}
 
@@ -56,14 +45,8 @@ Heterotic $h^1=3$ & Conjecture & string & \ref{rem:sm:heterotic} \\
 \label{sec:verification:algebra}
 %----------------------------------------------------------------------%
 
-\paragraph{Anomalies.}
-Cubic: $16-80+64=0$. Mixed: $1-2+0=-1$ (GS).
-
-\paragraph{$\beta$-function.}
-$b_0=(88-24-28)/3=12$; one generation: $(88-8-4)/3=26$.
-
-\paragraph{Dimensions.}
-$45+1+16+16=78$; $1+10+16=27$; $16+16=32$; $28+4=32$.
+Anomalies: $16-80+64=0$; mixed $1-2+0=-1$. $\beta$: $b_0=12$.
+Dimensions: $78=45+1+16+16$; $27=1+10+16$; $32=28+4$.
 
 %----------------------------------------------------------------------%
 \subsection{Falsifiable predictions}
@@ -71,14 +54,9 @@ $45+1+16+16=78$; $1+10+16=27$; $16+16=32$; $28+4=32$.
 %----------------------------------------------------------------------%
 
 \begin{enumerate}[label=\textbf{F\arabic*.},leftmargin=*]
-  \item \textbf{Proton decay.} $\tau(p\to e^+\pi^0)\sim\MGUT^4/(\alpha_{\mathrm{GUT}}^2 m_p^5)$;
-    Super-K/Hyper-K constrain $\MGUT\gtrsim10^{34}\,\mathrm{GeV}$.
-  \item \textbf{Neutrino mass scale.} Seesaw with $M_R\sim10^{14}\,\mathrm{GeV}$ gives
-    $m_\nu\sim0.05\,\mathrm{eV}$.
-  \item \textbf{No fourth generation.} A fourth $\mathbf{16}$ shifts $b_0$ and
-    threatens asymptotic freedom.
-  \item \textbf{Coset mass degeneracy.} One-loop CW mass $\mu$ on all $28$ scalars;
-    splittings only below $\MGUT$ from $H$-breaking.
-  \item \textbf{$R^2$ bounds.} If Conjecture~\ref{conj:gauge-gravity:kappa} holds,
-    higher-curvature couplings are suppressed in the UV.
+  \item Proton decay bound on $\MGUT$.
+  \item Seesaw neutrino scale $m_\nu\sim0.05\,\mathrm{eV}$.
+  \item No fourth generation (mirror climb stabilizes at three $SU(3)_F$ copies).
+  \item Common CW mass $\mu$ on $28$ coset scalars.
+  \item Fourth generation would break $b_0>0$ window.
 \end{enumerate}

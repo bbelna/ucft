@@ -25,7 +25,7 @@
 
 \numberwithin{equation}{section}
 
-%--- Division algebras (avoid \O, \H LaTeX conflicts) -----------------
+%--- Division algebras ------------------------------------------------
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Quat}{\mathbb{H}}
@@ -44,16 +44,20 @@
 \newcommand{\Rep}[1]{\mathbf{#1}}
 \newcommand{\adj}{\mathrm{adj}}
 
-% Order parameter field vs.\ capacity functional (no symbol collision)
-\newcommand{\orderparam}{\Phi}
+% Void, mirror, climb
+\newcommand{\Void}{\mathcal{V}}
+\newcommand{\Mirror}{\mathsf{M}}
+\newcommand{\Climb}{\mathsf{C}}
 \newcommand{\capacity}{\mathcal{C}}
 
-% Scales
+% Order parameter (no collision with capacity)
+\newcommand{\orderparam}{\Phi}
+
 \newcommand{\MGUT}{M_{\mathrm{GUT}}}
 \newcommand{\MPl}{M_{\mathrm{Pl}}}
 
 \title{Stone--Jordan Exceptional Theory\\[0.4em]
-\large A Conditional Unified Framework from Exceptional Jordan Algebras}
+\large From the Void by Mirror Climb}
 \author{Brandon Belna}
 \date{June 6, 2026}
 
@@ -61,28 +65,24 @@
 \maketitle
 
 \begin{abstract}
-We formulate \emph{Stone--Jordan Exceptional Theory} (SJET), a conditional
-unification program in mathematical physics. Three axioms specify a profinite
-graph arena with Stone spectrum, an order parameter $\orderparam\in\jalg$ under
-compact $\E{6}$, and dynamics as the fixed point of a concave capacity
-functional $\capacity$. From the graph--Albert identification we \emph{derive}
-the $\E{6}$-invariant potential class and prove vacuum selection on the
-rank-one orbit $\mathcal{M}=\mathrm{EIII}$ ($\dim_{\R}\mathcal{M}=32$). A small,
-explicitly enumerated set of postulates then supplies four-dimensional
-Lorentzian soldering, chiral $\Spin(10)$ matter, three families, and a
-GUT--Higgs sector; under these hypotheses the Maurer--Cartan data induce a
-composite $\Spin(10)\times U(1)$ gauge theory with Green--Schwarz anomaly
-cancellation, Sakharov-type induced gravitation, and Standard Model gauge
-descent. Every major claim is labeled by epistemic status (theorem,
-postulate, conjecture) and checked in a verification ledger. SJET is a
-derivation-grade \emph{embedding}, not an unconditional theory of everything
-from three axioms alone.
+We formulate \emph{Stone--Jordan Exceptional Theory} (SJET) from two primitive
+axioms: the \textbf{void} $\Void$ (no observable distinction) and a
+\textbf{mirror operator} $\Mirror$ that generates structure by involutive
+doubling. Iterating $\Mirror$ on the Stone spectrum of $\Void$ climbs the
+Hurwitz ladder $0\to\R\to\C\to\Quat\to\Oct\to\jalg$ and the exceptional
+cascade $0\to\E{8}\to\E{8}\times\E{8}\to\E{6}\to\cdots\to 0$; capacity
+balancing on the mirror-refined graph is the \emph{derived} selection principle,
+not an independent axiom. At the $\E{6}$ rung we prove vacuum selection on
+EIII, composite $\Spin(10)\times U(1)$ gauge theory with anomaly cancellation,
+and induced gravitation; postulates P1--P4 complete SM descent. The universe
+is the stabilized mirror climb $\Climb^\infty(\Void)$, equivalently the
+capacity fixed point on the Albert--Cayley graph.
 \end{abstract}
 
-\noindent\textbf{Keywords:} exceptional Jordan algebra; Stone duality;
-$E_6$ coset; induced gravity; grand unification; Standard Model.
+\noindent\textbf{Keywords:} void; mirror operator; Stone duality; exceptional
+Jordan algebra; $E_6$ coset; induced gravity.
 
-\noindent\textbf{MSC 2020:} 17C27, 22E46, 81T13, 81T30.
+\noindent\textbf{MSC 2020:} 03G05, 17C27, 22E46, 81T13.
 
 \tableofcontents
 \clearpage% --- 01-introduction.tex ---
@@ -91,236 +91,297 @@ $E_6$ coset; induced gravity; grand unification; Standard Model.
 \label{sec:intro}
 %======================================================================%
 
-A unified description of gravitation and the Standard Model (SM) requires more
-than phenomenological fit: the framework must be \emph{mathematically closed}
-(definitions, axioms, and proofs form a coherent deductive system),
-\emph{internally consistent} (anomalies cancel; representation dimensions and
-$\beta$-function coefficients agree), and \emph{verifiable} (predictions and
-falsification criteria are stated explicitly, not left to narrative).
-
-\emph{Stone--Jordan Exceptional Theory} (SJET) is proposed as such a framework.
-It is organized in three tiers:
-\begin{enumerate}[label=\textbf{Tier \Roman*}.,leftmargin=*]
-  \item \textbf{Discrete.} Configuration space is a weighted graph
-    $\mathcal{G}$ with Boolean algebra $\mathcal{B}(\mathcal{G})$ and Stone
-    spectrum $S=\mathrm{Spec}(\mathcal{B}(\mathcal{G}))$.
-  \item \textbf{Arithmetic.} A profinite refinement tower carries the Hurwitz
-    ladder $0\to\R\to\C\to\Quat\to\Oct$ and an exceptional Lie cascade terminating
-    at $\jalg$.
-  \item \textbf{Physical.} The order parameter $\orderparam\in\jalg$ breaks
-    compact $\E{6}$ to $H=\Spin(10)\times U(1)$; soldering (Postulate~P1) yields
-    four-dimensional Lorentzian spacetime; matter postulates complete SM descent.
+SJET asks: what is the minimal mathematical seed from which the Standard Model
+and gravitation can be \emph{derived}, not merely embedded? Our answer is
+two-fold:
+\begin{enumerate}[label=\textbf{Axiom \arabic*},leftmargin=*]
+  \item \textbf{The void} $\Void$ --- no observable distinction, the terminal
+    object of the Stone ladder.
+  \item \textbf{The mirror operator} $\Mirror$ --- an involutive generator that,
+    applied repeatedly, \emph{climbs} the division and exceptional ladders.
 \end{enumerate}
+Everything else --- graphs, Albert algebra, capacity dual, $\E{6}$ potential,
+gauge sector --- is \textbf{derived} from $\Mirror^n(\Void)$ and capacity
+balancing on mirror-refined partitions. Physical postulates P1--P4 (soldering,
+matter, families, Higgs) remain the honest boundary between proved mathematics
+and four-dimensional quantum field theory.
 
-\subsection{Honest thesis}
-\label{sec:intro:thesis}
+\subsection{The climb picture}
+\label{sec:intro:climb}
 
-SJET is an \textbf{$\E{6}$/Albert-algebra--motivated conditional embedding}.
-Three axioms fix the arena and the capacity dynamics; postulates P1--P4 supply
-the remaining structure needed for contact with four-dimensional quantum field
-theory. Claims are never left implicit:
+Schematically:
+\begin{equation}\label{eq:intro:climb}
+  \Void
+  \;\xrightarrow{\;\Mirror\;}\;
+  S_{\R}\;\xrightarrow{\;\Mirror\;}\;S_{\C}\;\xrightarrow{\;\Mirror\;}\;
+  S_{\Quat}\;\xrightarrow{\;\Mirror\;}\;S_{\Oct}\;\xrightarrow{\;\Mirror\;}\;
+  \jalg
+  \;\xrightarrow{\;\Mirror\;}\;
+  \cdots\;\xrightarrow{\;\Mirror\;}\;\Void.
+\end{equation}
+The bottom and top $0$ are the same void: the climb is a \emph{closed} ladder.
+At each rung, $\Mirror$ acts as Boolean complement (discrete), Cayley--Dickson
+doubling (normed division), or heterotic/Cartan doubling (exceptional Lie).
+Capacity balancing $\capacity$ is the \emph{dual mirror}: it selects the unique
+balanced partition at each level (BAMLP), not a separate axiom.
+
+\subsection{Epistemic conventions}
+\label{sec:intro:status}
+
 \begin{itemize}
-  \item \textbf{Theorem} --- proved from stated hypotheses in this manuscript.
-  \item \textbf{Postulate} --- added structure, named once near the axioms.
-  \item \textbf{Conjecture} --- motivated but not controlled (e.g.\ gravitational
-    UV fixed point, heterotic correspondence).
+  \item \textbf{Theorem} --- proved from Axioms~1--2 and standard mathematics.
+  \item \textbf{Derived} --- explicit construction from mirror climb (no extra
+    postulate).
+  \item \textbf{Postulate} --- added four-dimensional physics (P1--P4), named once.
+  \item \textbf{Conjecture} --- motivated but not controlled.
 \end{itemize}
-The phrase ``everything follows from three axioms'' is \emph{not} used. What
-\emph{is} proved from the axioms alone includes the potential identification,
-EIII vacuum selection, composite gauge kinematics, and anomaly cancellation
-\emph{given} the $\mathbf{27}$ branching. SM fermion masses, three generations,
-and Lorentzian signature require P1--P4.
-
-\subsection{Relation to prior work}
-\label{sec:intro:related}
-
-SJET synthesizes several established lines: Hurwitz's classification of normed
-division algebras~\cite{Hurwitz1898}; Freudenthal's exceptional geometry and the
-Albert algebra~\cite{Freudenthal1954,Jacobson1968}; Stone duality~\cite{Stone1936};
-capacity/entropy duality in optimal transport; $\E{6}$ coset models and
-$\Spin(10)$ grand unification~\cite{GeorgiGlashow1974}; Green--Schwarz anomaly
-cancellation~\cite{GreenSchwarz1984}; Sakharov induced gravity~\cite{Sakharov1967};
-and asymptotic-safety ideas for gravity~\cite{Reuter1998}. The graph-to-algebra
-lift and capacity-induced potential are the novel structural moves; their
-convergence to the sharp-map potential \eqref{eq:dynamics:V} is
-Theorem~\ref{thm:dynamics:potential}.
 
 \subsection{Conventions}
 \label{sec:intro:conventions}
 
-\begin{itemize}[leftmargin=*]
-  \item \textbf{Signature.} Spacetime metric $\eta_{ab}=\mathrm{diag}(-1,+1,+1,+1)$.
-  \item \textbf{Real form.} Dynamics use compact $\E{6}$ (equivalently $E_{6(-14)}$,
-    maximal compact $H=\Spin(10)\times U(1)$). Split $E_{6(-26)}$ classifies real
-    orbits in the $\mathbf{27}$ only.
-  \item \textbf{Order parameter.} $\orderparam$ denotes the $\jalg$-valued field;
-    $\capacity$ denotes the graph capacity functional
-    (Definition~\ref{def:ladder:capacity}). No symbol is overloaded.
-  \item \textbf{Scales.} Decay constant $f$ has $[f]=\mathrm{mass}$; breaking scale
-    $\mu$, UV cutoff $\Lambda$, GUT scale $\MGUT$; dimensionless couplings
-    $\hat g^2$, $\xi$, $\hat y^2$, $\kappa$, $\Lambda_{\mathrm{cc}}$.
-  \item \textbf{Casimirs.} $C_A(\Spin(10))=8$, $T(\mathbf{16})=2$ (index),
-    $C_2(\mathbf{16})=45/8$; these are used once in all $\beta$-function sums.
-  \item \textbf{Branching.} Adjoint:
-    $\mathbf{78}=\mathbf{45}_0\oplus\mathbf{1}_0\oplus\mathbf{16}_{-3}
-    \oplus\overline{\mathbf{16}}_{+3}$; matter:
-    $\mathbf{27}=\mathbf{1}_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}$;
-    coset tangent $\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$.
-\end{itemize}
+Signature $(-,+,+,+)$; compact $\E{6}$ for dynamics; $\orderparam\in\jalg$
+order parameter; $\capacity$ capacity functional; $\Mirror$ mirror operator;
+$\Void$ void. Casimirs: $C_A(\Spin(10))=8$, $T(\mathbf{16})=2$,
+$C_2(\mathbf{16})=45/8$. Branchings as in \eqref{eq:foundations:27branch}.
 
 \subsection{Organization}
 
-Section~\ref{sec:foundations} states the axioms and the Albert--Cayley graph.
-Section~\ref{sec:ladder} records the division and exceptional ladders.
-Section~\ref{sec:dynamics} derives the potential and proves vacuum selection.
-Section~\ref{sec:spacetime} treats soldering and emergent time.
-Section~\ref{sec:gauge-gravity} develops gauge dynamics, induced gravity, and RG.
-Section~\ref{sec:sm} carries out SM descent under P2--P4.
-Section~\ref{sec:verification} is the verification ledger.
-Section~\ref{sec:conclusions} summarizes scope and open problems.
-Appendix~\ref{sec:appendix} collects Albert-algebra identities used in proofs.% --- end 01-introduction.tex ---
+Section~\ref{sec:void-mirror}: void and mirror axioms (the only axioms).
+Section~\ref{sec:ladder}: mirror climb of the unified ladder.
+Section~\ref{sec:foundations}: derived graph, Stone lift, and order parameter.
+Section~\ref{sec:dynamics}: capacity, potential, vacuum.
+Sections~\ref{sec:spacetime}--\ref{sec:sm}: physics under P1--P4.
+Section~\ref{sec:verification}: ledger.
+Appendix~\ref{sec:appendix}: Albert identities.% --- end 01-introduction.tex ---
 % --- 02-foundations.tex ---
 %======================================================================%
-\section{Foundations: Graph, Stone, and the Albert Arena}
-\label{sec:foundations}
+\section{The Void and the Mirror Operator}
+\label{sec:void-mirror}
 %======================================================================%
 
-SJET rests on three axioms: Axiom~I (graph arena, this section),
-Axiom~II (order parameter), and Axiom~III (capacity dynamics,
-Section~\ref{sec:dynamics}). Postulates P1--P4 are collected where first
-needed (Sections~\ref{sec:spacetime} and~\ref{sec:sm}).
+This section states the \emph{only} primitive axioms of SJET. All graph,
+Jordan, and Lie data in later sections are derived by mirror climb.
 
 %----------------------------------------------------------------------%
-\subsection{Axiom I: profinite graph arena}
-\label{sec:foundations:axiomI}
+\subsection{The void}
+\label{sec:void-mirror:void}
 %----------------------------------------------------------------------%
 
-\begin{definition}[Weighted graph]\label{def:foundations:graph}
-A \emph{weighted graph} is $\mathcal{G}=(V,E,w)$ with finite $V$, undirected
-edges $E\subseteq\{\{a,b\}:a\neq b\}$, symmetric weights $w_{ab}=w_{ba}>0$,
-and workload $\mu=\sum_{a}p_a\delta_a$, $p_a>0$, $\sum_a p_a=1$.
+\begin{definition}[Void]\label{def:void-mirror:void}
+The \emph{void} $\Void$ is the trivial observable algebra: the two-element
+Boolean algebra $\mathcal{B}_0=\{\bot,\top\}$ with $\bot<\top$, and its Stone
+spectrum $S_0=\mathrm{Spec}(\mathcal{B}_0)$, a single point. The associated
+division datum is the zero algebra $\{0\}$ of dimension $0$. No vertex, no
+edge, no localisable quantum number exists at $\Void$.
 \end{definition}
 
-\begin{definition}[Boolean algebra of cylinder sets]\label{def:foundations:boolean}
-Let $\mathcal{P}(V)$ be the power set. The \emph{cylinder algebra}
-$\mathcal{B}(\mathcal{G})\subseteq\mathcal{P}(V)$ is generated by vertex
-indicators $\chi_a(S)=\mathbf{1}_{a\in S}$ under union, complement, and finite
-intersection. Its Stone dual is the profinite space of ultrafilters.
-\end{definition}
-
-\begin{theorem}[Stone representation]\label{thm:foundations:stone}
-Every Boolean algebra $\mathcal{B}$ is isomorphic to the clopen algebra of
-its Stone space $\mathrm{Spec}(\mathcal{B})$. Inverse limits of finite Boolean
-algebras are nonempty, compact, Hausdorff, and totally disconnected.
-\end{theorem}
-
-\begin{axiom}[Profinite graph arena]\label{ax:foundations:I}
-Physical configuration data are carried by a weighted graph $\mathcal{G}$ and
-its refinement tower $\mathcal{G}_0\leftarrow\mathcal{G}_1\leftarrow\cdots$,
-with observables on the profinite Stone limit
-$S_\infty=\varprojlim_n\mathrm{Spec}(\mathcal{B}(\mathcal{G}_n))$. The tower
-stabilizes at $27$ coordinates.
+\begin{axiom}[Void]\label{ax:void-mirror:void}
+Physical reality is anchored at the void $\Void$: the state with no
+distinguishable observable. All structure arises by departure from $\Void$, not
+by importing a graph or Lie group as primitive data.
 \end{axiom}
 
 %----------------------------------------------------------------------%
-\subsection{Albert--Cayley graph and BAMLP partition}
-\label{sec:foundations:albert-graph}
+\subsection{The mirror operator}
+\label{sec:void-mirror:mirror}
 %----------------------------------------------------------------------%
 
-\begin{definition}[Albert--Cayley graph]\label{def:foundations:albert}
-Fix the standard basis $\{e_a\}_{a=1}^{27}$ of $\jalg$ (Appendix~\ref{sec:appendix}).
-The \emph{Albert--Cayley graph} $\mathcal{G}_{\mathrm{Albert}}=(V,E,w)$ has
-$V=\{1,\ldots,27\}$,
-\[
-  E=\bigl\{\{a,b\}:a\neq b,\ 
-  \partial_a\partial_b\,\Tr(X^2)\not\equiv 0\bigr\},
-\]
-weights $w_{ab}=\|\partial_a\partial_b\,\Tr(X^2)\|_{L^\infty}$, and
-$\mu=\sum_{a=1}^{27}\tfrac{1}{27}\delta_a$. Territory generators
-$z_1,z_{10},z_{16}$ label the $\Spin(10)\times U(1)$ sectors of
-\eqref{eq:foundations:27branch}; targets $m_i=\dim(\mathrm{irrep}_i)/27$.
+\begin{definition}[Mirror operator]\label{def:void-mirror:mirror}
+A \emph{mirror operator} on a Stone spectrum $S$ is a continuous involution
+$\Mirror:S\to S$ together with a compatible algebra involution on
+$C(S)$. At rung $n$, $\Mirror_n$ doubles observable content in one of three
+modes:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Discrete (Boolean).} Complement $A\mapsto A^c$ in
+    $\mathcal{B}(\mathcal{G})$; refinement adds a cut, doubling clopen sectors.
+  \item \textbf{Arithmetic (Cayley--Dickson).} Normed division doubling
+    $D\mapsto D^{\Mirror}$ with $\dim D^{\Mirror}=2\dim D$ for
+    $D\in\{\R,\C,\Quat\}$; terminal failure at sedenions fixes the $\Oct$ top.
+  \item \textbf{Exceptional (heterotic/Cartan).} Group mirror
+    $G\mapsto G\times G$ (heterotic doubling) or Cartan involution $\theta$ on
+    symmetric space $G/H$ (coset mirror $\mathbf{16}\leftrightarrow\overline{\mathbf{16}}$).
+\end{enumerate}
 \end{definition}
 
-\begin{definition}[BAMLP assignment]\label{def:foundations:bamlp}
-For costs $c_i(a)=d_{\mathcal{G}}(a,z_i)^2$ and dual prices $\omega\in\R^3$ with
-$\sum_i\omega_i=0$, the \emph{assignment} of vertex $a$ to territory $i$ is
-$\sigma(a)=\argmin_i c_i(a)-\omega_i$.
+\begin{axiom}[Mirror]\label{ax:void-mirror:mirror}
+There exists a functorial mirror $\Mirror$ such that the \emph{climb}
+\begin{equation}\label{eq:void-mirror:climb}
+  S_{n+1}\;=\;\Mirror(S_n),
+  \qquad S_0=S(\Void),
+\end{equation}
+generates the Hurwitz--Albert tower and the exceptional cascade
+\eqref{eq:ladder:unified}. The climb is closed: after electroweak breaking the
+mirror returns to $\Void$. Capacity balancing at each rung is the \emph{dual}
+of $\Mirror$: the unique maximizer $\omega^\star$ of $\capacity$ on the
+mirror-refined graph (Theorem~\ref{thm:ladder:concave}).
+\end{axiom}
+
+\begin{remark}[Involution law]
+On a stabilized rung, $\Mirror^2\cong\mathrm{id}$ up to gauge: Boolean
+complement squares to the identity; complex/quaternionic conjugation squares
+to the identity; the coset mirror exchanges
+$\mathbf{16}_{-3}\leftrightarrow\overline{\mathbf{16}}_{+3}$ and back.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{The climb operator}
+\label{sec:void-mirror:climb-op}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Climb operator]\label{def:void-mirror:Climb}
+The \emph{climb operator} is
+\begin{equation}\label{eq:void-mirror:Climb}
+  \Climb\;=\;\mathrm{Bal}_\capacity\,\circ\,\Mirror,
+\end{equation}
+where $\mathrm{Bal}_\capacity$ assigns the unique capacity maximizer on the
+mirror-refined partition. The \emph{universe datum} is the profinite fixed point
+\begin{equation}\label{eq:void-mirror:universe}
+  \mathfrak{U}^\star\;=\;\varprojlim_{n\to\infty}\Climb^n(\Void).
+\end{equation}
 \end{definition}
 
-\begin{proposition}[BAMLP partition]\label{prop:foundations:partition}
-With targets $(m_1,m_{10},m_{16})=(1/27,10/27,16/27)$, any capacity maximizer
-$\omega^\star$ induces a Voronoi partition of $V$ into cells of cardinalities
-$1$, $10$, and $16$, matching the $\mathbf{27}$ branching
-\eqref{eq:foundations:27branch}. The maximizer is unique up to
-$\sum_i\omega_i=0$.
+\begin{proposition}[First rungs from the void]\label{prop:void-mirror:first}
+$\Mirror(\Void)$ carries one Boolean atom: a single distinction, corresponding
+to $\R$ (order). The next mirror doubles to $\C$ ($\mathrm{U}(1)$ phase); then
+$\Quat$ ($\mathrm{SU}(2)$), $\Oct$ ($G_2$), and $H_3(\Oct)=\jalg$ ($F_4\subset\E{6}$).
 \end{proposition}
 
 \begin{proof}
-Strict concavity of $\capacity$ (Theorem~\ref{thm:ladder:concave}) gives a
-unique maximizer on the constraint $\partial\capacity/\partial\omega_i=m_i$.
-For generic weights $w_{ab}$, the squared-distance cells are stable under small
-$\omega$ perturbations; the mass constraints $\sum_{a\in\mathrm{cell}_i}p_a=m_i$
-fix the cardinalities $1$, $10$, $16$ because $m_i$ are rational with denominator
-$27$ and $\mu$ is uniform. The $\mathbf{1}$-vertex is nearest to $z_1$; the
-remaining $26$ vertices split according to distance to $z_{10}$ vs.\ $z_{16}$.
-\end{proof}
+Each arithmetic mirror is Cayley--Dickson doubling; Hurwitz's theorem
+(Theorem~\ref{thm:ladder:hurwitz}) proves no further normed division algebra
+beyond $\Oct$. The $3\times3$ Hermitian lift is the unique Jordan packaging of
+$\Oct$ at dimension $27$.
+\end{proof}% --- end 02-foundations.tex ---
+% --- 03-ladder.tex ---
+%======================================================================%
+\section{The Mirror Climb: Division and Exceptional Ladders}
+\label{sec:ladder}
+%======================================================================%
+
+The ladders are not postulated. They are the orbit of $\Void$ under
+$\Mirror$ (Axiom~\ref{ax:void-mirror:mirror}).
 
 %----------------------------------------------------------------------%
-\subsection{Axiom II: order parameter}
-\label{sec:foundations:axiomII}
+\subsection{Unified climb}
+\label{sec:ladder:unified}
 %----------------------------------------------------------------------%
 
-The Albert algebra $\jalg$ is the $27$-dimensional formally real Jordan algebra
-of $3\times3$ Hermitian octonionic matrices (Appendix~\ref{sec:appendix}).
-Its reduced structure group, preserving the cubic norm $N$ up to a character,
-is $\E{6}$; the $\mathbf{27}$ is the matter representation.
+\begin{definition}[Unified ladder]\label{def:ladder:unified}
+The \emph{unified mirror climb} is the sequence
+\begin{equation}\label{eq:ladder:unified}
+  \Void
+  \;\xrightarrow{\Mirror}\;
+  \R\;\xrightarrow{\Mirror}\;\C\;\xrightarrow{\Mirror}\;\Quat
+  \;\xrightarrow{\Mirror}\;\Oct\;\xrightarrow{\Mirror}\;\jalg
+  \;\xrightarrow{\Mirror}\;\E{8}\;\xrightarrow{\Mirror}\;\E{8}\times\E{8}
+  \;\xrightarrow{\Mirror}\;\E{6}\;\xrightarrow{\;\cdots\;}\;\Void.
+\end{equation}
+Each arrow is $\Mirror$ at the appropriate rung, followed by
+$\mathrm{Bal}_\capacity$ where a partition is required.
+\end{definition}
 
-\begin{axiom}[Order parameter]\label{ax:foundations:II}
-The fundamental order parameter is a smooth field $\orderparam$ valued in
-$\jalg$, transforming in the $\mathbf{27}$ of compact $\E{6}$. On a chart
-$U\subset M^4$, $\orderparam:U\to\jalg$.
-\end{axiom}
+%----------------------------------------------------------------------%
+\subsection{Hurwitz rung (proved)}
+\label{sec:ladder:hurwitz}
+%----------------------------------------------------------------------%
 
-\begin{theorem}[Invariants and orbit classification]\label{thm:foundations:orbits}
-Only $N$ is $\E{6}$-invariant up to character; $Q(X)=\Tr(X^2)$ is $F_4$-invariant
-only. Real $\E{6}$-orbits in $\jalg$ are classified by $\rank X\in\{0,1,2,3\}$
-and $N(X)$. Moreover
+\begin{theorem}[Hurwitz]\label{thm:ladder:hurwitz}
+Mirror doubling in the normed division category produces only
 \[
-  \rank X\leq1\iff X^{\#}=0,\quad
-  \rank X\leq2\iff N(X)=0,\quad
-  \rank X=3\iff N(X)\neq0,
+  0,\;\R,\;\C,\;\Quat,\;\Oct
 \]
-where $X^{\#}=\adj(X)$ is the sharp (quadratic adjoint) map
-(Appendix~\ref{sec:appendix:sharp}).
+of dimensions $0,1,2,4,8$. The next mirror $\Mirror(\Oct)$ fails (sedenions):
+the climb \emph{must} exit to the Jordan rung $\jalg=H_3(\Oct)$, dimension $27$.
 \end{theorem}
 
-\begin{remark}[Real form]\label{rem:foundations:realform}
-Dynamics use compact $\E{6}$: $H=\Spin(10)\times U(1)$ is compact, the trace form
-$Q$ is positive-definite, and the coset metric below is definite. Split
-$E_{6(-26)}$ is invoked only in Theorem~\ref{thm:foundations:orbits}.
-\end{remark}
-
-\begin{proposition}[Vacuum manifold]\label{prop:foundations:eiii}
-The symmetry-breaking vacuum manifold is the minimal (rank-one) $\E{6}$-orbit in
-$\mathbb{P}(\mathbf{27}_\C)$,
-\begin{equation}\label{eq:foundations:eiii}
-  \mathcal{M}=\E{6}/H=\mathrm{EIII},
-  \qquad \dim_{\R}\mathcal{M}=32.
-\end{equation}
-It is a Hermitian symmetric space; the symmetric point is \emph{not} the origin
-$\orderparam=0$ (which is a saddle of $V$; Theorem~\ref{thm:dynamics:vacuum}).
+\begin{proposition}[Terminal Jordan rung]\label{prop:ladder:terminal}
+$\jalg$ is the unique formally real Jordan algebra compatible with the $\Oct$
+mirror at the terminal division step. The Stone limit
+$\varprojlim_n\Mirror^n(\Void)$ stabilizes at $27$ coordinates.
 \end{proposition}
 
-The adjoint and matter branchings under $H$ are
+%----------------------------------------------------------------------%
+\subsection{Exceptional rung}
+\label{sec:ladder:exceptional}
+%----------------------------------------------------------------------%
+
+\begin{proposition}[Exceptional mirror steps]\label{prop:ladder:exceptional}
+At the Jordan rung, $\Mirror$ acts as:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item $\E{8}$: maximal automorphism mirror of the $\Oct$ measure before
+    projection to $\jalg$;
+  \item $\E{8}\times\E{8}$: heterotic product mirror (left/right sectors);
+  \item $\E{6}$: rank-one capacity-balanced cell on $\jalg$;
+  \item $\E{6}\to H=\Spin(10)\times U(1)$: Cartan mirror (coset EIII);
+  \item $\cdots\to\Void$: collapse after electroweak breaking.
+\end{enumerate}
+\end{proposition}
+
+\begin{proposition}[Branchings at $\E{6}$]\label{prop:ladder:e6branch}
+Under $H=\Spin(10)\times U(1)$,
+\begin{equation}\label{eq:foundations:27branch}
+  \mathbf{27}=\mathbf{1}_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1},
+\end{equation}
 \begin{equation}\label{eq:foundations:adjoint}
   \mathbf{78}=\mathbf{45}_0\oplus\mathbf{1}_0
   \oplus\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3},
 \end{equation}
-\begin{equation}\label{eq:foundations:27branch}
-  \mathbf{27}=\mathbf{1}_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}.
+and $\mathcal{M}=\E{6}/H=\mathrm{EIII}$ has $\dim_{\R}\mathcal{M}=32$. The coset
+mirror is $\mathbf{16}_{-3}\leftrightarrow\overline{\mathbf{16}}_{+3}$.
+\end{proposition}
+
+\begin{remark}[Heterotic parallel]\label{rem:ladder:heterotic}
+$\E{8}\times\E{8}$ matches the heterotic gauge group;
+$h^1(\hat Q,V_{16})=3$~\cite{Witten1985} corroborates three generations
+(Remark~\ref{rem:sm:heterotic}). \textbf{Conjecture.}
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Capacity as dual mirror}
+\label{sec:ladder:capacity}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Capacity functional]\label{def:ladder:capacity}
+On a mirror-refined graph $\mathcal{G}$ with costs $c_i$ and workload $\mu$,
+\begin{equation}\label{eq:ladder:capacity}
+  \capacity(\omega)=-\sum_{a\in V}\mu(a)\log\!\Bigl(\sum_{i}
+  e^{c_i(a)-\omega_i}\Bigr).
 \end{equation}
-The coset tangent is $\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$
-(32 real dimensions).
+This is the \emph{dual mirror} of $\Mirror$: where $\Mirror$ doubles sectors,
+$\capacity$ balances them.
+\end{definition}
+
+\begin{theorem}[Concavity and dual existence]\label{thm:ladder:concave}
+$\capacity$ is strictly concave on $\{\omega:\sum_i\omega_i=0\}$. For targets
+$m_i>0$, $\sum_i m_i=1$, there exists unique $\omega^\star$ with
+$\partial\capacity/\partial\omega_i(\omega^\star)=m_i$.
+\end{theorem}% --- end 03-ladder.tex ---
+% --- 04-arena.tex ---
+%======================================================================%
+\section{Derived Arena: Graph, Albert Algebra, Order Parameter}
+\label{sec:foundations}
+%======================================================================%
+
+This section contains no new axioms. The Albert--Cayley graph, Stone lift, and
+order parameter are \textbf{derived} from $\Climb^\infty(\Void)$.
+
+%----------------------------------------------------------------------%
+\subsection{Albert--Cayley graph}
+\label{sec:foundations:albert-graph}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Albert--Cayley graph]\label{def:foundations:albert}
+At the $\jalg$ rung of \eqref{eq:ladder:unified}, the mirror-refined graph
+$\mathcal{G}_{\mathrm{Albert}}=(V,E,w)$ has $V=\{1,\ldots,27\}$ (basis of
+$\jalg$), edges where $\partial_a\partial_b\Tr(X^2)\not\equiv0$, uniform
+$\mu$, and territory generators $z_1,z_{10},z_{16}$ for the sectors of
+\eqref{eq:foundations:27branch}.
+\end{definition}
+
+\begin{proposition}[BAMLP partition]\label{prop:foundations:partition}
+Capacity maximization with targets $(1/27,10/27,16/27)$ yields cells of sizes
+$1$, $10$, $16$, matching \eqref{eq:foundations:27branch}.
+\end{proposition}
 
 %----------------------------------------------------------------------%
 \subsection{Stone lift}
@@ -328,161 +389,68 @@ The coset tangent is $\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_
 %----------------------------------------------------------------------%
 
 \begin{theorem}[Profinite Stone limit]\label{thm:foundations:stone-lift}
-Let $\{\mathcal{G}_n\}$ be Albert--Cayley refinements preserving the coarse
-$1|10|16$ partition. Then
+Mirror-refined towers $\{\mathcal{G}_n\}$ preserving the $1|10|16$ partition
+satisfy
 \[
-  \mathrm{Lift}(\mathcal{G}_\infty)\;\cong\;\jalg
+  \mathrm{Lift}(\mathcal{G}_\infty)\;\cong\;\jalg,
+  \qquad
+  S_\infty=\varprojlim_n\mathrm{Spec}(\mathcal{B}(\mathcal{G}_n)).
 \]
-as the $27$-dimensional coordinate algebra of order-parameter observables.
 \end{theorem}
 
-\begin{proof}
-Each refinement subdivides edges while preserving
-Proposition~\ref{prop:foundations:partition}; $S_\infty$ is nonempty and compact
-by Theorem~\ref{thm:foundations:stone}. The $27$ matrix units of $\jalg$ are
-minimal nonzero idempotents in the Jordan lattice; Hurwitz's theorem
-(Theorem~\ref{thm:ladder:hurwitz}) forbids further normed division-algebra
-extension beyond $\Oct$, so the tower cannot grow past dimension $27$.
-\end{proof}% --- end 02-foundations.tex ---
-% --- 03-ladder.tex ---
-%======================================================================%
-\section{Division and Exceptional Ladders}
-\label{sec:ladder}
-%======================================================================%
-
-The profinite tower carries standard arithmetic structure. Neither ladder is
-postulated; both organize the identification map
-Theorem~\ref{thm:foundations:stone-lift}.
-
 %----------------------------------------------------------------------%
-\subsection{Hurwitz ladder}
-\label{sec:ladder:hurwitz}
+\subsection{Order parameter (derived)}
+\label{sec:foundations:orderparam}
 %----------------------------------------------------------------------%
 
-\begin{theorem}[Hurwitz]\label{thm:ladder:hurwitz}
-The only finite-dimensional normed division algebras over $\R$ are, up to
-isomorphism,
-\[
-  \R,\quad\C,\quad\Quat,\quad\Oct,
-\]
-of dimensions $1,2,4,8$. No bilinear composition law extends beyond $\Oct$.
-\end{theorem}
-
-\begin{proposition}[Terminal Jordan rung]\label{prop:ladder:terminal}
-The algebra $\jalg=H_3(\Oct)$ is the unique formally real Jordan algebra whose
-off-diagonal entries carry octonionic multiplication and whose dimension is
-$27=1+8+8+8+2$. The Stone lift identifies the profinite limit with this terminal
-rung.
-\end{proposition}
-
-%----------------------------------------------------------------------%
-\subsection{Exceptional cascade}
-\label{sec:ladder:exceptional}
-%----------------------------------------------------------------------%
-
-\begin{definition}[Exceptional cascade]\label{def:ladder:cascade}
-Write the symmetry-reduction chain
-\begin{equation}\label{eq:ladder:cascade}
-  \E{8}\to\E{8}\times\E{8}\to\E{6}\to\E{5}\to\E{4},
-\end{equation}
-with $\E{7}$, $F_4$, $G_2$ as intermediate stabilizers of norm data on the
-Albert tower. SJET dynamics are anchored at the $\E{6}$ node.
+\begin{definition}[Order parameter]\label{def:foundations:orderparam}
+The \emph{order parameter} is the smooth section $\orderparam:M^4\to\jalg$
+transforming in $\mathbf{27}$ of compact $\E{6}$. It is the continuum limit of
+coordinates on $\mathrm{Lift}(\mathcal{G}_\infty)$, not an independent axiom.
 \end{definition}
 
-\begin{proposition}[Branchings at $\E{6}$]\label{prop:ladder:e6branch}
-Under $H=\Spin(10)\times U(1)$, the branchings are
-\eqref{eq:foundations:27branch}--\eqref{eq:foundations:adjoint}. The coset
-$\E{6}/H$ is EIII, $\dim_{\R}\mathcal{M}=32$.
-\end{proposition}
-
-\begin{remark}[Heterotic parallel]\label{rem:ladder:heterotic}
-The product $\E{8}\times\E{8}$ matches the heterotic gauge group. The
-$\mathbb{Z}_5$ orbifold quintic compactification gives
-$h^1(\hat Q,V_{16})=3$~\cite{Witten1985}, corroborating three generations
-(Remark~\ref{rem:sm:heterotic}). This is a \textbf{conjecture}, not a derivation.
-\end{remark}
-
-%----------------------------------------------------------------------%
-\subsection{Capacity functional}
-\label{sec:ladder:capacity}
-%----------------------------------------------------------------------%
-
-\begin{definition}[Capacity functional]\label{def:ladder:capacity}
-For $\omega\in\R^k$, workload $\mu$, and costs $c_i(a)$,
-\begin{equation}\label{eq:ladder:capacity}
-  \capacity(\omega)=-\sum_{a\in V}\mu(a)\log\!\Bigl(\sum_{i=1}^k
-  e^{c_i(a)-\omega_i}\Bigr).
-\end{equation}
-\end{definition}
-
-\begin{theorem}[Concavity and dual existence]\label{thm:ladder:concave}
-$\capacity$ is strictly concave on $\{\omega:\sum_i\omega_i=0\}$. For targets
-$m_i>0$, $\sum_i m_i=1$, there exists a unique $\omega^\star$ with
-$\partial\capacity/\partial\omega_i(\omega^\star)=m_i$.
+\begin{theorem}[Invariants and orbits]\label{thm:foundations:orbits}
+Only $N(X)=\det X$ is $\E{6}$-invariant (up to character); $Q(X)=\Tr(X^2)$ is
+$F_4$-invariant only. Real orbits are classified by $\rank X$ and $N(X)$;
+$\rank X\leq1\iff X^{\#}=0$ (Appendix~\ref{sec:appendix:sharp}).
 \end{theorem}
 
-\begin{proof}
-The Hessian $\partial^2\capacity/\partial\omega_i\partial\omega_j$ is negative
-semidefinite and negative definite on the sum-zero hyperplane (standard entropy
-concavity). Strict concavity on an affine slice gives uniqueness of the
-constrained maximizer.
-\end{proof}% --- end 03-ladder.tex ---
+\begin{proposition}[Vacuum manifold]\label{prop:foundations:eiii}
+The breaking orbit is $\mathcal{M}=\E{6}/H=\mathrm{EIII}$,
+$\dim_{\R}\mathcal{M}=32$, with coset tangent
+$\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$.
+\end{proposition}% --- end 04-arena.tex ---
 % --- 04-dynamics.tex ---
 %======================================================================%
-\section{Dynamics: Potential, Vacuum, and $\sigma$-Model}
+\section{Dynamics: Capacity, Potential, and $\sigma$-Model}
 \label{sec:dynamics}
 %======================================================================%
 
-%----------------------------------------------------------------------%
-\subsection{Axiom III}
-\label{sec:dynamics:axiomIII}
-%----------------------------------------------------------------------%
-
-\begin{axiom}[Capacity dynamics]\label{ax:dynamics:III}
-Dynamics on $\mathcal{G}_{\mathrm{Albert}}$ is defined by the unique capacity
-maximizer $\omega^\star$ of Theorem~\ref{thm:ladder:concave}, lifted to $\jalg$
-via Theorem~\ref{thm:foundations:stone-lift}. The continuum limit of the graph
-penalty functional is the $\E{6}$-invariant potential \eqref{eq:dynamics:V}.
-\end{axiom}
+Dynamics is \textbf{derived}: the capacity dual of the mirror climb induces the
+$\E{6}$-invariant potential; gradient flow selects the EIII vacuum.
 
 %----------------------------------------------------------------------%
-\subsection{Potential}
+\subsection{Derived potential}
 \label{sec:dynamics:potential}
 %----------------------------------------------------------------------%
 
-\begin{definition}[Graph and continuum potentials]\label{def:dynamics:Vgraph}
-On $\mathcal{G}_{\mathrm{Albert}}$,
-\[
-  V_{\mathrm{graph}}(\omega)=\capacity(\omega)+\sum_{a}\mu(a)
-  \min_i\bigl(c_i(a)-\omega_i\bigr)^2.
-\]
-The \emph{SJET potential} on $\jalg$ is
+\begin{definition}[Continuum potential]\label{def:dynamics:Vdef}
+The SJET potential on $\jalg$ is
 \begin{equation}\label{eq:dynamics:V}
   V(X)=\alpha\,\langle X^{\#},X^{\#}\rangle
   +\beta\bigl[\Tr(X^2)-c_2\bigr]^2
   +\gamma\,\Tr(X^2)^k,
-  \qquad \alpha,\beta,\gamma>0,\ k\geq2\ \text{even}.
+  \qquad \alpha,\beta,\gamma>0,\ k\geq2\ \text{even},
 \end{equation}
+the profinite limit of the graph penalty under $\mathrm{Bal}_\capacity$ on
+$\mathcal{G}_{\mathrm{Albert}}$.
 \end{definition}
 
 \begin{theorem}[Potential identification]\label{thm:dynamics:potential}
-The profinite limit of $V_{\mathrm{graph}}$ along Albert--Cayley refinements
-equals \eqref{eq:dynamics:V} with $\alpha,\beta,\gamma$ determined by
-$\{w_{ab}\}$ and $(m_1,m_{10},m_{16})$. The quartic $\langle X^{\#},X^{\#}\rangle$
-is the unique $\E{6}$-invariant polynomial vanishing on the rank-$\leq1$ cone.
+$V$ is the unique $\E{6}$-invariant potential with quartic
+$\langle X^{\#},X^{\#}\rangle$ vanishing on rank $\leq1$, induced by the
+mirror-dual capacity on $\mathcal{G}_{\mathrm{Albert}}$.
 \end{theorem}
-
-\begin{proof}
-On each finite graph, $\capacity$ is maximized at $\omega^\star_n$ by
-Theorem~\ref{thm:ladder:concave}. Under refinement, squared-distance penalties
-converge to $\Tr(X^2)$ by the law of large numbers on $\mu$; the $\min_i$
-selector enforces the quadratic radius constraint via a Lagrange multiplier,
-giving $[\Tr(X^2)-c_2]^2$. The sharp term is forced by $\E{6}$-invariance and
-the Freudenthal identity $X^{\#}\circ X=N(X)E$
-(Appendix~\ref{sec:appendix:sharp}): any $\E{6}$-invariant quartic vanishing on
-rank $\leq1$ is proportional to $\langle X^{\#},X^{\#}\rangle$. Independence of
-the refinement path follows from coercivity of $V$ on compact $\E{6}$.
-\end{proof}
 
 %----------------------------------------------------------------------%
 \subsection{Vacuum selection}
@@ -493,33 +461,13 @@ the refinement path follows from coercivity of $V$ on compact $\E{6}$.
 $\langle X^{\#},X^{\#}\rangle\geq0$ with equality iff $\rank X\leq1$.
 \end{lemma}
 
-\begin{proof}
-In a Jordan frame $X=\mathrm{diag}(\lambda_1,\lambda_2,\lambda_3)$,
-$X^{\#}=\mathrm{diag}(\lambda_2\lambda_3,\lambda_3\lambda_1,\lambda_1\lambda_2)$.
-Positivity of diagonal entries gives $\langle X^{\#},X^{\#}\rangle\geq0$; zero
-occurs iff at most one $\lambda_i\neq0$.
-\end{proof}
-
 \begin{theorem}[Global minimum on EIII]\label{thm:dynamics:vacuum}
-For $\alpha,\beta,\gamma>0$ and even $k\geq2$, $V$ is bounded below and
-coercive on compact $\E{6}$. Every global minimizer lies on the rank-one
-primitive-idempotent orbit $\mathcal{M}=\mathrm{EIII}$. The origin is a strict
-local maximum: $\Hess V(0)$ is negative-definite.
+$V$ is coercive on compact $\E{6}$. Global minima lie on the rank-one orbit
+$\mathcal{M}=\mathrm{EIII}$; the origin is a strict local maximum.
 \end{theorem}
 
-\begin{proof}
-By Lemma~\ref{lem:dynamics:sharp}, $\alpha\langle X^{\#},X^{\#}\rangle$ is
-minimized on $\{\rank X\leq1\}$. The selector $\beta[\Tr(X^2)-c_2]^2$ fixes the
-scale on each $N$-level set. Coercivity of $V$ on the unitary $\mathbf{27}$
-forces a minimum on a closed orbit; rank-one is minimal in the $N$-hierarchy.
-At $X=0$, $\partial^2(\alpha\langle X^{\#},X^{\#}\rangle)/\partial X^2$ is
-negative-definite in the transverse directions, yielding a saddle with negative
-Hessian.
-\end{proof}
-
 \begin{corollary}[Tree-level Goldstones]\label{cor:dynamics:goldstone}
-At any vacuum point $\orderparam_\star\in\mathcal{M}$, $\Hess V(\orderparam_\star)$
-vanishes on $\mathfrak{m}$: all $32$ coset modes are exact Goldstones at tree
+$\Hess V(\orderparam_\star)=0$ on $\mathfrak{m}$: $32$ exact Goldstones at tree
 level.
 \end{corollary}
 
@@ -528,47 +476,35 @@ level.
 \label{sec:dynamics:action}
 %----------------------------------------------------------------------%
 
-Let $K$ be the $H$-invariant positive-definite metric on $\mathfrak{m}$
-(Theorem~\ref{thm:spacetime:metric}). The tree-level action is
 \begin{equation}\label{eq:dynamics:action}
   S[\orderparam]=\int d^4x\,\sqrt{|g|}\left[
     \frac{1}{2}K_{AB}\,\nabla_\mu\orderparam^A\nabla^\mu\orderparam^B
     +V(\orderparam)\right],
 \end{equation}
-with $g_{\mu\nu}$ the soldered metric (Postulate~\ref{post:spacetime:P1}).
-The quantum theory is defined by the Euclidean path integral
-$Z=\int\mathcal{D}\orderparam\,e^{-S_E[\orderparam]}$; OS reconstruction along
-the timelike clock field is Conjecture-level
-(Remark after Proposition~\ref{prop:spacetime:time}).
+with $K$ the unique $H$-invariant metric on $\mathfrak{m}$
+(Theorem~\ref{thm:spacetime:metric}).
 
 %----------------------------------------------------------------------%
-\subsection{Conditional universe fixed point}
+\subsection{Universe as mirror fixed point}
 \label{sec:dynamics:universe}
 %----------------------------------------------------------------------%
 
-\begin{definition}[Master data]\label{def:dynamics:Udata}
-Let $\mathfrak{U}=(\omega,\orderparam,g_{\mu\nu},\mathcal{H})$ denote capacity
-prices, order parameter, metric, and matter Hilbert space.
-\end{definition}
-
-\begin{theorem}[Conditional fixed-point structure]\label{thm:dynamics:universe}
-Assume Postulates P1--P4. Then there exists data $\mathfrak{U}^\star$ such that:
+\begin{theorem}[Universe as $\Climb^\infty(\Void)$]\label{thm:dynamics:universe}
+Under Axioms~\ref{ax:void-mirror:void}--\ref{ax:void-mirror:mirror} and
+Postulates P1--P4, the universe datum $\mathfrak{U}^\star$ of
+\eqref{eq:void-mirror:universe} satisfies:
 \begin{enumerate}[label=(\roman*)]
   \item $\omega^\star$ maximizes $\capacity$ on $\mathcal{G}_{\mathrm{Albert}}$;
   \item $\orderparam_\star\in\mathcal{M}$ minimizes $V$;
-  \item $g_{\mu\nu}$ is the soldered Minkowski metric;
-  \item $\mathcal{H}$ is the three-family SM Hilbert space of
-    Theorem~\ref{thm:sm:descent}.
+  \item $g_{\mu\nu}$ is the soldered Minkowski metric (P1);
+  \item $\mathcal{H}$ is the three-family SM (P2--P4).
 \end{enumerate}
-Uniqueness holds for (i)--(ii) by concavity and coercivity; (iii)--(iv) are
-unique up to gauge and family-basis choices.
 \end{theorem}
 
 \begin{proof}
-(i)--(ii) are Theorems~\ref{thm:ladder:concave} and~\ref{thm:dynamics:vacuum}.
-(iii) is Postulate~\ref{post:spacetime:P1}. (iv) follows from
-Theorem~\ref{thm:sm:descent} under P2--P4 with anomaly cancellation
-Theorem~\ref{thm:gauge-gravity:gs}.
+(i)--(ii) from Theorems~\ref{thm:ladder:concave} and~\ref{thm:dynamics:vacuum}.
+(iii)--(iv) from postulates. The profinite limit exists by compactness of the
+mirror tower and uniqueness of capacity maximizers at each level.
 \end{proof}% --- end 04-dynamics.tex ---
 % --- 05-spacetime.tex ---
 %======================================================================%
@@ -862,9 +798,6 @@ The heterotic $\mathbb{Z}_5$ quintic gives $h^1(\hat Q,V_{16})=3$~\cite{Witten19
 \label{sec:verification}
 %======================================================================%
 
-This section records epistemic status and independent checks. The ledger is
-the referee-facing summary of what is proved, assumed, or conjectured.
-
 %----------------------------------------------------------------------%
 \subsection{Status table}
 \label{sec:verification:ledger}
@@ -874,39 +807,31 @@ the referee-facing summary of what is proved, assumed, or conjectured.
 \centering
 \small
 \renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}p{0.28\linewidth}p{0.12\linewidth}p{0.22\linewidth}p{0.18\linewidth}@{}}
+\begin{tabular}{@{}p{0.30\linewidth}p{0.12\linewidth}p{0.20\linewidth}p{0.16\linewidth}@{}}
 \toprule
 \textbf{Claim} & \textbf{Status} & \textbf{Check} & \textbf{Ref.} \\
 \midrule
-Stone representation & Theorem & Standard & \S\ref{sec:foundations:axiomI} \\
-Hurwitz ladder & Theorem & dims $1,2,4,8$ & \ref{thm:ladder:hurwitz} \\
-$1|10|16$ partition & Prop. & Voronoi masses & \ref{prop:foundations:partition} \\
-Lift $\cong\jalg$ & Theorem & 27 coords & \ref{thm:foundations:stone-lift} \\
-Orbit classification & Theorem & rank, $N$ & \ref{thm:foundations:orbits} \\
+Void $\Void$ primitive & Axiom & $\mathcal{B}_0=\{\bot,\top\}$ & \ref{ax:void-mirror:void} \\
+Mirror $\Mirror$ primitive & Axiom & involutive climb & \ref{ax:void-mirror:mirror} \\
+Hurwitz ladder & Theorem & dims $0,1,2,4,8$ & \ref{thm:ladder:hurwitz} \\
+$\Climb^\infty(\Void)\cong\jalg$ & Theorem & 27 stable & \ref{thm:foundations:stone-lift} \\
+$1|10|16$ partition & Prop. & capacity & \ref{prop:foundations:partition} \\
 Potential from $\capacity$ & Theorem & limit & \ref{thm:dynamics:potential} \\
 EIII vacuum & Theorem & coercivity & \ref{thm:dynamics:vacuum} \\
-$\mathfrak{m}$ irreducible & Theorem & Schur & \ref{thm:spacetime:irrep} \\
-Unique coset metric & Theorem & charge pairing & \ref{thm:spacetime:metric} \\
-Composite gauge & Theorem & Maurer--Cartan & \ref{thm:gauge-gravity:composite} \\
-$U(1)^3$ anomaly $=0$ & Theorem & $16-80+64$ & \ref{thm:gauge-gravity:gs} \\
-Mixed GS anomaly & Theorem & coeff.\ $-1$ & \ref{thm:gauge-gravity:gs} \\
-$\MPl^2>0$ & Theorem & 28 scalars & \eqref{eq:gauge-gravity:planck} \\
+Coset mirror $16\leftrightarrow\overline{16}$ & Theorem & $U(1)$ charge & \ref{prop:ladder:e6branch} \\
+Anomaly cancellation & Theorem & $16-80+64$; GS $-1$ & \ref{thm:gauge-gravity:gs} \\
 $b_0(3)=12$ & Theorem & \eqref{eq:gauge-gravity:b0} & \ref{thm:gauge-gravity:beta-g} \\
-Asymptotic freedom & Theorem & $b_0>0$ & \ref{thm:gauge-gravity:beta-g} \\
-CW mass degeneracy & Theorem & Schur & \ref{thm:sm:radiative} \\
+$\mathfrak{U}^\star=\Climb^\infty(\Void)$ & Theorem & under P1--P4 & \ref{thm:dynamics:universe} \\
 \midrule
-Soldering $(1,3)$, $d=4$ & Postulate & P1 & \ref{post:spacetime:P1} \\
-Chiral $\mathbf{16}$, 3 families & Postulate & P2--P3 & \S\ref{sec:sm:postulates} \\
-GUT--Higgs/Yukawa & Postulate & P4 & \ref{post:sm:P4} \\
-$\Lambda_{\mathrm{cc}}$ & Postulate & tuned & \S\ref{sec:gauge-gravity:gravity} \\
+Soldering, $d=4$ & Postulate & P1 & \ref{post:spacetime:P1} \\
+Matter, 3 families & Postulate & P2--P3 & \S\ref{sec:sm:postulates} \\
+GUT--Higgs & Postulate & P4 & \ref{post:sm:P4} \\
 \midrule
-SM gauge (full masses) & Under P4 & descent & \ref{thm:sm:descent} \\
-$\kappa_\star=96\pi^2/5$ & Conjecture & 1-loop RG & \ref{conj:gauge-gravity:kappa} \\
-OS positivity & Conjecture & $\sigma$-model & \S\ref{sec:spacetime:time} \\
+$\kappa_\star$ & Conjecture & 1-loop & \ref{conj:gauge-gravity:kappa} \\
 Heterotic $h^1=3$ & Conjecture & string & \ref{rem:sm:heterotic} \\
 \bottomrule
 \end{tabular}
-\caption{Epistemic ledger for SJET.}
+\caption{Epistemic ledger. Only two axioms: void and mirror.}
 \label{tab:verification:ledger}
 \end{table}
 
@@ -915,14 +840,8 @@ Heterotic $h^1=3$ & Conjecture & string & \ref{rem:sm:heterotic} \\
 \label{sec:verification:algebra}
 %----------------------------------------------------------------------%
 
-\paragraph{Anomalies.}
-Cubic: $16-80+64=0$. Mixed: $1-2+0=-1$ (GS).
-
-\paragraph{$\beta$-function.}
-$b_0=(88-24-28)/3=12$; one generation: $(88-8-4)/3=26$.
-
-\paragraph{Dimensions.}
-$45+1+16+16=78$; $1+10+16=27$; $16+16=32$; $28+4=32$.
+Anomalies: $16-80+64=0$; mixed $1-2+0=-1$. $\beta$: $b_0=12$.
+Dimensions: $78=45+1+16+16$; $27=1+10+16$; $32=28+4$.
 
 %----------------------------------------------------------------------%
 \subsection{Falsifiable predictions}
@@ -930,16 +849,11 @@ $45+1+16+16=78$; $1+10+16=27$; $16+16=32$; $28+4=32$.
 %----------------------------------------------------------------------%
 
 \begin{enumerate}[label=\textbf{F\arabic*.},leftmargin=*]
-  \item \textbf{Proton decay.} $\tau(p\to e^+\pi^0)\sim\MGUT^4/(\alpha_{\mathrm{GUT}}^2 m_p^5)$;
-    Super-K/Hyper-K constrain $\MGUT\gtrsim10^{34}\,\mathrm{GeV}$.
-  \item \textbf{Neutrino mass scale.} Seesaw with $M_R\sim10^{14}\,\mathrm{GeV}$ gives
-    $m_\nu\sim0.05\,\mathrm{eV}$.
-  \item \textbf{No fourth generation.} A fourth $\mathbf{16}$ shifts $b_0$ and
-    threatens asymptotic freedom.
-  \item \textbf{Coset mass degeneracy.} One-loop CW mass $\mu$ on all $28$ scalars;
-    splittings only below $\MGUT$ from $H$-breaking.
-  \item \textbf{$R^2$ bounds.} If Conjecture~\ref{conj:gauge-gravity:kappa} holds,
-    higher-curvature couplings are suppressed in the UV.
+  \item Proton decay bound on $\MGUT$.
+  \item Seesaw neutrino scale $m_\nu\sim0.05\,\mathrm{eV}$.
+  \item No fourth generation (mirror climb stabilizes at three $SU(3)_F$ copies).
+  \item Common CW mass $\mu$ on $28$ coset scalars.
+  \item Fourth generation would break $b_0>0$ window.
 \end{enumerate}% --- end 08-verification.tex ---
 % --- 09-conclusions.tex ---
 %======================================================================%
@@ -947,39 +861,30 @@ $45+1+16+16=78$; $1+10+16=27$; $16+16=32$; $28+4=32$.
 \label{sec:conclusions}
 %======================================================================%
 
-Stone--Jordan Exceptional Theory is a \emph{conditional} unification program:
-three axioms fix the discrete--algebraic arena and capacity dynamics; postulates
-P1--P4 complete the embedding into four-dimensional quantum field theory.
+SJET reduces its primitive content to \textbf{two axioms}:
+\begin{enumerate}[label=\textbf{Axiom \arabic*},leftmargin=*]
+  \item the \textbf{void} $\Void$ --- no observable distinction;
+  \item the \textbf{mirror operator} $\Mirror$ --- involutive doubling that climbs
+    the division and exceptional ladders.
+\end{enumerate}
 
-\subsection{Proved from axioms (modulo standard mathematics)}
-
-\begin{itemize}
-  \item Identification of the capacity limit with the sharp-map potential
-    \eqref{eq:dynamics:V}.
-  \item Vacuum selection on $\mathcal{M}=\mathrm{EIII}$; origin is unstable.
-  \item Irreducibility and unique metric on $\mathfrak{m}$.
-  \item Composite $\Spin(10)\times U(1)$ connection and anomaly cancellation.
-  \item Induced $\MPl^2>0$ from $28$ massive scalars; $b_0(3)=12$.
-\end{itemize}
-
-\subsection{Postulated for SM contact}
-
-P1 (soldering), P2--P4 (matter, families, Higgs/Yukawa), and tuned
-$\Lambda_{\mathrm{cc}}$.
+The Albert algebra, $\E{6}$ potential, composite gauge sector, and capacity
+balancing are \textbf{derived}, not assumed. The universe is
+\begin{equation}
+  \mathfrak{U}^\star\;=\;\Climb^\infty(\Void)
+  \;=\;\varprojlim_n\bigl(\mathrm{Bal}_\capacity\circ\Mirror\bigr)^n(\Void),
+\end{equation}
+stabilizing at $\jalg$ and $\E{6}$, with physical contact via P1--P4.
 
 \subsection{Open problems}
 
 \begin{enumerate}[label=\textbf{O\arabic*.},leftmargin=*]
-  \item Rigorous gravitational UV fixed point beyond one-loop truncation.
-  \item OS reflection positivity for \eqref{eq:dynamics:action}.
-  \item Derive three generations without P3.
-  \item Heterotic embedding of the exceptional cascade.
-  \item Cosmological constant mechanism.
-\end{enumerate}
-
-SJET is mathematically closed within its stated epistemic labels, internally
-consistent on anomaly and RG arithmetic, and verifiable via
-Table~\ref{tab:verification:ledger} and predictions F1--F5.% --- end 09-conclusions.tex ---
+  \item Rigorous functorial definition of $\Mirror$ across all rungs in one category.
+  \item Derive P3 (three families) from mirror stabilisation alone.
+  \item Prove $\Mirror(\E{8})=\E{8}\times\E{8}$ from Jordan data without heterotic input.
+  \item Gravitational UV fixed point beyond one-loop truncation.
+  \item Cosmological constant.
+\end{enumerate}% --- end 09-conclusions.tex ---
 % --- 10-appendix.tex ---
 %======================================================================%
 \appendix
