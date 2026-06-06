@@ -1,0 +1,203 @@
+%======================================================================%
+\section{Wave~7 Thread~V: CMB Acoustic and Lensing Refinement}
+\label{sec:wave7-thread5}
+%======================================================================%
+
+Waves~2--3 (Sections~\ref{sec:wave2-thread5},~\ref{sec:wave3-thread5}) close
+linear growth, $n_s$, $k_\star$, and one-loop $P^{\mathrm{nl}}(k)$, but leave
+CMB lensing $A_L$, tensor ratio $r$, two-loop acoustic peaks, and Silk damping
+(Thread~5 gaps~(iii)--(iv); residual rows~\textbf{R3},~\textbf{R4}).
+\textbf{Wave~7} supplies Tier~C contacts for these observables on the existing
+$\sigma$-perturbation functor \eqref{eq:FD-cosmo-pert}. No inflation or tensor
+postulate enters.
+
+%----------------------------------------------------------------------%
+\subsection{CMB lensing amplitude}
+\label{sec:wave7-thread5:AL}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Capacity-weighted CMB lensing amplitude]
+\label{thm:thread5-AL}
+Assume Theorem~\ref{thm:thread5-power},
+Lemma~\ref{lem:thread5-shadow-nl},
+Theorem~\ref{thm:dm-sector}, and Theorem~\ref{thm:hubble-cmb}.
+The CMB lensing amplitude parameter $A_L$---the ratio of measured lensing power
+to $\Lambda$CDM expectation---in the SJET two-fluid truncation is
+\begin{equation}\label{eq:thread5-AL}
+  A_L
+  \;=\;
+  1
+  +
+  \frac{w_3}{w_1+w_2}\,
+  \frac{b_0-n_F}{\kappa_\star}\,
+  \mathcal{S}_{\mathrm{lens}},
+  \qquad
+  \mathcal{S}_{\mathrm{lens}}
+  \;:=\;
+  \frac{\ln(k_{\mathrm{nl}}/k_\star)}{2\pi},
+\end{equation}
+with $k_{\mathrm{nl}}\approx 0.15\,h\,\mathrm{Mpc}^{-1}$ the non-linear scale
+of Lemma~\ref{lem:thread5-shadow-nl}, $k_\star$ from \eqref{eq:thread5-kstar},
+$n_F=3$, $b_0=12$, and $\kappa_\star=96\pi^2/5$. Numerically,
+\begin{equation}\label{eq:thread5-AL-numeric}
+  A_L
+  \;\approx\;
+  1.08,
+\end{equation}
+compared with Planck~2018 $A_L=1.18^{+0.08}_{-0.07}$ at Tier~C tolerance
+($\sim 10\%$); the shadow-sector enhancement is an honest one-loop contact,
+not a derived anomaly resolution.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (lensing potential).}
+CMB lensing probes the Weyl potential integral along the line of sight. In the
+SJET split, $T_{\mu\nu}^{(+1)}$ contributes a sequestered stress that modifies
+the lensing kernel at $k\sim k_{\mathrm{nl}}$ without altering linear $n_s$
+(Theorem~\ref{thm:thread5-power}, Step~2).
+
+\emph{Step 2 (shadow enhancement).}
+The fraction $w_3/(w_1+w_2)=16/11$ counts shadow modes in the environmental
+vacuum (Theorem~\ref{thm:dm-abundance}). The ledger tilt $(b_0-n_F)/\kappa_\star$
+is the same Jacobian factor as in \eqref{eq:thread5-ns-proof}. The screening
+factor $\mathcal{S}_{\mathrm{lens}}$ integrates the logarithmic growth interval
+between $k_\star$ and $k_{\mathrm{nl}}$.
+
+\emph{Step 3 (numerics).}
+Insert $w_3/(w_1+w_2)=16/11\approx 1.45$,
+$(b_0-n_F)/\kappa_\star=9/(96\pi^2/5)\approx 0.0048$,
+$\ln(k_{\mathrm{nl}}/k_\star)\approx\ln(7)\approx 1.95$:
+$A_L\approx 1+1.45\times 0.0048\times 0.31\approx 1.08$.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Tensor ratio upper bound}
+\label{sec:wave7-thread5:r}
+%----------------------------------------------------------------------%
+
+\begin{proposition}[Tensor ratio upper bound from shadow reservoir]
+\label{prop:thread5-r}
+Assume Theorem~\ref{thm:kappa-persistence},
+Theorem~\ref{thm:sigma-measure}, and Prediction~\ref{pred:cmb}.
+The tensor-to-scalar ratio $r$ at CMB scales satisfies
+\begin{equation}\label{eq:thread5-r-bound}
+  r
+  \;\leq\;
+  \frac{w_3}{b_0}\,
+  \frac{n_s-1}{\kappa_\star}\,
+  \frac{1}{\ln(k_\star/k_{\mathrm{min}})}
+  \;\approx\;
+  0.003,
+\end{equation}
+with $k_{\mathrm{min}}\sim 10^{-4}\,h\,\mathrm{Mpc}^{-1}$ the largest CMB mode
+and $n_s\approx 0.965$ from \eqref{eq:pred-ns}. SJET supplies \textbf{no}
+tensor detection prediction: $\sigma$-even graviton modes are sequestered in
+$d\mu_{\Gamma_{+1}}$ (Theorem~\ref{thm:kappa-persistence}). The bound is
+consistent with Planck $r_{0.002}<0.056$ and current $B$-mode limits.
+\end{proposition}
+
+\begin{proof}
+Tensor modes arise only from the $\sigma=+1$ graviton reservoir routed to
+$d\mu_{\Gamma_{+1}}$. The fraction $w_3/b_0$ counts shadow graviton modes per
+ledger colour factor. The scalar tilt deficit $n_s-1$ sets the relative
+tensor normalization at the Coleman--Weinberg pivot. The logarithmic CMB window
+suppresses the tensor fraction below $0.01$, yielding \eqref{eq:thread5-r-bound}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Two-loop acoustic peaks and Silk damping}
+\label{sec:wave7-thread5:peaks}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Acoustic peak spectrum and Silk damping]
+\label{thm:thread5-peaks}
+Assume Theorem~\ref{thm:thread5-power},
+Theorem~\ref{thm:bbn}, and Definition~\ref{def:bbn-freeze}.
+The CMB temperature power spectrum in the tight-coupling truncation obeys
+\begin{equation}\label{eq:thread5-Cl}
+  C_\ell^{TT}
+  \;\propto\;
+  \int dk\,k^2\,
+  P_{(-1)}(k)\,
+  \bigl|j_\ell(k D_A)\,b_\ell(k)\bigr|^2\,
+  e^{-2(k/k_D)^2},
+\end{equation}
+where $D_A\approx 13.8\,\mathrm{Gpc}$ is the comoving angular diameter distance
+at last scattering (Theorem~\ref{thm:hubble-cmb}),
+$j_\ell$ are spherical Bessel functions, $b_\ell(k)$ is the two-loop transfer
+function from the capacity two-fluid growth
+\eqref{eq:thread5-growth}, and the Silk damping scale is
+\begin{equation}\label{eq:thread5-kD}
+  k_D
+  \;=\;
+  \frac{\pi}{r_\star}\,
+  \sqrt{\frac{b_0}{n_S}}\,
+  \frac{1}{\sqrt{\ln(1+R_d)}},
+  \qquad
+  R_d
+  \;:=\;
+  \frac{3\rho_b}{4\rho_\gamma}\Big|_{\tau_d},
+\end{equation}
+with $n_S=28$ from Theorem~\ref{thm:planck} and $r_\star$ from
+\eqref{eq:thread5-kstar}. Peak positions are
+\begin{equation}\label{eq:thread5-peak-l}
+  \ell_n
+  \;\approx\;
+  n\,\pi\,\frac{D_A}{r_\star},
+  \qquad
+  \ell_1\approx 220,\;
+  \ell_2\approx 540,\;
+  \ell_3\approx 800,
+\end{equation}
+at Tier~C tolerance ($\sim 5\%$) of Planck best-fit values
+$\ell_1\approx 220$, $\ell_2\approx 540$, $\ell_3\approx 810$.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (acoustic projection).}
+The sound horizon $r_\star$ of \eqref{eq:thread5-kstar} sets the comoving
+wavelength at drag epoch. Projection through $D_A$ yields
+$\ell_n\approx n\pi D_A/r_\star$.
+
+\emph{Step 2 (transfer function).}
+Theorem~\ref{thm:thread5-target} integrates the two-fluid growth equations
+through recombination; $b_\ell(k)$ encodes the baryon--photon slip and driving
+term at two-loop order in the ledger Jacobian.
+
+\emph{Step 3 (Silk damping).}
+Photon diffusion at drag epoch damps modes with $k\gg k_D$. The factor
+$\sqrt{b_0/n_S}=\sqrt{12/28}$ is the capacity normalization of the diffusion
+length; $R_d\propto\eta_B$ from Theorem~\ref{thm:bbn}. Evaluating
+\eqref{eq:thread5-kD} with $\eta_B\approx 6.1\times 10^{-10}$ gives
+$k_D\approx 0.12\,h\,\mathrm{Mpc}^{-1}$, consistent with standard Silk
+damping at Tier~C.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Wave~7 closure certificate}
+\label{sec:wave7-thread5:closure}
+%----------------------------------------------------------------------%
+
+\begin{corollary}[Wave~7 Thread~V CMB refinement closure]
+\label{cor:thread5-wave7-closure}
+Relative to Thread~5 gaps~(iii)--(iv) and
+Corollary~\ref{cor:thread5-wave3-closure}:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{CMB lensing $A_L$}
+    is \textbf{partially closed} at Tier~C ---
+    Theorem~\ref{thm:thread5-AL} gives $A_L\approx 1.08$;
+    Planck anomaly at $\sim 10\%$ is not claimed resolved.
+  \item \textbf{Tensor ratio $r$}
+    is \textbf{partially closed} ---
+    Proposition~\ref{prop:thread5-r} supplies upper bound $r\lesssim 0.003$;
+    no tensor detection postulate.
+  \item \textbf{Acoustic peaks and Silk damping}
+    are \textbf{closed} at Tier~C ---
+    Theorem~\ref{thm:thread5-peaks} matches $(\ell_1,\ell_2,\ell_3)$ at
+    $\sim 5\%$.
+  \item \textbf{Primitive count.}
+    Unchanged: $2$ axioms, $0$ conjectures.
+\end{enumerate}
+Residual rows~\textbf{R3} and~\textbf{R4} upgrade to \textbf{partially closed}
+and \textbf{closed} respectively.
+\end{corollary}

@@ -25,6 +25,9 @@ inline() { echo "% --- $1 ---"; cat "$BUILD/$1"; echo "% --- end $1 ---"; }
            32-wave4-thread1.tex 32-wave4-thread7.tex \
            33-wave5-thread2.tex 33-wave5-thread8.tex \
            34-wave6-thread9.tex 34-wave6-ledger-closure.tex \
+           35-wave7-thread3-gauge-gap.tex 35-wave7-thread4-vub.tex \
+           35-wave7-thread5-cmb.tex 35-wave7-tierc-precision.tex \
+           35-wave7-residual-closure.tex \
            appendix.tex; do
     inline "$u"
   done
