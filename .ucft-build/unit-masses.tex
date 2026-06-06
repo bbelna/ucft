@@ -9,7 +9,7 @@ The vacuum manifold of UCFT is the rank-one primitive-idempotent orbit
   \qquad \dim_{\mathbb R}\mathcal{M} = 32,
 \]
 established as the global minimum of the $E_{6}$-invariant potential in
-\autoref{thm:ExplicitBreaking} (vacuum-selection theorem; cf.\ the locked
+\autoref{thm:potential:T4} (vacuum-selection theorem; cf.\ the locked
 foundation, Hardened Result~A). The $32$ coset Goldstones --- the
 \emph{clock fields} --- span the tangent module
 \begin{equation}\label{eq:masses:tangent}
@@ -17,7 +17,7 @@ foundation, Hardened Result~A). The $32$ coset Goldstones --- the
   \;=\; \mathbf{16}_{-3}\,\oplus\,\overline{\mathbf{16}}_{+3},
   \qquad \dim_{\mathbb R}\mathfrak m = 32,
 \end{equation}
-under the unbroken $H=\mathrm{Spin}(10)\times U(1)$ (\autoref{thm:InvariantMetric}).
+under the unbroken $H=\mathrm{Spin}(10)\times U(1)$ (\autoref{thm:coset:metric}).
 This section determines their physical mass spectrum. The central structural
 fact, used throughout, is that \eqref{eq:masses:tangent} is a \emph{single}
 real-irreducible $H$-module: the $U(1)$ charge forbids the symmetric
@@ -48,7 +48,7 @@ so that all $32$ clock fields are exact Goldstone bosons.
 
 \begin{proof}
 $V$ is constant along the $E_{6}$-orbit $\mathcal{M}$ of the minimizer
-(\autoref{thm:ExplicitBreaking}), so its directional derivatives along the
+(\autoref{thm:potential:T4}), so its directional derivatives along the
 broken generators, which span $\mathfrak m$, vanish to all orders in the
 flat directions; \eqref{eq:masses:treehess} is Goldstone's theorem applied to
 the spontaneously broken $E_{6}\to H$. The unbroken directions
@@ -89,7 +89,7 @@ intertwiner must lie in the real part of the commutant, hence is a real scalar
 multiple of the identity; this is Schur's lemma for the complex-type case
 restricted to self-adjoint operators. Thus the Hessian equals
 $m_{\mathfrak m}^{2}\mathbf 1_{32}$. Stability of the vacuum
-(\autoref{thm:ExplicitBreaking}) and positivity of $K|_{\mathfrak m}$ give
+(\autoref{thm:potential:T4}) and positivity of $K|_{\mathfrak m}$ give
 $m_{\mathfrak m}^{2}\ge 0$.
 \end{proof}
 
@@ -112,7 +112,7 @@ gauge artefacts, treated next.
 %----------------------------------------------------------------------%
 
 Four of the $32$ clock fields are the soldering/frame directions identified by
-Postulate~P3 (\autoref{thm:Lorentz}): the soldering map $\sigma$ aligns four
+Postulate~P3 (\autoref{thm:spacetime:lorentz4}): the soldering map $\sigma$ aligns four
 clock-field frame directions $e^{a}{}_{\mu}$ ($a=0,1,2,3$) with a tangent
 $4$-plane of the emergent spacetime $M^{4}$, providing the composite vierbein
 $e^{a}{}_{\mu}(x)=\langle\tau^{a},\theta_{\mathfrak m}(\partial_{\mu})\rangle$.
@@ -126,7 +126,7 @@ Lorentz transformations $\mathrm{SO}(1,3)$. They satisfy the Ward identity
 \begin{equation}\label{eq:masses:ward}
   \nabla_{\mu}\!\left(\frac{\delta\Gamma}{\delta e^{a}{}_{\mu}}\right) \;=\; 0,
 \end{equation}
-which removes them from the physical spectrum (cf.\ \autoref{thm:Lorentz}).
+which removes them from the physical spectrum (cf.\ \autoref{thm:spacetime:lorentz4}).
 \end{postulate}
 
 \begin{theorem}[Physical count]\label{thm:masses:count}
@@ -149,7 +149,7 @@ By \autoref{thm:masses:schur} the one-loop Hessian is $m_{\mathfrak m}^{2}
 \mathbf 1_{32}$, so \emph{no} internal direction is a Hessian zero
 (\autoref{rmk:masses:nosinglet}). The reduction of the physical count is purely
 gauge-theoretic: by Postulate~P3 (\autoref{post:masses:frame},
-\autoref{thm:Lorentz}) the four soldered frame directions are gauge artefacts
+\autoref{thm:spacetime:lorentz4}) the four soldered frame directions are gauge artefacts
 removed by diffeomorphism and local Lorentz invariance through
 \eqref{eq:masses:ward}, leaving $32-4=28$ propagating physical scalars. Since
 the vacuum preserves $H$, no $H$ gauge boson is eaten and the $46$ adjoint
@@ -172,6 +172,8 @@ mass, and the four removed modes were never internal zeros.
 %----------------------------------------------------------------------%
 
 \begin{theorem}[Canonical physical mass]\label{thm:masses:canonical}
+\label{thm:MassSpectrum}
+\label{thm:gravity:mass}
 With $[f]=\text{mass}$, the dimension-four Hessian eigenvalue on the coset is
 $f^{2}\mu^{2}$, and the canonically normalized physical mass of each of the
 $28$ massive scalars is
@@ -212,7 +214,7 @@ The physical count \eqref{eq:masses:count} and the canonical mass
 \eqref{eq:masses:m2} fix the input to every downstream loop sum: \emph{only}
 the $28$ massive scalars, each with $m^{2}=\mu^{2}$ (i.e.\ dimension-four
 eigenvalue $f^{2}\mu^{2}$, signature factor $s=+1$), enter. In particular the
-Sakharov-induced Planck mass (\autoref{thm:GravitySummary}; cf.\ Hardened
+Sakharov-induced Planck mass (\autoref{thm:gravity:planck}; cf.\ Hardened
 Result~C) is built from precisely these $28$ scalars,
 \begin{equation}\label{eq:masses:mpl}
   M_{\mathrm{Pl}}^{2}

@@ -128,12 +128,11 @@ inline_unit() {
 \maketitle
 
 \begin{abstract}
-We formulate Universal Coset Field Theory (UCFT) on a foundational graph--Stone
-substrate and the exceptional Jordan algebra $J_3(\mathbb O)$ with compact $E_6$
-structure. A pre-axiomatic layer (BAMLP: Barrier-Aware Metric--Laguerre
-Partitioning) posits a weighted cosmic graph, a division-algebra ladder
-$0\to\mathbb{R}\to\mathbb{C}\to\mathbb{H}\to\mathbb{O}$, and an exceptional
-cascade $0\to E_8\to E_8\times E_8\to E_6\to\cdots\to 0$. Two axioms specify the
+We present the complete Universal Coset Field Theory (UCFT). A graph--Stone--BAMLP
+foundation (the Albert--Cayley graph, profinite Stone lift, capacity dual, and
+exceptional ladder $0\to E_8\to E_8\times E_8\to E_6\to\cdots\to 0$) derives the
+$E_6$ potential and selects the EIII vacuum as the unique fixed point of a
+master operator $\mathbb{U}$. Two axioms specify the
 order parameter and quantum kinematics; six postulates \textbf{P1--P6} supply the
 $E_6$-invariant potential, vacuum manifold, Lorentzian soldering, chiral matter
 content, three generations, and GUT--Yukawa sector. Under these hypotheses we
@@ -165,6 +164,7 @@ PREAMBLE
   echo '%----------------------------------------------------------------------%'
   echo '\part{Foundations and the Master Chain}'
   inline_unit unit-bamlp.tex
+  inline_unit unit-identification.tex
   inline_unit unit-master-chain.tex
   inline_unit unit-intro.tex
   inline_unit unit-axioms.tex

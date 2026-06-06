@@ -1,6 +1,8 @@
 # Universal Coset Field Theory (UCFT)
 
-Manuscript and modular LaTeX build for UCFT: from axioms on $J_3(\mathbb{O})$ and compact $E_6$ to induced gravitation and Standard Model embedding.
+Complete manuscript: graph--Stone--BAMLP foundation $\to$ $E_6$/Albert coset $\to$
+induced gravitation and Standard Model embedding. The universe is the unique fixed
+point $\mathfrak{U}^\star$ of the master operator $\mathbb{U}$.
 
 ## Build
 

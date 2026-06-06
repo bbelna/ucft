@@ -23,7 +23,7 @@ $\dim\mathbf{45}+\dim\mathbf 1 = 46$ gauge bosons stay massless, and
 (iv) Green--Schwarz cancellation of the residual mixed anomaly. Throughout
 we work on the \emph{compact} real form of $\ESix$, so that $H$ is compact,
 the coset metric is positive-definite, and the gauge sector is unitary
-(\autoref{sec:foundations:realform}). Signature is $(-,+,+,+)$ and
+(\autoref{sec:albert:groups}). Signature is $(-,+,+,+)$ and
 $[f]=\text{mass}$.
 
 %----------------------------------------------------------------------%
@@ -52,7 +52,7 @@ the involution datum
 \end{equation}
 Here the subscripts are the $\Uone$ charges; $\mathfrak m$ is real-irreducible
 of complex type and contains \emph{no} $\Spin(10)$ singlet
-(\autoref{sec:foundations:coset}). The $46$ generators of $\mathfrak h$ are
+(\autoref{sec:coset:main}). The $46$ generators of $\mathfrak h$ are
 exactly the composite gauge degrees of freedom.
 
 Let $g(x)\in\ESix$ be a smooth local section of the principal $H$-bundle,
@@ -69,7 +69,7 @@ form decomposes along \eqref{eq:gauge:split},
 \end{equation}
 where $A_\mu$ is the $\mathfrak h$-part (the canonical connection) and
 $e_\mu$ is the $\mathfrak m$-part (the soldering one-form of the clock
-fields, used in \autoref{sec:soldering:main}).
+fields, used in \autoref{sec:spacetime:main}).
 
 \begin{theorem}[Composite connection; \textsc{theorem}]\label{thm:gauge:composite}
 Under a change of local section $g\mapsto g\,h^{-1}(x)$ with
@@ -146,7 +146,7 @@ $\Spin(10)$ trace), the total index is
 the value used everywhere. The previously quoted $\tfrac52$, obtained
 from the (forbidden) decomposition $\mathbf{10}\oplus\overline{\mathbf{10}}\oplus\mathbf 4$
 with indices $1,1,\tfrac12$, is wrong: that multiplet is not the coset
-tangent (which carries no $\Spin(10)$ singlet, \autoref{sec:foundations:coset}).
+tangent (which carries no $\Spin(10)$ singlet, \autoref{sec:coset:main}).
 \end{remark}
 
 \begin{theorem}[Induced gauge coupling; \textsc{theorem}]\label{thm:gauge:coupling}
@@ -175,7 +175,7 @@ $\Tr(\mathcal F\mathcal F)$ coefficient proportional to the total index
 \eqref{eq:gauge:totalindex}. Collecting the factors $\tfrac12\cdot\tfrac1{12}\cdot\tfrac1{(4\pi)^2}$
 and the index $4$ reproduces \eqref{eq:gauge:gm2}; the full computation,
 including normalization of $\Tr(\mathcal F\mathcal F)$ to the
-$\Spin(10)$ vector, is deferred to \autoref{app:ym:main}.
+$\Spin(10)$ vector, is deferred to \autoref{sec:app-ym:main}.
 \end{proof}
 
 The renormalization-group running of $g^{2}$ --- gauge \emph{asymptotic
@@ -222,7 +222,7 @@ generate a mass term (there is no $\Spin(10)$ singlet in $\mathfrak m$),
 so the $46$ gauge bosons remain exactly massless. This is consistent with
 the count $32 = 28\ \text{massive scalars} + 4\ \text{gauge/soldering}$:
 the $4$ frame modes are eaten by diffeomorphism $+$ local Lorentz, not by
-$H$ (\autoref{sec:soldering:main}).
+$H$ (\autoref{sec:spacetime:main}).
 \end{remark}
 
 %----------------------------------------------------------------------%
@@ -254,6 +254,7 @@ Green--Schwarz coupling
 where $F_1$ is the $\Uone$ field strength.
 
 \begin{theorem}[Anomaly cancellation; \textsc{theorem}]\label{thm:gauge:anomaly}
+\label{sec:anomaly:main}
 The combined gauge variation
 $\delta_H\bigl(\Gamma_{1L}+S_{\text{YM}}+S_{GS}\bigr)$ vanishes. The only
 nonvanishing one-loop gauge anomaly is the mixed $\Uone$--$\Spin(10)^{2}$
@@ -285,6 +286,7 @@ arithmetic appear in \autoref{app:anomaly:main}.
 \end{proof}
 
 \begin{theorem}[Emergent gauge sector; \textsc{theorem}]\label{thm:gauge:sector}
+\label{thm:foundations:qft}
 The functional $S_{\text{tot}}=S_{\text{eff}}+S_{\text{YM}}+S_{GS}$
 describes a local, unitary, anomaly-free $\Spin(10)\times\Uone$
 Yang--Mills theory coupled to the clock-field $\sigma$-model, with the
@@ -302,5 +304,5 @@ freedom is \autoref{thm:gauge:anomaly}.
 $\mathcal M=\mathrm{EIII}$ and the compact real form. The chiral matter
 assignment \eqref{eq:gauge:matter} with no mirror partners is
 \emph{postulate}~P4. The detailed Yang--Mills coefficient is in
-\autoref{app:ym:main} and the full anomaly arithmetic in
+\autoref{sec:app-ym:main} and the full anomaly arithmetic in
 \autoref{app:anomaly:main}.

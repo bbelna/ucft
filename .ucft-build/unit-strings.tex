@@ -76,7 +76,7 @@ of clock fields whose phase lives in
 \]
 the winding being the standard Abelian-Higgs flux of the gauged $U(1)$
 (the same $U(1)$ whose Stueckelberg/Green--Schwarz coupling appears in
-\autoref{sec:anomaly:main}). Equivalently, on the broken vacuum the
+\autoref{thm:gauge:anomaly}). Equivalently, on the broken vacuum the
 $U(1)$ factor of $H=\mathrm{Spin}(10)\times U(1)$ admits a magnetic flux
 tube: $\pi_{1}(U(1))=\mathbb{Z}$ labels the quantised flux, and the clock
 field winds the eaten phase around the core.
@@ -97,7 +97,7 @@ $\pi_{1}(\mathcal{M})$ theorem.
 \label{sec:strings:bps}
 
 Choose cylindrical coordinates $(r,\theta,z,t)$ on the emergent
-Lorentzian manifold $(X,\eta)$ of \autoref{sec:soldering:main}. A static
+Lorentzian manifold $(X,\eta)$ of \autoref{sec:spacetime:main}. A static
 configuration of the $U(1)$-gauged clock-field sector with winding
 $n\in\mathbb{Z}$ obeys
 \begin{equation}
@@ -162,7 +162,7 @@ left-moving affine current algebra at level one,
 
 \begin{proof}[Proof sketch]
 The Green--Schwarz term $S_{\mathrm{GS}}=\int B\wedge
-\mathrm{Tr}(F\wedge F)/8\pi^{2}$ (\autoref{sec:anomaly:main}) reduces on
+\mathrm{Tr}(F\wedge F)/8\pi^{2}$ (\autoref{thm:gauge:anomaly}) reduces on
 the two-dimensional string core $\Sigma\simeq\mathbb{R}^{1,1}$ to a
 chiral WZW action whose level equals the mixed
 $U(1)$--$\mathrm{Spin}(10)^{2}$ anomaly coefficient computed there;
@@ -310,15 +310,16 @@ heterotic count as a \emph{correspondence}.
 \subsection{Conclusions: theorems versus postulates}
 \label{sec:strings:conclusions}
 
-UCFT is an $E_{6}$/Albert-algebra--motivated unification. Two axioms
-supply the arena (the $27=J_{3}(\mathbb{O})$ order parameter and its
-quantum kinematics); a small, explicitly enumerated set of postulates
-$P1$--$P6$ then yields a four-dimensional Lorentzian quantum field theory
-containing an anomaly-free $\mathrm{Spin}(10)\times U(1)$ gauge sector,
-Sakharov-induced gravity, and --- after a stated GUT-Higgs/flavour sector
---- the Standard Model with three generations and neutrino masses. This
-is a \emph{conditional embedding} of the Standard Model and gravitation.
-\autoref{tab:strings:ledger} records the classification of results.
+Universal Coset Field Theory is a \emph{closed} framework. The Albert--Cayley
+graph, Stone profinite lift, and BAMLP capacity dual
+(\autoref{sec:identification:main}) derive the $E_6$ potential and select the
+EIII vacuum as the unique fixed point $\mathfrak{U}^\star$ of the master
+operator $\mathbb{U}$ (\autoref{thm:identification:universe}). Two axioms and
+postulates $P3$--$P6$ then yield a four-dimensional Lorentzian quantum field
+theory with anomaly-free $\mathrm{Spin}(10)\times U(1)$ gauge dynamics,
+Sakharov-induced gravity, and an embedded Standard Model with three generations
+and neutrino masses. \autoref{tab:strings:ledger} records the final
+classification; \autoref{thm:identification:complete} states closure.
 
 \begin{table}[h]
 \centering
@@ -327,8 +328,17 @@ is a \emph{conditional embedding} of the Standard Model and gravitation.
 \hline
 \textbf{Result} & \textbf{Content} & \textbf{Status}\\
 \hline
+Graph foundation
+  & Albert--Cayley $\mathcal{G}$, BAMLP $\omega^\star$, Stone lift
+  & \textbf{Theorem}\\
+Potential (P1 derived)
+  & $V$ from capacity dual; rank-$1$ minimum
+  & \textbf{Theorem}\\
 Vacuum selection ($P1\Rightarrow P2$)
   & global min $=$ rank-$1$ idempotent orbit $\mathrm{EIII}$, $\dim 32$
+  & \textbf{Theorem}\\
+Universe fixed point
+  & $\mathbb{U}(\mathfrak{U}^\star)=\mathfrak{U}^\star$
   & \textbf{Theorem}\\
 Origin instability
   & $\mathrm{Hess}\,V(0)\prec0$; roll-down to $\mathcal{M}$

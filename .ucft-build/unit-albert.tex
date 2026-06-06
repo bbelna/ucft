@@ -10,10 +10,10 @@ notion of rank, and the four real forms of the exceptional groups that
 act on it. We isolate, with care, \emph{which} invariant is preserved by
 \emph{which} group, since the entire vacuum-selection argument
 (\autoref{sec:potential:main}) and the Lorentzian soldering
-(\autoref{sec:soldering:main}) depend on getting this exactly right. The
+(\autoref{sec:spacetime:main}) depend on getting this exactly right. The
 heavy octonionic identities (associator gymnastics, the explicit cubic
 norm in components, the Freudenthal cross product) are deferred to
-\autoref{app:albert:main}; here we state the structural facts and prove
+\autoref{sec:app-albert:main}; here we state the structural facts and prove
 the ones that are short. Throughout, the metric signature is
 $(-,+,+,+)$, $[f]=\mathrm{mass}$, and the dimensionless couplings are
 $\hat g^{2},\xi,\hat y^{2},\kappa$.
@@ -76,7 +76,7 @@ $\cong\mathbb{C}$ or $\mathbb{H}$ (Artin's theorem), the identity holds
 despite global nonassociativity. Formal reality follows from positivity
 of the trace form \eqref{eq:albert:traceform} below. Exceptionality
 (non-speciality) is the Albert--Jacobson theorem; see
-\autoref{app:albert:main} and \cite{Albert:1934,Jacobson:1968,McCrimmon:2004}.
+\autoref{sec:app-albert:main} and \cite{Albert:1934,Jacobson:1968,McCrimmon:2004}.
 \end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -118,10 +118,10 @@ The \emph{cubic norm} (the octonionic ``determinant'') is
 \end{equation}
 The bracketing of the cubic term $z_{1}z_{2}z_{3}$ is unambiguous under
 $\operatorname{Re}(\cdot)$ despite nonassociativity (a standard
-octonionic identity; \autoref{app:albert:main}). Unlike $Q$, the cubic
+octonionic identity; \autoref{sec:app-albert:main}). Unlike $Q$, the cubic
 norm is \emph{odd} under $X\mapsto -X$ and is genuinely indefinite; its
 restriction to the $H_{2}(\mathbb{O})$ sub-block supplies the Minkowski
-form used in soldering (\autoref{sec:soldering:main}).
+form used in soldering (\autoref{sec:spacetime:main}).
 
 \paragraph{Sharp map.}
 The \emph{sharp} (adjoint) map $X\mapsto X^{\#}$ is the gradient of $N$
@@ -199,6 +199,7 @@ there; here we only supply the algebraic criterion.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The four real forms and what each preserves}
 \label{sec:albert:groups}
+\label{sec:realform:main}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The single most consequential fact of this section is that
@@ -269,6 +270,7 @@ in \autoref{sec:potential:main}.
 \end{postulate}
 
 \begin{theorem}[Orbit classification by rank and norm]\label{thm:albert:orbits}
+\label{thm:OrbitClass}
 The orbits of $E_{6(-26)}$ on the real $27=J_{3}(\mathbb{O})$ are
 classified by the pair $\bigl(\operatorname{rank}(X),\,N(X)\bigr)$, and
 \emph{not} by $\bigl(Q(X),N(X)\bigr)$. Explicitly, the nonzero orbit
@@ -287,7 +289,7 @@ false.
 \begin{proof}
 $E_{6(-26)}$ preserves $N$ up to the character
 \eqref{eq:albert:Ncharacter} and acts transitively on each rank stratum
-of fixed $N$-class (Springer; \autoref{app:albert:main}). The rank is an
+of fixed $N$-class (Springer; \autoref{sec:app-albert:main}). The rank is an
 algebraic invariant (\autoref{def:albert:rank}), preserved because the
 sharp map is $E_{6}$-covariant: $(g\cdot X)^{\#}=\lambda(g)\,
 (g^{\#})\!\cdot X^{\#}$ in the appropriate contragredient action, so
@@ -413,9 +415,9 @@ $(32,0)$: it carries \emph{zero} Lorentzian content. In particular there
 is no $(4,28)$ Killing/coset signature, and the physical $(1,3)$ Minkowski
 signature does \emph{not} fall out of the coset geometry. Lorentzian
 signature enters only through the soldering postulate
-\hyperref[post:soldering:P3]{P3}, which uses the indefinite cubic norm
+\hyperref[post:spacetime:P3master]{P3}, which uses the indefinite cubic norm
 $N$ restricted to $H_{2}(\mathbb{O})\cong\mathbb{R}^{1,9}$ on a
-\emph{different} module (\autoref{sec:soldering:main}). The two forms
+\emph{different} module (\autoref{sec:spacetime:main}). The two forms
 (definite $K|_{\mathfrak{m}}$, indefinite $N$) live on distinct spaces;
 there is no tension.
 \end{remark}
@@ -462,5 +464,5 @@ dynamics (\autoref{post:albert:realform}, part of
 promotes \eqref{eq:albert:EIII} from ``a distinguished orbit'' to ``the
 global minimum of $V$'' is proved in \autoref{sec:potential:main}; the
 Lorentzian soldering that uses $N$ to install signature $(-,+,+,+)$ is in
-\autoref{sec:soldering:main}; the gauge/clock-field dynamics on
+\autoref{sec:spacetime:main}; the gauge/clock-field dynamics on
 $\mathfrak{m}$ are in \autoref{sec:coset:main}.
