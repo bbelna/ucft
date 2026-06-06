@@ -1,0 +1,131 @@
+\contentsline {part}{I\hspace {1em}Foundations and the Master Chain}{5}{part.1}%
+\contentsline {section}{\numberline {1}Overview of the Construction}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Axioms}{5}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Postulates \textnormal {P1--P6}}{5}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Logical dependencies}{5}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Principal parameters}{5}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Summary}{5}{subsection.1.5}%
+\contentsline {section}{\numberline {2}Introduction}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Motivation}{7}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Axioms and scope}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Postulates \textnormal {P1--P6}}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Status of results}{8}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Main theorem}{9}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Organization}{9}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Axioms and Added Postulates}{10}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Axiom I: the order parameter and the $\mathrm {E}_{6}$/Albert arena}{10}{subsection.3.1}%
+\contentsline {paragraph}{Quantization prescription (theorem-grade kinematics).}{10}{section*.2}%
+\contentsline {subsection}{\numberline {3.2}Real form, invariants, and the vacuum manifold}{11}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}The added postulates $\textnormal {P1}$--$\textnormal {P6}$}{12}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}From Axiom I to a broken vacuum}{12}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Reconciliation of axiomatic and emergent time}{13}{subsection.3.5}%
+\contentsline {part}{II\hspace {1em}Albert Algebra, Vacuum Selection, and Coset Geometry}{13}{part.2}%
+\contentsline {section}{\numberline {4}The Albert Algebra and Exceptional Structure}{14}{section.4}%
+\contentsline {subsection}{\numberline {4.1}The exceptional Jordan algebra $J_{3}(\mathbb {O})$}{14}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Trace form, cubic norm, and the sharp map}{15}{subsection.4.2}%
+\contentsline {paragraph}{Linear and quadratic traces.}{15}{section*.3}%
+\contentsline {paragraph}{Cubic norm.}{15}{section*.4}%
+\contentsline {paragraph}{Sharp map.}{15}{section*.5}%
+\contentsline {subsection}{\numberline {4.3}Rank, idempotents, and the rank-one criterion}{15}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}The four real forms and what each preserves}{16}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Branchings under $H=\operatorname {Spin}(10)\times \mathrm {U}(1)$}{17}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Summary of canonical structure}{18}{subsection.4.6}%
+\contentsline {section}{\numberline {5}The Invariant Potential and Vacuum Selection}{19}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Albert-algebra setup and the two real forms}{19}{subsection.5.1}%
+\contentsline {paragraph}{The two $E_6$'s (a locked distinction).}{19}{section*.6}%
+\contentsline {subsection}{\numberline {5.2}The potential class (Postulate P1)}{20}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}The vacuum-selection theorem (P1 $\Rightarrow $ P2)}{20}{subsection.5.3}%
+\contentsline {paragraph}{Status of $Q$.}{21}{section*.7}%
+\contentsline {paragraph}{Why rank $2$ and rank $3$ strictly lose.}{22}{section*.8}%
+\contentsline {subsection}{\numberline {5.4}The symmetric origin is a strict local maximum}{22}{subsection.5.4}%
+\contentsline {paragraph}{Tree-level Goldstone consistency.}{22}{section*.9}%
+\contentsline {subsection}{\numberline {5.5}Summary of the logical chain}{23}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Coset Geometry and the Clock Fields}{23}{section.6}%
+\contentsline {subsection}{\numberline {6.1}The tangent space $\mathfrak m$}{23}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}The invariant metric}{24}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}The Maurer--Cartan form and the clock-field $\sigma $-model}{25}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Tree-level massless Goldstones}{26}{subsection.6.4}%
+\contentsline {paragraph}{Status of the claims.}{26}{section*.10}%
+\contentsline {part}{III\hspace {1em}Spacetime, Gauge Sector, and Mass Spectrum}{26}{part.3}%
+\contentsline {section}{\numberline {7}Emergent Spacetime, Soldering, and Lorentzian Signature}{26}{section.7}%
+\contentsline {subsection}{\numberline {7.1}The Minkowski block inside the Albert algebra}{27}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Source of indefiniteness: the cubic norm, not the trace form}{28}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}The soldering postulate P3}{29}{subsection.7.3}%
+\contentsline {paragraph}{Theorem-level inputs.}{29}{section*.11}%
+\contentsline {paragraph}{What P3 does not claim.}{30}{section*.12}%
+\contentsline {subsection}{\numberline {7.4}Emergent time: Page--Wootters clock and Osterwalder--Schrader}{30}{subsection.7.4}%
+\contentsline {paragraph}{Euclidean to Lorentzian via Osterwalder--Schrader.}{31}{section*.13}%
+\contentsline {subsection}{\numberline {7.5}Master statement}{32}{subsection.7.5}%
+\contentsline {section}{\numberline {8}The composite $\operatorname {Spin}(10)\times \mathrm {U}(1)$ gauge sector}{32}{section.8}%
+\contentsline {subsection}{\numberline {8.1}The composite connection from the Maurer--Cartan form}{32}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Induced Yang--Mills term --- corrected coefficient}{33}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}$H$ is unbroken at the vacuum}{34}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Green--Schwarz anomaly cancellation}{35}{subsection.8.4}%
+\contentsline {paragraph}{Status.}{35}{section*.14}%
+\contentsline {section}{\numberline {9}Radiative Masses and the Physical Spectrum}{35}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Tree level: thirty-two exact Goldstones}{36}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}One loop: a single common radiative mass}{36}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}The four frame directions are gauge, not Hessian zeros}{37}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Canonical normalization of the mass}{37}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Consequence: the loop sum uses twenty-eight scalars}{38}{subsection.9.5}%
+\contentsline {part}{IV\hspace {1em}Induced Gravity, Renormalization, and Standard Model Descent}{38}{part.4}%
+\contentsline {section}{\numberline {10}Sakharov-Induced Gravitation}{38}{section.10}%
+\contentsline {subsection}{\numberline {10.1}The massive multiplet and the ghost operator}{39}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Induced Planck mass from the $a_{2}$ coefficient}{40}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Cosmological constant: inherited, not solved}{41}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Place in the renormalization-group flow}{41}{subsection.10.4}%
+\contentsline {section}{\numberline {11}Functional Renormalization and Ultraviolet Behaviour}{42}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Setup: Wetterich equation and Litim regulator}{43}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Gauge sector: asymptotic freedom}{43}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Gravitational sector: asymptotic safety (indicative)}{44}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Scalar block and Yukawa direction}{45}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}Explicit fixed point and stability spectrum}{45}{subsection.11.5}%
+\contentsline {subsection}{\numberline {11.6}Ultraviolet completeness, recast}{46}{subsection.11.6}%
+\contentsline {section}{\numberline {12}Standard Model Descent, Generations, and Fermion Masses}{46}{section.12}%
+\contentsline {subsection}{\numberline {12.1}The explicit symmetry-breaking chain}{47}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}One family from the $16$}{47}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Three generations: $SU(3)_F$ on $J_3(\mathbb {O})\otimes \mathbb {C}^3$}{48}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}Yukawa and seesaw sector (P6)}{49}{subsection.12.4}%
+\contentsline {subsection}{\numberline {12.5}Anomaly arithmetic}{50}{subsection.12.5}%
+\contentsline {subsection}{\numberline {12.6}Phenomenology (indicative)}{50}{subsection.12.6}%
+\contentsline {subsection}{\numberline {12.7}Summary of results}{50}{subsection.12.7}%
+\contentsline {part}{V\hspace {1em}Correspondences and Conclusions}{51}{part.5}%
+\contentsline {section}{\numberline {13}Vortex strings, heterotic correspondence, and conclusions}{51}{section.13}%
+\contentsline {subsection}{\numberline {13.1}The topological source of the strings}{51}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}BPS vortex strings of finite tension}{52}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Worldsheet algebra and the heterotic correspondence}{52}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4}The $\mathbb {Z}_{5}$ quintic Calabi--Yau correspondence}{53}{subsection.13.4}%
+\contentsline {subsection}{\numberline {13.5}Conclusions: theorems versus postulates}{54}{subsection.13.5}%
+\contentsline {paragraph}{What is proved.}{55}{section*.15}%
+\contentsline {paragraph}{What is postulated.}{55}{section*.16}%
+\contentsline {paragraph}{What is indicative or a correspondence.}{55}{section*.17}%
+\contentsline {paragraph}{Outlook.}{55}{section*.18}%
+\contentsline {part}{VI\hspace {1em}Appendices}{55}{part.6}%
+\contentsline {section}{\numberline {A}Octonions and the Albert Algebra}{55}{section.A}%
+\contentsline {subsection}{\numberline {A.1}Octonions: multiplication and structure constants}{56}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}The Albert algebra $J_3(\mathbb O)$}{56}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}The sharp map and the Freudenthal identities}{57}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}Rank stratification and primitive idempotents}{58}{subsection.A.4}%
+\contentsline {subsection}{\numberline {A.5}Invariants and the two real forms}{59}{subsection.A.5}%
+\contentsline {subsection}{\numberline {A.6}Orbit classification of the real $27$}{60}{subsection.A.6}%
+\contentsline {subsection}{\numberline {A.7}$F_4$- and $H$-branchings; the coset tangent module}{60}{subsection.A.7}%
+\contentsline {subsection}{\numberline {A.8}The Minkowski block from the cubic norm}{61}{subsection.A.8}%
+\contentsline {subsection}{\numberline {A.9}Identities used downstream}{62}{subsection.A.9}%
+\contentsline {section}{\numberline {B}Minkowski Structure and the Soldering Map}{62}{section.B}%
+\contentsline {subsection}{\numberline {B.1}The Minkowski block: $H_{2}(\mathbb {O})\cong \mathbb {R}^{1,9}$}{63}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}The cubic norm $N$ is genuinely indefinite}{64}{subsection.B.2}%
+\contentsline {subsection}{\numberline {B.3}The soldering postulate (P3)}{65}{subsection.B.3}%
+\contentsline {subsection}{\numberline {B.4}Emergent time: Page--Wootters clock and Osterwalder--Schrader reconstruction}{66}{subsection.B.4}%
+\contentsline {subsection}{\numberline {B.5}Summary: theorem versus postulate}{67}{subsection.B.5}%
+\contentsline {section}{\numberline {C}Branchings and the Coset Module}{68}{section.C}%
+\contentsline {subsection}{\numberline {C.1}The $U(1)$ charge normalization}{68}{subsection.C.1}%
+\contentsline {subsection}{\numberline {C.2}Relevant tensor products of $\operatorname {Spin}(10)$ spinors}{69}{subsection.C.2}%
+\contentsline {subsection}{\numberline {C.3}Reality type and commutant of the coset module}{70}{subsection.C.3}%
+\contentsline {subsection}{\numberline {C.4}Uniqueness and definiteness of the invariant metric}{70}{subsection.C.4}%
+\contentsline {subsection}{\numberline {C.5}One common radiative mass (Schur)}{71}{subsection.C.5}%
+\contentsline {section}{\numberline {D}The Induced Yang--Mills Coefficient}{72}{section.D}%
+\contentsline {subsection}{\numberline {D.1}The Maurer--Cartan curvature and the one-loop determinant}{72}{subsection.D.1}%
+\contentsline {subsection}{\numberline {D.2}Heat-kernel extraction of the gauge weight}{73}{subsection.D.2}%
+\contentsline {subsection}{\numberline {D.3}The induced coupling}{74}{subsection.D.3}%
+\contentsline {subsection}{\numberline {D.4}Feeding the asymptotic-freedom slope $b_{0}$}{74}{subsection.D.4}%
+\contentsline {section}{\numberline {E}Deferred Computational Appendices}{75}{section.E}%

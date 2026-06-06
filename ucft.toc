@@ -1,0 +1,24 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Status of claims}{2}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Axioms and Model Data}{3}{section.2}%
+\contentsline {section}{\numberline {3}Algebraic Background}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}The Albert algebra}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Real forms}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}The complex Cayley plane}{5}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Spontaneous Symmetry Breaking and Clock Fields}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Vacuum selection}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Coset geometry}{6}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Soldering and Spacetime}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Minkowski blocks in the Albert algebra}{7}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Gauge and Matter Sectors}{7}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Composite \(H\)-connection}{7}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Matter embedding}{8}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Anomaly bookkeeping}{8}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Standard Model descent}{8}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Effective Dynamics}{9}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Sigma-model action}{9}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Mass spectrum}{9}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Sakharov induced gravity}{9}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Gauge running}{10}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Strings and Heterotic Correspondence}{10}{section.8}%
+\contentsline {section}{\numberline {9}Summary}{10}{section.9}%

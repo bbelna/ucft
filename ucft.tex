@@ -1,0 +1,222 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{hyperref}
+
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black}
+\allowdisplaybreaks
+\renewcommand{\arraystretch}{1.18}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{postulate}[theorem]{Postulate}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{indicative}[theorem]{Indicative}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\providecommand*{\sectionautorefname}{Section}
+\providecommand*{\subsectionautorefname}{Section}
+\providecommand*{\theoremautorefname}{Theorem}
+\providecommand*{\lemmaautorefname}{Lemma}
+\providecommand*{\corollaryautorefname}{Corollary}
+\providecommand*{\propositionautorefname}{Proposition}
+\providecommand*{\conjectureautorefname}{Conjecture}
+\providecommand*{\definitionautorefname}{Definition}
+\providecommand*{\axiomautorefname}{Axiom}
+\providecommand*{\postulateautorefname}{Postulate}
+\providecommand*{\constructionautorefname}{Construction}
+\providecommand*{\indicativeautorefname}{Indicative}
+\providecommand{\cref}[1]{\autoref{#1}}
+
+% Core notation.
+\newcommand{\SU}[1]{\mathrm{SU}(#1)}
+\newcommand{\SO}[1]{\mathrm{SO}(#1)}
+\newcommand{\U}[1]{\mathrm{U}(#1)}
+\newcommand{\E}[1]{\mathrm{E}_{#1}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Spin}{\operatorname{Spin}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\Hess}{\operatorname{Hess}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Str}{\operatorname{STr}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Oct}{\mathbb{O}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\jalg}{J_3(\mathbb{O})}
+\newcommand{\SOTen}{\SO{10}}
+\newcommand{\UOne}{\U{1}}
+\newcommand{\Uone}{\U{1}}
+\newcommand{\ESix}{\E{6}}
+\newcommand{\EIII}{\mathrm{EIII}}
+\newcommand{\SOTenXUOne}{\SOTen \times \UOne}
+\newcommand{\MCoset}{\frac{\ESix}{\SOTenXUOne}}
+\newcommand{\MCosetInline}{\ESix/(\SOTenXUOne)}
+\newcommand{\ESixBreaking}{\ESix \to \SOTenXUOne}
+\newcommand{\Herm}[2]{\mathrm{Herm}_{#1}(#2)}
+\newcommand{\chr}[1]{\mathrm{char}(#1)}
+\newcommand{\Rep}[1]{\mathbf{#1}}
+\newcommand{\Repbar}[1]{\overline{\mathbf{#1}}}
+\newcommand{\Pone}{\textnormal{P1}}
+\newcommand{\Ptwo}{\textnormal{P2}}
+\newcommand{\Pthree}{\textnormal{P3}}
+\newcommand{\Pfour}{\textnormal{P4}}
+\newcommand{\Pfive}{\textnormal{P5}}
+\newcommand{\Psix}{\textnormal{P6}}
+\newcommand{\MGUT}{M_{\mathrm{GUT}}}
+\newcommand{\ghat}{\hat g}
+\newcommand{\yhat}{\hat y}
+\newcommand{\clock}{\phi^{0}}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\dket}[1]{\lvert #1\rangle\!\rangle}
+\newcommand{\dbra}[1]{\langle\!\langle #1\rvert}
+\newcommand{\sm}{\hspace{.065em}}
+\newcommand{\s}{\hspace{.1em}}
+\newcommand{\smexp}[1]{^{\sm #1}}
+\newcommand{\set}[2]{\{#1\,:\,#2\}}
+
+\title{Universal Coset Field Theory:\\
+An \(E_{6}\)-Albert-Algebra Framework}
+\author{Brandon Belna}
+\date{June 6, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Universal Coset Field Theory (UCFT) is an $E_6$/Albert-algebra--motivated,
+four-dimensional framework in which an order parameter valued in
+$J_3(\mathbb O)$ selects the rank-one $E_6/(\Spin(10)\times\U(1))$ orbit.
+The manuscript states the honest thesis: the algebraic arena and
+vacuum-selection theorem are separated from the added postulates P1--P6 that
+supply soldering, chirality, three generations, and the Yukawa sector.
+The resulting theory contains a composite $\Spin(10)\times\U(1)$ gauge sector,
+a $28+4$ clock-field spectrum, Sakharov-induced gravity, asymptotically free
+gauge--Yukawa running, an indicative gravitational fixed point, and a
+low-energy heterotic correspondence.
+\end{abstract}
+
+\noindent\textbf{Keywords:}
+exceptional Jordan algebra; $E_6$ coset; induced gravity; $\Spin(10)$;
+heterotic correspondence; clock fields.
+
+\tableofcontents
+\clearpage
+
+\input{.ucft-build/unit-intro}
+\input{.ucft-build/unit-axioms}
+\input{.ucft-build/unit-albert}
+\input{.ucft-build/unit-potential}
+\input{.ucft-build/unit-coset}
+\input{.ucft-build/unit-spacetime}
+\input{.ucft-build/unit-gauge}
+\input{.ucft-build/unit-masses}
+\input{.ucft-build/unit-gravity}
+\input{.ucft-build/unit-frg}
+\input{.ucft-build/unit-sm}
+\input{.ucft-build/unit-strings}
+
+\appendix
+\input{.ucft-build/unit-app-albert}
+\input{.ucft-build/unit-app-lorentz}
+\input{.ucft-build/unit-app-spectrum}
+\input{.ucft-build/unit-app-ym}
+
+% Deferred appendix labels for calculations summarized in the main text.
+\section{Deferred Computational Appendices}
+\label{app:gravity:main}
+\label{app:frg}
+\label{app:ws:main}
+\label{app:cy:main}
+\label{app:anomaly:main}
+\label{eq:MC}
+\label{eq:sigma}
+The assembled manuscript is intentionally modular. The heat-kernel, FRG,
+worldsheet, Calabi--Yau, and anomaly computations referred to in the body are
+summarized in the corresponding main sections and in the algebraic appendices
+above; this section preserves stable cross-reference anchors for those deferred
+computational details.
+
+\begin{thebibliography}{99}
+\bibitem{Albert:1934}
+A. A. Albert,
+On a certain algebra of quantum mechanics,
+\emph{Annals of Mathematics} \textbf{35} (1934).
+\bibitem{Baez:2002}
+J. C. Baez,
+The octonions,
+\emph{Bulletin of the American Mathematical Society} \textbf{39} (2002).
+\bibitem{Freudenthal:1985}
+H. Freudenthal,
+Oktaven, Ausnahmegruppen und Oktavengeometrie,
+selected works on exceptional Jordan structures.
+\bibitem{Helgason:1978}
+S. Helgason,
+\emph{Differential Geometry, Lie Groups, and Symmetric Spaces},
+Academic Press, 1978.
+\bibitem{JNW:1934}
+P. Jordan, J. von Neumann, and E. Wigner,
+On an algebraic generalization of the quantum mechanical formalism,
+\emph{Annals of Mathematics} \textbf{35} (1934).
+\bibitem{Jacobson:1968}
+N. Jacobson,
+\emph{Structure and Representations of Jordan Algebras},
+American Mathematical Society, 1968.
+\bibitem{Krutelevich:2007}
+S. Krutelevich,
+Jordan algebras, exceptional groups, and higher composition laws,
+\emph{Journal of Algebra} \textbf{314} (2007).
+\bibitem{McCrimmon:2004}
+K. McCrimmon,
+\emph{A Taste of Jordan Algebras},
+Springer, 2004.
+\bibitem{Sakharov:1967pk}
+A. D. Sakharov,
+Vacuum quantum fluctuations in curved space and the theory of gravitation,
+\emph{Soviet Physics Doklady} \textbf{12} (1968).
+\bibitem{Schafer:1966}
+R. D. Schafer,
+\emph{An Introduction to Nonassociative Algebras},
+Academic Press, 1966.
+\bibitem{Slansky:1981}
+R. Slansky,
+Group theory for unified model building,
+\emph{Physics Reports} \textbf{79} (1981).
+\bibitem{Springer:2000}
+T. A. Springer and F. D. Veldkamp,
+\emph{Octonions, Jordan Algebras and Exceptional Groups},
+Springer, 2000.
+\bibitem{Sudbery:1984}
+A. Sudbery,
+Division algebras, (pseudo)orthogonal groups and spinors,
+\emph{Journal of Physics A} \textbf{17} (1984).
+\bibitem{Yokota:2009}
+I. Yokota,
+\emph{Exceptional Lie Groups},
+arXiv/lecture notes, 2009.
+\end{thebibliography}
+
+\end{document}
