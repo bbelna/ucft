@@ -1,5 +1,7 @@
 # Neuro-SJET: Applying the Stone–Jordan Methodology to the Human Brain
 
+**Status (JSET v1)**: This is a *speculative mapping exercise* only. It applies the same generative style (primitives + typed operations + capacity + collapse) to neuro/psych phenomenology. All mathematical caveats from the main JSET v1 ledger (`sjet_true.tex`) apply in full: there is no single uniform mirror functor, capacity is bookkeeping unless data are independent, the family/observer count is the conjectural axiom **FAM**, soldering requires an explicit complex selection, and all physical or experiential "derivations" are conditional on named assumptions. This document is not part of the rigorous core and should not be cited as evidence that the framework derives clinical or phenomenal structure.
+
 **Goal**: Use the same generative style as SJET (minimal primitives + mirror involution + climb + capacity balance + observer collapse) to sketch how something like the human brain, subjective experience, and clinical phenomena like depression could arise. This is speculative mapping of *methodology*, not a finished theory. The intent is to see whether the "glue" pattern that worked for physics can be run on neuro/psych territory.
 
 We treat the existing SJET "observer" apparatus as the primary bridge, since it already derives:

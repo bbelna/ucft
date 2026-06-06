@@ -1,0 +1,613 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\numberwithin{equation}{section}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Quat}{\mathbb{H}}
+\newcommand{\Oct}{\mathbb{O}}
+\newcommand{\jalg}{J_3(\mathbb{O})}
+\newcommand{\E}[1]{\mathrm{E}_{#1}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\Void}{\mathcal{V}}
+\newcommand{\Mirror}{\mathsf{M}}
+\newcommand{\Climb}{\mathsf{C}}
+\newcommand{\capacity}{\mathcal{C}}
+\newcommand{\orderparam}{\Phi}
+\newcommand{\MPl}{M_{\mathrm{Pl}}}
+\newcommand{\Hess}{\operatorname{Hess}}
+\DeclareMathOperator{\argmax}{arg\,max}
+\newcommand{\id}{\mathrm{id}}
+
+\title{Stone--Jordan Exceptional Theory (SJET$_{\mathrm{true}}$) --- JSET v1:\\
+\large A Theorem--Conjecture Ledger for an Exceptional Jordan/E$_6$ Scaffold with Conditional Observer and EFT Layers}
+\author{Brandon Belna}
+\date{June 2026 (v1 finalization)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+SJET$_{\mathrm{true}}$ is a conditional framework that organizes GUT-like matter content, family/observer geometry, and effective field theory sectors using the exceptional Jordan algebra $J_3(\mathbb{O})$ and its automorphism group $E_6$. 
+
+The rigorous core consists of standard facts from exceptional Lie and Jordan algebra theory: $\dim_{\R} J_3(\mathbb{O}) = 27$, the Hermitian symmetric space $E_6/(\Spin(10)\cdot U(1))$ of real dimension 32 with tangent representation $\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$, and the branching $\mathbf{27}\downarrow_{\Spin(10)\times U(1)} = \mathbf{1}_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}$. These are imported theorems, not derived from physical primitives.
+
+All dynamical claims---a single involutive mirror functor generating the exceptional ladder, a capacity functional deriving the weights $(1/27,10/27,16/27)$, a cohomology computation yielding exactly three families, quaternionic soldering producing four-dimensional Minkowski space, and derivations of the Standard Model Lagrangian, quantum field theory via Osterwalder--Schrader reconstruction, or quantum gravity---are demoted or removed. 
+
+The corrected structure is a typed exceptional-algebra scaffold plus explicitly stated conjectural geometric and effective-field-theory assumptions. Physical statements are conditional: they hold only under additional, named assumptions (e.g., the family axiom \textbf{FAM}, independent capacity data, a correct complex soldering selection $\mathbb{C}\hookrightarrow\mathbb{O}$, and standard EFT truncations). No claim is made that void and mirror alone derive the Standard Model, general relativity, or cosmology.
+\end{abstract}
+
+\tableofcontents
+\clearpage
+
+%======================================================================
+\section{Introduction and Scope}
+%======================================================================
+
+This document presents a mathematically defensible version of Stone--Jordan Exceptional Theory, denoted SJET$_{\mathrm{true}}$. The goal is to retain what is rigorously established in exceptional algebra while clearly separating it from conjectural physical interpretation and model-building assumptions.
+
+The original programme attempted to derive four-dimensional gauge theory, gravity, and cosmology from two primitives (a ``void'' and a ``mirror'') together with capacity balance and observer collapse. Multiple independent audits have shown that the central dynamical links in that programme are either undefined, circular, dimensionally incorrect, or reverse-engineered to known answers. The present document implements the required corrections (directly addressing the primary recommendations of the 39-agent validation of 2026-06-06; see the companion \texttt{SJET-VALIDATION-REPORT.md}).
+
+\textbf{Relation to the validation report.} The June 2026 adversarial validation (mathematics, phenomenology, and parameter-audit referees) identified multiple fatal issues in the prior dynamical chain and recommended a split: (1) a short honest mathematics note on the exceptional scaffold presented strictly as representation theory, and (2) an explicitly conjectural framework paper with all derivation/closure/parameter-free language relabeled or removed. This document is the implementation of recommendation (1) together with a precise ledger of the conjectural and conditional elements (recommendation (2) scope). The static endpoints (dimensions, branchings, EIII geometry, $\sin^2\theta_W=3/8$, $b_0=12$ arithmetic under the assumed embedding) are retained as correct imported facts; all novel generative claims are demoted as described.
+
+The thesis of SJET$_{\mathrm{true}}$ is therefore:
+
+\[
+\begin{aligned}
+\text{SJET}_{\mathrm{true}}
+&=
+\underbrace{
+\bigl(J_3(\mathbb{O}),\,E_6,\,\Spin(10)\cdot U(1),\,\mathbf{27}=\mathbf{1}\oplus\mathbf{10}\oplus\mathbf{16}\bigr)
+}_{\text{rigorous exceptional algebra core}}
+\\
+&\quad+
+\underbrace{
+\bigl(\mathcal{C},\,G_{\mathrm{Albert}},\,\mu,\,c_i\bigr)
+}_{\text{capacity model (not derived unless data fixed independently)}}
+\\
+&\quad+
+\underbrace{
+(Q,\,\sigma,\,V_{16}),\quad \dim H^1(Q,V_{16})^{-}=3
+}_{\text{family/observer conjecture (\textbf{FAM})}}
+\\
+&\quad+
+\underbrace{
+H_2(\mathbb{C})\hookrightarrow J_3(\mathbb{O})
+}_{\text{corrected $d=4$ soldering (requires extra selection of $\mathbb{C}\subset\mathbb{O}$)}}
+\\
+&\quad+
+\underbrace{
+S_{\mathrm{GUT/SM}}+S_{\mathrm{EH}}
+}_{\text{conditional EFT layer}}.
+\end{aligned}
+\]
+
+The false thesis avoided here is ``void + mirror $\Longrightarrow$ Standard Model + GR + QFT + cosmology.'' The true thesis is ``exceptional algebra + explicitly stated geometric/EFT assumptions $\Longrightarrow$ a structured GUT-inspired model-building framework.''
+
+All claims are classified by status in the ledger of Section~\ref{sec:ledger}.
+
+%======================================================================
+\section{Theorem--Conjecture Ledger}
+\label{sec:ledger}
+%======================================================================
+
+Every statement in this document carries one of the following classifications. The classification is part of the claim.
+
+\begin{itemize}[leftmargin=*]
+\item \textbf{Theorem (T)}: A statement proved from explicitly stated axioms and standard mathematics (Lie theory, differential geometry, convex analysis, etc.), with all objects defined before use.
+\item \textbf{Standard Imported Theorem (SIT)}: A well-known result from the literature of exceptional Lie algebras, Jordan algebras, or symmetric spaces, cited as background. It is not a novel contribution of SJET.
+\item \textbf{Definition (D)}: A naming or construction. Definitions carry no truth value but must be unambiguous.
+\item \textbf{Conjecture (C)}: A precise mathematical statement whose truth is not known; a clear target for future work. The data required to decide it are stated.
+\item \textbf{Assumption (A)}: An explicit additional hypothesis adopted for a conditional result. Assumptions are named and collected.
+\item \textbf{Conditional EFT Consequence (CEC)}: A statement that follows inside an effective field theory truncation once a list of assumptions is granted. It is not claimed to follow from the exceptional algebra core alone.
+\item \textbf{Speculative Interpretation (SI)}: A physical or philosophical reading that is not a mathematical claim. These are clearly flagged and carry no formal status.
+\end{itemize}
+
+A summary ledger appears at the end of each major section.
+
+%======================================================================
+\section{Rigorous Mathematical Core: The Exceptional Jordan--$E_6$ Scaffold}
+\label{sec:core}
+%======================================================================
+
+This section records only statements that are either definitions or standard theorems of exceptional algebra. No physical interpretation is attached.
+
+\subsection{The Albert algebra}
+
+\begin{definition}[Albert algebra]\label{def:albert}
+Let $\Oct$ denote the octonions (the unique 8-dimensional normed division algebra over $\R$, up to isomorphism). The \emph{Albert algebra} is the real vector space
+\[
+J_3(\Oct) := \bigl\{ X \in M_3(\Oct) \bigm| X^\dagger = X \bigr\}
+\]
+of $3\times 3$ Hermitian octonionic matrices, equipped with the Jordan product
+\[
+X\circ Y := \tfrac12(XY+YX).
+\]
+\end{definition}
+
+\begin{theorem}[Dimension of the Albert algebra (SIT)]\label{thm:dim-j}
+\[
+\dim_{\R} J_3(\Oct) = 3 + 3\dim_{\R}\Oct = 3 + 3\cdot 8 = 27.
+\]
+The three real parameters lie on the diagonal; each of the three strictly upper-triangular entries contributes eight real parameters, subject to the Hermitian condition.
+\end{theorem}
+
+\begin{lemma}[Explicit matrix count for pedagogical clarity]
+An element of $J_3(\Oct)$ has the form
+\[
+X = \begin{pmatrix}
+\xi_1 & x_3 & \bar x_2 \\
+\bar x_3 & \xi_2 & x_1 \\
+x_2 & \bar x_1 & \xi_3
+\end{pmatrix},
+\quad \xi_i \in \R, \quad x_i \in \Oct.
+\]
+There are three real diagonal entries and three independent octonionic off-diagonal slots (the lower triangle is the conjugate of the upper). Each octonion contributes 8 real dimensions, for a total of $3 + 3 \times 8 = 27$.
+\end{lemma}
+
+The cubic norm (determinant) $N(X) = \det X$ and the associated sharp map $X^\# = \partial N(X)$ equip $J_3(\Oct)$ with the structure of a 27-dimensional exceptional Jordan algebra. Its automorphism group is the compact real form of $E_6$.
+
+\subsection{The Hermitian symmetric space EIII}
+
+Let $G = E_6^{\mathrm{cpt}}$ (compact real form) and let $H = \Spin(10)\cdot U(1)$ (modulo the standard finite central quotient that makes the embedding effective).
+
+\begin{definition}[EIII coset]\label{def:eiii}
+The \emph{EIII symmetric space} is the compact Hermitian symmetric space
+\[
+X := G/H = E_6^{\mathrm{cpt}} \big/ \bigl(\Spin(10)\cdot U(1)\bigr).
+\]
+\end{definition}
+
+\begin{theorem}[Dimension of EIII (SIT)]\label{thm:dim-eiii}
+\[
+\dim_{\R} X = \dim G - \dim H = 78 - 45 - 1 = 32.
+\]
+\end{theorem}
+
+\begin{theorem}[Tangent representation (SIT)]\label{thm:tangent}
+At the base point $o = eH \in X$, the complexified tangent space decomposes as an $H$-representation:
+\[
+T_oX \otimes_{\R}\C \;\cong\; \mathbf{16}_{-3} \oplus \overline{\mathbf{16}}_{+3},
+\]
+where the subscripts denote the $U(1)$ charges under the central $U(1)\subset H$. The two summands are irreducible and mutually conjugate.
+\end{theorem}
+
+\begin{theorem}[Minuscule representation branching (SIT)]\label{thm:27-branch}
+The 27-dimensional minuscule representation of $E_6$ branches under $\Spin(10)\times U(1)$ as
+\[
+\mathbf{27}\;\downarrow_{\Spin(10)\times U(1)}\;=\; \mathbf{1}_{+4} \;\oplus\; \mathbf{10}_{-2} \;\oplus\; \mathbf{16}_{+1}.
+\]
+The summands are irreducible and the $U(1)$ charges are normalized so that the embedding is the standard one induced by the Jordan structure.
+\end{theorem}
+
+These four statements (Theorems \ref{thm:dim-j}--\ref{thm:27-branch}) constitute the \emph{rigorous exceptional algebra core} of SJET$_{\mathrm{true}}$. They are true independently of any physical story. All subsequent physical claims are conditional on additional structure or assumptions layered on top of this core.
+
+\begin{remark}[Ledger for the core]
+All four statements in this section (plus the explicit count lemma) are classified as Standard Imported Theorems (SIT). They are not theorems of SJET; they are background mathematics that SJET may use. This section constitutes the "short honest mathematics note on the exceptional scaffold, restricted to what is provably true" recommended by the validation editor.
+\end{remark}
+
+%======================================================================
+\section{The Typed Mirror Scaffold}
+\label{sec:typed-mirror}
+%======================================================================
+
+The original programme posited a single involutive functor $\Mirror$ satisfying $\Mirror^2\simeq\mathrm{id}$ whose iterated application to the void generates the entire ladder
+\[
+\Void\to\R\to\C\to\Quat\to\Oct\to J_3(\Oct)\to E_8\to E_8\times E_8\to E_6.
+\]
+No such uniform functor has been constructed.
+
+\subsection{Typed operations}
+
+The steps that appear in the ladder are qualitatively different algebraic constructions:
+
+\begin{definition}[Typed mirror operations]\label{def:typed-mirror}
+The following named operations are used in the exceptional ladder. They are not asserted to be instances of a single functor.
+\begin{enumerate}[label=\textbf{M\arabic*.}]
+\item $\Mirror_{\mathrm{Bool}}$: Boolean doubling (adjoining a generator to a Boolean algebra or Stone space).
+\item $\Mirror_{\mathrm{CD}}$: Cayley--Dickson doubling on normed division algebras (real $\to$ complex $\to$ quaternionic $\to$ octonionic).
+\item $\Mirror_{\mathrm{Jordan}}$: The passage from the octonions to the Albert algebra $J_3(\Oct)$ (the ``Jordan exit'' that replaces the sedenions).
+\item $\Mirror_{\mathrm{FT}}$: The Freudenthal--Tits construction producing $E_8$ from the pair $(\Oct,\Oct)$ (or from the Albert algebra and its automorphism group).
+\item $\Mirror_{\mathrm{prod}}$: Product formation $G\mapsto G\times G$ together with the exchange involution at the $E_8\times E_8$ level.
+\item $\Mirror_{\mathrm{EIII}}$: The Cartan involution / capacity-balanced reduction from $E_8\times E_8$ data to the EIII coset $E_6/(\Spin(10)\cdot U(1))$.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[No single uniform involutive functor (current status)]\label{thm:no-single-mirror}
+There does not presently exist a single category $\mathcal{C}$ of ``Stone rungs'' and a single functor $\Mirror:\mathcal{C}\to\mathcal{C}$ such that $\Mirror^2\simeq\mathrm{id}$ on objects of interest and whose orbit on a void object reproduces the full ladder of Definition~\ref{def:typed-mirror} with uniform algebraic rules. The operations M1--M6 are defined in different categories (Boolean algebras, non-associative algebras, Jordan algebras, Lie groups) and do not assemble into one involution-preserving functor without additional ad-hoc choices of mode at each rung.
+\end{theorem}
+
+\begin{conjecture}[Unified mirror (open problem)]\label{conj:unified-mirror}
+There exists a single, natural category $\mathcal{C}$ (perhaps a category of algebras with involution, or a category of Jordan--Lie structures with a suitable notion of Stone spectrum) and a single involutive functor $\Mirror$ on $\mathcal{C}$ whose orbit from a suitable initial object recovers the dimensions and algebraic structures of the exceptional ladder in a uniform way, with $\Mirror^2\simeq\mathrm{id}$ holding wherever the $\pm 1$ eigenspace decomposition is later used.
+\end{conjecture}
+
+\begin{remark}[Ledger for the mirror]
+The statement that a single mirror ``forces the climb'' is false (Theorem~\ref{thm:no-single-mirror}). The typed list (Definition~\ref{def:typed-mirror}) is a Definition. The existence of a unified functor is a Conjecture (Conjecture~\ref{conj:unified-mirror}).
+\end{remark}
+
+Corrected claim: SJET$_{\mathrm{true}}$ studies a typed exceptional-algebra scaffold assembled from the operations of Definition~\ref{def:typed-mirror}. It does not claim that a single primitive mirror generates physics.
+
+%======================================================================
+\section{The Capacity Layer}
+\label{sec:capacity}
+%======================================================================
+
+Capacity is a convex-analytic device that can be used to select or record weights on a pre-chosen collection of sectors. It does not, by itself, derive the specific weights $(1/27,10/27,16/27)$.
+
+\subsection{The capacity functional}
+
+Let $V$ be a finite index set (``vertices'' or ``cells''), let $\mu$ be a positive measure on $V$ with $\sum_{a\in V}\mu(a)=1$, and let $c_i(a)$ be real-valued cost functions, one for each sector $i=1,\dots,N$.
+
+\begin{definition}[Capacity functional]\label{def:capacity}
+The \emph{capacity functional} on the hyperplane $\sum_i\omega_i=0$ is
+\[
+\capacity(\omega) := -\sum_{a\in V}\mu(a)\,\log\Bigl(\sum_{i=1}^N\exp\bigl(c_i(a)-\omega_i\bigr)\Bigr).
+\]
+\end{definition}
+
+Define the partition functions and softmax probabilities
+\[
+Z_a(\omega) := \sum_{i=1}^N\exp\bigl(c_i(a)-\omega_i\bigr),\qquad
+p_i(a;\omega) := \frac{\exp\bigl(c_i(a)-\omega_i\bigr)}{Z_a(\omega)}.
+\]
+
+\begin{lemma}[Gradient and Hessian]\label{lem:capacity-derivatives}
+The first and second derivatives are
+\[
+\frac{\partial\capacity}{\partial\omega_i}(\omega) = \sum_{a\in V}\mu(a)\,p_i(a;\omega)
+\]
+and
+\[
+\frac{\partial^2\capacity}{\partial\omega_i\partial\omega_j}(\omega)
+= -\sum_{a\in V}\mu(a)\Bigl(\delta_{ij}p_i(a;\omega)-p_i(a;\omega)p_j(a;\omega)\Bigr).
+\]
+The Hessian is negative semi-definite. Under standard positivity assumptions on $\mu$ and sufficient variation in the costs $c_i$, the Hessian is negative definite on the hyperplane $\sum_i\omega_i=0$, so $\capacity$ is strictly concave there.
+\end{lemma}
+
+\begin{theorem}[Maximizer on the hyperplane]\label{thm:capacity-max}
+Any critical point $\omega^\star$ of $\capacity$ constrained to $\sum_i\omega_i=0$ satisfies
+\[
+\nabla\capacity(\omega^\star) = \lambda(1,\dots,1)
+\]
+for some Lagrange multiplier $\lambda$. If $\sum_a\mu(a)=1$, this forces
+\[
+\frac{\partial\capacity}{\partial\omega_i}(\omega^\star) = \frac1N
+\]
+for each sector $i$. Thus the functional as written selects the uniform distribution $(1/N,\dots,1/N)$ (up to the constraint) when no further structure is imposed on the costs or measure.
+\end{theorem}
+
+\subsection{The 1|10|16 weights are not derived}
+
+The numbers $(1/27,10/27,16/27)$ are precisely the normalized dimensions appearing in the $E_6\to\Spin(10)\times U(1)$ branching of Theorem~\ref{thm:27-branch}. Inserting them as target moments
+\[
+\nabla\capacity(\omega) = \bigl(\tfrac1{27},\tfrac{10}{27},\tfrac{16}{27}\bigr)
+\]
+or as the linear term of a Legendre functional
+\[
+\mathcal{L}_m(\omega) := \capacity(\omega) - \sum_i m_i\omega_i,\qquad m = \bigl(\tfrac1{27},\tfrac{10}{27},\tfrac{16}{27}\bigr),
+\]
+makes the weights an \emph{input} to the variational problem, not an output.
+
+\begin{theorem}[Capacity does not derive the sector weights]\label{thm:capacity-not-derived}
+Unless the graph $G_{\mathrm{Albert}}$, the measure $\mu$, and the cost functions $c_i(a)$ are specified independently of the representation-theoretic dimensions of the $E_6$ branching, the capacity functional does not derive the weights $(1/27,10/27,16/27)$. Those weights must be supplied from outside the variational problem (e.g., by the branching theorem) or the functional must be modified by hand to target them.
+\end{theorem}
+
+Two honest positions are therefore available:
+
+\begin{assumption}[Capacity as bookkeeping (A-Cap-Book)]
+The sector weights $(1/27,10/27,16/27)$ are chosen on representation-theoretic grounds (Theorem~\ref{thm:27-branch}). Capacity $\capacity$ is used only as a convex bookkeeping device that records or propagates those weights under additional constraints.
+\end{assumption}
+
+\begin{assumption}[Legendre/moment-map form (A-Cap-Legendre)]
+One adopts the Legendre functional $\mathcal{L}_m$ with the weights $m$ treated as external data. In this case the weights are explicitly an assumption, not a theorem.
+\end{assumption}
+
+\begin{remark}[Ledger for capacity]
+Lemma~\ref{lem:capacity-derivatives} and Theorem~\ref{thm:capacity-max} are Theorems. Theorem~\ref{thm:capacity-not-derived} is a Theorem. The two ways of using capacity are Assumptions. The claim that capacity ``derives'' the 1|10|16 partition from void and mirror alone is false.
+\end{remark}
+
+%======================================================================
+\section{Family/Observer Geometry: The Conjectural Axiom \textbf{FAM}}
+\label{sec:fam}
+%======================================================================
+
+The claim that there exist exactly three fermion families (or three observer slots) has been expressed as
+\[
+\dim H^1(\hat Q,V_{16})^{\sigma=-1}=3.
+\]
+For this to be a mathematical statement rather than a slogan, the objects must be defined and the computation must be performed.
+
+\begin{definition}[Data for a family count]\label{def:fam-data}
+To define a family index via cohomology one requires:
+\begin{enumerate}[label=(\roman*)]
+\item A compact complex manifold or algebraic variety $Q$ (or a suitable profinite or stratified space with a well-behaved cohomology theory).
+\item A holomorphic involution $\sigma:Q\to Q$ satisfying $\sigma^2=\id$.
+\item A holomorphic vector bundle $V_{16}\to Q$ equipped with a lift of $\sigma$ (i.e., a $\sigma$-equivariant structure).
+\item A computation of the anti-invariant part of the cohomology $H^1(Q,V_{16})^{-}$ (or the corresponding group in whatever cohomology theory is used).
+\end{enumerate}
+Given these data, the operator
+\[
+\Pi_- := \tfrac12(\id - \sigma^*)
+\]
+is a genuine projector, and
+\[
+n_F := \dim H^1(Q,V_{16})^{-}
+\]
+is a well-defined integer.
+\end{definition}
+
+\begin{conjecture}[Family axiom \textbf{FAM}]\label{conj:fam}
+There exists a triple $(Q,\sigma,V_{16})$ satisfying the requirements of Definition~\ref{def:fam-data} such that
+\[
+\sigma^2 = \id \qquad\text{and}\qquad \dim H^1(Q,V_{16})^{-} = 3.
+\]
+\end{conjecture}
+
+\begin{remark}[Common errors that invalidate \textbf{FAM}]
+If the same symbol $\sigma$ is used both for a genuine order-2 involution and for a signed 3-cycle of order 6 (as occurred when a product-mirror exchange was combined with triality permutation on three cells), then $\sigma^2\neq\id$ on the relevant space and the formula for $\Pi_-$ does not define a projector onto $\pm 1$ eigenspaces. Any downstream count that relies on that decomposition is then undefined.
+\end{remark}
+
+\begin{theorem}[Current status of the family count]\label{thm:fam-status}
+No explicit triple $(Q,\sigma,V_{16})$ meeting all four requirements of Definition~\ref{def:fam-data} has been constructed in the literature of SJET such that the anti-invariant cohomology dimension has been rigorously computed to equal 3. Therefore the statement ``there are three families'' is not a theorem. It is exactly Conjecture~\ref{conj:fam}.
+\end{theorem}
+
+\begin{remark}[Ledger for families]
+Definition~\ref{def:fam-data} is a Definition. Conjecture~\ref{conj:fam} is a Conjecture. Theorem~\ref{thm:fam-status} is a Theorem (negative result). Any claim that three families have been derived from void and mirror is false until the data of Definition~\ref{def:fam-data} are supplied and the computation is exhibited.
+\end{remark}
+
+%======================================================================
+\section{Spacetime Soldering: The Correct Hermitian-Matrix Models}
+\label{sec:soldering}
+%======================================================================
+
+Four-dimensional Lorentzian geometry cannot be obtained from the quaternionic Hermitian matrices in the manner previously claimed.
+
+\subsection{Hermitian matrices over a normed division algebra}
+
+Let $\mathbb{K}$ be a normed division algebra over $\R$ ($\R,\C,\Quat$, or $\Oct$). Define
+\[
+H_2(\mathbb{K}) := \Bigl\{ \begin{pmatrix} a & x \\ \bar x & b \end{pmatrix} \Bigm| a,b\in\R,\ x\in\mathbb{K} \Bigr\}.
+\]
+
+\begin{theorem}[Dimension and signature of $H_2(\mathbb{K})$]\label{thm:h2k}
+\[
+\dim_{\R} H_2(\mathbb{K}) = 2 + \dim_{\R}\mathbb{K}.
+\]
+The determinant
+\[
+\det\begin{pmatrix} a & x \\ \bar x & b \end{pmatrix} = ab - \|x\|^2
+\]
+is a quadratic form of signature $(1,1+\dim_{\R}\mathbb{K})$. Explicitly:
+\begin{align*}
+H_2(\R)  &: \quad \dim_{\R}=3,\quad \text{signature }(1,2), \\
+H_2(\C)  &: \quad \dim_{\R}=4,\quad \text{signature }(1,3), \\
+H_2(\Quat)&: \quad \dim_{\R}=6,\quad \text{signature }(1,5), \\
+H_2(\Oct) &: \quad \dim_{\R}=10,\quad \text{signature }(1,9).
+\end{align*}
+\end{theorem}
+
+\begin{corollary}[Source of four-dimensional Minkowski space]\label{cor:mink4}
+Four-dimensional Minkowski space with metric of signature $(1,3)$ arises from $H_2(\C)$, not from $H_2(\Quat)$ or $H_2(\Oct)$. The group of orientation-preserving linear isometries of the determinant form on $H_2(\C)$ is (a cover of) the Lorentz group $\mathrm{SO}(1,3)$.
+\end{corollary}
+
+\subsection{Consequence for SJET soldering}
+
+The Albert algebra $J_3(\Oct)$ contains copies of $H_2(\Oct)$ in its off-diagonal blocks. Any construction that wishes to extract a four-dimensional Lorentzian spacetime from this data must therefore select a complex subalgebra $\C\subset\Oct$ (or, equivalently, select a suitable 4-dimensional real subspace of an off-diagonal block whose induced determinant form has signature $(1,3)$).
+
+\begin{assumption}[Complex soldering selection (A-Solder-C)]\label{asm:solder-c}
+There exists a preferred embedding $\C\hookrightarrow\Oct$ (or a preferred 4-plane inside an off-diagonal Jordan block) that is either (i) selected by additional structure on the Albert algebra compatible with the typed mirror operations, or (ii) postulated as an independent geometric input. The selection must be stated explicitly and must be shown to be compatible with any capacity or observer structures used elsewhere.
+\end{assumption}
+
+\begin{theorem}[Status of $d=4$ soldering]\label{thm:soldering-status}
+The statement ``quaternionic soldering on $H_2(\Quat)\subset H_2(\Oct)$ yields four-dimensional Lorentzian spacetime'' is false (Theorem~\ref{thm:h2k} and Corollary~\ref{cor:mink4}). Any correct soldering construction in SJET$_{\mathrm{true}}$ must invoke Assumption~\ref{asm:solder-c} (or an equivalent explicit selection of a complex 4-plane) and must verify that the resulting geometry is Lorentzian of signature $(1,3)$.
+\end{theorem}
+
+\begin{remark}[Ledger for soldering]
+Theorem~\ref{thm:h2k} and Corollary~\ref{cor:mink4} are Theorems. Assumption~\ref{asm:solder-c} is an Assumption. Theorem~\ref{thm:soldering-status} is a Theorem. Previous claims that the mirror climb plus quaternionic soldering derives $d=4$ Lorentzian geometry without extra selection are false.
+\end{remark}
+
+%======================================================================
+\section{Conditional Standard Model / GUT Sector}
+\label{sec:sm}
+%======================================================================
+
+The exceptional core supplies a representation-theoretic scaffold that can be used for GUT model building, but does not derive the Standard Model Lagrangian.
+
+\subsection{Representation-theoretic organization of matter}
+
+\begin{assumption}[E6 GUT embedding (A-GUT-E6)]\label{asm:gut-e6}
+One adopts the embedding $E_6\supset\Spin(10)\times U(1)$ together with the branching of Theorem~\ref{thm:27-branch}. One further assumes the family axiom \textbf{FAM} (Conjecture~\ref{conj:fam}), so that there exist (at least) three copies of the $\mathbf{16}$ of $\Spin(10)$, each carrying the quantum numbers of one Standard-Model generation plus a right-handed neutrino candidate.
+\end{assumption}
+
+Under Assumption~\ref{asm:gut-e6} one obtains the usual $\Spin(10)$ unification of one generation:
+\[
+\mathbf{16} = (3,2)_{1/6} \oplus (\overline{3},1)_{-2/3} \oplus (\overline{3},1)_{1/3} \oplus (1,2)_{-1/2} \oplus (1,1)_{1} \oplus (1,1)_{0},
+\]
+with the last singlet being the right-handed neutrino. Three such copies are available if \textbf{FAM} holds.
+
+\subsection{Tensor products (corrected)}
+
+The relevant $\Spin(10)$ tensor products are the standard ones:
+
+\begin{theorem}[Spin(10) tensor products (SIT)]\label{thm:spin10-tensors}
+\[
+\mathbf{16}\otimes\mathbf{16} = \mathbf{10}_s \oplus \mathbf{120}_a \oplus \mathbf{126}_s,
+\]
+\[
+\mathbf{16}\otimes\overline{\mathbf{16}} = \mathbf{1} \oplus \mathbf{45} \oplus \mathbf{210}.
+\]
+\end{theorem}
+
+Any symmetry-breaking or Higgs mechanism that uses these representations must employ the correct decompositions.
+
+\subsection{Conditional status of the SM}
+
+\begin{theorem}[Conditional SM organization]\label{thm:sm-cond}
+Under Assumptions \ref{asm:gut-e6} and \ref{asm:solder-c} (and the usual further assumptions that a Higgs sector transforming appropriately under $\Spin(10)$ acquires a vacuum expectation value that breaks to the Standard Model gauge group while preserving a diagonal color $\mathrm{SU}(3)_c$), the representation content of three copies of the $\mathbf{16}$ organizes into three chiral families of Standard-Model fermions plus right-handed neutrinos. This is a statement of representation theory and group theory, not a derivation of the dynamics or of the numerical values of the Yukawa matrices.
+\end{theorem}
+
+\begin{remark}[What is not derived]
+Theorem~\ref{thm:sm-cond} does not derive: the specific values of the Yukawa couplings, the CKM or PMNS matrices, the gauge coupling unification scale, the proton lifetime, the pattern of symmetry breaking scales, the number of Higgs doublets, or the full effective Lagrangian. All such statements require additional assumptions (flavon potentials, specific RG thresholds, Coleman--Weinberg or other radiative mechanisms, etc.) that must be stated explicitly and are not forced by the exceptional algebra core.
+\end{remark}
+
+\begin{remark}[Ledger for the SM sector]
+Assumption~\ref{asm:gut-e6} is an Assumption. Theorem~\ref{thm:spin10-tensors} is a Standard Imported Theorem. Theorem~\ref{thm:sm-cond} is a Conditional EFT Consequence. Claims that SJET derives the Standard Model Lagrangian or its parameters from void and mirror are false.
+\end{remark}
+
+%======================================================================
+\section{Conditional QFT and Gravity Layers}
+\label{sec:qft-grav}
+%======================================================================
+
+\subsection{Osterwalder--Schrader reconstruction}
+
+The Osterwalder--Schrader theorem reconstructs a Lorentzian Hilbert-space quantum field theory from a Euclidean Schwinger functional that satisfies reflection positivity, Euclidean invariance, permutation symmetry, clustering, and suitable regularity/growth conditions.
+
+\begin{assumption}[OS axioms on the collapsed measure (A-OS)]\label{asm:os}
+The Euclidean measure $d\mu_{\Gamma_{-1}}$ supported on the $\Pi_{\sigma=-1}$ (anti-invariant) sector is assumed to satisfy the Osterwalder--Schrader axioms (reflection positivity with respect to a chosen reflection, Euclidean invariance, clustering, etc.).
+\end{assumption}
+
+\begin{theorem}[Conditional QFT reconstruction (CEC)]\label{thm:os-cond}
+Under Assumption~\ref{asm:os}, the Osterwalder--Schrader reconstruction theorem yields a Hilbert space $\mathcal{H}_{\mathrm{obs}}$, a unitary representation of the Poincaré group (or its covering), and a net of local observables satisfying the usual Wightman axioms (or an equivalent algebraic QFT formulation).
+\end{theorem}
+
+\begin{remark}[Circularity to avoid]
+One may not assume the OS axioms as part of a ledger (A-OS) and then cite the reconstruction theorem as evidence that ``SJET derives quantum mechanics.'' The reconstruction is a theorem of axiomatic QFT; it becomes applicable only when the axioms are verified for the concrete measure at hand. Verification is an open task.
+\end{remark}
+
+\subsection{Gravity and renormalization-group fixed points}
+
+Consider an effective Einstein--Hilbert truncation whose dimensionless Newton coupling $\kappa$ obeys a beta function of the schematic form
+\[
+\beta_\kappa = 2\kappa - c\,\kappa^2,
+\]
+where the coefficient $c$ encodes the integrated contribution of all fluctuating modes (graviton, ghosts, matter) at the chosen regulator and truncation.
+
+\begin{theorem}[Algebraic fixed point]\label{thm:kappa-alg}
+If $\beta_\kappa = 2\kappa - c\kappa^2$ with $c>0$, then there is a non-Gaussian fixed point at
+\[
+\kappa_* = \frac{2}{c}.
+\]
+In the special case $c = 5/(48\pi^2)$ one recovers the numerical value $\kappa_* = 96\pi^2/5$.
+\end{theorem}
+
+\begin{theorem}[Status of the gravitational fixed point]\label{thm:kappa-status}
+The algebra of Theorem~\ref{thm:kappa-alg} is correct. The value of the coefficient $c$ (or equivalently the anomalous dimension input that produces it) is dynamical content. It is not derived from the exceptional algebra core, the typed mirror operations, or capacity balance unless an explicit field content, regulator, and truncation are supplied and the functional renormalization group equation is solved inside that truncation. Therefore the specific number $96\pi^2/5$ is not a prediction of SJET$_{\mathrm{true}}$ at present.
+\end{theorem}
+
+\begin{remark}[Ledger for QFT and gravity]
+Assumption~\ref{asm:os} is an Assumption. Theorem~\ref{thm:os-cond} is a Conditional EFT Consequence. Theorem~\ref{thm:kappa-alg} is a Theorem (conditional on the beta function). Theorem~\ref{thm:kappa-status} is a Theorem. Statements that SJET derives quantum field theory or quantum gravity are false.
+\end{remark}
+
+%======================================================================
+\section{Open Problems}
+\label{sec:open}
+%======================================================================
+
+The following mathematical tasks are required before stronger physical claims can be made. Each is stated precisely enough that progress can be checked.
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Unified mirror category.} Construct (or prove the non-existence of) a single category $\mathcal{C}$ and involutive functor $\Mirror$ as in Conjecture~\ref{conj:unified-mirror} that recovers the dimensions and algebraic structures of the typed operations M1--M6 uniformly, with $\Mirror^2\simeq\mathrm{id}$ holding on all sectors where $\pm 1$ projectors are later invoked.
+
+\item \textbf{Independent capacity data.} Specify a concrete graph $G_{\mathrm{Albert}}$, a measure $\mu$, and cost functions $c_i(a)$ whose only input is the exceptional algebra structure (or the typed mirror operations) and that are independent of the target weights $(1/27,10/27,16/27)$. Compute the resulting maximizer of $\capacity$ or $\mathcal{L}_m$ and determine whether the 1|10|16 partition emerges.
+
+\item \textbf{Explicit family geometry.} Construct an explicit triple $(Q,\sigma,V_{16})$ satisfying Definition~\ref{def:fam-data} (compact complex or algebraic space, genuine involution of order exactly 2, equivariant bundle) and compute $\dim H^1(Q,V_{16})^{-}$ rigorously. Only after this computation may a claim of ``three families'' be reinstated as a theorem rather than Conjecture~\ref{conj:fam}.
+
+\item \textbf{Complex soldering selection.} Exhibit the mechanism (or explicit additional postulate) that selects a complex subalgebra $\C\subset\Oct$ (or an equivalent 4-plane) inside the Jordan structure, and prove that the induced determinant form on the corresponding 4-plane has signature $(1,3)$ and is compatible with the rest of the typed scaffold and any observer structures.
+
+\item \textbf{EFT action terms and RG coefficients.} Starting from the exceptional core plus the geometric assumptions above, derive (or justify as the unique capacity-selected choice) the specific operators that appear in $S_{\mathrm{GUT/SM}}$ and $S_{\mathrm{EH}}$ and the numerical values of the one-loop coefficients (including the $5/(48\pi^2)$ that enters the gravitational beta function). State all truncations and regulators explicitly.
+
+\item \textbf{Testable constraints beyond standard E6 GUTs.} Determine whether the framework, once the above items are addressed, imposes any quantitative relation among Standard-Model or cosmological observables that is not already present in ordinary $E_6$ or $\Spin(10)$ GUT model building with the same number of free parameters. If no such relation exists, state this clearly.
+\end{enumerate}
+
+%======================================================================
+\section{Summary Ledger and Tone}
+%======================================================================
+
+The following global statements are theorems of the present document:
+
+\begin{theorem}[What SJET$_{\mathrm{true}}$ is]\label{thm:summary-what}
+SJET$_{\mathrm{true}}$ consists of the rigorous exceptional Jordan/E$_6$ representation scaffold of Section~\ref{sec:core}, together with a collection of explicitly named conjectures and assumptions (the typed mirror operations, capacity data, the family axiom \textbf{FAM}, the complex soldering selection, and standard EFT truncations) that may be used to organize GUT-like matter and effective dynamics.
+\end{theorem}
+
+\begin{theorem}[What SJET$_{\mathrm{true}}$ is not]\label{thm:summary-not}
+SJET$_{\mathrm{true}}$ does not contain a derivation of the Standard Model Lagrangian, of general relativity, of quantum field theory, or of cosmology from a void and a single mirror. All such stronger claims have been shown to rely on at least one of: a non-existent uniform mirror functor, circular insertion of representation-theoretic dimensions into a variational principle, an arithmetically invalid cohomology computation, a dimensionally false soldering construction, or the unverified assumption of the very axioms whose consequences are later cited as derivations.
+\end{theorem}
+
+All physical statements in this document are of the conditional form ``Under the following explicit list of assumptions, the following consequence holds inside the indicated effective truncation.'' No statement of the form ``the universe is forced'' or ``parameter-free derivation'' appears.
+
+\begin{remark}[Use of this document]
+This document may be cited for the rigorous core (Theorems \ref{thm:dim-j}--\ref{thm:27-branch}) and for the precise statement of the open problems in Section~\ref{sec:open}. It may not be cited as evidence that a derivation of four-dimensional physics from two primitives has been achieved.
+\end{remark}
+
+\bibliographystyle{plain}
+\begin{thebibliography}{9}
+
+\bibitem{SpringerVeldkamp}
+T.~A.~Springer and F.~D.~Veldkamp,
+\textit{Octonions, Jordan algebras and exceptional groups},
+Springer Monographs in Mathematics, Springer-Verlag, 2000.
+
+\bibitem{Jacobson}
+N.~Jacobson,
+\textit{Structure and representations of Jordan algebras},
+American Mathematical Society Colloquium Publications, vol.~39, 1968.
+
+\bibitem{Helgason}
+S.~Helgason,
+\textit{Differential geometry, Lie groups, and symmetric spaces},
+Graduate Studies in Mathematics, vol.~34, American Mathematical Society, 2001.
+
+\bibitem{Freudenthal}
+H.~Freudenthal,
+``Beziehungen der $E_7$ und $E_8$ zur Oktavenebene. I--XII,''
+\textit{Indag. Math.}, 1954--1963.
+
+\bibitem{Tits}
+J.~Tits,
+``Algèbres alternatives, algèbres de Jordan et algèbres de Lie exceptionnelles,''
+\textit{Indag. Math.}, 1966.
+
+\bibitem{AtiyahBott}
+M.~F.~Atiyah and R.~Bott,
+``A Lefschetz fixed point formula for elliptic complexes. II. Applications,''
+\textit{Ann. of Math.} (2) \textbf{88} (1968), 451--491.
+
+\bibitem{OsterwalderSchrader}
+K.~Osterwalder and R.~Schrader,
+``Axioms for Euclidean Green's functions. II,''
+\textit{Comm. Math. Phys.} \textbf{42} (1975), 281--305.
+
+\bibitem{PDG}
+R.~L.~Workman et al. (Particle Data Group),
+``Review of particle physics,''
+\textit{Prog. Theor. Exp. Phys.} \textbf{2022}, 083C01 (2022) and subsequent updates.
+
+\end{thebibliography}
+
+\end{document}

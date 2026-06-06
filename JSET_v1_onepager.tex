@@ -1,0 +1,102 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black}
+
+\title{\textbf{JSET v1} — One-Page Summary\\
+\large Stone–Jordan Exceptional Theory (SJET$_{\mathrm{true}}$): Honest Ledger for an Exceptional Jordan/E$_6$ Scaffold}
+\author{Brandon Belna}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\noindent\textbf{What JSET v1 is (and is not).} JSET v1 is a \emph{conditional} framework for organizing GUT-like matter, family/observer geometry, and effective dynamics using the exceptional Jordan algebra and $E_6$. It is \textbf{not} a derivation of the Standard Model, general relativity, QFT, or cosmology from two primitives (void + mirror). All stronger claims from earlier versions have been restructured following a 39-agent adversarial validation (see \texttt{SJET-VALIDATION-REPORT.md}).
+
+\section*{The Rigorous Core (Standard Imported Theorems)}
+
+\begin{itemize}[leftmargin=*]
+\item Albert algebra $J_3(\mathbb{O})$: $\dim_{\mathbb{R}} J = 3 + 3 \cdot 8 = 27$.
+\item EIII Hermitian symmetric space: $X = E_6^{\mathrm{cpt}} / (\Spin(10) \cdot U(1))$, $\dim_{\mathbb{R}} X = 78 - 45 - 1 = 32$.
+\item Tangent representation: $T_o X \otimes_{\mathbb{R}} \mathbb{C} \cong \mathbf{16}_{-3} \oplus \overline{\mathbf{16}}_{+3}$.
+\item Minuscule branching (standard):
+  \[
+  \mathbf{27} \downarrow_{\Spin(10)\times U(1)} = \mathbf{1}_{+4} \oplus \mathbf{10}_{-2} \oplus \mathbf{16}_{+1}.
+  \]
+\end{itemize}
+
+These are classical facts from Jordan algebra and Lie theory. They carry no physics by themselves.
+
+\section*{Typed Mirror Scaffold (No Single Functor)}
+
+The operations appearing in the exceptional ladder (Boolean doubling, Cayley–Dickson, Jordan exit, Freudenthal–Tits, product, EIII reduction) are \textbf{qualitatively different}. There is currently no single involutive functor $\Mirror$ with $\Mirror^2 \simeq \id$ that uniformly generates the ladder. 
+
+\textbf{Corrected claim:} JSET studies a \emph{typed} exceptional-algebra scaffold. The existence of a unified categorical mirror is an open conjecture.
+
+\section*{Capacity Layer (Bookkeeping, Not Derivation)}
+
+The capacity functional
+\[
+\mathcal{C}(\omega) = -\sum_a \mu(a) \log\Bigl(\sum_i e^{c_i(a)-\omega_i}\Bigr), \quad \sum_i \omega_i = 0
+\]
+is strictly concave on the hyperplane under mild assumptions. Its constrained maximizer on uniform data yields the uniform distribution $1/N$. The specific weights $(1/27, 10/27, 16/27)$ are the normalized dimensions of the $E_6 \to \Spin(10)\times U(1)$ branching fed back into the functional (or supplied via a Legendre term $\mathcal{L}_m$). 
+
+\textbf{Corrected claim:} Capacity is a convex bookkeeping (or moment-map) device for an \emph{already chosen} sector split unless the graph, measure $\mu$, and costs $c_i$ are specified independently of the target irrep dimensions.
+
+\section*{Family/Observer Geometry — Conjectural Axiom \textbf{FAM}}
+
+To have a well-defined family count $n_F = \dim H^1(Q, V_{16})^{-}$ one needs: a compact complex/algebraic space $Q$, a genuine involution $\sigma$ with $\sigma^2 = \id$ (order exactly 2), a $\sigma$-equivariant holomorphic bundle $V_{16}$, and an explicit computation of the anti-invariant cohomology.
+
+\textbf{\textbf{FAM} (Conjecture):} There exists $(Q, \sigma, V_{16})$ satisfying the above with $\dim H^1(Q, V_{16})^{-} = 3$.
+
+Previous claims that this dimension equals 3 were not supported by a correct computation (incoherent cellular quotient, order-6 vs order-2 inconsistency for $\sigma$, misapplied Lefschetz formula with no fixed points implying index 0).
+
+\section*{Spacetime Soldering — Corrected}
+
+For normed division algebra $\mathbb{K}$:
+\[
+\dim_{\mathbb{R}} H_2(\mathbb{K}) = 2 + \dim_{\mathbb{R}} \mathbb{K}, \qquad \text{signature of }\det = (1, 1 + \dim_{\mathbb{R}}\mathbb{K}).
+\]
+
+Explicitly: $H_2(\mathbb{C})$ gives 4d Minkowski (signature $(1,3)$); $H_2(\mathbb{H})$ is 6-dimensional of signature $(1,5)$; $H_2(\mathbb{O})$ is 10-dimensional of signature $(1,9)$.
+
+\textbf{Corrected claim:} Four-dimensional Lorentzian spacetime requires an explicit selection of a complex subalgebra $\mathbb{C} \hookrightarrow \mathbb{O}$ (or equivalent 4-plane) inside the Jordan structure. This selection is additional structure (named Assumption A-Solder-C), not derived by "quaternionic soldering."
+
+\section*{Conditional Layers (EFT Only)}
+
+Under named assumptions (E6 embedding + \textbf{FAM} for matter; OS axioms verified on the collapsed measure for QFT; explicit beta-function coefficients for gravity, etc.), one obtains:
+- Standard representation-theoretic organization of three $\Spin(10)$ $\mathbf{16}$s (with correct tensor products $\mathbf{16}\otimes\mathbf{16} = \mathbf{10}_s \oplus \mathbf{120}_a \oplus \mathbf{126}_s$).
+- Osterwalder–Schrader reconstruction \emph{if} the axioms hold for the concrete measure.
+- Einstein–Hilbert truncations whose fixed-point values follow algebraically from assumed anomalous-dimension inputs.
+
+None of these are forced by the exceptional core alone. No derivation of the full SM Lagrangian, Yukawa matrices, CKM/PMNS values, or quantum gravity is claimed.
+
+\section*{The Six Open Problems (JSET v2 Roadmap)}
+
+\begin{enumerate}[leftmargin=*]
+\item Unified mirror category (single involutive functor recovering the typed operations with $\Mirror^2\simeq\mathrm{id}$ where needed).
+\item Independent capacity data (graph $G$, $\mu$, $c_i$ that yield the 1|10|16 weights without circular input from the $E_6$ branching).
+\item Explicit $(Q,\sigma,V_{16})$ + rigorous computation of $\dim H^1(Q,V_{16})^{-}$.
+\item Mechanism (or postulate) selecting $\mathbb{C}\subset\mathbb{O}$ for correct 4d Lorentzian soldering.
+\item Derivation (or justification) of the specific EFT operators and RG coefficients from the core + geometric assumptions.
+\item Whether the framework yields any \emph{new} quantitative constraints beyond ordinary $E_6$/$\Spin(10)$ GUT model-building with comparable parameters.
+\end{enumerate}
+
+Progress on any of these can be measured precisely. Stronger physical claims require discharging (or openly retaining) the corresponding assumptions.
+
+\section*{How to Read JSET v1}
+
+1. Read the abstract and Section 3 (Rigorous Core) of the full ledger \texttt{sjet\_true.tex}.
+2. Read the six open problems (Section 10).
+3. Consult the validation report for the defects that necessitated the restructure.
+4. Treat every physical statement as conditional on the explicitly named assumptions listed in the ledger.
+
+\textbf{Citation note.} Cite \texttt{sjet\_true.tex} (or its PDF) for the rigorous core and the precise statement of the open problems. Do not cite it as evidence of a derivation of four-dimensional physics from void and mirror.
+
+\vspace{0.5em}
+\noindent\textit{This one-pager is extracted from the JSET v1 canonical document \texttt{sjet\_true.tex}. For full definitions, proofs of the core facts (as SITs), named assumptions, and the complete ledger classification, see the main file.}
+\end{document}
