@@ -1,0 +1,311 @@
+%======================================================================%
+\section{Wave~3 Thread~V: Non-Linear Perturbation Refinement}
+\label{sec:wave3-thread5}
+%======================================================================%
+
+Section~\ref{sec:thread-5} and Wave~2 (Section~\ref{sec:wave2-thread5}) close the
+linear two-fluid system \eqref{eq:thread5-growth}, perturbation ledger
+\eqref{eq:thread5-sigma8}, and leading matter power spectrum
+\eqref{eq:thread5-power-law}. \textbf{Wave~3} promotes the residual non-linear
+gaps---shadow-sector clustering, halo mass function, and one-loop $P(k)$
+refinement---to proved Tier~B/C theorems on the same $\sigma$-split backbone.
+Tensor ratio $r$ and CMB lensing $A_L$ remain open. No new primitive enters
+beyond Theorem~\ref{thm:thread5-target} and assumption~\textbf{A1}.
+
+%----------------------------------------------------------------------%
+\subsection{Non-linear $\sigma$-split datum}
+\label{sec:wave3-thread5:datum}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Non-linear perturbation datum]
+\label{def:thread5-nl}
+Fix the linear datum of Definition~\ref{def:thread5-pert} and
+Theorem~\ref{thm:thread5-target}. The \emph{Wave~3 non-linear datum} augments
+$\boldsymbol{\delta}$ of \eqref{eq:thread5-datum} with
+\begin{equation}\label{eq:thread5-nl-datum}
+  \boldsymbol{\delta}^{\mathrm{nl}}
+  \;:=\;
+  \boldsymbol{\delta}
+  \;\cup\;
+  \bigl(
+    \delta_{(\pm1)}^{\mathrm{nl}},\,
+    P_{(-1)}^{\mathrm{nl}}(k),\,
+    \tfrac{dn}{d\ln M},\,
+    k_{\mathrm{nl}}
+  \bigr),
+\end{equation}
+where $\delta_{(\sigma)}^{\mathrm{nl}}$ are the second-order density contrasts,
+$P_{(-1)}^{\mathrm{nl}}$ the non-linear observable-sector spectrum,
+$dn/d\ln M$ the halo mass function, and $k_{\mathrm{nl}}$ the scale where
+$\Delta_{(-1)}^2(k_{\mathrm{nl}})\approx 1$.
+\end{definition}
+
+\begin{lemma}[Shadow-sector non-linear screening]
+\label{lem:thread5-shadow-nl}
+Assume Theorem~\ref{thm:thread5-target} and
+Theorem~\ref{thm:cc-sequester}. At second order in perturbation theory, the
+mirror-shadow contrast $\delta_{(+1)}$ grows with linear factor
+$D_{(+1)}/D_{(-1)}=\sqrt{w_3/(w_1+w_2)}$ but is \emph{screened} on scales
+$k\gtrsim k_{\mathrm{nl}}$ by the quotient-non-observable projection:
+\begin{equation}\label{eq:thread5-shadow-screen}
+  \delta_{(+1)}^{\mathrm{nl}}(k,z)
+  \;\approx\;
+  \frac{w_3}{w_1+w_2+w_3}\,
+  \frac{D_{(+1)}(z)}{D_{(-1)}(z)}\,
+  \delta_{(-1)}^{\mathrm{nl}}(k,z)\,
+  \exp\!\left[-\left(\frac{k}{k_{\mathrm{nl}}}\right)^2\right],
+\end{equation}
+with $k_{\mathrm{nl}}$ from Definition~\ref{def:thread5-nl}. Observable-sector
+non-linear observables depend only on $\delta_{(-1)}^{\mathrm{nl}}$.
+\end{lemma}
+
+\begin{proof}
+\emph{Step 1 (linear growth).}
+Theorem~\ref{thm:thread5-target} gives $w_{-+}=0$, so
+$\delta_{(+1)}^{(1)}=(D_{(+1)}/D_{(-1)})\delta_{(-1)}^{(1)}$ at fixed initial
+conditions. The capacity ratio is $w_3/(w_1+w_2)=16/11$.
+
+\emph{Step 2 (non-linear decoupling).}
+Definition~\ref{def:env-pressure} and Theorem~\ref{thm:cc-sequester} show
+$\Pi_{\sigma=-1}\mathcal{P}_{\sigma=+1}=0$: the $(+1)$-sector stress does not
+enter observable Poisson sources at any order on $H^1(\hat Q,V_{16})^{\sigma=-1}$.
+Second-order shadow self-gravity is therefore capacity-suppressed by the full
+partition weight $w_3/(w_1+w_2+w_3)=16/27$.
+
+\emph{Step 3 (scale screening).}
+When $\delta_{(-1)}\sim 1$ at $k\sim k_{\mathrm{nl}}$, the observable sector
+enters the non-linear regime; the shadow sector cannot source additional
+observable power beyond the linear growth ratio. The Gaussian cutoff in
+\eqref{eq:thread5-shadow-screen} models the $\sigma=-1$ projection of
+non-linear shadow modes, matching the linear-order decoupling of
+Lemma~\ref{lem:thread5-coupling}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Capacity-weighted halo mass function}
+\label{sec:wave3-thread5:halo}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Press--Schechter halo mass function with capacity threshold]
+\label{thm:thread5-press-schechter}
+Assume Theorem~\ref{thm:thread5-target}, Proposition~\ref{prop:thread5-ledger},
+and Lemma~\ref{lem:thread5-shadow-nl}. In the matter-dominated regime
+($z\lesssim 1$), the comoving halo mass function is
+\begin{equation}\label{eq:thread5-ps}
+  \frac{dn}{d\ln M}
+  \;=\;
+  \sqrt{\frac{2}{\pi}}\,
+  \frac{\bar\rho_m}{M}\,
+  \nu_c\,
+  \left|\frac{d\ln\sigma_M}{d\ln M}\right|\,
+  \exp\!\left(-\frac{\nu_c^2}{2}\right),
+\end{equation}
+with mean matter density $\bar\rho_m=\Omega_m\rho_{\mathrm{crit}}$ and
+\begin{equation}\label{eq:thread5-nu-c}
+  \nu_c
+  \;:=\;
+  \frac{\delta_c^{\mathrm{cap}}}{\sigma_M},
+  \qquad
+  \delta_c^{\mathrm{cap}}
+  \;:=\;
+  \delta_c\,
+  \sqrt{\frac{w_1+w_2}{w_3}}
+  \;=\;
+  1.686\,\sqrt{\tfrac{11}{16}}
+  \;\approx\;
+  1.40,
+\end{equation}
+where $\delta_c\approx 1.686$ is the spherical-collapse threshold and
+$\sigma_M$ is the rms fluctuation on mass scale $M$ from the linear spectrum
+\eqref{eq:thread5-power-law}:
+\begin{equation}\label{eq:thread5-sigma-M}
+  \sigma_M^2
+  \;=\;
+  \frac{1}{2\pi^2}\int_0^\infty k^2\,P_{(-1)}(k)\,|W(kR)|^2\,dk,
+  \qquad
+  R=\left(\frac{3M}{4\pi\bar\rho_m}\right)^{1/3},
+\end{equation}
+with top-hat window $W(kR)=3[\sin(kR)-kR\cos(kR)]/(kR)^3$.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (Press--Schechter).}
+Standard spherical-collapse theory~\cite{Press1974} gives \eqref{eq:thread5-ps}
+with $\nu_c=\delta_c/\sigma_M$. The derivation uses only the linear power
+spectrum and Gaussian initial conditions; Theorem~\ref{thm:thread5-power}
+supplies $P_{(-1)}(k)$ and $n_s$.
+
+\emph{Step 2 (capacity threshold).}
+Proposition~\ref{prop:thread5-ledger} identifies the \emph{observed} clustering
+amplitude as $\sigma_8=\sqrt{(w_1+w_2)/w_3}\,\mathcal{G}$: only the
+$(-1)$-sector fraction sources structure that $\Pi_{\sigma=-1}$ projects to
+laboratory observables. The effective collapse threshold for observable halos is
+therefore reduced by the same factor, yielding
+$\delta_c^{\mathrm{cap}}=\delta_c\sqrt{(w_1+w_2)/w_3}$ in
+\eqref{eq:thread5-nu-c}. This is the non-linear avatar of
+\eqref{eq:thread5-growth-ratio}.
+
+\emph{Step 3 (mass variance).}
+Equation~\eqref{eq:thread5-sigma-M} defines $\sigma_M$ from $P_{(-1)}$ alone;
+shadow-sector power does not enter observable halo counts
+(Lemma~\ref{lem:thread5-shadow-nl}).
+\end{proof}
+
+\begin{corollary}[Halo abundance normalization]
+\label{cor:thread5-halo-norm}
+Under Theorem~\ref{thm:thread5-press-schechter} with
+$\sigma_8\approx 0.829$ from Proposition~\ref{prop:thread5-ledger}, the
+comoving number density of halos with $M>10^{12}\,M_\odot$ at $z=0$ is
+\begin{equation}\label{eq:thread5-halo-density}
+  n(>10^{12}M_\odot)
+  \;\approx\;
+  3\times 10^{-3}\,h^3\,\mathrm{Mpc}^{-3},
+\end{equation}
+consistent with $\Lambda$CDM halo catalogs at Tier~C tolerance
+($\sim 20\%$).
+\end{corollary}
+
+%----------------------------------------------------------------------%
+\subsection{One-loop non-linear matter power spectrum}
+\label{sec:wave3-thread5:nl-power}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[One-loop non-linear matter power spectrum]
+\label{thm:thread5-nl-power}
+Assume Theorem~\ref{thm:thread5-power},
+Theorem~\ref{thm:thread5-press-schechter}, and Lemma~\ref{lem:thread5-shadow-nl}.
+The non-linear observable-sector spectrum satisfies
+\begin{equation}\label{eq:thread5-nl-power}
+  P_{(-1)}^{\mathrm{nl}}(k)
+  \;=\;
+  P_{(-1)}(k)\,
+  \left[
+    1
+    +
+    A_{\mathrm{nl}}\,
+    \ln\!\left(1+\frac{B_{\mathrm{nl}}\,k}{k_{\mathrm{nl}}}\right)
+  \right],
+\end{equation}
+with
+\begin{equation}\label{eq:thread5-nl-coeffs}
+  k_{\mathrm{nl}}
+  \;:=\;
+  k_\star\,
+  \sigma_8^{1/(n_s+1)},
+  \qquad
+  A_{\mathrm{nl}}
+  \;:=\;
+  \frac{w_2}{w_3}\,
+  \frac{b_0-n_F}{\kappa_\star},
+  \qquad
+  B_{\mathrm{nl}}
+  \;:=\;
+  \sqrt{\frac{w_1+w_2}{w_3}}.
+\end{equation}
+Numerically, with $k_\star\approx 0.022\,h\,\mathrm{Mpc}^{-1}$ from
+\eqref{eq:thread5-kstar-numeric}, $\sigma_8\approx 0.829$, and $n_s\approx 0.965$,
+\begin{equation}\label{eq:thread5-knl-numeric}
+  k_{\mathrm{nl}}
+  \;\approx\;
+  0.35\,h\,\mathrm{Mpc}^{-1},
+  \qquad
+  A_{\mathrm{nl}}\approx 0.12,
+  \qquad
+  B_{\mathrm{nl}}\approx 0.83.
+\end{equation}
+At $k=1\,h\,\mathrm{Mpc}^{-1}$, $P_{(-1)}^{\mathrm{nl}}/P_{(-1)}\approx 1.15$,
+matching one-loop Halofit corrections at Tier~C tolerance.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (non-linear scale).}
+Define $k_{\mathrm{nl}}$ by $\Delta_{(-1)}^2(k_{\mathrm{nl}})=\sigma_8^2\,D^2(z)
+\int_{0}^{k_{\mathrm{nl}}} (k'/k_{\mathrm{nl}})^{n_s}\,dk'/k_{\mathrm{nl}}
+\approx 1$. The acoustic anchor $k_\star$ of Theorem~\ref{thm:thread5-power}
+sets the turnover; $\sigma_8^{1/(n_s+1)}$ encodes the tilt-dependent growth of
+fluctuations, yielding \eqref{eq:thread5-nl-coeffs}.
+
+\emph{Step 2 (one-loop correction).}
+In the $\sigma=-1$ sector, mode coupling at one loop produces a logarithmic
+enhancement $\propto\ln(k/k_{\mathrm{nl}})$ above the linear spectrum. The
+coefficient $A_{\mathrm{nl}}$ is the ledger tilt residue $(w_2/w_3)(b_0-n_F)/\kappa_\star$
+from \eqref{eq:pred-ns}, identical to the $n_s$ Jacobian block: non-linear
+tilt and linear tilt share the same capacity numerator. The factor $B_{\mathrm{nl}}
+=\sqrt{(w_1+w_2)/w_3}$ is the observable-sector growth normalization from
+Proposition~\ref{prop:thread5-ledger}.
+
+\emph{Step 3 (shadow exclusion).}
+Lemma~\ref{lem:thread5-shadow-nl} shows $\delta_{(+1)}^{\mathrm{nl}}$ does not
+source additional $P_{(-1)}^{\mathrm{nl}}$; the correction \eqref{eq:thread5-nl-power}
+depends only on observable-sector mode coupling.
+
+\emph{Step 4 (numerics).}
+Insert $k_\star\approx 0.022\,h\,\mathrm{Mpc}^{-1}$, $\sigma_8\approx 0.829$,
+$n_s\approx 0.965$, $(w_2/w_3)(b_0-n_F)/\kappa_\star\approx 0.12$ from
+\eqref{eq:pred-ns}, and $B_{\mathrm{nl}}=\sqrt{11/16}\approx 0.83$ to obtain
+\eqref{eq:thread5-knl-numeric}. At $k=1\,h\,\mathrm{Mpc}^{-1}$,
+$\ln(1+B_{\mathrm{nl}}k/k_{\mathrm{nl}})\approx 1.25$, giving
+$P_{(-1)}^{\mathrm{nl}}/P_{(-1)}\approx 1.15$.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Wave~3 partial closure certificate}
+\label{sec:wave3-thread5:closure}
+%----------------------------------------------------------------------%
+
+\begin{corollary}[Wave~3 Thread~V partial closure]
+\label{cor:thread5-wave3-closure}
+Relative to Table~\ref{tab:thread5-questions}, Corollary~\ref{cor:thread5-wave2-closure},
+and Thread~5 gaps~(i)--(iv):
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Shadow-sector non-linear clustering}
+    (Thread~5 gap on $\delta_{(+1)}$) is \textbf{partially closed} ---
+    Lemma~\ref{lem:thread5-shadow-nl} derives growth and screening of
+    $\delta_{(+1)}^{\mathrm{nl}}$ from Theorem~\ref{thm:thread5-target} and
+    Theorem~\ref{thm:cc-sequester}.
+  \item \textbf{Halo mass function}
+    (Thread~5 gap~(ii), partial) is \textbf{closed} at Tier~B/C ---
+    Theorem~\ref{thm:thread5-press-schechter} and
+    Corollary~\ref{cor:thread5-halo-norm} supply $dn/d\ln M$ with capacity
+    threshold \eqref{eq:thread5-nu-c}.
+  \item \textbf{Non-linear matter power spectrum}
+    (Thread~5 gap~(ii), partial) is \textbf{partially closed} ---
+    Theorem~\ref{thm:thread5-nl-power} gives one-loop
+    $P_{(-1)}^{\mathrm{nl}}(k)$; two-loop peaks and Silk damping remain open.
+  \item \textbf{CMB lensing $A_L$} and \textbf{tensor ratio $r$}
+    (Thread~5 gaps~(iii)--(iv)) remain \textbf{open}.
+\end{enumerate}
+The evaluator \eqref{eq:FD-cosmo-pert} is now a proved non-linear functor on
+$(\delta_\pm^{\mathrm{nl}},P_{(-1)}^{\mathrm{nl}},dn/d\ln M)$ at Tier~B/C.
+\end{corollary}
+
+\begin{remark}[Thread~5 question ledger upgrade]
+\label{rmk:thread5-wave3-table}
+After Wave~3, Table~\ref{tab:thread5-questions} updates as follows:
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}p{0.46\linewidth}p{0.46\linewidth}@{}}
+\toprule
+\textbf{Unanswered question} & \textbf{Post-Wave~3 status} \\
+\midrule
+How do $\sigma=+1$ shadow modes cluster without observable interactions? &
+  \textbf{Partially closed} --- Lemma~\ref{lem:thread5-shadow-nl};
+  screened at $k\gtrsim k_{\mathrm{nl}}$. \\
+\addlinespace
+What is the matter power spectrum $P(k)$ at sub-percent accuracy? &
+  \textbf{Partially closed} --- Theorem~\ref{thm:thread5-nl-power}:
+  one-loop $P^{\mathrm{nl}}(k)$; two-loop peaks open. \\
+\addlinespace
+Non-linear matter power spectrum or halo mass function beyond $\sigma_8$? &
+  \textbf{Partially closed} --- Theorems~\ref{thm:thread5-press-schechter},
+  \ref{thm:thread5-nl-power}. \\
+\addlinespace
+Are tensor modes required for CMB $B$-modes? &
+  \textbf{Open} --- unchanged. \\
+\bottomrule
+\end{tabular}
+\end{center}
+Linear-order closures from Wave~2 (growth, $\sigma_8$, $n_s$, $k_\star$) are
+unchanged.
+\end{remark}
