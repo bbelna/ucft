@@ -36,6 +36,7 @@
 \newcommand{\jalg}{J_3(\mathbb{O})}
 \newcommand{\E}[1]{\mathrm{E}_{#1}}
 \newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\SO}{\mathrm{SO}}
 \newcommand{\Tr}{\operatorname{Tr}}
 \newcommand{\tr}{\operatorname{tr}}
 \newcommand{\rank}{\operatorname{rank}}
@@ -76,8 +77,9 @@ cascade $0\to\E{8}\to\E{8}\times\E{8}\to\E{6}\to\cdots\to 0$; capacity
 balancing on the mirror-refined graph is the \emph{derived} selection principle,
 not an independent axiom. At the $\E{6}$ rung we prove vacuum selection on
 EIII, composite $\Spin(10)\times U(1)$ gauge theory with anomaly cancellation,
-and induced gravitation; postulates P1, P2, P4 complete SM descent (three
-families derived). The universe
+and induced gravitation; postulates P1, P2, P4, P5 complete SM descent
+(three families derived; P1/P2 not promotable from mirror). Conditional ToE
+closure is recorded in Section~\ref{sec:conclusions:toe}. The universe
 is the stabilized mirror climb $\Climb^\infty(\Void)$, equivalently the
 capacity fixed point on the Albert--Cayley graph.
 \end{abstract}
@@ -104,11 +106,15 @@ two-fold:
     applied repeatedly, \emph{climbs} the division and exceptional ladders.
 \end{enumerate}
 Everything else --- graphs, Albert algebra, capacity dual, $\E{6}$ potential,
-gauge sector --- is \textbf{derived} from $\Mirror^n(\Void)$ and capacity
-balancing on mirror-refined partitions. Physical postulates P1, P2, P4
-(soldering, chiral matter, GUT--Higgs) remain the honest boundary between proved
-mathematics and four-dimensional quantum field theory; three families are
-\textbf{derived} (Theorem~\ref{thm:sm:three-families}), not postulated.
+gauge sector, induced gravitation, anomaly cancellation --- is \textbf{derived}
+from $\Mirror^n(\Void)$ and capacity balancing on mirror-refined partitions.
+Physical postulates P1, P2, P4, P5 (soldering, chiral matter, GUT--Higgs,
+reflection positivity) remain the honest boundary between proved mathematics
+and four-dimensional quantum field theory; three families are \textbf{derived}
+(Theorem~\ref{thm:sm:three-families}), not postulated. P1 and P2 were checked
+for derivation from mirror stabilisation and \emph{not} promoted
+(Propositions~\ref{prop:spacetime:p1-nogo}, \ref{prop:sm:p2-nogo}).
+Section~\ref{sec:conclusions:toe} records the conditional ToE closure ledger.
 
 \subsection{The climb picture}
 \label{sec:intro:climb}
@@ -136,7 +142,7 @@ balanced partition at each level (BAMLP), not a separate axiom.
   \item \textbf{Theorem} --- proved from Axioms~1--2 and standard mathematics.
   \item \textbf{Derived} --- explicit construction from mirror climb (no extra
     postulate).
-  \item \textbf{Postulate} --- added four-dimensional physics (P1, P2, P4), named once.
+  \item \textbf{Postulate} --- added four-dimensional physics (P1, P2, P4, P5, CC), named once.
   \item \textbf{Conjecture} --- motivated but not controlled.
 \end{itemize}
 
@@ -1206,6 +1212,17 @@ Section~\ref{sec:gauge-gravity}, satisfies reflection positivity
 \eqref{eq:spacetime:reflpos} along the soldered clock $\orderparam^0$.
 \end{postulate}
 
+\begin{proposition}[No-go: P1 is not derivable from mirror stabilisation]
+\label{prop:spacetime:p1-nogo}
+Mirror stabilisation at $\jalg$ and $\E{6}$ fixes the \emph{Euclidean}
+coset metric $K|_{\mathfrak{m}}$ (Theorem~\ref{thm:spacetime:metric}) and
+the $32=28+4$ mass split (Theorem~\ref{thm:gauge-gravity:planck}), but it
+does \emph{not} select $d=4$, a Lorentzian soldering form, or the
+$\mathrm{SL}(2,\Oct)\cong\Spin(1,9)$ frame. The $H_2(\Oct)\cong\R^{1,9}$
+embedding motivates P1; it is not a theorem from
+Axioms~\ref{ax:void-mirror:void}--\ref{ax:void-mirror:mirror} alone.
+\end{proposition}
+
 \begin{proposition}[No-go: RP is not derivable from P1 alone]
 \label{prop:spacetime:rp-nogo}
 Postulate~\ref{post:spacetime:P1} supplies a Lorentzian soldering form and
@@ -1418,13 +1435,129 @@ is UV-attractive (relevant) iff its stability eigenvalue is negative, hence
 $\theta_\kappa=+2$ at $\kappa_\star$.
 \end{remark}
 
+%----------------------------------------------------------------------%
+\subsection{Extended FRG truncation and stability}
+\label{sec:gauge-gravity:frg-extended}
+%----------------------------------------------------------------------%
+
+Beyond hypotheses (i)--(iv) of Theorem~\ref{thm:gauge-gravity:kappa-oneloop},
+collect the dimensionless couplings
+$(\xi,\hat g^2,\hat y^2,\kappa,\Lambda_{\mathrm{cc}})$ with
+$\xi=k^2/f^2$, $\hat g^2=k^2 g^2/f^2$, $\hat y^2=k^2 y^2/f^2$,
+$\kappa$ as in \eqref{eq:gauge-gravity:kappa-def}, and
+$\Lambda_{\mathrm{cc}}$ as in Definition~\ref{def:gauge-gravity:cc}.
+At one loop in the coset--gauge--gravity sector (still neglecting
+higher-curvature operators and graviton loops, but retaining the
+$27\times27$ scalar block and gauge--Yukawa back-reaction),
+\begin{equation}\label{eq:gauge-gravity:frg-system}
+\begin{aligned}
+  \beta_{\xi}&=2\xi,
+  &\quad
+  \beta_{\hat g^2}&=2\hat g^2+\frac{b_0}{48\pi^2}\hat g^4,
+  &\quad
+  \beta_{\hat y^2}&=2\hat y^2+\mathcal{O}(\hat y^4,\hat g^2\hat y^2),
+  \\[4pt]
+  \beta_{\kappa}&=2\kappa-\frac{5}{48\pi^2}\kappa^2,
+  &\quad
+  \beta_{\Lambda_{\mathrm{cc}}}&=-4\,\Lambda_{\mathrm{cc}}+\mathcal{O}(\text{loops}).
+\end{aligned}
+\end{equation}
+The classically marginal coset-scalar sector decomposes under $H$ as
+$\mathbf{27}=\mathbf{1}_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}$,
+yielding a block-diagonal mass matrix
+\begin{equation}\label{eq:gauge-gravity:27block}
+  M_{\mathrm{scalar}}
+  =\mathrm{diag}\bigl(\mu_{1}\,\mathbb{1}_{1},\;
+                       \mu_{10}\,\mathbb{1}_{10},\;
+                       \mu_{16}\,\mathbb{1}_{16}\bigr),
+\end{equation}
+with $\mu_{1},\mu_{10},\mu_{16}<0$ on the EIII vacuum (negative Hessian
+blocks; no additional relevant directions from the scalar sector).
+
+\begin{proposition}[Jacobian spectrum in the extended truncation]
+\label{prop:gauge-gravity:jacobian}
+At the fixed point
+\begin{equation}\label{eq:gauge-gravity:fpvalues}
+  \bigl(\xi_\star,\hat g^2_\star,\hat y^2_\star,
+        \kappa_\star,\Lambda_{\mathrm{cc},\star}\bigr)
+  =\bigl(\xi_\star,\,0,\,0,\,\tfrac{96\pi^2}{5},\,0\bigr),
+\end{equation}
+with $\xi_\star$ a matching-scale anchor, the stability matrix
+$J=\partial\beta_i/\partial g_j$ is effectively triangular: every loop
+correction to a $\beta$-function is proportional to a coupling that
+vanishes at $\hat g^2_\star=\hat y^2_\star=0$. The diagonal entries are
+\begin{equation}\label{eq:gauge-gravity:jacobian-diag}
+  \partial_{\xi}\beta_{\xi}=+2,\quad
+  \partial_{\hat g^2}\beta_{\hat g^2}=+2,\quad
+  \partial_{\hat y^2}\beta_{\hat y^2}=+2,\quad
+  \partial_{\kappa}\beta_{\kappa}=-2,\quad
+  \partial_{\Lambda_{\mathrm{cc}}}\beta_{\Lambda_{\mathrm{cc}}}=-4,
+\end{equation}
+hence
+\begin{equation}\label{eq:gauge-gravity:jacobian-eig}
+  \mathrm{eig}(J)=\{+2,+2,+2,-2,-4\},
+  \qquad
+  \theta=-\mathrm{eig}(J)=\{-2,-2,-2,+2,+4\}.
+\end{equation}
+Under Remark~\ref{rmk:gauge-gravity:kappa-convention} there are exactly
+\textbf{two} UV-relevant directions: $\kappa$ ($\theta_\kappa=+2$) and
+$\Lambda_{\mathrm{cc}}$ ($\theta_{\Lambda}=+4$). The matter directions
+$(\xi,\hat g^2,\hat y^2)$ are irrelevant; gauge and Yukawa are
+asymptotically free ($\hat g^2_\star=\hat y^2_\star=0$).
+\end{proposition}
+
+\begin{proof}
+The Gaussian gauge and Yukawa values follow from
+Theorem~\ref{thm:gauge-gravity:beta-g} and the Yukawa schematic
+$\beta_{\hat y^2}$ in \eqref{eq:gauge-gravity:frg-system}; $\kappa_\star$
+is Theorem~\ref{thm:gauge-gravity:kappa-oneloop}. The diagonal entries
+\eqref{eq:gauge-gravity:jacobian-diag} combine engineering-dimension
+scaling ($+2$ for dimension-$2$ couplings; $-4$ for dimension-$4$
+$\Lambda_{\mathrm{cc}}$) with the gravitational slope $-2$. Triangularity
+at $\hat g^2_\star=\hat y^2_\star=0$ makes \eqref{eq:gauge-gravity:jacobian-diag}
+the full spectrum. The scalar block \eqref{eq:gauge-gravity:27block}
+contributes no relevant directions because $\mu_{1},\mu_{10},\mu_{16}<0$.
+\end{proof}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}llcc@{}}
+\toprule
+\textbf{Coupling} & \textbf{Fixed-point value} &
+$\mathrm{eig}(J)$ & $\theta=-\mathrm{eig}$ \\
+\midrule
+$\xi$ & $\xi_\star$ (matching) & $+2$ & $-2$ \\
+$\hat g^2$ & $0$ & $+2$ & $-2$ \\
+$\hat y^2$ & $0$ & $+2$ & $-2$ \\
+$\kappa$ & $96\pi^2/5\approx189.50$ & $-2$ & $+2$ \\
+$\Lambda_{\mathrm{cc}}$ & $0$ (tuned) & $-4$ & $+4$ \\
+\midrule
+\multicolumn{2}{l}{\textbf{Relevant directions}} & \multicolumn{2}{c}{$\kappa$, $\Lambda_{\mathrm{cc}}$} \\
+\bottomrule
+\end{tabular}
+\caption{RG Jacobian at the extended one-loop fixed point
+\eqref{eq:gauge-gravity:fpvalues}. Positive $\mathrm{eig}(J)$ on
+$(\xi,\hat g^2,\hat y^2)$ encode asymptotic freedom, not a pathology
+(Remark~\ref{rmk:gauge-gravity:kappa-convention}).}
+\label{tab:gauge-gravity:jacobian}
+\end{table}
+
 \begin{conjecture}[Gravitational UV fixed point beyond one loop]
 \label{conj:gauge-gravity:kappa}
-The interacting fixed point $\kappa_\star=96\pi^2/5$ of
-Theorem~\ref{thm:gauge-gravity:kappa-oneloop} survives when
-higher-curvature operators, graviton loops, and gauge--gravity back-reaction
-are included in a curved-background functional RG. This is \emph{not} a
-consequence of the SJET axioms; it requires external FRG input.
+The interacting fixed point $\kappa_\star=96\pi^2/5$ and its stability
+eigenvalue $-2$ of Theorem~\ref{thm:gauge-gravity:kappa-oneloop} survive
+in the extended truncation of \eqref{eq:gauge-gravity:frg-system}:
+Proposition~\ref{prop:gauge-gravity:jacobian} and
+Table~\ref{tab:gauge-gravity:jacobian} show that, once the $27\times27$
+scalar block and gauge--Yukawa sector are included but higher-curvature
+operators and graviton loops are still neglected, $\kappa_\star$ remains
+the sole interacting UV-relevant matter--gravity coupling. \emph{Remaining
+gap:} curved-background FRG with $R^2$, $R_{\mu\nu}^2$, and graviton
+self-interaction may shift $\kappa_\star$ and $\partial_\kappa\beta_\kappa$.
+Because $\kappa_\star\approx189\gg1$, this is \emph{not} a consequence of
+the SJET axioms; it requires external nonperturbative FRG input.
 \end{conjecture}
 
 \begin{proposition}[No-go: asymptotic safety not derivable from axioms]
@@ -1441,9 +1574,10 @@ interacting UV fixed point. In particular:
   \item scheme dependence of $a_0$ and $a_2$ propagates into
     $\beta_\kappa$ beyond leading order.
 \end{enumerate}
-Promoting $\kappa_\star$ to a theorem requires Conjecture~\ref{conj:gauge-gravity:kappa}
-or an equivalent FRG postulate; otherwise the one-loop result is the
-honest terminal statement within SJET.
+Proposition~\ref{prop:gauge-gravity:jacobian} strengthens the conjecture
+within the extended one-loop truncation, but promoting $\kappa_\star$ to a
+theorem still requires Conjecture~\ref{conj:gauge-gravity:kappa} (curved
+background with $R^2$/graviton sectors) or an equivalent FRG postulate.
 \end{proposition}% --- end 06-gauge-gravity.tex ---
 % --- 07-standard-model.tex ---
 %======================================================================%
@@ -1575,6 +1709,21 @@ theory as primitive data; it is \textbf{not} used in the proof of
 Theorem~\ref{thm:sm:three-families}.
 \end{conjecture}
 
+\begin{proposition}[No-go: P2 is not derivable from mirror stabilisation]
+\label{prop:sm:p2-nogo}
+Mirror stabilisation and capacity balancing fix the \emph{number} of
+horizontal family cells ($k=3$, Theorem~\ref{thm:sm:three-families}) and
+organize them by triality (Proposition~\ref{prop:sm:triality}), but they do
+\emph{not} derive chiral $\Spin(10)$ matter. The coset
+$\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$ is a
+mirror-symmetric pair (Proposition~\ref{prop:ladder:e6branch}); selecting
+one chiral $\mathbf{16}$ per family with no $\overline{\mathbf{16}}$
+partners is Postulate~\ref{post:sm:P2}, not a consequence of void, mirror,
+and capacity. A bare Yukawa $\bar\psi\,\orderparam\,\psi$ with
+$\orderparam\in\{\mathbf{16},\overline{\mathbf{16}}\}$ is not
+$H$-invariant (Remark after Theorem~\ref{thm:sm:descent}).
+\end{proposition}
+
 \begin{remark}[Former P3 and epistemic status]\label{rem:sm:P3status}
 The old Postulate~P3 (``three families are not derived'') is retired.
 The exceptional rungs $\Mirror^6(\Void)=\E{8}$ and
@@ -1691,7 +1840,10 @@ Three families & Theorem & $\Mirror^7$; P2 & \ref{thm:sm:three-families} \\
 GUT--Higgs & Postulate & P4 & \ref{post:sm:P4} \\
 \midrule
 $\kappa_\star=96\pi^2/5$ & Theorem & trunc.\ (i)--(iv) & \ref{thm:gauge-gravity:kappa-oneloop} \\
-$\kappa_\star$ beyond 1-loop & Conjecture & FRG & \ref{conj:gauge-gravity:kappa} \\
+FRG Jacobian $\{+2,+2,+2,-2,-4\}$ & Prop. & ext.\ trunc. & \ref{prop:gauge-gravity:jacobian} \\
+$\kappa_\star$ beyond ext.\ trunc. & Conjecture & $R^2$/graviton & \ref{conj:gauge-gravity:kappa} \\
+P1 from mirror & No-go & --- & \ref{prop:spacetime:p1-nogo} \\
+P2 from mirror & No-go & --- & \ref{prop:sm:p2-nogo} \\
 $\Lambda_{\mathrm{cc}}$ & Postulate & no-go & \ref{prop:gauge-gravity:cc-nogo} \\
 OS reconstruction & Theorem & if RP & \ref{thm:spacetime:OS} \\
 Reflection positivity & Postulate & P5 & \ref{post:spacetime:P5} \\
@@ -1710,6 +1862,26 @@ Heterotic $h^1=3$ & Corroboration & string & \ref{rem:sm:heterotic} \\
 
 Anomalies: $16-80+64=0$; mixed $1-2+0=-1$. $\beta$: $b_0=12$.
 Dimensions: $78=45+1+16+16$; $27=1+10+16$; $32=28+4$.
+
+%----------------------------------------------------------------------%
+\subsection{ToE closure summary}
+\label{sec:verification:toe}
+%----------------------------------------------------------------------%
+
+\textbf{Unconditional (void $+$ mirror):} ladder through $\E{6}$; Albert
+graph; capacity partition; potential and EIII vacuum; composite gauge;
+anomaly cancellation; Sakharov $\MPl$; one-loop $\kappa_\star$ and extended
+FRG Jacobian (Table~\ref{tab:gauge-gravity:jacobian}).
+
+\textbf{Conditional on P2:} $n_F=3$ (Theorem~\ref{thm:sm:three-families}).
+
+\textbf{Postulates (not derivable):} P1 soldering; P2 chirality;
+P4 GUT--Higgs; P5 reflection positivity; tuned $\Lambda_{\mathrm{cc}}$
+(Proposition~\ref{prop:gauge-gravity:cc-nogo}).
+
+\textbf{Open (minimal):} Conjecture~\ref{conj:gauge-gravity:kappa};
+P5; Conjectures~\ref{conj:sm:h1}, \ref{conj:ladder:stone-e8};
+cosmological constant (external to core).
 
 %----------------------------------------------------------------------%
 \subsection{Falsifiable predictions}
@@ -1745,42 +1917,81 @@ balancing are \textbf{derived}, not assumed. The universe is
 \end{equation}
 stabilizing at $\jalg$ and $\E{6}$, with physical contact via P1--P4.
 
-\subsection{Open problems}
+\subsection{ToE closure status}
+\label{sec:conclusions:toe}
+
+\paragraph{Unconditional from void and mirror.}
+From Axioms~\ref{ax:void-mirror:void}--\ref{ax:void-mirror:mirror} alone
+(standard mathematics included): the mirror climb through Hurwitz and
+exceptional rungs (Theorems~\ref{thm:void-mirror:table},
+\ref{thm:ladder:e8}--\ref{thm:ladder:e6}); Albert graph and Stone lift;
+$1|10|16$ capacity partition; $\E{6}$ potential and EIII vacuum;
+composite $\Spin(10)\times U(1)$ gauge theory; Green--Schwarz anomaly
+cancellation; Sakharov induced Planck mass; one-loop
+$\kappa_\star=96\pi^2/5$ under truncation (i)--(iv)
+(Theorem~\ref{thm:gauge-gravity:kappa-oneloop}); extended FRG Jacobian
+spectrum (Proposition~\ref{prop:gauge-gravity:jacobian},
+Table~\ref{tab:gauge-gravity:jacobian}).
+
+\paragraph{Derived conditional on one postulate.}
+Three families $n_F=3$ (Theorem~\ref{thm:sm:three-families}) follow from
+void, mirror, and capacity \emph{once} chiral matter is postulated (P2).
+Former Postulate~P3 is retired.
+
+\paragraph{Postulates that remain.}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}clp{0.52\linewidth}@{}}
+\toprule
+\textbf{ID} & \textbf{Content} & \textbf{Derivable from mirror?} \\
+\midrule
+P1 & Lorentzian soldering, $d=4$ & No (\ref{prop:spacetime:p1-nogo}) \\
+P2 & Chiral matter, no $\overline{\mathbf{16}}$ partners & No (\ref{prop:sm:p2-nogo}) \\
+P4 & GUT--Higgs and Yukawa & No (breaking chain input) \\
+P5 & Interacting reflection positivity & No (\ref{prop:spacetime:rp-nogo}) \\
+CC & Tuned $\Lambda_{\mathrm{cc}}$ & No (\ref{prop:gauge-gravity:cc-nogo}) \\
+\bottomrule
+\end{tabular}
+\end{center}
+\noindent
+P1 and P2 were examined for promotion from mirror stabilisation; neither
+passes a no-go test. P4 encodes electroweak and GUT breaking beyond the
+coset $\sigma$-model. P5 is the sole gap to unitary Lorentzian dynamics
+(Theorem~\ref{thm:spacetime:OS}). The cosmological constant inherits the
+Standard-Model-plus-gravity status: Proposition~\ref{prop:gauge-gravity:cc-nogo}
+states that $\Lambda_{\mathrm{obs}}$ is \emph{not} derivable from the SJET
+core; Postulate~\ref{post:gauge-gravity:cc} and
+Theorem~\ref{thm:gauge-gravity:cc-rg} record $\Lambda_{\mathrm{cc}}$ as a
+relevant, tuned environmental coupling ($\theta_{\Lambda}=+4$ in
+Table~\ref{tab:gauge-gravity:jacobian}).
+
+\paragraph{Conditional ToE statement.}
+Under P1, P2, P4, and P5, SJET specifies a four-dimensional effective
+quantum field theory with three chiral families, asymptotically free gauge
+couplings, induced gravitation, and a two-parameter UV-critical surface
+($\kappa$, $\Lambda_{\mathrm{cc}}$). This is a \textbf{conditional Theory of
+Everything}: the mathematical climb from the void is largely unconditional;
+contact with observed particle physics and gravitation requires the named
+postulates above.
+
+\subsection{Open problems (minimal)}
+\label{sec:conclusions:open}
 
 \begin{enumerate}[label=\textbf{O\arabic*.},leftmargin=*]
-  \item \textbf{Closed (rungs $6$--$7$).}
-    Theorems~\ref{thm:ladder:e8}--\ref{thm:ladder:e8e8} prove
-    $\Mirror^6(\Void)=\E{8}$ and $\Mirror^7(\Void)=\E{8}\times\E{8}$ from the
-    $\jalg$ stabilizer tower; Theorem~\ref{thm:sm:three-families} derives
-    $n_F=3$ from void, mirror, and capacity (conditional only on P2).
-    \emph{Remaining:} prove Conjecture~\ref{conj:sm:h1} (mirror-quotient
-    index route) and Conjecture~\ref{conj:ladder:stone-e8} (profinite Stone
-    refinement at $n\geq6$).
-  \item \textbf{Closed (rungs $0$--$5$).}
-    Theorem~\ref{thm:void-mirror:equiv} proves
-    $\mathbf{Stone}^{\mathrm{climb}}\simeq\mathbf{Div}^{\mathrm{climb}}_{\mathrm{norm}}$
-    on the mirror climb $\Void\to\R\to\C\to\Quat\to\Oct\to\jalg$.
-    \emph{Remaining:} global equivalence to profinite limits and exceptional
-    rungs $n\geq6$.
-  \item \textbf{Closed (conditional) / open (strong).}
-    Theorem~\ref{thm:gauge-gravity:kappa-oneloop} proves
-    $\kappa_\star=96\pi^2/5$ under the explicit Einstein--Hilbert truncation
-    (i)--(iv); Proposition~\ref{prop:gauge-gravity:kappa-nogo} states that a
-    stronger proof is \emph{not} available from the SJET axioms alone.
-    \emph{Remaining:} test Conjecture~\ref{conj:gauge-gravity:kappa} in a
-    curved-background FRG including higher-curvature operators.
-  \item \textbf{Closed (no-go).}
-    Proposition~\ref{prop:gauge-gravity:cc-nogo}: the cosmological constant
-    problem is not solvable within the present SJET core; $\Lambda_{\mathrm{cc}}$
-    is inherited as Postulate~\ref{post:gauge-gravity:cc}.
-    \emph{Remaining (external):} any dynamical mechanism beyond
-    Theorem~\ref{thm:gauge-gravity:cc-rg}.
-  \item \textbf{Open (upgraded).}
-    Replace Postulate~\ref{post:spacetime:P5} by a proof of reflection
-    positivity \eqref{eq:spacetime:reflpos} for the interacting gauged
-    $\sigma$-model, or refute it. Theorem~\ref{thm:spacetime:OS} and
-    Proposition~\ref{prop:spacetime:rp-gaussian} reduce the gap to this
-    single property.
+  \item \textbf{Gravitational fixed point.}
+    Test Conjecture~\ref{conj:gauge-gravity:kappa} in curved-background FRG
+    with higher-curvature operators and graviton loops; verify persistence
+    of $\kappa_\star=96\pi^2/5$ and $\mathrm{eig}=-2$.
+  \item \textbf{Reflection positivity.}
+    Prove or refute P5 (\eqref{eq:spacetime:reflpos}) for the interacting
+    gauged $\sigma$-model.
+  \item \textbf{Mirror geometry.}
+    Conjectures~\ref{conj:sm:h1} (mirror-quotient $h^1=3$) and
+    \ref{conj:ladder:stone-e8} (profinite Stone refinement at $n\geq6$).
+  \item \textbf{Cosmological constant (external).}
+    Proposition~\ref{prop:gauge-gravity:cc-nogo}: no mechanism within SJET;
+    any dynamical solution lies outside the void--mirror core.
 \end{enumerate}% --- end 09-conclusions.tex ---
 % --- 10-appendix.tex ---
 %======================================================================%

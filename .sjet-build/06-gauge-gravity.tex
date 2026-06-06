@@ -192,13 +192,129 @@ is UV-attractive (relevant) iff its stability eigenvalue is negative, hence
 $\theta_\kappa=+2$ at $\kappa_\star$.
 \end{remark}
 
+%----------------------------------------------------------------------%
+\subsection{Extended FRG truncation and stability}
+\label{sec:gauge-gravity:frg-extended}
+%----------------------------------------------------------------------%
+
+Beyond hypotheses (i)--(iv) of Theorem~\ref{thm:gauge-gravity:kappa-oneloop},
+collect the dimensionless couplings
+$(\xi,\hat g^2,\hat y^2,\kappa,\Lambda_{\mathrm{cc}})$ with
+$\xi=k^2/f^2$, $\hat g^2=k^2 g^2/f^2$, $\hat y^2=k^2 y^2/f^2$,
+$\kappa$ as in \eqref{eq:gauge-gravity:kappa-def}, and
+$\Lambda_{\mathrm{cc}}$ as in Definition~\ref{def:gauge-gravity:cc}.
+At one loop in the coset--gauge--gravity sector (still neglecting
+higher-curvature operators and graviton loops, but retaining the
+$27\times27$ scalar block and gauge--Yukawa back-reaction),
+\begin{equation}\label{eq:gauge-gravity:frg-system}
+\begin{aligned}
+  \beta_{\xi}&=2\xi,
+  &\quad
+  \beta_{\hat g^2}&=2\hat g^2+\frac{b_0}{48\pi^2}\hat g^4,
+  &\quad
+  \beta_{\hat y^2}&=2\hat y^2+\mathcal{O}(\hat y^4,\hat g^2\hat y^2),
+  \\[4pt]
+  \beta_{\kappa}&=2\kappa-\frac{5}{48\pi^2}\kappa^2,
+  &\quad
+  \beta_{\Lambda_{\mathrm{cc}}}&=-4\,\Lambda_{\mathrm{cc}}+\mathcal{O}(\text{loops}).
+\end{aligned}
+\end{equation}
+The classically marginal coset-scalar sector decomposes under $H$ as
+$\mathbf{27}=\mathbf{1}_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}$,
+yielding a block-diagonal mass matrix
+\begin{equation}\label{eq:gauge-gravity:27block}
+  M_{\mathrm{scalar}}
+  =\mathrm{diag}\bigl(\mu_{1}\,\mathbb{1}_{1},\;
+                       \mu_{10}\,\mathbb{1}_{10},\;
+                       \mu_{16}\,\mathbb{1}_{16}\bigr),
+\end{equation}
+with $\mu_{1},\mu_{10},\mu_{16}<0$ on the EIII vacuum (negative Hessian
+blocks; no additional relevant directions from the scalar sector).
+
+\begin{proposition}[Jacobian spectrum in the extended truncation]
+\label{prop:gauge-gravity:jacobian}
+At the fixed point
+\begin{equation}\label{eq:gauge-gravity:fpvalues}
+  \bigl(\xi_\star,\hat g^2_\star,\hat y^2_\star,
+        \kappa_\star,\Lambda_{\mathrm{cc},\star}\bigr)
+  =\bigl(\xi_\star,\,0,\,0,\,\tfrac{96\pi^2}{5},\,0\bigr),
+\end{equation}
+with $\xi_\star$ a matching-scale anchor, the stability matrix
+$J=\partial\beta_i/\partial g_j$ is effectively triangular: every loop
+correction to a $\beta$-function is proportional to a coupling that
+vanishes at $\hat g^2_\star=\hat y^2_\star=0$. The diagonal entries are
+\begin{equation}\label{eq:gauge-gravity:jacobian-diag}
+  \partial_{\xi}\beta_{\xi}=+2,\quad
+  \partial_{\hat g^2}\beta_{\hat g^2}=+2,\quad
+  \partial_{\hat y^2}\beta_{\hat y^2}=+2,\quad
+  \partial_{\kappa}\beta_{\kappa}=-2,\quad
+  \partial_{\Lambda_{\mathrm{cc}}}\beta_{\Lambda_{\mathrm{cc}}}=-4,
+\end{equation}
+hence
+\begin{equation}\label{eq:gauge-gravity:jacobian-eig}
+  \mathrm{eig}(J)=\{+2,+2,+2,-2,-4\},
+  \qquad
+  \theta=-\mathrm{eig}(J)=\{-2,-2,-2,+2,+4\}.
+\end{equation}
+Under Remark~\ref{rmk:gauge-gravity:kappa-convention} there are exactly
+\textbf{two} UV-relevant directions: $\kappa$ ($\theta_\kappa=+2$) and
+$\Lambda_{\mathrm{cc}}$ ($\theta_{\Lambda}=+4$). The matter directions
+$(\xi,\hat g^2,\hat y^2)$ are irrelevant; gauge and Yukawa are
+asymptotically free ($\hat g^2_\star=\hat y^2_\star=0$).
+\end{proposition}
+
+\begin{proof}
+The Gaussian gauge and Yukawa values follow from
+Theorem~\ref{thm:gauge-gravity:beta-g} and the Yukawa schematic
+$\beta_{\hat y^2}$ in \eqref{eq:gauge-gravity:frg-system}; $\kappa_\star$
+is Theorem~\ref{thm:gauge-gravity:kappa-oneloop}. The diagonal entries
+\eqref{eq:gauge-gravity:jacobian-diag} combine engineering-dimension
+scaling ($+2$ for dimension-$2$ couplings; $-4$ for dimension-$4$
+$\Lambda_{\mathrm{cc}}$) with the gravitational slope $-2$. Triangularity
+at $\hat g^2_\star=\hat y^2_\star=0$ makes \eqref{eq:gauge-gravity:jacobian-diag}
+the full spectrum. The scalar block \eqref{eq:gauge-gravity:27block}
+contributes no relevant directions because $\mu_{1},\mu_{10},\mu_{16}<0$.
+\end{proof}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}llcc@{}}
+\toprule
+\textbf{Coupling} & \textbf{Fixed-point value} &
+$\mathrm{eig}(J)$ & $\theta=-\mathrm{eig}$ \\
+\midrule
+$\xi$ & $\xi_\star$ (matching) & $+2$ & $-2$ \\
+$\hat g^2$ & $0$ & $+2$ & $-2$ \\
+$\hat y^2$ & $0$ & $+2$ & $-2$ \\
+$\kappa$ & $96\pi^2/5\approx189.50$ & $-2$ & $+2$ \\
+$\Lambda_{\mathrm{cc}}$ & $0$ (tuned) & $-4$ & $+4$ \\
+\midrule
+\multicolumn{2}{l}{\textbf{Relevant directions}} & \multicolumn{2}{c}{$\kappa$, $\Lambda_{\mathrm{cc}}$} \\
+\bottomrule
+\end{tabular}
+\caption{RG Jacobian at the extended one-loop fixed point
+\eqref{eq:gauge-gravity:fpvalues}. Positive $\mathrm{eig}(J)$ on
+$(\xi,\hat g^2,\hat y^2)$ encode asymptotic freedom, not a pathology
+(Remark~\ref{rmk:gauge-gravity:kappa-convention}).}
+\label{tab:gauge-gravity:jacobian}
+\end{table}
+
 \begin{conjecture}[Gravitational UV fixed point beyond one loop]
 \label{conj:gauge-gravity:kappa}
-The interacting fixed point $\kappa_\star=96\pi^2/5$ of
-Theorem~\ref{thm:gauge-gravity:kappa-oneloop} survives when
-higher-curvature operators, graviton loops, and gauge--gravity back-reaction
-are included in a curved-background functional RG. This is \emph{not} a
-consequence of the SJET axioms; it requires external FRG input.
+The interacting fixed point $\kappa_\star=96\pi^2/5$ and its stability
+eigenvalue $-2$ of Theorem~\ref{thm:gauge-gravity:kappa-oneloop} survive
+in the extended truncation of \eqref{eq:gauge-gravity:frg-system}:
+Proposition~\ref{prop:gauge-gravity:jacobian} and
+Table~\ref{tab:gauge-gravity:jacobian} show that, once the $27\times27$
+scalar block and gauge--Yukawa sector are included but higher-curvature
+operators and graviton loops are still neglected, $\kappa_\star$ remains
+the sole interacting UV-relevant matter--gravity coupling. \emph{Remaining
+gap:} curved-background FRG with $R^2$, $R_{\mu\nu}^2$, and graviton
+self-interaction may shift $\kappa_\star$ and $\partial_\kappa\beta_\kappa$.
+Because $\kappa_\star\approx189\gg1$, this is \emph{not} a consequence of
+the SJET axioms; it requires external nonperturbative FRG input.
 \end{conjecture}
 
 \begin{proposition}[No-go: asymptotic safety not derivable from axioms]
@@ -215,7 +331,8 @@ interacting UV fixed point. In particular:
   \item scheme dependence of $a_0$ and $a_2$ propagates into
     $\beta_\kappa$ beyond leading order.
 \end{enumerate}
-Promoting $\kappa_\star$ to a theorem requires Conjecture~\ref{conj:gauge-gravity:kappa}
-or an equivalent FRG postulate; otherwise the one-loop result is the
-honest terminal statement within SJET.
+Proposition~\ref{prop:gauge-gravity:jacobian} strengthens the conjecture
+within the extended one-loop truncation, but promoting $\kappa_\star$ to a
+theorem still requires Conjecture~\ref{conj:gauge-gravity:kappa} (curved
+background with $R^2$/graviton sectors) or an equivalent FRG postulate.
 \end{proposition}

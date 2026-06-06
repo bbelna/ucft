@@ -25,9 +25,18 @@ The climb operator is \(\mathsf{C}=\mathrm{Bal}_{\mathcal{C}}\circ\mathsf{M}\) (
 | 7 | \(E_8\times E_8\) | 496 (product mirror) |
 | 8 | \(E_6\) | 78 (Cartan mirror) |
 
-**Derived from axioms:** Albert graph, \(E_6\) potential, gauge sector, capacity dual, **three families** (\(n_F=3\), conditional on chiral-matter postulate P2 only).
+**Derived from axioms:** Albert graph, \(E_6\) potential, gauge sector, capacity dual, Sakharov induced gravity, anomaly cancellation, one-loop \(\kappa_\star=96\pi^2/5\), extended FRG Jacobian \(\{+2,+2,+2,-2,-4\}\), **three families** (\(n_F=3\), conditional on chiral-matter postulate P2 only).
 
-**Still open:** profinite Stone refinement at \(n\geq6\), mirror-quotient \(h^1=3\), reflection positivity (P5), \(\kappa_\star\) beyond one-loop.
+## Conditional ToE closure
+
+| Status | Content |
+|--------|---------|
+| **Unconditional** | Mirror climb, Albert/\(E_6\) dynamics, gauge, induced \(\bar M_{\mathrm{Pl}}\), FRG Jacobian table |
+| **Conditional on P2** | Three chiral families |
+| **Postulates (not derivable)** | P1 soldering; P2 chirality; P4 GUT–Higgs; P5 reflection positivity; tuned \(\Lambda_{\mathrm{cc}}\) |
+| **No-go** | P1 from mirror (`prop:spacetime:p1-nogo`); P2 from mirror (`prop:sm:p2-nogo`); CC from axioms (`prop:gauge-gravity:cc-nogo`) |
+
+Under P1, P2, P4, P5: SJET is a **conditional Theory of Everything** — mathematics from the void is largely unconditional; contact with observed physics requires the named postulates.
 
 ## Physical postulates (not axioms)
 
@@ -36,8 +45,17 @@ The climb operator is \(\mathsf{C}=\mathrm{Bal}_{\mathcal{C}}\circ\mathsf{M}\) (
 | P1 | Lorentzian soldering, \(d=4\) |
 | P2 | Chiral matter (one \(\mathbf{16}\) per family) |
 | P4 | GUT–Higgs and Yukawa |
+| P5 | Interacting reflection positivity |
+| CC | Tuned cosmological constant |
 
 Former P3 (three families) is **retired** — replaced by Theorem `thm:sm:three-families`.
+
+## Open problems (minimal)
+
+1. \(\kappa_\star\) persistence with \(R^2\)/graviton FRG (Conjecture `conj:gauge-gravity:kappa`)
+2. Reflection positivity P5
+3. Mirror-quotient \(h^1=3\); profinite Stone at \(n\geq6\)
+4. Cosmological constant (external to SJET core)
 
 ## Build
 

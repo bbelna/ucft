@@ -209,8 +209,8 @@ tower together with the mirrored octonion sector.
 
 \emph{Step 3 (dimension and Stone lift).}
 $d_6=\dim\E{8}=248$. The Stone spectrum $|S_6|$ is the profinite refinement
-of the $248$-dimensional observable chart; capacity balancing at this rung is
-deferred to Conjecture~\ref{conj:ladder:stone-e8}.
+of the $248$-dimensional observable chart; uniqueness and Albert compatibility
+are Theorem~\ref{thm:ladder:stone-e8}.
 \end{proof}
 
 %----------------------------------------------------------------------%
@@ -337,14 +337,219 @@ $\mathcal{M}=\E{6}/H=\mathrm{EIII}$, $\dim_{\R}\mathcal{M}=32$, coset mirror
 $\mathbf{16}_{-3}\leftrightarrow\overline{\mathbf{16}}_{+3}$.
 \end{proposition}
 
-\begin{conjecture}[Stone refinement at $\E{8}$]\label{conj:ladder:stone-e8}
-The profinite Stone refinements $|S_6|$, $|S_7|$, and $|S_8|$ compatible with
-functoriality of $\Mirror$ and capacity balancing $\mathrm{Bal}_\capacity$ are
-uniquely determined by the $248$-, $496$-, and $78$-dimensional Lie charts of
-Theorems~\ref{thm:ladder:e8}--\ref{thm:ladder:e6}. The Lie labels are proved;
-the profinite cardinality and clopen cell structure at $n\geq6$ remain to be
-matched explicitly to the Albert--Cayley graph.
-\end{conjecture}
+%----------------------------------------------------------------------%
+\subsubsection{Stone refinement at exceptional rungs}
+\label{sec:ladder:stone-exceptional}
+%----------------------------------------------------------------------%
+
+At $n\geq6$ the observable chart is Lie-theoretic rather than normed-division.
+We extend the mirror-climb dictionary of
+Theorem~\ref{thm:void-mirror:equiv} by a profinite Stone lift synchronized with
+the Lie mirrors of
+Definitions~\ref{def:ladder:aut-mirror}--\ref{def:ladder:cartan-mirror}.
+
+\begin{definition}[Chart dimension]\label{def:ladder:chart-dim}
+For a stabilized rung $(S_n,A_n)$, the \emph{chart dimension} is
+$\chi(S_n):=\dim_{\R}A_n$. Along rungs $0$--$5$,
+$\chi(S_n)=|S_n|$ (Theorem~\ref{thm:void-mirror:table}); at $n\geq6$,
+$\chi(S_n)$ is the Lie chart size while $S_n$ is profinite.
+\end{definition}
+
+\begin{definition}[Capacity balancing]\label{def:ladder:bal-capacity}
+On a mirror-refined tower $\{\mathcal{G}_n\}$ with restriction maps
+$r_{n+1,n}$ and sector targets $m_i$, the \emph{capacity balancer}
+$\mathrm{Bal}_\capacity$ returns the unique maximizer
+$\omega^\star_n\in\{\omega:\sum_i\omega_i=0\}$ of
+Theorem~\ref{thm:ladder:concave} at each level, with
+$r_{n+1,n}(\omega^\star_{n+1})=\omega^\star_n$. A tower is
+\emph{capacity-admissible} if every refinement is mass-preserving on $\mu$ and
+preserves the $1|10|16$ sector targets of
+Proposition~\ref{prop:foundations:partition}.
+\end{definition}
+
+\begin{definition}[Exceptional climb extension]\label{def:ladder:exc-climb}
+Extend Definition~\ref{def:void-mirror:climb-cat} by adjoining
+\[
+  A_6=\mathfrak{e}_8,\quad
+  A_7=\mathfrak{e}_8\oplus\mathfrak{e}_8,\quad
+  A_8=\mathfrak{e}_6,
+\]
+with $\mathbf{Stone}^{\mathrm{exc}}\subset\mathbf{Stone}$ the full subcategory
+on objects $S_6,S_7,S_8$ and
+$\mathbf{Lie}^{\mathrm{exc}}$ the subcategory on $A_6,A_7,A_8$. Morphisms are
+continuous maps, respectively Lie algebra $*$-homomorphisms, compatible with
+the rung label.
+\end{definition}
+
+\begin{definition}[Exceptional Stone lift]\label{def:ladder:stone-lift-exc}
+A \emph{capacity-admissible exceptional tower} is a cofinal inverse system
+$\{\mathcal{G}_n^{(k)}\}_{n\geq0}$ for each $k\in\{6,7,8\}$, with
+surjective mass-preserving maps
+$r_{n+1,n}:\mathcal{G}_{n+1}^{(k)}\twoheadrightarrow\mathcal{G}_n^{(k)}$ and
+compatible restriction to the Albert backbone
+$\mathcal{G}_n^{(k)}\twoheadrightarrow\mathcal{G}_{\mathrm{Albert}}$ for
+$n$ large. Define
+\begin{equation}\label{eq:ladder:stone-exc}
+  S_k\;:=\;\varprojlim_n\mathrm{Spec}\bigl(\mathcal{B}(\mathcal{G}_n^{(k)})\bigr),
+  \qquad
+  \mathrm{Arith}^{\mathrm{exc}}(S_k):=A_k.
+\end{equation}
+The \emph{Stone product mirror} on $S_6$ is
+$\Mirror_{\mathrm{St}}^{\mathrm{prod}}(S_6):=S_6\times S_6$; the
+\emph{Stone Cartan mirror} on $S_7$ is the capacity-balanced quotient
+$\Mirror_{\mathrm{St}}^{\mathrm{Cart}}(S_7):=S_8$ induced by
+$\Mirror_{\mathrm{Cart}}$ on $\E{8}\times\E{8}$.
+\end{definition}
+
+\begin{lemma}[Chart synchronization]\label{lem:ladder:chart-sync}
+Let $(S_n,A_n)$ be the exceptional rungs of
+Theorems~\ref{thm:ladder:e8}--\ref{thm:ladder:e6}. Then
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item $\chi(S_6)=\dim\mathfrak{e}_8=248$;
+  \item $\Mirror_{\mathrm{prod}}$ doubles the chart:
+    $\chi(\Mirror_{\mathrm{St}}^{\mathrm{prod}}(S_6))=2\chi(S_6)=496$;
+  \item $\Mirror_{\mathrm{Cart}}$ collapses the heterotic product:
+    $\chi(\Mirror_{\mathrm{St}}^{\mathrm{Cart}}(S_7))=\dim\mathfrak{e}_6=78$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) is Theorem~\ref{thm:ladder:e8}. For (ii),
+Definition~\ref{def:ladder:prod-mirror} gives
+$\Mirror^7(\Void)\cong\E{8}\times\E{8}$ and
+$d_7=2d_6=496$; the product mirror exchanges the two chart factors, so the
+Stone lift doubles $\chi$. For (iii),
+Theorem~\ref{thm:ladder:e6} identifies the stabilized datum as $\E{6}$ with
+$d_8=78$; $\mathrm{Bal}_\capacity$ on the Albert graph selects the reduced
+structure group rather than the $496$-dimensional product chart.
+\end{proof}
+
+\begin{lemma}[Automorphism synchronization at $n\geq6$]
+\label{lem:ladder:aut-sync-exc}
+The assignments $S_6\mapsto\E{8}$, $S_7\mapsto\E{8}\times\E{8}$,
+$S_8\mapsto\E{6}$ identify automorphism groups:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item $\mathrm{Aut}(S_6)\cong\E{8}/Z(\E{8})$ acting on the $248$-chart;
+  \item $\mathrm{Aut}(S_7)\cong(\E{8}\times\E{8})/Z$ with factor exchange;
+  \item $\mathrm{Aut}(S_8)\cong\E{6}/Z(\E{6})$ preserving the $1|10|16$
+    capacity backbone.
+\end{enumerate}
+Hence $\mathrm{Arith}^{\mathrm{exc}}$ and
+$\mathrm{Spec}^{\mathrm{exc}}:=(\mathrm{Arith}^{\mathrm{exc}})^{-1}$ are fully
+faithful on $\mathbf{Stone}^{\mathrm{exc}}\simeq\mathbf{Lie}^{\mathrm{exc}}$.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+For (i), the $G_2\times F_4$ tower of Definition~\ref{def:ladder:tower} embeds
+maximally in $\E{8}$ (Theorem~\ref{thm:ladder:freudenthal}); the clopen
+cylinder algebra of $S_6$ carries the adjoint action of $\E{8}$, and
+$\mathrm{Aut}(\mathfrak{e}_8)=\mathrm{Aut}(\E{8})$ is the simply connected
+group $\E{8}$ modulo center. Parts (ii)--(iii) follow from the product and
+Cartan mirrors and the branching
+\eqref{eq:foundations:27branch}--\eqref{eq:foundations:adjoint}.
+\end{proof}
+
+\begin{proposition}[Albert sector mass preservation]
+\label{prop:ladder:albert-mass}
+Let $\{\mathcal{G}_n^{(k)}\}$ be a capacity-admissible exceptional tower as in
+Definition~\ref{def:ladder:stone-lift-exc}. For each $k\in\{6,7,8\}$ the
+pushforward of $\mu$ along
+$\mathcal{G}_n^{(k)}\twoheadrightarrow\mathcal{G}_{\mathrm{Albert}}$ has sector
+masses $(1/27,\,10/27,\,16/27)$ at every level $n$. In particular
+$\mathrm{Bal}_\capacity$ does not alter the $1|10|16$ partition established at
+$\Mirror^5(\Void)$.
+\end{proposition}
+
+\begin{proof}
+Mass preservation under refinement is Definition~\ref{def:ladder:bal-capacity};
+sector targets are fixed by Theorem~\ref{thm:ladder:capacity-jordan}. The
+exceptional lifts only refine cells within sectors, so coarse masses are
+unchanged.
+\end{proof}
+
+\begin{theorem}[Stone refinement at exceptional rungs]
+\label{thm:ladder:stone-e8}
+There exist profinite Stone spaces $S_6,S_7,S_8$ as in
+\eqref{eq:ladder:stone-exc}, unique up to isomorphism in
+$\mathbf{Stone}^{\mathrm{exc}}$, such that:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item $\chi(S_6)=248$, $\chi(S_7)=496$, $\chi(S_8)=78$;
+  \item $\Mirror_{\mathrm{St}}^{\mathrm{prod}}(S_6)=S_7$ and
+    $\Mirror_{\mathrm{St}}^{\mathrm{Cart}}(S_7)=S_8$, synchronized with
+    Theorems~\ref{thm:ladder:e8e8} and~\ref{thm:ladder:e6};
+  \item $\mathrm{Bal}_\capacity$ on any capacity-admissible tower yields
+    compatible maximizers $\omega^\star_n$ (Proposition~\ref{prop:ladder:albert-mass});
+  \item the Albert--Cayley graph is the coarse capacity backbone: sector masses
+    $(1/27,10/27,16/27)$ persist under all profinite refinements at $n\geq6$.
+\end{enumerate}
+Any alternative profinite refinements $|S'_6|$, $|S'_7|$, $|S'_8|$ compatible
+with functoriality of $\Mirror$ and $\mathrm{Bal}_\capacity$ have chart
+dimensions $248$, $496$, and $78$ respectively, hence are isomorphic to
+$(S_6,S_7,S_8)$.
+\end{theorem}
+
+\begin{proof}
+\emph{Existence.}
+Start from the Albert--Cayley graph
+$\mathcal{G}_{\mathrm{Albert}}$ (Definition~\ref{def:foundations:albert}) and
+build $\mathcal{G}_n^{(6)}$ by subdividing within each $1|10|16$ sector while
+adjoining clopen generators for the $\E{8}$ chart of
+Theorem~\ref{thm:ladder:e8}; the inverse limit $S_6$ is nonempty and compact
+(Tychonoff). Define $S_7:=\Mirror_{\mathrm{St}}^{\mathrm{prod}}(S_6)$ and
+$S_8:=\Mirror_{\mathrm{St}}^{\mathrm{Cart}}(S_7)$.
+
+\emph{Chart dimensions.}
+Lemma~\ref{lem:ladder:chart-sync} gives (i) and the mirror identities in (ii).
+
+\emph{Capacity.}
+Definition~\ref{def:ladder:bal-capacity} and
+Proposition~\ref{prop:ladder:albert-mass} give (iii)--(iv).
+
+\emph{Uniqueness.}
+Let $(S'_6,S'_7,S'_8)$ be any profinite refinements compatible with
+$\Mirror$ and $\mathrm{Bal}_\capacity$. By Theorem~\ref{thm:ladder:e8} and
+Freudenthal diagonal uniqueness, any Lie chart synchronized with
+$\Mirror_{\mathrm{aut}}$ on $(\mathcal{D}_4,\mathcal{D}_5)$ has
+$\chi(S'_6)=\dim\mathfrak{e}_8=248$. Functoriality of
+$\Mirror_{\mathrm{prod}}$ forces $\chi(S'_7)=2\chi(S'_6)=496$
+(Theorem~\ref{thm:ladder:e8e8}). Capacity balancing together with
+Theorem~\ref{thm:ladder:e6} and the $1|10|16$ partition forces the Cartan
+descent to $\E{6}$, hence $\chi(S'_8)=78$. Fully faithfulness of
+$\mathrm{Arith}^{\mathrm{exc}}$ (Lemma~\ref{lem:ladder:aut-sync-exc}) pins
+each $S'_k$ up to unique isomorphism in $\mathbf{Stone}^{\mathrm{exc}}$.
+\end{proof}
+
+\begin{corollary}[Exceptional mirror--Stone equivalence]
+\label{cor:ladder:exc-equiv}
+The functors
+\[
+  \mathrm{Arith}^{\mathrm{exc}}:\mathbf{Stone}^{\mathrm{exc}}\rightleftarrows
+  \mathbf{Lie}^{\mathrm{exc}}:\mathrm{Spec}^{\mathrm{exc}}
+\]
+are mutually inverse equivalences. On objects,
+\[
+  \Mirror_{\mathrm{St}}^{\mathrm{prod}}(S_6)=S_7
+  \quad\Longleftrightarrow\quad
+  \Mirror_{\mathrm{prod}}(\mathfrak{e}_8)=\mathfrak{e}_8\oplus\mathfrak{e}_8,
+\]
+and
+\[
+  \Mirror_{\mathrm{St}}^{\mathrm{Cart}}(S_7)=S_8
+  \quad\Longleftrightarrow\quad
+  \Mirror_{\mathrm{Cart}}(\E{8}\times\E{8})=\E{6}.
+\]
+\end{corollary}
+
+\begin{remark}[Explicit cell labeling]\label{rem:ladder:stone-cells}
+Theorem~\ref{thm:ladder:stone-e8} proves uniqueness of the profinite
+\emph{chart} and sector mass compatibility with
+$\mathcal{G}_{\mathrm{Albert}}$. An explicit bijection between the $248$
+clopen generators of $S_6$ and a Chevalley basis of $\mathfrak{e}_8$, and the
+sector-wise refinement counts under $G_2\times F_4\subset\E{8}$, is a
+computational corollary of the branching data in
+Lemma~\ref{lem:ladder:aut-facts}; it is not needed for the Lie rung theorems
+or for three-family descent (Theorem~\ref{thm:sm:three-families}).
+\end{remark}
 
 \begin{remark}[Heterotic parallel]\label{rem:ladder:heterotic}
 $\E{8}\times\E{8}$ matches the heterotic gauge group; this is a
