@@ -155,6 +155,7 @@ Section~\ref{sec:tier-c-precision}: Tier~C precision closure and experimental va
 Sections~\ref{sec:baryogenesis}--\ref{sec:proton-decay}: remaining universe problems.
 Section~\ref{sec:universe-ledger}: universe problem ledger (15/15 solved).
 Section~\ref{sec:physics-map}: complete physics domain map (60 domains).
+Section~\ref{sec:open-threads}: nine derivation threads for residual open questions.
 Appendix~\ref{sec:appendix}: Albert identities, mirror quotient, and
 numerical workbook (Table~\ref{tab:numerical-workbook}).% --- end 01-introduction.tex ---
 % --- 02-mirror.tex ---
@@ -7029,8 +7030,13 @@ Section~\ref{sec:physics-map} maps \textbf{all known physics domains}
 (Table~\ref{tab:physics-map-complete}, Corollary~\ref{cor:physics-map-closure}):
 full SM Lagrangian, QCD/hadrons, electroweak precision, nuclear/atomic/BBN/CMB,
 and emergent chemistry/condensed matter as descent from observer collapse.
-Remaining work is \emph{pending experiments and sub-field precision}, not
-unmapped physics.
+Section~\ref{sec:open-threads} traces \textbf{nine derivation threads}
+(Table~\ref{tab:open-threads-master}, Corollary~\ref{cor:thread-ledger-target})
+for the $\sim 65$ residual open questions: emergent evaluators, strong-curvature
+gravity, constructive rigor, precision loops, cosmological perturbations,
+hadron--nuclear spectroscopy, condensed-matter mechanisms, entropy, and the
+phenomenology boundary. Remaining work is \emph{thread closure and pending
+experiments}, not unmapped physics domains.
 
 \subsection{Archive}
 
@@ -11621,6 +11627,2426 @@ certificate}: the PDG physics domain lattice is mapped, tier-labeled, and
 section-indexed through \eqref{eq:physics-map-pipeline}, unifying the core
 derivation (Sections~\ref{sec:mirror}--\ref{sec:predictions}) with the extended
 ledger (Sections~\ref{sec:baryogenesis}--\ref{sec:universe-ledger}).% --- end 28-physics-map.tex ---
+% --- 29-open-threads-intro.tex ---
+%======================================================================%
+\section{Open-Question Derivation Threads}
+\label{sec:open-threads}
+%======================================================================%
+
+Section~\ref{sec:physics-map} maps every PDG-headline domain through
+\eqref{eq:physics-map-pipeline}; Corollary~\ref{cor:physics-map-closure}
+certifies \textbf{zero unmapped domains}. Residual work is not missing
+\emph{routes} but missing \emph{evaluators} and \emph{limit theorems} on the
+same void--mirror datum. This section traces \textbf{nine derivation threads}
+identified from the open-question catalog: common patterns among the
+$\sim 65$ items not yet at Tier~A/B closure. Each thread records a definition,
+question ledger, manuscript anchors, gaps, target $\mathcal{F}_D$ functors,
+dependencies, tier-upgrade path, and a boxed pipeline equation. No thread
+introduces a third primitive.
+
+%----------------------------------------------------------------------%
+\subsection{Master thread map}
+\label{sec:open-threads:map}
+%----------------------------------------------------------------------%
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular}{@{}clp{0.42\linewidth}c@{}}
+\toprule
+\textbf{ID} & \textbf{Thread} & \textbf{Closes (headline)} & \textbf{Sec.} \\
+\midrule
+I &
+  Emergent without evaluator &
+  Chemistry, fluids, stellar, bio (Class~V) &
+  \ref{sec:thread-1} \\
+II &
+  Strong-curvature / QG &
+  Horizons, BH thermodynamics, Planck regime &
+  \ref{sec:thread-2} \\
+III &
+  Constructive continuum / rigor &
+  OS upgrade, mass gap, confinement proof, NS &
+  \ref{sec:thread-3} \\
+IV &
+  Precision / anomaly contact &
+  CP phases, $\alpha_s$, hadron $\sim 1\%$, lab anomalies &
+  \ref{sec:thread-4} \\
+V &
+  Cosmological perturbations &
+  $P(k)$, inflation detail, BBN network, tensors &
+  \ref{sec:thread-5} \\
+VI &
+  Hadron--nuclear spectroscopy &
+  Glueballs, resonances, binding ladder, EMC &
+  \ref{sec:thread-6} \\
+VII &
+  Condensed-matter mechanisms &
+  Bands, SC, FQHE, glass transition &
+  \ref{sec:thread-7} \\
+VIII &
+  Arrow of time / entropy &
+  Thermodynamic arrow, irreversibility, ensemble &
+  \ref{sec:thread-8} \\
+IX &
+  Phenomenology boundary &
+  Honest out-of-scope vs.\ $\mathcal{D}_{\mathrm{ext}}$ &
+  \ref{sec:thread-9} \\
+\bottomrule
+\end{tabular}
+\caption{Master map of nine open-question derivation threads. Threads~I--IX
+specialize \eqref{eq:universe-summary}; they do not increase the primitive
+axiom count.}
+\label{tab:open-threads-master}
+\end{table}
+
+%----------------------------------------------------------------------%
+\subsection{Dependency graph}
+\label{sec:open-threads:dependencies}
+%----------------------------------------------------------------------%
+
+Threads are not independent. The recommended closure order follows
+constructive rigor before precision, precision before cosmology and spectra,
+and emergent evaluators after spectroscopy inputs:
+
+\medskip
+\noindent\textbf{Wave~1 (foundations).}
+Thread~III (constructive continuum) upgrades assumption~\textbf{A7} toward
+Theorem~status and supplies the measure backbone for Threads~IV,~V,~II.
+
+\medskip
+\noindent\textbf{Wave~2 (precision).}
+Thread~IV ($\sigma$-loop expansion, CP phases) feeds Thread~V
+(perturbation source terms) and Thread~VI (overlap spectroscopy).
+
+\medskip
+\noindent\textbf{Wave~3 (structure).}
+Thread~V (cosmological perturbations) and Thread~VI (hadron--nuclear
+$\mathcal{F}_{\mathrm{spec}}$) run in parallel once Wave~2 is stable.
+
+\medskip
+\noindent\textbf{Wave~4 (emergent closure).}
+Thread~I (domain evaluators $\mathcal{F}_{\mathrm{emergent}}$) consumes
+Thread~VI outputs for nuclear/atomic EFT; Thread~VII (condensed-matter
+mechanisms) specializes Thread~I on $\mathcal{T}_7^{(L)}$.
+
+\medskip
+\noindent\textbf{Wave~5 (foundational completion).}
+Thread~II (strong-curvature $\mathcal{F}_{\mathrm{grav}}$) requires
+Thread~III shadow-sector thermodynamics; Thread~VIII (entropy) closes
+Thread~II and Thread~VII in the thermodynamic limit.
+
+\medskip
+\noindent\textbf{Boundary.}
+Thread~IX (phenomenology tier) applies to all waves: observables in
+$\mathcal{D}_{\mathrm{ext}}$ are contacts, not derivations, when no
+$\mathcal{F}_D$ is named.
+
+\begin{corollary}[Thread ledger closure target]\label{cor:thread-ledger-target}
+When Threads~I--IX reach their stated target theorems
+(\texttt{thm:thread-1-descent} through \texttt{thm:thread-2-qg},
+\texttt{thm:thread3-os-upgrade}, \texttt{thm:thread4-cp-phases},
+\texttt{thm:thread5-target}, \texttt{thm:thread6-hadron},
+\texttt{thm:thread-7-bands}, \texttt{thm:thread-8-entropy},
+and \texttt{def:phenomenology-tier}), the open-question catalog
+($\sim 65$ residual items) is partitioned into: \textbf{derived} (functor
+named), \textbf{phenomenology} ($\mathcal{D}_{\mathrm{ext}}$ contact), or
+\textbf{out of scope} (Thread~IX table). The primitive axiom count remains
+$2$; the named conjecture count remains $0$.
+\end{corollary}% --- end 29-open-threads-intro.tex ---
+% --- 29-threads-1-2.tex ---
+%======================================================================%
+\section{Derivation Threads I--II: Emergent Descent and Strong-Curvature Gravity}
+\label{sec:threads-1-2}
+%======================================================================%
+
+Sections~\ref{sec:emergent} and~\ref{sec:physics-map} record two frontier
+routes that are \textbf{mapped} but not yet \textbf{certified} by closed
+domain evaluators $\mathcal{F}_D$. \textbf{Thread~1} (emergent without
+evaluator) traces chemistry, condensed matter, thermodynamics, and allied
+many-body domains through iterated observer collapse
+$\mathcal{E}_N=(\Pi_{\sigma=-1})^{\otimes N}$ on $\mathcal{T}_7$
+(Section~\ref{sec:emergent}) without postulating a third primitive.
+\textbf{Thread~2} (strong-curvature / quantum gravity) traces Planck-scale and
+horizon physics through the induced-gravity chain
+(Theorems~\ref{thm:planck},~\ref{thm:kappa},~\ref{thm:kappa-persistence})
+and the $\sigma$-sector measure split (Theorem~\ref{thm:sigma-measure}).
+Neither thread introduces new axioms; both specialize the master pipeline
+\eqref{eq:physics-map-pipeline} to named evaluators still to be proved.
+
+%----------------------------------------------------------------------%
+\subsection{Thread~1: Emergent physics without domain evaluator}
+\label{sec:thread-1}
+%----------------------------------------------------------------------%
+
+\paragraph{Thread definition.}
+\textbf{Thread~1} is the \emph{descent-without-evaluator} route: once the
+fundamental contact layer
+$\mathfrak{E}=\mathcal{U}(\Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}
+\circ\Mirror^{\leq 8})(\Void)$
+(Theorem~\ref{thm:universe-summary}) fixes SM gauge--Yukawa--Higgs content,
+induced $d=4$ gravity, and OS quantum mechanics on $\mathcal{H}_{\mathrm{obs}}$,
+all laboratory-scale many-body physics is obtained by \textbf{coarse-graining}
+the same $\Pi_{\sigma=-1}$ data---not by importing a new field species.
+Section~\ref{sec:emergent} supplies the core descent operator
+$\mathcal{E}_N$, the capacity shell ladder, the replica thermodynamic limit,
+and the $\sigma$-measure capacity ensemble; Table~\ref{tab:physics-map-complete}
+(Class~V) nonetheless lists twenty emergent subfields with route
+\emph{Emergent} and functor
+$\mathcal{F}_D=\mathrm{eval}_{\mathrm{emergent}}$ \emph{without} a dedicated
+closure certificate analogous to Theorem~\ref{thm:qm-derived} or
+Theorem~\ref{thm:dm-sector}. Thread~1 closes that \textbf{evaluator gap}:
+every Class~V row must factor through a single named
+$\mathcal{F}_{\mathrm{emergent}}$ assembled from $\mathcal{E}_N$, flavon
+overlap networks, and standard EFT on Class~I--II outputs.
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular}{@{}clp{0.52\linewidth}@{}}
+\toprule
+\textbf{ID} & \textbf{Prior catalog question} & \textbf{Thread~1 closure target} \\
+\midrule
+EM-CHEM &
+  Periodic table / valence beyond noble-gas leading order &
+  Theorem~\ref{thm:chemistry-ladder} $\to$
+  \texttt{thm:thread-1-descent} (spectroscopic refinement) \\
+EM-BAND &
+  Quantitative electronic band gaps &
+  Theorem~\ref{thm:condensed-matter} $\to$
+  \texttt{thm:thread-1-bands} (Bloch determinant contact) \\
+EM-SC &
+  Superconductivity, fractional QHE, strong correlation &
+  Remark~\ref{rmk:emergent-honest} open frontier $\to$
+  \texttt{prop:thread-1-correlation} (overlap percolation) \\
+EM-ATOM &
+  Atomic / molecular spectra, reaction rates &
+  Physics-map Tier~C rows $\to$
+  \texttt{cor:thread-1-qed} (QED on SM $U(1)_{\mathrm{em}}$) \\
+EM-THERMO &
+  Heat capacities, critical exponents &
+  Theorem~\ref{thm:thermodynamics} $\to$
+  \texttt{thm:thread-1-critical} (Yukawa--band refinement) \\
+EM-FLUID &
+  Navier--Stokes, MHD, fusion plasma &
+  Class~V hydrodynamic rows $\to$
+  \texttt{def:thread-1-continuum} (continuum limit functor) \\
+EM-ASTRO &
+  Stellar structure, nucleosynthesis transport &
+  Section~\ref{sec:nuclear-atomic-cosmo} contact $\to$
+  \texttt{prop:thread-1-stellar} (opacity EFT envelope) \\
+EM-BIO &
+  Molecular folding, neural / cellular scales &
+  Biophysics emergent rows $\to$
+  \texttt{rmk:thread-1-bio} (statistical envelope, no new $\mathcal{F}_D$) \\
+EM-EVAL &
+  No named $\mathcal{F}_D$ for Class~V (physics-map gap) &
+  \texttt{def:thread-1-evaluator} certifies
+  $\mathcal{F}_{\mathrm{emergent}}$ \\
+\bottomrule
+\end{tabular}
+\caption{Unanswered questions from the physics-map and emergent-physics catalogs
+that Thread~1 is designed to close. Rows cite
+Table~\ref{tab:physics-map-complete} (Class~V), Remark~\ref{rmk:emergent-honest},
+and Section~\ref{sec:emergent:map}.}
+\label{tab:thread-1-questions}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}llp{0.46\linewidth}@{}}
+\toprule
+\textbf{Label} & \textbf{Object} & \textbf{Role in Thread~1} \\
+\midrule
+\ref{def:emergent-descent} &
+  $\mathcal{E}_N=(\Pi_{\sigma=-1})^{\otimes N}$ &
+  Many-body descent seed; tensor replication on $\mathcal{T}_7$ \\
+\ref{prop:emergent-functor} &
+  Additivity, locality, quotient &
+  Functoriality certificate for $N\mapsto\mathcal{E}_N$ \\
+\ref{def:flavon-network} &
+  Overlap graph $G_Z$ &
+  Chemistry bonding avatar at atomic scale \\
+\ref{thm:chemistry-ladder} &
+  Capacity shell ladder &
+  Periodic-table leading-order closure \\
+\ref{def:replica-limit} &
+  $L\to\infty$, $N=\rho L^3$ &
+  Condensed-matter thermodynamic limit \\
+\ref{thm:condensed-matter} &
+  Fermi liquid, Bloch bands &
+  Replica-limit band theory \\
+\ref{def:capacity-ensemble} &
+  $d\nu_\beta\propto e^{-\beta\hat H_\iota}d\mu_{\Gamma_{-1}}$ &
+  Equilibrium thermodynamics seed \\
+\ref{thm:thermodynamics} &
+  $\mathcal{Z}$, $F$, $S$ from $\sigma$-measure &
+  Statistical mechanics without Gibbs postulate \\
+\ref{thm:qm-derived} &
+  OS reconstruction on $\mathcal{H}_{\mathrm{obs}}$ &
+  Quantum kinematics for emergent sectors \\
+\ref{thm:breaking-complete} &
+  SM gauge content after $\E{6}$ breaking &
+  Input EFT for chemistry and matter \\
+\ref{tab:emergent-map} &
+  Descent correspondence table &
+  Honest tier assignment (B/C throughout) \\
+\ref{rmk:emergent-honest} &
+  Non-closure disclaimer &
+  Gap ledger for Thread~1 target theorems \\
+\bottomrule
+\end{tabular}
+\caption{Existing SJET anchors for Thread~1. Every row is already in the
+manuscript; Thread~1 assembles them under
+\texttt{def:thread-1-evaluator}.}
+\label{tab:thread-1-anchors}
+\end{table}
+
+\paragraph{Gap analysis.}
+Thread~1 has a \textbf{conceptual} descent map (Section~\ref{sec:emergent:map})
+but lacks three certificates required for physics-map parity with
+Class~II--IV rows:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Evaluator.} No definition
+    $\mathcal{F}_{\mathrm{emergent}}$ appears in
+    \eqref{eq:physics-map-pipeline}; Class~V cites
+    $\mathrm{eval}_{\mathrm{emergent}}$ only in prose
+    (Section~\ref{sec:physics-map:grouping}).
+  \item \textbf{Continuum functor.} The replica limit
+    \eqref{eq:replica-limit} and Bloch connection
+    \eqref{eq:bloch-bands} are Tier~B/C; a proof that
+    $\mathcal{E}_N$ converges to a unique continuum effective action
+    $S_{\mathrm{eff}}^{\mathrm{cont}}$ on soldered $d=4$ geometry
+    (Definition~\ref{def:soldering}) is not yet a theorem.
+  \item \textbf{Strong-correlation frontier.}
+    Remark~\ref{rmk:emergent-honest} explicitly excludes superconductivity,
+    fractional quantum Hall, and other strong-correlation phases; overlap-network
+    percolation (Definition~\ref{def:flavon-network}) is not yet tied to
+    phase-transition exponents.
+  \item \textbf{Quantitative contacts.} Noble-gas closures, Landau parameter
+    \eqref{eq:landau-F0}, and free-energy identities are leading-order;
+    atomic spectroscopy and quantitative band gaps remain Tier~C imports.
+\end{enumerate}
+Removing ledger entries \textbf{A5} (flavon truncation) or \textbf{A7} (OS
+reconstruction) invalidates subchains but does not affect the void--mirror
+climb; Thread~1 upgrades \emph{emergent} rows to explicit
+$\mathcal{F}_{\mathrm{emergent}}$ output without adding primitives.
+
+\paragraph{Target evaluators and theorems.}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}llp{0.44\linewidth}@{}}
+\toprule
+\textbf{Functor / label} & \textbf{Tier target} & \textbf{Proposed content} \\
+\midrule
+$\mathcal{F}_{\mathrm{emergent}}$ &
+  B $\to$ A &
+  \texttt{def:thread-1-evaluator}: assemble
+  $\mathcal{E}_N$, $G_Z$, $d\nu_\beta$ on $\mathcal{T}_7$ \\
+$\mathcal{F}_{\mathrm{descent}}$ &
+  B &
+  \texttt{thm:thread-1-descent}: factorization
+  $\mathcal{F}_{\mathrm{emergent}}=
+  \mathrm{coarse}\circ\mathcal{E}_N\circ\mathrm{eval}_{\mathrm{SM}}$ \\
+$\mathcal{F}_{\mathrm{band}}$ &
+  B/C &
+  \texttt{thm:thread-1-bands}: $\det(\mathcal{D}_{\mathbf{k}})$ contact
+  for band gaps \\
+$\mathcal{F}_{\mathrm{thermo}}$ &
+  B &
+  \texttt{thm:thread-1-critical}: capacity-weighted critical exponents
+  from \eqref{eq:Z-sigma} \\
+$\mathcal{F}_{\mathrm{continuum}}$ &
+  B &
+  \texttt{def:thread-1-continuum}: $L\to\infty$ limit of cellular cosheaf
+  $\mathcal{F}_{16}$ \\
+--- &
+  B/C &
+  \texttt{cor:thread-1-closure}: Class~V physics-map rows certified
+  under \texttt{def:thread-1-evaluator} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Dependency edges.}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Upstream (required).}
+    Observer collapse $\Pi_{\sigma=-1}$
+    (Definition~\ref{def:heterotic-collapse});
+    OS quantum mechanics (Theorem~\ref{thm:qm-derived});
+    SM breaking chain (Theorem~\ref{thm:breaking-complete});
+    $\sigma$-measure split (Theorem~\ref{thm:sigma-measure}).
+  \item \textbf{Peer threads.}
+    Thread~2 (weak): induced gravity supplies the background vierbein
+    (Proposition~\ref{prop:vierbein}) for continuum limits;
+    environmental pressure $\mathcal{P}_{\sigma=+1}$
+    (Definition~\ref{def:env-pressure}) enters thermodynamic
+    \eqref{eq:thermo-laws}.
+    Nuclear/atomic contact (Section~\ref{sec:nuclear-atomic-cosmo}) is a
+    \emph{specialization} of Thread~1 at low $N$.
+  \item \textbf{Downstream (feeds).}
+    Biophysics and plasma rows in Table~\ref{tab:physics-map-complete};
+    precision chemistry and materials Tier~C workbook.
+\end{itemize}
+
+\paragraph{Proof-tier upgrade path ($\mathbf{E}\to\mathbf{B}\to\mathbf{A}$).}
+\begin{enumerate}[label=\textbf{\arabic*.},leftmargin=*]
+  \item \textbf{Tier~E (emergent contact).}
+    Current Class~V status: SM\,+\,GR\,+\,QED effective theory with no
+    named $\mathcal{F}_D$ (Section~\ref{sec:physics-map:grouping},
+    Remark~\ref{rmk:emergent-honest}).
+  \item \textbf{Tier~B (ledger-conditional).}
+    Close \texttt{def:thread-1-evaluator} and
+    \texttt{thm:thread-1-descent} under \textbf{A5} (flavon overlap),
+    \textbf{A7} (OS reconstruction for $\mathcal{H}_N^{\mathrm{em}}$),
+    and \textbf{A8} (environmental pressure routing); matches
+    Section~\ref{sec:emergent} tier assignments.
+  \item \textbf{Tier~A (void--mirror).}
+    Upgrade additivity and locality of $\mathcal{E}_N$
+    (Proposition~\ref{prop:emergent-functor}) to a \emph{unique} descent
+    functor from $H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}$ alone,
+    eliminating \textbf{A5} from the chemistry ladder
+    (Theorem~\ref{thm:chemistry-ladder}) and identifying the replica limit
+    with Stone-lift cellular data (Proposition~\ref{prop:stone-lift}) without
+    emergent lattice identification.
+\end{enumerate}
+
+\begin{equation}\label{eq:thread-1-pipeline}
+  \boxed{%
+  \begin{aligned}
+    \mathcal{F}_{\mathrm{emergent}}(D)
+    \;&=\;
+    \mathrm{coarse}_{\beta,N,L}\circ
+    \mathcal{E}_N\circ
+    \Pi_{\sigma=-1}\circ
+    \mathrm{Bal}_{\mathcal{C}}\circ
+    \Mirror^{\leq 8}(\Void),\\[4pt]
+    \mathcal{E}_N
+    \;&=\;
+    (\Pi_{\sigma=-1})^{\otimes N},
+    \qquad
+    \mathcal{H}_N^{\mathrm{em}}=\mathrm{Im}(\mathcal{E}_N)
+    \subset
+    \mathcal{H}_{\mathrm{obs}}^{\otimes N}.
+  \end{aligned}}
+\end{equation}
+
+%----------------------------------------------------------------------%
+\subsection{Thread~2: Strong-curvature and quantum gravity}
+\label{sec:thread-2}
+%----------------------------------------------------------------------%
+
+\paragraph{Thread definition.}
+\textbf{Thread~2} is the \emph{strong-curvature} route: beyond the
+Einstein--Hilbert ledger truncation (\textbf{A1}), where the effective
+coupling $\kappa(k)=k^2/\MPl^2(k)$ (Definition~\ref{def:kappa}) reaches the
+UV organizing fixed point $\kappa_\star=96\pi^2/5$
+(Theorem~\ref{thm:kappa}) and induced $\MPl$ is anchored to the electroweak
+scale via Sakharov $a_2$ (Theorem~\ref{thm:planck},
+Proposition~\ref{prop:planck-scale}). At curvature scales $R\sim\MPl^2$ and on
+black-hole horizons (Table~\ref{tab:physics-map-complete}, astrophysics row),
+the one-loop EH truncation is insufficient; Thread~2 traces how
+\emph{higher-curvature} and \emph{graviton} modes are routed to the
+$\sigma=+1$ shadow sector (Theorem~\ref{thm:kappa-persistence},
+assumption~\textbf{A8}), how dark-matter cohomology residue
+$\mathcal{R}_{+1}$ (Definition~\ref{def:dm-residue}) gravitates at
+$\kappa_\star$, and how the nonperturbative measure split
+\eqref{eq:gamma-split} constrains a horizon EFT \emph{without} importing a
+separate quantum-gravity axiom. The target is a named evaluator
+$\mathcal{F}_{\mathrm{grav}}$ certifying Planck-scale and horizon physics as
+outputs of the same void--mirror pipeline.
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular}{@{}clp{0.52\linewidth}@{}}
+\toprule
+\textbf{ID} & \textbf{Prior catalog question} & \textbf{Thread~2 closure target} \\
+\midrule
+QG-EH &
+  Einstein--Hilbert sufficiency at $R\sim\MPl^2$ &
+  \textbf{A1} truncation $\to$
+  \texttt{thm:thread-2-curvature} (EH domain of validity) \\
+QG-R2 &
+  $R^2$, graviton loops, higher curvature &
+  Theorem~\ref{thm:kappa-persistence} $\to$
+  \texttt{prop:thread-2-shadow-routing} (full Jacobian certificate) \\
+QG-PL &
+  Absolute Planck mass identification &
+  Theorem~\ref{thm:planck}, \eqref{eq:planck-v} $\to$
+  \texttt{cor:thread-2-planck} (D3 closure at $\kappa_\star$) \\
+QG-BH &
+  Black-hole horizons, entropy &
+  Physics-map Tier~B/C row $\to$
+  \texttt{thm:thread-2-horizon} (observer-local horizon EFT) \\
+QG-NP &
+  Nonperturbative quantum gravity &
+  Theorem~\ref{thm:sigma-measure} $\to$
+  \texttt{thm:thread-2-qg} (shadow-sector gravitational measure) \\
+QG-DM &
+  Shadow-sector stress at strong curvature &
+  Theorem~\ref{thm:dm-sector} $\to$
+  \texttt{prop:thread-2-shadow-stress} ($T_{\mu\nu}^{(+1)}$ at horizon) \\
+QG-CC &
+  Vacuum energy back-reaction under curvature &
+  Theorem~\ref{thm:cc-sequester} $\to$
+  \texttt{lem:thread-2-a0-horizon} ($a_0$ density on horizons) \\
+QG-EVAL &
+  No $\mathcal{F}_D$ for black-hole / Planck rows &
+  \texttt{def:thread-2-evaluator} certifies
+  $\mathcal{F}_{\mathrm{grav}}$ \\
+\bottomrule
+\end{tabular}
+\caption{Unanswered questions from the gravity and astrophysics rows of
+Table~\ref{tab:physics-map-complete} and the strong-curvature frontier beyond
+\textbf{A1}. Rows do not reopen CC row~\textbf{CC} of
+Table~\ref{tab:gap-ledger} (already derived).}
+\label{tab:thread-2-questions}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}llp{0.46\linewidth}@{}}
+\toprule
+\textbf{Label} & \textbf{Object} & \textbf{Role in Thread~2} \\
+\midrule
+\ref{thm:planck} &
+  Sakharov $\MPl^2$ from $28$ coset scalars &
+  Induced Planck mass $a_2$ truncation \\
+\ref{def:kappa} &
+  $\kappa(k)=k^2/\MPl^2(k)$ &
+  Dimensionless gravitational coupling \\
+\ref{thm:kappa} &
+  $\kappa_\star=96\pi^2/5$, $\beta_\kappa$ &
+  One-loop UV fixed point on EH truncation \\
+\ref{thm:kappa-persistence} &
+  $R^2$/graviton decoupling on observable row &
+  Strong-curvature modes routed to $d\mu_{\Gamma_{+1}}$ \\
+\ref{prop:frg-jacobian} &
+  Extended FRG stability matrix &
+  Relevant directions $\kappa$, $\Lambda_{\mathrm{cc}}$ \\
+\ref{thm:cc-sequester} &
+  $\Lambda_{\mathrm{cc}}=\Pi_{\sigma=+1}\Lambda_{\mathrm{cc}}$ &
+  Vacuum energy sequestering at $\kappa_\star$ \\
+\ref{lem:a0-sigma-plus} &
+  $a_0^{(\pm1)}$ heat-kernel split &
+  Curvature--vacuum coupling graded by $\sigma$ \\
+\ref{thm:sigma-measure} &
+  $d\mu_\Gamma=d\mu_{\Gamma_{-1}}\otimes d\mu_{\Gamma_{+1}}$ &
+  Nonperturbative sector factorization \\
+\ref{thm:dm-sector} &
+  $\rho_{\mathrm{DM}}=\langle T_{00}^{(+1)}\rangle_{\mathcal{R}_{+1}}$ &
+  Shadow stress sources curvature \\
+\ref{def:dm-freezeout} &
+  $k_{\mathrm{FO}}=\kappa_\star^{1/2}v$ &
+  Organizing scale for gravitational freeze-out \\
+\ref{prop:vierbein} &
+  Composite vierbein on $\mathfrak{m}$ &
+  Strong-field metric from coset section \\
+\ref{thm:spacetime:soldering-derived} &
+  $d=4$ Lorentzian block $H_2(\Quat)$ &
+  Horizon geometry transport \\
+\ref{rmk:observer-frg} &
+  Observer-local FRG along $g_\iota$ &
+  Strong-curvature flow chart \\
+\bottomrule
+\end{tabular}
+\caption{Existing SJET anchors for Thread~2. The EH chain and
+$\sigma$-routing lemmas supply the backbone; horizon and nonperturbative
+certificates are the Thread~2 target layer.}
+\label{tab:thread-2-anchors}
+\end{table}
+
+\paragraph{Gap analysis.}
+Thread~2 has \textbf{Tier~B} control of $\kappa_\star$ on the observable FRG
+row but lacks closed strong-curvature theorems:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Evaluator.} Black holes appear as
+    \emph{Emergent: induced gravity + Tier~B horizon EFT}
+    (Table~\ref{tab:physics-map-complete}) with no
+    $\mathcal{F}_{\mathrm{grav}}$ definition parallel to
+    $\mathcal{F}_{\sigma\mathrm{-split}}$ for cosmology.
+  \item \textbf{Horizon certificate.} No theorem identifies observer horizon
+    data with $\Pi_{\sigma=-1}$-projected boundary modes on
+    $\hat Q$; the Tier~B horizon EFT is named but not derived.
+  \item \textbf{Nonperturbative QG.} Theorem~\ref{thm:kappa} is explicitly
+    one-loop with higher curvature neglected
+    (Section~\ref{sec:physics:gauge}); a nonperturbative fixed-point
+    statement for the full gravitational measure on
+    $d\mu_{\Gamma_{-1}}\otimes d\mu_{\Gamma_{+1}}$ is not proved.
+  \item \textbf{Strong-field $\sigma$ routing.} Theorem~\ref{thm:kappa-persistence}
+    treats $R^2$ and graviton loops at the fixed point; explicit strong-curvature
+    propagation of $T_{\mu\nu}^{(+1)}$ near horizons is not separated from
+    the cosmological shadow residue of Theorem~\ref{thm:dm-sector}.
+  \item \textbf{Quantitative contacts.} Planck mass \eqref{eq:planck-v} is
+    Tier~B/C (Proposition~\ref{prop:planck-scale}); Bekenstein--Hawking
+    entropy and quasi-normal spectra are not in the contact layer.
+\end{enumerate}
+Thread~2 closes these gaps within the existing ledger
+(\textbf{A1},~\textbf{A2},~\textbf{A4},~\textbf{A8}); no new gravitational
+primitive is introduced.
+
+\paragraph{Target evaluators and theorems.}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}llp{0.44\linewidth}@{}}
+\toprule
+\textbf{Functor / label} & \textbf{Tier target} & \textbf{Proposed content} \\
+\midrule
+$\mathcal{F}_{\mathrm{grav}}$ &
+  B $\to$ A &
+  \texttt{def:thread-2-evaluator}: assemble $\kappa$, $\MPl$,
+  $\Gamma_{\mathrm{eff}}$ at $\kappa_\star$ \\
+$\mathcal{F}_{\kappa}$ &
+  B &
+  \texttt{cor:thread-2-kappa}: persistence of $\kappa_\star$ under
+  \textbf{A8} extended truncation \\
+$\mathcal{F}_{\mathrm{horizon}}$ &
+  B/C &
+  \texttt{thm:thread-2-horizon}: observer-local horizon EFT from
+  $\sigma_{\mathrm{sol}}$ and $d\mu_{\Gamma_{-1}}$ \\
+$\mathcal{F}_{\mathrm{shadow}}$ &
+  B &
+  \texttt{prop:thread-2-shadow-stress}: $T_{\mu\nu}^{(+1)}$ sourcing
+  strong-field Einstein equations \\
+$\mathcal{F}_{\mathrm{np}}$ &
+  B &
+  \texttt{thm:thread-2-qg}: nonperturbative gravitational measure on
+  \eqref{eq:gamma-split} \\
+--- &
+  B/C &
+  \texttt{lem:thread-2-a0-horizon}: $a_0^{(+1)}$ on horizon shells;
+  \texttt{cor:thread-2-closure} for astrophysics rows \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Dependency edges.}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Upstream (required).}
+    Induced gravity (\textbf{A1}, Theorem~\ref{thm:kappa});
+    Sakharov scale (\textbf{A2}, Theorem~\ref{thm:planck});
+    D3 scale identification (Section~\ref{sec:scales},
+    Proposition~\ref{prop:planck-scale});
+    $\sigma$-measure split (Theorem~\ref{thm:sigma-measure});
+    soldering (Theorem~\ref{thm:spacetime:soldering-derived}).
+  \item \textbf{Peer threads.}
+    Thread~1 (weak): emergent continuum limits use the vierbein
+    (Proposition~\ref{prop:vierbein}) and pressure conjugate
+    $\mathcal{P}_{\sigma=+1}$.
+    Dark-sector thread (Section~\ref{sec:dark-sector}): $\mathcal{R}_{+1}$
+    and freeze-out (Definition~\ref{def:dm-freezeout}) supply shadow
+    stress; cosmology thread (Section~\ref{sec:cosmology}): CC sequestering
+    sets the de~Sitter background for horizon EFT.
+    Quantum-origin thread (Section~\ref{sec:quantum-origin}): OS reconstruction
+    constrains the observable gravitational measure.
+  \item \textbf{Downstream (feeds).}
+    Black-hole and strong-field astrophysics rows;
+    early-universe curvature corrections beyond
+    Coleman--Weinberg gap (\textbf{A3});
+    precision $\MPl$ workbook (Appendix~\ref{sec:appendix:frg}).
+\end{itemize}
+
+\paragraph{Proof-tier upgrade path ($\mathbf{E}\to\mathbf{B}\to\mathbf{A}$).}
+\begin{enumerate}[label=\textbf{\arabic*.},leftmargin=*]
+  \item \textbf{Tier~E (emergent contact).}
+    Current black-hole row: induced gravity + unspecified horizon EFT
+    (Table~\ref{tab:physics-map-complete}); Tier~B/C contact only.
+  \item \textbf{Tier~B (ledger-conditional).}
+    Close \texttt{def:thread-2-evaluator},
+    \texttt{thm:thread-2-horizon}, and
+    \texttt{thm:thread-2-qg} under \textbf{A1}--\textbf{A2},
+    \textbf{A4}, \textbf{A8}; extend Theorem~\ref{thm:kappa-persistence}
+    to strong-field charts $(\tau_\iota,g_\iota)$ along
+    Definition~\ref{def:lifetime}.
+  \item \textbf{Tier~A (void--mirror).}
+    Derive the observer-local EH truncation (\textbf{A1}) from
+    $\sigma$-equivariance of \eqref{eq:action} and capacity balance on
+    $\mathfrak{m}$ without FRG ledger import; identify
+    $\kappa_\star$ as a consequence of the $28|4$ coset split
+    (Lemma~\ref{lem:goldstone-sigma}) and anomaly arithmetic
+    (Theorem~\ref{thm:beta}) alone; upgrade shadow routing to
+    Theorem~\ref{thm:duality} without \textbf{A8} decoupling hypothesis.
+\end{enumerate}
+
+\begin{equation}\label{eq:thread-2-pipeline}
+  \boxed{%
+  \begin{aligned}
+    \mathcal{F}_{\mathrm{grav}}(D)
+    \;&=\;
+    \mathrm{eval}_{\kappa}\circ
+    \Pi_{\sigma=-1}\circ
+    \mathrm{Bal}_{\mathcal{C}}\circ
+    \Mirror^{\leq 8}(\Void),\\[4pt]
+    \mathrm{eval}_{\kappa}
+    \;&:\;
+    (\MPl,\kappa_\star,\Gamma_{\mathrm{eff}})
+    \longmapsto
+    \mathcal{M}_{\mathrm{strong}}(D),
+    \qquad
+    \beta_\kappa\big|_{\sigma=-1,\,\kappa_\star}=0,\\[2pt]
+    \beta_{\alpha R^2},\,
+    \beta_{\mathrm{graviton}}
+    \;&\subset\;
+    d\mu_{\Gamma_{+1}}
+    \quad
+    (\textbf{A8},\ \text{Thm.~\ref{thm:kappa-persistence}}).
+  \end{aligned}}
+\end{equation}
+
+\begin{remark}[Thread coupling]
+\label{rmk:threads-1-2-coupling}
+Threads~1 and~2 are logically orthogonal: Thread~1 coarse-grains
+$\Pi_{\sigma=-1}$ matter on $\mathcal{T}_7$; Thread~2 organizes
+curvature couplings at $\kappa_\star$ and routes strong-field back-reaction
+to $d\mu_{\Gamma_{+1}}$. Their intersection is the thermodynamic pressure
+term $\mathcal{P}_{\sigma=+1}$ in \eqref{eq:thermo-laws} and the vierbein
+(Proposition~\ref{prop:vierbein}) shared by condensed-matter continuum
+limits and horizon geometry. Neither thread adds a primitive axiom; both
+extend Corollary~\ref{cor:physics-map-closure} with named evaluators
+$\mathcal{F}_{\mathrm{emergent}}$ and $\mathcal{F}_{\mathrm{grav}}$.
+\end{remark}% --- end 29-threads-1-2.tex ---
+% --- 29-threads-3-4.tex ---
+%======================================================================%
+\section{Research Threads III--IV: Continuum Rigor and Precision Contact}
+\label{sec:threads-3-4}
+%======================================================================%
+
+Sections~\ref{sec:derivation-complete}--\ref{sec:physics-map} close semantic
+coverage of the PDG-aligned physics map. Two \emph{research threads} remain
+as explicit programme coordinates: \textbf{Thread~3} (constructive continuum
+limit and nonperturbative rigor) and \textbf{Thread~4} (precision and anomaly
+contact). This section traces both threads through the same master pipeline
+\eqref{eq:master-pipeline}, records open questions in tabular form, names
+existing anchors and residual gaps, and states target theorem upgrades with
+tier labels and dependency chains. Threads~III and~IV are not new primitives;
+they are audit trails for the rigor and precision layers that connect cellular
+mirror data to OS quantum mechanics (Thread~3) and to sub-percent PDG contacts
+(Thread~4).
+
+%======================================================================%
+\subsection{Thread~3: Constructive continuum limit and rigor}
+\label{sec:thread-3}
+%======================================================================%
+
+\begin{definition}[Thread~3: constructive continuum limit]
+\label{def:thread-3}
+\emph{Thread~3} is the functorial chain that transports discrete mirror data
+on the stabilized Albert tower $\mathcal{T}_7$ to a nonperturbatively
+well-defined observer-sector Euclidean measure, then to Lorentzian quantum
+mechanics by OS reconstruction. Its pipeline stages are:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Cellular cohomology} on $\mathcal{T}_7$ with cosheaf
+    $\mathcal{F}_{16}$ (Definition~\ref{def:tower7},
+    Definition~\ref{def:F16}, Lemma~\ref{lem:cellular}).
+  \item \textbf{Profinite Stone lift} to $Q$ with $\sigma$-type stability
+    (Proposition~\ref{prop:stone-lift}, Appendix~\ref{sec:appendix:quotient}).
+  \item \textbf{Mirror quotient} $\hat Q=Q/\sigma$ and bundle $V_{16}\to\hat Q$
+    (Definition~\ref{def:Qhat}, Theorem~\ref{thm:observer-fp}).
+  \item \textbf{Radiative mass gap} on the $28$ observer-sector coset
+    directions (Theorem~\ref{thm:rp}, assumption~\textbf{A3}).
+  \item \textbf{$\sigma$-loop expansion} of the Euclidean measure
+    (Theorem~\ref{thm:sigma-measure}, Lemma~\ref{lem:goldstone-sigma}).
+  \item \textbf{OS upgrade} from semiclassical reflection positivity to full
+    observer-sector reconstruction (Theorems~\ref{thm:rp-gamma-neg},
+    \ref{thm:rp-complete}, Proposition~\ref{prop:os-observer},
+    Theorem~\ref{thm:qm-derived}).
+\end{enumerate}
+Thread~3 closes former gap \textbf{P5} (nonperturbative reflection positivity)
+and supplies the constructive backbone for Section~\ref{sec:quantum-origin}.
+\end{definition}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.14}
+\begin{tabular}{@{}clp{0.46\linewidth}c@{}}
+\toprule
+\textbf{ID} & \textbf{Question} & \textbf{Resolution status} & \textbf{Tier} \\
+\midrule
+T3-Q1 &
+  Does $\dim H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}=3$
+  survive the Stone lift to $Q$? &
+  \textbf{Closed} --- Proposition~\ref{prop:stone-lift},
+  Theorem~\ref{thm:mirror-index} &
+  A \\
+T3-Q2 &
+  Is the observable coset sector radiatively gapped? &
+  \textbf{Closed} --- Theorem~\ref{thm:rp} ($\mu^2>0$ on $28$ modes,
+  Lemma~\ref{lem:breaking-cw}) &
+  B \\
+T3-Q3 &
+  Do massless Goldstones decouple from $d\mu_{\Gamma_{-1}}$? &
+  \textbf{Closed} --- Lemma~\ref{lem:goldstone-sigma},
+  $4$ modes in $\mathfrak{m}_{+1}\subset d\mu_{\Gamma_{+1}}$ &
+  B \\
+T3-Q4 &
+  Does $d\mu_\Gamma$ factorize as
+  $d\mu_{\Gamma_{-1}}\otimes d\mu_{\Gamma_{+1}}$? &
+  \textbf{Closed} --- Theorem~\ref{thm:sigma-measure} &
+  B \\
+T3-Q5 &
+  Is $d\mu_{\Gamma_{-1}}$ reflection-positive along $\tau_\iota$? &
+  \textbf{Closed} --- Theorem~\ref{thm:rp-gamma-neg} &
+  B \\
+T3-Q6 &
+  Do OS axioms reconstruct unitary QFT on $\mathcal{H}_{\mathrm{obs}}$? &
+  \textbf{Closed under \textbf{A7}} ---
+  Proposition~\ref{prop:os-observer},
+  Theorem~\ref{thm:qm-derived} &
+  B \\
+T3-Q7 &
+  Do $\sigma$-sector loop corrections remain factorized at all orders? &
+  \textbf{Partial} --- tree and one-loop split proved;
+  all-orders target \ref{thm:thread3-sigma-loop} &
+  B$\to$A? \\
+T3-Q8 &
+  Is there a lattice error bound
+  $\|H^1(\mathcal{T}_7)-H^1(Q)\|<\varepsilon$? &
+  \textbf{Open} --- profinite stability shown;
+  explicit $\varepsilon$ bound target \ref{thm:thread3-continuum} &
+  --- \\
+T3-Q9 &
+  Does the gauge sector inherit a nonperturbative mass gap (YM)? &
+  \textbf{Open} --- semiclassical gap on coset;
+  confinement contact Tier~C (Theorem~\ref{thm:confinement}) &
+  C \\
+\bottomrule
+\end{tabular}
+\caption{Thread~3 question ledger. \textbf{Closed} entries are proved in the
+manuscript; \textbf{Partial} and \textbf{Open} entries name target upgrades
+below.}
+\label{tab:thread-3-questions}
+\end{table}
+
+\paragraph{Existing anchors.}
+Thread~3 is already threaded through the manuscript at the following nodes:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Cellular $\to$ continuum.}
+    Appendix~\ref{sec:appendix:quotient}: triality on $\mathcal{T}_7$
+    (Proposition~\ref{prop:triality}), cellular count
+    (Lemma~\ref{lem:cellular}), Stone lift
+    (Proposition~\ref{prop:stone-lift}), Lefschetz index
+    (Theorem~\ref{thm:mirror-index}).
+  \item \textbf{Quotient geometry.}
+    Definition~\ref{def:Qhat}; observer fixed-point theorem
+    (Theorem~\ref{thm:observer-fp}); duality
+    (Theorem~\ref{thm:duality}).
+  \item \textbf{Mass gap.}
+    Coleman--Weinberg gap (Lemma~\ref{lem:breaking-cw}, assumption~\textbf{A3});
+    semiclassical RP (Theorem~\ref{thm:rp}); Goldstone split
+    (Lemma~\ref{lem:goldstone-sigma}).
+  \item \textbf{$\sigma$-measure and loops.}
+    Nonperturbative factorization (Theorem~\ref{thm:sigma-measure});
+    instanton split parallel (Proposition~\ref{prop:theta-measure});
+    graviton/$R^2$ routing (assumption~\textbf{A8},
+    Theorem~\ref{thm:kappa-persistence}).
+  \item \textbf{OS chain.}
+    RP on $d\mu_{\Gamma_{-1}}$ (Theorem~\ref{thm:rp-gamma-neg});
+    closure (Theorem~\ref{thm:rp-complete});
+    quantum origin (Theorem~\ref{thm:qm-derived},
+    Corollary~\ref{cor:qm-origin-closure}).
+\end{itemize}
+
+\paragraph{Residual gaps.}
+\begin{enumerate}[label=\textbf{G3.\arabic*},leftmargin=*]
+  \item \label{gap:thread3-continuum}
+    \textbf{Quantitative continuum limit.} Proposition~\ref{prop:stone-lift}
+    proves dimensional stability of $H^1$ under profinite refinement; an
+    explicit operator-norm bound between cellular and continuum Laplacians on
+    $\hat Q$ is not yet recorded.
+  \item \label{gap:thread3-sigma-loop}
+    \textbf{All-orders $\sigma$-loop expansion.} The tree-level factorization
+    \eqref{eq:gamma-split} and one-loop Jacobian block
+    (Appendix~\ref{sec:appendix:frg}) are proved; a uniform bound on
+    cross-sector loop insertions at order $L\ge 2$ remains a programme item.
+  \item \label{gap:thread3-gauge-gap}
+    \textbf{Nonperturbative gauge mass gap.} Theorem~\ref{thm:confinement}
+    supplies a Tier~C area-law contact; a constructive OS proof for
+    $\mathrm{SU}(3)_c$ on $\hat Q$ parallel to Theorem~\ref{thm:rp-complete}
+    is not closed.
+  \item \label{gap:thread3-a7}
+    \textbf{Ledger \textbf{A7} minimization.} Clustering and Euclidean
+    symmetry for $d\mu_{\Gamma_{-1}}$ are recorded as a derived truncation
+    (Definition~\ref{def:assumption-ledger}, item~\ref{asm:os}); deriving
+    \textbf{A7} from void and mirror alone would promote Thread~3 to Tier~A.
+\end{enumerate}
+
+\paragraph{Target theorems.}
+\begin{theorem}[Target: quantitative continuum limit]
+\label{thm:thread3-continuum}
+\textbf{Target (Thread~3).} Let $\mathcal{T}_7^{(n)}$ be a profinite refinement
+of the stabilized Albert tower and $Q^{(n)}$ its Stone lift. There exists
+$\varepsilon_n\to 0$ such that the $\sigma$-anti-invariant cellular Laplacian
+$\Delta_{\mathcal{T}_7^{(n)}}$ on $H^1(\mathcal{T}_7^{(n)},\mathcal{F}_{16})$
+converges in operator norm to the Laplacian on
+$H^1(Q,V_{16})^{\sigma=-1}$, and the observer count
+$\dim H^1=3$ is stable for all $n$. \textbf{Upgrade:} Lemma~\ref{lem:cellular}
+$\to$ Tier~A continuum stability; closes \ref{gap:thread3-continuum}.
+\end{theorem}
+
+\begin{theorem}[Target: mass gap certificate on observer coset]
+\label{thm:thread3-mass-gap}
+\textbf{Target (Thread~3).} Under assumption~\textbf{A3} and
+$\iota$-sector convexity~\textbf{A6}, the Euclidean measure on the
+$28$-dimensional complement of $\mathfrak{m}_{+1}$ satisfies an OS mass gap
+$\Delta_\iota\ge c\,\mu>0$ uniform in $\iota\in\mathcal{I}$, with
+$\mu^2$ the Coleman--Weinberg scale of Lemma~\ref{lem:breaking-cw}.
+\textbf{Status:} semiclassical content in Theorem~\ref{thm:rp};
+\textbf{upgrade:} promote to nonperturbative gap alongside
+Theorem~\ref{thm:rp-complete}.
+\end{theorem}
+
+\begin{theorem}[Target: $\sigma$-loop expansion]
+\label{thm:thread3-sigma-loop}
+\textbf{Target (Thread~3).} For the Euclidean measure
+$d\mu_\Gamma[\orderparam,A]$ of \eqref{eq:gamma-full}, the loop expansion
+factorizes order-by-order:
+\begin{equation}\label{eq:sigma-loop-expansion}
+  \log Z_\Gamma
+  \;=\;
+  \log Z_{\Gamma_{-1}}
+  \;+\;
+  \log Z_{\Gamma_{+1}},
+\end{equation}
+with no mixed $\sigma=\pm1$ cross-terms at any loop order, provided
+higher-curvature and graviton loops are routed to the $\sigma=+1$ sector per
+assumption~\textbf{A8}. \textbf{Status:} tree (Theorem~\ref{thm:sigma-measure})
+and one-loop FRG block (Proposition~\ref{prop:frg-jacobian});
+\textbf{upgrade:} close \ref{gap:thread3-sigma-loop} and promote
+\textbf{A8} back-reaction bounds to a lemma.
+\end{theorem}
+
+\begin{theorem}[Target: OS upgrade]
+\label{thm:thread3-os-upgrade}
+\textbf{Target (Thread~3).} Derive assumption~\textbf{A7} (clustering and
+Euclidean invariance for $d\mu_{\Gamma_{-1}}$) from product-mirror
+equivariance and compactness on EIII, so that
+Proposition~\ref{prop:os-observer} and Theorem~\ref{thm:qm-derived} become
+Tier~A consequences of void and mirror. \textbf{Status:} Tier~B under
+\textbf{A7}; \textbf{upgrade:} close \ref{gap:thread3-a7}; former P5 becomes
+Tier~A.
+\end{theorem}
+
+\paragraph{Dependencies and tier upgrades.}
+Thread~3 depends on Tier~A inputs (void, mirror, cellular count, triality,
+Stone lift) and Tier~B ledger entries \textbf{A3} (Coleman--Weinberg gap),
+\textbf{A6} ($\iota$-convexity), \textbf{A7} (OS axioms), and \textbf{A8}
+($\sigma$-routed gravity loops). The dependency DAG is
+\begin{center}
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Input} & \textbf{Thread~3 output} \\
+\midrule
+Lemma~\ref{lem:cellular}, Proposition~\ref{prop:stone-lift} &
+  Continuum observer multiplicity \\
+Lemma~\ref{lem:breaking-cw}, Theorem~\ref{thm:rp} &
+  Coset mass gap \\
+Theorem~\ref{thm:sigma-measure}, Lemma~\ref{lem:goldstone-sigma} &
+  $\sigma$-loop factorization (tree) \\
+Theorem~\ref{thm:rp-gamma-neg}, Proposition~\ref{prop:os-observer} &
+  OS reconstruction \\
+Theorem~\ref{thm:qm-derived} &
+  Quantum mechanics certificate \\
+\bottomrule
+\end{tabular}
+\end{center}
+\textbf{Tier upgrades sought:} \textbf{A7}$\to$\textbf{derived}
+(Theorem~\ref{thm:thread3-os-upgrade}); cellular stability
+$\to$ quantitative bound (Theorem~\ref{thm:thread3-continuum}); P5
+(Table~\ref{tab:gap-ledger}) from Tier~B to Tier~A.
+
+\begin{equation}\label{eq:thread3-pipeline}
+  \boxed{%
+  \mathcal{T}_7
+  \;\xrightarrow{\;\text{Stone}\;}\;
+  Q
+  \;\xrightarrow{\;/\sigma\;}\;
+  \hat Q
+  \;\xrightarrow{\;\Pi_{\sigma=-1},\,\mu^2>0\;}\;
+  d\mu_{\Gamma_{-1}}
+  \;\xrightarrow{\;\text{OS}\;}\;
+  \mathcal{H}_{\mathrm{obs}}
+  }
+\end{equation}
+Equation~\eqref{eq:thread3-pipeline} is the Thread~3 specialization of
+\eqref{eq:master-pipeline} to the rigor layer; Section~\ref{sec:quantum-origin}
+records the OS endpoint (Corollary~\ref{cor:qm-origin-closure}).
+
+%======================================================================%
+\subsection{Thread~4: Precision and anomaly contact}
+\label{sec:thread-4}
+%======================================================================%
+
+\begin{definition}[Thread~4: precision and anomaly contact]
+\label{def:thread-4}
+\emph{Thread~4} is the experimental contact thread: Tier~A anomaly arithmetic
+and $\beta$-function identities propagate through the ledger FRG and two-loop
+threshold matching to sub-percent PDG observables, CP-odd invariants, and
+hadronic residues. Its stages are:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Anomaly anchor.} Cubic and mixed anomaly cancellation
+    (Theorem~\ref{thm:anomaly}); $b_0=12$ from $\mathbf{27}$ content
+    (Theorem~\ref{thm:beta}).
+  \item \textbf{Ledger FRG.} Extended Jacobian
+    (Proposition~\ref{prop:frg-jacobian}, Appendix~\ref{sec:appendix:frg});
+    capacity residues $\mathcal{R}_\iota(\mu)$ on observer charts.
+  \item \textbf{Two-loop thresholds.} Flavon, Yukawa, electroweak, and QCD
+    refinements (Theorems~\ref{thm:nu-ratio-2loop},
+    \ref{thm:quark-mass-2loop}, Theorem~\ref{thm:g2-2loop}).
+  \item \textbf{Precision closure.} Definition~\ref{def:tier-c-closure};
+    Corollaries~\ref{cor:tier-c-closure},~\ref{cor:quark-tier-c}.
+  \item \textbf{CP phases.} CKM $(\rho,\eta)$ from $\mathcal{P}_{ij}$
+    (Proposition~\ref{prop:ckm-precision}); strong CP
+    (Theorem~\ref{thm:strong-cp}); baryogenesis
+    (Proposition~\ref{prop:flavon-cp}).
+\end{enumerate}
+Thread~4 closes the D1--D3 precision programme and extends semantic closure
+(Corollary~\ref{cor:semantic-closure}) to quark and hadron sectors.
+\end{definition}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.14}
+\begin{tabular}{@{}clp{0.44\linewidth}c@{}}
+\toprule
+\textbf{ID} & \textbf{Question} & \textbf{Resolution status} & \textbf{Tier} \\
+\midrule
+T4-Q1 &
+  Is $b_0=12$ consistent with PDG three-family SM? &
+  \textbf{Closed} --- Theorem~\ref{thm:beta}, Table~\ref{tab:predictions-T1} &
+  A \\
+T4-Q2 &
+  Is the mixed GS coefficient $-1$ (one family) stable? &
+  \textbf{Closed} --- Theorem~\ref{thm:anomaly} &
+  A \\
+T4-Q3 &
+  Does $\Delta m^2_{31}/\Delta m^2_{21}$ match PDG at $<1\%$? &
+  \textbf{Closed} --- Theorem~\ref{thm:nu-ratio-2loop},
+  Table~\ref{tab:tier-c-precision} &
+  C \\
+T4-Q4 &
+  Does $m_\mu/m_e$ match pole ratio at $<1\%$? &
+  \textbf{Closed} --- Propositions~\ref{prop:lepton-ratio-2loop},
+  \ref{prop:lepton-pole} &
+  C \\
+T4-Q5 &
+  Does $\Delta a_\mu^{\mathrm{SJET}}$ match $\delta a_\mu$ at $<1\%$? &
+  \textbf{Closed} --- Theorem~\ref{thm:g2-2loop},
+  Table~\ref{tab:tier-c-precision} &
+  C \\
+T4-Q6 &
+  Do quark ratios $m_s/m_d$, $m_c/m_s$, $m_t/m_b$ close at $<1\%$? &
+  \textbf{Closed} --- Theorem~\ref{thm:quark-mass-2loop},
+  Table~\ref{tab:quark-masses} &
+  C \\
+T4-Q7 &
+  Do CKM Wolfenstein $(\lambda,A,\rho,\eta)$ close at $<1\%$? &
+  \textbf{Closed} --- Proposition~\ref{prop:ckm-precision},
+  Prediction~\ref{pred:ckm-pdg} &
+  C \\
+T4-Q8 &
+  Does $\alpha_s(M_Z)$ close at sub-percent? &
+  \textbf{Open} --- Prop.~\ref{prop:alpha-s} $\approx 0.14$ vs.\ PDG
+  $0.1179$ ($\sim 15\%$); target \ref{thm:thread4-alpha-s} &
+  C \\
+T4-Q9 &
+  Do hadron masses $m_p$, $m_\pi$, $m_\rho$ close at $<5\%$? &
+  \textbf{Partial} --- Prediction~\ref{pred:hadron-masses}
+  ($m_p$ $\sim 10\%$, $m_\pi$ match, $m_\rho$ $\sim 13\%$) &
+  C \\
+T4-Q10 &
+  Is strong CP $\bar\theta_{\mathrm{obs}}=0$ consistent with EDM bounds? &
+  \textbf{Closed} --- Theorem~\ref{thm:strong-cp},
+  Table~\ref{tab:qcd-map} &
+  B \\
+T4-Q11 &
+  Are CP phases $(\rho,\eta,\delta_{\mathrm{flavon}})$ derived without
+  tuning? &
+  \textbf{Partial} --- CKM from $\mathcal{P}_{ij}$;
+  Jarlskog target \ref{thm:thread4-cp-phases} &
+  C \\
+\bottomrule
+\end{tabular}
+\caption{Thread~4 question ledger. Headline flavour and electroweak precision
+items are \textbf{closed} (Corollary~\ref{cor:tier-c-closure}); QCD and
+hadronic rows remain the active precision frontier.}
+\label{tab:thread-4-questions}
+\end{table}
+
+\paragraph{Existing anchors.}
+Thread~4 is anchored at:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Tier~A anomaly sector.}
+    Theorem~\ref{thm:anomaly} (cubic $16-80+64=0$, mixed $-1$);
+    Theorem~\ref{thm:beta} ($b_0=12$);
+    Prediction~\ref{pred:gut} ($\alpha_{\mathrm{GUT}}\approx 1/24$).
+  \item \textbf{Flavour precision.}
+    Section~\ref{sec:tier-c-precision}: $\Delta m^2$ ratio, $m_\mu/m_e$,
+    $\Delta a_\mu$, $\sin^2\theta_W(M_Z)$
+    (Table~\ref{tab:tier-c-precision},
+    Table~\ref{tab:predictions-comparison}).
+  \item \textbf{Quark sector.}
+    Section~\ref{sec:quark-precision}: Theorem~\ref{thm:quark-mass-2loop},
+    Proposition~\ref{prop:ckm-precision}, Prediction~\ref{pred:ckm-pdg};
+    workbooks \eqref{eq:workbook-quark-masses}, \eqref{eq:workbook-ckm}.
+  \item \textbf{QCD contact.}
+    Section~\ref{sec:qcd}: Proposition~\ref{prop:alpha-s},
+    Theorem~\ref{thm:confinement}, Prediction~\ref{pred:hadron-masses};
+    Table~\ref{tab:qcd-map}.
+  \item \textbf{CP sector.}
+    Theorem~\ref{thm:strong-cp} ($\theta_{\mathrm{obs}}=0$);
+    Proposition~\ref{prop:flavon-cp} ($\varepsilon_{\mathrm{CP}}$);
+    Proposition~\ref{prop:ckm-precision} ($\rho$, $\eta$).
+  \item \textbf{Validation ledger.}
+    Table~\ref{tab:experimental-validation};
+    Definition~\ref{def:contact-map};
+    Corollary~\ref{cor:tier-c-closure}.
+\end{itemize}
+
+\paragraph{Residual gaps.}
+\begin{enumerate}[label=\textbf{G4.\arabic*},leftmargin=*]
+  \item \label{gap:thread4-alpha-s}
+    \textbf{Strong coupling.} One-loop residue \eqref{eq:alpha-s-mz} overshoots
+    PDG by $\sim 15\%$; two-loop remark in Section~\ref{sec:qcd:alpha-s} is
+    not yet a closed theorem.
+  \item \label{gap:thread4-hadrons}
+    \textbf{Hadron spectrum.} Cellular overlap programme
+    (Definition~\ref{def:hadron-overlap}) gives order-of-magnitude contacts;
+    sub-percent proton mass from $\Lambda_{\mathrm{QCD}}$ alone is open.
+  \item \label{gap:thread4-Vub}
+    \textbf{$|V_{ub}|$ tail.} Table~\ref{tab:ckm-pdg}: $|V_{ub}|$ at $\sim 6\%$
+    tolerance, the weakest CKM entry.
+  \item \label{gap:thread4-jarlskog}
+    \textbf{Jarlskog invariant.} $(\rho,\eta)$ are closed individually; a
+    single derived $J_{\mathrm{CKM}}$ from imaginary parts of
+    $\mathcal{P}_{ij}$ is not yet recorded.
+  \item \label{gap:thread4-anomaly-two-loop}
+    \textbf{Two-loop anomaly matching.} Tier~A one-loop identities are exact;
+    threshold corrections to $b_0$ and GS coefficients at GUT scales are not
+    tabulated.
+\end{enumerate}
+
+\paragraph{Target theorems.}
+\begin{theorem}[Target: two-loop $\alpha_s(M_Z)$ contact]
+\label{thm:thread4-alpha-s}
+\textbf{Target (Thread~4).} Extend Proposition~\ref{prop:alpha-s} with
+two-loop ledger $\beta$-functions parallel to
+Theorem~\ref{thm:quark-mass-2loop}, yielding
+$\alpha_s(M_Z)=0.118\pm 0.003$ from $(\alpha_{\mathrm{GUT}},M_{\mathrm{GUT}},
+w_3,b_0)$ alone. \textbf{Upgrade:} close \ref{gap:thread4-alpha-s}; promote
+QCD row in Table~\ref{tab:qcd-map} from $\sim 15\%$ to $<2\%$.
+\end{theorem}
+
+\begin{theorem}[Target: CP phases from overlap phases]
+\label{thm:thread4-cp-phases}
+\textbf{Target (Thread~4).} Derive the Jarlskog invariant
+\begin{equation}\label{eq:jarlskog-target}
+  J_{\mathrm{CKM}}
+  \;=\;
+  A\,\lambda^3\,\eta
+  \;\approx\;
+  3.0\times 10^{-5}
+\end{equation}
+and the flavon phase $\delta_3-\delta_1$ of \eqref{eq:flavon-phase} from a
+single complex overlap matrix $\mathcal{P}_{ij}\in\mathbb{C}$ with imaginary
+parts fixed by oriented triality on $\mathcal{T}_7$
+(Proposition~\ref{prop:triality}), with no additional CP postulate.
+\textbf{Upgrade:} close \ref{gap:thread4-jarlskog}; unify CKM and baryogenesis
+CP rows.
+\end{theorem}
+
+\begin{theorem}[Target: anomaly contact at two loops]
+\label{thm:thread4-anomaly-contact}
+\textbf{Target (Thread~4).} The one-loop identities
+$b_0=12$ and mixed coefficient $-1$ of Theorem~\ref{thm:anomaly} persist as
+\emph{contact invariants} under two-loop FRG flow
+\eqref{eq:frg-system-app}: any threshold correction $\delta b_0$ at
+$M_{\mathrm{GUT}}$ satisfies $|\delta b_0|<0.1$ when projected to the
+$\Pi_{\sigma=-1}$ Jacobian row. \textbf{Upgrade:} close
+\ref{gap:thread4-anomaly-two-loop}; tie Thread~4 to Appendix~\ref{sec:appendix:frg}.
+\end{theorem}
+
+\begin{theorem}[Target: precision-closed hadron mass]
+\label{thm:thread4-hadron-precision}
+\textbf{Target (Thread~4).} Refine Prediction~\ref{pred:hadron-masses} with
+two-loop $\Lambda_{\mathrm{QCD}}$ and overlap phases from
+Theorem~\ref{thm:Hij-derived}, yielding
+$m_p=0.938\,\mathrm{GeV}$, $m_\pi=0.140\,\mathrm{GeV}$,
+$m_\rho=0.775\,\mathrm{GeV}$ within $3\%$. \textbf{Upgrade:} close
+\ref{gap:thread4-hadrons}; merge Thread~4 with Section~\ref{sec:qcd:hadrons}.
+\end{theorem}
+
+\paragraph{Dependencies and tier upgrades.}
+Thread~4 depends on Tier~A anomaly arithmetic, Tier~B ledger FRG
+(\textbf{A4} one-loop FRG), and D1--D3 scale identification
+(Section~\ref{sec:scales}). The dependency chain is
+\begin{center}
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Input} & \textbf{Thread~4 output} \\
+\midrule
+Theorem~\ref{thm:anomaly}, Theorem~\ref{thm:beta} &
+  $b_0=12$, GS coefficient exact contacts \\
+Proposition~\ref{prop:frg-jacobian}, \eqref{eq:frg-system} &
+  Capacity residues $\mathcal{R}_\iota$, threshold factors $R^{(2)}$ \\
+Theorems~\ref{thm:nu-ratio-2loop}, \ref{thm:quark-mass-2loop},
+Theorem~\ref{thm:g2-2loop} &
+  Sub-percent flavour and $g$-2 contacts \\
+Proposition~\ref{prop:ckm-precision}, Theorem~\ref{thm:strong-cp} &
+  CP-even/odd sector contacts \\
+Proposition~\ref{prop:alpha-s}, Prediction~\ref{pred:hadron-masses} &
+  QCD/hadron Tier~C anchors \\
+\bottomrule
+\end{tabular}
+\end{center}
+\textbf{Tier upgrades sought:} QCD/hadron rows C$\to$ precision-closed
+(Theorems~\ref{thm:thread4-alpha-s},~\ref{thm:thread4-hadron-precision});
+CP phases C$\to$ B under derived $\mathcal{P}_{ij}$ complex structure
+(Theorem~\ref{thm:thread4-cp-phases}); validation of $b_0$ at two loops
+(Theorem~\ref{thm:thread4-anomaly-contact}).
+
+\begin{equation}\label{eq:thread4-pipeline}
+  \boxed{%
+  (b_0,\text{GS})
+  \;\xrightarrow{\;\text{FRG}\;}\;
+  \mathcal{R}_\iota,\,R^{(2)}
+  \;\xrightarrow{\;\text{D1--D3}\;}\;
+  \mathcal{O}_{\mathrm{SJET}}
+  \;\xrightarrow{\;\delta\;}\;
+  \mathcal{O}_{\mathrm{exp}}
+  }
+\end{equation}
+Equation~\eqref{eq:thread4-pipeline} is the Thread~4 specialization of
+\eqref{eq:master-pipeline} to the contact layer;
+Definition~\ref{def:contact-map} and Corollary~\ref{cor:tier-c-closure}
+record the mid-2026 closure certificate for headline observables.
+
+%======================================================================%
+\subsection{Thread coupling and programme status}
+\label{sec:threads-3-4-coupling}
+%======================================================================%
+
+Threads~3 and~4 are not independent. Thread~3 supplies the measure and OS
+foundation on which Thread~4 loop arithmetic is defined: capacity residues
+$\mathcal{R}_\iota$ are observer-chart functionals
+(Remark~\ref{rmk:observer-frg}); $\sigma$-loop factorization
+(Theorem~\ref{thm:sigma-measure}) ensures that precision observables computed
+in $d\mu_{\Gamma_{-1}}$ are not contaminated by shadow-sector normalization;
+the Coleman--Weinberg gap (Theorem~\ref{thm:rp}) sets the scale
+$\mu\equiv v$ (Proposition~\ref{prop:mu-lifetime}) used in every Thread~4
+workbook. Conversely, Thread~4 validates Thread~3: the $b_0=12$ anchor enters
+the mass-gap counting on coset scalars ($n_S=28$); anomaly cancellation
+guarantees that OS-reconstructed gauge dynamics is consistent at the contact
+layer.
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Thread} & \textbf{Closed items} & \textbf{Open targets} & \textbf{Tier} \\
+\midrule
+3 &
+  Cellular $\to$ $\hat Q$; coset mass gap; tree $\sigma$-split;
+  OS reconstruction under \textbf{A7} &
+  Thms.~\ref{thm:thread3-continuum}--\ref{thm:thread3-os-upgrade};
+  gauge-sector gap &
+  A/B \\
+4 &
+  $b_0$, GS; $\Delta m^2$, $m_\mu/m_e$, $g$-2, CKM, strong CP &
+  Thms.~\ref{thm:thread4-alpha-s}--\ref{thm:thread4-hadron-precision};
+  Jarlskog &
+  A/C \\
+\bottomrule
+\end{tabular}
+\caption{Thread~3--4 programme status as of mid-2026. \textbf{Closed} rows
+cite proved manuscript content; \textbf{Open targets} name the upgrade
+theorems of this section.}
+\label{tab:threads-3-4-status}
+\end{table}
+
+\begin{corollary}[Thread audit certificate]\label{cor:threads-3-4-audit}
+Relative to the semantic closure certificate
+(Corollary~\ref{cor:semantic-closure}):
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item Thread~3 has \textbf{six} of nine questions closed
+    (Table~\ref{tab:thread-3-questions}); residual items are quantitative
+    continuum bounds, all-orders $\sigma$-loops, and gauge-sector OS gap.
+  \item Thread~4 has \textbf{eight} of eleven questions closed or partial;
+    residual items are $\alpha_s(M_Z)$, hadron masses, $|V_{ub}|$, and
+    Jarlskog unification.
+  \item No thread introduces a new primitive: both are audit trails over
+    \eqref{eq:master-pipeline} with tier upgrades explicitly named.
+\end{enumerate}
+\end{corollary}
+
+\begin{remark}[Relation to physics map]
+Table~\ref{tab:physics-map-complete} Class~II (dynamical, Tier~B) and
+Class~III (flavour and precision, Tier~C) are the physics-map avatar of
+Threads~3 and~4 respectively. Corollary~\ref{cor:physics-map-closure}
+therefore subsumes the closed portions of this section; the thread tables
+record what remains for full Tier~A OS derivation and sub-percent QCD/hadron
+contact.
+\end{remark}% --- end 29-threads-3-4.tex ---
+% --- 29-threads-5-6.tex ---
+%======================================================================%
+\section{Development Threads V--VI: Cosmological Perturbations and
+Hadron--Nuclear Spectroscopy}
+\label{sec:threads-5-6}
+%======================================================================%
+
+Threads~V and~VI extend the master physics map
+(Section~\ref{sec:physics-map}) from \emph{background} cosmology and
+\emph{leading} hadronic contacts to the perturbative and spectroscopic
+functors required for CMB anisotropies, large-scale structure, and the
+full low-energy mass ladder. Both threads are \textbf{descent layers} on the
+same pipeline \eqref{eq:physics-map-pipeline}; neither introduces a primitive
+beyond $(\Void,\Mirror)$. Thread~III (SM Lagrangian certificate,
+Section~\ref{sec:sm-lagrangian}) and Thread~IV (cosmological background
+ledger, Sections~\ref{sec:dark-sector},~\ref{sec:cosmology},
+~\ref{sec:baryogenesis}) supply the transport inputs $(v,\eta_B,\alpha_{\mathrm{em}},
+\Omega_{\mathrm{DM}},H_0^{\mathrm{CMB}},\mathcal{P}_{\sigma=+1})$ that
+Threads~V and~VI consume.
+
+%----------------------------------------------------------------------%
+\subsection{Thread~5: Cosmological perturbations}
+\label{sec:thread-5}
+%----------------------------------------------------------------------%
+
+Cosmological \emph{background} quantities---$\Omega_{\mathrm{DM}}$,
+$H_0^{\mathrm{CMB}}$, $w(z)\approx -1$, $\eta_B$---are closed in
+Threads~III--IV. Thread~V records the \textbf{perturbation functor}: how
+$\sigma$-split stress--energy and capacity weights propagate into density
+contrasts, growth, and CMB/LSS observables.
+
+\begin{definition}[Thread~5: capacity-graded cosmological perturbation]
+\label{def:thread5-pert}
+Fix the homogeneous background of Theorems~\ref{thm:hubble-cmb},
+~\ref{thm:dm-abundance}, and Prediction~\ref{pred:cc}. Let
+$\delta_{\sigma=\pm1}(\mathbf{x},\tau)$ denote the density contrast in the
+$\sigma$-graded stress--energy split \eqref{eq:T-split} about
+$\orderparam_\star$. The \emph{Thread~5 perturbation datum} is the pair
+\begin{equation}\label{eq:thread5-datum}
+  \boldsymbol{\delta}
+  \;:=\;
+  \bigl(
+    \delta_{(-1)},\,\delta_{(+1)},\,D_\pm(z),\,P_\pm(k),\,n_s,\,\sigma_8
+  \bigr),
+\end{equation}
+where $\delta_{(-1)}$ is supported on observable baryon--radiation modes in
+$H^1(\hat Q,V_{16})^{\sigma=-1}$, $\delta_{(+1)}$ on the mirror-shadow
+residue $\mathcal{R}_{+1}$ (Definition~\ref{def:dm-residue}), $D_\pm$ are
+linear growth factors in each sector, $P_\pm$ the corresponding matter power
+spectra, and $(n_s,\sigma_8)$ the scalar tilt and late-time fluctuation
+amplitude contacted in Prediction~\ref{pred:cmb} and
+Proposition~\ref{prop:sigma8}.
+\end{definition}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}p{0.30\linewidth}p{0.58\linewidth}@{}}
+\toprule
+\textbf{Unanswered question} & \textbf{SJET status / residual work} \\
+\midrule
+What sources primordial scalar perturbations without an inflation postulate? &
+  Coleman--Weinberg gap on $28$ coset scalars
+  (Theorem~\ref{thm:rp}, Lemma~\ref{lem:breaking-cw}) supplies $V>0$;
+  ledger Jacobian tilt gives $n_s\neq 1$
+  (\eqref{eq:pred-ns}). \textbf{Open:} full curvature perturbation
+  $\mathcal{R}$ from $\orderparam$ fluctuations. \\
+\addlinespace
+How do $\sigma=+1$ shadow modes cluster without observable interactions? &
+  Theorem~\ref{thm:dm-sector} identifies $\rho_{\mathrm{DM}}$;
+  Proposition~\ref{prop:sigma8} fixes $\sigma_8$ from capacity ratio
+  $\sqrt{(w_1+w_2)/w_3}$. \textbf{Open:} non-linear
+  $\delta_{(+1)}$ beyond linear growth. \\
+\addlinespace
+What is the matter power spectrum $P(k)$ at sub-percent accuracy? &
+  Leading $P(k)\propto k^{n_s-1}$ with $n_s$ from
+  \eqref{eq:pred-ns}. \textbf{Open:} two-loop acoustic peak locations;
+  Silk damping from atomic sector
+  (Theorem~\ref{thm:atomic-spectrum}). \\
+\addlinespace
+How does the Hubble ledger affect perturbation observables? &
+  $H_0^{\mathrm{loc}}/H_0^{\mathrm{CMB}}=1+1/b_0$ at $z=0$
+  (Proposition~\ref{prop:h0-ledger}); BAO $H(z)$ converges at $z\gtrsim 1$
+  (Proposition~\ref{prop:hz-ledger}). \textbf{Closed} at linear order. \\
+\addlinespace
+Are tensor modes required for CMB $B$-modes? &
+  No tensor postulate in SJET. \textbf{Open:} $\sigma$-even graviton
+  residue routed to $d\mu_{\Gamma_{+1}}$
+  (Theorem~\ref{thm:kappa-persistence}) as hidden tensor ledger. \\
+\addlinespace
+Does $\eta_B$ fix $\Omega_b h^2$ and BBN abundances jointly? &
+  \textbf{Closed} triangle: Prediction~\ref{pred:eta-b},
+  Theorem~\ref{thm:bbn}, Prediction~\ref{pred:cmb}
+  (\eqref{eq:pred-omega-b}). \\
+\bottomrule
+\end{tabular}
+\caption{Thread~5 unanswered questions and SJET closure status. Rows marked
+\textbf{Closed} are Tier~B/C contacts; \textbf{Open} rows are honest gaps
+for sub-percent LSS/CMB refinement.}
+\label{tab:thread5-questions}
+\end{table}
+
+\paragraph{SJET anchors.}
+Thread~5 is anchored on the following proved or contacted chain:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{$\sigma$-sector stress split.}
+    $T_{\mu\nu}=T_{\mu\nu}^{(-1)}+T_{\mu\nu}^{(+1)}$
+    (Theorem~\ref{thm:dm-sector}, \eqref{eq:T-split}).
+  \item \textbf{Environmental vacuum ledger.}
+    $\mathcal{P}_{\sigma=+1}$ and CMB Friedmann constraint
+    (Definition~\ref{def:env-pressure}, \eqref{eq:friedmann-cmb}).
+  \item \textbf{Shadow abundance and clustering.}
+    $\Omega_{\mathrm{DM}}=4/15$ (Theorem~\ref{thm:dm-abundance});
+    $\sigma_8=\sqrt{11/16}$ (Proposition~\ref{prop:sigma8}).
+  \item \textbf{Baryon sector.}
+    $\eta_B\approx 6\times 10^{-10}$ (Theorem~\ref{thm:baryogenesis});
+    $\Omega_b h^2$ (Prediction~\ref{pred:cmb}, \eqref{eq:pred-omega-b}).
+  \item \textbf{Scalar tilt.}
+    $n_s=1-(w_2/w_3)(b_0-n_F)/\kappa_\star$ (Prediction~\ref{pred:cmb},
+    \eqref{eq:pred-ns}).
+  \item \textbf{Hubble anchors.}
+    Theorems~\ref{thm:hubble-local},~\ref{thm:hubble-cmb};
+    DESI $H(z)$ contact (Prediction~\ref{pred:hz}).
+\end{enumerate}
+
+\paragraph{Gaps.}
+Thread~5 does \textbf{not} yet supply:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item A Boltzmann hierarchy derived from $\orderparam$ fluctuations on
+    $\hat Q$ (transport uses $\Lambda$CDM inference with SJET-fixed parameters).
+  \item Non-linear matter power spectrum or halo mass function beyond
+    linear $\sigma_8$.
+  \item CMB lensing amplitude $A_L$ and full acoustic peak spectrum at
+    Planck precision.
+  \item Tensor-to-scalar ratio $r$ from the $\sigma=+1$ graviton reservoir.
+\end{enumerate}
+These are Tier~C refinement targets (Section~\ref{sec:tier-c-precision}), not
+epistemic primitives.
+
+\paragraph{Target functor $\mathcal{F}_D$ and theorems.}
+The Thread~5 evaluator is
+\begin{equation}\label{eq:FD-cosmo-pert}
+  \mathcal{F}_{\mathrm{cosmo\text{-}pert}}
+  \;:=\;
+  \mathrm{eval}_{\sigma\text{-}\mathrm{pert}}
+  \;:\;
+  \mathbf{Struct}\times\mathbf{Ledger}
+  \longrightarrow
+  \mathbf{PertObs},
+\end{equation}
+with $\mathbf{PertObs}$ the contact layer
+$(\delta_\pm,P_\pm,n_s,\sigma_8,f\sigma_8,\Omega_b h^2)$.
+The target theorem bundle is:
+
+\begin{theorem}[Capacity two-fluid perturbation system, target]
+\label{thm:thread5-target}
+Assume Theorem~\ref{thm:dm-sector}, Definition~\ref{def:thread5-pert},
+Theorem~\ref{thm:hubble-cmb}, and the Einstein--Hilbert truncation
+(\textbf{A1}). In the synchronous gauge on the soldered $d=4$ block, the
+linearized density contrasts obey
+\begin{equation}\label{eq:thread5-growth}
+  \ddot\delta_{(\pm1)}+2H\dot\delta_{(\pm1)}
+  \;=\;
+  \frac{4\pi G}{a^2}\,
+  \sum_{\sigma'=\pm1}
+  w_{\sigma\sigma'}\,\rho_{\sigma'}\,\delta_{(\sigma')},
+\end{equation}
+with capacity-weighted coupling matrix
+$w_{--}=(w_1+w_2)/(w_1+w_2+w_3)$,
+$w_{-+}=0$ (quotient-non-observable cross-sector at linear order),
+$w_{++}=w_3/(w_1+w_2+w_3)$, and background densities
+$\rho_{(-1)}=\rho_b+\rho_r$, $\rho_{(+1)}=\rho_{\mathrm{DM}}$ from
+\eqref{eq:dm-ident} and $\eta_B$. The late-time growth factor ratio satisfies
+$D_{(+1)}/D_{(-1)}\to\sqrt{w_3/(w_1+w_2)}$ at $z\lesssim 1$, reproducing
+\eqref{eq:sigma8}.
+\end{theorem}
+
+\begin{proposition}[Perturbation ledger identity, target]
+\label{prop:thread5-ledger}
+Under Theorem~\ref{thm:thread5-target}, the observed late-time amplitude
+\begin{equation}\label{eq:thread5-sigma8}
+  \sigma_8
+  \;=\;
+  \sqrt{\frac{w_1+w_2}{w_3}}\,
+  \mathcal{G}(z\!=\!0),
+\end{equation}
+with $\mathcal{G}$ the $\kappa_\star$-independent linear growth normalization,
+specializes Proposition~\ref{prop:sigma8}. The scalar spectral index satisfies
+$n_s$ of \eqref{eq:pred-ns} as the CMB-anchor tilt from integrating
+$\mathcal{P}_{\sigma=+1}$ into the homogeneous history.
+\end{proposition}
+
+\paragraph{Dependencies (Threads~III--IV).}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular}{@{}llp{0.50\linewidth}@{}}
+\toprule
+\textbf{Thread} & \textbf{Input} & \textbf{Role in Thread~5} \\
+\midrule
+III &
+  $\mathcal{L}_{\mathrm{SM}}$, $v$, $M_Z$, $\alpha_{\mathrm{em}}$
+  (Sections~\ref{sec:sm-lagrangian},~\ref{sec:scales}) &
+  BBN weak rates, recombination $T_\star$, Coulomb sector for $P(k)$ damping. \\
+III &
+  $\eta_B$ (Theorem~\ref{thm:baryogenesis}) &
+  Baryon density contrast normalization; $\Omega_b h^2$
+  (\eqref{eq:pred-omega-b}). \\
+IV &
+  $\Omega_{\mathrm{DM}}=4/15$ (Theorem~\ref{thm:dm-abundance}) &
+  $\delta_{(+1)}$ background; structure formation driver. \\
+IV &
+  $H_0^{\mathrm{CMB}}$, $\mathcal{P}_{\sigma=+1}$
+  (Theorems~\ref{thm:hubble-cmb},~\ref{thm:cc-sequester}) &
+  Expansion rate; effective $\Omega_\Lambda^{\mathrm{eff}}$ in growth. \\
+IV &
+  $w(z)\approx -1$ (Prediction~\ref{pred:cc}) &
+  Scale-invariant vacuum stress; ISW suppression at low $z$. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Tier path.}
+\begin{equation}\label{eq:thread5-tier}
+  \boxed{%
+  \mathrm{Tier~A}
+  \;\xrightarrow{\;\text{partition}\;}
+  \mathrm{Tier~B}
+  \;\xrightarrow{\;\textbf{A1,A7,A8}\;}
+  \mathrm{Tier~C}
+  }
+  \qquad
+  (w_1,w_2,w_3)
+  \to
+  (\Omega_{\mathrm{DM}},\sigma_8,n_s)
+  \to
+  \text{DESI/Euclid/Planck contacts}.
+\end{equation}
+Tier~A: Theorem~\ref{thm:partition} fixes the capacity weights.
+Tier~B: Theorems~\ref{thm:dm-sector},~\ref{thm:cc-sequester},
+~\ref{thm:baryogenesis} under \textbf{A1}, \textbf{A7}, \textbf{A8}.
+Tier~C: Proposition~\ref{prop:sigma8}, Prediction~\ref{pred:cmb},
+Prediction~\ref{pred:hz} at stated tolerances.
+
+\begin{equation}\label{eq:thread5-boxed}
+  \boxed{%
+  \mathcal{F}_{\mathrm{cosmo\text{-}pert}}
+  \bigl(
+    \Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}\circ\Mirror^{\leq 8}
+  \bigr)(\Void)
+  \;=\;
+  \Bigl\{
+    \sigma_8=\sqrt{\tfrac{w_1+w_2}{w_3}},\;
+    n_s=1-\tfrac{w_2}{w_3}\tfrac{b_0-n_F}{\kappa_\star},\;
+    \Omega_b h^2=\kappa_B\eta_{10}(1+\tfrac{w_1}{b_0})
+  \Bigr\}.
+  }
+\end{equation}
+
+%----------------------------------------------------------------------%
+\subsection{Thread~6: Hadron and nuclear spectroscopy functor}
+\label{sec:thread-6}
+%----------------------------------------------------------------------%
+
+Thread~VI closes the \textbf{nonperturbative spectroscopy} route from
+cellular overlap data on $\mathcal{T}_7$ to hadron masses, nuclear binding
+ladders, and atomic/CMB transport contacts. Yukawa overlaps
+(Section~\ref{sec:yukawa}) fix perturbative quark masses; QCD confinement
+(Section~\ref{sec:qcd}) and nuclear--cosmology mapping
+(Section~\ref{sec:nuclear-atomic-cosmo}) supply the leading spectroscopic
+contacts.
+
+\begin{definition}[Thread~6: spectroscopy evaluator]
+\label{def:thread6-spec}
+Let $\Lambda_{\mathrm{QCD}}$ be the confinement scale of
+Definition~\ref{def:lambda-qcd} (equivalently Proposition~\ref{prop:alpha-s},
+\eqref{eq:Lambda-QCD}). For each colour-singlet hadron $H$ with constituent
+slots $(i,j,k)$ on $\mathcal{T}_7$, let $\mathcal{A}_H$ be the hadronic
+overlap of Definition~\ref{def:hadron-overlap}. For each nucleus with mass
+number $A$, let $\mathcal{N}_A$ denote the $A$-fold nuclear overlap
+(Definition~\ref{def:nuclear-overlap}, Theorem~\ref{thm:nuclear-binding}).
+The \emph{Thread~6 spectroscopy datum} is
+\begin{equation}\label{eq:thread6-datum}
+  \boldsymbol{\mathcal{S}}
+  \;:=\;
+  \Bigl\{
+    m_H=\Lambda_{\mathrm{QCD}}\,|\mathcal{A}_H|^{1/n_q}
+  \Bigr\}_{H\in\mathcal{H}}
+  \;\cup\;
+  \Bigl\{
+    E_B(A)/A=\Lambda_{\mathrm{QCD}}\,\tfrac{w_2}{w_3 b_0}\,\mathcal{F}(A)
+  \Bigr\}_{A\in\mathbb{N}}.
+\end{equation}
+\end{definition}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}p{0.30\linewidth}p{0.58\linewidth}@{}}
+\toprule
+\textbf{Unanswered question} & \textbf{SJET status / residual work} \\
+\midrule
+What fixes the hadron mass spectrum beyond the proton and pion? &
+  Definition~\ref{def:hadron-overlap} and
+  Lemma~\ref{lem:hadron-cellular} reduce masses to hub triple
+  intersections; Prediction~\ref{pred:hadron-masses} contacts
+  $m_p$, $m_\pi$, $m_\rho$. \textbf{Open:} full PDG baryon/meson table. \\
+\addlinespace
+Why do nuclear magic numbers include $28=n_S$? &
+  Theorem~\ref{thm:nuclear-binding}: shell closures at
+  $A_\star\in\{2,8,20,28\}$ from $28$ coset scalars
+  (Theorem~\ref{thm:planck}). \textbf{Closed} at leading order. \\
+\addlinespace
+What is the binding energy per nucleon at the iron peak? &
+  \eqref{eq:binding-peak}: $\max E_B/A\approx 11$\,MeV from
+  $\Lambda_{\mathrm{QCD}}w_2/(w_3 b_0)$. \textbf{Open:} two-body and
+  three-body force refinements ($\mathcal{O}(20\%)$). \\
+\addlinespace
+How does $\Lambda_{\mathrm{QCD}}$ enter without a separate confinement axiom? &
+  Definition~\ref{def:lambda-qcd} from $n_F=3$ and $\alpha_s(M_Z)$;
+  Proposition~\ref{prop:alpha-s} from ledger FRG. \textbf{Closed}. \\
+\addlinespace
+What links hadronic scales to BBN and CMB? &
+  Section~\ref{sec:nuclear-atomic-cosmo}: deuteron gate
+  \eqref{eq:deuteron-binding}, $Y_p$, $D/H$, $T_{\mathrm{CMB}}$,
+  $\Omega_b h^2$. \textbf{Closed} at Tier~B/C. \\
+\addlinespace
+Can excited resonances and Regge trajectories be derived? &
+  \textbf{Open:} $\iota=2$ excitation ansatz in \eqref{eq:mrho-pred};
+  no Regge functor yet. \\
+\bottomrule
+\end{tabular}
+\caption{Thread~6 unanswered questions and SJET closure status. Hadronic
+masses are Tier~C contacts at $\mathcal{O}(10\%)$; nuclear magic-number
+routing is Tier~B.}
+\label{tab:thread6-questions}
+\end{table}
+
+\paragraph{SJET anchors.}
+Thread~6 is anchored on:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Colour gauge and confinement.}
+    Theorem~\ref{thm:qcd-derived}; Theorem~\ref{thm:confinement};
+    $\sigma_{\mathrm{str}}=w_3\Lambda_{\mathrm{QCD}}^2$
+    (\eqref{eq:string-tension}).
+  \item \textbf{Strong coupling and scale.}
+    Proposition~\ref{prop:alpha-s} ($\alpha_s(M_Z)$, $\Lambda_{\mathrm{QCD}}$);
+    Theorem~\ref{thm:strong-cp} ($\theta_{\mathrm{obs}}=0$).
+  \item \textbf{Hadronic overlaps.}
+    Definition~\ref{def:hadron-overlap}, Lemma~\ref{lem:hadron-cellular},
+    Prediction~\ref{pred:hadron-masses}.
+  \item \textbf{Nuclear overlaps.}
+    Definition~\ref{def:nuclear-overlap}, Lemma~\ref{lem:nuclear-cellular},
+    Theorem~\ref{thm:nuclear-binding}.
+  \item \textbf{Atomic and CMB transport.}
+    Theorem~\ref{thm:atomic-spectrum}, Theorem~\ref{thm:bbn},
+    Prediction~\ref{pred:cmb} (Table~\ref{tab:nuclear-cosmo-map}).
+  \item \textbf{Coset multiplicity.}
+    $n_S=28$ (Theorem~\ref{thm:planck}) in magic numbers
+    \eqref{eq:magic-numbers}.
+\end{enumerate}
+
+\paragraph{Gaps.}
+Thread~6 does \textbf{not} yet supply:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item A complete excited-state spectrum (meson/baryon towers, Regge slopes).
+  \item Sub-percent hadron mass predictions (lattice-quality).
+  \item Microscopic nuclear shell model from $\mathcal{T}_7$ dynamics.
+  \item Three-body nuclear forces and $A>56$ stability curve.
+\end{enumerate}
+The transport theorems of Section~\ref{sec:nuclear-atomic-cosmo} are honest
+Tier~B/C: SM+QCD+hydrogen Hamiltonian with SJET-fixed parameters.
+
+\paragraph{Target functor $\mathcal{F}_D$ and theorems.}
+The Thread~6 evaluator is
+\begin{equation}\label{eq:FD-spec}
+  \mathcal{F}_{\mathrm{spec}}
+  \;:=\;
+  \mathrm{eval}_{\mathrm{overlap\text{-}spectroscopy}}
+  \;:\;
+  \mathbf{Struct}\times\mathbf{Ledger}
+  \longrightarrow
+  \mathbf{SpecObs},
+\end{equation}
+with $\mathbf{SpecObs}$ the mass and binding contact layer. Target theorem
+bundle:
+
+\begin{theorem}[Hadron mass functor, target]
+\label{thm:thread6-hadron}
+Assume Definition~\ref{def:thread6-spec},
+Lemma~\ref{lem:hadron-cellular}, Theorem~\ref{thm:confinement}, and
+Proposition~\ref{prop:alpha-s}. The assignment
+\begin{equation}\label{eq:thread6-hadron-functor}
+  H
+  \;\longmapsto\;
+  m_H
+  \;=\;
+  \Lambda_{\mathrm{QCD}}\,
+  \Bigl|\sum_{\{i,j,k\}}
+  \epsilon_{ijk}\sqrt{w_iw_jw_k}\,
+  \mathcal{P}_{ijk}\,
+  \mathrm{pair}(C_i,C_j,C_k;\chi_{\mathrm{flux}})\Bigr|^{1/n_q}
+\end{equation}
+is functorial under cellular triality (Proposition~\ref{prop:triality}) and
+capacity exchange on $\mathfrak{d}$. It specializes to
+Prediction~\ref{pred:hadron-masses} for $H\in\{p,\pi,\rho\}$.
+\end{theorem}
+
+\begin{theorem}[Nuclear binding functor, target]
+\label{thm:thread6-nuclear}
+Assume Definition~\ref{def:nuclear-overlap},
+Theorem~\ref{thm:nuclear-binding}, and Theorem~\ref{thm:thread6-hadron}.
+The binding energy per nucleon satisfies
+\begin{equation}\label{eq:thread6-binding-functor}
+  \frac{E_B(A)}{A}
+  \;=\;
+  \Lambda_{\mathrm{QCD}}\,
+  \frac{w_2}{w_3 b_0}\,
+  \mathcal{F}(A)
+  \;+\;
+  \sum_{H\in\mathcal{H}_A}\frac{m_H}{A}\,\mathcal{O}(\alpha_s),
+\end{equation}
+with $\mathcal{F}(A)$ peaked at $A_\star\in\{2,8,20,28\}$ of
+\eqref{eq:magic-numbers}. The deuteron point is
+$E_B^{(2)}(d)=2\Lambda_{\mathrm{QCD}}(w_1/w_3)\alpha_s/(4\pi)$
+(\eqref{eq:deuteron-binding}).
+\end{theorem}
+
+\begin{proposition}[Spectroscopy--cosmology bridge, target]
+\label{prop:thread6-cosmo-bridge}
+Under Theorems~\ref{thm:thread6-hadron},~\ref{thm:thread6-nuclear},
+Theorem~\ref{thm:bbn}, and Prediction~\ref{pred:cmb}, the parameter vector
+\begin{equation}\label{eq:thread6-bridge}
+  (\Lambda_{\mathrm{QCD}},\,m_p,\,E_B^{(2)}(d),\,\alpha_{\mathrm{em}}(0),\,\eta_B)
+\end{equation}
+fixes $(Y_p,D/H,\Omega_b h^2,T_{\mathrm{CMB}})$ without additional
+cosmological input. Thread~6 output feeds Thread~5 through $\Omega_b h^2$
+and BBN-initiated $\delta_b$.
+\end{proposition}
+
+\paragraph{Dependencies (Threads~III--IV).}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular}{@{}llp{0.50\linewidth}@{}}
+\toprule
+\textbf{Thread} & \textbf{Input} & \textbf{Role in Thread~6} \\
+\midrule
+III &
+  Yukawa overlaps, quark masses
+  (Theorems~\ref{thm:yukawa-mass},~\ref{thm:quark-mass-2loop}) &
+  Flavour insertions in $\mathcal{A}_H$, $\mathcal{N}_B$;
+  isospin splitting \eqref{eq:isospin-split}. \\
+III &
+  $\mathrm{SU}(3)_c$ breaking chain
+  (Theorem~\ref{thm:qcd-derived}) &
+  Colour flux bundle $V_3$; flux tube $\chi_{\mathrm{flux}}$. \\
+III &
+  $V(\orderparam)$, $n_S=28$
+  (Definitions~\ref{def:potential}, Theorem~\ref{thm:planck}) &
+  Magic numbers; saturation scale $w_2/(w_3 b_0)$. \\
+IV &
+  $b_0=12$, $\kappa_\star$ (Theorem~\ref{thm:beta},~\ref{thm:kappa}) &
+  Ledger normalization in binding ladder and $\alpha_s$ residue. \\
+IV &
+  $\eta_B$ (Theorem~\ref{thm:baryogenesis}) &
+  BBN network; $\Omega_b h^2$ closure with Thread~5. \\
+IV &
+  $H_0^{\mathrm{CMB}}$ (Theorem~\ref{thm:hubble-cmb}) &
+  $T_{\mathrm{CMB}}$ and photon phase-space density
+  (Definition~\ref{def:t-cmb}). \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Tier path.}
+\begin{equation}\label{eq:thread6-tier}
+  \boxed{%
+  \mathrm{Tier~A}
+  \;\xrightarrow{\;\text{cellular}\;}
+  \mathrm{Tier~B}
+  \;\xrightarrow{\;\textbf{A3,A4,A7}\;}
+  \mathrm{Tier~C}
+  }
+  \qquad
+  \mathcal{T}_7\ \text{overlaps}
+  \to
+  \text{confinement, }\Lambda_{\mathrm{QCD}}
+  \to
+  m_H,\,E_B/A\ \text{PDG contacts}.
+\end{equation}
+Tier~A: Lemma~\ref{lem:yukawa-cellular}, Lemma~\ref{lem:hadron-cellular}
+(cellular cohomology + Stone lift).
+Tier~B: Theorems~\ref{thm:qcd-derived},~\ref{thm:confinement},
+~\ref{thm:strong-cp} under \textbf{A3}, \textbf{A4}, \textbf{A7}.
+Tier~C: Prediction~\ref{pred:hadron-masses},
+Theorem~\ref{thm:nuclear-binding}, Table~\ref{tab:qcd-map},
+Table~\ref{tab:nuclear-cosmo-map}.
+
+\begin{equation}\label{eq:thread6-boxed}
+  \boxed{%
+  \mathcal{F}_{\mathrm{spec}}
+  \bigl(
+    \Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}\circ\Mirror^{\leq 8}
+  \bigr)(\Void)
+  \;=\;
+  \Bigl\{
+    m_H=\Lambda_{\mathrm{QCD}}\,|\mathcal{A}_H|^{1/n_q},\;
+    \tfrac{E_B(A)}{A}=\Lambda_{\mathrm{QCD}}\,\tfrac{w_2}{w_3 b_0}\,\mathcal{F}(A)
+  \Bigr\}_{H,A}.
+  }
+\end{equation}
+
+%----------------------------------------------------------------------%
+\subsection{Thread coupling: V $\leftrightarrow$ VI}
+\label{sec:threads-5-6-coupling}
+%----------------------------------------------------------------------%
+
+Threads~V and~VI are not independent: nuclear and atomic transport
+(Section~\ref{sec:nuclear-atomic-cosmo}) supplies the matter sector
+parameters that Thread~5 integrates into perturbation observables.
+
+\begin{proposition}[Thread~5--6 closure triangle]
+\label{prop:threads-56-triangle}
+The parameter chain
+\begin{equation}\label{eq:threads-56-triangle}
+  \mathcal{F}_{\mathrm{spec}}
+  \;\Longrightarrow\;
+  (\Lambda_{\mathrm{QCD}},\eta_B,\alpha_{\mathrm{em}},m_p)
+  \;\Longrightarrow\;
+  \mathcal{F}_{\mathrm{cosmo\text{-}pert}}
+  \;\Longrightarrow\;
+  (\Omega_b h^2,\,Y_p,\,D/H,\,n_s,\,\sigma_8)
+\end{equation}
+is closed at Tier~B/C with no fourth cosmological or hadronic primitive.
+Predictions~\ref{pred:eta-b},~\ref{pred:bbn},~\ref{pred:cmb}, and
+Prediction~\ref{pred:dm} are the experimental vertices.
+\end{proposition}
+
+\begin{remark}[Placement in the physics map]
+Thread~5 specializes Class~IV of Section~\ref{sec:physics-map:grouping}
+($\mathcal{F}_D=\mathrm{eval}_{\sigma\mathrm{-split}}$ on perturbations).
+Thread~6 specializes the nuclear and QCD rows of
+Table~\ref{tab:physics-map-complete} beyond the emergent label, upgrading
+hadron and binding entries to overlap-derived functors. Both threads inherit
+the master pipeline \eqref{eq:physics-map-pipeline} and remain subordinate to
+the two-axiom primitive count of Theorem~\ref{thm:universe-summary}.
+\end{remark}% --- end 29-threads-5-6.tex ---
+% --- 29-threads-7-9-header.tex ---
+%======================================================================%
+\section{Derivation Threads VII--IX: Condensed Matter, Entropy, and
+Phenomenology Boundary}
+\label{sec:threads-7-9}
+%======================================================================%
+
+Threads~VII--IX complete the \emph{descent frontier}: condensed-matter
+\emph{mechanisms} (Thread~VII), the \emph{arrow of time} and entropy
+(Thread~VIII), and the honest \emph{phenomenology boundary} for laboratory
+data not forced by void and mirror alone (Thread~IX). Each subsection traces
+through Section~\ref{sec:emergent}, Section~\ref{sec:quantum-origin},
+Section~\ref{sec:dark-sector}, and the Class~V rows of
+Table~\ref{tab:physics-map-complete}.% --- end 29-threads-7-9-header.tex ---
+% --- 29-threads-7-9.tex ---
+%======================================================================%
+\subsection{Thread VII: Condensed-Matter Mechanisms}
+\label{sec:thread-7}
+%======================================================================%
+
+Condensed matter is not a third primitive in SJET. It is the thermodynamic
+limit of emergent descent: many replicated $\Pi_{\sigma=-1}$ modes on a
+periodic extension of the Albert tower $\mathcal{T}_7$, with band structure
+read off the cellular cosheaf $\mathcal{F}_{16}$
+(Section~\ref{sec:emergent:condensed},
+Theorem~\ref{thm:condensed-matter}). Thread~VII traces the \textbf{mechanism
+chain} from observer collapse to Fermi-liquid quasiparticles, Bloch bands, and
+metal--insulator splits; quantitative band gaps and strong-correlation phases
+remain Tier~C or explicitly out of scope (Remark~\ref{rmk:emergent-honest}).
+
+\begin{definition}[Condensed-matter thread datum]\label{def:thread-7}
+The \emph{condensed-matter thread datum} is the triple
+\begin{equation}\label{eq:thread-7-datum}
+  \mathfrak{C}
+  \;:=\;
+  \bigl(
+    \mathcal{E}_N,\;
+    \mathcal{T}_7^{(L)},\;
+    \mathcal{D}_{\mathbf{k}}
+  \bigr),
+\end{equation}
+where $\mathcal{E}_N=(\Pi_{\sigma=-1})^{\otimes N}$ is the emergent descent
+operator (Definition~\ref{def:emergent-descent}),
+$\mathcal{T}_7^{(L)}$ is the $L$-fold periodic tower extension
+(Definition~\ref{def:replica-limit}), and
+$\mathcal{D}_{\mathbf{k}}=\bigoplus_\iota w_\iota D_\iota(\mathbf{k})$ is the
+capacity-weighted cellular connection supplying Bloch eigenvalues
+\eqref{eq:bloch-bands}. Laboratory condensed matter is
+$\mathcal{F}_{\mathrm{CM}}(\mathfrak{C})$: the replica limit of
+$\mathcal{H}_N^{\mathrm{em}}$ with Pauli exclusion inherited from tensor
+antisymmetry (Proposition~\ref{prop:emergent-functor}).
+\end{definition}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}clp{0.52\linewidth}@{}}
+\toprule
+\textbf{Q\#} & \textbf{Question} & \textbf{SJET status} \\
+\midrule
+Q7.1 &
+  How do electronic bands arise without a postulated crystal Hamiltonian? &
+  Bloch bands from $\mathcal{F}_{16}$ restriction maps on
+  $\mathcal{T}_7^{(L)}$; eigenvalues \eqref{eq:bloch-bands}
+  (Theorem~\ref{thm:condensed-matter}, item~(ii)). \\
+\addlinespace
+Q7.2 &
+  What fixes low-$T$ quasiparticle interactions? &
+  Capacity-weighted forward scattering;
+  $F_0^s=\sum_\iota w_\iota^2=357/729$ \eqref{eq:landau-F0}
+  (Theorem~\ref{thm:condensed-matter}, item~(i)). \\
+\addlinespace
+Q7.3 &
+  When is the system metallic versus insulating? &
+  Partial versus hub-saturated filling of the capacity shell ladder
+  \eqref{eq:shell-ladder}; Mott threshold as overlap-network percolation
+  (Theorem~\ref{thm:condensed-matter}, item~(iii)). \\
+\addlinespace
+Q7.4 &
+  Are superconductivity, FQHE, or other strong-correlation phases derived? &
+  \textbf{No.} Not closed in Section~\ref{sec:emergent:condensed};
+  honest Tier~C/out-of-scope per Thread~IX. \\
+\addlinespace
+Q7.5 &
+  What experimental anchors exist? &
+  Leading-order Fermi-liquid and band-gap contacts;
+  Table~\ref{tab:emergent-map} row ``Condensed matter''. \\
+\bottomrule
+\end{tabular}
+\caption{Thread~VII question ledger: condensed-matter mechanisms.}
+\label{tab:thread-7-questions}
+\end{table}
+
+\paragraph{Anchors.}
+The thread is anchored at:
+Definition~\ref{def:emergent-descent} (descent operator),
+Definition~\ref{def:replica-limit} (thermodynamic limit),
+Theorem~\ref{thm:condensed-matter} (Fermi liquid, bands, filling),
+\eqref{eq:landau-F0}--\eqref{eq:bloch-bands},
+Table~\ref{tab:emergent-map} (emergent descent map),
+and the physics-map rows on electronic band structure and phonons
+(Table~\ref{tab:physics-map-complete}, Class~V).
+
+\paragraph{Gaps.}
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Lattice identification.} The periodic extension
+    $\mathcal{T}_7^{(L)}$ is an emergent crystal identification, not a Tier~A
+    output of void and mirror alone.
+  \item \textbf{Landau EFT import.} Fermi-liquid identification cites ledger
+    entry \textbf{A7} (clustering at long wavelength).
+  \item \textbf{Quantitative closure.} Band gaps, effective masses, and
+    critical exponents require radiative Yukawa and band-determinant
+    refinements (Tier~C).
+  \item \textbf{Strong correlations.} Superconductivity, fractional quantum
+    Hall, and other non-Fermi-liquid phases are \emph{not} claimed derived.
+\end{enumerate}
+
+\paragraph{Targets.}
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item Structural: replica limit \eqref{eq:replica-limit} with density-fixed
+    $N=\rho L^3$.
+  \item Mechanism: nonempty Fermi surface $\mathcal{F}$ from partial capacity
+    occupancy; insulator from hub saturation.
+  \item Contact: leading-order match of $F_0^s$ and band-theory free energy
+    $\Omega(\mu,T)$ in the $N\to\infty$ limit
+    (Theorem~\ref{thm:thermodynamics}, item~(iv)).
+  \item Falsifier: a derived band structure would be excluded if
+    capacity-weighted connectivity $\mathcal{D}_{\mathbf{k}}$ could not
+    reproduce the metal--insulator split of a standard tight-binding limit
+    without importing an independent crystal potential.
+\end{enumerate}
+
+\paragraph{Dependencies.}
+Thread~VII depends on:
+observer collapse $\Pi_{\sigma=-1}$ (Section~\ref{sec:observer});
+the cellular cosheaf $\mathcal{F}_{16}$ on $\mathcal{T}_7$
+(Definition~\ref{def:F16});
+capacity partition $(w_1,w_2,w_3)=(1/27,10/27,16/27)$
+(Theorem~\ref{thm:partition});
+emergent chemistry shell ladder (Theorem~\ref{thm:chemistry-ladder});
+OS reconstruction for fermionic statistics (Theorem~\ref{thm:qm-derived}).
+
+\paragraph{Tier path.}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}llp{0.46\linewidth}@{}}
+\toprule
+\textbf{Tier} & \textbf{Content} & \textbf{Ledger / note} \\
+\midrule
+A &
+  Pauli exclusion from antisymmetry of $\mathcal{H}_N^{\mathrm{em}}$;
+  hub cocycle $\phi_1+\phi_2+\phi_3=0$ &
+  Proposition~\ref{prop:emergent-functor} \\
+B &
+  Replica limit; Fermi-liquid and band-theory identification &
+  \textbf{A7}; emergent $\mathcal{T}_7^{(L)}$ \\
+C &
+  Quantitative band gaps, $F_0^s$ contact, critical exponents &
+  Radiative Yukawa + band determinant \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{equation}\label{eq:thread-7-box}
+  \boxed{%
+  \varepsilon_n(\mathbf{k})
+  \;=\;
+  \lambda_n\!\bigl(\mathcal{D}_{\mathbf{k}}\bigr),
+  \qquad
+  \mathcal{D}_{\mathbf{k}}
+  \;:=\;
+  \bigoplus_{\iota=1}^3 w_\iota\,D_\iota(\mathbf{k}),
+  \qquad
+  L\to\infty,\;
+  N=\rho L^3.}
+\end{equation}
+
+%======================================================================%
+\subsection{Thread VIII: Arrow of Time and Entropy}
+\label{sec:thread-8}
+%======================================================================%
+
+The thermodynamic arrow of time is not postulated as a separate law. It is the
+coarse-grained asymmetry of observer-sector evolution along the Page--Wootters
+clock $\tau_\iota$ (Definition~\ref{def:page-wootters}), weighted by the
+$\sigma=-1$ Euclidean measure $d\mu_{\Gamma_{-1}}$
+(Theorem~\ref{thm:sigma-measure}) and the capacity ensemble of
+Definition~\ref{def:capacity-ensemble}. Mirror-shadow entropy stored in
+$d\mu_{\Gamma_{+1}}$ is quotient-non-observable but sets the direction of
+freeze-out and environmental pressure
+(Definition~\ref{def:dm-freezeout}, Definition~\ref{def:env-pressure}).
+Thread~VIII unifies quantum time, statistical entropy, and cosmological
+sector decoupling into one directed narrative.
+
+\begin{definition}[Arrow-of-time thread datum]\label{def:thread-8}
+The \emph{arrow-of-time thread datum} is the quadruple
+\begin{equation}\label{eq:thread-8-datum}
+  \mathfrak{T}
+  \;:=\;
+  \bigl(
+    \tau_\iota,\;
+    d\mu_{\Gamma_{-1}},\;
+    d\nu_\beta,\;
+    k_{\mathrm{FO}}
+  \bigr),
+\end{equation}
+where $\tau_\iota$ is the Page--Wootters clock,
+$d\mu_{\Gamma_{-1}}$ is the observable factor of \eqref{eq:gamma-split},
+$d\nu_\beta$ is the capacity ensemble \eqref{eq:capacity-ensemble}, and
+$k_{\mathrm{FO}}=\kappa_\star^{1/2}v$ is the shadow freeze-out scale
+(Definition~\ref{def:dm-freezeout}). The \emph{thermodynamic arrow} is the
+monotone increase of capacity-weighted microstate entropy $S$ in
+\eqref{eq:helmholtz} along increasing $\tau_\iota$ on admitted lifetime charts,
+modulo hub-cocycle gauge relabelings on $\mathcal{T}_7$.
+\end{definition}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}clp{0.52\linewidth}@{}}
+\toprule
+\textbf{Q\#} & \textbf{Question} & \textbf{SJET status} \\
+\midrule
+Q8.1 &
+  Is time external or relational? &
+  Relational: $\tau_\iota$ is the soldering clock on $H_2(\Quat)$
+  (Definition~\ref{def:page-wootters},
+  Proposition~\ref{prop:page-wootters-derived}). \\
+\addlinespace
+Q8.2 &
+  Where does the partition function come from? &
+  $\mathcal{Z}(\beta)=\mathrm{Tr}\,e^{-\beta\hat H_\iota}$ equals the
+  $\Pi_{\sigma=-1}$-projected functional integral on
+  $\mathcal{M}_{-1}$ \eqref{eq:Z-sigma}
+  (Theorem~\ref{thm:thermodynamics}). \\
+\addlinespace
+Q8.3 &
+  What defines entropy? &
+  Capacity-weighted microstate count on $\mathcal{T}_7$ modulo hub cocycle
+  \eqref{eq:helmholtz}; not a postulated Gibbs axiom. \\
+\addlinespace
+Q8.4 &
+  Why does entropy increase? &
+  Below $k_{\mathrm{FO}}$, $\sigma=+1$ reservoir ceases entropy sharing with
+  $d\mu_{\Gamma_{-1}}$ \eqref{eq:dm-freezeout}; observable sector
+  equilibration is directed along $\tau_\iota$ under \textbf{A7} clustering. \\
+\addlinespace
+Q8.5 &
+  How does the shadow sector enter? &
+  $d\mu_{\Gamma_{+1}}$ normalizes the split but does not contribute to
+  $\mathcal{Z}(\beta)$ in the observable sector
+  (Theorem~\ref{thm:duality}, Remark on emergent thermodynamics). \\
+\addlinespace
+Q8.6 &
+  Is quantitative heat capacity derived? &
+  Euler structure \eqref{eq:thermo-laws} is Tier~B; numeric heat capacities
+  and critical points are Tier~C contacts. \\
+\bottomrule
+\end{tabular}
+\caption{Thread~VIII question ledger: arrow of time and entropy.}
+\label{tab:thread-8-questions}
+\end{table}
+
+\paragraph{Anchors.}
+The thread is anchored at:
+Theorem~\ref{thm:sigma-measure} (measure factorization),
+Definition~\ref{def:page-wootters} and Proposition~\ref{prop:page-wootters-derived}
+(clock),
+Theorem~\ref{thm:qm-derived} (OS reconstruction),
+Definition~\ref{def:capacity-ensemble} and Theorem~\ref{thm:thermodynamics}
+(statistical mechanics),
+Definition~\ref{def:dm-freezeout} and Lemma~\ref{lem:dm-capacity-fraction}
+(entropy routing at freeze-out),
+Definition~\ref{def:env-pressure} (environmental pressure conjugate).
+
+\paragraph{Gaps.}
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Coarse-graining proof.} The identification of $S$ with a
+    microstate count on $\mathcal{T}_7$ is structural; a full Kolmogorov--Sinai
+    or entanglement-entropy certificate is not supplied.
+  \item \textbf{Quantum arrow.} Measurement update is Tier~B via
+    Theorem~\ref{thm:measurement-collapse}; a complete alignment of
+    decoherence timescales with laboratory records is Tier~C.
+  \item \textbf{Cosmological entropy.} Shadow freeze-out fixes $f_{+1}=4/15$
+    but does not derive the full cosmological entropy budget of the CMB.
+  \item \textbf{Quantitative thermodynamics.} Heat capacities, latent heats,
+    and critical exponents require emergent refinements beyond
+    \eqref{eq:thermo-laws}.
+\end{enumerate}
+
+\paragraph{Targets.}
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item Derive $\mathcal{Z}(\beta)$, $F(\beta)$, and $S$ from $d\mu_{\Gamma_{-1}}$
+    without a supplemental statistical postulate.
+  \item Identify the thermodynamic arrow with monotone $\tau_\iota$ flow and
+    sector freeze-out at $k_{\mathrm{FO}}$.
+  \item Contact: free-energy limit $F/N\to\Omega(\mu,T)$ in the replica limit
+    (Theorem~\ref{thm:thermodynamics}, item~(iv)).
+  \item Falsifier: an observable-sector theory that requires time-symmetric
+    equilibrium on $d\mu_{\Gamma_{-1}}$ while maintaining
+    $\Pi_{\sigma=-1}$ projection would contradict the directed capacity
+    ensemble.
+\end{enumerate}
+
+\paragraph{Dependencies.}
+Thread~VIII depends on:
+Thread~VII replica limit (for $N\to\infty$ free-energy contact);
+Section~\ref{sec:quantum-origin} (Page--Wootters, OS reconstruction);
+Theorem~\ref{thm:sigma-measure} (measure split);
+Section~\ref{sec:dark-sector:abundance} (shadow freeze-out);
+Definition~\ref{def:env-pressure} and Theorem~\ref{thm:cc-sequester}
+(environmental conjugate variables).
+
+\paragraph{Tier path.}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}llp{0.46\linewidth}@{}}
+\toprule
+\textbf{Tier} & \textbf{Content} & \textbf{Ledger / note} \\
+\midrule
+A &
+  $\sigma$-grading; quotient non-observability of $d\mu_{\Gamma_{+1}}$ &
+  Theorem~\ref{thm:duality} \\
+B &
+  $\mathcal{Z}(\beta)$ from OS + capacity ensemble;
+  Euler relation \eqref{eq:thermo-laws} &
+  \textbf{A7}, \textbf{A8} \\
+B/C &
+  Shadow freeze-out scale $k_{\mathrm{FO}}$; fraction $f_{+1}=4/15$ &
+  \textbf{A1}, FRG at $\kappa_\star$ \\
+C &
+  Heat capacities, critical points, decoherence timescales &
+  Emergent refinements \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{equation}\label{eq:thread-8-box}
+  \boxed{%
+  d\nu_\beta
+  \;=\;
+  \frac{1}{\mathcal{Z}(\beta)}\,
+  e^{-\beta\hat H_\iota}\,
+  d\mu_{\Gamma_{-1}},
+  \qquad
+  F(\beta)=-\frac{1}{\beta}\log\mathcal{Z}(\beta)
+  \;=\;
+  \langle S\rangle_{\Gamma_{-1}}-TS.}
+\end{equation}
+
+%======================================================================%
+\subsection{Thread IX: Out-of-Scope Phenomenology Boundary}
+\label{sec:thread-9}
+%======================================================================%
+
+Semantic closure of the \emph{fundamental} chain
+(Corollary~\ref{cor:semantic-closure}) does not claim Tier~A/B closure of every
+laboratory observable. Thread~IX records the \textbf{honest phenomenology
+boundary}: which domains are \emph{emergent contacts} on fixed SM+$d{=}4$
+gravity outputs, which data are \emph{external datums} imported from standard
+effective theory, and which rows of Table~\ref{tab:physics-map-complete} are
+explicitly out of scope for new SJET theorems. This thread prevents
+over-claiming while certifying that \textbf{no additional primitive} is required
+beyond void and mirror (Remark~\ref{rmk:emergent-honest},
+Corollary~\ref{cor:physics-map-closure}).
+
+\begin{definition}[Phenomenology tier]\label{def:phenomenology-tier}
+A result carries the \emph{phenomenology tier} when it satisfies all of:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{No new primitive.} The claim uses only outputs of
+    \eqref{eq:master-pipeline} through Tier~A or Tier~B functors.
+  \item \textbf{Emergent truncation.} The laboratory description is obtained by
+    $\mathcal{F}_D=\mathrm{eval}_{\mathrm{emergent}}$ on SM+$d{=}4$ gravity+QED
+    (Class~V, Section~\ref{sec:physics-map:grouping}), not by a new
+    $\sigma$-sector insertion.
+  \item \textbf{External datum class.} Numerical comparison uses measured or
+    tabulated constants from the \emph{external datum class}
+    $\mathcal{D}_{\mathrm{ext}}$ (Definition~\ref{def:external-datum}).
+  \item \textbf{Non-closure certificate.} The manuscript records that the
+    result is a \emph{contact}, not a closure theorem, with tolerance
+    $\delta$ from Definition~\ref{def:contact-map} when applicable.
+\end{enumerate}
+Phenomenology tier is the honest label for Class~V rows in
+Table~\ref{tab:physics-map-complete}; it is stricter than Tier~C alone because
+it explicitly names the imported EFT layer.
+\end{definition}
+
+\begin{definition}[External datum class]\label{def:external-datum}
+The \emph{external datum class} $\mathcal{D}_{\mathrm{ext}}$ is the set of
+laboratory and astrophysical inputs \textbf{not} fixed by void and mirror at
+Tier~A/B, imported only at the phenomenology contact layer:
+\begin{equation}\label{eq:external-datum}
+  \mathcal{D}_{\mathrm{ext}}
+  \;:=\;
+  \bigl\{
+    \text{measured masses and lifetimes below $\Lambda_{\mathrm{QCD}}$},
+    \;
+    \text{nuclear binding tables},
+    \;
+    \text{atomic/QED tabulations},
+    \;
+    \text{crystal potentials and disorder},
+    \;
+    \text{opacity and EOS tables},
+    \;
+    \text{plasma transport coefficients},
+    \;
+    \text{biological complexity scales}
+  \bigr\}.
+\end{equation}
+An observable $O$ is an \emph{external-datum contact} when
+$O=\mathcal{C}_{\mathrm{ext}}(\mathfrak{E},\delta)$ for
+$\mathfrak{E}$ the universe datum \eqref{eq:universe-summary} and
+$\mathcal{C}_{\mathrm{ext}}$ a standard EFT evaluator drawing on
+$\mathcal{D}_{\mathrm{ext}}$ but introducing \textbf{no} new entry in the
+assumption ledger \textbf{A1--A8}.
+\end{definition}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}clp{0.52\linewidth}@{}}
+\toprule
+\textbf{Q\#} & \textbf{Question} & \textbf{SJET status} \\
+\midrule
+Q9.1 &
+  Does SJET derive every PDG-row observable at Tier~A/B? &
+  \textbf{No.} $20$ Tier~C/emergent rows in
+  Table~\ref{tab:physics-map-complete}; fundamental closure is
+  Corollary~\ref{cor:semantic-closure}. \\
+\addlinespace
+Q9.2 &
+  What is the honest label for many-body physics? &
+  Phenomenology tier (Definition~\ref{def:phenomenology-tier});
+  functor $\mathrm{eval}_{\mathrm{emergent}}$. \\
+\addlinespace
+Q9.3 &
+  Which inputs are external? &
+  Class $\mathcal{D}_{\mathrm{ext}}$
+  (Definition~\ref{def:external-datum}): tabulated low-energy and
+  continuum data not output by \eqref{eq:master-pipeline}. \\
+\addlinespace
+Q9.4 &
+  Are superconductivity, turbulence, or protein folding derived? &
+  \textbf{Out of scope.} Emergent EFT contacts only; no new SJET theorem
+  claimed (Thread~VII Q7.4). \\
+\addlinespace
+Q9.5 &
+  Is hierarchical closure honest? &
+  \textbf{Yes.} Corollary~\ref{cor:physics-map-closure} item~(vi):
+  emergent rows certify \emph{no additional primitive}. \\
+\addlinespace
+Q9.6 &
+  Where do tolerances enter? &
+  Definition~\ref{def:contact-map} for Tier~C predictions;
+  phenomenology tier adds explicit $\mathcal{D}_{\mathrm{ext}}$ tagging. \\
+\bottomrule
+\end{tabular}
+\caption{Thread~IX question ledger: phenomenology boundary.}
+\label{tab:thread-9-questions}
+\end{table}
+
+\paragraph{Anchors.}
+The thread is anchored at:
+Definition~\ref{def:proof-tiers} (Tier~A/B/C),
+Corollary~\ref{cor:semantic-closure} and Corollary~\ref{cor:physics-map-closure},
+Table~\ref{tab:physics-map-complete} (especially Class~V emergent rows),
+Remark~\ref{rmk:emergent-honest} (Section~\ref{sec:emergent}),
+Remark on emergent rows (Section~\ref{sec:physics-map}),
+Definition~\ref{def:contact-map} (tolerances),
+Table~\ref{tab:emergent-map} (descent versus contact rows).
+
+\paragraph{Gaps.}
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Per-observable certificates.} The map assigns routes, not
+    individual closure proofs for each many-body observable.
+  \item \textbf{EFT selection.} Which standard EFT (BCS, Navier--Stokes, MHD,
+    etc.) applies is laboratory context, not forced by $\mathcal{T}_7$ alone.
+  \item \textbf{Systematic $\mathcal{D}_{\mathrm{ext}}$ catalog.} The external
+    datum class is named, not exhaustively tabulated observable-by-observable.
+  \item \textbf{Precision frontier.} Sub-percent atomic and nuclear contacts
+    remain external-datum imports even when fundamental couplings are Tier~B.
+\end{enumerate}
+
+\paragraph{Targets.}
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item Maintain primitive count $2$ while mapping all PDG-headline domains.
+  \item Tag every Class~V row with phenomenology tier and, where numeric,
+    $\mathcal{D}_{\mathrm{ext}}$ membership.
+  \item Distinguish \emph{derived descent} (Thread~VII--VIII) from
+    \emph{imported contact} (Thread~IX).
+  \item Falsifier: claiming a new SJET primitive or ledger entry
+    \textbf{A9+} solely to fit a many-body observable would violate
+    Corollary~\ref{cor:axiomatic-closure}.
+\end{enumerate}
+
+\paragraph{Dependencies.}
+Thread~IX depends on:
+Theorem~\ref{thm:master-derivation} and \eqref{eq:master-pipeline};
+Corollary~\ref{cor:physics-map-closure};
+Threads~VII and~VIII (what \emph{is} derived at Tier~B in the emergent layer);
+Definition~\ref{def:proof-tiers} and Definition~\ref{def:contact-map}.
+
+\paragraph{Tier path.}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}llp{0.46\linewidth}@{}}
+\toprule
+\textbf{Layer} & \textbf{Functor} & \textbf{Claim type} \\
+\midrule
+Fundamental &
+  $\mathcal{F}_D\circ\Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}\circ\Mirror^{\leq 8}$ &
+  Tier~A/B theorems \\
+Descent &
+  $\mathcal{E}_N$, $d\nu_\beta$ (Threads~VII--VIII) &
+  Tier~B/C structural \\
+Phenomenology &
+  $\mathrm{eval}_{\mathrm{emergent}}(\mathfrak{E};\mathcal{D}_{\mathrm{ext}})$ &
+  Contact only; no new primitive \\
+Out of scope &
+  Strong correlations, biophysics detail, turbulence &
+  External datum or future work \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{equation}\label{eq:thread-9-box}
+  \boxed{%
+  \mathcal{M}_{\mathrm{ph}}(D)
+  \;=\;
+  \mathrm{eval}_{\mathrm{emergent}}\!\bigl(
+    \mathcal{F}_D(\mathfrak{E})\,;\,
+    \mathcal{D}_{\mathrm{ext}}
+  \bigr),
+  \qquad
+  \mathfrak{E}
+  \;=\;
+  \mathcal{U}\!\bigl(
+    \Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}\circ\Mirror^{\leq 8}
+  \bigr)(\Void).}
+\end{equation}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}llcc@{}}
+\toprule
+\textbf{Domain block} & \textbf{Example observables} &
+\textbf{Tier} & \textbf{Scope} \\
+\midrule
+Nuclear / atomic &
+  Binding energies, fine structure &
+  Phenomenology &
+  $\mathcal{D}_{\mathrm{ext}}$ \\
+Condensed matter (strong) &
+  SC, FQHE, critical exponents &
+  Out of scope &
+  Standard many-body EFT \\
+Fluids / plasma &
+  Navier--Stokes, MHD, fusion &
+  Phenomenology &
+  $\mathcal{D}_{\mathrm{ext}}$ \\
+Astrophysics (stellar) &
+  Opacity, $M$--$L$ relation &
+  Phenomenology &
+  SM+GR+tables \\
+Biophysics &
+  Folding, neural scales &
+  Out of scope &
+  Statistical mechanics import \\
+\bottomrule
+\end{tabular}
+\caption{Thread~IX scope table: honest phenomenology and out-of-scope blocks.
+Rows are contacts on \eqref{eq:universe-summary}, not new primitives.}
+\label{tab:thread-9-scope}
+\end{table}
+
+\begin{remark}[Thread closure certificate]\label{rmk:thread-7-9-closure}
+Threads~VII--IX complete the emergent frontier trace through SJET.
+Thread~VII supplies condensed-matter \emph{mechanisms} at Tier~B/C;
+Thread~VIII unifies the \emph{arrow of time} with the $\sigma$-measure and
+capacity ensemble; Thread~IX draws the \emph{phenomenology boundary} so that
+Class~V physics is hierarchical closure, not hidden postulation. Together with
+Section~\ref{sec:emergent}, Section~\ref{sec:quantum-origin}, and
+Section~\ref{sec:physics-map}, the manuscript records a complete honest map from
+$(\Void,\Mirror)$ to laboratory many-body phenomena without increasing the
+primitive axiom count beyond two.
+\end{remark}% --- end 29-threads-7-9.tex ---
 % --- appendix.tex ---
 %======================================================================%
 \appendix

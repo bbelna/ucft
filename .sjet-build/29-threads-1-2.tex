@@ -1,0 +1,559 @@
+%======================================================================%
+\section{Derivation Threads I--II: Emergent Descent and Strong-Curvature Gravity}
+\label{sec:threads-1-2}
+%======================================================================%
+
+Sections~\ref{sec:emergent} and~\ref{sec:physics-map} record two frontier
+routes that are \textbf{mapped} but not yet \textbf{certified} by closed
+domain evaluators $\mathcal{F}_D$. \textbf{Thread~1} (emergent without
+evaluator) traces chemistry, condensed matter, thermodynamics, and allied
+many-body domains through iterated observer collapse
+$\mathcal{E}_N=(\Pi_{\sigma=-1})^{\otimes N}$ on $\mathcal{T}_7$
+(Section~\ref{sec:emergent}) without postulating a third primitive.
+\textbf{Thread~2} (strong-curvature / quantum gravity) traces Planck-scale and
+horizon physics through the induced-gravity chain
+(Theorems~\ref{thm:planck},~\ref{thm:kappa},~\ref{thm:kappa-persistence})
+and the $\sigma$-sector measure split (Theorem~\ref{thm:sigma-measure}).
+Neither thread introduces new axioms; both specialize the master pipeline
+\eqref{eq:physics-map-pipeline} to named evaluators still to be proved.
+
+%----------------------------------------------------------------------%
+\subsection{Thread~1: Emergent physics without domain evaluator}
+\label{sec:thread-1}
+%----------------------------------------------------------------------%
+
+\paragraph{Thread definition.}
+\textbf{Thread~1} is the \emph{descent-without-evaluator} route: once the
+fundamental contact layer
+$\mathfrak{E}=\mathcal{U}(\Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}
+\circ\Mirror^{\leq 8})(\Void)$
+(Theorem~\ref{thm:universe-summary}) fixes SM gauge--Yukawa--Higgs content,
+induced $d=4$ gravity, and OS quantum mechanics on $\mathcal{H}_{\mathrm{obs}}$,
+all laboratory-scale many-body physics is obtained by \textbf{coarse-graining}
+the same $\Pi_{\sigma=-1}$ data---not by importing a new field species.
+Section~\ref{sec:emergent} supplies the core descent operator
+$\mathcal{E}_N$, the capacity shell ladder, the replica thermodynamic limit,
+and the $\sigma$-measure capacity ensemble; Table~\ref{tab:physics-map-complete}
+(Class~V) nonetheless lists twenty emergent subfields with route
+\emph{Emergent} and functor
+$\mathcal{F}_D=\mathrm{eval}_{\mathrm{emergent}}$ \emph{without} a dedicated
+closure certificate analogous to Theorem~\ref{thm:qm-derived} or
+Theorem~\ref{thm:dm-sector}. Thread~1 closes that \textbf{evaluator gap}:
+every Class~V row must factor through a single named
+$\mathcal{F}_{\mathrm{emergent}}$ assembled from $\mathcal{E}_N$, flavon
+overlap networks, and standard EFT on Class~I--II outputs.
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular}{@{}clp{0.52\linewidth}@{}}
+\toprule
+\textbf{ID} & \textbf{Prior catalog question} & \textbf{Thread~1 closure target} \\
+\midrule
+EM-CHEM &
+  Periodic table / valence beyond noble-gas leading order &
+  Theorem~\ref{thm:chemistry-ladder} $\to$
+  \texttt{thm:thread-1-descent} (spectroscopic refinement) \\
+EM-BAND &
+  Quantitative electronic band gaps &
+  Theorem~\ref{thm:condensed-matter} $\to$
+  \texttt{thm:thread-1-bands} (Bloch determinant contact) \\
+EM-SC &
+  Superconductivity, fractional QHE, strong correlation &
+  Remark~\ref{rmk:emergent-honest} open frontier $\to$
+  \texttt{prop:thread-1-correlation} (overlap percolation) \\
+EM-ATOM &
+  Atomic / molecular spectra, reaction rates &
+  Physics-map Tier~C rows $\to$
+  \texttt{cor:thread-1-qed} (QED on SM $U(1)_{\mathrm{em}}$) \\
+EM-THERMO &
+  Heat capacities, critical exponents &
+  Theorem~\ref{thm:thermodynamics} $\to$
+  \texttt{thm:thread-1-critical} (Yukawa--band refinement) \\
+EM-FLUID &
+  Navier--Stokes, MHD, fusion plasma &
+  Class~V hydrodynamic rows $\to$
+  \texttt{def:thread-1-continuum} (continuum limit functor) \\
+EM-ASTRO &
+  Stellar structure, nucleosynthesis transport &
+  Section~\ref{sec:nuclear-atomic-cosmo} contact $\to$
+  \texttt{prop:thread-1-stellar} (opacity EFT envelope) \\
+EM-BIO &
+  Molecular folding, neural / cellular scales &
+  Biophysics emergent rows $\to$
+  \texttt{rmk:thread-1-bio} (statistical envelope, no new $\mathcal{F}_D$) \\
+EM-EVAL &
+  No named $\mathcal{F}_D$ for Class~V (physics-map gap) &
+  \texttt{def:thread-1-evaluator} certifies
+  $\mathcal{F}_{\mathrm{emergent}}$ \\
+\bottomrule
+\end{tabular}
+\caption{Unanswered questions from the physics-map and emergent-physics catalogs
+that Thread~1 is designed to close. Rows cite
+Table~\ref{tab:physics-map-complete} (Class~V), Remark~\ref{rmk:emergent-honest},
+and Section~\ref{sec:emergent:map}.}
+\label{tab:thread-1-questions}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}llp{0.46\linewidth}@{}}
+\toprule
+\textbf{Label} & \textbf{Object} & \textbf{Role in Thread~1} \\
+\midrule
+\ref{def:emergent-descent} &
+  $\mathcal{E}_N=(\Pi_{\sigma=-1})^{\otimes N}$ &
+  Many-body descent seed; tensor replication on $\mathcal{T}_7$ \\
+\ref{prop:emergent-functor} &
+  Additivity, locality, quotient &
+  Functoriality certificate for $N\mapsto\mathcal{E}_N$ \\
+\ref{def:flavon-network} &
+  Overlap graph $G_Z$ &
+  Chemistry bonding avatar at atomic scale \\
+\ref{thm:chemistry-ladder} &
+  Capacity shell ladder &
+  Periodic-table leading-order closure \\
+\ref{def:replica-limit} &
+  $L\to\infty$, $N=\rho L^3$ &
+  Condensed-matter thermodynamic limit \\
+\ref{thm:condensed-matter} &
+  Fermi liquid, Bloch bands &
+  Replica-limit band theory \\
+\ref{def:capacity-ensemble} &
+  $d\nu_\beta\propto e^{-\beta\hat H_\iota}d\mu_{\Gamma_{-1}}$ &
+  Equilibrium thermodynamics seed \\
+\ref{thm:thermodynamics} &
+  $\mathcal{Z}$, $F$, $S$ from $\sigma$-measure &
+  Statistical mechanics without Gibbs postulate \\
+\ref{thm:qm-derived} &
+  OS reconstruction on $\mathcal{H}_{\mathrm{obs}}$ &
+  Quantum kinematics for emergent sectors \\
+\ref{thm:breaking-complete} &
+  SM gauge content after $\E{6}$ breaking &
+  Input EFT for chemistry and matter \\
+\ref{tab:emergent-map} &
+  Descent correspondence table &
+  Honest tier assignment (B/C throughout) \\
+\ref{rmk:emergent-honest} &
+  Non-closure disclaimer &
+  Gap ledger for Thread~1 target theorems \\
+\bottomrule
+\end{tabular}
+\caption{Existing SJET anchors for Thread~1. Every row is already in the
+manuscript; Thread~1 assembles them under
+\texttt{def:thread-1-evaluator}.}
+\label{tab:thread-1-anchors}
+\end{table}
+
+\paragraph{Gap analysis.}
+Thread~1 has a \textbf{conceptual} descent map (Section~\ref{sec:emergent:map})
+but lacks three certificates required for physics-map parity with
+Class~II--IV rows:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Evaluator.} No definition
+    $\mathcal{F}_{\mathrm{emergent}}$ appears in
+    \eqref{eq:physics-map-pipeline}; Class~V cites
+    $\mathrm{eval}_{\mathrm{emergent}}$ only in prose
+    (Section~\ref{sec:physics-map:grouping}).
+  \item \textbf{Continuum functor.} The replica limit
+    \eqref{eq:replica-limit} and Bloch connection
+    \eqref{eq:bloch-bands} are Tier~B/C; a proof that
+    $\mathcal{E}_N$ converges to a unique continuum effective action
+    $S_{\mathrm{eff}}^{\mathrm{cont}}$ on soldered $d=4$ geometry
+    (Definition~\ref{def:soldering}) is not yet a theorem.
+  \item \textbf{Strong-correlation frontier.}
+    Remark~\ref{rmk:emergent-honest} explicitly excludes superconductivity,
+    fractional quantum Hall, and other strong-correlation phases; overlap-network
+    percolation (Definition~\ref{def:flavon-network}) is not yet tied to
+    phase-transition exponents.
+  \item \textbf{Quantitative contacts.} Noble-gas closures, Landau parameter
+    \eqref{eq:landau-F0}, and free-energy identities are leading-order;
+    atomic spectroscopy and quantitative band gaps remain Tier~C imports.
+\end{enumerate}
+Removing ledger entries \textbf{A5} (flavon truncation) or \textbf{A7} (OS
+reconstruction) invalidates subchains but does not affect the void--mirror
+climb; Thread~1 upgrades \emph{emergent} rows to explicit
+$\mathcal{F}_{\mathrm{emergent}}$ output without adding primitives.
+
+\paragraph{Target evaluators and theorems.}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}llp{0.44\linewidth}@{}}
+\toprule
+\textbf{Functor / label} & \textbf{Tier target} & \textbf{Proposed content} \\
+\midrule
+$\mathcal{F}_{\mathrm{emergent}}$ &
+  B $\to$ A &
+  \texttt{def:thread-1-evaluator}: assemble
+  $\mathcal{E}_N$, $G_Z$, $d\nu_\beta$ on $\mathcal{T}_7$ \\
+$\mathcal{F}_{\mathrm{descent}}$ &
+  B &
+  \texttt{thm:thread-1-descent}: factorization
+  $\mathcal{F}_{\mathrm{emergent}}=
+  \mathrm{coarse}\circ\mathcal{E}_N\circ\mathrm{eval}_{\mathrm{SM}}$ \\
+$\mathcal{F}_{\mathrm{band}}$ &
+  B/C &
+  \texttt{thm:thread-1-bands}: $\det(\mathcal{D}_{\mathbf{k}})$ contact
+  for band gaps \\
+$\mathcal{F}_{\mathrm{thermo}}$ &
+  B &
+  \texttt{thm:thread-1-critical}: capacity-weighted critical exponents
+  from \eqref{eq:Z-sigma} \\
+$\mathcal{F}_{\mathrm{continuum}}$ &
+  B &
+  \texttt{def:thread-1-continuum}: $L\to\infty$ limit of cellular cosheaf
+  $\mathcal{F}_{16}$ \\
+--- &
+  B/C &
+  \texttt{cor:thread-1-closure}: Class~V physics-map rows certified
+  under \texttt{def:thread-1-evaluator} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Dependency edges.}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Upstream (required).}
+    Observer collapse $\Pi_{\sigma=-1}$
+    (Definition~\ref{def:heterotic-collapse});
+    OS quantum mechanics (Theorem~\ref{thm:qm-derived});
+    SM breaking chain (Theorem~\ref{thm:breaking-complete});
+    $\sigma$-measure split (Theorem~\ref{thm:sigma-measure}).
+  \item \textbf{Peer threads.}
+    Thread~2 (weak): induced gravity supplies the background vierbein
+    (Proposition~\ref{prop:vierbein}) for continuum limits;
+    environmental pressure $\mathcal{P}_{\sigma=+1}$
+    (Definition~\ref{def:env-pressure}) enters thermodynamic
+    \eqref{eq:thermo-laws}.
+    Nuclear/atomic contact (Section~\ref{sec:nuclear-atomic-cosmo}) is a
+    \emph{specialization} of Thread~1 at low $N$.
+  \item \textbf{Downstream (feeds).}
+    Biophysics and plasma rows in Table~\ref{tab:physics-map-complete};
+    precision chemistry and materials Tier~C workbook.
+\end{itemize}
+
+\paragraph{Proof-tier upgrade path ($\mathbf{E}\to\mathbf{B}\to\mathbf{A}$).}
+\begin{enumerate}[label=\textbf{\arabic*.},leftmargin=*]
+  \item \textbf{Tier~E (emergent contact).}
+    Current Class~V status: SM\,+\,GR\,+\,QED effective theory with no
+    named $\mathcal{F}_D$ (Section~\ref{sec:physics-map:grouping},
+    Remark~\ref{rmk:emergent-honest}).
+  \item \textbf{Tier~B (ledger-conditional).}
+    Close \texttt{def:thread-1-evaluator} and
+    \texttt{thm:thread-1-descent} under \textbf{A5} (flavon overlap),
+    \textbf{A7} (OS reconstruction for $\mathcal{H}_N^{\mathrm{em}}$),
+    and \textbf{A8} (environmental pressure routing); matches
+    Section~\ref{sec:emergent} tier assignments.
+  \item \textbf{Tier~A (void--mirror).}
+    Upgrade additivity and locality of $\mathcal{E}_N$
+    (Proposition~\ref{prop:emergent-functor}) to a \emph{unique} descent
+    functor from $H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}$ alone,
+    eliminating \textbf{A5} from the chemistry ladder
+    (Theorem~\ref{thm:chemistry-ladder}) and identifying the replica limit
+    with Stone-lift cellular data (Proposition~\ref{prop:stone-lift}) without
+    emergent lattice identification.
+\end{enumerate}
+
+\begin{equation}\label{eq:thread-1-pipeline}
+  \boxed{%
+  \begin{aligned}
+    \mathcal{F}_{\mathrm{emergent}}(D)
+    \;&=\;
+    \mathrm{coarse}_{\beta,N,L}\circ
+    \mathcal{E}_N\circ
+    \Pi_{\sigma=-1}\circ
+    \mathrm{Bal}_{\mathcal{C}}\circ
+    \Mirror^{\leq 8}(\Void),\\[4pt]
+    \mathcal{E}_N
+    \;&=\;
+    (\Pi_{\sigma=-1})^{\otimes N},
+    \qquad
+    \mathcal{H}_N^{\mathrm{em}}=\mathrm{Im}(\mathcal{E}_N)
+    \subset
+    \mathcal{H}_{\mathrm{obs}}^{\otimes N}.
+  \end{aligned}}
+\end{equation}
+
+%----------------------------------------------------------------------%
+\subsection{Thread~2: Strong-curvature and quantum gravity}
+\label{sec:thread-2}
+%----------------------------------------------------------------------%
+
+\paragraph{Thread definition.}
+\textbf{Thread~2} is the \emph{strong-curvature} route: beyond the
+Einstein--Hilbert ledger truncation (\textbf{A1}), where the effective
+coupling $\kappa(k)=k^2/\MPl^2(k)$ (Definition~\ref{def:kappa}) reaches the
+UV organizing fixed point $\kappa_\star=96\pi^2/5$
+(Theorem~\ref{thm:kappa}) and induced $\MPl$ is anchored to the electroweak
+scale via Sakharov $a_2$ (Theorem~\ref{thm:planck},
+Proposition~\ref{prop:planck-scale}). At curvature scales $R\sim\MPl^2$ and on
+black-hole horizons (Table~\ref{tab:physics-map-complete}, astrophysics row),
+the one-loop EH truncation is insufficient; Thread~2 traces how
+\emph{higher-curvature} and \emph{graviton} modes are routed to the
+$\sigma=+1$ shadow sector (Theorem~\ref{thm:kappa-persistence},
+assumption~\textbf{A8}), how dark-matter cohomology residue
+$\mathcal{R}_{+1}$ (Definition~\ref{def:dm-residue}) gravitates at
+$\kappa_\star$, and how the nonperturbative measure split
+\eqref{eq:gamma-split} constrains a horizon EFT \emph{without} importing a
+separate quantum-gravity axiom. The target is a named evaluator
+$\mathcal{F}_{\mathrm{grav}}$ certifying Planck-scale and horizon physics as
+outputs of the same void--mirror pipeline.
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular}{@{}clp{0.52\linewidth}@{}}
+\toprule
+\textbf{ID} & \textbf{Prior catalog question} & \textbf{Thread~2 closure target} \\
+\midrule
+QG-EH &
+  Einstein--Hilbert sufficiency at $R\sim\MPl^2$ &
+  \textbf{A1} truncation $\to$
+  \texttt{thm:thread-2-curvature} (EH domain of validity) \\
+QG-R2 &
+  $R^2$, graviton loops, higher curvature &
+  Theorem~\ref{thm:kappa-persistence} $\to$
+  \texttt{prop:thread-2-shadow-routing} (full Jacobian certificate) \\
+QG-PL &
+  Absolute Planck mass identification &
+  Theorem~\ref{thm:planck}, \eqref{eq:planck-v} $\to$
+  \texttt{cor:thread-2-planck} (D3 closure at $\kappa_\star$) \\
+QG-BH &
+  Black-hole horizons, entropy &
+  Physics-map Tier~B/C row $\to$
+  \texttt{thm:thread-2-horizon} (observer-local horizon EFT) \\
+QG-NP &
+  Nonperturbative quantum gravity &
+  Theorem~\ref{thm:sigma-measure} $\to$
+  \texttt{thm:thread-2-qg} (shadow-sector gravitational measure) \\
+QG-DM &
+  Shadow-sector stress at strong curvature &
+  Theorem~\ref{thm:dm-sector} $\to$
+  \texttt{prop:thread-2-shadow-stress} ($T_{\mu\nu}^{(+1)}$ at horizon) \\
+QG-CC &
+  Vacuum energy back-reaction under curvature &
+  Theorem~\ref{thm:cc-sequester} $\to$
+  \texttt{lem:thread-2-a0-horizon} ($a_0$ density on horizons) \\
+QG-EVAL &
+  No $\mathcal{F}_D$ for black-hole / Planck rows &
+  \texttt{def:thread-2-evaluator} certifies
+  $\mathcal{F}_{\mathrm{grav}}$ \\
+\bottomrule
+\end{tabular}
+\caption{Unanswered questions from the gravity and astrophysics rows of
+Table~\ref{tab:physics-map-complete} and the strong-curvature frontier beyond
+\textbf{A1}. Rows do not reopen CC row~\textbf{CC} of
+Table~\ref{tab:gap-ledger} (already derived).}
+\label{tab:thread-2-questions}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}llp{0.46\linewidth}@{}}
+\toprule
+\textbf{Label} & \textbf{Object} & \textbf{Role in Thread~2} \\
+\midrule
+\ref{thm:planck} &
+  Sakharov $\MPl^2$ from $28$ coset scalars &
+  Induced Planck mass $a_2$ truncation \\
+\ref{def:kappa} &
+  $\kappa(k)=k^2/\MPl^2(k)$ &
+  Dimensionless gravitational coupling \\
+\ref{thm:kappa} &
+  $\kappa_\star=96\pi^2/5$, $\beta_\kappa$ &
+  One-loop UV fixed point on EH truncation \\
+\ref{thm:kappa-persistence} &
+  $R^2$/graviton decoupling on observable row &
+  Strong-curvature modes routed to $d\mu_{\Gamma_{+1}}$ \\
+\ref{prop:frg-jacobian} &
+  Extended FRG stability matrix &
+  Relevant directions $\kappa$, $\Lambda_{\mathrm{cc}}$ \\
+\ref{thm:cc-sequester} &
+  $\Lambda_{\mathrm{cc}}=\Pi_{\sigma=+1}\Lambda_{\mathrm{cc}}$ &
+  Vacuum energy sequestering at $\kappa_\star$ \\
+\ref{lem:a0-sigma-plus} &
+  $a_0^{(\pm1)}$ heat-kernel split &
+  Curvature--vacuum coupling graded by $\sigma$ \\
+\ref{thm:sigma-measure} &
+  $d\mu_\Gamma=d\mu_{\Gamma_{-1}}\otimes d\mu_{\Gamma_{+1}}$ &
+  Nonperturbative sector factorization \\
+\ref{thm:dm-sector} &
+  $\rho_{\mathrm{DM}}=\langle T_{00}^{(+1)}\rangle_{\mathcal{R}_{+1}}$ &
+  Shadow stress sources curvature \\
+\ref{def:dm-freezeout} &
+  $k_{\mathrm{FO}}=\kappa_\star^{1/2}v$ &
+  Organizing scale for gravitational freeze-out \\
+\ref{prop:vierbein} &
+  Composite vierbein on $\mathfrak{m}$ &
+  Strong-field metric from coset section \\
+\ref{thm:spacetime:soldering-derived} &
+  $d=4$ Lorentzian block $H_2(\Quat)$ &
+  Horizon geometry transport \\
+\ref{rmk:observer-frg} &
+  Observer-local FRG along $g_\iota$ &
+  Strong-curvature flow chart \\
+\bottomrule
+\end{tabular}
+\caption{Existing SJET anchors for Thread~2. The EH chain and
+$\sigma$-routing lemmas supply the backbone; horizon and nonperturbative
+certificates are the Thread~2 target layer.}
+\label{tab:thread-2-anchors}
+\end{table}
+
+\paragraph{Gap analysis.}
+Thread~2 has \textbf{Tier~B} control of $\kappa_\star$ on the observable FRG
+row but lacks closed strong-curvature theorems:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Evaluator.} Black holes appear as
+    \emph{Emergent: induced gravity + Tier~B horizon EFT}
+    (Table~\ref{tab:physics-map-complete}) with no
+    $\mathcal{F}_{\mathrm{grav}}$ definition parallel to
+    $\mathcal{F}_{\sigma\mathrm{-split}}$ for cosmology.
+  \item \textbf{Horizon certificate.} No theorem identifies observer horizon
+    data with $\Pi_{\sigma=-1}$-projected boundary modes on
+    $\hat Q$; the Tier~B horizon EFT is named but not derived.
+  \item \textbf{Nonperturbative QG.} Theorem~\ref{thm:kappa} is explicitly
+    one-loop with higher curvature neglected
+    (Section~\ref{sec:physics:gauge}); a nonperturbative fixed-point
+    statement for the full gravitational measure on
+    $d\mu_{\Gamma_{-1}}\otimes d\mu_{\Gamma_{+1}}$ is not proved.
+  \item \textbf{Strong-field $\sigma$ routing.} Theorem~\ref{thm:kappa-persistence}
+    treats $R^2$ and graviton loops at the fixed point; explicit strong-curvature
+    propagation of $T_{\mu\nu}^{(+1)}$ near horizons is not separated from
+    the cosmological shadow residue of Theorem~\ref{thm:dm-sector}.
+  \item \textbf{Quantitative contacts.} Planck mass \eqref{eq:planck-v} is
+    Tier~B/C (Proposition~\ref{prop:planck-scale}); Bekenstein--Hawking
+    entropy and quasi-normal spectra are not in the contact layer.
+\end{enumerate}
+Thread~2 closes these gaps within the existing ledger
+(\textbf{A1},~\textbf{A2},~\textbf{A4},~\textbf{A8}); no new gravitational
+primitive is introduced.
+
+\paragraph{Target evaluators and theorems.}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}llp{0.44\linewidth}@{}}
+\toprule
+\textbf{Functor / label} & \textbf{Tier target} & \textbf{Proposed content} \\
+\midrule
+$\mathcal{F}_{\mathrm{grav}}$ &
+  B $\to$ A &
+  \texttt{def:thread-2-evaluator}: assemble $\kappa$, $\MPl$,
+  $\Gamma_{\mathrm{eff}}$ at $\kappa_\star$ \\
+$\mathcal{F}_{\kappa}$ &
+  B &
+  \texttt{cor:thread-2-kappa}: persistence of $\kappa_\star$ under
+  \textbf{A8} extended truncation \\
+$\mathcal{F}_{\mathrm{horizon}}$ &
+  B/C &
+  \texttt{thm:thread-2-horizon}: observer-local horizon EFT from
+  $\sigma_{\mathrm{sol}}$ and $d\mu_{\Gamma_{-1}}$ \\
+$\mathcal{F}_{\mathrm{shadow}}$ &
+  B &
+  \texttt{prop:thread-2-shadow-stress}: $T_{\mu\nu}^{(+1)}$ sourcing
+  strong-field Einstein equations \\
+$\mathcal{F}_{\mathrm{np}}$ &
+  B &
+  \texttt{thm:thread-2-qg}: nonperturbative gravitational measure on
+  \eqref{eq:gamma-split} \\
+--- &
+  B/C &
+  \texttt{lem:thread-2-a0-horizon}: $a_0^{(+1)}$ on horizon shells;
+  \texttt{cor:thread-2-closure} for astrophysics rows \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Dependency edges.}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Upstream (required).}
+    Induced gravity (\textbf{A1}, Theorem~\ref{thm:kappa});
+    Sakharov scale (\textbf{A2}, Theorem~\ref{thm:planck});
+    D3 scale identification (Section~\ref{sec:scales},
+    Proposition~\ref{prop:planck-scale});
+    $\sigma$-measure split (Theorem~\ref{thm:sigma-measure});
+    soldering (Theorem~\ref{thm:spacetime:soldering-derived}).
+  \item \textbf{Peer threads.}
+    Thread~1 (weak): emergent continuum limits use the vierbein
+    (Proposition~\ref{prop:vierbein}) and pressure conjugate
+    $\mathcal{P}_{\sigma=+1}$.
+    Dark-sector thread (Section~\ref{sec:dark-sector}): $\mathcal{R}_{+1}$
+    and freeze-out (Definition~\ref{def:dm-freezeout}) supply shadow
+    stress; cosmology thread (Section~\ref{sec:cosmology}): CC sequestering
+    sets the de~Sitter background for horizon EFT.
+    Quantum-origin thread (Section~\ref{sec:quantum-origin}): OS reconstruction
+    constrains the observable gravitational measure.
+  \item \textbf{Downstream (feeds).}
+    Black-hole and strong-field astrophysics rows;
+    early-universe curvature corrections beyond
+    Coleman--Weinberg gap (\textbf{A3});
+    precision $\MPl$ workbook (Appendix~\ref{sec:appendix:frg}).
+\end{itemize}
+
+\paragraph{Proof-tier upgrade path ($\mathbf{E}\to\mathbf{B}\to\mathbf{A}$).}
+\begin{enumerate}[label=\textbf{\arabic*.},leftmargin=*]
+  \item \textbf{Tier~E (emergent contact).}
+    Current black-hole row: induced gravity + unspecified horizon EFT
+    (Table~\ref{tab:physics-map-complete}); Tier~B/C contact only.
+  \item \textbf{Tier~B (ledger-conditional).}
+    Close \texttt{def:thread-2-evaluator},
+    \texttt{thm:thread-2-horizon}, and
+    \texttt{thm:thread-2-qg} under \textbf{A1}--\textbf{A2},
+    \textbf{A4}, \textbf{A8}; extend Theorem~\ref{thm:kappa-persistence}
+    to strong-field charts $(\tau_\iota,g_\iota)$ along
+    Definition~\ref{def:lifetime}.
+  \item \textbf{Tier~A (void--mirror).}
+    Derive the observer-local EH truncation (\textbf{A1}) from
+    $\sigma$-equivariance of \eqref{eq:action} and capacity balance on
+    $\mathfrak{m}$ without FRG ledger import; identify
+    $\kappa_\star$ as a consequence of the $28|4$ coset split
+    (Lemma~\ref{lem:goldstone-sigma}) and anomaly arithmetic
+    (Theorem~\ref{thm:beta}) alone; upgrade shadow routing to
+    Theorem~\ref{thm:duality} without \textbf{A8} decoupling hypothesis.
+\end{enumerate}
+
+\begin{equation}\label{eq:thread-2-pipeline}
+  \boxed{%
+  \begin{aligned}
+    \mathcal{F}_{\mathrm{grav}}(D)
+    \;&=\;
+    \mathrm{eval}_{\kappa}\circ
+    \Pi_{\sigma=-1}\circ
+    \mathrm{Bal}_{\mathcal{C}}\circ
+    \Mirror^{\leq 8}(\Void),\\[4pt]
+    \mathrm{eval}_{\kappa}
+    \;&:\;
+    (\MPl,\kappa_\star,\Gamma_{\mathrm{eff}})
+    \longmapsto
+    \mathcal{M}_{\mathrm{strong}}(D),
+    \qquad
+    \beta_\kappa\big|_{\sigma=-1,\,\kappa_\star}=0,\\[2pt]
+    \beta_{\alpha R^2},\,
+    \beta_{\mathrm{graviton}}
+    \;&\subset\;
+    d\mu_{\Gamma_{+1}}
+    \quad
+    (\textbf{A8},\ \text{Thm.~\ref{thm:kappa-persistence}}).
+  \end{aligned}}
+\end{equation}
+
+\begin{remark}[Thread coupling]
+\label{rmk:threads-1-2-coupling}
+Threads~1 and~2 are logically orthogonal: Thread~1 coarse-grains
+$\Pi_{\sigma=-1}$ matter on $\mathcal{T}_7$; Thread~2 organizes
+curvature couplings at $\kappa_\star$ and routes strong-field back-reaction
+to $d\mu_{\Gamma_{+1}}$. Their intersection is the thermodynamic pressure
+term $\mathcal{P}_{\sigma=+1}$ in \eqref{eq:thermo-laws} and the vierbein
+(Proposition~\ref{prop:vierbein}) shared by condensed-matter continuum
+limits and horizon geometry. Neither thread adds a primitive axiom; both
+extend Corollary~\ref{cor:physics-map-closure} with named evaluators
+$\mathcal{F}_{\mathrm{emergent}}$ and $\mathcal{F}_{\mathrm{grav}}$.
+\end{remark}

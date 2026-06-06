@@ -1,0 +1,580 @@
+%======================================================================%
+\subsection{Thread VII: Condensed-Matter Mechanisms}
+\label{sec:thread-7}
+%======================================================================%
+
+Condensed matter is not a third primitive in SJET. It is the thermodynamic
+limit of emergent descent: many replicated $\Pi_{\sigma=-1}$ modes on a
+periodic extension of the Albert tower $\mathcal{T}_7$, with band structure
+read off the cellular cosheaf $\mathcal{F}_{16}$
+(Section~\ref{sec:emergent:condensed},
+Theorem~\ref{thm:condensed-matter}). Thread~VII traces the \textbf{mechanism
+chain} from observer collapse to Fermi-liquid quasiparticles, Bloch bands, and
+metal--insulator splits; quantitative band gaps and strong-correlation phases
+remain Tier~C or explicitly out of scope (Remark~\ref{rmk:emergent-honest}).
+
+\begin{definition}[Condensed-matter thread datum]\label{def:thread-7}
+The \emph{condensed-matter thread datum} is the triple
+\begin{equation}\label{eq:thread-7-datum}
+  \mathfrak{C}
+  \;:=\;
+  \bigl(
+    \mathcal{E}_N,\;
+    \mathcal{T}_7^{(L)},\;
+    \mathcal{D}_{\mathbf{k}}
+  \bigr),
+\end{equation}
+where $\mathcal{E}_N=(\Pi_{\sigma=-1})^{\otimes N}$ is the emergent descent
+operator (Definition~\ref{def:emergent-descent}),
+$\mathcal{T}_7^{(L)}$ is the $L$-fold periodic tower extension
+(Definition~\ref{def:replica-limit}), and
+$\mathcal{D}_{\mathbf{k}}=\bigoplus_\iota w_\iota D_\iota(\mathbf{k})$ is the
+capacity-weighted cellular connection supplying Bloch eigenvalues
+\eqref{eq:bloch-bands}. Laboratory condensed matter is
+$\mathcal{F}_{\mathrm{CM}}(\mathfrak{C})$: the replica limit of
+$\mathcal{H}_N^{\mathrm{em}}$ with Pauli exclusion inherited from tensor
+antisymmetry (Proposition~\ref{prop:emergent-functor}).
+\end{definition}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}clp{0.52\linewidth}@{}}
+\toprule
+\textbf{Q\#} & \textbf{Question} & \textbf{SJET status} \\
+\midrule
+Q7.1 &
+  How do electronic bands arise without a postulated crystal Hamiltonian? &
+  Bloch bands from $\mathcal{F}_{16}$ restriction maps on
+  $\mathcal{T}_7^{(L)}$; eigenvalues \eqref{eq:bloch-bands}
+  (Theorem~\ref{thm:condensed-matter}, item~(ii)). \\
+\addlinespace
+Q7.2 &
+  What fixes low-$T$ quasiparticle interactions? &
+  Capacity-weighted forward scattering;
+  $F_0^s=\sum_\iota w_\iota^2=357/729$ \eqref{eq:landau-F0}
+  (Theorem~\ref{thm:condensed-matter}, item~(i)). \\
+\addlinespace
+Q7.3 &
+  When is the system metallic versus insulating? &
+  Partial versus hub-saturated filling of the capacity shell ladder
+  \eqref{eq:shell-ladder}; Mott threshold as overlap-network percolation
+  (Theorem~\ref{thm:condensed-matter}, item~(iii)). \\
+\addlinespace
+Q7.4 &
+  Are superconductivity, FQHE, or other strong-correlation phases derived? &
+  \textbf{No.} Not closed in Section~\ref{sec:emergent:condensed};
+  honest Tier~C/out-of-scope per Thread~IX. \\
+\addlinespace
+Q7.5 &
+  What experimental anchors exist? &
+  Leading-order Fermi-liquid and band-gap contacts;
+  Table~\ref{tab:emergent-map} row ``Condensed matter''. \\
+\bottomrule
+\end{tabular}
+\caption{Thread~VII question ledger: condensed-matter mechanisms.}
+\label{tab:thread-7-questions}
+\end{table}
+
+\paragraph{Anchors.}
+The thread is anchored at:
+Definition~\ref{def:emergent-descent} (descent operator),
+Definition~\ref{def:replica-limit} (thermodynamic limit),
+Theorem~\ref{thm:condensed-matter} (Fermi liquid, bands, filling),
+\eqref{eq:landau-F0}--\eqref{eq:bloch-bands},
+Table~\ref{tab:emergent-map} (emergent descent map),
+and the physics-map rows on electronic band structure and phonons
+(Table~\ref{tab:physics-map-complete}, Class~V).
+
+\paragraph{Gaps.}
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Lattice identification.} The periodic extension
+    $\mathcal{T}_7^{(L)}$ is an emergent crystal identification, not a Tier~A
+    output of void and mirror alone.
+  \item \textbf{Landau EFT import.} Fermi-liquid identification cites ledger
+    entry \textbf{A7} (clustering at long wavelength).
+  \item \textbf{Quantitative closure.} Band gaps, effective masses, and
+    critical exponents require radiative Yukawa and band-determinant
+    refinements (Tier~C).
+  \item \textbf{Strong correlations.} Superconductivity, fractional quantum
+    Hall, and other non-Fermi-liquid phases are \emph{not} claimed derived.
+\end{enumerate}
+
+\paragraph{Targets.}
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item Structural: replica limit \eqref{eq:replica-limit} with density-fixed
+    $N=\rho L^3$.
+  \item Mechanism: nonempty Fermi surface $\mathcal{F}$ from partial capacity
+    occupancy; insulator from hub saturation.
+  \item Contact: leading-order match of $F_0^s$ and band-theory free energy
+    $\Omega(\mu,T)$ in the $N\to\infty$ limit
+    (Theorem~\ref{thm:thermodynamics}, item~(iv)).
+  \item Falsifier: a derived band structure would be excluded if
+    capacity-weighted connectivity $\mathcal{D}_{\mathbf{k}}$ could not
+    reproduce the metal--insulator split of a standard tight-binding limit
+    without importing an independent crystal potential.
+\end{enumerate}
+
+\paragraph{Dependencies.}
+Thread~VII depends on:
+observer collapse $\Pi_{\sigma=-1}$ (Section~\ref{sec:observer});
+the cellular cosheaf $\mathcal{F}_{16}$ on $\mathcal{T}_7$
+(Definition~\ref{def:F16});
+capacity partition $(w_1,w_2,w_3)=(1/27,10/27,16/27)$
+(Theorem~\ref{thm:partition});
+emergent chemistry shell ladder (Theorem~\ref{thm:chemistry-ladder});
+OS reconstruction for fermionic statistics (Theorem~\ref{thm:qm-derived}).
+
+\paragraph{Tier path.}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}llp{0.46\linewidth}@{}}
+\toprule
+\textbf{Tier} & \textbf{Content} & \textbf{Ledger / note} \\
+\midrule
+A &
+  Pauli exclusion from antisymmetry of $\mathcal{H}_N^{\mathrm{em}}$;
+  hub cocycle $\phi_1+\phi_2+\phi_3=0$ &
+  Proposition~\ref{prop:emergent-functor} \\
+B &
+  Replica limit; Fermi-liquid and band-theory identification &
+  \textbf{A7}; emergent $\mathcal{T}_7^{(L)}$ \\
+C &
+  Quantitative band gaps, $F_0^s$ contact, critical exponents &
+  Radiative Yukawa + band determinant \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{equation}\label{eq:thread-7-box}
+  \boxed{%
+  \varepsilon_n(\mathbf{k})
+  \;=\;
+  \lambda_n\!\bigl(\mathcal{D}_{\mathbf{k}}\bigr),
+  \qquad
+  \mathcal{D}_{\mathbf{k}}
+  \;:=\;
+  \bigoplus_{\iota=1}^3 w_\iota\,D_\iota(\mathbf{k}),
+  \qquad
+  L\to\infty,\;
+  N=\rho L^3.}
+\end{equation}
+
+%======================================================================%
+\subsection{Thread VIII: Arrow of Time and Entropy}
+\label{sec:thread-8}
+%======================================================================%
+
+The thermodynamic arrow of time is not postulated as a separate law. It is the
+coarse-grained asymmetry of observer-sector evolution along the Page--Wootters
+clock $\tau_\iota$ (Definition~\ref{def:page-wootters}), weighted by the
+$\sigma=-1$ Euclidean measure $d\mu_{\Gamma_{-1}}$
+(Theorem~\ref{thm:sigma-measure}) and the capacity ensemble of
+Definition~\ref{def:capacity-ensemble}. Mirror-shadow entropy stored in
+$d\mu_{\Gamma_{+1}}$ is quotient-non-observable but sets the direction of
+freeze-out and environmental pressure
+(Definition~\ref{def:dm-freezeout}, Definition~\ref{def:env-pressure}).
+Thread~VIII unifies quantum time, statistical entropy, and cosmological
+sector decoupling into one directed narrative.
+
+\begin{definition}[Arrow-of-time thread datum]\label{def:thread-8}
+The \emph{arrow-of-time thread datum} is the quadruple
+\begin{equation}\label{eq:thread-8-datum}
+  \mathfrak{T}
+  \;:=\;
+  \bigl(
+    \tau_\iota,\;
+    d\mu_{\Gamma_{-1}},\;
+    d\nu_\beta,\;
+    k_{\mathrm{FO}}
+  \bigr),
+\end{equation}
+where $\tau_\iota$ is the Page--Wootters clock,
+$d\mu_{\Gamma_{-1}}$ is the observable factor of \eqref{eq:gamma-split},
+$d\nu_\beta$ is the capacity ensemble \eqref{eq:capacity-ensemble}, and
+$k_{\mathrm{FO}}=\kappa_\star^{1/2}v$ is the shadow freeze-out scale
+(Definition~\ref{def:dm-freezeout}). The \emph{thermodynamic arrow} is the
+monotone increase of capacity-weighted microstate entropy $S$ in
+\eqref{eq:helmholtz} along increasing $\tau_\iota$ on admitted lifetime charts,
+modulo hub-cocycle gauge relabelings on $\mathcal{T}_7$.
+\end{definition}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}clp{0.52\linewidth}@{}}
+\toprule
+\textbf{Q\#} & \textbf{Question} & \textbf{SJET status} \\
+\midrule
+Q8.1 &
+  Is time external or relational? &
+  Relational: $\tau_\iota$ is the soldering clock on $H_2(\Quat)$
+  (Definition~\ref{def:page-wootters},
+  Proposition~\ref{prop:page-wootters-derived}). \\
+\addlinespace
+Q8.2 &
+  Where does the partition function come from? &
+  $\mathcal{Z}(\beta)=\mathrm{Tr}\,e^{-\beta\hat H_\iota}$ equals the
+  $\Pi_{\sigma=-1}$-projected functional integral on
+  $\mathcal{M}_{-1}$ \eqref{eq:Z-sigma}
+  (Theorem~\ref{thm:thermodynamics}). \\
+\addlinespace
+Q8.3 &
+  What defines entropy? &
+  Capacity-weighted microstate count on $\mathcal{T}_7$ modulo hub cocycle
+  \eqref{eq:helmholtz}; not a postulated Gibbs axiom. \\
+\addlinespace
+Q8.4 &
+  Why does entropy increase? &
+  Below $k_{\mathrm{FO}}$, $\sigma=+1$ reservoir ceases entropy sharing with
+  $d\mu_{\Gamma_{-1}}$ \eqref{eq:dm-freezeout}; observable sector
+  equilibration is directed along $\tau_\iota$ under \textbf{A7} clustering. \\
+\addlinespace
+Q8.5 &
+  How does the shadow sector enter? &
+  $d\mu_{\Gamma_{+1}}$ normalizes the split but does not contribute to
+  $\mathcal{Z}(\beta)$ in the observable sector
+  (Theorem~\ref{thm:duality}, Remark on emergent thermodynamics). \\
+\addlinespace
+Q8.6 &
+  Is quantitative heat capacity derived? &
+  Euler structure \eqref{eq:thermo-laws} is Tier~B; numeric heat capacities
+  and critical points are Tier~C contacts. \\
+\bottomrule
+\end{tabular}
+\caption{Thread~VIII question ledger: arrow of time and entropy.}
+\label{tab:thread-8-questions}
+\end{table}
+
+\paragraph{Anchors.}
+The thread is anchored at:
+Theorem~\ref{thm:sigma-measure} (measure factorization),
+Definition~\ref{def:page-wootters} and Proposition~\ref{prop:page-wootters-derived}
+(clock),
+Theorem~\ref{thm:qm-derived} (OS reconstruction),
+Definition~\ref{def:capacity-ensemble} and Theorem~\ref{thm:thermodynamics}
+(statistical mechanics),
+Definition~\ref{def:dm-freezeout} and Lemma~\ref{lem:dm-capacity-fraction}
+(entropy routing at freeze-out),
+Definition~\ref{def:env-pressure} (environmental pressure conjugate).
+
+\paragraph{Gaps.}
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Coarse-graining proof.} The identification of $S$ with a
+    microstate count on $\mathcal{T}_7$ is structural; a full Kolmogorov--Sinai
+    or entanglement-entropy certificate is not supplied.
+  \item \textbf{Quantum arrow.} Measurement update is Tier~B via
+    Theorem~\ref{thm:measurement-collapse}; a complete alignment of
+    decoherence timescales with laboratory records is Tier~C.
+  \item \textbf{Cosmological entropy.} Shadow freeze-out fixes $f_{+1}=4/15$
+    but does not derive the full cosmological entropy budget of the CMB.
+  \item \textbf{Quantitative thermodynamics.} Heat capacities, latent heats,
+    and critical exponents require emergent refinements beyond
+    \eqref{eq:thermo-laws}.
+\end{enumerate}
+
+\paragraph{Targets.}
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item Derive $\mathcal{Z}(\beta)$, $F(\beta)$, and $S$ from $d\mu_{\Gamma_{-1}}$
+    without a supplemental statistical postulate.
+  \item Identify the thermodynamic arrow with monotone $\tau_\iota$ flow and
+    sector freeze-out at $k_{\mathrm{FO}}$.
+  \item Contact: free-energy limit $F/N\to\Omega(\mu,T)$ in the replica limit
+    (Theorem~\ref{thm:thermodynamics}, item~(iv)).
+  \item Falsifier: an observable-sector theory that requires time-symmetric
+    equilibrium on $d\mu_{\Gamma_{-1}}$ while maintaining
+    $\Pi_{\sigma=-1}$ projection would contradict the directed capacity
+    ensemble.
+\end{enumerate}
+
+\paragraph{Dependencies.}
+Thread~VIII depends on:
+Thread~VII replica limit (for $N\to\infty$ free-energy contact);
+Section~\ref{sec:quantum-origin} (Page--Wootters, OS reconstruction);
+Theorem~\ref{thm:sigma-measure} (measure split);
+Section~\ref{sec:dark-sector:abundance} (shadow freeze-out);
+Definition~\ref{def:env-pressure} and Theorem~\ref{thm:cc-sequester}
+(environmental conjugate variables).
+
+\paragraph{Tier path.}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}llp{0.46\linewidth}@{}}
+\toprule
+\textbf{Tier} & \textbf{Content} & \textbf{Ledger / note} \\
+\midrule
+A &
+  $\sigma$-grading; quotient non-observability of $d\mu_{\Gamma_{+1}}$ &
+  Theorem~\ref{thm:duality} \\
+B &
+  $\mathcal{Z}(\beta)$ from OS + capacity ensemble;
+  Euler relation \eqref{eq:thermo-laws} &
+  \textbf{A7}, \textbf{A8} \\
+B/C &
+  Shadow freeze-out scale $k_{\mathrm{FO}}$; fraction $f_{+1}=4/15$ &
+  \textbf{A1}, FRG at $\kappa_\star$ \\
+C &
+  Heat capacities, critical points, decoherence timescales &
+  Emergent refinements \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{equation}\label{eq:thread-8-box}
+  \boxed{%
+  d\nu_\beta
+  \;=\;
+  \frac{1}{\mathcal{Z}(\beta)}\,
+  e^{-\beta\hat H_\iota}\,
+  d\mu_{\Gamma_{-1}},
+  \qquad
+  F(\beta)=-\frac{1}{\beta}\log\mathcal{Z}(\beta)
+  \;=\;
+  \langle S\rangle_{\Gamma_{-1}}-TS.}
+\end{equation}
+
+%======================================================================%
+\subsection{Thread IX: Out-of-Scope Phenomenology Boundary}
+\label{sec:thread-9}
+%======================================================================%
+
+Semantic closure of the \emph{fundamental} chain
+(Corollary~\ref{cor:semantic-closure}) does not claim Tier~A/B closure of every
+laboratory observable. Thread~IX records the \textbf{honest phenomenology
+boundary}: which domains are \emph{emergent contacts} on fixed SM+$d{=}4$
+gravity outputs, which data are \emph{external datums} imported from standard
+effective theory, and which rows of Table~\ref{tab:physics-map-complete} are
+explicitly out of scope for new SJET theorems. This thread prevents
+over-claiming while certifying that \textbf{no additional primitive} is required
+beyond void and mirror (Remark~\ref{rmk:emergent-honest},
+Corollary~\ref{cor:physics-map-closure}).
+
+\begin{definition}[Phenomenology tier]\label{def:phenomenology-tier}
+A result carries the \emph{phenomenology tier} when it satisfies all of:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{No new primitive.} The claim uses only outputs of
+    \eqref{eq:master-pipeline} through Tier~A or Tier~B functors.
+  \item \textbf{Emergent truncation.} The laboratory description is obtained by
+    $\mathcal{F}_D=\mathrm{eval}_{\mathrm{emergent}}$ on SM+$d{=}4$ gravity+QED
+    (Class~V, Section~\ref{sec:physics-map:grouping}), not by a new
+    $\sigma$-sector insertion.
+  \item \textbf{External datum class.} Numerical comparison uses measured or
+    tabulated constants from the \emph{external datum class}
+    $\mathcal{D}_{\mathrm{ext}}$ (Definition~\ref{def:external-datum}).
+  \item \textbf{Non-closure certificate.} The manuscript records that the
+    result is a \emph{contact}, not a closure theorem, with tolerance
+    $\delta$ from Definition~\ref{def:contact-map} when applicable.
+\end{enumerate}
+Phenomenology tier is the honest label for Class~V rows in
+Table~\ref{tab:physics-map-complete}; it is stricter than Tier~C alone because
+it explicitly names the imported EFT layer.
+\end{definition}
+
+\begin{definition}[External datum class]\label{def:external-datum}
+The \emph{external datum class} $\mathcal{D}_{\mathrm{ext}}$ is the set of
+laboratory and astrophysical inputs \textbf{not} fixed by void and mirror at
+Tier~A/B, imported only at the phenomenology contact layer:
+\begin{equation}\label{eq:external-datum}
+  \mathcal{D}_{\mathrm{ext}}
+  \;:=\;
+  \bigl\{
+    \text{measured masses and lifetimes below $\Lambda_{\mathrm{QCD}}$},
+    \;
+    \text{nuclear binding tables},
+    \;
+    \text{atomic/QED tabulations},
+    \;
+    \text{crystal potentials and disorder},
+    \;
+    \text{opacity and EOS tables},
+    \;
+    \text{plasma transport coefficients},
+    \;
+    \text{biological complexity scales}
+  \bigr\}.
+\end{equation}
+An observable $O$ is an \emph{external-datum contact} when
+$O=\mathcal{C}_{\mathrm{ext}}(\mathfrak{E},\delta)$ for
+$\mathfrak{E}$ the universe datum \eqref{eq:universe-summary} and
+$\mathcal{C}_{\mathrm{ext}}$ a standard EFT evaluator drawing on
+$\mathcal{D}_{\mathrm{ext}}$ but introducing \textbf{no} new entry in the
+assumption ledger \textbf{A1--A8}.
+\end{definition}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}clp{0.52\linewidth}@{}}
+\toprule
+\textbf{Q\#} & \textbf{Question} & \textbf{SJET status} \\
+\midrule
+Q9.1 &
+  Does SJET derive every PDG-row observable at Tier~A/B? &
+  \textbf{No.} $20$ Tier~C/emergent rows in
+  Table~\ref{tab:physics-map-complete}; fundamental closure is
+  Corollary~\ref{cor:semantic-closure}. \\
+\addlinespace
+Q9.2 &
+  What is the honest label for many-body physics? &
+  Phenomenology tier (Definition~\ref{def:phenomenology-tier});
+  functor $\mathrm{eval}_{\mathrm{emergent}}$. \\
+\addlinespace
+Q9.3 &
+  Which inputs are external? &
+  Class $\mathcal{D}_{\mathrm{ext}}$
+  (Definition~\ref{def:external-datum}): tabulated low-energy and
+  continuum data not output by \eqref{eq:master-pipeline}. \\
+\addlinespace
+Q9.4 &
+  Are superconductivity, turbulence, or protein folding derived? &
+  \textbf{Out of scope.} Emergent EFT contacts only; no new SJET theorem
+  claimed (Thread~VII Q7.4). \\
+\addlinespace
+Q9.5 &
+  Is hierarchical closure honest? &
+  \textbf{Yes.} Corollary~\ref{cor:physics-map-closure} item~(vi):
+  emergent rows certify \emph{no additional primitive}. \\
+\addlinespace
+Q9.6 &
+  Where do tolerances enter? &
+  Definition~\ref{def:contact-map} for Tier~C predictions;
+  phenomenology tier adds explicit $\mathcal{D}_{\mathrm{ext}}$ tagging. \\
+\bottomrule
+\end{tabular}
+\caption{Thread~IX question ledger: phenomenology boundary.}
+\label{tab:thread-9-questions}
+\end{table}
+
+\paragraph{Anchors.}
+The thread is anchored at:
+Definition~\ref{def:proof-tiers} (Tier~A/B/C),
+Corollary~\ref{cor:semantic-closure} and Corollary~\ref{cor:physics-map-closure},
+Table~\ref{tab:physics-map-complete} (especially Class~V emergent rows),
+Remark~\ref{rmk:emergent-honest} (Section~\ref{sec:emergent}),
+Remark on emergent rows (Section~\ref{sec:physics-map}),
+Definition~\ref{def:contact-map} (tolerances),
+Table~\ref{tab:emergent-map} (descent versus contact rows).
+
+\paragraph{Gaps.}
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Per-observable certificates.} The map assigns routes, not
+    individual closure proofs for each many-body observable.
+  \item \textbf{EFT selection.} Which standard EFT (BCS, Navier--Stokes, MHD,
+    etc.) applies is laboratory context, not forced by $\mathcal{T}_7$ alone.
+  \item \textbf{Systematic $\mathcal{D}_{\mathrm{ext}}$ catalog.} The external
+    datum class is named, not exhaustively tabulated observable-by-observable.
+  \item \textbf{Precision frontier.} Sub-percent atomic and nuclear contacts
+    remain external-datum imports even when fundamental couplings are Tier~B.
+\end{enumerate}
+
+\paragraph{Targets.}
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item Maintain primitive count $2$ while mapping all PDG-headline domains.
+  \item Tag every Class~V row with phenomenology tier and, where numeric,
+    $\mathcal{D}_{\mathrm{ext}}$ membership.
+  \item Distinguish \emph{derived descent} (Thread~VII--VIII) from
+    \emph{imported contact} (Thread~IX).
+  \item Falsifier: claiming a new SJET primitive or ledger entry
+    \textbf{A9+} solely to fit a many-body observable would violate
+    Corollary~\ref{cor:axiomatic-closure}.
+\end{enumerate}
+
+\paragraph{Dependencies.}
+Thread~IX depends on:
+Theorem~\ref{thm:master-derivation} and \eqref{eq:master-pipeline};
+Corollary~\ref{cor:physics-map-closure};
+Threads~VII and~VIII (what \emph{is} derived at Tier~B in the emergent layer);
+Definition~\ref{def:proof-tiers} and Definition~\ref{def:contact-map}.
+
+\paragraph{Tier path.}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}llp{0.46\linewidth}@{}}
+\toprule
+\textbf{Layer} & \textbf{Functor} & \textbf{Claim type} \\
+\midrule
+Fundamental &
+  $\mathcal{F}_D\circ\Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}\circ\Mirror^{\leq 8}$ &
+  Tier~A/B theorems \\
+Descent &
+  $\mathcal{E}_N$, $d\nu_\beta$ (Threads~VII--VIII) &
+  Tier~B/C structural \\
+Phenomenology &
+  $\mathrm{eval}_{\mathrm{emergent}}(\mathfrak{E};\mathcal{D}_{\mathrm{ext}})$ &
+  Contact only; no new primitive \\
+Out of scope &
+  Strong correlations, biophysics detail, turbulence &
+  External datum or future work \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{equation}\label{eq:thread-9-box}
+  \boxed{%
+  \mathcal{M}_{\mathrm{ph}}(D)
+  \;=\;
+  \mathrm{eval}_{\mathrm{emergent}}\!\bigl(
+    \mathcal{F}_D(\mathfrak{E})\,;\,
+    \mathcal{D}_{\mathrm{ext}}
+  \bigr),
+  \qquad
+  \mathfrak{E}
+  \;=\;
+  \mathcal{U}\!\bigl(
+    \Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}\circ\Mirror^{\leq 8}
+  \bigr)(\Void).}
+\end{equation}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}llcc@{}}
+\toprule
+\textbf{Domain block} & \textbf{Example observables} &
+\textbf{Tier} & \textbf{Scope} \\
+\midrule
+Nuclear / atomic &
+  Binding energies, fine structure &
+  Phenomenology &
+  $\mathcal{D}_{\mathrm{ext}}$ \\
+Condensed matter (strong) &
+  SC, FQHE, critical exponents &
+  Out of scope &
+  Standard many-body EFT \\
+Fluids / plasma &
+  Navier--Stokes, MHD, fusion &
+  Phenomenology &
+  $\mathcal{D}_{\mathrm{ext}}$ \\
+Astrophysics (stellar) &
+  Opacity, $M$--$L$ relation &
+  Phenomenology &
+  SM+GR+tables \\
+Biophysics &
+  Folding, neural scales &
+  Out of scope &
+  Statistical mechanics import \\
+\bottomrule
+\end{tabular}
+\caption{Thread~IX scope table: honest phenomenology and out-of-scope blocks.
+Rows are contacts on \eqref{eq:universe-summary}, not new primitives.}
+\label{tab:thread-9-scope}
+\end{table}
+
+\begin{remark}[Thread closure certificate]\label{rmk:thread-7-9-closure}
+Threads~VII--IX complete the emergent frontier trace through SJET.
+Thread~VII supplies condensed-matter \emph{mechanisms} at Tier~B/C;
+Thread~VIII unifies the \emph{arrow of time} with the $\sigma$-measure and
+capacity ensemble; Thread~IX draws the \emph{phenomenology boundary} so that
+Class~V physics is hierarchical closure, not hidden postulation. Together with
+Section~\ref{sec:emergent}, Section~\ref{sec:quantum-origin}, and
+Section~\ref{sec:physics-map}, the manuscript records a complete honest map from
+$(\Void,\Mirror)$ to laboratory many-body phenomena without increasing the
+primitive axiom count beyond two.
+\end{remark}

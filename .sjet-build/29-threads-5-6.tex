@@ -1,0 +1,549 @@
+%======================================================================%
+\section{Development Threads V--VI: Cosmological Perturbations and
+Hadron--Nuclear Spectroscopy}
+\label{sec:threads-5-6}
+%======================================================================%
+
+Threads~V and~VI extend the master physics map
+(Section~\ref{sec:physics-map}) from \emph{background} cosmology and
+\emph{leading} hadronic contacts to the perturbative and spectroscopic
+functors required for CMB anisotropies, large-scale structure, and the
+full low-energy mass ladder. Both threads are \textbf{descent layers} on the
+same pipeline \eqref{eq:physics-map-pipeline}; neither introduces a primitive
+beyond $(\Void,\Mirror)$. Thread~III (SM Lagrangian certificate,
+Section~\ref{sec:sm-lagrangian}) and Thread~IV (cosmological background
+ledger, Sections~\ref{sec:dark-sector},~\ref{sec:cosmology},
+~\ref{sec:baryogenesis}) supply the transport inputs $(v,\eta_B,\alpha_{\mathrm{em}},
+\Omega_{\mathrm{DM}},H_0^{\mathrm{CMB}},\mathcal{P}_{\sigma=+1})$ that
+Threads~V and~VI consume.
+
+%----------------------------------------------------------------------%
+\subsection{Thread~5: Cosmological perturbations}
+\label{sec:thread-5}
+%----------------------------------------------------------------------%
+
+Cosmological \emph{background} quantities---$\Omega_{\mathrm{DM}}$,
+$H_0^{\mathrm{CMB}}$, $w(z)\approx -1$, $\eta_B$---are closed in
+Threads~III--IV. Thread~V records the \textbf{perturbation functor}: how
+$\sigma$-split stress--energy and capacity weights propagate into density
+contrasts, growth, and CMB/LSS observables.
+
+\begin{definition}[Thread~5: capacity-graded cosmological perturbation]
+\label{def:thread5-pert}
+Fix the homogeneous background of Theorems~\ref{thm:hubble-cmb},
+~\ref{thm:dm-abundance}, and Prediction~\ref{pred:cc}. Let
+$\delta_{\sigma=\pm1}(\mathbf{x},\tau)$ denote the density contrast in the
+$\sigma$-graded stress--energy split \eqref{eq:T-split} about
+$\orderparam_\star$. The \emph{Thread~5 perturbation datum} is the pair
+\begin{equation}\label{eq:thread5-datum}
+  \boldsymbol{\delta}
+  \;:=\;
+  \bigl(
+    \delta_{(-1)},\,\delta_{(+1)},\,D_\pm(z),\,P_\pm(k),\,n_s,\,\sigma_8
+  \bigr),
+\end{equation}
+where $\delta_{(-1)}$ is supported on observable baryon--radiation modes in
+$H^1(\hat Q,V_{16})^{\sigma=-1}$, $\delta_{(+1)}$ on the mirror-shadow
+residue $\mathcal{R}_{+1}$ (Definition~\ref{def:dm-residue}), $D_\pm$ are
+linear growth factors in each sector, $P_\pm$ the corresponding matter power
+spectra, and $(n_s,\sigma_8)$ the scalar tilt and late-time fluctuation
+amplitude contacted in Prediction~\ref{pred:cmb} and
+Proposition~\ref{prop:sigma8}.
+\end{definition}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}p{0.30\linewidth}p{0.58\linewidth}@{}}
+\toprule
+\textbf{Unanswered question} & \textbf{SJET status / residual work} \\
+\midrule
+What sources primordial scalar perturbations without an inflation postulate? &
+  Coleman--Weinberg gap on $28$ coset scalars
+  (Theorem~\ref{thm:rp}, Lemma~\ref{lem:breaking-cw}) supplies $V>0$;
+  ledger Jacobian tilt gives $n_s\neq 1$
+  (\eqref{eq:pred-ns}). \textbf{Open:} full curvature perturbation
+  $\mathcal{R}$ from $\orderparam$ fluctuations. \\
+\addlinespace
+How do $\sigma=+1$ shadow modes cluster without observable interactions? &
+  Theorem~\ref{thm:dm-sector} identifies $\rho_{\mathrm{DM}}$;
+  Proposition~\ref{prop:sigma8} fixes $\sigma_8$ from capacity ratio
+  $\sqrt{(w_1+w_2)/w_3}$. \textbf{Open:} non-linear
+  $\delta_{(+1)}$ beyond linear growth. \\
+\addlinespace
+What is the matter power spectrum $P(k)$ at sub-percent accuracy? &
+  Leading $P(k)\propto k^{n_s-1}$ with $n_s$ from
+  \eqref{eq:pred-ns}. \textbf{Open:} two-loop acoustic peak locations;
+  Silk damping from atomic sector
+  (Theorem~\ref{thm:atomic-spectrum}). \\
+\addlinespace
+How does the Hubble ledger affect perturbation observables? &
+  $H_0^{\mathrm{loc}}/H_0^{\mathrm{CMB}}=1+1/b_0$ at $z=0$
+  (Proposition~\ref{prop:h0-ledger}); BAO $H(z)$ converges at $z\gtrsim 1$
+  (Proposition~\ref{prop:hz-ledger}). \textbf{Closed} at linear order. \\
+\addlinespace
+Are tensor modes required for CMB $B$-modes? &
+  No tensor postulate in SJET. \textbf{Open:} $\sigma$-even graviton
+  residue routed to $d\mu_{\Gamma_{+1}}$
+  (Theorem~\ref{thm:kappa-persistence}) as hidden tensor ledger. \\
+\addlinespace
+Does $\eta_B$ fix $\Omega_b h^2$ and BBN abundances jointly? &
+  \textbf{Closed} triangle: Prediction~\ref{pred:eta-b},
+  Theorem~\ref{thm:bbn}, Prediction~\ref{pred:cmb}
+  (\eqref{eq:pred-omega-b}). \\
+\bottomrule
+\end{tabular}
+\caption{Thread~5 unanswered questions and SJET closure status. Rows marked
+\textbf{Closed} are Tier~B/C contacts; \textbf{Open} rows are honest gaps
+for sub-percent LSS/CMB refinement.}
+\label{tab:thread5-questions}
+\end{table}
+
+\paragraph{SJET anchors.}
+Thread~5 is anchored on the following proved or contacted chain:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{$\sigma$-sector stress split.}
+    $T_{\mu\nu}=T_{\mu\nu}^{(-1)}+T_{\mu\nu}^{(+1)}$
+    (Theorem~\ref{thm:dm-sector}, \eqref{eq:T-split}).
+  \item \textbf{Environmental vacuum ledger.}
+    $\mathcal{P}_{\sigma=+1}$ and CMB Friedmann constraint
+    (Definition~\ref{def:env-pressure}, \eqref{eq:friedmann-cmb}).
+  \item \textbf{Shadow abundance and clustering.}
+    $\Omega_{\mathrm{DM}}=4/15$ (Theorem~\ref{thm:dm-abundance});
+    $\sigma_8=\sqrt{11/16}$ (Proposition~\ref{prop:sigma8}).
+  \item \textbf{Baryon sector.}
+    $\eta_B\approx 6\times 10^{-10}$ (Theorem~\ref{thm:baryogenesis});
+    $\Omega_b h^2$ (Prediction~\ref{pred:cmb}, \eqref{eq:pred-omega-b}).
+  \item \textbf{Scalar tilt.}
+    $n_s=1-(w_2/w_3)(b_0-n_F)/\kappa_\star$ (Prediction~\ref{pred:cmb},
+    \eqref{eq:pred-ns}).
+  \item \textbf{Hubble anchors.}
+    Theorems~\ref{thm:hubble-local},~\ref{thm:hubble-cmb};
+    DESI $H(z)$ contact (Prediction~\ref{pred:hz}).
+\end{enumerate}
+
+\paragraph{Gaps.}
+Thread~5 does \textbf{not} yet supply:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item A Boltzmann hierarchy derived from $\orderparam$ fluctuations on
+    $\hat Q$ (transport uses $\Lambda$CDM inference with SJET-fixed parameters).
+  \item Non-linear matter power spectrum or halo mass function beyond
+    linear $\sigma_8$.
+  \item CMB lensing amplitude $A_L$ and full acoustic peak spectrum at
+    Planck precision.
+  \item Tensor-to-scalar ratio $r$ from the $\sigma=+1$ graviton reservoir.
+\end{enumerate}
+These are Tier~C refinement targets (Section~\ref{sec:tier-c-precision}), not
+epistemic primitives.
+
+\paragraph{Target functor $\mathcal{F}_D$ and theorems.}
+The Thread~5 evaluator is
+\begin{equation}\label{eq:FD-cosmo-pert}
+  \mathcal{F}_{\mathrm{cosmo\text{-}pert}}
+  \;:=\;
+  \mathrm{eval}_{\sigma\text{-}\mathrm{pert}}
+  \;:\;
+  \mathbf{Struct}\times\mathbf{Ledger}
+  \longrightarrow
+  \mathbf{PertObs},
+\end{equation}
+with $\mathbf{PertObs}$ the contact layer
+$(\delta_\pm,P_\pm,n_s,\sigma_8,f\sigma_8,\Omega_b h^2)$.
+The target theorem bundle is:
+
+\begin{theorem}[Capacity two-fluid perturbation system, target]
+\label{thm:thread5-target}
+Assume Theorem~\ref{thm:dm-sector}, Definition~\ref{def:thread5-pert},
+Theorem~\ref{thm:hubble-cmb}, and the Einstein--Hilbert truncation
+(\textbf{A1}). In the synchronous gauge on the soldered $d=4$ block, the
+linearized density contrasts obey
+\begin{equation}\label{eq:thread5-growth}
+  \ddot\delta_{(\pm1)}+2H\dot\delta_{(\pm1)}
+  \;=\;
+  \frac{4\pi G}{a^2}\,
+  \sum_{\sigma'=\pm1}
+  w_{\sigma\sigma'}\,\rho_{\sigma'}\,\delta_{(\sigma')},
+\end{equation}
+with capacity-weighted coupling matrix
+$w_{--}=(w_1+w_2)/(w_1+w_2+w_3)$,
+$w_{-+}=0$ (quotient-non-observable cross-sector at linear order),
+$w_{++}=w_3/(w_1+w_2+w_3)$, and background densities
+$\rho_{(-1)}=\rho_b+\rho_r$, $\rho_{(+1)}=\rho_{\mathrm{DM}}$ from
+\eqref{eq:dm-ident} and $\eta_B$. The late-time growth factor ratio satisfies
+$D_{(+1)}/D_{(-1)}\to\sqrt{w_3/(w_1+w_2)}$ at $z\lesssim 1$, reproducing
+\eqref{eq:sigma8}.
+\end{theorem}
+
+\begin{proposition}[Perturbation ledger identity, target]
+\label{prop:thread5-ledger}
+Under Theorem~\ref{thm:thread5-target}, the observed late-time amplitude
+\begin{equation}\label{eq:thread5-sigma8}
+  \sigma_8
+  \;=\;
+  \sqrt{\frac{w_1+w_2}{w_3}}\,
+  \mathcal{G}(z\!=\!0),
+\end{equation}
+with $\mathcal{G}$ the $\kappa_\star$-independent linear growth normalization,
+specializes Proposition~\ref{prop:sigma8}. The scalar spectral index satisfies
+$n_s$ of \eqref{eq:pred-ns} as the CMB-anchor tilt from integrating
+$\mathcal{P}_{\sigma=+1}$ into the homogeneous history.
+\end{proposition}
+
+\paragraph{Dependencies (Threads~III--IV).}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular}{@{}llp{0.50\linewidth}@{}}
+\toprule
+\textbf{Thread} & \textbf{Input} & \textbf{Role in Thread~5} \\
+\midrule
+III &
+  $\mathcal{L}_{\mathrm{SM}}$, $v$, $M_Z$, $\alpha_{\mathrm{em}}$
+  (Sections~\ref{sec:sm-lagrangian},~\ref{sec:scales}) &
+  BBN weak rates, recombination $T_\star$, Coulomb sector for $P(k)$ damping. \\
+III &
+  $\eta_B$ (Theorem~\ref{thm:baryogenesis}) &
+  Baryon density contrast normalization; $\Omega_b h^2$
+  (\eqref{eq:pred-omega-b}). \\
+IV &
+  $\Omega_{\mathrm{DM}}=4/15$ (Theorem~\ref{thm:dm-abundance}) &
+  $\delta_{(+1)}$ background; structure formation driver. \\
+IV &
+  $H_0^{\mathrm{CMB}}$, $\mathcal{P}_{\sigma=+1}$
+  (Theorems~\ref{thm:hubble-cmb},~\ref{thm:cc-sequester}) &
+  Expansion rate; effective $\Omega_\Lambda^{\mathrm{eff}}$ in growth. \\
+IV &
+  $w(z)\approx -1$ (Prediction~\ref{pred:cc}) &
+  Scale-invariant vacuum stress; ISW suppression at low $z$. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Tier path.}
+\begin{equation}\label{eq:thread5-tier}
+  \boxed{%
+  \mathrm{Tier~A}
+  \;\xrightarrow{\;\text{partition}\;}
+  \mathrm{Tier~B}
+  \;\xrightarrow{\;\textbf{A1,A7,A8}\;}
+  \mathrm{Tier~C}
+  }
+  \qquad
+  (w_1,w_2,w_3)
+  \to
+  (\Omega_{\mathrm{DM}},\sigma_8,n_s)
+  \to
+  \text{DESI/Euclid/Planck contacts}.
+\end{equation}
+Tier~A: Theorem~\ref{thm:partition} fixes the capacity weights.
+Tier~B: Theorems~\ref{thm:dm-sector},~\ref{thm:cc-sequester},
+~\ref{thm:baryogenesis} under \textbf{A1}, \textbf{A7}, \textbf{A8}.
+Tier~C: Proposition~\ref{prop:sigma8}, Prediction~\ref{pred:cmb},
+Prediction~\ref{pred:hz} at stated tolerances.
+
+\begin{equation}\label{eq:thread5-boxed}
+  \boxed{%
+  \mathcal{F}_{\mathrm{cosmo\text{-}pert}}
+  \bigl(
+    \Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}\circ\Mirror^{\leq 8}
+  \bigr)(\Void)
+  \;=\;
+  \Bigl\{
+    \sigma_8=\sqrt{\tfrac{w_1+w_2}{w_3}},\;
+    n_s=1-\tfrac{w_2}{w_3}\tfrac{b_0-n_F}{\kappa_\star},\;
+    \Omega_b h^2=\kappa_B\eta_{10}(1+\tfrac{w_1}{b_0})
+  \Bigr\}.
+  }
+\end{equation}
+
+%----------------------------------------------------------------------%
+\subsection{Thread~6: Hadron and nuclear spectroscopy functor}
+\label{sec:thread-6}
+%----------------------------------------------------------------------%
+
+Thread~VI closes the \textbf{nonperturbative spectroscopy} route from
+cellular overlap data on $\mathcal{T}_7$ to hadron masses, nuclear binding
+ladders, and atomic/CMB transport contacts. Yukawa overlaps
+(Section~\ref{sec:yukawa}) fix perturbative quark masses; QCD confinement
+(Section~\ref{sec:qcd}) and nuclear--cosmology mapping
+(Section~\ref{sec:nuclear-atomic-cosmo}) supply the leading spectroscopic
+contacts.
+
+\begin{definition}[Thread~6: spectroscopy evaluator]
+\label{def:thread6-spec}
+Let $\Lambda_{\mathrm{QCD}}$ be the confinement scale of
+Definition~\ref{def:lambda-qcd} (equivalently Proposition~\ref{prop:alpha-s},
+\eqref{eq:Lambda-QCD}). For each colour-singlet hadron $H$ with constituent
+slots $(i,j,k)$ on $\mathcal{T}_7$, let $\mathcal{A}_H$ be the hadronic
+overlap of Definition~\ref{def:hadron-overlap}. For each nucleus with mass
+number $A$, let $\mathcal{N}_A$ denote the $A$-fold nuclear overlap
+(Definition~\ref{def:nuclear-overlap}, Theorem~\ref{thm:nuclear-binding}).
+The \emph{Thread~6 spectroscopy datum} is
+\begin{equation}\label{eq:thread6-datum}
+  \boldsymbol{\mathcal{S}}
+  \;:=\;
+  \Bigl\{
+    m_H=\Lambda_{\mathrm{QCD}}\,|\mathcal{A}_H|^{1/n_q}
+  \Bigr\}_{H\in\mathcal{H}}
+  \;\cup\;
+  \Bigl\{
+    E_B(A)/A=\Lambda_{\mathrm{QCD}}\,\tfrac{w_2}{w_3 b_0}\,\mathcal{F}(A)
+  \Bigr\}_{A\in\mathbb{N}}.
+\end{equation}
+\end{definition}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}p{0.30\linewidth}p{0.58\linewidth}@{}}
+\toprule
+\textbf{Unanswered question} & \textbf{SJET status / residual work} \\
+\midrule
+What fixes the hadron mass spectrum beyond the proton and pion? &
+  Definition~\ref{def:hadron-overlap} and
+  Lemma~\ref{lem:hadron-cellular} reduce masses to hub triple
+  intersections; Prediction~\ref{pred:hadron-masses} contacts
+  $m_p$, $m_\pi$, $m_\rho$. \textbf{Open:} full PDG baryon/meson table. \\
+\addlinespace
+Why do nuclear magic numbers include $28=n_S$? &
+  Theorem~\ref{thm:nuclear-binding}: shell closures at
+  $A_\star\in\{2,8,20,28\}$ from $28$ coset scalars
+  (Theorem~\ref{thm:planck}). \textbf{Closed} at leading order. \\
+\addlinespace
+What is the binding energy per nucleon at the iron peak? &
+  \eqref{eq:binding-peak}: $\max E_B/A\approx 11$\,MeV from
+  $\Lambda_{\mathrm{QCD}}w_2/(w_3 b_0)$. \textbf{Open:} two-body and
+  three-body force refinements ($\mathcal{O}(20\%)$). \\
+\addlinespace
+How does $\Lambda_{\mathrm{QCD}}$ enter without a separate confinement axiom? &
+  Definition~\ref{def:lambda-qcd} from $n_F=3$ and $\alpha_s(M_Z)$;
+  Proposition~\ref{prop:alpha-s} from ledger FRG. \textbf{Closed}. \\
+\addlinespace
+What links hadronic scales to BBN and CMB? &
+  Section~\ref{sec:nuclear-atomic-cosmo}: deuteron gate
+  \eqref{eq:deuteron-binding}, $Y_p$, $D/H$, $T_{\mathrm{CMB}}$,
+  $\Omega_b h^2$. \textbf{Closed} at Tier~B/C. \\
+\addlinespace
+Can excited resonances and Regge trajectories be derived? &
+  \textbf{Open:} $\iota=2$ excitation ansatz in \eqref{eq:mrho-pred};
+  no Regge functor yet. \\
+\bottomrule
+\end{tabular}
+\caption{Thread~6 unanswered questions and SJET closure status. Hadronic
+masses are Tier~C contacts at $\mathcal{O}(10\%)$; nuclear magic-number
+routing is Tier~B.}
+\label{tab:thread6-questions}
+\end{table}
+
+\paragraph{SJET anchors.}
+Thread~6 is anchored on:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Colour gauge and confinement.}
+    Theorem~\ref{thm:qcd-derived}; Theorem~\ref{thm:confinement};
+    $\sigma_{\mathrm{str}}=w_3\Lambda_{\mathrm{QCD}}^2$
+    (\eqref{eq:string-tension}).
+  \item \textbf{Strong coupling and scale.}
+    Proposition~\ref{prop:alpha-s} ($\alpha_s(M_Z)$, $\Lambda_{\mathrm{QCD}}$);
+    Theorem~\ref{thm:strong-cp} ($\theta_{\mathrm{obs}}=0$).
+  \item \textbf{Hadronic overlaps.}
+    Definition~\ref{def:hadron-overlap}, Lemma~\ref{lem:hadron-cellular},
+    Prediction~\ref{pred:hadron-masses}.
+  \item \textbf{Nuclear overlaps.}
+    Definition~\ref{def:nuclear-overlap}, Lemma~\ref{lem:nuclear-cellular},
+    Theorem~\ref{thm:nuclear-binding}.
+  \item \textbf{Atomic and CMB transport.}
+    Theorem~\ref{thm:atomic-spectrum}, Theorem~\ref{thm:bbn},
+    Prediction~\ref{pred:cmb} (Table~\ref{tab:nuclear-cosmo-map}).
+  \item \textbf{Coset multiplicity.}
+    $n_S=28$ (Theorem~\ref{thm:planck}) in magic numbers
+    \eqref{eq:magic-numbers}.
+\end{enumerate}
+
+\paragraph{Gaps.}
+Thread~6 does \textbf{not} yet supply:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item A complete excited-state spectrum (meson/baryon towers, Regge slopes).
+  \item Sub-percent hadron mass predictions (lattice-quality).
+  \item Microscopic nuclear shell model from $\mathcal{T}_7$ dynamics.
+  \item Three-body nuclear forces and $A>56$ stability curve.
+\end{enumerate}
+The transport theorems of Section~\ref{sec:nuclear-atomic-cosmo} are honest
+Tier~B/C: SM+QCD+hydrogen Hamiltonian with SJET-fixed parameters.
+
+\paragraph{Target functor $\mathcal{F}_D$ and theorems.}
+The Thread~6 evaluator is
+\begin{equation}\label{eq:FD-spec}
+  \mathcal{F}_{\mathrm{spec}}
+  \;:=\;
+  \mathrm{eval}_{\mathrm{overlap\text{-}spectroscopy}}
+  \;:\;
+  \mathbf{Struct}\times\mathbf{Ledger}
+  \longrightarrow
+  \mathbf{SpecObs},
+\end{equation}
+with $\mathbf{SpecObs}$ the mass and binding contact layer. Target theorem
+bundle:
+
+\begin{theorem}[Hadron mass functor, target]
+\label{thm:thread6-hadron}
+Assume Definition~\ref{def:thread6-spec},
+Lemma~\ref{lem:hadron-cellular}, Theorem~\ref{thm:confinement}, and
+Proposition~\ref{prop:alpha-s}. The assignment
+\begin{equation}\label{eq:thread6-hadron-functor}
+  H
+  \;\longmapsto\;
+  m_H
+  \;=\;
+  \Lambda_{\mathrm{QCD}}\,
+  \Bigl|\sum_{\{i,j,k\}}
+  \epsilon_{ijk}\sqrt{w_iw_jw_k}\,
+  \mathcal{P}_{ijk}\,
+  \mathrm{pair}(C_i,C_j,C_k;\chi_{\mathrm{flux}})\Bigr|^{1/n_q}
+\end{equation}
+is functorial under cellular triality (Proposition~\ref{prop:triality}) and
+capacity exchange on $\mathfrak{d}$. It specializes to
+Prediction~\ref{pred:hadron-masses} for $H\in\{p,\pi,\rho\}$.
+\end{theorem}
+
+\begin{theorem}[Nuclear binding functor, target]
+\label{thm:thread6-nuclear}
+Assume Definition~\ref{def:nuclear-overlap},
+Theorem~\ref{thm:nuclear-binding}, and Theorem~\ref{thm:thread6-hadron}.
+The binding energy per nucleon satisfies
+\begin{equation}\label{eq:thread6-binding-functor}
+  \frac{E_B(A)}{A}
+  \;=\;
+  \Lambda_{\mathrm{QCD}}\,
+  \frac{w_2}{w_3 b_0}\,
+  \mathcal{F}(A)
+  \;+\;
+  \sum_{H\in\mathcal{H}_A}\frac{m_H}{A}\,\mathcal{O}(\alpha_s),
+\end{equation}
+with $\mathcal{F}(A)$ peaked at $A_\star\in\{2,8,20,28\}$ of
+\eqref{eq:magic-numbers}. The deuteron point is
+$E_B^{(2)}(d)=2\Lambda_{\mathrm{QCD}}(w_1/w_3)\alpha_s/(4\pi)$
+(\eqref{eq:deuteron-binding}).
+\end{theorem}
+
+\begin{proposition}[Spectroscopy--cosmology bridge, target]
+\label{prop:thread6-cosmo-bridge}
+Under Theorems~\ref{thm:thread6-hadron},~\ref{thm:thread6-nuclear},
+Theorem~\ref{thm:bbn}, and Prediction~\ref{pred:cmb}, the parameter vector
+\begin{equation}\label{eq:thread6-bridge}
+  (\Lambda_{\mathrm{QCD}},\,m_p,\,E_B^{(2)}(d),\,\alpha_{\mathrm{em}}(0),\,\eta_B)
+\end{equation}
+fixes $(Y_p,D/H,\Omega_b h^2,T_{\mathrm{CMB}})$ without additional
+cosmological input. Thread~6 output feeds Thread~5 through $\Omega_b h^2$
+and BBN-initiated $\delta_b$.
+\end{proposition}
+
+\paragraph{Dependencies (Threads~III--IV).}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular}{@{}llp{0.50\linewidth}@{}}
+\toprule
+\textbf{Thread} & \textbf{Input} & \textbf{Role in Thread~6} \\
+\midrule
+III &
+  Yukawa overlaps, quark masses
+  (Theorems~\ref{thm:yukawa-mass},~\ref{thm:quark-mass-2loop}) &
+  Flavour insertions in $\mathcal{A}_H$, $\mathcal{N}_B$;
+  isospin splitting \eqref{eq:isospin-split}. \\
+III &
+  $\mathrm{SU}(3)_c$ breaking chain
+  (Theorem~\ref{thm:qcd-derived}) &
+  Colour flux bundle $V_3$; flux tube $\chi_{\mathrm{flux}}$. \\
+III &
+  $V(\orderparam)$, $n_S=28$
+  (Definitions~\ref{def:potential}, Theorem~\ref{thm:planck}) &
+  Magic numbers; saturation scale $w_2/(w_3 b_0)$. \\
+IV &
+  $b_0=12$, $\kappa_\star$ (Theorem~\ref{thm:beta},~\ref{thm:kappa}) &
+  Ledger normalization in binding ladder and $\alpha_s$ residue. \\
+IV &
+  $\eta_B$ (Theorem~\ref{thm:baryogenesis}) &
+  BBN network; $\Omega_b h^2$ closure with Thread~5. \\
+IV &
+  $H_0^{\mathrm{CMB}}$ (Theorem~\ref{thm:hubble-cmb}) &
+  $T_{\mathrm{CMB}}$ and photon phase-space density
+  (Definition~\ref{def:t-cmb}). \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Tier path.}
+\begin{equation}\label{eq:thread6-tier}
+  \boxed{%
+  \mathrm{Tier~A}
+  \;\xrightarrow{\;\text{cellular}\;}
+  \mathrm{Tier~B}
+  \;\xrightarrow{\;\textbf{A3,A4,A7}\;}
+  \mathrm{Tier~C}
+  }
+  \qquad
+  \mathcal{T}_7\ \text{overlaps}
+  \to
+  \text{confinement, }\Lambda_{\mathrm{QCD}}
+  \to
+  m_H,\,E_B/A\ \text{PDG contacts}.
+\end{equation}
+Tier~A: Lemma~\ref{lem:yukawa-cellular}, Lemma~\ref{lem:hadron-cellular}
+(cellular cohomology + Stone lift).
+Tier~B: Theorems~\ref{thm:qcd-derived},~\ref{thm:confinement},
+~\ref{thm:strong-cp} under \textbf{A3}, \textbf{A4}, \textbf{A7}.
+Tier~C: Prediction~\ref{pred:hadron-masses},
+Theorem~\ref{thm:nuclear-binding}, Table~\ref{tab:qcd-map},
+Table~\ref{tab:nuclear-cosmo-map}.
+
+\begin{equation}\label{eq:thread6-boxed}
+  \boxed{%
+  \mathcal{F}_{\mathrm{spec}}
+  \bigl(
+    \Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}\circ\Mirror^{\leq 8}
+  \bigr)(\Void)
+  \;=\;
+  \Bigl\{
+    m_H=\Lambda_{\mathrm{QCD}}\,|\mathcal{A}_H|^{1/n_q},\;
+    \tfrac{E_B(A)}{A}=\Lambda_{\mathrm{QCD}}\,\tfrac{w_2}{w_3 b_0}\,\mathcal{F}(A)
+  \Bigr\}_{H,A}.
+  }
+\end{equation}
+
+%----------------------------------------------------------------------%
+\subsection{Thread coupling: V $\leftrightarrow$ VI}
+\label{sec:threads-5-6-coupling}
+%----------------------------------------------------------------------%
+
+Threads~V and~VI are not independent: nuclear and atomic transport
+(Section~\ref{sec:nuclear-atomic-cosmo}) supplies the matter sector
+parameters that Thread~5 integrates into perturbation observables.
+
+\begin{proposition}[Thread~5--6 closure triangle]
+\label{prop:threads-56-triangle}
+The parameter chain
+\begin{equation}\label{eq:threads-56-triangle}
+  \mathcal{F}_{\mathrm{spec}}
+  \;\Longrightarrow\;
+  (\Lambda_{\mathrm{QCD}},\eta_B,\alpha_{\mathrm{em}},m_p)
+  \;\Longrightarrow\;
+  \mathcal{F}_{\mathrm{cosmo\text{-}pert}}
+  \;\Longrightarrow\;
+  (\Omega_b h^2,\,Y_p,\,D/H,\,n_s,\,\sigma_8)
+\end{equation}
+is closed at Tier~B/C with no fourth cosmological or hadronic primitive.
+Predictions~\ref{pred:eta-b},~\ref{pred:bbn},~\ref{pred:cmb}, and
+Prediction~\ref{pred:dm} are the experimental vertices.
+\end{proposition}
+
+\begin{remark}[Placement in the physics map]
+Thread~5 specializes Class~IV of Section~\ref{sec:physics-map:grouping}
+($\mathcal{F}_D=\mathrm{eval}_{\sigma\mathrm{-split}}$ on perturbations).
+Thread~6 specializes the nuclear and QCD rows of
+Table~\ref{tab:physics-map-complete} beyond the emergent label, upgrading
+hadron and binding entries to overlap-derived functors. Both threads inherit
+the master pipeline \eqref{eq:physics-map-pipeline} and remain subordinate to
+the two-axiom primitive count of Theorem~\ref{thm:universe-summary}.
+\end{remark}

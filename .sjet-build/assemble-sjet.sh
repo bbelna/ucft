@@ -15,6 +15,9 @@ inline() { echo "% --- $1 ---"; cat "$BUILD/$1"; echo "% --- end $1 ---"; }
            21-quantum-origin.tex 22-universe-ledger.tex \
            23-sm-lagrangian.tex 24-qcd-hadrons.tex 25-ew-precision.tex \
            26-nuclear-cosmo.tex 27-emergent-physics.tex 28-physics-map.tex \
+           29-open-threads-intro.tex 29-threads-1-2.tex \
+           29-threads-3-4.tex 29-threads-5-6.tex \
+           29-threads-7-9-header.tex 29-threads-7-9.tex \
            appendix.tex; do
     inline "$u"
   done
