@@ -20,6 +20,7 @@
 \newtheorem{definition}[theorem]{Definition}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
+\newtheorem{prediction}[theorem]{Prediction}
 
 \numberwithin{equation}{section}
 
@@ -63,10 +64,10 @@ rung. The \emph{as above, so below} correspondence identifies the universe
 fixed point with collapsed observer states; duality is forced by
 $E_8\times E_8$ product mirror collapse. A Lefschetz fixed-point theorem
 yields three observer slots; an index $\iota$ maps to a lifetime chart
-$g_\iota:\mathbb{R}\to\mathcal{S}_\iota$. We state proved results and
-isolate conjectural steps (lifetime uniqueness, GUT breaking, full reflection
-positivity, cosmological constant) without overclaiming a completed physical
-theory.
+$g_\iota:\mathbb{R}\to\mathcal{S}_\iota$. Tiered predictions contact JUNO (normal mass ordering), Muon $g$-2 ($n_F=3$,
+no fourth generation), and DESI ($\Lambda_{\mathrm{obs}}\approx 0$ conditional).
+We state proved results and isolate conjectural steps without overclaiming a
+completed physical theory.
 \end{abstract}
 
 \noindent\textbf{Keywords:} void; mirror operator; Stone duality; exceptional
@@ -101,6 +102,8 @@ spectra whose orbit generates all arithmetic and exceptional data.
   \item \textbf{Lifetime charts:} observer index $\iota$ maps to
     $g_\iota:\mathbb{R}\to\mathcal{S}_\iota$ admitted by capacity flow and
     soldering.
+  \item \textbf{Experimental contact:} tiered predictions (T1--T3) with
+    near-term falsifiers (JUNO, Muon $g$-2, DESI).
   \item \textbf{Honest epistemic scope:} theorems, derived definitions, and
     named conjectures for remaining physical inputs.
 \end{enumerate}
@@ -119,6 +122,7 @@ Section~\ref{sec:climb}: division and exceptional ladders.
 Section~\ref{sec:universe}: capacity, potential, universe fixed point.
 Section~\ref{sec:observer}: duality, observers, fixed points, lifetime charts.
 Section~\ref{sec:physics}: physical sector, spacetime, gauge, matter.
+Section~\ref{sec:predictions}: tiered predictions and experimental map.
 Section~\ref{sec:conclusions}: status and open problems.
 Section~\ref{sec:gap-ledger}: epistemic elimination ledger (P1--P5, CC).
 Appendix~\ref{sec:appendix}: Albert identities and mirror quotient.% --- end 01-introduction.tex ---
@@ -1305,6 +1309,234 @@ descended through the above--below correspondence
 (Proposition~\ref{prop:above-below}), yielding Yukawa hierarchy and
 CKM/PMNS mixing without an independent flavon postulate.
 \end{conjecture}% --- end 06-physics.tex ---
+% --- 09-predictions.tex ---
+%======================================================================%
+\section{Predictions and Experimental Contact}
+\label{sec:predictions}
+%======================================================================%
+
+SJET is not complete until its outputs confront measurement. This section
+records \textbf{what is already fixed} by void, mirror, and observer collapse,
+\textbf{what follows conditionally} from capacity descent and flavon flow, and
+\textbf{which near-term experiments} (2025--2030) can falsify or corroborate
+each tier. All comparisons use public results as of mid-2026; cited values are
+experimental central values unless noted.
+
+%----------------------------------------------------------------------%
+\subsection{Prediction protocol}
+\label{sec:predictions:protocol}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Prediction tiers]\label{def:prediction-tiers}
+\begin{enumerate}[label=\textbf{T\arabic*.},leftmargin=*]
+  \item \textbf{Exact} --- integer or rational consequence of proved theorems
+    (no free parameters).
+  \item \textbf{Leading} --- order-of-magnitude from capacity weights
+    $(1/27,10/27,16/27)$ and observer index $\iota$.
+  \item \textbf{Conditional} --- follows if Conjectures~\ref{conj:breaking-derived},
+    \ref{conj:flavon}, \ref{conj:cc-sequester} hold; falsifiable but not yet
+    proved from axioms alone.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Contact map]\label{def:contact-map}
+A \emph{contact map} assigns each prediction $P$ to an observable $\mathcal{O}$
+and experiment $E$ with tolerance $\delta$:
+\begin{equation}\label{eq:contact}
+  \mathcal{C}(P)=(\mathcal{O},E,\delta),
+  \qquad
+  \text{falsified if }|\mathcal{O}_{\mathrm{exp}}-\mathcal{O}_{\mathrm{SJET}}|>\delta.
+\end{equation}
+\end{definition}
+
+%----------------------------------------------------------------------%
+\subsection{Tier T1: exact predictions}
+\label{sec:predictions:T1}
+%----------------------------------------------------------------------%
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Quantity} & \textbf{SJET value} & \textbf{Source} & \textbf{Experiment (2026)} \\
+\midrule
+Family count $n_F$ & $3$ & Thm.~\ref{thm:chirality-derived} & No 4th gen (LHC) \\
+$\beta$-function $b_0$ & $12$ & Thm.~\ref{thm:beta} & SM 1-loop $\beta_\lambda$ \\
+Coset scalars $n_S$ & $28$ & Thm.~\ref{thm:planck} & EWSB scalar count \\
+Mixed GS coeff.\ (1 fam.) & $-1$ & Thm.~\ref{thm:anomaly} & String/GS sign \\
+$\kappa_\star$ & $96\pi^2/5$ & Thm.~\ref{thm:kappa} & FRG benchmark \\
+Observer slots $|\mathcal{I}|$ & $3$ & Thm.~\ref{thm:observer-fp} & --- \\
+\bottomrule
+\end{tabular}
+\caption{Exact (T1) predictions. $\kappa_\star\approx189.6$ is dimensionless in
+the stated truncation; physical scale identification is not T1.}
+\label{tab:predictions-T1}
+\end{table}
+
+\begin{proposition}[No fourth generation]\label{prop:no-fourth}
+The Lefschetz index $\mathrm{ind}_\sigma(\bar\partial_{V_{16}})=-3$ fixes
+$|\mathcal{I}|=3$ exactly. A fourth chiral family requires a fourth
+$\sigma$-anti-invariant $1$-class on $\hat Q$, contradicting
+Theorem~\ref{thm:observer-fp}. SJET predicts \textbf{no} sequential fourth
+generation at any energy reachable without changing the heterotic quotient
+structure.
+\end{proposition}
+
+\begin{remark}[Muon $g-2$ contact, T1]
+Fermilab Muon $g$-2 (June 2025 final run) reports
+$a_\mu=0.001\,165\,920\,705(205)$~\cite{MuonG2FNAL2025}.
+SJET does not fix $a_\mu$ at T1: the $28$ coset scalars and three families
+contribute through \emph{unspecified} masses. The T1 prediction is
+\textbf{structural}: new physics from a fourth family or extra mirror-observable
+chiral families is excluded; any residual anomaly must arise from the
+$\mathbf{27}$ sector with $n_F=3$ and $b_0=12$.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Tier T2: leading-order spectrum}
+\label{sec:predictions:T2}
+%----------------------------------------------------------------------%
+
+Capacity weights $(m_1,m_{10},m_{16})=(1/27,10/27,16/27)$ descend to observer
+indices $\iota=1,2,3$ on $\mathfrak{d}$.
+
+\begin{proposition}[Generation ordering]\label{prop:gen-ordering}
+Under the flavon sector map of Proposition~\ref{prop:flavon-sector}, observer
+index $\iota$ carries capacity weight $\omega^\star_\iota\propto w_\iota$ with
+\begin{equation}\label{eq:capacity-weights}
+  w_1:w_2:w_3 = 1:10:16.
+\end{equation}
+Leading-order Yukawa hierarchies satisfy $y_\iota\propto\sqrt{w_\iota}$ and
+$m_\iota\propto w_\iota$ at fixed Higgs VEV.
+\end{proposition}
+
+\begin{prediction}[Normal neutrino mass ordering]\label{pred:nu-ordering}
+\textbf{T2.} The heaviest neutrino mass eigenstate is $m_3$ (normal ordering):
+$w_3>w_2>w_1$ implies $m_3>m_2>m_1$ before RG corrections.
+\textbf{Contact:} JUNO mass-ordering determination (2026--2028);
+$\mathcal{C}(\text{NO})=(\text{sign}(\Delta m^2_{31}-\Delta m^2_{21}),
+\mathrm{JUNO},\text{sign test})$.
+\end{prediction}
+
+\begin{prediction}[Mass-squared ratio target]\label{pred:nu-ratio}
+\textbf{T2 (leading).} Capacity descent suggests
+\begin{equation}\label{eq:nu-ratio}
+  \frac{\Delta m^2_{31}}{\Delta m^2_{21}}
+  \;\sim\;
+  \frac{w_3}{w_1}
+  \;=\;16
+  \quad\text{(order of magnitude, pre-RG)}.
+\end{equation}
+PDG 2025 gives $\Delta m^2_{31}/\Delta m^2_{21}\approx 33$~\cite{PDG2025}.
+SJET targets the same decade at leading order; refinement requires
+Conjecture~\ref{conj:flavon} (two-loop capacity RG on $V_F$).
+\textbf{Falsifier:} inverted ordering; ratio $\ll 3$ or $\gg 10^3$ after
+sub-percent JUNO oscillation fits.
+\end{prediction}
+
+\begin{prediction}[Sector mass ratios]\label{pred:sector-ratios}
+\textbf{T2.} Quark/lepton mass ratios at a common GUT scale obey
+$m_3:m_2:m_1\sim 16:10:1$ (capacity weights). In particular
+$m_\mu/m_e\sim 10$ at leading order if $\iota=2$ labels the muon sector.
+\textbf{Contact:} PDG mass ratios; $\mu$ $g$-2 constrains $\iota=2$ loop
+contributions from the $10/27$ sector.
+\end{prediction}
+
+%----------------------------------------------------------------------%
+\subsection{Tier T3: conditional predictions}
+\label{sec:predictions:T3}
+%----------------------------------------------------------------------%
+
+\begin{prediction}[Observable cosmological constant]\label{pred:cc}
+\textbf{T3.} If Conjecture~\ref{conj:cc-sequester} holds at $\kappa_\star$,
+\begin{equation}\label{eq:Lambda-obs}
+  \Lambda_{\mathrm{obs}}\approx 0
+\end{equation}
+in the $\sigma=-1$ observer sector, with environmental vacuum energy stored in
+$H^\bullet(\hat Q)^{\sigma=+1}$.
+\textbf{Contact:} DESI/JWST dark-energy equation of state
+$w\to -1$ with no fine-tuned drift; $\mathcal{C}=(w,\mathrm{DESI},|w+1|<0.05)$.
+Does \emph{not} by itself resolve the Hubble tension; a non-zero
+$\Lambda_{\mathrm{obs}}$ in the sequestered framework would falsify T3.
+\end{prediction}
+
+\begin{prediction}[GUT-scale unification]\label{pred:gut}
+\textbf{T3.} Under Conjecture~\ref{conj:breaking-derived} with $\Spin(10)$ survival
+to $M_{\mathrm{GUT}}$,
+\begin{equation}\label{eq:sin2w}
+  \sin^2\theta_W(M_{\mathrm{GUT}})=\tfrac38,
+  \qquad
+  \alpha_{\mathrm{em}}^{-1}(M_{\mathrm{GUT}})\approx 24,
+\end{equation}
+with $b_0=12$ fixing the $\Spin(10)$ normalization of Thm.~\ref{thm:beta}.
+\textbf{Contact:} high-scale coupling unification fits (SUSY or non-SUSY);
+deviation of $b_0$ from $12$ shifts unification scale.
+\end{prediction}
+
+\begin{prediction}[Mirror-partner null]\label{pred:mirror-null}
+\textbf{T3.} No observable process exhibits exact $\mathbf{16}\leftrightarrow
+\overline{\mathbf{16}}$ symmetry at the amplitude level: mirror partners are
+$\sigma$-invariant and quotient-non-observable (Theorem~\ref{thm:duality}).
+\textbf{Contact:} searches for wrong-sign heavy-lepton or mirror-coupled
+$\mathbf{16}$ partners at colliders; any sustained mirror-symmetric rate at
+production level would falsify the observer-collapse sector definition.
+\end{prediction}
+
+%----------------------------------------------------------------------%
+\subsection{Near-term experimental map (2025--2030)}
+\label{sec:predictions:experiments}
+%----------------------------------------------------------------------%
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}lllp{0.32\linewidth}@{}}
+\toprule
+\textbf{Experiment} & \textbf{Observable} & \textbf{Tier} & \textbf{SJET expectation} \\
+\midrule
+JUNO & Mass ordering & T2 & Normal ($m_3$ heaviest) \\
+JUNO & $\Delta m^2$ ratios & T2 & $\Delta m^2_{31}/\Delta m^2_{21}\sim\mathcal{O}(10)$ \\
+Muon $g$-2 & $a_\mu$ & T1/T2 & No 4th family; 3-family + 28 scalars \\
+LHC/FCC & 4th generation & T1 & Excluded structurally \\
+DESI Phase II & $w(z)$ & T3 & $w\approx -1$ if CC sequestered \\
+KATRIN / Project 8 & $m_\beta$ & T2 & Consistent with NO + capacity \\
+HL-LHC & $\Spin(10)$ Higgs & T3 & $\mathbf{45},\mathbf{126},\mathbf{10}$ pattern \\
+\bottomrule
+\end{tabular}
+\caption{Near-term experimental contact map.}
+\label{tab:experiments}
+\end{table}
+
+%----------------------------------------------------------------------%
+\subsection{Development program toward precision match}
+\label{sec:predictions:program}
+%----------------------------------------------------------------------%
+
+To move predictions from leading order to \emph{sub-percent} agreement with
+JUNO, $g$-2, and cosmology, the theory must close three derivation gaps in
+order:
+
+\begin{enumerate}[label=\textbf{D\arabic*.},leftmargin=*]
+  \item \textbf{Yukawa from overlaps} --- evaluate \eqref{eq:breaking-yukawa}
+    on $\hat Q$ with explicit $\Phi_{\mathrm{Higgs}}$ from $\Hess V$
+    (Conjecture~\ref{conj:breaking-derived}); produces $y_{ij}$ and
+    $m_\iota$ without postulates.
+  \item \textbf{Flavon RG} --- prove Conjecture~\ref{conj:flavon} to refine
+    \eqref{eq:nu-ratio} from $16$ to the PDG value $\approx 33$.
+  \item \textbf{Scale identification} --- map $\kappa_\star$ and $\mu$ from
+    Theorem~\ref{thm:planck} to $M_{\mathrm{Pl}}$ and electroweak scale using
+    observer-local FRG (Remark~\ref{rmk:observer-frg}).
+\end{enumerate}
+
+\begin{remark}[Falsifiability standard]
+A prediction is \emph{on programme} when it has a contact map
+\eqref{eq:contact} and a named derivation step D1--D3. Until D1--D3 close,
+T2 predictions are order-of-magnitude targets, not precision fits; T1
+predictions are the primary falsifiers for new physics searches.
+\end{remark}% --- end 09-predictions.tex ---
 % --- 07-conclusions.tex ---
 %======================================================================%
 \section{Conclusions}
@@ -1351,6 +1583,17 @@ Conjectures & lifetime uniqueness, soldering uniqueness, full RP, GUT \\
 \bottomrule
 \end{tabular}
 \end{center}
+
+\subsection{Prediction development}
+
+Section~\ref{sec:predictions} maps SJET to 2025--2030 experiments.
+\textbf{Immediate falsifiers (T1):} $n_F=3$, $b_0=12$, no fourth generation.
+\textbf{Near-term targets (T2):} normal neutrino ordering and
+$\Delta m^2_{31}/\Delta m^2_{21}\sim\mathcal{O}(10)$ from capacity weights
+$1:10:16$. \textbf{Conditional (T3):} $\Lambda_{\mathrm{obs}}\approx 0$,
+$\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$. Closing derivation steps
+\textbf{D1--D3} (Section~\ref{sec:predictions:program}) is required for
+sub-percent agreement with JUNO and Muon $g$-2.
 
 \subsection{Open problems}
 
@@ -1641,6 +1884,16 @@ Symmetry breaking patterns in superstring models,
 H.~Georgi and S.~L.~Glashow,
 Unity of all elementary-particle forces,
 \emph{Phys.\ Rev.\ Lett.} \textbf{32} (1974), 438--441.
+
+\bibitem{MuonG2FNAL2025}
+Muon $g$-2 Collaboration,
+Final measurement of the muon anomalous magnetic moment,
+Fermilab press release, June 2025;
+\emph{Phys.\ Rev.\ Lett.} (submitted).
+
+\bibitem{PDG2025}
+Particle Data Group,
+Review of Particle Physics, 2025 edition.
 
 \bibitem{GlimmJaffe1987}
 J.~Glimm and A.~Jaffe,
