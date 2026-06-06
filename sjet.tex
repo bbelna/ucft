@@ -149,6 +149,8 @@ Sections~\ref{sec:yukawa},~\ref{sec:physics:flavon-rg},~\ref{sec:scales}:
 D1--D3 derivation pass (Yukawa overlaps, flavon RG, scale identification).
 Section~\ref{sec:predictions}: Tier~T1 predictions (exact and derived),
 experimental map, and falsification timeline 2026--2030.
+Section~\ref{sec:formal-foundations}: research-level categorical and analytic
+formalization (Definitions~\ref{def:formalization}--\ref{def:eval-functor}).
 Section~\ref{sec:conclusions}: axiomatic closure and prediction scorecard.
 Section~\ref{sec:gap-ledger}: epistemic elimination ledger (P1--P5, CC, D1--D3).
 Section~\ref{sec:derivation-complete}: master derivation chain and closure certificate.
@@ -6954,6 +6956,24 @@ Only two axioms are primitive. Every physical datum is an output of
 $\Climb^\infty(\Void)$ and observer collapse $\Pi_{\sigma=-1}$
 (Theorem~\ref{thm:master-derivation}), classified by proof tier
 (Definition~\ref{def:proof-tiers}).
+
+\subsection{Formalization layer}
+
+\textbf{Formalization layer (research-level).}
+Section~\ref{sec:formal-foundations} initiates the research-level formalization
+programme: categorical semantics of void and mirror
+(Definitions~\ref{def:stone-category},~\ref{def:mirror-functor}),
+profinite universe limit (Definition~\ref{def:universe-limit}),
+observer site and cohomology functor
+(Definitions~\ref{def:observer-site},~\ref{def:cohomology-functor}),
+separated analytic hypothesis bundle $\mathcal{H}_{\mathrm{SJET}}$
+(Definition~\ref{def:analytic-bundle}), and master evaluation functor
+$\mathsf{Eval}$ (Definition~\ref{def:eval-functor}).
+Programme closure (Waves~1--7) and formalization (Section~\ref{sec:formal-foundations})
+are distinct certificates
+(Corollary~\ref{cor:formalization-initiated}).
+Table~\ref{tab:formal-roadmap} records the next mathematical targets
+(\textbf{F6--F8}); machine formalization (\textbf{F9}) is optional.
 
 \subsection{Semantic closure achieved}
 
@@ -19255,6 +19275,463 @@ Remaining laboratory work is experimental readout (JUNO, Hyper-K, DESI Year-5)
 and out-of-scope many-body physics (Thread~IX), not missing SJET derivation
 routes.
 \end{remark}% --- end 35-wave7-residual-closure.tex ---
+% --- 36-formal-foundations.tex ---
+%======================================================================%
+\section{Research-Level Formal Foundations}
+\label{sec:formal-foundations}
+%======================================================================%
+
+Waves~1--7 close the \emph{programme}: thread ledgers, wave certificates, and
+Tier~C contacts on a complete map. The present section begins the
+\emph{formalization layer}: definitions and theorem statements written at the
+standard of a mathematical-physics research manuscript---explicit objects,
+functorial semantics, and a separated analytic hypothesis bundle. Nothing here
+introduces a third primitive; it makes implicit structure explicit so external
+readers (and future machine formalization) can audit what is proved, assumed,
+or contacted.
+
+%----------------------------------------------------------------------%
+\subsection{Formalization protocol}
+\label{sec:formal-foundations:protocol}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Research-level formalization]\label{def:formalization}
+A SJET claim is \textbf{research-formalized} when it specifies:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Objects.} Sets, algebras, or categories with morphisms, not
+    narrative rungs alone.
+  \item \textbf{Maps.} Functors or operators with domain, codomain, and
+    equivariance data (e.g.\ $\sigma$-action).
+  \item \textbf{Hypotheses.} Analytic conditions (OS, gap, convexity) listed
+    separately from void--mirror axioms.
+  \item \textbf{Conclusion tier.} Tier~A/B/C as a \emph{logical} classification:
+    A $=$ follows from (i)--(iii) without analytic bundle;
+    B $=$ follows given hypothesis bundle $\mathcal{H}_{\mathrm{SJET}}$;
+    C $=$ numerical contact from B with tolerance $\delta$.
+\end{enumerate}
+\end{definition}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}clp{0.44\linewidth}@{}}
+\toprule
+\textbf{Layer} & \textbf{Object} & \textbf{Research role} \\
+\midrule
+$\mathbf{Stone}$ &
+  Boolean rungs + morphisms &
+  Mirror acts here (Axioms~\ref{ax:void},~\ref{ax:mirror}) \\
+$\mathbf{Exc}$ &
+  Division + exceptional data &
+  Climb image $\Mirror^{\leq 8}(\Void)$ \\
+$\mathbf{Site}$ &
+  $(\mathcal{T}_7,\mathcal{F}_{16},\sigma)$ &
+  Observer cohomology, cellular count \\
+$\mathbf{Meas}$ &
+  $(\mathcal{H}_{\mathrm{obs}},d\mu_{\Gamma_{-1}})$ &
+  OS reconstruction domain \\
+$\mathbf{EFT}$ &
+  $(S_{\mathrm{eff}},\mathcal{A}_{\mathrm{obs}})$ &
+  SM+gravity effective theory \\
+$\mathbf{Obs}$ &
+  Laboratory observables + $\delta$ &
+  Tier~C contact layer \\
+\bottomrule
+\end{tabular}
+\caption{Formal layer stack. Programme closure (Waves~1--7) names functors into
+$\mathbf{Obs}$; formalization names the intermediate categories.}
+\label{tab:formal-layers}
+\end{table}
+
+%----------------------------------------------------------------------%
+\subsection{Categorical semantics of void and mirror}
+\label{sec:formal-foundations:category}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Stone rung category]\label{def:stone-category}
+Let $\mathbf{Stone}$ be the category whose objects are pairs
+$(S,A)$ with $S$ a finite Boolean algebra (Stone spectrum
+$X_S=\mathrm{Spec}(S)$) and $A$ a finite-dimensional unital $\R$-algebra
+attached to the active rung datum. Morphisms $(S_1,A_1)\to(S_2,A_2)$ are pairs
+$(f_S,f_A)$ with $f_S:S_1\to S_2$ a Boolean homomorphism and $f_A:A_1\to A_2$
+an $\R$-algebra map compatible with the mirror-refinement history. The void
+object is $\mathsf{V}:=(\mathcal{B}_0,\{0\})$ (Definition~\ref{def:void}).
+\end{definition}
+
+\begin{definition}[Mirror as involutive endofunctor]\label{def:mirror-functor}
+A \emph{mirror structure} on $\mathbf{Stone}$ is an endofunctor
+$\Mirror:\mathbf{Stone}\to\mathbf{Stone}$ together with a natural
+transformation $\eta:\mathrm{id}\Rightarrow\Mirror^2$ such that
+$\eta_{(S,A)}$ is an isomorphism on stabilized rungs
+(Proposition~\ref{prop:mirror:involution}). Axioms~\ref{ax:void}
+and~\ref{ax:mirror} assert existence of $\Mirror$ with
+$\Mirror(\mathsf{V})\neq\mathsf{V}$ and orbit generating
+\eqref{eq:climb:unified} through modes \textbf{M1}--\textbf{M4}
+(Definition~\ref{def:mirror:modes}).
+\end{definition}
+
+\begin{definition}[Climb morphism]\label{def:climb-morphism}
+Define $\mathrm{Bal}_{\mathcal{C}}:\mathbf{Exc}\to\mathbf{Exc}$ on stabilized
+exceptional objects as the capacity maximizer of
+Definition~\ref{def:capacity}. The \emph{climb endomorphism} is
+\begin{equation}\label{eq:formal-climb}
+  \mathsf{C}
+  \;:=\;
+  \mathrm{Bal}_{\mathcal{C}}\circ\Mirror
+  \;:\;
+  \mathbf{Stone}\longrightarrow\mathbf{Stone},
+\end{equation}
+with $\mathbf{Exc}\subset\mathbf{Stone}$ the full subcategory closed under
+$\Mirror$ from $\mathsf{V}$ through $\E{6}$.
+\end{definition}
+
+\begin{proposition}[Forced climb as initial object property]
+\label{prop:formal-climb-initial}
+Let $\mathcal{O}$ be the orbit category generated by $\mathsf{C}^n(\mathsf{V})$
+for $n\leq 8$ under $\mathsf{C}=\mathrm{Bal}_{\mathcal{C}}\circ\Mirror$.
+Then $\Mirror^{\leq 8}(\mathsf{V})$ is initial among objects of $\mathcal{O}$
+satisfying:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item Hurwitz terminal at $\Oct$ (Theorem~\ref{thm:rung-table});
+  \item Jordan exit to $\jalg$ (Lemma~\ref{lem:sedenion});
+  \item product mirror at $\E{8}\times\E{8}$ (Theorem~\ref{thm:e8e8});
+  \item Cartan descent to $\E{6}$ (Theorem~\ref{thm:e6}).
+\end{enumerate}
+Uniqueness is up to the involutions of Proposition~\ref{prop:mirror:involution}.
+\end{proposition}
+
+\begin{proof}
+Remark~\ref{rem:climb:forced} and Theorems~\ref{thm:rung-table}--\ref{thm:e6}
+show each constraint removes alternatives in $\mathcal{O}$; capacity strict
+concavity (Theorem~\ref{thm:concave}) fixes the $1|10|16$ split.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Universe datum as profinite limit}
+\label{sec:formal-foundations:universe}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Tower diagram and universe limit]\label{def:universe-limit}
+Let $\{\mathsf{C}^n(\mathsf{V})\}_{n\geq 0}$ be the climb tower in
+$\mathbf{Exc}$. The \emph{profinite universe diagram} is the cofiltered system
+\begin{equation}\label{eq:universe-diagram}
+  \cdots \longrightarrow \mathsf{C}^{n+1}(\mathsf{V}) \longrightarrow
+  \mathsf{C}^{n}(\mathsf{V}) \longrightarrow \cdots \longrightarrow
+  \mathsf{C}^{0}(\mathsf{V})=\mathsf{V},
+\end{equation}
+with transition maps the capacity-balanced mirror refinements on stabilized
+rungs. The \emph{universe datum} is the categorical limit
+\begin{equation}\label{eq:universe-limit}
+  \mathfrak{U}^\star
+  \;:=\;
+  \varprojlim_{n}\,\mathsf{C}^{n}(\mathsf{V}),
+\end{equation}
+when it exists, equipped with the Albert graph $\mathcal{G}_{\mathrm{Albert}}$,
+partition vector $(w_1,w_2,w_3)$, and EIII potential $V$
+(Definitions~\ref{def:universe},~\ref{def:potential}).
+\end{definition}
+
+\begin{theorem}[Universe limit existence]
+\label{thm:formal-universe-exists}
+Under Axioms~\ref{ax:void} and~\ref{ax:mirror}, the diagram
+\eqref{eq:universe-diagram} stabilizes at $n=8$ with
+$\mathsf{C}^{8}(\mathsf{V})\cong\E{6}$ on the exceptional subcategory. The
+limit \eqref{eq:universe-limit} exists and is isomorphic to the stabilized
+fixed point of Theorem~\ref{thm:universe}. The evaluator assembly in
+\eqref{eq:universe-summary} is the functor
+\begin{equation}\label{eq:formal-U}
+  \mathcal{U}
+  \;:\;
+  \mathbf{Exc}\longrightarrow\mathbf{Struct},
+  \qquad
+  \mathcal{U}(\mathfrak{U}^\star)=\mathfrak{E},
+\end{equation}
+with $\mathbf{Struct}$ the category of structured universe data
+(items~(i)--(vii) of Theorem~\ref{thm:universe-summary}).
+\end{theorem}
+
+\begin{proof}
+Stabilization at $\E{6}$ is Theorem~\ref{thm:e6}; cofiltered completeness on
+the finite stabilized subdiagram yields existence of
+$\varprojlim_{n\leq 8}\mathsf{C}^{n}(\mathsf{V})$. Theorem~\ref{thm:universe}
+identifies the limit with $\Climb^\infty(\Void)$. Item~(viii) is the physics
+evaluation functor of Theorem~\ref{thm:master-derivation}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Observer site and cohomological semantics}
+\label{sec:formal-foundations:site}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Observer site]\label{def:observer-site}
+The \emph{observer site} is the triple
+\begin{equation}\label{eq:observer-site}
+  \mathfrak{S}_{\mathrm{obs}}
+  \;:=\;
+  \bigl(
+    \mathcal{T}_7,\;
+    \mathcal{F}_{16},\;
+    \sigma
+  \bigr),
+\end{equation}
+with $\mathcal{T}_7$ (Definition~\ref{def:tower7}),
+$\mathcal{F}_{16}$ (Definition~\ref{def:F16}), and $\sigma$ the product-mirror
+involution (Definition~\ref{def:prod-mirror}). The mirror quotient
+$\hat Q=Q/\sigma$ (Definition~\ref{def:Qhat}) is the continuum Stone lift of
+$\mathcal{T}_7$.
+\end{definition}
+
+\begin{definition}[Observer cohomology functor]\label{def:cohomology-functor}
+Define the cohomology functor
+\begin{equation}\label{eq:cohomology-functor}
+  H^1_{\sigma=-1}
+  \;:\;
+  \mathfrak{S}_{\mathrm{obs}}
+  \longrightarrow
+  \mathbf{Vect}_\C,
+  \qquad
+  H^1_{\sigma=-1}(\mathfrak{S}_{\mathrm{obs}})
+  \;:=\;
+  H^1(\hat Q,V_{16})^{\sigma=-1}.
+\end{equation}
+Theorem~\ref{thm:observer-fp} asserts
+$\dim H^1_{\sigma=-1}=3$ and identifies $\mathcal{I}$ with a basis.
+\end{definition}
+
+\begin{definition}[Observer collapse as projector]\label{def:collapse-projector}
+On the Hilbert completion $\mathcal{H}(Q,V_{16})$ of cellular sections,
+observer collapse is the orthogonal projector
+\begin{equation}\label{eq:formal-Pi}
+  \Pi_{\sigma=-1}
+  \;=\;
+  \tfrac12(\mathrm{id}-\sigma),
+  \qquad
+  \mathcal{H}_{\mathrm{obs}}
+  \;:=\;
+  \Pi_{\sigma=-1}\,\mathcal{H}(Q,V_{16}).
+\end{equation}
+This is Definition~\ref{def:heterotic-collapse} in operator form.
+\end{definition}
+
+\begin{theorem}[Research-level observer certificate]
+\label{thm:formal-observer}
+The tuple $(\mathfrak{S}_{\mathrm{obs}},H^1_{\sigma=-1},\Pi_{\sigma=-1})$
+satisfies:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Exactness.} $\mathcal{H}(Q,V_{16})=\mathcal{H}_{\mathrm{obs}}
+    \oplus\mathcal{H}_{\mathrm{sh}}$ with
+    $\mathcal{H}_{\mathrm{sh}}=\ker(\Pi_{\sigma=-1})$ (Theorem~\ref{thm:duality}).
+  \item \textbf{Multiplicity.} $\dim\mathcal{H}_{\mathrm{obs}}\cap H^1=3$
+    (Theorem~\ref{thm:observer-fp}).
+  \item \textbf{Chirality.} Physical fermions are classes in
+    $H^1_{\sigma=-1}$, not postulated matter insertions
+    (Definition~\ref{def:physical}, Remark after Proposition~\ref{prop:p2-nogo}).
+\end{enumerate}
+\end{theorem}
+
+%----------------------------------------------------------------------%
+\subsection{Analytic hypothesis bundle}
+\label{sec:formal-foundations:hypotheses}
+%----------------------------------------------------------------------%
+
+Void and mirror fix the discrete skeleton; continuum quantum physics requires
+an explicit analytic bundle. The ledger \textbf{A1--A8}
+(Definition~\ref{def:assumption-ledger}) is the physics-facing list; the
+\emph{research formalization} compresses it into testable conditions on
+$d\mu_{\Gamma_{-1}}$.
+
+\begin{definition}[SJET analytic hypothesis bundle]
+\label{def:analytic-bundle}
+Let $d\mu_{\Gamma_{-1}}$ be the observable-sector Euclidean measure of
+Theorem~\ref{thm:sigma-measure}. Define
+\begin{equation}\label{eq:analytic-bundle}
+  \mathcal{H}_{\mathrm{SJET}}
+  \;:=\;
+  \bigl(
+    \mathrm{OS},\;
+    \mathrm{Gap},\;
+    \mathrm{Conv},\;
+    \mathrm{FRG},\;
+    \mathrm{EH}
+  \bigr),
+\end{equation}
+where:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item $\mathrm{OS}$ --- Euclidean invariance, symmetry, and clustering for
+    Schwinger functions of $d\mu_{\Gamma_{-1}}$ along $\tau_\iota$
+    (\textbf{A7}, Proposition~\ref{prop:os-observer}).
+  \item $\mathrm{Gap}$ --- uniform mass gap $\Delta_\iota\ge c\mu>0$ on the
+    $28$ coset directions (Theorem~\ref{thm:thread3-mass-gap}, \textbf{A3}).
+  \item $\mathrm{Conv}$ --- strict $\iota$-sector convexity of $V|_{\mathcal{S}_\iota}$
+    (\textbf{A6}, Proposition~\ref{prop:lifetime-flow-unique}).
+  \item $\mathrm{FRG}$ --- one-loop Jacobian block
+    \eqref{eq:frg-system} with $b_0=12$ (\textbf{A4}).
+  \item $\mathrm{EH}$ --- Einstein--Hilbert truncation with
+    $\sigma$-routed higher curvature (\textbf{A1},~\textbf{A8}).
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Analytic bundle derivation (Wave~1 upgrade)]
+\label{thm:formal-analytic-derived}
+Relative to void, mirror, and Theorem~\ref{thm:rp-complete}:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item $\mathrm{OS}$ is \textbf{derived} from void and mirror
+    (Theorem~\ref{thm:thread3-os-upgrade}); \textbf{A7} is not an independent
+    postulate.
+  \item $\mathrm{Gap}$, $\mathrm{Conv}$, $\mathrm{FRG}$, $\mathrm{EH}$ are
+    \textbf{ledger-selected truncations}: the unique $\Pi_{\sigma=-1}$-sector
+    effective descriptions compatible with capacity balance and
+    $\sigma$-factorization (Remark after Table~\ref{tab:proof-tier-ledger}).
+\end{enumerate}
+Tier~B theorems are precisely those conditional on
+$\mathcal{H}_{\mathrm{SJET}}$ in the sense of
+Definition~\ref{def:formalization}.
+\end{theorem}
+
+\begin{remark}[What remains genuinely open]
+\label{rmk:formal-open}
+Research-level honesty requires separating:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Derived.} Observer site, $\sigma$-split, climb uniqueness,
+    Tier~A anomaly arithmetic.
+  \item \textbf{Conditional on $\mathcal{H}_{\mathrm{SJET}}$.} OS
+    reconstruction to Wightman QFT (Theorem~\ref{thm:qm-derived}),
+    induced gravity, flavon RG.
+  \item \textbf{Open at Clay scale.} Non-abelian $\mathrm{SU}(3)_c$ OS gap on
+    the coloured bundle prior to $\Pi_{\mathrm{singlet}}$
+    (Corollary~\ref{cor:thread3-wave7-closure}, item~(iii)).
+  \item \textbf{Tier~C contacts.} Numerical matches with tolerance $\delta$;
+    not promoted to Tier~A without new hypotheses.
+\end{itemize}
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Physics evaluation functor}
+\label{sec:formal-foundations:eval}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Domain and observable categories]\label{def:domain-obs}
+Let $\mathbf{Dom}$ be the category whose objects are physics domains $D$
+(rows of Table~\ref{tab:physics-map-complete}) and whose morphisms are
+admissible EFT reductions (integrating out, matching, RG flow). Let
+$\mathbf{Obs}$ be the category of contact pairs $(O,\delta)$ with $O$ a
+laboratory observable and $\delta$ a tolerance (Definition~\ref{def:contact-map}).
+\end{definition}
+
+\begin{definition}[Master evaluation functor]\label{def:eval-functor}
+The \emph{master evaluation functor} is
+\begin{equation}\label{eq:formal-eval}
+  \mathsf{Eval}
+  \;:=\;
+  \mathcal{F}_{\mathrm{ph}}\circ\mathcal{F}_{\mathrm{EFT}}\circ
+  \mathcal{F}_{\mathrm{OS}}\circ\mathcal{F}_{\mathrm{site}}
+  \;:\;
+  \mathbf{Dom}\longrightarrow\mathbf{Obs},
+\end{equation}
+where:
+\begin{align*}
+  \mathcal{F}_{\mathrm{site}}(D)
+  &= \text{cellular/cohomological model on }\mathfrak{S}_{\mathrm{obs}},\\
+  \mathcal{F}_{\mathrm{OS}}(D)
+  &= \text{OS-positive measure data on }\mathcal{H}_{\mathrm{obs}},\\
+  \mathcal{F}_{\mathrm{EFT}}(D)
+  &= \text{ledger-truncated }S_{\mathrm{eff}}\text{ for }D,\\
+  \mathcal{F}_{\mathrm{ph}}(D)
+  &= \text{phenomenology contact with }\mathcal{D}_{\mathrm{ext}}(D)
+    \text{ when needed (Definition~\ref{def:thread-9-evaluator})}.
+\end{align*}
+Equation~\eqref{eq:master-pipeline} is $\mathsf{Eval}(D)$ evaluated on the
+initial object $\mathsf{V}$ of $\mathbf{Stone}$.
+\end{definition}
+
+\begin{theorem}[Physics map as functorial closure]
+\label{thm:formal-physics-map}
+Assume Theorem~\ref{thm:universe-summary} and
+Corollary~\ref{cor:physics-map-closure}. Then:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item Every $D\in\mathbf{Dom}$ admits a morphism
+    $\iota_D:D\to\mathfrak{E}$ in the climb semantics.
+  \item $\mathsf{Eval}(D)$ is defined and carries a tier in the sense of
+    Definition~\ref{def:formalization}.
+  \item Thread functors $\mathcal{F}_D$ of Waves~1--7 are components of
+    $\mathsf{Eval}$ on the corresponding subcategories of $\mathbf{Dom}$.
+\end{enumerate}
+\end{theorem}
+
+%----------------------------------------------------------------------%
+\subsection{Formalization roadmap}
+\label{sec:formal-foundations:roadmap}
+%----------------------------------------------------------------------%
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular}{@{}clcc@{}}
+\toprule
+\textbf{ID} & \textbf{Formal target} & \textbf{Status} & \textbf{Priority} \\
+\midrule
+F1 &
+  Category $\mathbf{Stone}$, $\Mirror$ endofunctor &
+  \textbf{Defined} --- \ref{def:stone-category}, \ref{def:mirror-functor} &
+  --- \\
+F2 &
+  Universe limit $\varprojlim\mathsf{C}^n(\mathsf{V})$ &
+  \textbf{Defined} --- \ref{def:universe-limit}, \ref{thm:formal-universe-exists} &
+  --- \\
+F3 &
+  Observer site $\mathfrak{S}_{\mathrm{obs}}$ &
+  \textbf{Defined} --- \ref{def:observer-site} &
+  --- \\
+F4 &
+  Analytic bundle $\mathcal{H}_{\mathrm{SJET}}$ &
+  \textbf{Defined} --- \ref{def:analytic-bundle} &
+  --- \\
+F5 &
+  Master functor $\mathsf{Eval}$ &
+  \textbf{Defined} --- \ref{def:eval-functor} &
+  --- \\
+F6 &
+  Full proofs for F1--F2 (categorical) &
+  \textbf{Partial} --- citations only &
+  High \\
+F7 &
+  OS reconstruction hypotheses as proved lemmas &
+  \textbf{Partial} --- Wave~1 upgrade &
+  High \\
+F8 &
+  Gauge sector on coloured bundle &
+  \textbf{Open} --- \ref{rmk:formal-open} &
+  Medium \\
+F9 &
+  Machine-checked core (Lean/Coq) &
+  \textbf{Not started} &
+  Optional \\
+\bottomrule
+\end{tabular}
+\caption{Formalization roadmap after Section~\ref{sec:formal-foundations}.
+Items \textbf{F1--F5} are research-level \emph{definitions}; \textbf{F6--F8}
+are the next mathematical work; \textbf{F9} is optional external audit.}
+\label{tab:formal-roadmap}
+\end{table}
+
+\begin{corollary}[Formalization layer initiated]
+\label{cor:formalization-initiated}
+The SJET manuscript now carries two non-overlapping closure certificates:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Programme closure} (Waves~1--7): thread ledgers, residual
+    partition, Tier~C execution
+    (Corollaries~\ref{cor:thread-ledger-closure},
+    \ref{cor:wave7-tierc-closure}).
+  \item \textbf{Formalization layer} (this section): categorical and analytic
+    objects for research-level audit
+    (Definitions~\ref{def:formalization}--\ref{def:eval-functor},
+    Table~\ref{tab:formal-roadmap}).
+\end{enumerate}
+Primitive axiom count remains $2$; the formalization layer does not add axioms,
+it adds \emph{semantic precision}.
+\end{corollary}% --- end 36-formal-foundations.tex ---
 % --- appendix.tex ---
 %======================================================================%
 \appendix
