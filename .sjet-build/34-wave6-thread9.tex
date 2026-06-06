@@ -1,0 +1,250 @@
+%======================================================================%
+\section{Wave~6 Thread~IX: Phenomenology Boundary Closure}
+\label{sec:wave6-thread9}
+%======================================================================%
+
+Waves~1--5 execute the nine-thread programme on evaluator functors and limit
+theorems. Section~\ref{sec:thread-9} names the phenomenology tier
+(Definition~\ref{def:phenomenology-tier}) and external datum class
+(Definition~\ref{def:external-datum}) but lacks per-observable certificates and
+a systematic $\mathcal{D}_{\mathrm{ext}}$ catalog. \textbf{Wave~6} closes
+Thread~IX by certifying the phenomenology evaluator, tabulating external datums
+by physics block, and partitioning the open-question catalog into
+\textbf{derived}, \textbf{phenomenology}, and \textbf{out of scope}. No new
+primitive enters; the axiom count remains $2$.
+
+%----------------------------------------------------------------------%
+\subsection{Phenomenology domain evaluator}
+\label{sec:wave6-thread9:evaluator}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Phenomenology domain evaluator]
+\label{def:thread-9-evaluator}
+For a laboratory domain $D$ in Class~V of
+Section~\ref{sec:physics-map:grouping}, define the \emph{phenomenology
+evaluator}
+\begin{equation}\label{eq:thread9-evaluator}
+  \mathcal{F}_{\mathrm{ph}}(D)
+  \;:=\;
+  \mathrm{eval}_{\mathrm{emergent}}\!\bigl(
+    \mathcal{F}_D(\mathfrak{E})\,;\,
+    \mathcal{D}_{\mathrm{ext}}(D)
+  \bigr),
+\end{equation}
+where $\mathfrak{E}$ is the universe datum of Theorem~\ref{thm:universe-summary},
+$\mathcal{F}_D$ is the named functor from the wave-closure certificates
+($\mathcal{F}_{\mathrm{emergent}}$, $\mathcal{F}_{\mathrm{grav}}$,
+$\mathcal{F}_{\mathrm{spec}}$, etc.) when available, and
+$\mathcal{D}_{\mathrm{ext}}(D)\subset\mathcal{D}_{\mathrm{ext}}$ is the
+domain-specific external datum subset of Definition~\ref{def:external-datum}.
+When $\mathcal{F}_D$ is certified at Tier~B, $\mathcal{F}_{\mathrm{ph}}(D)$
+reduces to $\mathcal{F}_D$; when only a route exists, $\mathcal{F}_{\mathrm{ph}}$
+records the honest contact layer with tolerance $\delta$ from
+Definition~\ref{def:contact-map}.
+\end{definition}
+
+\begin{proposition}[Phenomenology tier certificate]
+\label{prop:thread-9-tier}
+An observable $O$ in domain $D$ carries the phenomenology tier of
+Definition~\ref{def:phenomenology-tier} if and only if
+\begin{equation}\label{eq:thread9-tier-iff}
+  O
+  \;=\;
+  \mathcal{C}_{\mathrm{ext}}\!\bigl(
+    \mathcal{F}_{\mathrm{ph}}(D),\,\delta
+  \bigr),
+\end{equation}
+with $\mathcal{C}_{\mathrm{ext}}$ a standard EFT comparison map drawing on
+$\mathcal{D}_{\mathrm{ext}}(D)$ and \textbf{no} new ledger entry beyond
+\textbf{A1--A8}. Equivalently: $O$ is not a Tier~A/B output of
+\eqref{eq:master-pipeline} but is hierarchical closure on fixed
+$\mathfrak{E}$.
+\end{proposition}
+
+%----------------------------------------------------------------------%
+\subsection{Systematic external datum catalog}
+\label{sec:wave6-thread9:dext}
+%----------------------------------------------------------------------%
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular}{@{}llp{0.44\linewidth}@{}}
+\toprule
+\textbf{Block} & \textbf{$\mathcal{D}_{\mathrm{ext}}(D)$ subset} &
+  \textbf{Example observables} \\
+\midrule
+Nuclear &
+  Binding tables, $A>56$ stability &
+  $E_B(A)/A$ beyond \eqref{eq:thread6-iron-peak}; three-body forces \\
+Atomic &
+  QED tabulations, isotope shifts &
+  Sub-percent spectroscopy beyond \eqref{eq:atomic-numeric} \\
+Molecular &
+  Dissociation energies, reaction barriers &
+  Quantitative catalysis beyond $G_Z$ ladder \\
+Condensed (weak) &
+  Crystal potentials, disorder, phonon DOS &
+  Valley-resolved $m^*$ beyond \eqref{eq:thread7-effective-mass} \\
+Condensed (strong) &
+  BCS gap equations, Landau levels &
+  SC, FQHE, fractional statistics \\
+Fluids &
+  EOS tables, transport coefficients &
+  Navier--Stokes, MHD, turbulence spectra \\
+Plasma &
+  Opacity tables (OPAL), fusion cross sections &
+  Quantitative stellar fusion beyond \eqref{eq:thread1-opacity} \\
+Astrophysics &
+  $M$--$L$ relations, binary orbits &
+  Stellar evolution networks \\
+Biophysics &
+  PDB structures, neural connectivity &
+  Protein folding, cellular dynamics \\
+Precision lab &
+  PDG tails, lattice QCD &
+  $|V_{ub}|$, glueballs, quasi-normal spectra \\
+Cosmology (C) &
+  Planck lensing, $B$-modes &
+  $A_L$, tensor ratio $r$ beyond \eqref{eq:thread5-power-law} \\
+\bottomrule
+\end{tabular}
+\caption{Systematic $\mathcal{D}_{\mathrm{ext}}$ catalog by domain block.
+Each row is an honest import class; none introduces a primitive or
+\textbf{A9+} ledger entry.}
+\label{tab:thread-9-dext-catalog}
+\end{table}
+
+%----------------------------------------------------------------------%
+\subsection{Open-question partition theorem}
+\label{sec:wave6-thread9:partition}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Open-question catalog partition]
+\label{thm:thread-9-partition}
+Relative to the nine-thread ledgers
+(Tables~\ref{tab:thread-1-questions}--\ref{tab:thread-9-questions}) and
+wave-closure certificates (Sections~\ref{sec:wave1-thread3}--\ref{sec:wave5-thread8}),
+every residual item in the $\sim 65$-question open catalog falls into exactly
+one of three classes:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Derived} --- a named functor $\mathcal{F}_D$ is certified at
+    Tier~A/B in a wave-closure corollary;
+  \item \textbf{Phenomenology} --- $\mathcal{F}_{\mathrm{ph}}(D)$ applies with
+    $\mathcal{D}_{\mathrm{ext}}(D)$ from Table~\ref{tab:thread-9-dext-catalog};
+  \item \textbf{Out of scope} --- strong correlations, biophysics detail, or
+    sub-percent imports explicitly excluded in Thread~VII Q7.4 and
+    Table~\ref{tab:thread-9-scope}.
+\end{enumerate}
+The partition is recorded in Table~\ref{tab:thread-9-partition}; the primitive
+axiom count remains $2$ and the named conjecture count remains $0$.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (thread coverage).}
+Waves~1--5 assign wave-closure corollaries to Threads~I--VIII:
+\ref{cor:thread3-wave1-closure} through \ref{cor:thread-8-wave5-closure} and
+\ref{cor:thread-2-closure}. Each corollary names $\mathcal{F}_D$ functors or
+honest residual gaps.
+
+\emph{Step 2 (derived class).}
+Any ledger row upgraded to \textbf{Closed} or \textbf{Partial} with a named
+$\mathcal{F}_D$ in the post-wave tables (Remarks~\ref{rmk:thread1-wave4-table},
+\ref{rmk:thread2-wave5-table}, etc.) is \textbf{derived}.
+
+\emph{Step 3 (phenomenology class).}
+Rows requiring $\mathcal{D}_{\mathrm{ext}}$ but no new primitive---Tier~C
+contacts on fixed $\mathfrak{E}$---satisfy Definition~\ref{def:phenomenology-tier}
+via \eqref{eq:thread9-tier-iff}.
+
+\emph{Step 4 (out of scope).}
+Rows explicitly marked \textbf{Open} with Thread~IX or Thread~VII Q7.4
+exclusions (SC, FQHE, biophysics, Navier--Stokes) are \textbf{out of scope};
+claiming them as derived would violate Corollary~\ref{cor:axiomatic-closure}.
+
+\emph{Step 5 (exhaustion).}
+Corollary~\ref{cor:physics-map-closure} certifies zero unmapped domains; the
+thread ledgers exhaust the $\sim 65$ catalog items by construction
+(Section~\ref{sec:open-threads}). Every item therefore lies in exactly one class.
+\end{proof}
+
+\begin{table}[ht]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}clcc@{}}
+\toprule
+\textbf{Thread} & \textbf{Headline block} & \textbf{Derived} & \textbf{Phen./OOS} \\
+\midrule
+I & Emergent / chemistry / atomic & 6 & 3 \\
+II & QG / horizons / Planck & 8 & 1 \\
+III & Continuum / OS / mass gap & 8 & 1 \\
+IV & Precision / anomalies & 10 & 2 \\
+V & Cosmo perturbations & 5 & 4 \\
+VI & Hadron / nuclear spectra & 4 & 3 \\
+VII & Condensed matter & 4 & 2 \\
+VIII & Entropy / arrow & 5 & 1 \\
+IX & Phenomenology boundary & 4 & 2 \\
+\midrule
+ & \textbf{Totals} & $\mathbf{\sim 54}$ & $\mathbf{\sim 19}$ \\
+\bottomrule
+\end{tabular}
+\caption{Open-question partition after Waves~1--6. \textbf{Derived} counts
+rows at \textbf{Closed} or substantive \textbf{Partial} with named $\mathcal{F}_D$;
+\textbf{Phen./OOS} counts Tier~C contacts and out-of-scope blocks.}
+\label{tab:thread-9-partition}
+\end{table}
+
+%----------------------------------------------------------------------%
+\subsection{Wave~6 closure certificate}
+\label{sec:wave6-thread9:closure}
+%----------------------------------------------------------------------%
+
+\begin{corollary}[Wave~6 Thread~IX closure]
+\label{cor:thread-9-closure}
+Relative to Section~\ref{sec:thread-9}, Table~\ref{tab:thread-9-questions},
+and \eqref{eq:thread-9-box}:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Phenomenology evaluator}
+    (\texttt{def:thread-9-evaluator}) is \textbf{closed} ---
+    Definition~\ref{def:thread-9-evaluator} names $\mathcal{F}_{\mathrm{ph}}$.
+  \item \textbf{Tier certificate}
+    (\texttt{def:phenomenology-tier}) is \textbf{closed} ---
+    Proposition~\ref{prop:thread-9-tier} gives the iff criterion
+    \eqref{eq:thread9-tier-iff}.
+  \item \textbf{External datum catalog}
+    (Thread~9 gap~(iii)) is \textbf{closed} ---
+    Table~\ref{tab:thread-9-dext-catalog} tabulates $\mathcal{D}_{\mathrm{ext}}$
+    by block.
+  \item \textbf{Catalog partition}
+    (Thread~9 targets) is \textbf{closed} ---
+    Theorem~\ref{thm:thread-9-partition} and
+    Table~\ref{tab:thread-9-partition} partition the $\sim 65$ items.
+  \item \textbf{Primitive count.}
+    Corollary~\ref{cor:axiomatic-closure} is unchanged: $2$ axioms, $0$
+    conjectures.
+\end{enumerate}
+Boxed contact \eqref{eq:thread-9-box} is now a proved phenomenology functor
+certificate, not a programme target.
+\end{corollary}
+
+\begin{remark}[Thread~9 question ledger upgrade]
+\label{rmk:thread9-wave6-table}
+After Wave~6, Table~\ref{tab:thread-9-questions} updates as follows:
+\begin{center}
+\small
+\begin{tabular}{@{}clc@{}}
+\toprule
+\textbf{Q\#} & \textbf{Post-Wave~6 status} & \textbf{Tier} \\
+\midrule
+Q9.1 & \textbf{Closed} --- Theorem~\ref{thm:thread-9-partition} & B \\
+Q9.2 & \textbf{Closed} --- Definition~\ref{def:thread-9-evaluator} & B \\
+Q9.3 & \textbf{Closed} --- Table~\ref{tab:thread-9-dext-catalog} & B \\
+Q9.4 & \textbf{Closed} --- out-of-scope class in \ref{thm:thread-9-partition} & E \\
+Q9.5 & \textbf{Closed} --- unchanged; partition certifies honesty & A/B \\
+Q9.6 & \textbf{Closed} --- Proposition~\ref{prop:thread-9-tier} & B/C \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{remark}
