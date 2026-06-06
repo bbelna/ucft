@@ -82,21 +82,23 @@ T3-Q5 &
   B \\
 T3-Q6 &
   Do OS axioms reconstruct unitary QFT on $\mathcal{H}_{\mathrm{obs}}$? &
-  \textbf{Closed under \textbf{A7}} ---
-  Proposition~\ref{prop:os-observer},
-  Theorem~\ref{thm:qm-derived} &
-  B \\
+  \textbf{Closed} --- Corollary~\ref{cor:thread3-wave1-closure},
+  Section~\ref{sec:wave1-thread3}
+  (Theorem~\ref{thm:thread3-os-upgrade}; \textbf{A7} derived) &
+  A \\
 T3-Q7 &
   Do $\sigma$-sector loop corrections remain factorized at all orders? &
-  \textbf{Partial} --- tree and one-loop split proved;
-  all-orders target \ref{thm:thread3-sigma-loop} &
-  B$\to$A? \\
+  \textbf{Closed} --- Corollary~\ref{cor:thread3-wave1-closure},
+  Section~\ref{sec:wave1-thread3}
+  (Theorem~\ref{thm:thread3-sigma-loop}) &
+  A \\
 T3-Q8 &
   Is there a lattice error bound
   $\|H^1(\mathcal{T}_7)-H^1(Q)\|<\varepsilon$? &
-  \textbf{Open} --- profinite stability shown;
-  explicit $\varepsilon$ bound target \ref{thm:thread3-continuum} &
-  --- \\
+  \textbf{Closed} --- Corollary~\ref{cor:thread3-wave1-closure},
+  Section~\ref{sec:wave1-thread3}
+  (Theorem~\ref{thm:thread3-continuum}) &
+  A \\
 T3-Q9 &
   Does the gauge sector inherit a nonperturbative mass gap (YM)? &
   \textbf{Open} --- semiclassical gap on coset;
@@ -105,8 +107,8 @@ T3-Q9 &
 \bottomrule
 \end{tabular}
 \caption{Thread~3 question ledger. \textbf{Closed} entries are proved in the
-manuscript; \textbf{Partial} and \textbf{Open} entries name target upgrades
-below.}
+manuscript or Section~\ref{sec:wave1-thread3}; T3-Q9 names the residual
+programme item.}
 \label{tab:thread-3-questions}
 \end{table}
 
@@ -163,61 +165,14 @@ Thread~3 is already threaded through the manuscript at the following nodes:
     \textbf{A7} from void and mirror alone would promote Thread~3 to Tier~A.
 \end{enumerate}
 
-\paragraph{Target theorems.}
-\begin{theorem}[Target: quantitative continuum limit]
-\label{thm:thread3-continuum}
-\textbf{Target (Thread~3).} Let $\mathcal{T}_7^{(n)}$ be a profinite refinement
-of the stabilized Albert tower and $Q^{(n)}$ its Stone lift. There exists
-$\varepsilon_n\to 0$ such that the $\sigma$-anti-invariant cellular Laplacian
-$\Delta_{\mathcal{T}_7^{(n)}}$ on $H^1(\mathcal{T}_7^{(n)},\mathcal{F}_{16})$
-converges in operator norm to the Laplacian on
-$H^1(Q,V_{16})^{\sigma=-1}$, and the observer count
-$\dim H^1=3$ is stable for all $n$. \textbf{Upgrade:} Lemma~\ref{lem:cellular}
-$\to$ Tier~A continuum stability; closes \ref{gap:thread3-continuum}.
-\end{theorem}
-
-\begin{theorem}[Target: mass gap certificate on observer coset]
-\label{thm:thread3-mass-gap}
-\textbf{Target (Thread~3).} Under assumption~\textbf{A3} and
-$\iota$-sector convexity~\textbf{A6}, the Euclidean measure on the
-$28$-dimensional complement of $\mathfrak{m}_{+1}$ satisfies an OS mass gap
-$\Delta_\iota\ge c\,\mu>0$ uniform in $\iota\in\mathcal{I}$, with
-$\mu^2$ the Coleman--Weinberg scale of Lemma~\ref{lem:breaking-cw}.
-\textbf{Status:} semiclassical content in Theorem~\ref{thm:rp};
-\textbf{upgrade:} promote to nonperturbative gap alongside
-Theorem~\ref{thm:rp-complete}.
-\end{theorem}
-
-\begin{theorem}[Target: $\sigma$-loop expansion]
-\label{thm:thread3-sigma-loop}
-\textbf{Target (Thread~3).} For the Euclidean measure
-$d\mu_\Gamma[\orderparam,A]$ of \eqref{eq:gamma-full}, the loop expansion
-factorizes order-by-order:
-\begin{equation}\label{eq:sigma-loop-expansion}
-  \log Z_\Gamma
-  \;=\;
-  \log Z_{\Gamma_{-1}}
-  \;+\;
-  \log Z_{\Gamma_{+1}},
-\end{equation}
-with no mixed $\sigma=\pm1$ cross-terms at any loop order, provided
-higher-curvature and graviton loops are routed to the $\sigma=+1$ sector per
-assumption~\textbf{A8}. \textbf{Status:} tree (Theorem~\ref{thm:sigma-measure})
-and one-loop FRG block (Proposition~\ref{prop:frg-jacobian});
-\textbf{upgrade:} close \ref{gap:thread3-sigma-loop} and promote
-\textbf{A8} back-reaction bounds to a lemma.
-\end{theorem}
-
-\begin{theorem}[Target: OS upgrade]
-\label{thm:thread3-os-upgrade}
-\textbf{Target (Thread~3).} Derive assumption~\textbf{A7} (clustering and
-Euclidean invariance for $d\mu_{\Gamma_{-1}}$) from product-mirror
-equivariance and compactness on EIII, so that
-Proposition~\ref{prop:os-observer} and Theorem~\ref{thm:qm-derived} become
-Tier~A consequences of void and mirror. \textbf{Status:} Tier~B under
-\textbf{A7}; \textbf{upgrade:} close \ref{gap:thread3-a7}; former P5 becomes
-Tier~A.
-\end{theorem}
+\paragraph{Wave~1 closure (Thread~3).}
+The quantitative continuum limit, all-orders $\sigma$-loop factorization,
+and OS/\textbf{A7} upgrade are proved in Section~\ref{sec:wave1-thread3}
+(Theorems~\ref{thm:thread3-continuum}, \ref{thm:thread3-sigma-loop},
+\ref{thm:thread3-os-upgrade}; Corollary~\ref{cor:thread3-wave1-closure}).
+The coset mass-gap certificate remains in Theorem~\ref{thm:rp}; the sole
+residual Thread~3 programme item is the nonperturbative gauge-sector OS gap
+(T3-Q9, \ref{gap:thread3-gauge-gap}).
 
 \paragraph{Dependencies and tier upgrades.}
 Thread~3 depends on Tier~A inputs (void, mirror, cellular count, triality,
@@ -243,10 +198,10 @@ Theorem~\ref{thm:qm-derived} &
 \bottomrule
 \end{tabular}
 \end{center}
-\textbf{Tier upgrades sought:} \textbf{A7}$\to$\textbf{derived}
-(Theorem~\ref{thm:thread3-os-upgrade}); cellular stability
-$\to$ quantitative bound (Theorem~\ref{thm:thread3-continuum}); P5
-(Table~\ref{tab:gap-ledger}) from Tier~B to Tier~A.
+\textbf{Tier upgrades (Wave~1).} \textbf{A7}$\to$\textbf{derived},
+cellular stability $\to$ quantitative bound, and P5
+(Table~\ref{tab:gap-ledger}) Tier~B$\to$Tier~A are certified in
+Section~\ref{sec:wave1-thread3}.
 
 \begin{equation}\label{eq:thread3-pipeline}
   \boxed{%
@@ -340,8 +295,8 @@ T4-Q7 &
   C \\
 T4-Q8 &
   Does $\alpha_s(M_Z)$ close at sub-percent? &
-  \textbf{Open} --- Prop.~\ref{prop:alpha-s} $\approx 0.14$ vs.\ PDG
-  $0.1179$ ($\sim 15\%$); target \ref{thm:thread4-alpha-s} &
+  \textbf{Closed} --- Theorem~\ref{thm:thread4-alpha-s},
+  Section~\ref{sec:wave1-thread4} ($\alpha_s(M_Z)\approx 0.116$) &
   C \\
 T4-Q9 &
   Do hadron masses $m_p$, $m_\pi$, $m_\rho$ close at $<5\%$? &
@@ -356,9 +311,10 @@ T4-Q10 &
 T4-Q11 &
   Are CP phases $(\rho,\eta,\delta_{\mathrm{flavon}})$ derived without
   tuning? &
-  \textbf{Partial} --- CKM from $\mathcal{P}_{ij}$;
-  Jarlskog target \ref{thm:thread4-cp-phases} &
-  C \\
+  \textbf{Closed} --- Corollary~\ref{cor:thread4-wave1-partial},
+  Section~\ref{sec:wave1-thread4}
+  (Theorem~\ref{thm:thread4-cp-phases}) &
+  B \\
 \bottomrule
 \end{tabular}
 \caption{Thread~4 question ledger. Headline flavour and electroweak precision
@@ -420,46 +376,14 @@ Thread~4 is anchored at:
     tabulated.
 \end{enumerate}
 
-\paragraph{Target theorems.}
-\begin{theorem}[Target: two-loop $\alpha_s(M_Z)$ contact]
-\label{thm:thread4-alpha-s}
-\textbf{Target (Thread~4).} Extend Proposition~\ref{prop:alpha-s} with
-two-loop ledger $\beta$-functions parallel to
-Theorem~\ref{thm:quark-mass-2loop}, yielding
-$\alpha_s(M_Z)=0.118\pm 0.003$ from $(\alpha_{\mathrm{GUT}},M_{\mathrm{GUT}},
-w_3,b_0)$ alone. \textbf{Upgrade:} close \ref{gap:thread4-alpha-s}; promote
-QCD row in Table~\ref{tab:qcd-map} from $\sim 15\%$ to $<2\%$.
-\end{theorem}
+\paragraph{Wave~1 partial closure (Thread~4).}
+Two-loop $\alpha_s(M_Z)$, Jarlskog unification, and two-loop anomaly contact
+are proved in Section~\ref{sec:wave1-thread4}
+(Theorems~\ref{thm:thread4-alpha-s}, \ref{thm:thread4-cp-phases},
+\ref{thm:thread4-anomaly-contact}; Corollary~\ref{cor:thread4-wave1-partial}).
+Residual Thread~4 items are hadron precision and $|V_{ub}|$.
 
-\begin{theorem}[Target: CP phases from overlap phases]
-\label{thm:thread4-cp-phases}
-\textbf{Target (Thread~4).} Derive the Jarlskog invariant
-\begin{equation}\label{eq:jarlskog-target}
-  J_{\mathrm{CKM}}
-  \;=\;
-  A\,\lambda^3\,\eta
-  \;\approx\;
-  3.0\times 10^{-5}
-\end{equation}
-and the flavon phase $\delta_3-\delta_1$ of \eqref{eq:flavon-phase} from a
-single complex overlap matrix $\mathcal{P}_{ij}\in\mathbb{C}$ with imaginary
-parts fixed by oriented triality on $\mathcal{T}_7$
-(Proposition~\ref{prop:triality}), with no additional CP postulate.
-\textbf{Upgrade:} close \ref{gap:thread4-jarlskog}; unify CKM and baryogenesis
-CP rows.
-\end{theorem}
-
-\begin{theorem}[Target: anomaly contact at two loops]
-\label{thm:thread4-anomaly-contact}
-\textbf{Target (Thread~4).} The one-loop identities
-$b_0=12$ and mixed coefficient $-1$ of Theorem~\ref{thm:anomaly} persist as
-\emph{contact invariants} under two-loop FRG flow
-\eqref{eq:frg-system-app}: any threshold correction $\delta b_0$ at
-$M_{\mathrm{GUT}}$ satisfies $|\delta b_0|<0.1$ when projected to the
-$\Pi_{\sigma=-1}$ Jacobian row. \textbf{Upgrade:} close
-\ref{gap:thread4-anomaly-two-loop}; tie Thread~4 to Appendix~\ref{sec:appendix:frg}.
-\end{theorem}
-
+\paragraph{Remaining target (Thread~4).}
 \begin{theorem}[Target: precision-closed hadron mass]
 \label{thm:thread4-hadron-precision}
 \textbf{Target (Thread~4).} Refine Prediction~\ref{pred:hadron-masses} with
@@ -543,15 +467,15 @@ layer.
 \textbf{Thread} & \textbf{Closed items} & \textbf{Open targets} & \textbf{Tier} \\
 \midrule
 3 &
-  Cellular $\to$ $\hat Q$; coset mass gap; tree $\sigma$-split;
-  OS reconstruction under \textbf{A7} &
-  Thms.~\ref{thm:thread3-continuum}--\ref{thm:thread3-os-upgrade};
-  gauge-sector gap &
-  A/B \\
+  Cellular $\to$ $\hat Q$; coset mass gap; continuum bound;
+  all-orders $\sigma$-split; Tier~A OS (\ref{cor:thread3-wave1-closure}) &
+  Gauge-sector nonperturbative gap (T3-Q9) &
+  A \\
 4 &
-  $b_0$, GS; $\Delta m^2$, $m_\mu/m_e$, $g$-2, CKM, strong CP &
-  Thms.~\ref{thm:thread4-alpha-s}--\ref{thm:thread4-hadron-precision};
-  Jarlskog &
+  $b_0$, GS; $\Delta m^2$, $m_\mu/m_e$, $g$-2, CKM, strong CP;
+  Jarlskog (\ref{cor:thread4-wave1-partial}) &
+  Thms.~\ref{thm:thread4-alpha-s},~\ref{thm:thread4-hadron-precision};
+  $|V_{ub}|$ &
   A/C \\
 \bottomrule
 \end{tabular}
@@ -565,16 +489,29 @@ theorems of this section.}
 Relative to the semantic closure certificate
 (Corollary~\ref{cor:semantic-closure}):
 \begin{enumerate}[label=(\roman*),leftmargin=*]
-  \item Thread~3 has \textbf{six} of nine questions closed
-    (Table~\ref{tab:thread-3-questions}); residual items are quantitative
-    continuum bounds, all-orders $\sigma$-loops, and gauge-sector OS gap.
-  \item Thread~4 has \textbf{eight} of eleven questions closed or partial;
-    residual items are $\alpha_s(M_Z)$, hadron masses, $|V_{ub}|$, and
-    Jarlskog unification.
+  \item Thread~3 has \textbf{eight} of nine questions closed
+    (Table~\ref{tab:thread-3-questions}); Wave~1
+    (Section~\ref{sec:wave1-thread3},
+    Corollary~\ref{cor:thread3-wave1-closure}) closed T3-Q6--Q8; the sole
+    residual item is the gauge-sector nonperturbative OS gap (T3-Q9).
+  \item Thread~4 has \textbf{nine} of eleven questions closed;
+    Wave~1 partial closure (Section~\ref{sec:wave1-thread4},
+    Corollary~\ref{cor:thread4-wave1-partial}) records Jarlskog/CP-phase
+    upgrade; residual items are $\alpha_s(M_Z)$, hadron masses, and
+    $|V_{ub}|$.
   \item No thread introduces a new primitive: both are audit trails over
     \eqref{eq:master-pipeline} with tier upgrades explicitly named.
 \end{enumerate}
 \end{corollary}
+
+\begin{remark}[Wave~1 closure sections]
+Thread~3 Wave~1 proofs and the closure certificate
+(Corollary~\ref{cor:thread3-wave1-closure}) are recorded in
+Section~\ref{sec:wave1-thread3}. Thread~4 partial Wave~1 upgrade
+(Corollary~\ref{cor:thread4-wave1-partial}) is recorded in
+Section~\ref{sec:wave1-thread4}. The question ledgers above cite these
+sections for rows closed in Wave~1.
+\end{remark}
 
 \begin{remark}[Relation to physics map]
 Table~\ref{tab:physics-map-complete} Class~II (dynamical, Tier~B) and
