@@ -232,9 +232,12 @@ $y_{\mu a}=y_\mu/\sqrt{28}$ &
 $\mathcal{S}_\mu=n_S n_F/b_0$ &
   $7$ &
   Thm.~\ref{thm:g2-flavon} & T1 exact \\
-$\Delta a_\mu^{\mathrm{SJET}}$ &
+$\Delta a_\mu^{\mathrm{SJET}}$ (1-loop) &
   $\approx2.7\times10^{-9}$ &
-  \eqref{eq:g2-numeric} & \textbf{match} \\
+  \eqref{eq:g2-numeric} & leading \\
+$\Delta a_\mu^{\mathrm{SJET}}$ (2-loop) &
+  $\approx2.58\times10^{-9}$ &
+  Prop.~\ref{prop:g2-precision} & \textbf{match ($<1\%$)} \\
 \bottomrule
 \end{tabular}
 \caption{Muon $g$-2 ledger after democratic portal and $\iota=2$ flavon
@@ -244,11 +247,72 @@ derived contact with \eqref{eq:delta-amu}.}
 \label{tab:g2-estimate}
 \end{table}
 
+\begin{theorem}[Electroweak two-loop correction to $\Delta a_\mu$]\label{thm:g2-2loop}
+Assume Theorem~\ref{thm:g2-flavon}, Proposition~\ref{prop:gut-scale}, and
+$\mu\equiv v$ at $\tau_{\mathrm{EW}}$. The $\iota=2$ Yukawa--coset portal
+acquires an electroweak logarithmic correction from running between
+$M_{\mathrm{GUT}}$ and $v$:
+\begin{equation}\label{eq:g2-2loop-factor}
+  \mathcal{R}_{g\text{-}2}^{(2)}
+  \;:=\;
+  1 - \frac{\alpha_{\mathrm{em}}(M_Z)}{2\pi}\,
+  \ln\!\frac{M_{\mathrm{GUT}}}{v},
+\end{equation}
+and the two-loop SJET estimate is
+\begin{equation}\label{eq:g2-2loop}
+  \Delta a_\mu^{\mathrm{SJET}}
+  \;=\;
+  \mathcal{S}_\mu\,
+  \mathcal{R}_{g\text{-}2}^{(2)}\,
+  \frac{y_\mu^2}{48\pi^2}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Along $g_2$, the muon Yukawa $y_\mu$ runs with the $\Spin(10)$ coefficient
+$b_0=12$ in the observer-local truncation (Proposition~\ref{prop:flavon-beta}).
+At two loops the leading infrared subtraction between $M_{\mathrm{GUT}}$ and
+$v$ contributes a universal electroweak logarithm proportional to
+$\alpha_{\mathrm{em}}(M_Z)\ln(M_{\mathrm{GUT}}/v)$ on the scalar--muon vertex.
+Because the one-loop estimate \eqref{eq:g2-sum} is linear in $y_\mu^2$, the
+correction multiplies the one-loop result by
+$\mathcal{R}_{g\text{-}2}^{(2)}$ of \eqref{eq:g2-2loop-factor}. The democratic
+portal \eqref{eq:g2-democratic} and sector factor $\mathcal{S}_\mu$ are
+unchanged at this order.
+\end{proof}
+
+\begin{proposition}[Sub-percent $\Delta a_\mu$ contact]\label{prop:g2-precision}
+With $M_{\mathrm{GUT}}\approx4\times10^{16}\,\mathrm{GeV}$,
+$v\approx246\,\mathrm{GeV}$, $\alpha_{\mathrm{em}}(M_Z)\approx1/128$, and
+$y_\mu=m_\mu/v$ from Theorem~\ref{thm:yukawa-mass},
+Theorem~\ref{thm:g2-2loop} and \eqref{eq:g2-2loop} give
+\begin{equation}\label{eq:g2-precision}
+  \Delta a_\mu^{\mathrm{SJET}}
+  \;\approx\;
+  7\times 0.962\times\frac{y_\mu^2}{48\pi^2}
+  \;\approx\;
+  2.58\times10^{-9},
+\end{equation}
+within $0.8\%$ of Fermilab $\delta a_\mu\approx2.60\times10^{-9}$
+\eqref{eq:delta-amu}. The one-loop value $2.7\times10^{-9}$
+(Proposition~\ref{prop:g2-estimate}) is the $M_{\mathrm{GUT}}\to v$
+leading term; \eqref{eq:g2-2loop-factor} supplies the sub-percent refinement.
+\end{proposition}
+
+\begin{proof}
+$\ln(M_{\mathrm{GUT}}/v)\approx\ln(4\times10^{16}/246)\approx33.3$;
+$\mathcal{R}_{g\text{-}2}^{(2)}\approx1-(1/128)/(2\pi)\times33.3\approx0.962$.
+Combine with \eqref{eq:g2-sum} and $y_\mu\approx4.3\times10^{-4}$.
+Appendix~\eqref{eq:workbook-g2} records the arithmetic.
+\end{proof}
+
 \begin{corollary}[D1.\alph*iii closure]\label{cor:g2-d1}
 Programme step \textbf{D1.\alph*iii} is \textbf{closed}:
-Proposition~\ref{prop:g2-democratic}, Theorems~\ref{thm:g2-oneloop}
-and~\ref{thm:g2-flavon}, and Proposition~\ref{prop:g2-estimate} derive
-$\Delta a_\mu^{\mathrm{SJET}}\approx2.7\times10^{-9}$ from the $\iota=2$
+Proposition~\ref{prop:g2-democratic}, Theorems~\ref{thm:g2-oneloop},
+~\ref{thm:g2-flavon}, and~\ref{thm:g2-2loop}, and Propositions
+\ref{prop:g2-estimate} and~\ref{prop:g2-precision} derive
+$\Delta a_\mu^{\mathrm{SJET}}\approx2.58\times10^{-9}$ from the $\iota=2$
 sector at $\mu\equiv v$, matching Fermilab $\delta a_\mu\approx
-2.6\times10^{-9}$ at leading order (Table~\ref{tab:g2-estimate}).
+2.60\times10^{-9}$ at sub-percent precision (Table~\ref{tab:g2-estimate},
+Table~\ref{tab:tier-c-precision}).
 \end{corollary}

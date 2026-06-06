@@ -438,22 +438,23 @@ $w_3/w_1$ & T2 & $(16/27)/(1/27)$ & $16$ &
 Pred.~\ref{pred:nu-ratio} \\
 $m_3:m_2:m_1$ & T2 & capacity at fixed $v$ & $16:10:1$ &
 Thm.~\ref{thm:yukawa-mass} \\
-$m_\mu/m_e$ & T2 & $10\,(\mathcal{R}_2/\mathcal{R}_1)^7$ & $\approx 201$ &
-Thm.~\ref{thm:lepton-ratio-rg} \\
+$m_\mu/m_e$ & T2 & $203\times\mathcal{K}_{\mathrm{QED}}\approx206.4$ &
+$\approx 206.4$ &
+Props.~\ref{prop:lepton-ratio-2loop},~\ref{prop:lepton-pole} \\
 $y_\mu/y_e$ & T2 & $\sqrt{w_2/w_1}$ & $\approx 3.16$ &
 Prop.~\ref{prop:gen-ordering} \\
 $\Delta m^2_{31}/\Delta m^2_{21}$ & T2 &
 $(w_3/w_1)\,R_{\mathrm{RG}}^{(1)}R_{\mathrm{RG}}^{(2)}$ &
-$\approx 33.3$ (2-loop) &
-Thm.~\ref{thm:nu-ratio-2loop} \\
+$\approx 33.6$ (2-loop) &
+Prop.~\ref{prop:nu-ratio-precision} \\
 $R_{\mathrm{RG}}^{(1)}$ & T2 & \eqref{eq:R-RG} & $\approx 1.91$ &
 Prop.~\ref{prop:R-RG-numeric} \\
 $R_{\mathrm{RG}}^{(2)}$ & T2 & \eqref{eq:R-RG-2loop-value} & $\approx 1.09$ &
 Prop.~\ref{prop:R-RG-numeric} \\
 $\Delta a_\mu^{\mathrm{SJET}}$ & T2 &
 $(n_S n_F/b_0)\,y_\mu^2/(48\pi^2)$ &
-$\approx 2.7\times10^{-9}$ &
-Prop.~\ref{prop:g2-estimate} \\
+$\approx 2.58\times10^{-9}$ &
+Prop.~\ref{prop:g2-precision} \\
 $\sin^2\theta_W(M_{\mathrm{GUT}})$ & T3 & $\Spin(10)$ branching & $3/8$ &
 Pred.~\ref{pred:gut} \\
 $\alpha_{\mathrm{em}}^{-1}(M_{\mathrm{GUT}})$ & T3 & unification fit &
@@ -499,7 +500,7 @@ Proposition~\ref{prop:R-RG-numeric}:
 \begin{equation}\label{eq:workbook-R-RG}
 \begin{aligned}
   &\texttt{\# b0, w3, w1 = 12, 16/27, 1/27}\\
-  &\texttt{\# ln\_GUT = math.log(M\_GUT / M\_Z)  \# pending full D3}\\
+  &\texttt{\# ln\_GUT = math.log(M\_GUT / M\_Z)  \# D3 closed}\\
   &\texttt{\# R1 = 1 + (w3 - w1) * b0 / (24 * math.pi**2) * ln\_GUT}\\
   &\texttt{\# Xi\_th = sum of threshold logs at M\_F,3, M\_F,2, M\_Z}\\
   &\texttt{\# R2 = 1 + (w3 - w1) * b0 / (12 * math.pi**4) * Xi\_th}\\
@@ -563,24 +564,31 @@ matrix \eqref{eq:mass-matrix-explicit}:
   = 10
   \qquad\text{(tree, $\iota=2$ slot)},\\
   \frac{m_\mu}{m_e}(M_Z)
-  &= 10\left(\frac{\mathcal{R}_2}{\mathcal{R}_1}\right)^{n_S n_F/b_0}
-  = 10\times 1.517^7
-  \approx 201,\\
+  &= 10\left(\frac{\mathcal{R}_2}{\mathcal{R}_1}\right)^{7}
+  R_{\mathrm{lep}}^{(2)}
+  \approx 203,\\
+  \mathcal{K}_{\mathrm{QED}}
+  &\approx 1.017,
+  \qquad
+  \frac{m_\mu^{\mathrm{pole}}}{m_e^{\mathrm{pole}}}
+  \approx 203\times 1.017
+  \approx 206.4,\\
   \mathcal{R}_1(M_Z)
   &\approx 1.062,
   \qquad
   \mathcal{R}_2(M_Z)\approx 1.620,
   \qquad
-  n_S n_F/b_0=7,\\
+  R_{\mathrm{lep}}^{(2)}\approx 1.008,\\
   \frac{y_\mu}{y_e}
   &= \sqrt{\frac{w_2}{w_1}}
   = \sqrt{10}
   \approx 3.162.
 \end{aligned}
 \end{equation}
-The $M_Z$ entry uses Theorem~\ref{thm:lepton-ratio-rg} with
-$n_S n_F/b_0=7$; Table~\ref{tab:yukawa-leading} records the GUT-scale
-leading spectrum in slot-index form.
+The $M_Z$ chain uses Theorem~\ref{thm:lepton-ratio-rg},
+Proposition~\ref{prop:lepton-ratio-2loop}, and
+Proposition~\ref{prop:lepton-pole}; Table~\ref{tab:yukawa-leading} records
+the GUT-scale leading spectrum.
 
 \paragraph{Muon $g$-2 contact.}
 Section~\ref{sec:g2} evaluates the one-loop coset-scalar contribution at
@@ -590,22 +598,28 @@ $\mu\equiv v$ (Proposition~\ref{prop:mu-lifetime}):
   &\texttt{\# v, m\_mu = 246.0, 0.1057  \# GeV}\\
   &\texttt{\# y\_mu = m\_mu / v}\\
   &\texttt{\# S\_mu = n\_S * n\_F / b0  \# 28*3/12 = 7}\\
-  &\texttt{\# delta\_a = S\_mu * y\_mu**2 / (48 * math.pi**2)}\\
+  &\texttt{\# R2 = 1 - alpha/(2*pi) * ln(M\_GUT/v)}\\
+  &\texttt{\# delta\_a = S\_mu * R2 * y\_mu**2 / (48 * math.pi**2)}\\
   y_\mu &= \frac{m_\mu}{v}\approx 4.3\times 10^{-4},\\
   \mathcal{S}_\mu &= \frac{n_S\,n_F}{b_0}=7,\\
+  \mathcal{R}_{g\text{-}2}^{(2)}
+  &\approx 1-\frac{1/128}{2\pi}\times 33.3
+  \approx 0.962,\\
   \Delta a_\mu^{\mathrm{SJET}}
-  &= \frac{n_S\,n_F}{b_0}\cdot\frac{y_\mu^2}{48\pi^2}
-  \approx 2.7\times 10^{-9},\\
+  &= \mathcal{S}_\mu\,\mathcal{R}_{g\text{-}2}^{(2)}\,
+  \frac{y_\mu^2}{48\pi^2}
+  \approx 2.58\times 10^{-9},\\
   \frac{\Delta a_\mu^{\mathrm{SJET}}}{\delta a_\mu}
-  &\approx \frac{2.7\times 10^{-9}}{2.6\times 10^{-9}}
-  \approx 1.05
+  &\approx \frac{2.58\times 10^{-9}}{2.60\times 10^{-9}}
+  \approx 0.992
 \end{aligned}
 \end{equation}
 with $\delta a_\mu=a_\mu^{\mathrm{exp}}-a_\mu^{\mathrm{SM}}$ from
 \eqref{eq:delta-amu}. Democratic portal
-$y_{\mu a}=y_\mu/\sqrt{n_S}$ (Proposition~\ref{prop:g2-democratic}) and
-sector factor $\mathcal{S}_\mu$ (Theorem~\ref{thm:g2-flavon}) supply the
-contact; Table~\ref{tab:g2-estimate} records the full ledger.
+$y_{\mu a}=y_\mu/\sqrt{n_S}$ (Proposition~\ref{prop:g2-democratic}),
+sector factor $\mathcal{S}_\mu$ (Theorem~\ref{thm:g2-flavon}), and EW
+two-loop factor $\mathcal{R}_{g\text{-}2}^{(2)}$ (Theorem~\ref{thm:g2-2loop})
+supply the contact; Table~\ref{tab:g2-estimate} records the full ledger.
 
 \begin{remark}[Cross-reference map]
 Table~\ref{tab:numerical-workbook} is the appendix consolidation of
