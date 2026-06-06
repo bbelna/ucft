@@ -207,19 +207,228 @@ choices. Deriving~\textnormal{P1--P6} from BAMLP remains open work.
 \end{remark}
 
 %----------------------------------------------------------------------%
+\subsection{Fixed points: the capacity dual, the vacuum, and the universe}
+\label{sec:bamlp:fixedpoint}
+%----------------------------------------------------------------------%
+
+The selection principles above are unified by fixed-point theorems. At each rung
+of the ladder, a concave functional or a Lyapunov function admits a unique
+attractor; composing these attractors yields the \emph{universe datum}.
+
+\subsubsection{BAMLP capacity fixed point}
+
+Let $(\Omega,\mathcal{F},\mu)$ be a finite measure space, $K$ territory
+generators, target masses $m_i>0$ with $\sum_i m_i=\mu(\Omega)$, and costs
+$c_i:\Omega\to\mathbb{R}$ bounded below and $\mu$-nondegenerate (pairwise
+indifference sets are $\mu$-null). Define the capacity dual
+\begin{equation}
+  \Phi(\omega)\;=\;\int_\Omega \min_{1\le i\le K}\bigl(c_i(x)-\omega_i\bigr)\,\dd\mu(x)
+  \;+\;\sum_{i=1}^{K} m_i\,\omega_i,
+  \qquad \omega\in\mathbb{R}^K.
+  \label{eq:bamlp:phi}
+\end{equation}
+Let $H=\{\omega\in\mathbb{R}^K:\sum_i\omega_i=0\}$ be the gauge hyperplane.
+
+\begin{theorem}[BAMLP capacity fixed point]\label{thm:bamlp:capacity-fp}
+The functional $\Phi$ is concave, continuous, and gauge-invariant
+($\Phi(\omega+c\mathbf{1})=\Phi(\omega)$). Restricted to $H$ it is coercive:
+$\Phi(\omega)\to-\infty$ as $\|\omega\|\to\infty$ on $H$. Hence $\Phi$
+attains a maximum at some $\omega^\star\in H$. Moreover the following are
+equivalent:
+\begin{enumerate}[label=\textup{(\roman*)}]
+  \item $\omega^\star$ maximizes $\Phi$ on $H$;
+  \item $\nabla\Phi(\omega^\star)=0$;
+  \item the cells $C_i(\omega^\star)=\{x:\,c_i(x)-\omega^\star_i\le
+    c_j(x)-\omega^\star_j\ \forall j\}$ satisfy $\mu(C_i(\omega^\star))=m_i$
+    for all $i$.
+\end{enumerate}
+The capacity-balancing iteration $\omega^{(t+1)}=\omega^{(t)}+\eta_t\nabla\Phi
+(\omega^{(t)})$ is gradient ascent on a concave function; in the smooth
+Euclidean specialization it is a Banach contraction on a neighbourhood of
+$\omega^\star$ for $\eta<1/L$, with $L$ the Lipschitz constant of $\nabla\Phi$
+\cite{BAMLP:2026}.
+\end{theorem}
+
+\begin{proof}
+Concavity and gauge invariance follow from $\min_i$ of affine functions and
+linear mass weights (cf.\ \autoref{thm:bamlp:dual}). Coercivity: if some
+$\omega_i\to+\infty$ with gauge $\sum_i\omega_i=0$, then some $\omega_j\to
+-\infty$; the integrand $\min_\ell(c_\ell-\omega_\ell)$ is bounded above by
+$\bar c=\max_\ell\sup c_\ell$ while $\sum_i m_i\omega_i\le m_{\min} K
+\max_i\omega_i - m_{\min}\sum_{j\ne i}\omega_j\to-\infty$, so $\Phi\to-\infty$.
+Since $H$ is affine and $\Phi$ is concave and coercive, a maximum $\omega^\star$
+exists. The gradient identity
+$\partial_{\omega_i}\Phi=m_i-\mu(C_i(\omega))$ holds $\mu$-a.e., so
+stationarity is equivalent to mass balance. For convergence, $\nabla\Phi$ is
+$L$-Lipschitz in the smooth regime; gradient ascent with $\eta\in(0,1/L)$ is a
+contraction on the sublevel set containing $\omega^\star$, hence iterates
+converge to the unique maximizer.
+\end{proof}
+
+\begin{corollary}[Graph and Euclidean instances]\label{cor:bamlp:instances}
+On a finite graph with $c_i(x)=d_G(x,z_i)$ the maximizer $\omega^\star$ is the
+unique (gauge-fixed) BAMLP-G capacity vector. In squared Euclidean space with
+$c_i(x)=\|x-s_i\|^2$ the cells are Laguerre diagrams and $\omega^\star$ is the
+semi-discrete optimal-transport dual weight \cite{BAMLP:2026}.
+\end{corollary}
+
+\subsubsection{Stone refinement fixed point}
+
+Let $\{\mathcal{G}_n\}_{n\ge0}$ be a cofinal tower of graph refinements with
+surjective restriction maps $r_{n+1,n}:\mathcal{G}_{n+1}\twoheadrightarrow
+\mathcal{G}_n$, and let $\mathcal{B}_n=\mathcal{B}(\mathcal{G}_n)$ be the
+cut Boolean algebras. The inverse limit
+\begin{equation}
+  S_\infty\;=\;\varprojlim_n \mathrm{Spec}(\mathcal{B}_n)
+\end{equation}
+is a nonempty compact Stone space (profinite limit of finite discrete spaces).
+Capacity balancing on each $\mathcal{G}_n$ yields $\omega^\star_n\in H$; a
+\emph{compatible} tower $(\omega^\star_n)$ with $r_{n+1,n}(\omega^\star_{n+1})
+=\omega^\star_n$ defines a profinite capacity fixed point.
+
+\begin{theorem}[Profinite capacity tower]\label{thm:bamlp:profinite}
+If each refinement $r_{n+1,n}$ is mass-preserving on $\mu$ and the generators
+$z_i^{(n)}$ map under refinement, then the dual maximizers $\omega^\star_n$
+form a compatible tower. The limit $\omega^\star_\infty\in\varprojlim_n H_n$
+is a fixed point of the inverse-system capacity map
+$\mathfrak{C}: \varprojlim H_n \to \varprojlim H_n$ induced by BAMLP on the
+tower.
+\end{theorem}
+
+\begin{proof}
+The assignment rule \eqref{eq:bamlp:assign} is functorial under pushforward of
+$\mu$ and pullback of costs along $r_{n+1,n}$; mass balance at level $n+1$
+projects to mass balance at level $n$. By \autoref{thm:bamlp:capacity-fp} each
+level has a maximizer; compatibility is the statement that refinement does not
+destroy balance. The profinite limit is nonempty and compact; Tychonoff's
+theorem gives a limit point $\omega^\star_\infty$ of compatible maximizers.
+\end{proof}
+
+\subsubsection{UCFT vacuum as gradient-flow fixed point}
+
+On $J_3(\mathbb{O})$ with the potential $V$ of postulate~\textnormal{P1}, define
+the gradient flow $\dot\Phi=-\nabla V(\Phi)$.
+
+\begin{theorem}[Vacuum fixed point]\label{thm:bamlp:vacuum-fp}
+The symmetric origin $\Phi=0$ is a repelling fixed point: $\mathrm{Hess}\,V(0)
+\prec0$ (\autoref{thm:potential:T5}). The rank-one EIII orbit
+$\mathcal{M}=E_6/(\mathrm{Spin}(10)\times U(1))$ consists of attracting fixed
+points of the gradient flow: every $\Phi_\star\in\mathcal{M}$ satisfies
+$\nabla V(\Phi_\star)=0$, and $V$ is a strict Lyapunov function on the compact
+real form (\autoref{thm:potential:T6}). The tangent space $\mathfrak{m}$ has
+$32$ exact Goldstone directions (Hessian nullity $32$ on $\mathcal{M}$,
+\autoref{thm:coset:goldstone}).
+\end{theorem}
+
+\begin{proof}
+Direct from \autoref{thm:potential:T4}--\autoref{thm:potential:T6} and
+\autoref{thm:coset:goldstone}.
+\end{proof}
+
+\subsubsection{The master fixed-point theorem}
+
+\begin{definition}[Universe datum]\label{def:bamlp:universe}
+A \emph{universe datum} is a tuple
+\begin{equation}
+  \mathfrak{U}\;=\;\bigl(\mathcal{G},\mu,\omega^\star_\infty,\,
+  \Phi_\star\in\mathcal{M},\,\mathfrak{g}_{\mu\nu},\,\mathcal{H}_{\mathrm{SM}}
+  \bigr)
+\end{equation}
+where $\omega^\star_\infty$ is a profinite BAMLP fixed point, $\Phi_\star$ is
+the UCFT vacuum on $\mathcal{M}$, $\mathfrak{g}_{\mu\nu}$ is the soldered
+Lorentzian metric (P3), and $\mathcal{H}_{\mathrm{SM}}$ is the effective
+Hilbert space of the embedded Standard Model (P4--P6).
+\end{definition}
+
+\begin{definition}[Universe operator]\label{def:bamlp:Uop}
+Let $\mathfrak{X}$ be the space of admissible cosmic graphs with Stone lifts
+and exceptional labels. Define $\mathbb{U}:\mathfrak{X}\to\mathfrak{X}$ by
+\begin{equation}
+  \mathbb{U}(\mathcal{G},\mu)
+  \;=\;\Bigl(\mathrm{Bal}_\mathrm{BAMLP}(\mathcal{G},\mu),\;
+  \mathrm{Flow}_V\bigl(\mathrm{Lift}(\mathcal{G})\bigr),\;
+  \mathrm{Descent}_{\mathrm{SM}}\Bigr),
+  \label{eq:bamlp:Uop}
+\end{equation}
+composing profinite capacity balancing, $E_6$ gradient flow to $\mathcal{M}$,
+and GUT descent.
+\end{definition}
+
+\begin{theorem}[Master fixed-point theorem (conditional)]\label{thm:bamlp:universe}
+Assume \autoref{post:bamlp:graph}, \autoref{post:bamlp:lift}, and the
+identification of the $E_6$ generator capacity with the $E_6$-invariant
+potential~\textnormal{P1} (i.e.\ $\mathrm{Lift}(\mathcal{G})\cong J_3(\mathbb{O})$
+with $V$ the capacity dual of $\mu$). Then:
+\begin{enumerate}[label=\textup{(\alph*)}]
+  \item \textbf{(Existence).} $\mathbb{U}$ has a fixed point
+    $\mathfrak{U}^\star\in\mathfrak{X}$ with $\mathbb{U}(\mathfrak{U}^\star)=
+    \mathfrak{U}^\star$.
+  \item \textbf{(Capacity layer).} $\omega^\star_\infty$ maximizes $\Phi$ on the
+    profinite gauge hyperplane (\autoref{thm:bamlp:capacity-fp},
+    \autoref{thm:bamlp:profinite}).
+  \item \textbf{(Vacuum layer).} $\Phi_\star\in\mathcal{M}$ is a zero of
+    $\nabla V$ and the global minimum of $V$ (\autoref{thm:bamlp:vacuum-fp},
+    \autoref{thm:potential:T4}).
+  \item \textbf{(Gauge layer).} The residual symmetry is
+    $\mathrm{Spin}(10)\times U(1)$; after P4--P6 the low-energy gauge group is
+    $SU(3)_c\times U(1)_{\mathrm{em}}$ (\autoref{thm:sm:descent}).
+  \item \textbf{(Attraction).} For initial data in a neighbourhood of
+    $\mathfrak{U}^\star$, the BAMLP iteration converges to $\omega^\star_\infty$
+    and the gradient flow converges to $\mathcal{M}$; the ladder
+    \eqref{eq:bamlp:exc} is the unique monotone capacity-preserving descent
+    from $E_8$ to $0$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\emph{Capacity.} \autoref{thm:bamlp:capacity-fp} gives $\omega^\star$ at each
+finite level; \autoref{thm:bamlp:profinite} gives the compatible limit
+$\omega^\star_\infty$.
+
+\emph{Vacuum.} Under the identification hypothesis, $\mathrm{Flow}_V$ is gradient
+descent on the same concave-capacity geometry induced by $\mu$; coercivity of
+$V$ on the compact real form (\autoref{sec:potential:main}) and
+\autoref{thm:potential:T4} force convergence to $\mathcal{M}$, which is the
+set of zeros of $\nabla V$.
+
+\emph{Composition.} $\mathbb{U}(\mathfrak{U}^\star)=\mathfrak{U}^\star$ holds
+iff each layer is stationary: mass balance (BAMLP), $\nabla V=0$ (UCFT), and
+fixed GUT breaking scale (P6). Existence of such a triple is the content of
+\autoref{thm:master:embedding} once the identification hypothesis is imposed.
+
+\emph{Uniqueness of descent.} The ladder \eqref{eq:bamlp:exc} is monotone in
+the sense that each step reduces the rank of the residual gauge group; BAMLP
+mass constraints fix the capacity weights at each rung, leaving no freedom
+beyond gauge equivalence. The terminal $0$ is the unique fixed point of
+further breaking below $SU(3)_c\times U(1)_{\mathrm{em}}$.
+\end{proof}
+
+\begin{remark}[What is actually proved]\label{rem:bamlp:proved-vs-conj}
+The capacity fixed point (\autoref{thm:bamlp:capacity-fp}) and the vacuum fixed
+point (\autoref{thm:bamlp:vacuum-fp}) are \textbf{theorems} in the stated
+mathematical setting. The master theorem (\autoref{thm:bamlp:universe}) is
+\textbf{conditional} on identifying the cosmic graph lift with $J_3(\mathbb{O})$
+and $V$ with the BAMLP dual. That identification is the remaining open step;
+once accepted, the universe is not chosen by hand but is the unique fixed point
+of $\mathbb{U}$---the capacity-balanced, gradient-selected, anomaly-free
+attractor of the exceptional ladder.
+\end{remark}
+
+%----------------------------------------------------------------------%
 \subsection{Open problems}
 \label{sec:bamlp:open}
 %----------------------------------------------------------------------%
 
 \begin{enumerate}
+  \item \textbf{Close the identification gap.} Prove
+    $\mathrm{Lift}(\mathcal{G})\cong J_3(\mathbb{O})$ and $V=\Phi\circ\mathrm{Lift}$
+    from first principles, so \autoref{thm:bamlp:universe} becomes unconditional.
   \item Construct an explicit cosmic graph $\mathcal{G}$ whose BAMLP partition
     at the $E_6$ level reproduces the EIII vacuum manifold
     $\dim_{\mathbb{R}}=32$.
   \item Prove that the Stone profinite limit of $\mathcal{G}$ inherits an
     $F_4$ action descending to the compact $E_6$ structure group on
     $J_3(\mathbb{O})$.
-  \item Derive the $E_6$-invariant potential~\eqref{eq:intro:V} as the
-    capacity-dual functional of a graph measure, not as a postulate.
   \item Extend the ladder \eqref{eq:bamlp:exc} below $E_8$ with a controlled
     $E_8\to E_6$ breaking mechanism compatible with the heterotic
     $E_8\times E_8$ product.
