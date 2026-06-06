@@ -4,32 +4,33 @@
 %======================================================================%
 
 Mathematical data of $\mathfrak{U}^\star$ becomes physical through mirror
-quotient observability and soldering on the Jordan--octonionic block.
+quotient observability (Section~\ref{sec:observer}), observer collapse at
+$\Mirror^7(\Void)$, and soldering on the Jordan--octonionic block.
 
 %----------------------------------------------------------------------%
 \subsection{Physical sector}
 \label{sec:physics:sector}
 %----------------------------------------------------------------------%
 
-At $\Mirror^7(\Void)=\E{8}\times\E{8}$, let $Q$ be the Stone lift of the
-stabilized Albert tower and $\sigma$ the product-mirror involution
-$(g_1,g_2)\mapsto(g_2,g_1)$.
+Physical configurations are observer-collapsed states on $\hat Q$
+(Definitions~\ref{def:Qhat},~\ref{def:observer},~\ref{def:physical}).
 
 \begin{definition}[Physical configurations]\label{def:physical}
 A configuration is \emph{observable} if it lies in the $\sigma$-anti-invariant
 sector of $\hat Q=Q/\sigma$. Fermions are cohomology classes in
-$H^1(\hat Q,V_{16})^{\sigma=-1}$ for the $\mathbf{16}$-bundle $V_{16}$.
+$H^1(\hat Q,V_{16})^{\sigma=-1}$; each observer $|\omega_\iota\rangle$ is one
+such class (Theorem~\ref{thm:observer-fp}).
 \end{definition}
 
 \begin{theorem}[Three families]\label{thm:three-families}
 $\dim H^1(\hat Q,V_{16})^{\sigma=-1}=3$. Each class is one chiral
-$\mathbf{16}$ of $\Spin(10)$; mirror partners are $\sigma$-invariant and
-non-observable. Hence $n_F=3$.
+$\mathbf{16}$ of $\Spin(10)$---one observer slot $\iota\in\mathcal{I}$;
+mirror partners are $\sigma$-invariant and non-observable. Hence $n_F=3$.
 \end{theorem}
 
 \begin{proof}
-Cellular count on the rank-$3$ diagonal $\mathfrak{d}\subset\jalg$; index
-theorem on $\hat Q$~\cite{AtiyahBott1966}. See Appendix~\ref{sec:appendix:quotient}.
+Theorem~\ref{thm:observer-fp}; cellular details in
+Appendix~\ref{sec:appendix:quotient}.
 \end{proof}
 
 %----------------------------------------------------------------------%

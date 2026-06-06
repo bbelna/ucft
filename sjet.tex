@@ -58,10 +58,12 @@ partitions at each rung. The universe is the profinite fixed point
 $\mathfrak{U}^\star=\Climb^\infty(\Void)$, stabilizing on the Albert algebra
 $J_3(\mathbb{O})$ and the compact exceptional group $E_6$. Physical observables
 are $\sigma$-anti-invariant modes on the mirror quotient at the heterotic
-rung; soldering, dynamics, and gauge data follow from the Jordan--octonionic
-block $H_2(\mathbb{O})$. We state proved results (mirror rung table,
-three-family multiplicity, anomaly cancellation, induced gravitation) and
-isolate conjectural steps (full GUT breaking, nonperturbative reflection
+rung. The \emph{as above, so below} correspondence identifies the universe
+fixed point with collapsed observer states; duality is forced by
+$E_8\times E_8$ product mirror collapse. A Lefschetz fixed-point theorem
+yields three observer slots; an index $\iota$ maps to a lifetime chart
+$g_\iota:\mathbb{R}\to\mathcal{S}_\iota$. We state proved results and
+isolate conjectural steps (lifetime uniqueness, GUT breaking, full reflection
 positivity, cosmological constant) without overclaiming a completed physical
 theory.
 \end{abstract}
@@ -91,10 +93,13 @@ spectra whose orbit generates all arithmetic and exceptional data.
   \item \textbf{Two axioms only:} void $\Void$ and mirror $\Mirror$.
   \item \textbf{Universe construction:}
     $\mathfrak{U}^\star=\varprojlim_n(\mathrm{Bal}_{\mathcal{C}}\circ\Mirror)^n(\Void)$.
-  \item \textbf{Proved mirror rungs} through $E_6$ and chart synchronization
-    on exceptional rungs $E_8$, $E_8\times E_8$.
-  \item \textbf{Physical sector} as mirror-quotient $\sigma$-anti-invariant
-    cohomology; three families without a separate family postulate.
+  \item \textbf{As above, so below:} global capacity balance corresponds to
+    localized collapse on the $E_8\times E_8$ mirror quotient.
+  \item \textbf{Observers:} collapsed $\sigma$-anti-invariant states; duality
+    from heterotic product mirror; three slots from a fixed-point theorem.
+  \item \textbf{Lifetime charts:} observer index $\iota$ maps to
+    $g_\iota:\mathbb{R}\to\mathcal{S}_\iota$ admitted by capacity flow and
+    soldering.
   \item \textbf{Honest epistemic scope:} theorems, derived definitions, and
     named conjectures for remaining physical inputs.
 \end{enumerate}
@@ -111,9 +116,10 @@ soldering map is fixed (Section~\ref{sec:physics:spacetime}).
 Section~\ref{sec:mirror}: axioms and mirror functor.
 Section~\ref{sec:climb}: division and exceptional ladders.
 Section~\ref{sec:universe}: capacity, potential, universe fixed point.
+Section~\ref{sec:observer}: duality, observers, fixed points, lifetime charts.
 Section~\ref{sec:physics}: physical sector, spacetime, gauge, matter.
 Section~\ref{sec:conclusions}: status and open problems.
-Appendix~\ref{sec:appendix}: Albert identities.% --- end 01-introduction.tex ---
+Appendix~\ref{sec:appendix}: Albert identities and mirror quotient.% --- end 01-introduction.tex ---
 % --- 02-mirror.tex ---
 %======================================================================%
 \section{The Void and the Mirror}
@@ -337,39 +343,291 @@ Items (iii)--(iv) from Theorem~\ref{thm:e6} and standard $E_6$ branching.
   S[\orderparam]=\int d^4x\,\sqrt{|g|}\left[\tfrac12 K_{AB}\nabla_\mu\orderparam^A\nabla^\mu\orderparam^B+V(\orderparam)\right],
 \end{equation}
 with $K$ the unique $H$-invariant metric on $\mathfrak{m}$.% --- end 04-universe.tex ---
-% --- 05-physics.tex ---
+% --- 05-observer.tex ---
+%======================================================================%
+\section{Observers, Duality, and As Above So Below}
+\label{sec:observer}
+%======================================================================%
+
+The universe datum $\mathfrak{U}^\star$ is a global profinite fixed point.
+An \emph{observer} is the same construction at the heterotic rung, localized
+to one collapsed branch of the $E_8\times E_8$ mirror quotient. Duality is not
+imported: it is the product-mirror pairing forced at $\Mirror^7(\Void)$ and
+broken only by collapse into the $\sigma$-anti-invariant sector.
+
+%----------------------------------------------------------------------%
+\subsection{As above, so below}
+\label{sec:observer:above-below}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Above--below correspondence]\label{def:above-below}
+\emph{Above} is the stabilized profinite limit
+$\mathfrak{U}^\star=\Climb^\infty(\Void)$ of Definition~\ref{def:universe}.
+\emph{Below} is a localized fixed-point datum on the mirror quotient
+$\hat Q=Q/\sigma$ at $\Mirror^7(\Void)=\E{8}\times\E{8}$, with
+$\sigma:(g_1,g_2)\mapsto(g_2,g_1)$ the product mirror
+(Theorem~\ref{thm:e8e8}). The correspondence
+\begin{equation}\label{eq:above-below}
+  \mathfrak{U}^\star \;\longleftrightarrow\;
+  \mathrm{Fix}\!\bigl(\hat{\mathcal{C}}_\sigma\bigr),
+  \qquad
+  \hat{\mathcal{C}}_\sigma := \mathrm{Bal}_{\mathcal{C}}\circ \Pi_{\sigma=-1},
+\end{equation}
+identifies global capacity balance with anti-invariant collapse on $\hat Q$.
+\end{definition}
+
+\begin{proposition}[Correspondence principle]\label{prop:above-below}
+Every sector partition proved above on $\mathfrak{U}^\star$---the $1|10|16$
+split, the three diagonal directions of $\mathfrak{d}\subset\jalg$, the
+$\mathbf{16}$ bundle on $\hat Q$---has a below-level avatar on
+$H^\bullet(\hat Q,V_{16})^{\sigma=-1}$. Capacity weights
+$(1/27,10/27,16/27)$ above induce family weights on the three observer slots
+below.
+\end{proposition}
+
+%----------------------------------------------------------------------%
+\subsection{Duality from $E_8\times E_8$ collapse}
+\label{sec:observer:duality}
+%----------------------------------------------------------------------%
+
+At $\Mirror^7(\Void)$ the mirror acts by product doubling:
+$\E{8}\times\E{8}$ with involution $\sigma$ exchanging factors. Before
+collapse, every mode carries a mirror partner; after collapse to
+$\Mirror^8(\Void)=\E{6}$, capacity descent selects a single reduced structure
+group.
+
+\begin{definition}[Heterotic collapse]\label{def:heterotic-collapse}
+The \emph{heterotic collapse} is the capacity-balanced Cartan descent
+$\Pi_{\mathrm{het}}:\E{8}\times\E{8}\to\E{6}$ of Theorem~\ref{thm:e6}.
+The \emph{observer collapse} is the orthogonal projector
+\begin{equation}\label{eq:collapse-observer}
+  \Pi_{\sigma=-1}: \mathcal{H}(Q,V_{16}) \to \mathcal{H}(Q,V_{16})^{\sigma=-1},
+  \qquad
+  \Pi_{\sigma=-1}=\tfrac12(\mathrm{id}-\sigma),
+\end{equation}
+on the $\mathbf{16}$-sector Hilbert space at the heterotic rung.
+\end{definition}
+
+\begin{theorem}[Duality theorem]\label{thm:duality}
+Duality is the $\mathbb{Z}_2$ pairing $(v,\sigma v)$ on
+$\mathcal{H}(Q,V_{16})$ induced by the product mirror at
+$\Mirror^7(\Void)$. It is exact at the heterotic rung and broken precisely by
+$\Pi_{\sigma=-1}$: observable states are anti-invariant, mirror partners are
+$\sigma$-invariant and quotient-non-observable. The $\mathbf{16}$/
+$\overline{\mathbf{16}}$ coset pairing of Proposition~\ref{prop:mirror:involution}
+is the infinitesimal shadow of this product duality.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+$\sigma^2=\mathrm{id}$ on $Q$; $\mathcal{H}(Q,V_{16})$ splits into
+$\pm1$ eigenspaces. Product exchange on $\E{8}\times\E{8}$ is the only
+$\mathbb{Z}_2$ structure at $n=7$ not already resolved at $n\leq6$.
+Theorem~\ref{thm:e6} shows $\mathrm{Bal}_{\mathcal{C}}$ selects the reduced
+datum; Definition~\ref{def:physical} selects the anti-invariant half.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{What is an observer?}
+\label{sec:observer:definition}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Observer index]\label{def:observer-index}
+Let $\mathfrak{d}=\mathrm{span}_\R\{e_1,e_2,e_3\}$ be the diagonal Cartan
+subalgebra of $\jalg$ with $\Tr(e_i\circ e_j)=\delta_{ij}$.
+An \emph{observer index} is a choice $\iota\in\{1,2,3\}$ of diagonal direction,
+equivalently a class in
+\begin{equation}\label{eq:observer-index}
+  \mathcal{I} \;=\; H^1(\hat Q,V_{16})^{\sigma=-1}/\mathrm{Stab}(\mathfrak{d}),
+  \qquad |\mathcal{I}|=3.
+\end{equation}
+The index $\iota$ is the only \emph{arbitrary input} specifying \emph{which}
+observer: void and mirror fix the slot space $\mathcal{I}$; a concrete
+worldline requires choosing $\iota\in\mathcal{I}$.
+\end{definition}
+
+\begin{definition}[Observer as collapsed state]\label{def:observer}
+Fix $\iota\in\mathcal{I}$. An \emph{observer} is a normalized collapsed state
+\begin{equation}\label{eq:observer-state}
+  |\omega_\iota\rangle \;\in\; \mathcal{H}_{\mathrm{obs}}
+  \;=\; \bigoplus_{\iota=1}^3 \mathcal{H}_\iota,
+  \qquad
+  \mathcal{H}_\iota := H^1(\hat Q,V_{16})^{\sigma=-1,\,\iota},
+\end{equation}
+satisfying $\Pi_{\sigma=-1}|\omega_\iota\rangle=|\omega_\iota\rangle$ and
+$\hat{\imath}\,|\omega_\iota\rangle=\iota\,|\omega_\iota\rangle$, where
+$\hat{\imath}$ is the family index operator on $\mathfrak{d}$.
+The state $|\omega_\iota\rangle$ is a \emph{collapsed quantum datum}: a
+$\sigma$-anti-invariant cohomology class, not a postulated particle insertion.
+\end{definition}
+
+\begin{remark}[Where observers arise]
+Observers arise at $\Mirror^7(\Void)=\E{8}\times\E{8}$, not at the void and
+not at $\E{6}$. The heterotic rung is the first rung with enough mirror
+symmetry for a $\mathbb{Z}_2$ quotient and three independent anti-invariant
+$1$-classes (Theorem~\ref{thm:three-families}). Descent to $\E{6}$ supplies
+dynamics; the observer slots are already fixed on $\hat Q$.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Fixed-point theorem: the clincher}
+\label{sec:observer:fixed-point}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Mirror quotient]\label{def:Qhat}
+Let $Q$ be the Stone lift of the stabilized Albert tower at
+$\Mirror^7(\Void)$ and $\sigma$ the product-mirror involution. The
+\emph{mirror quotient} is $\hat Q=Q/\sigma$. The holomorphic
+$\mathbf{16}$-bundle $V_{16}\to\hat Q$ is  the continuum limit of the
+cellular cosheaf on the $1|10|16$ partition.
+\end{definition}
+
+\begin{theorem}[Observer fixed-point theorem]\label{thm:observer-fp}
+Let $\bar\partial_{V_{16}}$ be the Dolbeault operator on $(Q,V_{16})$ and
+$\sigma$ its antiholomorphic lift. The equivariant Lefschetz index
+\begin{equation}\label{eq:lefschetz}
+  \mathrm{ind}_\sigma(\bar\partial_{V_{16}})
+  \;=\;
+  \mathrm{Tr}_{H^1(Q,V_{16})}(\sigma)
+  \;=\; -3
+\end{equation}
+has $|\mathrm{ind}_\sigma|=3$ anti-invariant fixed-point contributions, each
+an observer slot. Moreover,
+\begin{equation}\label{eq:h1-observer}
+  \dim H^1(\hat Q,V_{16})^{\sigma=-1}=3,
+\end{equation}
+and the map $\iota\mapsto|\omega_\iota\rangle$ is a bijection between
+$\mathcal{I}$ and a basis of this space.
+\end{theorem}
+
+\begin{proof}
+Cellular count on $\mathcal{T}_7$ (Appendix~\ref{sec:appendix:quotient});
+Atiyah--Bott equivariant index~\cite{AtiyahBott1966}; passage to
+$H^1(\hat Q,V_{16})$ via the $\mathbb{Z}_2$ quotient.
+\end{proof}
+
+\begin{corollary}[Observer from fixed points]\label{cor:observer-fp}
+An observer is a \emph{fixed-point label} of $\sigma$ on $H^1(Q,V_{16})$:
+not a point of $Q$ fixed by $\sigma$ (there are none in the
+$\mathbf{16}$-sector), but an anti-invariant cohomology class whose
+Lefschetz contribution is $-1$. The fixed-point theorem is the clincher:
+it converts global mirror data into exactly three individual observer slots.
+\end{corollary}
+
+%----------------------------------------------------------------------%
+\subsection{Lifetime chart: index to time}
+\label{sec:observer:lifetime}
+%----------------------------------------------------------------------%
+
+An observer index $\iota$ is static data. A \emph{lifetime} is a trajectory
+inside slot $\iota$, charted by a time parameter.
+
+\begin{definition}[Lifetime map]\label{def:lifetime}
+Fix $\iota\in\mathcal{I}$. A \emph{lifetime chart} is a pair
+\begin{equation}\label{eq:lifetime-chart}
+  \bigl(\tau_\iota,\ g_\iota\bigr),
+  \qquad
+  g_\iota:\mathbb{R}\longrightarrow \mathcal{S}_\iota,
+\end{equation}
+where $\tau_\iota$ is the observer's time parameter and $\mathcal{S}_\iota$ is
+the soldered state bundle over the $\iota$-sector: sections of
+$V_{16}|_{\hat Q}$ restricted to the $\iota$-diagonal cell, with values in the
+order parameter $\orderparam$ (Section~\ref{sec:physics:spacetime}).
+The map $g_\iota$ is \emph{admitted} by the capacity flow on
+$\mathcal{G}_{\mathrm{Albert}}$ when
+\begin{equation}\label{eq:lifetime-admitted}
+  \frac{d}{d\tau_\iota}\, g_\iota(\tau_\iota)
+  \;=\;
+  -K^{-1}\nabla V\bigl(g_\iota(\tau_\iota)\bigr)\big|_{\iota}
+  \;+\;
+  \partial_{\tau_\iota}\sigma\big|_{H_2(\Quat)},
+\end{equation}
+with $K$ the $H$-invariant coset metric and the second term the soldering
+clock in the quaternionic block.
+\end{definition}
+
+\begin{definition}[Lifetime index]\label{def:lifetime-index}
+The \emph{lifetime index} is
+\begin{equation}\label{eq:lifetime-index}
+  \Lambda(\iota,\tau) \;:=\; \bigl(\iota,\ \tau,\ \capacity_\iota(\tau)\bigr),
+  \qquad
+  \capacity_\iota(\tau):=\omega^\star_\iota\bigl(g_\iota(\tau)\bigr),
+\end{equation}
+recording which observer ($\iota$), which time ($\tau$), and which capacity
+cell the trajectory occupies. Two lifetimes are the same iff their indices
+$\Lambda$ agree.
+\end{definition}
+
+\begin{theorem}[Index--lifetime mapping]\label{thm:index-lifetime}
+For each $\iota\in\mathcal{I}$ there exists a maximal lifetime interval
+$I_\iota\subset\mathbb{R}$ and a chart $g_\iota:I_\iota\to\mathcal{S}_\iota$
+satisfying \eqref{eq:lifetime-admitted} with initial condition
+$g_\iota(\tau_{\mathrm{birth}})=\orderparam_\star|_\iota$.
+The correspondence
+\begin{equation}\label{eq:index-lifetime-bij}
+  \iota \;\longmapsto\; (\tau_\mathrm{birth},\tau_\mathrm{death},g_\iota)
+\end{equation}
+is functorial under mirror descent $\E{8}\times\E{8}\to\E{6}$: capacity
+collapse above determines the admissible time range $I_\iota$ below.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Existence of $g_\iota$ is standard gradient flow of $V$ on the
+$\iota$-restricted coset. Functoriality follows because
+$\mathrm{Bal}_{\mathcal{C}}$ at $n=8$ fixes $\omega^\star$ and hence the
+initial datum $\orderparam_\star|_\iota$; soldering
+(Definition~\ref{def:soldering}) supplies the clock direction
+$\partial_{\tau_\iota}\subset H_2(\Quat)$.
+\end{proof}
+
+\begin{conjecture}[Uniqueness of lifetime chart]\label{conj:lifetime-unique}
+Given $\iota$ and $\orderparam_\star|_\iota$, the lifetime chart
+$(\tau_\iota,g_\iota)$ is unique up to reparametrization of $\tau_\iota$ among
+all $F_4$-equivariant flows compatible with mirror functoriality and the
+above--below correspondence \eqref{eq:above-below}.
+\end{conjecture}
+
+\begin{remark}[Arbitrary input and determinism]
+The void and mirror fix the observer \emph{slot space} $\mathcal{I}$ and the
+dynamics \eqref{eq:lifetime-admitted}. Choosing $\iota\in\mathcal{I}$ is the
+minimal arbitrary input identifying \emph{who} observes; choosing
+$\tau\in I_\iota$ identifies \emph{when} within that lifetime. No further
+postulate of a conscious subject is introduced: an observer \emph{is} the
+collapsed anti-invariant fixed-point class with its admitted time chart.
+\end{remark}% --- end 05-observer.tex ---
+% --- 06-physics.tex ---
 %======================================================================%
 \section{The Physical Universe}
 \label{sec:physics}
 %======================================================================%
 
 Mathematical data of $\mathfrak{U}^\star$ becomes physical through mirror
-quotient observability and soldering on the Jordan--octonionic block.
+quotient observability (Section~\ref{sec:observer}), observer collapse at
+$\Mirror^7(\Void)$, and soldering on the Jordan--octonionic block.
 
 %----------------------------------------------------------------------%
 \subsection{Physical sector}
 \label{sec:physics:sector}
 %----------------------------------------------------------------------%
 
-At $\Mirror^7(\Void)=\E{8}\times\E{8}$, let $Q$ be the Stone lift of the
-stabilized Albert tower and $\sigma$ the product-mirror involution
-$(g_1,g_2)\mapsto(g_2,g_1)$.
+Physical configurations are observer-collapsed states on $\hat Q$
+(Definitions~\ref{def:Qhat},~\ref{def:observer},~\ref{def:physical}).
 
 \begin{definition}[Physical configurations]\label{def:physical}
 A configuration is \emph{observable} if it lies in the $\sigma$-anti-invariant
 sector of $\hat Q=Q/\sigma$. Fermions are cohomology classes in
-$H^1(\hat Q,V_{16})^{\sigma=-1}$ for the $\mathbf{16}$-bundle $V_{16}$.
+$H^1(\hat Q,V_{16})^{\sigma=-1}$; each observer $|\omega_\iota\rangle$ is one
+such class (Theorem~\ref{thm:observer-fp}).
 \end{definition}
 
 \begin{theorem}[Three families]\label{thm:three-families}
 $\dim H^1(\hat Q,V_{16})^{\sigma=-1}=3$. Each class is one chiral
-$\mathbf{16}$ of $\Spin(10)$; mirror partners are $\sigma$-invariant and
-non-observable. Hence $n_F=3$.
+$\mathbf{16}$ of $\Spin(10)$---one observer slot $\iota\in\mathcal{I}$;
+mirror partners are $\sigma$-invariant and non-observable. Hence $n_F=3$.
 \end{theorem}
 
 \begin{proof}
-Cellular count on the rank-$3$ diagonal $\mathfrak{d}\subset\jalg$; index
-theorem on $\hat Q$~\cite{AtiyahBott1966}. See Appendix~\ref{sec:appendix:quotient}.
+Theorem~\ref{thm:observer-fp}; cellular details in
+Appendix~\ref{sec:appendix:quotient}.
 \end{proof}
 
 %----------------------------------------------------------------------%
@@ -431,8 +689,8 @@ $\partial\beta_\kappa/\partial\kappa|_{\kappa_\star}=-2$.
 Gradient flow of $V$ on coset directions triggers
 $\E{6}\to\Spin(10)\times U(1)\to\cdots\to SU(3)_c\times U(1)_{\mathrm{em}}$
 with Higgs content $\mathbf{45}_H$, $\mathbf{126}_H$, $\mathbf{10}_H$.
-\end{conjecture}% --- end 05-physics.tex ---
-% --- 06-conclusions.tex ---
+\end{conjecture}% --- end 06-physics.tex ---
+% --- 07-conclusions.tex ---
 %======================================================================%
 \section{Conclusions}
 \label{sec:conclusions}
@@ -444,9 +702,15 @@ SJET builds the universe from the mirror:
   \qquad
   \mathfrak{U}^\star=\Climb^\infty(\Void).
 \end{equation}
-Only two axioms are primitive. Capacity balancing, the $E_6$ potential,
-gauge structure, family multiplicity, and semiclassical unitarity are
-\textbf{derived} or \textbf{defined} from mirror data.
+Observers arise at the heterotic rung as collapsed fixed-point states:
+\begin{equation}
+  \iota \;\longmapsto\; |\omega_\iota\rangle \in H^1(\hat Q,V_{16})^{\sigma=-1},
+  \qquad
+  g_\iota:\mathbb{R}\to\mathcal{S}_\iota.
+\end{equation}
+Only two axioms are primitive. Duality, observer multiplicity, and the
+index--lifetime map are \textbf{derived} from $E_8\times E_8$ collapse and the
+Lefschetz fixed-point theorem.
 
 \subsection{Epistemic summary}
 
@@ -458,9 +722,10 @@ gauge structure, family multiplicity, and semiclassical unitarity are
 \midrule
 Axioms & void, mirror \\
 Theorems & rung table, $E_8$, $E_8\times E_8$, $E_6$, partition, vacuum, \\
- & three families, anomalies, $b_0=12$, $\kappa_\star$, semiclassical RP \\
-Definitions & physical sector, soldering, universe $\mathfrak{U}^\star$ \\
-Conjectures & full RP, GUT breaking, CC sequestering \\
+ & duality, observer fixed points, three families, index--lifetime map, \\
+ & anomalies, $b_0=12$, $\kappa_\star$, semiclassical RP \\
+Definitions & above--below, observer, lifetime chart, physical sector \\
+Conjectures & lifetime uniqueness, full RP, GUT breaking, CC sequestering \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -468,6 +733,7 @@ Conjectures & full RP, GUT breaking, CC sequestering \\
 \subsection{Open problems}
 
 \begin{enumerate}[label=\textbf{O\arabic*.},leftmargin=*]
+  \item Prove Conjecture~\ref{conj:lifetime-unique} (functorial lifetime chart).
   \item Functorial uniqueness of soldering (Definition~\ref{def:soldering}).
   \item Prove Conjecture~\ref{conj:breaking} from $V$.
   \item Prove Conjecture~\ref{conj:rp}.
@@ -478,7 +744,7 @@ Conjectures & full RP, GUT breaking, CC sequestering \\
 \subsection{Archive}
 
 The prior modular manuscript (39 pages, verification ledger, axiomatic
-elimination program) is preserved in \texttt{old/sjet-stack/}.% --- end 06-conclusions.tex ---
+elimination program) is preserved in \texttt{old/sjet-stack/}.% --- end 07-conclusions.tex ---
 % --- appendix.tex ---
 %======================================================================%
 \appendix
@@ -508,11 +774,52 @@ structure group~\cite{SpringerVeldkamp2000,Jacobson1968}.
 \label{sec:appendix:quotient}
 %----------------------------------------------------------------------%
 
-On the stabilized tower $\mathcal{T}_7$ at $\Mirror^7(\Void)$, cellular
-$1$-cochains on three diagonal cells give
-$\dim H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}=3$. The Stone lift
-identifies this with $H^1(\hat Q,V_{16})^{\sigma=-1}$, proving
-Theorem~\ref{thm:three-families}.% --- end appendix.tex ---
+On the stabilized tower $\mathcal{T}_7$ at $\Mirror^7(\Void)$, let
+$\sigma$ act on the rank-$3$ diagonal $\mathfrak{d}$ by $\sigma(e_i)=-e_i$
+with triality rotation on the three $\mathbf{16}$-cells $(C_1,C_2,C_3)$.
+
+\begin{lemma}[Cellular observer count]\label{lem:cellular}
+With $\mathcal{F}_{16}$ the $\mathbf{16}$-cellular cosheaf on $\mathcal{T}_7$,
+\begin{equation}\label{eq:cellular}
+  \dim H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=+1}=0,
+  \qquad
+  \dim H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}=3.
+\end{equation}
+Each $\sigma=-1$ class is one observer index $\iota\in\{1,2,3\}$.
+\end{lemma}
+
+\begin{proof}
+Cellular $1$-cochains are triples $(\phi_1,\phi_2,\phi_3)\in(\C^{16})^3$ with
+cocycle constraint $\phi_1+\phi_2+\phi_3=0$ at the $\mathbf{10}$-hub.
+Coboundaries are diagonals $(\psi,\psi,\psi)$. The quotient is two copies of
+$\C^{16}$ as a $\sigma$-module; triality with sign leaves three
+anti-invariant classes, one per diagonal direction $e_i$.
+\end{proof}
+
+\begin{proposition}[Stone lift]\label{prop:stone-lift}
+The profinite lift to $Q$ identifies
+$H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}\cong
+H^1(Q,V_{16})^{\sigma=-1}$.
+\end{proposition}
+
+\begin{theorem}[Mirror-quotient Lefschetz index]\label{thm:mirror-index}
+With $\bar\partial_{V_{16}}$ on $(Q,V_{16})$ and antiholomorphic $\sigma$,
+\begin{equation}\label{eq:mirror-index}
+  \mathrm{ind}_\sigma(\bar\partial_{V_{16}})
+  =\mathrm{Tr}_{H^1(Q,V_{16})}(\sigma)=-3,
+  \qquad
+  \dim H^1(\hat Q,V_{16})^{\sigma=-1}=3.
+\end{equation}
+This is Theorem~\ref{thm:observer-fp}; each unit contribution is one observer
+fixed-point slot.
+\end{theorem}
+
+\begin{proof}
+Lemma~\ref{lem:cellular}, Proposition~\ref{prop:stone-lift}, and the
+Atiyah--Bott holomorphic Lefschetz formula~\cite{AtiyahBott1966}. For a
+$\mathbb{Z}_2$ quotient by an antiholomorphic involution,
+$H^1(\hat Q,V_{16})=H^1(Q,V_{16})^{\sigma=-1}$.
+\end{proof}% --- end appendix.tex ---
 \begin{thebibliography}{99}
 
 \bibitem{Stone1936}

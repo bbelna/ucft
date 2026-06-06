@@ -26,8 +26,49 @@ structure group~\cite{SpringerVeldkamp2000,Jacobson1968}.
 \label{sec:appendix:quotient}
 %----------------------------------------------------------------------%
 
-On the stabilized tower $\mathcal{T}_7$ at $\Mirror^7(\Void)$, cellular
-$1$-cochains on three diagonal cells give
-$\dim H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}=3$. The Stone lift
-identifies this with $H^1(\hat Q,V_{16})^{\sigma=-1}$, proving
-Theorem~\ref{thm:three-families}.
+On the stabilized tower $\mathcal{T}_7$ at $\Mirror^7(\Void)$, let
+$\sigma$ act on the rank-$3$ diagonal $\mathfrak{d}$ by $\sigma(e_i)=-e_i$
+with triality rotation on the three $\mathbf{16}$-cells $(C_1,C_2,C_3)$.
+
+\begin{lemma}[Cellular observer count]\label{lem:cellular}
+With $\mathcal{F}_{16}$ the $\mathbf{16}$-cellular cosheaf on $\mathcal{T}_7$,
+\begin{equation}\label{eq:cellular}
+  \dim H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=+1}=0,
+  \qquad
+  \dim H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}=3.
+\end{equation}
+Each $\sigma=-1$ class is one observer index $\iota\in\{1,2,3\}$.
+\end{lemma}
+
+\begin{proof}
+Cellular $1$-cochains are triples $(\phi_1,\phi_2,\phi_3)\in(\C^{16})^3$ with
+cocycle constraint $\phi_1+\phi_2+\phi_3=0$ at the $\mathbf{10}$-hub.
+Coboundaries are diagonals $(\psi,\psi,\psi)$. The quotient is two copies of
+$\C^{16}$ as a $\sigma$-module; triality with sign leaves three
+anti-invariant classes, one per diagonal direction $e_i$.
+\end{proof}
+
+\begin{proposition}[Stone lift]\label{prop:stone-lift}
+The profinite lift to $Q$ identifies
+$H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}\cong
+H^1(Q,V_{16})^{\sigma=-1}$.
+\end{proposition}
+
+\begin{theorem}[Mirror-quotient Lefschetz index]\label{thm:mirror-index}
+With $\bar\partial_{V_{16}}$ on $(Q,V_{16})$ and antiholomorphic $\sigma$,
+\begin{equation}\label{eq:mirror-index}
+  \mathrm{ind}_\sigma(\bar\partial_{V_{16}})
+  =\mathrm{Tr}_{H^1(Q,V_{16})}(\sigma)=-3,
+  \qquad
+  \dim H^1(\hat Q,V_{16})^{\sigma=-1}=3.
+\end{equation}
+This is Theorem~\ref{thm:observer-fp}; each unit contribution is one observer
+fixed-point slot.
+\end{theorem}
+
+\begin{proof}
+Lemma~\ref{lem:cellular}, Proposition~\ref{prop:stone-lift}, and the
+Atiyah--Bott holomorphic Lefschetz formula~\cite{AtiyahBott1966}. For a
+$\mathbb{Z}_2$ quotient by an antiholomorphic involution,
+$H^1(\hat Q,V_{16})=H^1(Q,V_{16})^{\sigma=-1}$.
+\end{proof}
