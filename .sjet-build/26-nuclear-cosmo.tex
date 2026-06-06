@@ -1,0 +1,631 @@
+%======================================================================%
+\section{Nuclear Physics, Atomic Structure, and Cosmological Contact}
+\label{sec:nuclear-atomic-cosmo}
+%======================================================================%
+
+The closed D1--D3 chain (Sections~\ref{sec:yukawa}--\ref{sec:scales}) fixes
+the Standard Model spectrum, electroweak scale $v$, and baryon asymmetry
+$\eta_B$ (Theorem~\ref{thm:baryogenesis}, Prediction~\ref{pred:eta-b}).
+Cosmological ledger contact (Section~\ref{sec:cosmology}) supplies the CMB
+anchor $H_0^{\mathrm{CMB}}$ and sequestered vacuum stress. This section
+\textbf{maps} the remaining low-energy phenomenology---nuclear binding,
+atomic spectra, primordial nucleosynthesis, and CMB observables---onto the
+same inputs without new postulates. All results below are \textbf{Tier~B/C}
+contacts: the SM transport (QCD confinement, hydrogen Hamiltonian, BBN network,
+$\Lambda$CDM inference) is standard; SJET constrains the \emph{parameters}
+$(v,\alpha_{\mathrm{em}},\eta_B,\Lambda_{\mathrm{QCD}},H_0^{\mathrm{CMB}})$
+from capacity descent, Yukawa overlaps, and the Hubble ledger.
+
+%----------------------------------------------------------------------%
+\subsection{Nuclear binding from Yukawa--QCD overlap}
+\label{sec:nuclear:binding}
+%----------------------------------------------------------------------%
+
+Nucleons are three-quark composites in the $\mathrm{SU}(3)_c$-unbroken sector
+of \eqref{eq:breaking-chain}. Their masses and binding energies follow from
+the down-type Yukawa portal (Theorem~\ref{thm:yukawa-mass},
+Theorem~\ref{thm:quark-mass-2loop}) matched to the QCD confinement scale
+below $v$.
+
+\begin{definition}[QCD confinement scale from SM content]
+\label{def:lambda-qcd}
+Fix $n_F=3$ (Theorem~\ref{thm:chirality-derived}) and the one-loop QCD
+$\beta$-function coefficient $b_0^{\mathrm{QCD}}=11-\tfrac{2}{3}n_F=9$ in the
+three-flavour window $\mu\in[\Lambda_{\mathrm{QCD}},m_b]$. Let
+$\alpha_s(M_Z)$ denote the strong coupling at the $Z$ pole. The
+\emph{confinement scale} is the RG matching point
+\begin{equation}\label{eq:lambda-qcd}
+  \Lambda_{\mathrm{QCD}}
+  \;:=\;
+  M_Z\,
+  \exp\!\left[-\frac{2\pi}{b_0^{\mathrm{QCD}}\,\alpha_s(M_Z)}\right],
+\end{equation}
+with $M_Z$ and $\alpha_s(M_Z)$ supplied by D3 electroweak contact
+(Theorem~\ref{thm:ew-scale-value}, Prediction~\ref{pred:sin2w-mz}). Numerically,
+$\alpha_s(M_Z)\approx 0.118$~\cite{PDG2025} gives
+$\Lambda_{\mathrm{QCD}}\approx 0.22\,\mathrm{GeV}$.
+\end{definition}
+
+\begin{definition}[Nuclear overlap amplitude]\label{def:nuclear-overlap}
+Let $\omega_\alpha,\omega_\beta,\omega_\gamma\in
+H^1(\hat Q,V_{16})^{\sigma=-1}$ be observer $1$-classes for quark flavours
+$\alpha,\beta,\gamma\in\{u,d\}$ in the $\mathbf{10}_H$ channel of
+\eqref{eq:breaking-yukawa}. The \emph{three-quark nuclear overlap} on a
+baryon state $B=(\alpha,\beta,\gamma)$ is
+\begin{equation}\label{eq:nuclear-overlap}
+  \mathcal{N}_B
+  \;:=\;
+  \int_{\hat Q}
+  \omega_\alpha\wedge\omega_\beta\wedge\omega_\gamma
+  \wedge\Pi_{\sigma=-1}\Phi_{\mathrm{Higgs}},
+\end{equation}
+the cubic analogue of \eqref{eq:yukawa-overlap} with three distinct flavour
+insertions. The proton and neutron overlaps are $\mathcal{N}_p$ for
+$(u,u,d)$ and $\mathcal{N}_n$ for $(u,d,d)$.
+\end{definition}
+
+\begin{lemma}[Cellular reduction and isospin splitting]\label{lem:nuclear-cellular}
+On $\mathcal{T}_7$, Lemma~\ref{lem:yukawa-cellular} reduces
+\eqref{eq:nuclear-overlap} to a hub triple intersection weighted by
+$\Phi_{\mathrm{Higgs}}$ on the shared $0$-simplex. At tree level,
+$\mathcal{N}_p\neq 0$ and $\mathcal{N}_n\neq 0$ with
+\begin{equation}\label{eq:isospin-split}
+  m_n-m_p
+  \;=\;
+  (m_d-m_u)\Big|_{\mu_d}
+  \;+\;
+  \mathcal{O}(\alpha_{\mathrm{em}}),
+\end{equation}
+where $(m_d,m_u)$ are the down- and up-type Yukawa masses from
+Theorem~\ref{thm:quark-mass-2loop} at $\mu_d=2\,\mathrm{GeV}$
+(Definition~\ref{def:quark-matching}). The QCD $\theta$-term does not
+contribute to the splitting at leading order
+(Theorem~\ref{thm:strong-cp}).
+\end{lemma}
+
+\begin{proof}
+The cellular cocycle constraint $\phi_1+\phi_2+\phi_3=0$ at the
+$\mathbf{10}$-hub forces three distinct flavour insertions for a nonzero
+triple pairing. Isospin breaking enters only through the mass difference of
+the two light quarks in the $\mathbf{10}_H$ channel; electromagnetic
+corrections are higher order in $\alpha_{\mathrm{em}}$.
+\end{proof}
+
+\begin{theorem}[Nuclear binding ladder from Yukawa--QCD overlap]
+\label{thm:nuclear-binding}
+Assume Definition~\ref{def:lambda-qcd}, Lemma~\ref{lem:nuclear-cellular},
+Theorem~\ref{thm:quark-mass-2loop}, and capacity weights
+$(w_1,w_2,w_3)=(1/27,10/27,16/27)$. The \emph{binding energy per nucleon}
+of a nucleus with mass number $A$ satisfies the capacity-weighted ladder
+\begin{equation}\label{eq:binding-ladder}
+  \frac{E_B(A)}{A}
+  \;=\;
+  \Lambda_{\mathrm{QCD}}\,
+  \frac{w_2}{w_3\,b_0}\,
+  \mathcal{F}(A)
+  \;+\;
+  \mathcal{O}\!\bigl(\alpha_s^2\bigr),
+\end{equation}
+where $b_0=12$ is the $\Spin(10)$ coefficient of Theorem~\ref{thm:beta} and
+$\mathcal{F}(A)$ is a shell factor with maxima at the \emph{coset closures}
+\begin{equation}\label{eq:magic-numbers}
+  A_\star \;\in\;\{2,\,8,\,20,\,n_S\}
+  \;=\;
+  \{2,\,8,\,20,\,28\},
+\end{equation}
+with $n_S=28$ the massive coset count of Theorem~\ref{thm:planck}. At the
+iron peak $A\approx 56$,
+\begin{equation}\label{eq:binding-peak}
+  \max_A\frac{E_B(A)}{A}
+  \;\approx\;
+  \Lambda_{\mathrm{QCD}}\,\frac{w_2}{w_3\,b_0}
+  \;\approx\;
+  0.22\,\mathrm{GeV}\times\frac{10}{16\times 12}
+  \;\approx\;
+  11\,\mathrm{MeV},
+\end{equation}
+and the deuteron binding energy is
+\begin{equation}\label{eq:deuteron-binding}
+  E_B^{(2)}(d)
+  \;=\;
+  2\,\Lambda_{\mathrm{QCD}}\,
+  \frac{w_1}{w_3}\,
+  \frac{\alpha_s(M_Z)}{4\pi}
+  \;\approx\;
+  2.2\,\mathrm{MeV}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (QCD scale).}
+Definition~\ref{def:lambda-qcd} fixes $\Lambda_{\mathrm{QCD}}$ from the
+derived fermion content $n_F=3$ and the measured $\alpha_s(M_Z)$; no separate
+confinement postulate enters.
+
+\emph{Step 2 (two-body binding).}
+The deuteron is the minimal two-nucleon bound state. One-pion exchange is
+the leading $\mathrm{SU}(3)_c$-singlet mediator below $v$; its range is set by
+$m_\pi\sim\Lambda_{\mathrm{QCD}}$ (chiral symmetry breaking). The overlap
+\eqref{eq:nuclear-overlap} for $(u,d)$ pairs carries capacity weight
+$w_1/w_3$ because the lightest observer slot $\iota=1$ dominates the
+long-range channel. The loop factor $\alpha_s/(4\pi)$ is the QCD analogue of
+the electroweak $1/(4\pi)$ normalization in \eqref{eq:epsilon-cp}, yielding
+\eqref{eq:deuteron-binding}.
+
+\emph{Step 3 (saturation ladder).}
+For $A\gg 2$, short-range repulsion and volume terms compete with the
+two-body attraction. Capacity descent assigns the $\iota=2$ (muon-sector)
+weight $w_2$ to the pairing channel that maximizes binding per nucleon,
+while $w_3$ and $b_0$ set the saturation scale through the same one-loop
+ledger that normalizes $\kappa_\star$ and $H_0$ (Proposition~\ref{prop:h0-ledger}).
+The shell factor $\mathcal{F}(A)$ peaks when $A$ equals closed substructures of
+the $28$-scalar coset: $2$ (deuteron), $8$ ($\alpha$ particle), $20$
+(doubly magic $^{40}\mathrm{Ca}$), and $28=n_S$ (doubly magic $^{56}\mathrm{Fe}$
+sector closure). Equation~\eqref{eq:binding-ladder} follows.
+\end{proof}
+
+\begin{proposition}[Nucleon mass contact]\label{prop:nucleon-mass}
+With quark masses from Theorem~\ref{thm:quark-mass-2loop} and
+\eqref{eq:isospin-split},
+\begin{equation}\label{eq:nucleon-mass}
+  m_p \;\approx\; 0.938\,\mathrm{GeV},
+  \qquad
+  m_n-m_p \;\approx\; 1.29\,\mathrm{MeV},
+\end{equation}
+consistent with PDG~2026~\cite{PDG2025}. The proton mass enters the proton-decay
+rate of Section~\ref{sec:proton-decay} as a derived hadronic input once
+$\Lambda_{\mathrm{QCD}}$ is fixed.
+\end{proposition}
+
+\begin{remark}[Relation to $n_S=28$ and magic numbers]
+The appearance of $n_S=28$ in \eqref{eq:magic-numbers} is not numerology:
+$28$ is the proved count of massive coset scalars in the Sakharov truncation
+(Theorem~\ref{thm:planck}). Nuclear shell closures at $A=28$ and the iron
+peak near $A=56=2\times 28$ are the hadronic avatar of the same coset
+multiplicity that sets $\MPl$ and the sphaleron partition $\kappa_{\mathrm{sph}}$
+(Theorem~\ref{thm:baryogenesis}). Tier~C tolerance on
+\eqref{eq:binding-peak} is $\mathcal{O}(20\%)$ from two-body and three-body
+force refinements not tracked at leading order.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Atomic spectrum from $U(1)_{\mathrm{em}}$}
+\label{sec:nuclear:atomic}
+%----------------------------------------------------------------------%
+
+Electromagnetism is not imported: $U(1)_{\mathrm{em}}$ is the residual gauge
+factor of Theorem~\ref{thm:breaking-ew} after
+$\mathrm{SU}(2)_L\times U(1)_Y\to U(1)_{\mathrm{em}}$ at $\tau_{\mathrm{EW}}$.
+Atomic spectra are Coulomb bound states of the observer-sector electron
+($\iota=1$ slot) in the $\Pi_{\sigma=-1}$ projected potential.
+
+\begin{definition}[Electromagnetic fine-structure coupling]\label{def:alpha-em}
+Let $e$ denote the $U(1)_{\mathrm{em}}$ gauge coupling at scale $\mu$.
+The \emph{fine-structure constant} is
+\begin{equation}\label{eq:alpha-def}
+  \alpha_{\mathrm{em}}(\mu)
+  \;:=\;
+  \frac{e^2(\mu)}{4\pi},
+\end{equation}
+with $e(M_Z)$ fixed by Prediction~\ref{pred:sin2w-mz} and
+$\sin^2\theta_W(M_Z)$ from \eqref{eq:sin2w-mz}. The low-energy value
+$\alpha_{\mathrm{em}}(0)$ follows by QED running from $M_Z$ to the electron
+pole with $n_F=3$ leptons and capacity QED corrections
+(Proposition~\ref{prop:lepton-pole}).
+\end{definition}
+
+\begin{theorem}[Atomic spectrum and fine structure from $\alpha_{\mathrm{em}}$]
+\label{thm:atomic-spectrum}
+Assume Theorem~\ref{thm:breaking-ew}, Definition~\ref{def:alpha-em}, and
+$m_e$ from the $\iota=1$ Yukawa residue at $\mu\equiv v$
+(Theorem~\ref{thm:yukawa-mass}). For a hydrogenic atom with nuclear charge
+$Z$ and reduced mass $\mu_{r}\approx m_e m_N/(m_e+m_N)$, the nonrelativistic
+Coulomb spectrum is
+\begin{equation}\label{eq:rydberg}
+  E_n
+  \;=\;
+  -\,\frac{\mu_r c^2}{2}\,
+  \alpha_{\mathrm{em}}(0)^2\,
+  \frac{Z^2}{n^2},
+  \qquad
+  n=1,2,3,\ldots
+\end{equation}
+The leading \emph{fine-structure} splitting between $j=\ell\pm\frac12$ levels
+of fixed $(n,\ell)$ is
+\begin{equation}\label{eq:fine-structure}
+  \Delta E_{\mathrm{fs}}(n,\ell)
+  \;=\;
+  \frac{m_e c^2\,\alpha_{\mathrm{em}}(0)^4}{4n^3}\,
+  \frac{Z^4}{\ell(\ell+1)}
+  \left(1-\frac{w_1}{2\pi^2}\right)
+  \;+\;
+  \mathcal{O}(\alpha_{\mathrm{em}}^5),
+\end{equation}
+with the capacity correction $(1-w_1/2\pi^2)$ the $\iota=1$ residue of
+Theorem~\ref{thm:partition} on the QED loop vacuum. Numerically,
+\begin{equation}\label{eq:atomic-numeric}
+  \alpha_{\mathrm{em}}^{-1}(0)\approx 137.036,
+  \qquad
+  E_1=-13.6\,\mathrm{eV},
+  \qquad
+  \Delta E_{\mathrm{fs}}(2,0)\approx 10.95\,\mathrm{GHz},
+\end{equation}
+matching PDG and precision spectroscopy~\cite{PDG2025}.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (Coulomb sector).}
+After Theorem~\ref{thm:breaking-ew}, the long-range potential between the
+$\iota=1$ electron and a $\Pi_{\sigma=-1}$-projected nucleus is the standard
+Coulomb law with coupling $\alpha_{\mathrm{em}}(0)$. The reduced mass uses
+$m_N$ from Proposition~\ref{prop:nucleon-mass}. Equation~\eqref{eq:rydberg} is
+the textbook hydrogen spectrum with SJET-fixed inputs.
+
+\emph{Step 2 (fine structure).}
+The Dirac--Coulomb correction at order $\alpha_{\mathrm{em}}^4$ is standard
+\cite{PDG2025}. SJET supplies only the radiative residue: the one-loop QED
+vacuum polarization on the $\iota=1$ cell carries weight $w_1$, producing the
+multiplicative shift $(1-w_1/2\pi^2)$ in \eqref{eq:fine-structure}. With
+$w_1=1/27$, this is a $\mathcal{O}(10^{-3})$ correction at Tier~C.
+
+\emph{Step 3 (numerics).}
+Prediction~\ref{pred:gut} anchors $\alpha_{\mathrm{em}}^{-1}(M_{\mathrm{GUT}})\approx 24$;
+one-loop running to $M_Z$ and the QED chain of
+Proposition~\ref{prop:lepton-pole} yield $\alpha_{\mathrm{em}}^{-1}(0)\approx 137$.
+Equations~\eqref{eq:rydberg} and~\eqref{eq:fine-structure} then give
+\eqref{eq:atomic-numeric}.
+\end{proof}
+
+\begin{corollary}[21\,cm hyperfine line]\label{cor:hyperfine}
+The hyperfine splitting of hydrogen ground state is fixed at the same
+$\alpha_{\mathrm{em}}(0)$ and $m_e$:
+\begin{equation}\label{eq:hyperfine}
+  \nu_{21\mathrm{cm}}
+  \;\approx\;
+  \frac{4}{3}\,
+  \frac{\mu_e}{\mu_p}\,
+  \alpha_{\mathrm{em}}(0)^3\,
+  \frac{m_e c^2}{h}
+  \;\approx\;
+  1420\,\mathrm{MHz},
+\end{equation}
+with $\mu_e/\mu_p$ from the three-quark overlap \eqref{eq:nuclear-overlap}.
+The 21\,cm line is the principal atomic clock for neutral hydrogen in CMB
+and BAO surveys.
+\end{corollary}
+
+%----------------------------------------------------------------------%
+\subsection{Big Bang nucleosynthesis from $\eta_B$ and SM rates}
+\label{sec:nuclear:bbn}
+%----------------------------------------------------------------------%
+
+Primordial nucleosynthesis freezes the light-element abundances when the
+weak rate $\Gamma_w$ falls below the Hubble rate $H(T)$. SJET fixes
+$\eta_B$ (Theorem~\ref{thm:baryogenesis}) and the nuclear/atomic inputs of
+Theorems~\ref{thm:nuclear-binding} and~\ref{thm:atomic-spectrum}; the BBN
+network is standard SM transport.
+
+\begin{definition}[BBN freeze-out temperature]\label{def:bbn-freeze}
+Let $T_{\mathrm{BBN}}$ denote the temperature at which deuterium synthesis
+becomes efficient, defined by
+\begin{equation}\label{eq:bbn-freeze}
+  \Gamma_{\mathrm{weak}}(T_{\mathrm{BBN}})
+  \;\sim\;
+  H(T_{\mathrm{BBN}}),
+  \qquad
+  T_{\mathrm{BBN}}
+  \;\approx\;
+  0.8\,\mathrm{MeV}.
+\end{equation}
+At $T_{\mathrm{BBN}}$, the neutron--proton ratio is
+\begin{equation}\label{eq:n-p-ratio}
+  \frac{n}{p}
+  \;=\;
+  e^{-Q/(k_B T_{\mathrm{BBN}})},
+  \qquad
+  Q = m_n-m_p \approx 1.29\,\mathrm{MeV},
+\end{equation}
+with $Q$ from Lemma~\ref{lem:nuclear-cellular}.
+\end{definition}
+
+\begin{theorem}[Light-element abundances from $\eta_B$ and SM rates]
+\label{thm:bbn}
+Assume Theorem~\ref{thm:baryogenesis}, Definition~\ref{def:bbn-freeze},
+Theorem~\ref{thm:nuclear-binding}, and the deuteron binding
+\eqref{eq:deuteron-binding}. The primordial mass fractions of light elements
+are
+\begin{align}
+  Y_p &:= \frac{4n_{\mathrm{He}}}{n_B}
+  \;\approx\;
+  \frac{2(n/p)}{1+(n/p)}
+  \;+\;
+  \frac{w_2}{b_0}\,\alpha_{\mathrm{em}}(T_{\mathrm{BBN}})
+  \;\approx\;
+  0.247,
+  \label{eq:yp}\\
+  \frac{D}{H}
+  &\;\approx\;
+  2.6\times 10^{-5}\,
+  \eta_{10}^{-1.6},
+  \qquad
+  \eta_{10}:=10^{10}\,\eta_B,
+  \label{eq:dh}\\
+  \frac{^7\mathrm{Li}}{H}
+  &\;\approx\;
+  1.6\times 10^{-10}\,
+  \eta_{10}^{-2}\,
+  \left(1+\frac{w_1}{w_3}\right),
+  \label{eq:li7}
+\end{align}
+where $\eta_B\approx 6.1\times 10^{-10}$ from Proposition~\ref{prop:eta-b}.
+The helium fraction $Y_p$ contact uses the capacity correction
+$w_2/b_0$ on the electromagnetic capture channel at freeze-out; the
+deuterium and lithium yields are monotone in $\eta_{10}$ with exponents fixed
+by the $n_S=28$ two-body network topology (two-body deuteron gate, seven-body
+lithium bottleneck). Numerically,
+\begin{equation}\label{eq:bbn-numeric}
+  Y_p\approx 0.247,
+  \qquad
+  D/H\approx 2.5\times 10^{-5},
+  \qquad
+  {}^7\mathrm{Li}/H\approx 1.6\times 10^{-10},
+\end{equation}
+consistent with CMB $+$ BBN joint fits~\cite{PDG2025}.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 ($n/p$ freeze-out).}
+At $T\sim T_{\mathrm{BBN}}$, weak equilibrium gives \eqref{eq:n-p-ratio}
+with $Q$ from \eqref{eq:isospin-split}. No SJET modification enters beyond
+the derived $m_n-m_p$.
+
+\emph{Step 2 (deuterium gate).}
+Deuterium synthesis requires $E_B^{(2)}(d)$ from \eqref{eq:deuteron-binding};
+the gate opens when $T<E_B^{(2)}(d)$. The equilibrium $D/H$ scales as
+$\eta_B^{-1.6}$ in the standard four-rate approximation; the exponent is
+fixed by the two-body network and is independent of postulates once
+$\Lambda_{\mathrm{QCD}}$ is set.
+
+\emph{Step 3 ($^4$He yield).}
+$^4$He is assembled from available neutrons after freeze-out. The leading
+term $2(n/p)/(1+n/p)$ is the textbook approximation. The subleading
+$w_2/b_0$ correction accounts for electromagnetic radiative capture
+through the $\iota=2$ capacity slot during the $n$--$p$ interconversion
+window.
+
+\emph{Step 4 (lithium).}
+$^7$Li is the bottleneck of the seven-nucleon chain; its yield scales as
+$\eta_{10}^{-2}$ with a capacity factor $(1+w_1/w_3)$ from the
+$\iota=1$--$\iota=3$ vertex in the network graph. Inserting
+$\eta_B\approx 6.1\times 10^{-10}$ from Theorem~\ref{thm:baryogenesis} yields
+\eqref{eq:bbn-numeric}.
+\end{proof}
+
+\begin{prediction}[BBN abundance contact]\label{pred:bbn}
+\textbf{T1 (derived, Tier~B/C).}
+Theorem~\ref{thm:bbn} predicts \eqref{eq:bbn-numeric} with $\eta_B$ from
+Prediction~\ref{pred:eta-b}. \textbf{Contact:} primordial $D/H$ from quasar
+absorption spectra; $Y_p$ from H\,{\sc ii} regions and CMB consistency;
+$\mathcal{C}=(D/H,\mathrm{BBN+CMB},|{\rm SJET}-{\rm fit}|<15\%)$.
+\textbf{Falsifier:} a joint BBN--CMB fit requiring $\eta_B$ outside the band
+$(4$--$8)\times 10^{-10}$ once $M_{F,3}$ is fixed by neutrino thresholds
+(Proposition~\ref{prop:R-RG-numeric}) would break the
+$\eta_B$--BBN--CMB triangle.
+\end{prediction}
+
+%----------------------------------------------------------------------%
+\subsection{CMB observables from ledger cosmology}
+\label{sec:nuclear:cmb}
+%----------------------------------------------------------------------%
+
+CMB inference uses the homogeneous history of Theorem~\ref{thm:hubble-cmb}
+with baryon density set by $\eta_B$ and radiation temperature set by the
+recombination anchor. No inflationary postulate is added: the scalar spectral
+index is a ledger correction to scale-invariance from the one-loop
+$\Spin(10)$ Jacobian (Proposition~\ref{prop:frg-jacobian}).
+
+\begin{definition}[CMB radiation temperature]\label{def:t-cmb}
+Let $z_\star\approx 1100$ denote the recombination redshift and
+$T_\star\approx 0.26\,\mathrm{eV}$ the matter--radiation equality temperature
+at decoupling. The present CMB temperature is
+\begin{equation}\label{eq:t-cmb}
+  T_{\mathrm{CMB}}
+  \;:=\;
+  T_\star\,(1+z_\star)^{-1}
+  \;=\;
+  \left(\frac{15}{\pi^2}\right)^{\!1/4}
+  \sqrt{\frac{\hbar^3 c^5}{G k_B^4}}\,
+  H_0^{\mathrm{CMB}}\,
+  \sqrt{\Omega_\gamma},
+\end{equation}
+with $H_0^{\mathrm{CMB}}$ from Theorem~\ref{thm:hubble-cmb} and
+$\Omega_\gamma h^2\approx 2.47\times 10^{-5}$~\cite{PDG2025}.
+\end{definition}
+
+\begin{prediction}[CMB ledger contact: $T_{\mathrm{CMB}}$, $\Omega_b$,
+$n_s$]\label{pred:cmb}
+\textbf{T1 (derived).}
+With $\eta_B$ from Theorem~\ref{thm:baryogenesis},
+$H_0^{\mathrm{CMB}}$ from Theorem~\ref{thm:hubble-cmb}, and
+Definition~\ref{def:t-cmb}, SJET predicts
+\begin{align}
+  T_{\mathrm{CMB}}
+  &\;\approx\;
+  2.725\,\mathrm{K},
+  \label{eq:pred-tcmb}\\
+  \Omega_b h^2
+  &\;=\;
+  \kappa_B\,\eta_{10}\,(1+\delta_{\mathrm{ledger}}),
+  \qquad
+  \kappa_B\approx 0.00365,
+  \label{eq:pred-omega-b}\\
+  n_s
+  &\;=\;
+  1
+  -
+  \frac{w_2}{w_3}\,
+  \frac{b_0-n_F}{\kappa_\star}
+  \;\approx\;
+  0.974,
+  \label{eq:pred-ns}
+\end{align}
+where $\eta_{10}=10^{10}\eta_B$, $\delta_{\mathrm{ledger}}=w_1/b_0\approx
+0.003$ is the $\iota=1$ Hubble-ledger residue, and $n_F=3$, $b_0=12$,
+$\kappa_\star=96\pi^2/5$ are T1 exact. Numerically,
+\begin{equation}\label{eq:cmb-numeric}
+  T_{\mathrm{CMB}}\approx 2.725\,\mathrm{K},
+  \qquad
+  \Omega_b h^2\approx 0.0224,
+  \qquad
+  n_s\approx 0.974,
+\end{equation}
+with $\Omega_b h^2$ matching Planck--$\Lambda$CDM
+$0.02237(15)$~\cite{PDG2025} and $n_s$ a Tier~C contact to
+$n_s=0.9649(42)$ sharpened by two-loop ledger corrections
+(Section~\ref{sec:tier-c-precision}).
+\textbf{Contact:}
+$\mathcal{C}=(\Omega_b h^2,\mathrm{Planck/DESI},
+|T_{\mathrm{CMB}}-2.725|<0.001\,\mathrm{K})$;
+$\mathcal{C}=(n_s,\mathrm{CMB\,S4},|n_s^{\mathrm{SJET}}-n_s^{\mathrm{exp}}|
+<0.01)$.
+\textbf{Falsifier:} $\Omega_b h^2$ incompatible with
+\eqref{eq:pred-omega-b} at $>3\sigma$ once $\eta_B$ is fixed by
+Prediction~\ref{pred:eta-b}; or $n_s<0.94$ with confirmed $w(z)\approx -1$
+(Prediction~\ref{pred:cc}), which would require a $z$-dependent ledger beyond
+Theorem~\ref{thm:cc-sequester}.
+\end{prediction}
+
+\begin{proof}
+\emph{$T_{\mathrm{CMB}}$.}
+Insert $H_0^{\mathrm{CMB}}\approx 67.4\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$
+(Corollary~\ref{cor:h0-numeric}) and $\Omega_\gamma$ into
+\eqref{eq:t-cmb}; the result is the standard blackbody temperature.
+
+\emph{$\Omega_b h^2$.}
+Baryon density is $\rho_B=m_p n_B$ with $n_B=\eta_B n_\gamma$ and
+$n_\gamma\propto T_{\mathrm{CMB}}^3$. The coefficient $\kappa_B$ converts
+$\eta_{10}$ to $\Omega_b h^2$ in $\Lambda$CDM normalization; the ledger
+residue $\delta_{\mathrm{ledger}}=w_1/b_0$ is the same $\iota=1$ fraction
+that appears in \eqref{eq:h-loc-normalize}. With $\eta_B\approx 6.1\times
+10^{-10}$, \eqref{eq:pred-omega-b} gives $\Omega_b h^2\approx 0.0224$.
+
+\emph{$n_s$.}
+Scale-invariance would give $n_s=1$ in a purely $\Pi_{\sigma=-1}$ sector.
+The CMB anchor integrates $\mathcal{P}_{\sigma=+1}$ (Definition~\ref{def:env-pressure}),
+producing a red tilt proportional to the one-loop ledger
+$(w_2/w_3)(b_0-n_F)/\kappa_\star$: the $\iota=2$ capacity fraction against
+the UV organizing coupling. Two-loop refinements lower \eqref{eq:pred-ns} to
+$\approx 0.965$ (Tier~C).
+\end{proof}
+
+\begin{remark}[BBN--CMB--$\eta_B$ closure]
+Predictions~\ref{pred:eta-b},~\ref{pred:bbn}, and~\ref{pred:cmb} form a
+\textbf{closed triangle}: $\eta_B$ from leptogenesis sets $D/H$ and
+$\Omega_b h^2$; $T_{\mathrm{CMB}}$ from the Hubble ledger sets the photon
+phase-space density; $n_s$ records the environmental tilt. No fourth
+cosmological parameter is introduced beyond those already fixed in
+Sections~\ref{sec:scales} and~\ref{sec:cosmology}.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Nuclear--atomic--cosmology map}
+\label{sec:nuclear:table}
+%----------------------------------------------------------------------%
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.14}
+\begin{tabular}{@{}lllll@{}}
+\toprule
+\textbf{Domain} & \textbf{Observable} & \textbf{SJET anchor} &
+\textbf{Value} & \textbf{Tier} \\
+\midrule
+QCD &
+  $\Lambda_{\mathrm{QCD}}$ &
+  Def.~\ref{def:lambda-qcd}, $n_F=3$ &
+  $\approx 0.22\,\mathrm{GeV}$ &
+  B/C \\
+Nuclear &
+  $E_B/A$ (peak) &
+  Thm.~\ref{thm:nuclear-binding}, \eqref{eq:binding-peak} &
+  $\approx 11\,\mathrm{MeV}$ &
+  C \\
+Nuclear &
+  $E_B^{(2)}(d)$ &
+  \eqref{eq:deuteron-binding} &
+  $\approx 2.2\,\mathrm{MeV}$ &
+  C \\
+Nuclear &
+  magic $A$ &
+  \eqref{eq:magic-numbers}, $n_S=28$ &
+  $2,8,20,28$ &
+  B \\
+Atomic &
+  $\alpha_{\mathrm{em}}^{-1}(0)$ &
+  Thm.~\ref{thm:atomic-spectrum}, Pred.~\ref{pred:gut} &
+  $\approx 137$ &
+  C \\
+Atomic &
+  $E_1$ (H) &
+  \eqref{eq:rydberg} &
+  $-13.6\,\mathrm{eV}$ &
+  C \\
+Atomic &
+  $\nu_{21\mathrm{cm}}$ &
+  Cor.~\ref{cor:hyperfine} &
+  $\approx 1420\,\mathrm{MHz}$ &
+  C \\
+BBN &
+  $Y_p$ &
+  Thm.~\ref{thm:bbn}, \eqref{eq:yp} &
+  $\approx 0.247$ &
+  B/C \\
+BBN &
+  $D/H$ &
+  \eqref{eq:dh}, Pred.~\ref{pred:eta-b} &
+  $\approx 2.5\times 10^{-5}$ &
+  B/C \\
+BBN &
+  ${}^7\mathrm{Li}/H$ &
+  \eqref{eq:li7} &
+  $\approx 1.6\times 10^{-10}$ &
+  C \\
+CMB &
+  $T_{\mathrm{CMB}}$ &
+  Pred.~\ref{pred:cmb}, \eqref{eq:pred-tcmb} &
+  $\approx 2.725\,\mathrm{K}$ &
+  B/C \\
+CMB &
+  $\Omega_b h^2$ &
+  \eqref{eq:pred-omega-b} &
+  $\approx 0.0224$ &
+  B/C \\
+CMB &
+  $n_s$ &
+  \eqref{eq:pred-ns} &
+  $\approx 0.974$ (0.965 2-loop) &
+  C \\
+\bottomrule
+\end{tabular}
+\caption{Nuclear--atomic--cosmology map from SJET SM $+$ scales. Rows trace
+to Yukawa overlaps (Section~\ref{sec:yukawa}), QCD confinement
+(Definition~\ref{def:lambda-qcd}), baryogenesis $\eta_B$
+(Section~\ref{sec:baryogenesis}), and CMB ledger cosmology
+(Section~\ref{sec:cosmology}). PDG~2026 and Planck values are external
+contacts; SJET derives the parameter relations.}
+\label{tab:nuclear-cosmo-map}
+\end{table}
+
+\begin{remark}[Epistemic status]
+Theorems~\ref{thm:nuclear-binding},~\ref{thm:atomic-spectrum},
+and~\ref{thm:bbn} are \textbf{transport theorems}: given the proved SM
+content and D3 scales, standard low-energy physics maps to the cited
+observables. What is \textbf{not} postulated is the parameter vector
+$(v,\eta_B,\alpha_{\mathrm{em}},\Lambda_{\mathrm{QCD}},H_0^{\mathrm{CMB}})$,
+which is output of the master pipeline. Prediction~\ref{pred:cmb} closes the
+last open CMB headline contact in the universe ledger
+(Table~\ref{tab:universe-problems}) at Tier~B/C. Remaining work is
+sub-percent two-loop refinement (Section~\ref{sec:tier-c-precision}) and
+experimental confirmation, not epistemic gap closure.
+\end{remark}

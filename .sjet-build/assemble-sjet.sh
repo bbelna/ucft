@@ -12,7 +12,10 @@ inline() { echo "% --- $1 ---"; cat "$BUILD/$1"; echo "% --- end $1 ---"; }
            18-cosmology-hubble.tex 19-quark-precision.tex 20-proton-decay.tex \
            13-g2.tex 09-predictions.tex 07-conclusions.tex \
            08-gap-ledger.tex 14-derivation-complete.tex 15-tier-c-precision.tex \
-           21-quantum-origin.tex 22-universe-ledger.tex appendix.tex; do
+           21-quantum-origin.tex 22-universe-ledger.tex \
+           23-sm-lagrangian.tex 24-qcd-hadrons.tex 25-ew-precision.tex \
+           26-nuclear-cosmo.tex 27-emergent-physics.tex 28-physics-map.tex \
+           appendix.tex; do
     inline "$u"
   done
   cat "$BUILD/bibliography.tex"

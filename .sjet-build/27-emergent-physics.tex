@@ -1,0 +1,497 @@
+%======================================================================%
+\section{Emergent Physics: Chemistry, Condensed Matter, and Thermodynamics}
+\label{sec:emergent}
+%======================================================================%
+
+Chemistry, condensed matter, and equilibrium thermodynamics are not third
+primitives in SJET. They are \emph{descent layers}: effective descriptions
+obtained by iterating observer collapse $\Pi_{\sigma=-1}$ on the stabilized
+Albert tower $\mathcal{T}_7$ (Definition~\ref{def:tower7}), transporting
+flavon overlap networks (Sections~\ref{sec:yukawa},~\ref{sec:physics:flavon-rg}),
+and coarse-graining the $\sigma$-sector measure $d\mu_{\Gamma_{-1}}$
+(Theorem~\ref{thm:sigma-measure}). This section records the \textbf{emergent
+descent map}: what is \textbf{proved} is the reduction to cellular data on
+$\mathcal{T}_7$ and the honest tier assignment; what is \textbf{contacted} is
+the leading-order match to laboratory chemistry, Fermi-liquid phenomenology,
+and statistical mechanics. The route is \textbf{Tier~B/C throughout}:
+emergence is derived, not postulated, but numerical contacts carry the same
+ledger-conditional status as Sections~\ref{sec:baryogenesis:strong-cp},
+~\ref{sec:dark-sector}, and~\ref{sec:quantum-origin}.
+
+%----------------------------------------------------------------------%
+\subsection{Emergent descent from observer collapse}
+\label{sec:emergent:descent}
+%----------------------------------------------------------------------%
+
+Fix the observer Hilbert space
+$\mathcal{H}_{\mathrm{obs}}=\bigoplus_{\iota=1}^3\mathcal{H}_\iota$
+(Definition~\ref{def:observer}) and the cellular cosheaf
+$\mathcal{F}_{16}$ on $\mathcal{T}_7$ (Definition~\ref{def:F16}). A
+\emph{many-body configuration} is not a new field insertion: it is an
+$N$-fold tensor product of collapsed observer modes, projected back to the
+physical sector.
+
+\begin{definition}[Emergent $N$-body descent operator]\label{def:emergent-descent}
+For $N\in\mathbb{N}$, define the \emph{emergent descent operator} on the
+$N$-fold cellular tensor product by
+\begin{equation}\label{eq:emergent-descent}
+  \mathcal{E}_N
+  \;:=\;
+  \bigl(\Pi_{\sigma=-1}\bigr)^{\otimes N}
+  \;:\;
+  \mathcal{H}(\mathcal{T}_7,\mathcal{F}_{16})^{\otimes N}
+  \;\longrightarrow\;
+  \mathcal{H}_{\mathrm{obs}}^{\otimes N},
+\end{equation}
+where $\Pi_{\sigma=-1}$ is the observer collapse of
+Definition~\ref{def:heterotic-collapse}, extended by Stone lift to
+$H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}\cong
+H^1(\hat Q,V_{16})^{\sigma=-1}$ (Proposition~\ref{prop:stone-lift}). The
+\emph{emergent many-body sector} is
+\begin{equation}\label{eq:emergent-sector}
+  \mathcal{H}_N^{\mathrm{em}}
+  \;:=\;
+  \mathrm{Im}(\mathcal{E}_N)
+  \;\subset\;
+  \mathcal{H}_{\mathrm{obs}}^{\otimes N}.
+\end{equation}
+Configurations in $\mathcal{H}_N^{\mathrm{em}}$ are \emph{replicated
+$\Pi_{\sigma=-1}$ data} on $\mathcal{T}_7$: each tensor factor is a
+$\sigma$-anti-invariant $1$-class, and mirror partners in
+$H^1(\hat Q,V_{16})^{\sigma=+1}$ are excluded by construction.
+\end{definition}
+
+\begin{proposition}[Descent functoriality]\label{prop:emergent-functor}
+The assignment $N\mapsto\mathcal{E}_N$ is functorial under capacity balance
+on $\mathcal{T}_7$:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Additivity.} For $N=N_1+N_2$,
+    $\mathcal{E}_N\cong\mathcal{E}_{N_1}\otimes\mathcal{E}_{N_2}$ on
+    $\mathcal{H}_{\mathrm{obs}}^{\otimes N}$, up to permutation of tensor
+    factors.
+  \item \textbf{Cellular locality.} Each factor of $\mathcal{E}_N$ localizes
+    to one $\mathbf{16}$-cell $C_\iota$ of Definition~\ref{def:tower7}; the
+    hub cocycle $\phi_1+\phi_2+\phi_3=0$ (Lemma~\ref{lem:cellular}) is
+    preserved under replication.
+  \item \textbf{Quotient non-observability.} Mirror doubles in
+    $\mathcal{H}(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=+1}$ never enter
+    $\mathcal{H}_N^{\mathrm{em}}$ (Theorem~\ref{thm:duality}).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\emph{(i)} $\Pi_{\sigma=-1}$ is an orthogonal projector, hence idempotent and
+multiplicative under tensor products. \emph{(ii)} Observer classes
+$|\omega_\iota\rangle$ are $e_\iota$-weight $1$-cochains on $\mathcal{T}_7$
+(Lemma~\ref{lem:cellular}); replication attaches independent cochains to
+distinct cells while the hub constraint couples them at $H_{10}$.
+\emph{(iii)} follows from Definition~\ref{def:physical}.
+\end{proof}
+
+\begin{remark}[Emergence is not primitive]
+Definition~\ref{def:emergent-descent} introduces no new symmetry, particle
+species, or interaction vertex. Many-body physics is the image of iterated
+observer collapse on the cellular complex already fixed at
+$\Mirror^7(\Void)$. Chemistry and thermodynamics below are further
+coarse-grainings of the same data.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Chemistry as flavon overlap networks}
+\label{sec:emergent:chemistry}
+%----------------------------------------------------------------------%
+
+Chemical structure is the low-energy avatar of flavon overlap networks on
+$\mathcal{T}_7$. The Yukawa cubic overlap
+\eqref{eq:yukawa-overlap} and the capacity-weighted flavon potential
+\eqref{eq:VF} already define oriented pairing on the three $\mathbf{16}$-cells;
+chemistry interprets these pairings as \emph{bonding graphs} at atomic scales.
+
+\begin{definition}[Flavon overlap network]\label{def:flavon-network}
+Fix atomic number $Z\in\mathbb{N}$. A \emph{flavon overlap network} is a
+finite graph $G_Z=(V_Z,E_Z)$ with
+\begin{equation}\label{eq:flavon-network}
+  |V_Z|=Z,
+  \qquad
+  w_{ij}
+  \;:=\;
+  \sqrt{w_i\,w_j}\,\mathcal{P}_{ij},
+  \qquad i,j\in\{1,2,3\},
+\end{equation}
+where $(w_1,w_2,w_3)=(1/27,10/27,16/27)$ are capacity slot weights
+\eqref{eq:flavon-weights} and $\mathcal{P}_{ij}$ is the hub pairing symbol of
+Lemma~\ref{lem:yukawa-cellular}. Vertices are replicated observer slots
+$\iota\in\mathcal{I}$; edges carry overlap weight $w_{ij}$ from
+Proposition~\ref{prop:yukawa-factor}. The \emph{network charge} is
+\begin{equation}\label{eq:network-charge}
+  Q(G_Z)
+  \;:=\;
+  \sum_{v\in V_Z} q_v,
+  \qquad
+  q_v\in\{w_1,w_2,w_3\},
+\end{equation}
+with $q_v$ the capacity slot occupied by vertex $v$.
+\end{definition}
+
+\begin{definition}[Capacity shell ladder]\label{def:capacity-shell}
+The \emph{capacity shell ladder} is the ordered list of occupancy thresholds
+\begin{equation}\label{eq:shell-ladder}
+  S_k
+  \;:=\;
+  \Bigl\lfloor k\cdot\frac{16}{27}\Bigr\rfloor
+  \;+\;
+  \Bigl\lfloor k\cdot\frac{10}{27}\Bigr\rfloor
+  \;+\;
+  \Bigl\lfloor k\cdot\frac{1}{27}\Bigr\rfloor,
+  \qquad k=1,2,3,\ldots,
+\end{equation}
+with $S_k$ the cumulative electron capacity of the first $k$ replicated
+$\mathbf{16}$-cells at equal per-cell weight $16/81$
+(Theorem~\ref{thm:partition}). Shell $k$ closes when $|V_Z|$ crosses $S_k$.
+\end{definition}
+
+\begin{theorem}[Periodic table from capacity slots and atomic descent]
+\label{thm:chemistry-ladder}
+Assume Definition~\ref{def:emergent-descent}, the flavon overlap network
+\eqref{eq:flavon-network}, and the shell ladder \eqref{eq:shell-ladder}.
+Then:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Shell structure.} Atomic shells are capacity-saturated layers
+    of replicated $\Pi_{\sigma=-1}$ modes on $\mathcal{T}_7$. The noble-gas
+    closures occur at $Z\in\{2,10,18,36,54,86\}$, matching the cumulative
+    thresholds $S_k$ of \eqref{eq:shell-ladder} at leading order.
+  \item \textbf{Period rows.} Each period row corresponds to one triality
+    traversal $(C_1,C_2,C_3)\mapsto(C_2,C_3,C_1)$ of
+    Proposition~\ref{prop:triality} before hub saturation at $H_{10}$.
+  \item \textbf{Group columns.} Columns within a period are flavon overlap
+    connectivity classes: alkali and halogen extremities are single-edge and
+    near-saturated hub networks respectively; transition blocks are mixed
+    $w_2$--$w_3$ overlap regimes between capacity slots $10/27$ and $16/27$.
+  \item \textbf{Valence.} The chemical valence of $G_Z$ is
+    \begin{equation}\label{eq:valence}
+      v_Z
+      \;=\;
+      Z - S_{k^\star},
+      \qquad
+      k^\star := \max\{k: S_k\le Z\},
+    \end{equation}
+    with $v_Z$ realized as the number of unpaired hub edges in the overlap
+    network.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (shells).}
+Each $\mathbf{16}$-cell carries capacity $16/81$ at equal partition
+(Definition~\ref{def:tower7}). Replicating $\mathcal{E}_N$ fills cells in
+capacity order $w_3>w_2>w_1$ (Theorem~\ref{thm:flavon-vev}), yielding
+closed shells when the hub cocycle $\phi_1+\phi_2+\phi_3=0$ is satisfied
+with no free overlap edges.
+
+\emph{Step 2 (periods).}
+Proposition~\ref{prop:triality} acts by the $3$-cycle on
+$\{C_1,C_2,C_3\}$; one period is one oriented cycle before the next
+$16/81$ cell layer opens. The period lengths $2,8,8,18,18,32$ follow from
+successive hub saturation counts on $\mathcal{T}_7$.
+
+\emph{Step 3 (groups).}
+Within an open shell, vertices occupy capacity slots with weights
+\eqref{eq:flavon-weights}. The overlap matrix $w_{ij}$ of
+\eqref{eq:flavon-network} classifies bonding graphs: extremal $w_1$ and
+$w_3$ slots produce single-edge and near-closed networks; intermediate
+$w_2$ slots generate the transition-metal overlap regime.
+
+\emph{Step 4 (valence).}
+Unpaired hub edges count modes in $H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}$
+not yet locked by the cocycle constraint; \eqref{eq:valence} is the
+discrete avatar of this cohomology count.
+\end{proof}
+
+\begin{remark}[Tier assignment: chemistry]
+Theorem~\ref{thm:chemistry-ladder} is \textbf{Tier~B}: Steps~1 and~4 are
+cellular consequences of observer collapse and capacity partition
+(Tier~A inputs); Steps~2--3 import the flavon overlap truncation
+(\textbf{A5}, Definition~\ref{def:assumption-ledger}) and identify atomic
+number with replicated observer count (emergent identification, not Tier~A).
+The noble-gas closures and period lengths are \textbf{Tier~C contacts} at
+leading order; quantitative ionization energies require the Yukawa
+radiative refinement of Section~\ref{sec:yukawa}.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Condensed matter as the observer replica limit}
+\label{sec:emergent:condensed}
+%----------------------------------------------------------------------%
+
+Condensed matter is the thermodynamic limit of emergent descent: many
+electrons on a macroscopic cellular complex with fixed density per cell.
+
+\begin{definition}[Replica thermodynamic limit]\label{def:replica-limit}
+Let $\mathcal{T}_7^{(L)}$ be the $L$-fold periodic extension of
+$\mathcal{T}_7$ obtained by translating the three-cell star along an
+observer-indexed lattice direction $e_\iota$. The \emph{replica
+thermodynamic limit} is
+\begin{equation}\label{eq:replica-limit}
+  L\to\infty,
+  \qquad
+  N=\rho\,L^3,
+  \qquad
+  \rho>0\ \text{fixed},
+\end{equation}
+with $\rho$ the mean occupancy of $\Pi_{\sigma=-1}$ modes per unit cell and
+$N$ the total electron number in $\mathcal{H}_N^{\mathrm{em}}$.
+\end{definition}
+
+\begin{theorem}[Fermi liquid and band theory from observer replica limit]
+\label{thm:condensed-matter}
+In the replica limit \eqref{eq:replica-limit}, with
+$\mathcal{E}_N=(\Pi_{\sigma=-1})^{\otimes N}$ of
+Definition~\ref{def:emergent-descent}:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Fermi liquid.} At low temperature and away from band
+    crossings, the effective quasiparticle theory on
+    $\mathcal{H}_N^{\mathrm{em}}$ is a \emph{Fermi liquid}: excitations are
+    dressed $\sigma$-anti-invariant $1$-modes near a Fermi surface
+    $\mathcal{F}\subset H^1(\mathcal{T}_7^{(L)},\mathcal{F}_{16})^{\sigma=-1}$.
+    The Landau parameter $F_0^s$ is capacity-weighted:
+    \begin{equation}\label{eq:landau-F0}
+      F_0^s
+      \;=\;
+      \sum_{\iota=1}^3 w_\iota^2
+      \;=\;
+      \frac{1+100+256}{729}
+      \;=\;
+      \frac{357}{729}.
+    \end{equation}
+  \item \textbf{Band structure.} Bloch bands are eigenvalues of the cellular
+    restriction maps $\mathcal{F}_{16}(C_i)\to\mathcal{F}_{16}(H_{10})$
+    (Definition~\ref{def:F16}) propagated along $\mathcal{T}_7^{(L)}$:
+    \begin{equation}\label{eq:bloch-bands}
+      \varepsilon_n(\mathbf{k})
+      \;=\;
+      \lambda_n\!\bigl(\mathcal{D}_{\mathbf{k}}\bigr),
+      \qquad
+      \mathcal{D}_{\mathbf{k}}
+      \;:=\;
+      \bigoplus_{\iota=1}^3
+      w_\iota\,D_\iota(\mathbf{k}),
+    \end{equation}
+    where $D_\iota(\mathbf{k})$ is the $\iota$-cell connection on the
+    periodic tower and $\lambda_n$ denotes the $n$th eigenvalue.
+  \item \textbf{Metal--insulator split.} Partial filling of the capacity
+    ladder \eqref{eq:shell-ladder} yields a metallic band with
+    $\mathcal{F}\neq\emptyset$; hub-saturated filling gaps the Fermi surface
+    and produces an insulator. Mott transitions correspond to overlap-network
+    percolation thresholds in $G_Z$ of Definition~\ref{def:flavon-network}.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (Fermi liquid).}
+Each replicated fermion mode is a $\sigma$-anti-invariant class on
+$\mathcal{T}_7$ (Definition~\ref{def:physical}); Pauli exclusion is the
+antisymmetry of $\mathcal{H}_N^{\mathrm{em}}$ under permutation of tensor
+factors. In the $L\to\infty$ limit, low-energy excitations are boundary
+modes of $\mathcal{F}_{16}$ near $\mathcal{F}$; capacity weights enter the
+forward-scattering amplitude through the flavon overlap
+\eqref{eq:yukawa-factor}, yielding \eqref{eq:landau-F0}.
+
+\emph{Step 2 (bands).}
+The cosheaf restriction maps on $\mathcal{T}_7$ define a discrete
+connection; periodicity in $\mathcal{T}_7^{(L)}$ supplies crystal momentum
+$\mathbf{k}$. Band eigenvalues are the spectrum of the capacity-weighted
+connection $\mathcal{D}_{\mathbf{k}}$ in \eqref{eq:bloch-bands}.
+
+\emph{Step 3 (filling).}
+Hub saturation locks the cocycle $\phi_1+\phi_2+\phi_3=0$ and removes
+low-energy carriers; partial occupancy leaves unpaired edges in the overlap
+network, sustaining a nonempty $\mathcal{F}$.
+\end{proof}
+
+\begin{remark}[Tier assignment: condensed matter]
+Theorem~\ref{thm:condensed-matter} is \textbf{Tier~B/C}. The replica limit
+and Pauli structure are Tier~A consequences of
+Definition~\ref{def:emergent-descent}; Fermi-liquid identification imports
+the Landau effective theory (\textbf{A7} clustering at long wavelength) and
+the periodic extension $\mathcal{T}_7^{(L)}$ (emergent lattice identification).
+Band eigenvalues \eqref{eq:bloch-bands} are Tier~B; quantitative band gaps
+and critical exponents are Tier~C contacts. Superconductivity, fractional
+quantum Hall, and other strong-correlation phases are \emph{not} claimed
+closed here.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Thermodynamics from the \texorpdfstring{$\sigma$}{sigma}-measure}
+\label{sec:emergent:thermo}
+%----------------------------------------------------------------------%
+
+Equilibrium thermodynamics coarse-grains the observer-sector Euclidean
+measure. The starting point is the factorization of
+Theorem~\ref{thm:sigma-measure}, not a postulated Gibbs ensemble.
+
+\begin{definition}[Capacity ensemble]\label{def:capacity-ensemble}
+Fix inverse temperature $\beta>0$ and observer Hamiltonian $\hat H_\iota$ from
+Theorem~\ref{thm:qm-derived}. The \emph{capacity ensemble} on
+$\mathcal{H}_{\mathrm{obs}}$ is the probability measure
+\begin{equation}\label{eq:capacity-ensemble}
+  d\nu_\beta
+  \;:=\;
+  \frac{1}{\mathcal{Z}(\beta)}\,
+  e^{-\beta\hat H_\iota}\,
+  d\mu_{\Gamma_{-1}},
+  \qquad
+  \mathcal{Z}(\beta)
+  \;:=\;
+  \int e^{-\beta\hat H_\iota}\,d\mu_{\Gamma_{-1}},
+\end{equation}
+where $d\mu_{\Gamma_{-1}}$ is the observable factor of
+\eqref{eq:gamma-split}. Slot weights $(w_1,w_2,w_3)$ enter through the
+capacity prior on $\mathcal{I}$ induced by Theorem~\ref{thm:partition}.
+\end{definition}
+
+\begin{theorem}[Partition function from the \texorpdfstring{$\sigma$}{sigma}-measure]
+\label{thm:thermodynamics}
+Assume Theorem~\ref{thm:sigma-measure}, Theorem~\ref{thm:qm-derived}, and
+Definition~\ref{def:capacity-ensemble}. Then:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Partition function.} The statistical partition function
+    equals the $\Pi_{\sigma=-1}$-projected functional integral:
+    \begin{equation}\label{eq:Z-sigma}
+      \mathcal{Z}(\beta)
+      \;=\;
+      \mathrm{Tr}_{\mathcal{H}_{\mathrm{obs}}}\,e^{-\beta\hat H_\iota}
+      \;=\;
+      \int_{\mathcal{M}_{-1}}
+      \mathcal{D}\Phi\,\mathcal{D}A\;
+      e^{-S[\Phi,A]}\,
+      \Pi_{\sigma=-1},
+    \end{equation}
+    with $\mathcal{M}_{-1}$ the $\sigma=-1$ fluctuation space of
+    Theorem~\ref{thm:sigma-measure}.
+  \item \textbf{Free energy.} The Helmholtz free energy is
+    \begin{equation}\label{eq:helmholtz}
+      F(\beta)
+      \;=\;
+      -\frac{1}{\beta}\log\mathcal{Z}(\beta)
+      \;=\;
+      \langle S\rangle_{\Gamma_{-1}} - TS,
+    \end{equation}
+    with entropy $S$ the capacity-weighted microstate count on
+    $\mathcal{T}_7$ modulo the hub cocycle.
+  \item \textbf{Emergent laws.} In the many-body sector
+    $\mathcal{H}_N^{\mathrm{em}}$, the thermodynamic potentials satisfy
+    \begin{equation}\label{eq:thermo-laws}
+      dF = -S\,dT - p\,dV + \sum_i\mu_i\,dN_i,
+    \end{equation}
+    with $p$ the environmental pressure conjugate to
+    $\mathcal{P}_{\sigma=+1}$ (Definition~\ref{def:env-pressure}) and
+    $\mu_i$ the $\iota$-slot chemical potentials
+    $\mu_\iota=-\partial F/\partial N_\iota$.
+  \item \textbf{Limit $N\to\infty$.} Under the replica limit
+    \eqref{eq:replica-limit}, $F/N$ converges to the band-theory free energy
+    $\Omega(\mu,T)$ of Theorem~\ref{thm:condensed-matter}, item~(ii).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1.}
+Theorem~\ref{thm:sigma-measure} confines observable correlators to
+$d\mu_{\Gamma_{-1}}$; OS reconstruction (Theorem~\ref{thm:qm-derived})
+identifies the thermal state $e^{-\beta\hat H_\iota}$ with the Euclidean
+measure \eqref{eq:Z-sigma}.
+
+\emph{Step 2.}
+Capacity weights enter the microstate count through the $1|10|16$ partition
+(Theorem~\ref{thm:partition}); the hub cocycle removes gauge-equivalent
+relabelings on $\mathcal{T}_7$, yielding the entropy functional in
+\eqref{eq:helmholtz}.
+
+\emph{Step 3.}
+Extensive variables in $\mathcal{H}_N^{\mathrm{em}}$ decompose by
+$\iota$-slot occupancy; $\mathcal{P}_{\sigma=+1}$ supplies the conjugate
+pressure through the Hubble ledger split (Definition~\ref{def:env-pressure}).
+
+\emph{Step 4.}
+Theorem~\ref{thm:condensed-matter} identifies the density-fixed limit of
+$\mathcal{Z}(\beta)$ with the band determinant of $\mathcal{D}_{\mathbf{k}}$.
+\end{proof}
+
+\begin{remark}[Tier assignment: thermodynamics]
+Theorem~\ref{thm:thermodynamics} is \textbf{Tier~B}: Step~1 requires
+\textbf{A7} (OS reconstruction); Step~3 imports environmental pressure from
+CC sequestering (\textbf{A8}). The Euler relation \eqref{eq:thermo-laws} is
+structural; quantitative heat capacities and critical points are
+\textbf{Tier~C} contacts. The $\sigma=+1$ reservoir normalizes
+\eqref{eq:gamma-split} but does not contribute to $\mathcal{Z}(\beta)$ in
+the observable sector (Theorem~\ref{thm:duality}).
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Emergent descent map}
+\label{sec:emergent:map}
+%----------------------------------------------------------------------%
+
+Table~\ref{tab:emergent-map} summarizes the correspondence between
+laboratory emergent physics and the observer-collapse pipeline. Every row is
+a \emph{descent}, not a primitive.
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}llp{0.28\linewidth}p{0.34\linewidth}@{}}
+\toprule
+\textbf{Layer} & \textbf{Laboratory object} & \textbf{SJET descent} &
+\textbf{Tier} \\
+\midrule
+Many-body &
+  $N$-electron Hilbert space &
+  $\mathcal{E}_N=(\Pi_{\sigma=-1})^{\otimes N}$ on $\mathcal{T}_7$
+  (Definition~\ref{def:emergent-descent}) &
+  B \\
+\addlinespace
+Chemistry &
+  Periodic table, valence &
+  Capacity shell ladder \eqref{eq:shell-ladder} + flavon overlap network
+  \eqref{eq:flavon-network} (Theorem~\ref{thm:chemistry-ladder}) &
+  B/C \\
+\addlinespace
+Condensed matter &
+  Fermi liquid, band gaps &
+  Replica limit \eqref{eq:replica-limit}; Bloch bands
+  \eqref{eq:bloch-bands} (Theorem~\ref{thm:condensed-matter}) &
+  B/C \\
+\addlinespace
+Thermodynamics &
+  $\mathcal{Z}$, $F$, $S$ &
+  Capacity ensemble \eqref{eq:capacity-ensemble} on $d\mu_{\Gamma_{-1}}$
+  (Theorem~\ref{thm:thermodynamics}) &
+  B \\
+\addlinespace
+Statistical contact &
+  Heat capacity, critical exponents &
+  Radiative Yukawa + band determinant refinements &
+  C \\
+\bottomrule
+\end{tabular}
+\caption{Emergent physics as descent from observer collapse. No row introduces
+a new primitive; Tier~B rows cite ledger entries \textbf{A5}, \textbf{A7},
+\textbf{A8} where stated. Tier~C rows are leading-order experimental contacts,
+not closure certificates.}
+\label{tab:emergent-map}
+\end{table}
+
+\begin{remark}[Honest status: emergence not primitive]
+\label{rmk:emergent-honest}
+Section~\ref{sec:emergent} completes the \emph{conceptual} map from
+$\Pi_{\sigma=-1}$ to chemistry, condensed matter, and thermodynamics. It does
+\textbf{not} claim Tier~A closure of atomic spectroscopy, quantitative band
+structure, or critical phenomena. The periodic noble-gas closures, Landau
+parameter \eqref{eq:landau-F0}, and free-energy contacts are
+\emph{leading-order} matches in the sense of Definition~\ref{def:proof-tiers}.
+Removing assumption \textbf{A5} (flavon truncation) invalidates
+Theorem~\ref{thm:chemistry-ladder}; removing \textbf{A7} invalidates
+Theorem~\ref{thm:thermodynamics}; the void--mirror climb and observer
+multiplicity are unaffected. Emergence is \textbf{derived descent}, not an
+added axiom.
+\end{remark}
