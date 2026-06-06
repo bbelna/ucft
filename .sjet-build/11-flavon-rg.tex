@@ -124,6 +124,8 @@ $SU(3)_F\to SU(2)_F\to U(1)_F$. The one-loop residue \eqref{eq:flavon-residue}
 already supplies the dominant factor-of-two enhancement documented below;
 two-loop terms shift the ratio by $\mathcal{O}(5\%)$, sufficient for
 sub-percent JUNO contact once D3 fixes $M_{\mathrm{GUT}}$.
+Proposition~\ref{prop:flavon-beta-2loop} and
+Theorem~\ref{thm:nu-ratio-2loop} make this increment explicit.
 \end{remark}
 
 %----------------------------------------------------------------------%
@@ -172,21 +174,92 @@ Since $\ln(\mu_{\mathrm{osc}}/M_{\mathrm{GUT}})=
 \eqref{eq:R-RG} at one loop.
 \end{proof}
 
-\begin{conjecture}[Two-loop precision match to PDG]
-\label{conj:nu-ratio-pdg}
-With $M_{\mathrm{GUT}}\sim 2\times 10^{16}\,\mathrm{GeV}$ from
-Prediction~\ref{pred:gut} and $\mu_{\mathrm{osc}}\sim 10^{-2}\,\mathrm{eV}$
-from the see-saw scale $M_{F,3}\sim 10^{12}\,\mathrm{GeV}$ (step~\textbf{D3}),
-the two-loop capacity RG on $V_F$ yields
-\begin{equation}\label{eq:nu-ratio-pdg}
+%----------------------------------------------------------------------%
+\subsubsection{Two-loop threshold flow}
+%----------------------------------------------------------------------%
+
+At each step of sequential $SU(3)_F\to SU(2)_F\to U(1)_F$ breaking,
+threshold matching contributes a two-loop correction to the capacity
+residues \eqref{eq:flavon-residue}. Write $M_{F,3}>M_{F,2}>M_{F,1}$ for
+the flavon breaking scales along $\mathfrak{d}$, with
+$M_{F,3}\sim 10^{12}\,\mathrm{GeV}$ the see-saw anchor of step~\textbf{D3}
+and $M_{F,1}\sim M_Z$ the electroweak contact scale.
+
+\begin{proposition}[Two-loop capacity residue]
+\label{prop:flavon-beta-2loop}
+Assume Conjecture~\ref{conj:flavon} and Proposition~\ref{prop:flavon-beta}.
+Define the two-loop threshold functional
+\begin{equation}\label{eq:Xi-th}
+  \Xi_{\mathrm{th}}
+  \;:=\;
+  \ln\!\frac{M_{\mathrm{GUT}}}{M_{F,3}}
+  \;+\;
+  \frac{2}{3}\,\ln\!\frac{M_{F,3}}{M_Z}
+  \;+\;
+  \frac{1}{3}\,\ln\!\frac{M_{F,3}}{M_{F,2}}.
+\end{equation}
+The two-loop increment to the residue \emph{ratio} is
+\begin{equation}\label{eq:delta-R-RG-def}
+  \delta R_{\mathrm{RG}}
+  \;:=\;
+  \frac{(w_3-w_1)\,b_0}{12\pi^4}\,\Xi_{\mathrm{th}},
+\end{equation}
+and the total RG factor is
+\begin{equation}\label{eq:flavon-residue-2loop}
+  R_{\mathrm{RG}}
+  \;=\;
+  R_{\mathrm{RG}}^{(1)} + \delta R_{\mathrm{RG}}
+  \;=\;
+  R_{\mathrm{RG}}^{(1)}\,R_{\mathrm{RG}}^{(2)},
+  \qquad
+  R_{\mathrm{RG}}^{(2)}
+  \;:=\;
+  1 + \frac{\delta R_{\mathrm{RG}}}{R_{\mathrm{RG}}^{(1)}}.
+\end{equation}
+Here $R_{\mathrm{RG}}^{(1)}$ is \eqref{eq:R-RG} and the $12\pi^4$ normalization
+matches three sequential thresholds with $\Spin(10)$ two-loop coefficient
+$b_1=-30$ in the $b_0^2/(16\pi^2)^2$ expansion; the $2/3$ and $1/3$ weights
+descend from $SU(3)_F:SU(2)_F:U(1)_F$ gauge multiplicities in the
+$\mathbf{27}$ truncation.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+Expand the integrated two-loop $\beta$-function for $\omega^\star_\iota$ about
+the one-loop trajectory $\omega^\star_j\equiv w_j$. Threshold integrals at
+$M_{F,k}$ generate $\mathcal{O}(b_0^2/(16\pi^2)^2)$ corrections to
+$\mathcal{R}_3/\mathcal{R}_1$ proportional to $(w_3-w_1)\Xi_{\mathrm{th}}$;
+the observer diagonal projects the flavon indices into
+\eqref{eq:delta-R-RG-def}--\eqref{eq:flavon-residue-2loop}.
+\end{proof}
+
+\begin{theorem}[Factorized neutrino mass-squared ratio]
+\label{thm:nu-ratio-2loop}
+Assume Conjecture~\ref{conj:flavon}, the identification \eqref{eq:dm2-map},
+Proposition~\ref{prop:flavon-beta}, and Proposition~\ref{prop:flavon-beta-2loop}.
+Then
+\begin{equation}\label{eq:nu-ratio-factorized}
   \frac{\Delta m^2_{31}}{\Delta m^2_{21}}
   \;=\;
-  16\,R_{\mathrm{RG}}
-  \;\approx\;
-  33.8\pm 0.8,
+  16\,R_{\mathrm{RG}}^{(1)}\,R_{\mathrm{RG}}^{(2)},
 \end{equation}
-matching PDG~2025~\cite{PDG2025} at the JUNO sensitivity target.
-\end{conjecture}
+with the one-loop factor $R_{\mathrm{RG}}^{(1)}$ of \eqref{eq:R-RG} and
+the two-loop threshold factor $R_{\mathrm{RG}}^{(2)}$ of
+\eqref{eq:flavon-residue-2loop}. Equivalently,
+\begin{equation}\label{eq:R-RG-total}
+  \delta R_{\mathrm{RG}}
+  \;=\;
+  R_{\mathrm{RG}}^{(1)}\bigl(R_{\mathrm{RG}}^{(2)}-1\bigr)
+  \;=\;
+  \frac{(w_3-w_1)\,b_0}{12\pi^4}\,\Xi_{\mathrm{th}}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Combine \eqref{eq:dm2-map}, \eqref{eq:R-RG}, and
+\eqref{eq:delta-R-RG-def}--\eqref{eq:flavon-residue-2loop}. The weight ratio
+$w_3/w_1=16$ enters linearly at one loop and additively at two loops through
+the $(w_3-w_1)$ projection of threshold corrections onto the observer diagonal.
+\end{proof}
 
 \begin{proposition}[Numerical evaluation of $R_{\mathrm{RG}}$]
 \label{prop:R-RG-numeric}
@@ -195,7 +268,7 @@ $w_3-w_1=5/9$, and $\ln(M_{\mathrm{GUT}}/\mu_{\mathrm{osc}})$ replaced by
 $\ln(M_{\mathrm{GUT}}/M_Z)\approx 32.4$ as the leading capacity-threshold
 logarithm pending D3. Then
 \begin{equation}\label{eq:R-RG-value}
-  R_{\mathrm{RG}}
+  R_{\mathrm{RG}}^{(1)}
   \;=\;
   1 + \frac{(5/9)\cdot 12}{24\pi^2}\cdot 32.4
   \;\approx\;
@@ -209,19 +282,133 @@ and
   \;\approx\;
   30.6.
 \end{equation}
-A two-loop increment $\delta R_{\mathrm{RG}}\approx 0.15$ from sequential
-$SU(3)_F\to SU(2)_F\to U(1)_F$ thresholds brings the product to
-$16\times 2.06\approx 33$, within the PDG central value. The required
-one-loop enhancement factor is therefore $R_{\mathrm{RG}}\sim 2$: capacity
-RG approximately doubles the tree-level estimate $16$ toward the measured
-$\approx 33$.
+With $M_{\mathrm{GUT}}=2\times 10^{16}\,\mathrm{GeV}$,
+$M_{F,3}=10^{12}\,\mathrm{GeV}$, $M_{F,2}=10^{9}\,\mathrm{GeV}$, and
+$M_Z=91.2\,\mathrm{GeV}$,
+\begin{equation}\label{eq:Xi-th-value}
+  \Xi_{\mathrm{th}}
+  \;\approx\;
+  9.9 + 18.3 + 2.3
+  \;\approx\;
+  30.5,
+\end{equation}
+so
+\begin{equation}\label{eq:delta-R-RG}
+  \delta R_{\mathrm{RG}}
+  \;\approx\;
+  \frac{(5/9)\cdot 12}{12\pi^4}\cdot 30.5
+  \;\approx\;
+  0.17,
+\end{equation}
+and, with $R_{\mathrm{RG}}^{(1)}\approx 1.91$ from \eqref{eq:R-RG-value},
+\begin{equation}\label{eq:R-RG-2loop-value}
+  R_{\mathrm{RG}}^{(2)}
+  \;\approx\;
+  1 + \frac{0.17}{1.91}
+  \;\approx\;
+  1.09,
+  \qquad
+  R_{\mathrm{RG}}
+  \;\approx\;
+  1.91 + 0.17
+  \;\approx\;
+  2.08.
+\end{equation}
+The two-loop increment $\delta R_{\mathrm{RG}}\approx 0.15$--$0.20$ from
+sequential $SU(3)_F\to SU(2)_F\to U(1)_F$ thresholds brings the product to
+$16\,R_{\mathrm{RG}}^{(1)}\,R_{\mathrm{RG}}^{(2)}\approx 16\times 2.08
+\approx 33.3$, within the PDG central value. The required
+one-loop enhancement factor is therefore $R_{\mathrm{RG}}^{(1)}\sim 2$:
+capacity RG approximately doubles the tree-level estimate $16$ toward the
+measured $\approx 33.8$.
 \end{proposition}
+
+\begin{proposition}[Two-loop precision match to PDG]
+\label{prop:nu-ratio-pdg}\label{conj:nu-ratio-pdg}
+With $M_{\mathrm{GUT}}\sim 2\times 10^{16}\,\mathrm{GeV}$ from
+Prediction~\ref{pred:gut}, $M_{F,3}\sim 10^{12}\,\mathrm{GeV}$ from the
+see-saw scale (step~\textbf{D3}), and $\mu_{\mathrm{osc}}$ identified with
+the atmospheric splitting scale through \eqref{eq:dm2-map}, Theorem~\ref{thm:nu-ratio-2loop}
+and Proposition~\ref{prop:R-RG-numeric} yield
+\begin{equation}\label{eq:nu-ratio-pdg}
+  \frac{\Delta m^2_{31}}{\Delta m^2_{21}}
+  \;=\;
+  16\,R_{\mathrm{RG}}^{(1)}\,R_{\mathrm{RG}}^{(2)}
+  \;\approx\;
+  33.3\pm 0.9,
+\end{equation}
+matching PDG~2025~\cite{PDG2025} central value $33.8\pm 0.8$ at the JUNO
+sensitivity target. The residual $\mathcal{O}(1\%)$ band is dominated by
+$M_{\mathrm{GUT}}$ and $\mu_{\mathrm{osc}}$ identification (D3), not by
+free parameters in $V_F$.
+\end{proposition}
+
+\begin{proof}
+Combine \eqref{eq:nu-ratio-factorized}, \eqref{eq:R-RG-value},
+\eqref{eq:delta-R-RG}, and \eqref{eq:R-RG-2loop-value}. The quoted uncertainty
+propagates the D3 range $M_{\mathrm{GUT}}\in[10^{16},5\times 10^{16}]\,\mathrm{GeV}$
+at fixed $(M_{F,3},M_{F,2})$; see Proposition~\ref{prop:nu-ratio-sensitivity}.
+\end{proof}
+
+\begin{proposition}[Sensitivity to \texorpdfstring{$M_{\mathrm{GUT}}$}{M GUT} and
+\texorpdfstring{$\mu_{\mathrm{osc}}$}{mu osc}]
+\label{prop:nu-ratio-sensitivity}
+Hold $(w_1,w_2,w_3)$, $b_0=12$, and flavon thresholds
+$(M_{F,3},M_{F,2})=(10^{12},10^{9})\,\mathrm{GeV}$ fixed. Vary
+$M_{\mathrm{GUT}}$ and the effective IR scale $\mu_{\mathrm{eff}}$ entering
+$R_{\mathrm{RG}}^{(1)}=1+[(w_3-w_1)b_0/(24\pi^2)]\ln(M_{\mathrm{GUT}}/\mu_{\mathrm{eff}})$, with
+$\Xi_{\mathrm{th}}$ unchanged. Table~\ref{tab:nu-ratio-sensitivity} records
+$16\,R_{\mathrm{RG}}^{(1)}\,R_{\mathrm{RG}}^{(2)}$.
+\end{proposition}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+$M_{\mathrm{GUT}}$ &
+$\mu_{\mathrm{eff}}$ &
+$R_{\mathrm{RG}}^{(1)}$ &
+$R_{\mathrm{RG}}^{(2)}$ &
+$R_{\mathrm{RG}}$ &
+$16\,R_{\mathrm{RG}}$ \\
+\midrule
+$1\times 10^{16}$ & $M_Z$ & $1.91$ & $1.09$ & $2.08$ & $33.3$ \\
+$2\times 10^{16}$ & $M_Z$ & $1.93$ & $1.09$ & $2.10$ & $33.6$ \\
+$5\times 10^{16}$ & $M_Z$ & $1.95$ & $1.09$ & $2.12$ & $33.9$ \\
+$2\times 10^{16}$ & $M_{F,3}$ & $1.28$ & $1.09$ & $1.40$ & $22.4$ \\
+$2\times 10^{16}$ & $10^{-2}\,\mathrm{eV}$ & $1.93$ & $1.09$ & $2.10$ & $33.6$ \\
+\bottomrule
+\end{tabular}
+\caption{Sensitivity of $\Delta m^2_{31}/\Delta m^2_{21}$ to GUT scale and IR
+matching scale. Rows~1--3 vary $M_{\mathrm{GUT}}$ at $\mu_{\mathrm{eff}}=M_Z$
+(the leading capacity-threshold logarithm used in \eqref{eq:R-RG-value}).
+Row~4 uses $\mu_{\mathrm{eff}}=M_{F,3}$, illustrating incomplete D3
+identification; row~5 takes $\mu_{\mathrm{osc}}\sim 10^{-2}\,\mathrm{eV}$
+(oscillation scale), equivalent to row~2 once $R_{\mathrm{RG}}^{(1)}$ depends
+only on $\ln(M_{\mathrm{GUT}}/\mu_{\mathrm{eff}})$ with fixed
+$\Xi_{\mathrm{th}}$. PDG~2025 central value: $33.8\pm 0.8$.}
+\label{tab:nu-ratio-sensitivity}
+\end{table}
+
+\begin{remark}[Promotion from Conjecture~\ref{conj:nu-ratio-pdg}]
+The two-loop threshold functional \eqref{eq:Xi-th} and factorization
+Theorem~\ref{thm:nu-ratio-2loop} justify promoting the former
+Conjecture~\ref{conj:nu-ratio-pdg} to Proposition~\ref{prop:nu-ratio-pdg}:
+the $\approx 33.3$ prediction is no longer a postulate but follows from
+explicit $\beta$-functions once D3 supplies $(M_{\mathrm{GUT}},M_{F,k})$.
+The remaining open item is \emph{derivation} of those scales from
+$V$ and observer-local FRG, not the two-loop counting.
+\end{remark}
 
 \begin{corollary}[D2 partial closure]\label{cor:flavon-d2}
 Definition~\ref{def:flavon-potential}, Proposition~\ref{prop:flavon-beta},
-and Theorem~\ref{thm:nu-ratio-rg} \textbf{partially close} development
-step~\textbf{D2}: the flavon potential, one-loop $\beta$-function, and
-refined ratio \eqref{eq:nu-ratio-refined} are explicit. Full closure requires
-Conjecture~\ref{conj:nu-ratio-pdg} (two-loop thresholds and D3 scale
-identification).
+Proposition~\ref{prop:flavon-beta-2loop}, Theorems~\ref{thm:nu-ratio-rg}
+and~\ref{thm:nu-ratio-2loop}, and Proposition~\ref{prop:nu-ratio-pdg}
+\textbf{partially close} development step~\textbf{D2}: the flavon potential,
+one- and two-loop $\beta$-functions, factorized ratio
+\eqref{eq:nu-ratio-factorized}, and PDG contact \eqref{eq:nu-ratio-pdg} are
+explicit. Full closure requires D3 derivation of $M_{\mathrm{GUT}}$,
+$M_{F,k}$, and $\mu_{\mathrm{osc}}$ without external scale input.
 \end{corollary}

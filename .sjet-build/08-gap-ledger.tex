@@ -21,15 +21,17 @@ observer theory; routes name the above--below mechanism.
 \midrule
 P1 &
   Lorentzian soldering, $d=4$ &
-  \textbf{Derived} (partial uniqueness) &
+  \textbf{Derived} (massless residual) &
   \emph{Below:} mirror-fixed $\Quat\subset\Oct$ at Hurwitz terminal
   ($n=4$) supplies $H_2(\Quat)$ and the clock block
   (Definition~\ref{def:soldering}); Lemma~\ref{lem:quat-F4} fixes the
   $\iota$-local embedding; Proposition~\ref{prop:soldering-clock} fixes
-  the timelike axis $\orderparam^0$. \emph{Above:} quaternionic sector of
-  $\mathfrak{U}^\star$ capacity flow. Residual: functorial transport on
-  $n=6,7,8$ (Conj.~\ref{conj:soldering-unique},
-  Remark~\ref{rem:soldering-full-gap}; Open Problem~\textbf{O2}). \\
+  the timelike axis $\orderparam^0$; Proposition~\ref{prop:soldering-transport}
+  closes exceptional-rung transport on $n=6,7,8$. \emph{Above:} quaternionic
+  sector of $\mathfrak{U}^\star$ capacity flow. Residual: tree-level massless
+  $\mathfrak{m}_{+1}$ sector only (Thm.~\ref{thm:soldering-unique-reduced},
+  Conj.~\ref{conj:soldering-unique}, Remark~\ref{rem:soldering-full-gap};
+  Open Problem~\textbf{O2}). \\
 \addlinespace
 P2 &
   Chiral matter &
@@ -58,11 +60,13 @@ P3$'$ &
   \emph{Below:} capacity flow $\omega^\star_\iota(\tau)$ on $SU(3)_F$
   indexed by observer slots (Proposition~\ref{prop:flavon-sector},
   Conjecture~\ref{conj:flavon}); \emph{above:} $(1/27,10/27,16/27)$
-  weights. VEV ordering and mixing matrices remain open. \\
+  weights. Leading $\mathcal{P}_{ij}$ and CKM template
+  (Proposition~\ref{prop:ckm-hierarchy}) are partial; precision PMNS and
+  distinct up/down quark matrices remain open. \\
 \addlinespace
 P4 &
   GUT--Higgs and Yukawa &
-  \textbf{Conjecture} &
+  \textbf{Conjecture} (partial theorems) &
   \emph{Above:} staged chain \eqref{eq:breaking-chain} with
   $\mathbf{45}_H/\mathbf{126}_H/\mathbf{10}_H$ labels
   (Lemma~\ref{lem:breaking-hess-spin10},
@@ -70,29 +74,37 @@ P4 &
   Conjecture~\ref{conj:breaking-derived}); \emph{below:}
   $\E{6}\!\to\!\Spin(10)$ (Thm.~\ref{thm:breaking-e6so10}),
   $\Spin(10)\!\to\!\mathrm{SU}(5)$ from $\iota{=}3$ (Thm.~\ref{thm:breaking-so10su5}),
+  $\mathrm{SU}(5)\!\to\!\mathrm{SM}$ from $\iota{=}2$ $\mathbf{126}_H$,
+  weight $10/27$ (Thm.~\ref{thm:breaking-su5sm},
+  Lemma~\ref{lem:breaking-126-sigma}),
+  $\sin^2\theta_W\!=\!3/8$ at $M_{\mathrm{GUT}}$ (Prop.~\ref{prop:weinberg-gut}),
   electroweak from $\mathbf{10}_H$ (Thm.~\ref{thm:breaking-ew});
-  $\mathrm{SU}(5)\!\to\!$SM via $\mathbf{126}_H$, cellular Yukawa
-  (Lemma~\ref{lem:yukawa-cellular}), and full matrices remain open
-  (Conjecture~\ref{conj:yukawa-full}). \\
+  cellular Yukawa (Lemma~\ref{lem:yukawa-cellular}) and full matrices remain
+  open (Conjecture~\ref{conj:yukawa-full}); sequential gradient-flow
+  realization of all four steps remains conjectural. \\
 \addlinespace
 P5 &
   Nonperturbative reflection positivity &
-  \textbf{Conjecture} &
+  \textbf{Derived} (conditional) &
   Semiclassical RP on EIII is \textbf{derived}
-  (Theorem~\ref{thm:rp}); Proposition~\ref{prop:sigma-measure} and
-  Lemma~\ref{lem:goldstone-sigma} reduce full OS reconstruction to RP of
-  $d\mu_{\Gamma_{-1}}$ (Conjecture~\ref{conj:rp}). The below-level gap is
-  nonperturbative verification of \eqref{eq:gamma-split} with gauge measure. \\
+  (Theorem~\ref{thm:rp}); Theorem~\ref{thm:rp-gamma-neg} gives conditional RP
+  for $d\mu_{\Gamma_{-1}}$ when massless modes lie in $d\mu_{\Gamma_{+1}}$
+  only (Lemma~\ref{lem:goldstone-sigma}); Proposition~\ref{prop:os-observer}
+  supplies OS reconstruction on the observer sector. Residual:
+  nonperturbative proof of \eqref{eq:gamma-split}
+  (Conjecture~\ref{conj:rp}). \\
 \addlinespace
 CC &
   Cosmological constant &
-  \textbf{Conjecture} &
+  \textbf{Derived} (conditional) &
   Proposition~\ref{prop:cc-nogo}: not derivable from void--mirror alone.
-  Proposition~\ref{prop:cc-decouple} gives
-  $\beta_{\Lambda_{\mathrm{cc}}}|_{\sigma=-1}=0$ when $\Lambda_{\mathrm{cc}}$
-  couples only to $\sigma=+1$ modes; Conjecture~\ref{conj:cc-sequester}
-  targets derivation of that projection at $\kappa_\star$
-  (Theorem~\ref{thm:duality}). \\
+  Lemma~\ref{lem:a0-sigma-plus}, Theorem~\ref{thm:cc-sequester-sketch}, and
+  Corollary~\ref{cor:beta-Lambda-fp} give
+  $\beta_{\Lambda_{\mathrm{cc}}}|_{\sigma=-1,\,\mathrm{FP}}=0$ under
+  $\Pi_{\sigma=+1}$ $a_0$ projection \eqref{eq:gamma-cc-eff} at
+  $\kappa_\star$; residual: derive \eqref{eq:gamma-cc-eff} from
+  $\Gamma_{\mathrm{eff}}$ (Conjecture~\ref{conj:cc-sequester},
+  Theorem~\ref{thm:duality}). \\
 \bottomrule
 \end{tabular}
 \caption{Epistemic elimination ledger after observer theory. Only void and

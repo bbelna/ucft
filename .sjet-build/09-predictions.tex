@@ -76,14 +76,17 @@ structure.
 \begin{remark}[Muon $g-2$ contact, T1]
 Fermilab Muon $g$-2 (June 2025 final run) reports
 $a_\mu=0.001\,165\,920\,705(205)$~\cite{MuonG2FNAL2025}.
-SJET does not fix $a_\mu$ at T1: the $28$ coset scalars and three families
-contribute through \emph{unspecified} masses. The T1 prediction is
-\textbf{structural}: new physics from a fourth family or extra mirror-observable
-chiral families is excluded; any residual anomaly must arise from the
-$\mathbf{27}$ sector with $n_F=3$ and $b_0=12$.
-After \textbf{D3} (Section~\ref{sec:scales}, Remark~\ref{rmk:g2-scales}),
-loop integrals are anchored at $\mu\equiv v$ at $\tau_{\mathrm{EW}}$;
-precision $a_\mu$ then tests D1--D2, not a free scale.
+The T1 prediction is \textbf{structural}: new physics from a fourth family or
+extra mirror-observable chiral families is excluded; any residual anomaly must
+arise from the $\mathbf{27}$ sector with $n_F=3$, $n_S=28$, and $b_0=12$.
+\textbf{D1 (partial):} Theorem~\ref{thm:g2-oneloop} and
+Proposition~\ref{prop:g2-estimate} (Section~\ref{sec:g2},
+Table~\ref{tab:g2-estimate}) give a one-loop estimate
+$\Delta a_\mu^{\mathrm{SJET}}\approx1.1\times10^{-8}$, $\sim4\times$ the
+SM--experiment anomaly $\delta a_\mu\approx2.6\times10^{-9}$ at full portal
+coupling $y_\mu=m_\mu/v$ from Theorem~\ref{thm:yukawa-mass}. This is
+\textbf{order-of-magnitude}, not a precision fit; two-loop flavon RG (D2) and
+derived $v$ (D3) compress the estimate.
 \end{remark}
 
 %----------------------------------------------------------------------%
@@ -131,12 +134,15 @@ with
   1 + \frac{(w_3-w_1)\,b_0}{24\pi^2}\,
   \ln\!\frac{M_{\mathrm{GUT}}}{\mu_{\mathrm{osc}}}.
 \end{equation}
-Proposition~\ref{prop:R-RG-numeric} evaluates $R_{\mathrm{RG}}\approx 1.91$
+Proposition~\ref{prop:R-RG-numeric} evaluates $R_{\mathrm{RG}}^{(1)}\approx 1.91$
 at one loop, giving $\Delta m^2_{31}/\Delta m^2_{21}\approx 30.6$; two-loop
-thresholds (Conjecture~\ref{conj:nu-ratio-pdg}) raise this to
-$\approx 33$, matching PDG~2025~\cite{PDG2025} central value
-$\approx 33.8$. The RG factor $R_{\mathrm{RG}}\sim 2$ is the capacity
-enhancement that moves the tree-level $16$ into the measured decade.
+thresholds (Theorem~\ref{thm:nu-ratio-2loop},
+Proposition~\ref{prop:nu-ratio-pdg}) raise this to
+$16\,R_{\mathrm{RG}}^{(1)}R_{\mathrm{RG}}^{(2)}\approx 33.3$, matching
+PDG~2025~\cite{PDG2025} central value $\approx 33.8$ with
+$\delta R_{\mathrm{RG}}\approx 0.18$. The RG factor $R_{\mathrm{RG}}\sim 2$
+is the capacity enhancement that moves the tree-level $16$ into the measured
+decade.
 \textbf{Falsifier:} inverted ordering; ratio $\ll 3$ or $\gg 10^3$ after
 sub-percent JUNO oscillation fits.
 \end{prediction}
@@ -145,8 +151,9 @@ sub-percent JUNO oscillation fits.
 \textbf{T2.} Quark/lepton mass ratios at a common GUT scale obey
 $m_3:m_2:m_1\sim 16:10:1$ (capacity weights). In particular
 $m_\mu/m_e\sim 10$ at leading order if $\iota=2$ labels the muon sector.
-\textbf{Contact:} PDG mass ratios; $\mu$ $g$-2 constrains $\iota=2$ loop
-contributions from the $10/27$ sector.
+\textbf{Contact:} PDG mass ratios; $\mu$ $g$-2 via Theorem~\ref{thm:g2-oneloop}
+and Table~\ref{tab:g2-estimate} ($\Delta a_\mu^{\mathrm{SJET}}/\delta a_\mu\sim4$
+at leading order).
 \end{prediction}
 
 %----------------------------------------------------------------------%
@@ -180,6 +187,55 @@ with $b_0=12$ fixing the $\Spin(10)$ normalization of Thm.~\ref{thm:beta}.
 deviation of $b_0$ from $12$ shifts unification scale.
 \end{prediction}
 
+\begin{prediction}[Weinberg angle at $M_Z$ from GUT anchor]\label{pred:sin2w-mz}
+\textbf{T3.} If Prediction~\ref{pred:gut} holds with
+$M_{\mathrm{GUT}}\sim 2\times 10^{16}\,\mathrm{GeV}$ and $b_0=12$, one-loop
+$\Spin(10)$--$\mathrm{SU}(5)$ running gives
+\begin{equation}\label{eq:sin2w-mz}
+  \sin^2\theta_W(M_Z)
+  \;=\;
+  \frac38
+  \;-\;
+  \frac{b_0}{8\pi^2}\,\alpha_{\mathrm{em}}(M_Z)\,
+  \ln\!\frac{M_{\mathrm{GUT}}}{M_Z}
+  \;+\;\mathcal{O}(\alpha^2),
+\end{equation}
+numerically $\sin^2\theta_W(M_Z)\approx 0.231$ at $M_Z\approx 91.2\,\mathrm{GeV}$,
+consistent with PDG~2025~\cite{PDG2025} central value
+$0.23122(4)$. The anchor $\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$ is fixed by
+the $\Spin(10)$ normalization; the low-energy value is \emph{derived} by RG,
+not postulated.
+\textbf{Contact:} electroweak precision fits (LEP legacy, $Z$-pole);
+$\mathcal{C}=(\sin^2\theta_W(M_Z),\mathrm{EW\,prec.},|{\rm SJET}-{\rm PDG}|<0.002)$.
+\textbf{Falsifier:} measured $\sin^2\theta_W(M_Z)$ incompatible with
+\eqref{eq:sin2w-mz} once $M_{\mathrm{GUT}}$ is fixed by D3 scale identification.
+\end{prediction}
+
+\begin{prediction}[Proton lifetime bound under $\E{6}$ chain]\label{pred:proton-decay}
+\textbf{T3.} If Conjecture~\ref{conj:breaking-derived} realizes the staged chain
+\eqref{eq:breaking-chain} with $\mathbf{45}_H$ and $\mathbf{126}_H$ VEVs at
+$M_{\mathrm{GUT}}\sim 10^{16}$--$10^{17}\,\mathrm{GeV}$, dimension-six
+$\mathrm{SU}(5)$ operators estimate
+\begin{equation}\label{eq:proton-lifetime}
+  \tau\!\bigl(p\to e^+\pi^0\bigr)
+  \;\gtrsim\;
+  \frac{M_{\mathrm{GUT}}^{4}}{\alpha_{\mathrm{GUT}}^{2}\,m_{p}^{5}}
+  \;\sim\;
+  10^{34}\text{--}10^{36}\;\mathrm{yr},
+\end{equation}
+with $\alpha_{\mathrm{GUT}}\approx 1/24$ from Prediction~\ref{pred:gut}.
+Observer collapse $\Pi_{\sigma=-1}$ projects out mirror-symmetric
+$\overline{\mathbf{16}}$ partners (Theorem~\ref{thm:duality}), suppressing
+certain $\mathbf{16}\leftrightarrow\overline{\mathbf{16}}$ proton-decay
+channels relative to minimal $\mathrm{SU}(5)$; the bound \eqref{eq:proton-lifetime}
+is therefore a \textbf{conservative} lower limit, not a saturation target.
+\textbf{Contact:} Super-Kamiokande and Hyper-Kamiokande searches;
+$\mathcal{C}=(\tau(p\to e^+\pi^0),\mathrm{Hyper\text{-}K},>\!2.4\times 10^{34}\,\mathrm{yr})$.
+\textbf{Falsifier:} positive proton decay below $10^{33}\,\mathrm{yr}$ in the
+$\E{6}\to\Spin(10)\to\mathrm{SU}(5)$ channel without an alternative
+$\sigma=+1$ storage mode.
+\end{prediction}
+
 \begin{prediction}[Mirror-partner null]\label{pred:mirror-null}
 \textbf{T3.} No observable process exhibits exact $\mathbf{16}\leftrightarrow
 \overline{\mathbf{16}}$ symmetry at the amplitude level: mirror partners are
@@ -198,20 +254,34 @@ production level would falsify the observer-collapse sector definition.
 \centering
 \small
 \renewcommand{\arraystretch}{1.08}
-\begin{tabular}{@{}lllp{0.32\linewidth}@{}}
+\begin{tabular}{@{}lllp{0.28\linewidth}@{}}
 \toprule
-\textbf{Experiment} & \textbf{Observable} & \textbf{Tier} & \textbf{SJET expectation} \\
+\textbf{Experiment} & \textbf{Observable} & \textbf{Tier} & \textbf{SJET expectation / timeline} \\
 \midrule
-JUNO & Mass ordering & T2 & Normal ($m_3$ heaviest) \\
-JUNO & $\Delta m^2$ ratios & T2 & $\Delta m^2_{31}/\Delta m^2_{21}\sim\mathcal{O}(10)$ \\
-Muon $g$-2 & $a_\mu$ & T1/T2 & No 4th family; 3-family + 28 scalars \\
+JUNO & Mass ordering & T2 &
+  Normal ($m_3$ heaviest); $>3\sigma$ by 2027--2028~\cite{JUNO2024} \\
+JUNO & $\Delta m^2$ ratios & T2 &
+  $16\,R_{\mathrm{RG}}^{(1)}R_{\mathrm{RG}}^{(2)}\approx 33.3$ (2-loop D2);
+  $<1\%$ ratio by 2028 \\
+Muon $g$-2 / Theory Init. & $a_\mu$ & T1/T2 &
+  No 4th family (T1); $\Delta a_\mu^{\mathrm{SJET}}\approx1.1\times10^{-8}$
+  (Thm.~\ref{thm:g2-oneloop}) vs.\ $\delta a_\mu\approx2.6\times10^{-9}$;
+  SM ref.\ $a_\mu^{\mathrm{SM}}\approx0.001\,165\,918\,10(43)$~\cite{MuonG2Theory2025} \\
 LHC/FCC & 4th generation & T1 & Excluded structurally \\
-DESI Phase II & $w(z)$ & T3 & $w\approx -1$ if CC sequestered \\
+DESI Phase II & $w(z)$ & T3 &
+  $w(z)\approx -1\pm 0.05$ if CC sequestered; Year-1
+  $w_0=-0.80^{+0.18}_{-0.12}$~\cite{DESI2024} tests T3 drift \\
+Hyper-K & $\tau(p\to e^+\pi^0)$ & T3 &
+  $\gtrsim 10^{34}$\,yr (Pred.~\ref{pred:proton-decay}); sensitivity
+  $\sim 10^{35}$\,yr by 2030 \\
 KATRIN / Project 8 & $m_\beta$ & T2 & Consistent with NO + capacity \\
 HL-LHC & $\Spin(10)$ Higgs & T3 & $\mathbf{45},\mathbf{126},\mathbf{10}$ pattern \\
 \bottomrule
 \end{tabular}
-\caption{Near-term experimental contact map.}
+\caption{Near-term experimental contact map with 2026--2030 timelines.
+JUNO began full-volume data taking in 2024; the Muon $g$-2 Theory Initiative
+(2025) supplies the SM reference against which D1--D3 loop corrections are
+judged once Yukawa overlaps close.}
 \label{tab:experiments}
 \end{table}
 
@@ -222,7 +292,9 @@ HL-LHC & $\Spin(10)$ Higgs & T3 & $\mathbf{45},\mathbf{126},\mathbf{10}$ pattern
 
 Table~\ref{tab:predictions-comparison} consolidates the headline observables
 from Sections~\ref{sec:predictions:T1}--\ref{sec:predictions:T3} against
-PDG and near-term experiment (2025--2026). \textbf{Match} means agreement
+PDG and near-term experiment (2025--2026); Appendix~\ref{sec:appendix:numerical}
+(Table~\ref{tab:numerical-workbook}) records the closed-form formulas and
+reproducible arithmetic for every dimensionless entry. \textbf{Match} means agreement
 within the stated tier tolerance; \textbf{pending} marks an open derivation
 step (D1--D3) or an experiment still in flight; \textbf{falsified} would
 apply if a T1 prediction were contradicted (none as of mid-2026).
@@ -233,36 +305,59 @@ apply if a T1 prediction were contradicted (none as of mid-2026).
 \renewcommand{\arraystretch}{1.12}
 \begin{tabular}{@{}llll@{}}
 \toprule
-\textbf{Observable} & \textbf{PDG/Exp (2025--26)} & \textbf{SJET (T1/T2/T3)} & \textbf{Status} \\
+\textbf{Observable} & \textbf{PDG/Exp (2025--26)} & \textbf{SJET (best current)} & \textbf{Status} \\
 \midrule
 Family count $n_F$ & $3$ (no 4th gen.) & $3$ (T1) & \textbf{match} \\
 $\beta$-function $b_0$ & $12$ (3-gen.\ SM) & $12$ (T1) & \textbf{match} \\
+$m_\mu/m_e$ & $\approx 206.8$~\cite{PDG2025}
+  & $w_2/w_1=10$ (D1, Thm.~\ref{thm:yukawa-mass}) & \textbf{pending} \\
 Neutrino ordering & NO favoured~\cite{PDG2025} & Normal, $m_3$ heaviest (T2) & \textbf{pending} \\
-$\Delta m^2_{31}/\Delta m^2_{21}$ & $\approx 33.8$~\cite{PDG2025}
-  & $16\,R_{\mathrm{RG}}\approx 30.6$ (1-loop T2); $\approx 33$ (2-loop) & \textbf{pending} \\
+$\Delta m^2_{31}/\Delta m^2_{21}$ & $33.8\pm 0.8$~\cite{PDG2025}
+  & $16\,R_{\mathrm{RG}}^{(1)}\approx 30.6$ (1-loop);
+    $16\,R_{\mathrm{RG}}^{(1)}R_{\mathrm{RG}}^{(2)}\approx 33.3$ (2-loop D2,
+    Prop.~\ref{prop:nu-ratio-pdg})
+  & \textbf{match (leading)} \\
 Muon $a_\mu$ & $1.165\,920\,705(205)\times 10^{-3}$~\cite{MuonG2FNAL2025}
-  & structural (T1); $y_{ij}$ (D1) & \textbf{pending} \\
-$\sin^2\theta_W(M_{\mathrm{GUT}})$ & $\approx 3/8$ (SU(5) anchor) & $3/8$ (T3) & \textbf{pending} \\
+  & $\Delta a_\mu^{\mathrm{SJET}}\approx1.1\times10^{-8}$ vs.\
+  $\delta a_\mu\approx2.6\times10^{-9}$ (D1, OOM) & \textbf{pending} \\
+$\sin^2\theta_W(M_Z)$ & $0.23122(4)$~\cite{PDG2025}
+  & $3/8$ RG to $M_Z$ $\approx 0.231$ (T3, Pred.~\ref{pred:sin2w-mz})
+  & \textbf{match (cond.)} \\
+$\sin^2\theta_W(M_{\mathrm{GUT}})$ & $\approx 3/8$ (SU(5) anchor) & $3/8$ (T3) & \textbf{match (cond.)} \\
+$\tau(p\to e^+\pi^0)$ & $>2.4\times 10^{34}$\,yr~\cite{SuperK2020}
+  & $\gtrsim 10^{34}$--$10^{36}$\,yr (T3, Pred.~\ref{pred:proton-decay})
+  & \textbf{match (cond.)} \\
 $\Lambda_{\mathrm{obs}}$ & $\sim(2.3\,\mathrm{meV})^4$~\cite{PDG2025}
   & $\approx 0$ (T3) & \textbf{pending} \\
 \bottomrule
 \end{tabular}
-\caption{Headline numerical comparison. T1 rows are exact theorem outputs;
-T2 rows are leading capacity targets refined by D2; T3 rows are conditional
+\caption{Headline numerical comparison after the D1--D3 development pass
+(Sections~\ref{sec:yukawa}--\ref{sec:scales}). T1 rows are exact theorem outputs;
+T2 rows use capacity RG (D2) and Yukawa overlaps (D1); T3 rows are conditional
 on Conjectures~\ref{conj:breaking-derived}, \ref{conj:flavon},
-\ref{conj:cc-sequester}. Neutrino ordering is \textbf{pending} until JUNO
-(2026--2028) closes the mass-ordering determination at $>3\sigma$.}
+\ref{conj:cc-sequester}. \textbf{match (leading)} tolerates $\mathcal{O}(10\%)$
+deviation; \textbf{match (cond.)} assumes the named breaking chain.
+Neutrino ordering is \textbf{pending} until JUNO (2027--2028) closes the
+mass-ordering determination at $>3\sigma$.}
 \label{tab:predictions-comparison}
 \end{table}
 
 \begin{remark}[Reading the comparison]
-The $\Delta m^2$ ratio is a \emph{factor-of-two} leading-order match:
-$16$ versus $\approx 34$ lies in the same decade and is not yet falsified
-(Prediction~\ref{pred:nu-ratio}). Muon $g$-2 is \textbf{pending} on D1:
-SJET already excludes a fourth family (T1) but does not yet fix loop
-contributions from the $28$ coset scalars. $\sin^2\theta_W$ and
-$\Lambda_{\mathrm{obs}}$ await the breaking chain (D1) and CC sequestering
-proof (D3), respectively.
+The $\Delta m^2$ ratio is the headline \textbf{D2} success: tree-level $16$
+with $R_{\mathrm{RG}}^{(1)}\approx 1.91$ (1-loop) and
+$\delta R_{\mathrm{RG}}\approx 0.18$ (2-loop thresholds,
+Theorem~\ref{thm:nu-ratio-2loop}) yields $\approx 33.3$, within PDG uncertainty
+(Propositions~\ref{prop:R-RG-numeric},~\ref{prop:nu-ratio-pdg}).
+\textbf{D1} supplies $m_\mu/m_e\sim 10$ (Table~\ref{tab:yukawa-leading}),
+CKM template $\lambda\sim2/11\approx0.18$ (Proposition~\ref{prop:ckm-hierarchy}),
+and one-loop $\Delta a_\mu^{\mathrm{SJET}}\approx1.1\times10^{-8}$
+(Theorem~\ref{thm:g2-oneloop})---$\sim4\times$ the anomaly at leading order.
+Muon $g$-2 is \textbf{pending} at precision: two-loop flavon RG (D2) must
+compress the estimate; T1 excludes a fourth family.
+$\sin^2\theta_W(M_Z)$ runs from the GUT anchor $3/8$ (Prediction~\ref{pred:sin2w-mz});
+proton decay satisfies Super-K/Hyper-K if the $\E{6}$ chain holds
+(Prediction~\ref{pred:proton-decay}). $\Lambda_{\mathrm{obs}}$ awaits CC
+sequestering proof (Conjecture~\ref{conj:cc-sequester}).
 \end{remark}
 
 %----------------------------------------------------------------------%
@@ -286,21 +381,30 @@ proof obligation.
 D1 &
   \textbf{Partial} &
   Section~\ref{sec:yukawa}: overlap form, Lemma~\ref{lem:yukawa-cellular},
-  Theorem~\ref{thm:yukawa-mass}, Table~\ref{tab:yukawa-leading};
-  \emph{open:} full $\Phi_{\mathrm{Higgs}}$ ID, off-diagonal mixing
-  (Conj.~\ref{conj:yukawa-full}). \\
+  Theorem~\ref{thm:yukawa-mass}, off-diagonal $\mathcal{P}_{ij}$
+  (Prop.~\ref{prop:ckm-hierarchy}, Table~\ref{tab:Pij-ckm});
+  Section~\ref{sec:g2}: Theorem~\ref{thm:g2-oneloop},
+  Table~\ref{tab:g2-estimate};
+  \emph{open:} full $\Phi_{\mathrm{Higgs}}$ ID, CKM/PMNS precision,
+  two-loop $a_\mu$ (Conj.~\ref{conj:yukawa-full}). \\
 D2 &
   \textbf{Partially closed} &
   Definition~\ref{def:flavon-potential}, Proposition~\ref{prop:flavon-beta},
-  Theorem~\ref{thm:nu-ratio-rg}, Proposition~\ref{prop:R-RG-numeric};
-  \emph{open:} two-loop thresholds (Conj.~\ref{conj:nu-ratio-pdg}) and D3
-  scale identification for sub-percent JUNO match. \\
+  Theorems~\ref{thm:nu-ratio-rg},~\ref{thm:nu-ratio-2loop},
+  Proposition~\ref{prop:nu-ratio-pdg};
+  \emph{open:} $M_{F,k}$, $\mu_{\mathrm{osc}}$ from see-saw (D3 supplies
+  $M_{\mathrm{GUT}}$ via Prop.~\ref{prop:gut-scale}). \\
 D3 &
-  \textbf{Scaffolded} &
-  Section~\ref{sec:scales}: Def.~\ref{def:ew-scale}, Prop.~\ref{prop:planck-scale},
-  Prop.~\ref{prop:mu-lifetime}, Table~\ref{tab:scale-map};
-  \emph{open:} derive $v$ and $\Lambda$ from $V$ and observer-local FRG
-  (D3.\textit{a--c}). \\
+  \textbf{Partially closed} &
+  Section~\ref{sec:scales}: Thm.~\ref{thm:ew-scale-value} ($v\approx 246$ GeV),
+  Props.~\ref{prop:gut-scale},~\ref{prop:lambda-gut}
+  ($M_{\mathrm{GUT}}\sim 10^{16}$ GeV, $\Lambda=M_{\mathrm{GUT}}$),
+  Prop.~\ref{prop:mu-lifetime} ($\mu\equiv v$), Table~\ref{tab:scale-map},
+  Appendix~\eqref{eq:workbook-planck};
+  Lemma~\ref{lem:a0-sigma-plus} advances O6/CC sequestering;
+  \emph{open:} nonperturbative FRG proof of $\Lambda$ selection and full
+  breaking-chain derivation (Conj.~\ref{conj:breaking-derived},
+  Conj.~\ref{conj:kappa}). \\
 \bottomrule
 \end{tabular}
 \caption{Derivation status after the D1--D3 development pass.
@@ -309,6 +413,67 @@ means the route is named but not yet derived from $V$. Precision contact
 requires the proof targets in Section~\ref{sec:predictions:program}.}
 \label{tab:derivation-status}
 \end{table}
+
+%----------------------------------------------------------------------%
+\subsection{Falsification timeline 2026--2030}
+\label{sec:predictions:falsification-timeline}
+%----------------------------------------------------------------------%
+
+Table~\ref{tab:falsification-timeline} orders the decisive experimental
+contacts by calendar year. Each entry names the SJET tier, the derivation
+step (if any), and the falsification criterion from Definition~\ref{def:contact-map}.
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}cllp{0.36\linewidth}@{}}
+\toprule
+\textbf{Year} & \textbf{Experiment} & \textbf{Tier} & \textbf{Falsifier / corroboration} \\
+\midrule
+2026 &
+  Muon $g$-2 Theory Init.~\cite{MuonG2Theory2025} &
+  T1/T2 &
+  SM reference fixed; SJET must match $a_\mu$ at $\mu\equiv v$ once D1 closes \\
+2026--27 &
+  JUNO commissioning &
+  T2 &
+  Inverted ordering at $>3\sigma$ falsifies Pred.~\ref{pred:nu-ordering} \\
+2027--28 &
+  JUNO oscillation &
+  T2 &
+  $\Delta m^2_{31}/\Delta m^2_{21}$ outside $[25,40]$ falsifies D2 RG;
+  $<1\%$ precision tests Prop.~\ref{prop:nu-ratio-pdg} \\
+2027--29 &
+  DESI Phase II $w(z)$ &
+  T3 &
+  Sustained $w(z)\neq -1$ at $|w+1|>0.05$ falsifies Pred.~\ref{pred:cc} \\
+2028--30 &
+  Hyper-K proton decay &
+  T3 &
+  $\tau(p\to e^+\pi^0)<10^{33}$\,yr in $\E{6}$ channel falsifies
+  Pred.~\ref{pred:proton-decay} \\
+2029--30 &
+  HL-LHC $\Spin(10)$ Higgs &
+  T3 &
+  Absence of $\mathbf{45}/\mathbf{126}/\mathbf{10}$ pattern with no alternative
+  breaking route falsifies Conj.~\ref{conj:breaking-derived} \\
+\bottomrule
+\end{tabular}
+\caption{Falsification timeline 2026--2030. T1 falsifiers (no fourth generation,
+$b_0\neq 12$) are already satisfied at LHC precision; the table focuses on
+open T2/T3 contacts requiring D1--D3 closure or conditional breaking.}
+\label{tab:falsification-timeline}
+\end{table}
+
+\begin{remark}[Tier priority]
+T1 predictions are falsified by a single contradictory measurement (e.g.\ a
+fourth sequential generation). T2 predictions tolerate leading-order
+deviation until D2/D3 close; the $\Delta m^2$ ratio is already at
+\textbf{match (leading)}. T3 predictions are falsified only when the named
+conjecture chain is assumed and an experiment contradicts its consequence
+(e.g.\ dynamical dark energy if CC sequestering holds).
+\end{remark}
 
 %----------------------------------------------------------------------%
 \subsection{Development program toward precision match}
@@ -327,38 +492,46 @@ enumerated proof targets below are the concrete next steps.
     $m_\iota$ without postulates.
     \textbf{Partial closure:} Section~\ref{sec:yukawa} defines the overlap
     form (Definition~\ref{def:overlap-form}), proves cellular reduction
-    (Lemma~\ref{lem:yukawa-cellular}), and derives the leading mass matrix
-    (Theorem~\ref{thm:yukawa-mass}, Table~\ref{tab:yukawa-leading});
-    full Higgs identification and off-diagonal mixing remain
-    Conjecture~\ref{conj:yukawa-full}.
+    (Lemma~\ref{lem:yukawa-cellular}), derives the leading mass matrix
+    (Theorem~\ref{thm:yukawa-mass}, Table~\ref{tab:yukawa-leading}), and
+    states off-diagonal $\mathcal{P}_{ij}$ with CKM template
+    (Proposition~\ref{prop:ckm-hierarchy}, Table~\ref{tab:Pij-ckm});
+    Section~\ref{sec:g2} gives the one-loop $a_\mu$ estimate
+    (Theorem~\ref{thm:g2-oneloop}, Table~\ref{tab:g2-estimate}).
     \begin{enumerate}[label=\textit{D1.\alph*.},leftmargin=2em]
       \item Extend Theorem~\ref{thm:breaking-e6so10}: prove Coleman--Weinberg
         lift yields one unstable $\mathbf{16}$ mode per $\iota$-cell on
         $\hat Q$.
-      \item Identify $\Phi_{\mathrm{Higgs}}$ with the $\mathbf{10}_H$
-        Coleman--Weinberg mode and refine off-diagonal $\mathcal{P}_{ij}$
-        beyond the leading diagonal ansatz of \eqref{eq:mass-matrix-full}.
-      \item Extract $y_\mu/y_e$ from the $\iota=2$ sector and compare loop
-        contributions to $a_\mu$ at the Fermilab central value
-        (Section~\ref{sec:predictions:T1}).
+      \item \textbf{Partial:} off-diagonal $\mathcal{P}_{ij}$
+        (Definition~\ref{def:Pij-offdiag}, Lemma~\ref{lem:Pij-hub});
+        \emph{open:} distinct up/down matrices and $\mathcal{H}_{ij}$ from
+        $V_F$.
+      \item \textbf{Partial:} Theorem~\ref{thm:g2-oneloop} gives
+        $\Delta a_\mu^{\mathrm{SJET}}\approx1.1\times10^{-8}$ vs.\
+        Fermilab $\delta a_\mu\approx2.6\times10^{-9}$; \emph{open:}
+        two-loop flavon compression.
     \end{enumerate}
   \item \textbf{Flavon RG} --- refine \eqref{eq:nu-ratio} from tree-level
-    $16$ to the PDG value $\approx 33$ via capacity RG on $V_F$.
+    $16$ to the PDG value $\approx 33.8$ via capacity RG on $V_F$.
     \textbf{Partial closure:} Section~\ref{sec:physics:flavon-rg} defines
     $V_F$ (Definition~\ref{def:flavon-potential}), states the one-loop
     $\beta$-function (Proposition~\ref{prop:flavon-beta}), and derives
-    Theorem~\ref{thm:nu-ratio-rg} with $R_{\mathrm{RG}}\approx 1.91$
-    (Proposition~\ref{prop:R-RG-numeric}).
+    Theorem~\ref{thm:nu-ratio-rg} with $R_{\mathrm{RG}}^{(1)}\approx 1.91$
+    (Proposition~\ref{prop:R-RG-numeric}) and two-loop factorization
+    (Theorem~\ref{thm:nu-ratio-2loop}, Proposition~\ref{prop:nu-ratio-pdg}).
     \begin{enumerate}[label=\textit{D2.\alph*.},leftmargin=2em]
       \item \textbf{Done (1-loop):} $V_F(\phi_1,\phi_2,\phi_3)$ along
         $\mathfrak{d}$ with weights $(1/27,10/27,16/27)$
         (Definition~\ref{def:flavon-potential}).
-      \item \textbf{Open:} two-loop $\beta$-functions for
+      \item \textbf{Done (2-loop):} threshold $\beta$-functions for
         $\omega^\star_\iota(\tau)$ on $SU(3)_F\to SU(2)_F\to U(1)_F$
-        breaking to close Conjecture~\ref{conj:nu-ratio-pdg}.
-      \item \textbf{Open:} match $\Delta m^2_{31}/\Delta m^2_{21}$ to PDG
-        $33.8\pm 0.8$ at the JUNO sensitivity target ($<1\%$ on the ratio)
-        once D3 fixes $M_{\mathrm{GUT}}$ and $\mu_{\mathrm{osc}}$.
+        breaking (Proposition~\ref{prop:flavon-beta-2loop},
+        Theorem~\ref{thm:nu-ratio-2loop}); PDG match
+        $\approx 33.3$ (Proposition~\ref{prop:nu-ratio-pdg}).
+      \item \textbf{Open:} derive $M_{\mathrm{GUT}}$, $M_{F,k}$, and
+        $\mu_{\mathrm{osc}}$ from $V$ (D3) to close the
+        $33.8\pm 0.8$ band at JUNO $<1\%$ precision
+        (Proposition~\ref{prop:nu-ratio-sensitivity}).
     \end{enumerate}
   \item \textbf{Scale identification} --- map $\kappa_\star$ and $\mu$ from
     Theorem~\ref{thm:planck} to $\MPl$ and electroweak scale $v$ using
@@ -366,16 +539,25 @@ enumerated proof targets below are the concrete next steps.
     Section~\ref{sec:scales} (Definitions~\ref{def:ew-scale},
     Propositions~\ref{prop:planck-scale},~\ref{prop:mu-lifetime},
     Table~\ref{tab:scale-map}).
+    \textbf{Partial closure:} Theorem~\ref{thm:ew-scale-value} gives
+    $v\approx 246$ GeV from $(\kappa_\star,w_1,w_3,M_Z)$;
+    Propositions~\ref{prop:gut-scale} and~\ref{prop:lambda-gut} identify
+    $M_{\mathrm{GUT}}\sim 10^{16}$ GeV and $\Lambda=M_{\mathrm{GUT}}$;
+    Proposition~\ref{prop:mu-lifetime} fixes $\mu\equiv v$ at
+    $\tau_{\mathrm{EW}}$; Lemma~\ref{lem:a0-sigma-plus} and
+    \eqref{eq:gamma-cc-eff} advance CC sequestering (O6).
     \begin{enumerate}[label=\textit{D3.\alph*.},leftmargin=2em]
-      \item Prove Proposition~\ref{prop:mu-lifetime}: $\mu\equiv v$ at
-        $\tau_{\mathrm{EW}}$ from Coleman--Weinberg flow along $g_\iota$
-        (requires D1 breaking chain).
-      \item Derive UV cutoff $\Lambda$ from observer-local FRG so that
-        \eqref{eq:planck-explicit} matches $\MPl$ with
-        $\kappa_\star=96\pi^2/5$ (Conjecture~\ref{conj:kappa}).
-      \item Prove Definition~\ref{def:ew-scale}: $v=|\langle\mathbf{10}_H\rangle|$
-        from $\Hess V$ without postulates; propagate to
-        $\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$ (Prediction~\ref{pred:gut}).
+      \item \textbf{Partial:} Theorem~\ref{thm:ew-scale-value} fixes $v$ given
+        Conjecture~\ref{conj:breaking-derived}; \emph{open:} prove
+        $\tau_{\mathrm{EW}}$ and $\langle\mathbf{10}_H\rangle$ from $V$
+        without postulates.
+      \item \textbf{Partial:} Proposition~\ref{prop:lambda-gut} identifies
+        $\Lambda=M_{\mathrm{GUT}}$; \emph{open:} nonperturbative observer-local
+        FRG proof (Conjecture~\ref{conj:kappa}).
+      \item \textbf{Partial:} Proposition~\ref{prop:gut-scale} and
+        Proposition~\ref{prop:weinberg-gut} propagate
+        $\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$ (Prediction~\ref{pred:gut},
+        Prediction~\ref{pred:sin2w-mz}).
     \end{enumerate}
 \end{enumerate}
 

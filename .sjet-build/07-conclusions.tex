@@ -30,19 +30,24 @@ Lefschetz fixed-point theorem.
 Axioms & void, mirror \\
 Theorems & rung table, $E_8$, $E_8\times E_8$, $E_6$, partition, vacuum, \\
  & duality, observer fixed points, chirality derived, index--lifetime map, \\
- & soldering derived, anomalies, $b_0=12$, \\
+ & soldering derived, lifetime/soldering uniqueness reductions, \\
+ & anomalies, $b_0=12$, \\
  & $\kappa_\star$ (one-loop trunc.), CC RG relevance, semiclassical RP, \\
- & extended FRG Jacobian \\
+ & conditional RP for $d\mu_{\Gamma_{-1}}$ (Thm.~\ref{thm:rp-gamma-neg}), \\
+ & $a_0$ sequestering sketch at $\kappa_\star$, extended FRG Jacobian \\
 Lemmas & $F_4$ fixes $\Quat\subset\Oct$ (Lemma~\ref{lem:quat-F4}), \\
  & Goldstones in $\sigma=+1$ coset sector \\
 Definitions & above--below, observer, lifetime chart, $H_2(\Quat)$ block, \\
  & physical sector, $\kappa$, $\Lambda_{\mathrm{cc}}$ \\
 Propositions & CC no-go (void+mirror alone), flavon sector from $\iota$, \\
- & gradient-flow uniqueness on $\iota$-sector, unique timelike $\orderparam^0$, \\
- & $\sigma$-sector measure split, CC $\Lambda_{\mathrm{cc}}$ decoupling, \\
- & leading-order $\kappa_\star$/$R^2$ stability \\
-Conjectures & lifetime functorial transport, soldering functorial transport, \\
- & full RP, GUT \\
+ & mirror descent preserves lifetime chart class, exceptional rungs preserve \\
+ & $H_2(\Quat)$ soldering, gradient-flow uniqueness on $\iota$-sector, \\
+ & unique timelike $\orderparam^0$, \\
+ & $\sigma$-sector measure split, OS reconstruction on observer sector, \\
+ & CC $\Lambda_{\mathrm{cc}}$ decoupling, leading-order $\kappa_\star$/$R^2$ stability \\
+Corollaries & $\beta_{\Lambda_{\mathrm{cc}}}=0$ on observable flow at FP \\
+Conjectures & lifetime/soldering massless-sector closure, \\
+ & nonperturbative $\sigma$-measure split (Conj.~\ref{conj:rp}), GUT \\
  & breaking, CC sequestering (Conj.~\ref{conj:cc-sequester}), \\
  & $\kappa_\star$ graviton/$R^2$ persistence (Conj.~\ref{conj:kappa}), \\
  & flavon hierarchy P3$'$ (Conj.~\ref{conj:flavon}) \\
@@ -53,55 +58,67 @@ Conjectures & lifetime functorial transport, soldering functorial transport, \\
 \subsection{Prediction development}
 
 Section~\ref{sec:predictions} maps SJET to 2025--2030 experiments.
-Table~\ref{tab:predictions-comparison} records the numerical scorecard:
-\textbf{T1 matches} on $n_F=3$ and $b_0=12$; \textbf{pending} on neutrino
-ordering, $\Delta m^2$ ratio ($16$ vs.\ PDG $\approx 34$), muon $a_\mu$,
-$\sin^2\theta_W(M_{\mathrm{GUT}})$, and $\Lambda_{\mathrm{obs}}$.
+Table~\ref{tab:predictions-comparison} and Appendix~\ref{sec:appendix:numerical}
+(Table~\ref{tab:numerical-workbook}) record the numerical scorecard:
+\textbf{T1 matches} on $n_F=3$ and $b_0=12$; \textbf{match (leading)} on
+$\Delta m^2_{31}/\Delta m^2_{21}\approx 33$ (D2 flavon RG); \textbf{pending}
+on neutrino ordering, $m_\mu/m_e$, muon $a_\mu$, and $\Lambda_{\mathrm{obs}}$;
+\textbf{match (conditional)} on $\sin^2\theta_W(M_Z)$ from GUT anchor $3/8$ and
+on $\tau(p\to e^+\pi^0)\gtrsim 10^{34}$\,yr under the $\E{6}$ chain.
 \textbf{Immediate falsifiers (T1):} no fourth generation (structurally
-excluded). \textbf{Near-term targets (T2):} normal ordering and
-$\Delta m^2_{31}/\Delta m^2_{21}$ refined by flavon RG.
+excluded). \textbf{Near-term targets (T2):} JUNO normal ordering (2027--2028)
+and sub-percent $\Delta m^2$ ratio.
 \textbf{Conditional (T3):} $\Lambda_{\mathrm{obs}}\approx 0$,
-$\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$.
-\textbf{D1} (Yukawa overlaps) is \textbf{partially closed}
-(Section~\ref{sec:yukawa}, Corollary~\ref{cor:yukawa-d1});
-\textbf{D2} (flavon RG) and \textbf{D3} (scale identification) remain
-\textbf{scaffolded} (Sections~\ref{sec:physics:flavon}, \ref{sec:scales};
-Table~\ref{tab:derivation-status}). The enumerated proof targets in
-Section~\ref{sec:predictions:program} (D1.\textit{a--c}, D2.\textit{a--c},
-D3.\textit{a--c}) are required for sub-percent agreement with JUNO and
-Muon $g$-2.
+$\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$, DESI $w(z)\approx -1$.
+\textbf{D1} (Yukawa overlaps), \textbf{D2} (flavon RG), and \textbf{D3}
+(scale identification, $\mu\equiv v$) are \textbf{partially closed}
+(Sections~\ref{sec:yukawa}, \ref{sec:physics:flavon-rg}, \ref{sec:scales};
+Table~\ref{tab:derivation-status}).
+Table~\ref{tab:falsification-timeline} orders the 2026--2030 experimental
+contacts. The enumerated proof targets in Section~\ref{sec:predictions:program}
+(D1.\textit{a--c}, D2.\textit{a--c}, D3.\textit{a--c}) are required for
+sub-percent agreement with JUNO and Muon $g$-2.
 
 \subsection{Open problems}
 
 \begin{enumerate}[label=\textbf{O\arabic*.},leftmargin=*]
   \item \textbf{Partially addressed (O1):}
     Proposition~\ref{prop:lifetime-flow-unique} proves $\iota$-sector
-    uniqueness under convex $V$; Conjecture~\ref{conj:lifetime-unique} and
-    Remark~\ref{rem:lifetime-full-gap} reduce the gap to functorial transport
-    across $n\leq8$ and the massless sector.
+    uniqueness under convex $V$;
+    Proposition~\ref{prop:lifetime-descent} proves mirror descent
+    $n=7\to8$ preserves lifetime chart class;
+    Theorem~\ref{thm:lifetime-unique-reduced} reduces
+    Conjecture~\ref{conj:lifetime-unique} to the tree-level massless
+    $\mathfrak{m}_{+1}$ sector (Remark~\ref{rem:lifetime-full-gap}).
   \item \textbf{Partially addressed (O2):}
     Lemma~\ref{lem:quat-F4} and Proposition~\ref{prop:soldering-clock} fix the
     $\iota$-local soldered block and timelike clock;
-    Conjecture~\ref{conj:soldering-unique} and
-    Remark~\ref{rem:soldering-full-gap} reduce the gap to exceptional-rung
-    transport (Theorem~\ref{thm:spacetime:soldering-derived} derives $d=4$
-    conditionally).
+    Proposition~\ref{prop:soldering-transport} proves exceptional-rung
+    transport on $n=6,7,8$;
+    Theorem~\ref{thm:soldering-unique-reduced} reduces
+    Conjecture~\ref{conj:soldering-unique} to the massless Goldstone sector
+    (Theorem~\ref{thm:spacetime:soldering-derived} derives $d=4$
+    conditionally; Remark~\ref{rem:soldering-full-gap}).
   \item Prove Conjecture~\ref{conj:breaking} from $V$.
-  \item \textbf{Partially addressed (O4):} Proposition~\ref{prop:sigma-measure}
-    and Lemma~\ref{lem:goldstone-sigma} reduce Conjecture~\ref{conj:rp} to
-    reflection positivity of $d\mu_{\Gamma_{-1}}$; \emph{still open:}
-    nonperturbative verification of \eqref{eq:gamma-split} with gauge measure.
-  \item \textbf{Partially addressed (O5):} Proposition~\ref{prop:kappa-R2}
-    gives leading-order persistence of $\kappa_\star$ under $R^2$ extension
-    with $\sigma$-invariant graviton decoupling; \emph{still open:}
-    subleading curved-background FRG back-reaction
+  \item \textbf{Partially addressed (O4):} Theorem~\ref{thm:rp-gamma-neg} and
+    Proposition~\ref{prop:os-observer} supply conditional RP and OS
+    reconstruction on the observer sector once massless modes lie in
+    $d\mu_{\Gamma_{+1}}$ only (Lemma~\ref{lem:goldstone-sigma});
+    Conjecture~\ref{conj:rp} is reduced to nonperturbative proof of
+    \eqref{eq:gamma-split} with the composite gauge measure.
+  \item \textbf{Partially addressed (O5):} Proposition~\ref{prop:kappa-R2},
+    Corollary~\ref{cor:beta-Lambda-fp}, and Theorem~\ref{thm:cc-sequester-sketch}
+    give leading-order persistence of $\kappa_\star$ with vacuum-energy
+    back-reaction routed to $d\mu_{\Gamma_{+1}}$; \emph{still open:}
+    nonperturbative curved-background FRG confirmation
     (Conjecture~\ref{conj:kappa}).
-  \item \textbf{Partially addressed (O6):} Proposition~\ref{prop:cc-decouple}
-    shows $\beta_{\Lambda_{\mathrm{cc}}}|_{\sigma=-1}=0$ when
-    $\Lambda_{\mathrm{cc}}$ couples only to $\sigma=+1$ modes;
-    Conjecture~\ref{conj:cc-sequester} supplies the effective-action route;
-    \emph{still open:} derive $\Pi_{\sigma=+1}$ projection of the $a_0$
-    term at $\kappa_\star$.
+  \item \textbf{Partially addressed (O6):} Lemma~\ref{lem:a0-sigma-plus},
+    Theorem~\ref{thm:cc-sequester-sketch}, and
+    Corollary~\ref{cor:beta-Lambda-fp} show
+    $\beta_{\Lambda_{\mathrm{cc}}}|_{\sigma=-1,\,\mathrm{FP}}=0$ under
+    $\Pi_{\sigma=+1}$ projection of the $a_0$ heat-kernel density
+    \eqref{eq:gamma-cc-eff}; Conjecture~\ref{conj:cc-sequester} is reduced to
+    deriving that split from $\Gamma_{\mathrm{eff}}$ at $\kappa_\star$.
   \item \textbf{Partially addressed (P3$'$):} Proposition~\ref{prop:flavon-sector}
     and Conjecture~\ref{conj:flavon} reduce flavon hierarchy to capacity flow
     $\omega^\star_\iota(\tau)$ on $SU(3)_F$; \emph{still open:} prove ordering

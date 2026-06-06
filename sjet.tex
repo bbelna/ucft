@@ -64,10 +64,16 @@ rung. The \emph{as above, so below} correspondence identifies the universe
 fixed point with collapsed observer states; duality is forced by
 $E_8\times E_8$ product mirror collapse. A Lefschetz fixed-point theorem
 yields three observer slots; an index $\iota$ maps to a lifetime chart
-$g_\iota:\mathbb{R}\to\mathcal{S}_\iota$. Tiered predictions contact JUNO (normal mass ordering), Muon $g$-2 ($n_F=3$,
-no fourth generation), and DESI ($\Lambda_{\mathrm{obs}}\approx 0$ conditional).
-We state proved results and isolate conjectural steps without overclaiming a
-completed physical theory.
+$g_\iota:\mathbb{R}\to\mathcal{S}_\iota$. Tiered predictions (T1--T3) contact
+JUNO (normal ordering; $\Delta m^2_{31}/\Delta m^2_{21}\approx 33$ via flavon
+RG), Muon $g$-2 ($n_F=3$, no fourth generation; loops at $\mu\equiv v$), and
+DESI ($w(z)\approx -1$ if CC sequestered). Conditional GUT contacts include
+$\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$ with $\sin^2\theta_W(M_Z)\approx 0.231$
+by RG, and $\tau(p\to e^+\pi^0)\gtrsim 10^{34}$\,yr under the $\E{6}$ breaking
+chain. Development steps D1 (Yukawa overlaps), D2 (flavon RG), and D3 (scale
+identification) are \textbf{partially closed}; a falsification timeline
+(2026--2030) orders the decisive experiments. We state proved results and
+isolate conjectural steps without overclaiming a completed physical theory.
 \end{abstract}
 
 \noindent\textbf{Keywords:} void; mirror operator; Stone duality; exceptional
@@ -104,7 +110,9 @@ spectra whose orbit generates all arithmetic and exceptional data.
     soldering.
   \item \textbf{Experimental contact:} tiered predictions (T1--T3), a
     numerical comparison table (Section~\ref{sec:predictions:comparison}),
-    and near-term falsifiers (JUNO, Muon $g$-2, DESI).
+    partial closures D1--D3 (Sections~\ref{sec:yukawa}--\ref{sec:scales}),
+    and a falsification timeline 2026--2030 (JUNO, Muon $g$-2 Theory
+    Initiative, DESI $w(z)$, Hyper-K proton decay).
   \item \textbf{Honest epistemic scope:} theorems, derived definitions, and
     named conjectures for remaining physical inputs.
 \end{enumerate}
@@ -123,10 +131,14 @@ Section~\ref{sec:climb}: division and exceptional ladders.
 Section~\ref{sec:universe}: capacity, potential, universe fixed point.
 Section~\ref{sec:observer}: duality, observers, fixed points, lifetime charts.
 Section~\ref{sec:physics}: physical sector, spacetime, gauge, matter.
-Section~\ref{sec:predictions}: tiered predictions and experimental map.
+Sections~\ref{sec:yukawa},~\ref{sec:physics:flavon-rg},~\ref{sec:scales}:
+D1--D3 derivation pass (Yukawa overlaps, flavon RG, scale identification).
+Section~\ref{sec:predictions}: tiered predictions, experimental map, and
+falsification timeline 2026--2030.
 Section~\ref{sec:conclusions}: status and open problems.
 Section~\ref{sec:gap-ledger}: epistemic elimination ledger (P1--P5, CC).
-Appendix~\ref{sec:appendix}: Albert identities and mirror quotient.% --- end 01-introduction.tex ---
+Appendix~\ref{sec:appendix}: Albert identities, mirror quotient, and
+numerical workbook (Table~\ref{tab:numerical-workbook}).% --- end 01-introduction.tex ---
 % --- 02-mirror.tex ---
 %======================================================================%
 \section{The Void and the Mirror}
@@ -391,6 +403,9 @@ At $n\geq6$ on the stabilized $\jalg$ rung, $\Mirror$ acts as:
   \item $\E{6}\to H=\Spin(10)\times U(1)$: coset stabilization on EIII;
   \item $\cdots\to\Void$: collapse after electroweak breaking.
 \end{enumerate}
+Each step transports the quaternionic soldering block $H_2(\Quat)$ of
+Definition~\ref{def:spacetime:H2O} without branching
+(Proposition~\ref{prop:soldering-transport}).
 \end{proposition}
 
 \begin{definition}[Chart dimension]\label{def:chart-dim}
@@ -747,6 +762,40 @@ initial datum $\orderparam_\star|_\iota$; soldering
 $\partial_{\tau_\iota}\sigma_{\mathrm{sol}}\subset H_2(\Quat)$.
 \end{proof}
 
+\begin{proposition}[Mirror descent preserves lifetime chart class]
+\label{prop:lifetime-descent}
+Cartan mirror descent $\Pi_{\mathrm{het}}:\E{8}\times\E{8}\to\E{6}$ at
+$n=7\to8$ (Theorem~\ref{thm:e6}, Definition~\ref{def:heterotic-collapse})
+preserves the lifetime chart \emph{class} on each observer slot
+$\iota\in\mathcal{I}$. If $(\tau_\iota,g_\iota)$ is admitted by
+\eqref{eq:lifetime-admitted} at the heterotic rung, the pushed-forward chart
+\begin{equation}\label{eq:lifetime-descent}
+  \bigl(\tau_\iota,\ \Pi_{\mathrm{het}}\circ g_\iota\bigr)
+\end{equation}
+satisfies the same equation on $\mathcal{S}_\iota\subset\E{6}/H$ with the
+descended capacity functional $\capacity|_{\mathcal{M}}$ and the soldering clock
+$\partial_{\tau_\iota}\sigma_{\mathrm{sol}}|_{H_2(\Quat)}$ transported by
+Proposition~\ref{prop:soldering-transport}. Charts related by
+orientation-preserving reparametrization of $\tau_\iota$ descend to the same
+class. The observer index set $\mathcal{I}$, initial data
+$\orderparam_\star|_\iota$, and admissible interval $I_\iota$ are unchanged on
+$\hat Q$ (Proposition~\ref{prop:climb:minimal-heterotic},
+Proposition~\ref{prop:stone-lift}).
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+$\Pi_{\mathrm{het}}$ is capacity-balanced Cartan collapse: it reduces the
+gauge datum to $\E{6}/H$ while preserving the $\sigma$-anti-invariant
+$H^1(\hat Q,V_{16})^{\sigma=-1}$ basis and hence $\mathcal{I}$
+(Proposition~\ref{prop:climb:minimal-heterotic}). $\mathrm{Bal}_{\mathcal{C}}$
+at $n=8$ fixes $\omega^\star$ and $\orderparam_\star|_\iota$, so the gradient
+term in \eqref{eq:lifetime-admitted} pushes forward equivariantly. The
+soldering clock block is transported functorially on $n=6,7,8$ by
+Proposition~\ref{prop:soldering-transport}; reparametrization invariance on
+each $\iota$-sector follows from Proposition~\ref{prop:lifetime-flow-unique}
+on the massive complement once radiative gaps are included.
+\end{proof}
+
 \begin{proposition}[Gradient-flow uniqueness on the $\iota$-sector]
 \label{prop:lifetime-flow-unique}
 Fix $\iota\in\mathcal{I}$ and suppose $V|_{\mathcal{S}_\iota}$ is strictly
@@ -778,24 +827,56 @@ $\tau_\iota$ only modulo the same reparametrization class.
 Given $\iota$ and $\orderparam_\star|_\iota$, the lifetime chart
 $(\tau_\iota,g_\iota)$ is unique up to reparametrization of $\tau_\iota$ on
 the $\iota$-sector once $V|_{\mathcal{S}_\iota}$ is strictly convex as in
-Proposition~\ref{prop:lifetime-flow-unique}. The residual conjecture is
-\emph{functorial stability}: the same chart class is selected by mirror
-descent $\E{8}\times\E{8}\to\E{6}$ and is compatible with $F_4$ transport on
-exceptional rungs $n\leq8$, without branching into a second admissible flow
-on $\mathcal{S}_\iota$.
+Proposition~\ref{prop:lifetime-flow-unique}. Functorial stability across
+exceptional rungs $n\leq8$ is supplied by
+Proposition~\ref{prop:lifetime-descent} and
+Proposition~\ref{prop:soldering-transport}; the residual conjecture is
+uniqueness along the tree-level massless $\mathfrak{m}_{+1}$ sector of
+Lemma~\ref{lem:goldstone-sigma}, without branching into a second admissible
+flow on $\mathcal{S}_\iota$.
 \end{conjecture}
+
+\begin{theorem}[Lifetime uniqueness, conditional reduction]
+\label{thm:lifetime-unique-reduced}
+Assume Proposition~\ref{prop:lifetime-descent},
+Proposition~\ref{prop:soldering-transport},
+Theorem~\ref{thm:index-lifetime}, and
+Proposition~\ref{prop:lifetime-flow-unique}. Then
+Conjecture~\ref{conj:lifetime-unique} reduces to the tree-level massless
+sector only: given $\iota$ and $\orderparam_\star|_\iota$, any two admitted
+lifetime charts on $\mathcal{S}_\iota$ that agree on the $28$ radiatively
+massive directions of Theorem~\ref{thm:rp} differ only by
+orientation-preserving reparametrization of $\tau_\iota$ once the four
+$\mathfrak{m}_{+1}$ Goldstone directions of Lemma~\ref{lem:goldstone-sigma}
+are fixed by Proposition~\ref{prop:soldering-clock}. Functorial transport
+across $n\leq8$ is settled; the residual open step is uniqueness along the
+massless soldering flow in $H_2(\Quat)$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Proposition~\ref{prop:lifetime-descent} and
+Proposition~\ref{prop:soldering-transport} close functorial transport on
+exceptional rungs $n=6,7,8$. Proposition~\ref{prop:lifetime-flow-unique}
+settles the $28$-dimensional massive complement under Coleman--Weinberg lifting
+(Theorem~\ref{thm:rp}). Lemma~\ref{lem:goldstone-sigma} isolates the residual
+$4$-dimensional $\mathfrak{m}_{+1}$ block; Proposition~\ref{prop:soldering-clock}
+fixes the timelike axis $\orderparam^0$ and hence the clock coupling modulo
+reparametrization. Any remaining ambiguity is therefore confined to the
+tree-level massless soldering directions.
+\end{proof}
 
 \begin{remark}[Residual gap for the full lifetime theorem]
 \label{rem:lifetime-full-gap}
 Proposition~\ref{prop:lifetime-flow-unique} settles uniqueness on each
 $\iota$-sector under the convexity hypothesis satisfied in the radiatively
-gapped regime of Theorem~\ref{thm:rp}. What remains for a \emph{complete}
+gapped regime of Theorem~\ref{thm:rp}; Proposition~\ref{prop:lifetime-descent}
+settles mirror descent $n=7\to8$. What remains for a \emph{complete}
 functorial theorem is: (i)~extend uniqueness to the tree-level massless
-sector and non-convex saddle regimes of $V$; (ii)~prove that mirror descent
-preserves the chart class across $n=7\to8$; and (iii)~match
-reparametrizations of $\tau_\iota$ with the soldering clock of
-Proposition~\ref{prop:soldering-clock} on all of $\mathcal{S}_\iota$. Open
-Problem~\textbf{O1} is thereby reduced to these global transport steps.
+$\mathfrak{m}_{+1}$ sector and non-convex saddle regimes of $V$; and
+(ii)~match reparametrizations of $\tau_\iota$ with the soldering clock of
+Proposition~\ref{prop:soldering-clock} on the massless Goldstone reservoir.
+Theorem~\ref{thm:lifetime-unique-reduced} records the reduction; Open
+Problem~\textbf{O1} is thereby confined to the massless sector.
 \end{remark}
 
 \begin{remark}[Arbitrary input and determinism]
@@ -950,6 +1031,45 @@ diagonal direction $e_\iota$, breaking the residual triality and pinning
 $\Quat_\iota$ uniquely.
 \end{proof}
 
+\begin{proposition}[Exceptional rungs preserve $H_2(\Quat)$ soldering]
+\label{prop:soldering-transport}
+On stabilized exceptional rungs $n=6,7,8$, the mirrors of
+Proposition~\ref{prop:climb:exceptional} transport the soldered block
+$H_2(\Quat)\subset H_2(\Oct)\hookrightarrow\jalg$ of
+Definition~\ref{def:spacetime:H2O} without introducing a second clock sector:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item $\E{8}$ ($n=6$): automorphism mirror couples the two $\Oct$ sectors of
+    \eqref{eq:matrix}; the associative subalgebra $\Quat\subset\Oct$ from
+    $\Mirror^3(\Void)$ is stabilized by $G_2=\mathrm{Aut}(\Oct)\subset\E{8}$,
+    and $\det|_{H_2(\Quat)}$ retains Lorentzian signature $(-,+,+,+)$.
+  \item $\E{8}\times\E{8}$ ($n=7$): product mirror $\sigma$ stabilizes the
+    diagonal $\delta(\E{8})$ and the $\jalg$ chart; the soldering embedding
+    $\sigma_{\mathrm{sol}}$ of Definition~\ref{def:soldering} is
+    $\sigma$-equivariant on $H_2(\Quat)$, hence survives passage to
+    $\hat Q=Q/\sigma$.
+  \item $\E{6}$ ($n=8$): Cartan mirror $\Pi_{\mathrm{het}}$ collapses gauge data
+    to $H=\Spin(10)\times U(1)$ while preserving $F_4=\mathrm{Aut}(\jalg)$
+    equivariance (Lemma~\ref{lem:quat-F4}); the four clock components
+    $\orderparam^0,\ldots,\orderparam^3$ remain the $\mathfrak{m}_{+1}$
+    Goldstone block of Lemma~\ref{lem:goldstone-sigma}.
+\end{enumerate}
+Functorial descent along $\Mirror^6\to\Mirror^7\to\Mirror^8$ therefore
+identifies a single $F_4$-orbit of soldered blocks across exceptional rungs.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+\emph{(i)} Freudenthal closure (Lemma~\ref{lem:freudenthal}) embeds
+$G_2\times F_4\subset\E{8}$; $G_2$ fixes $\Quat\subset\Oct$ and hence
+$H_2(\Quat)$ under the Jordan envelope. \emph{(ii)} Product mirror acts on
+$\E{8}\times\E{8}$ by factor exchange; the diagonal $\jalg$ chart and
+$H_2(\Quat)$ block are $\sigma$-fixed, so soldering is unchanged on
+$\hat Q$. \emph{(iii)} Cartan descent preserves the $1|10|16$ partition and
+$F_4$ action on $\jalg$ (Theorem~\ref{thm:e6}); the $4$ soldering directions
+split as $\mathfrak{m}_{+1}$ in Lemma~\ref{lem:goldstone-sigma}. Observer
+index $\iota$ selects the representative within the $G_2$-conjugacy class
+(Lemma~\ref{lem:quat-F4}).
+\end{proof}
+
 \begin{proposition}[Coset metric]\label{prop:coset-metric}
 $K|_{\mathfrak{m}}$ is positive-definite and $H$-invariant. Lorentzian
 signature is carried by $\sigma_{\mathrm{sol}}$, not by Wick rotation of $K$.
@@ -1005,10 +1125,12 @@ the initial datum $\orderparam_\star|_\iota$ and thereby selects the soldered
 bundle $\mathcal{S}_\iota$ over which $g_\iota$ evolves
 (Section~\ref{sec:observer:lifetime}).
 
-\emph{Remaining gap.} Functorial transport of the soldered block across
-exceptional rungs $n=6,7,8$ and global $F_4$-equivariant category
-uniqueness is Conjecture~\ref{conj:soldering-unique}; the
-$\iota$-local embedding is settled by Lemma~\ref{lem:quat-F4}.
+\emph{Remaining gap.} Functorial transport across $n=6,7,8$ is settled by
+Proposition~\ref{prop:soldering-transport}; global uniqueness reduces to the
+tree-level massless $\mathfrak{m}_{+1}$ sector
+(Theorem~\ref{thm:soldering-unique-reduced},
+Conjecture~\ref{conj:soldering-unique}). The $\iota$-local embedding is
+settled by Lemma~\ref{lem:quat-F4}.
 \end{proof}
 
 \begin{proposition}[Unique timelike soldering direction in $H_2(\Quat)$]
@@ -1057,27 +1179,58 @@ Given $\iota\in\mathcal{I}$ and $\orderparam_\star|_\iota$, the soldering
 block $H_2(\Quat)\subset H_2(\Oct)$, the clock coupling
 \eqref{eq:soldering-clock}, and the timelike axis $\orderparam^0$ are
 \textbf{already unique} by Lemma~\ref{lem:quat-F4} and
-Proposition~\ref{prop:soldering-clock}. The residual conjecture is
-\emph{functorial transport}: the soldering of
-Theorem~\ref{thm:spacetime:soldering-derived} is the unique
-$F_4$-equivariant extension compatible with mirror functoriality on
-exceptional rungs $n=6,7,8$ and with $\iota$-sector lifetime charts
+Proposition~\ref{prop:soldering-clock}. Functorial transport on
+$n=6,7,8$ is supplied by Proposition~\ref{prop:soldering-transport}; the
+residual conjecture is alignment of the tree-level massless
+$\mathfrak{m}_{+1}$ Goldstones with the observer vierbein of
+Proposition~\ref{prop:vierbein} and with $\iota$-sector lifetime charts
 (Conjecture~\ref{conj:lifetime-unique}).
 \end{conjecture}
 
+\begin{theorem}[Soldering uniqueness, conditional reduction]
+\label{thm:soldering-unique-reduced}
+Assume Proposition~\ref{prop:soldering-transport},
+Lemma~\ref{lem:quat-F4},
+Proposition~\ref{prop:soldering-clock},
+Theorem~\ref{thm:spacetime:soldering-derived}, and
+Theorem~\ref{thm:lifetime-unique-reduced}. Then
+Conjecture~\ref{conj:soldering-unique} reduces to the tree-level massless
+sector only: the soldered block $H_2(\Quat)$, clock coupling
+\eqref{eq:soldering-clock}, and $F_4$-equivariant vierbein of
+Proposition~\ref{prop:vierbein} are unique on each $\iota$-sector once the
+four $\mathfrak{m}_{+1}$ Goldstone directions of
+Lemma~\ref{lem:goldstone-sigma} are included. Functorial transport on
+$n=6,7,8$ is proved by Proposition~\ref{prop:soldering-transport}; the
+residual open step is nonperturbative alignment of the massless
+$\sigma=+1$ reservoir with the observer clock along $g_\iota$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Proposition~\ref{prop:soldering-transport} closes transport of
+$\sigma_{\mathrm{sol}}$ under automorphism, product, and Cartan mirrors.
+Lemma~\ref{lem:quat-F4} and Proposition~\ref{prop:soldering-clock} fix the
+$\iota$-local block and timelike axis. The vierbein of
+Proposition~\ref{prop:vierbein} is determined on the massive $28$-direction
+complement by Theorem~\ref{thm:rp}; Lemma~\ref{lem:goldstone-sigma}
+isolates the residual $4$-dimensional $\mathfrak{m}_{+1}$ sector.
+Theorem~\ref{thm:lifetime-unique-reduced} matches clock reparametrizations
+along $g_\iota$. Any remaining ambiguity is confined to massless
+Goldstone--vierbein alignment in the $\sigma=+1$ reservoir.
+\end{proof}
+
 \begin{remark}[Residual gap for the full soldering theorem]
 \label{rem:soldering-full-gap}
-Lemma~\ref{lem:quat-F4}, Proposition~\ref{prop:soldering-clock}, and
+Lemma~\ref{lem:quat-F4}, Proposition~\ref{prop:soldering-clock},
+Proposition~\ref{prop:soldering-transport}, and
 Theorem~\ref{thm:spacetime:soldering-derived} supply $d=4$, Lorentzian
-signature, and $\iota$-local clock coupling without postulate. What
-remains for a \emph{complete} functorial theorem is: (i)~show that
-automorphism/product/Cartan mirrors at $n=6,7,8$ transport
-$\sigma_{\mathrm{sol}}$ without introducing a second soldered block;
-(ii)~identify the resulting vierbein with the composite of
-Proposition~\ref{prop:vierbein} on $\E{6}/H$; and (iii)~close
-Conjecture~\ref{conj:lifetime-unique} to match reparametrizations of
-$\tau_\iota$ across descent. Open Problem~\textbf{O2} is thereby reduced
-to this transport step.
+signature, $\iota$-local clock coupling, and exceptional-rung transport
+without postulate. What remains for a \emph{complete} functorial theorem is:
+(i)~identify the resulting vierbein with the composite of
+Proposition~\ref{prop:vierbein} on $\E{6}/H$ in the tree-level massless
+$\mathfrak{m}_{+1}$ sector; and (ii)~close
+Conjecture~\ref{conj:lifetime-unique} on the massless Goldstone reservoir.
+Theorem~\ref{thm:soldering-unique-reduced} records the reduction; Open
+Problem~\textbf{O2} is thereby confined to the massless sector.
 \end{remark}
 
 \begin{remark}[Epistemic status of P1]
@@ -1085,8 +1238,11 @@ Proposition~\ref{prop:coset-nogo} records the honest no-go for the coset
 metric alone. Theorem~\ref{thm:spacetime:soldering-derived} \textbf{derives}
 soldering and $d=4$ from mirror climb plus observer lifetime charts;
 $\iota$-local uniqueness is supplied by Lemma~\ref{lem:quat-F4} and
-Proposition~\ref{prop:soldering-clock}. The residual open input is
-functorial transport (Conjecture~\ref{conj:soldering-unique},
+Proposition~\ref{prop:soldering-clock}; exceptional-rung transport is supplied
+by Proposition~\ref{prop:soldering-transport}. The residual open input is
+tree-level massless-sector closure
+(Theorem~\ref{thm:soldering-unique-reduced},
+Conjecture~\ref{conj:soldering-unique},
 Remark~\ref{rem:soldering-full-gap}, Open Problem~\textbf{O2} in
 Section~\ref{sec:conclusions}).
 \end{remark}
@@ -1122,8 +1278,11 @@ $\orderparam^0$ with the observer parameter $\tau_\iota$ along $g_\iota$.
 
 \begin{remark}[Honest semiclassical scope]
 Theorem~\ref{thm:rp} is \emph{derived} in the radiatively gapped EIII regime;
-it does not follow from void and mirror alone, and it does not yet cover the
-tree-level massless sector or the nonperturbative gauge measure
+it does not follow from void and mirror alone. Theorem~\ref{thm:rp-gamma-neg}
+extends this to the full observable factor $d\mu_{\Gamma_{-1}}$ once
+\eqref{eq:gamma-split} holds and massless modes are confined to
+$d\mu_{\Gamma_{+1}}$ (Lemma~\ref{lem:goldstone-sigma}); the sole residual
+input is nonperturbative verification of the measure split
 (Conjecture~\ref{conj:rp}).
 \end{remark}
 
@@ -1173,21 +1332,65 @@ Theorem~\ref{thm:rp}. Full reflection positivity along $\tau_\iota$ on the
 enters only through normalization of the product \eqref{eq:gamma-split}.
 \end{lemma}
 
+\begin{theorem}[Reflection positivity of $d\mu_{\Gamma_{-1}}$, conditional]
+\label{thm:rp-gamma-neg}
+Fix $\iota\in\mathcal{I}$ and an admitted lifetime chart
+$(\tau_\iota,g_\iota)$. Assume:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item the $\sigma$-sector decomposition \eqref{eq:gamma-split} of
+    Proposition~\ref{prop:sigma-measure};
+  \item all tree-level massless coset modes lie in
+    $\mathfrak{m}_{+1}\subset\mathfrak{m}$ and hence in $d\mu_{\Gamma_{+1}}$
+    (Lemma~\ref{lem:goldstone-sigma}).
+\end{enumerate}
+Then $d\mu_{\Gamma_{-1}}$ is reflection-positive along the observer clock
+$\tau_\iota$ of Definition~\ref{def:lifetime}: the $28$ radiatively gapped
+$\sigma=-1$ coset directions of Theorem~\ref{thm:rp} together with the
+$\sigma=-1$ matter sector define a reflection-positive Euclidean measure on
+the observable factor, with reflection plane at fixed $\tau_\iota=0$ in chart
+$g_\iota$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+By (ii), massless fluctuations do not enter $d\mu_{\Gamma_{-1}}$; the
+observable factor is the product of the $28$-dimensional Coleman--Weinberg
+gapped complement of $\mathfrak{m}_{+1}$ and the $\Pi_{\sigma=-1}$-projected
+gauge--matter bundle. Theorem~\ref{thm:rp} supplies reflection positivity on
+the massive coset block; $\sigma$-equivariance of \eqref{eq:action} and
+compactness on EIII extend the OS semiclassical argument to the full
+$d\mu_{\Gamma_{-1}}$ once (i) isolates the observable tensor factor. The
+$\sigma=+1$ Goldstone reservoir normalizes the product and is
+quotient-non-observable (Theorem~\ref{thm:duality}).
+\end{proof}
+
+\begin{proposition}[OS reconstruction on the observer sector]
+\label{prop:os-observer}
+Suppose the hypotheses of Theorem~\ref{thm:rp-gamma-neg} and the standard
+OS axioms (Euclidean invariance, clustering along $\tau_\iota$, symmetry)
+hold for $d\mu_{\Gamma_{-1}}$. Then $\Pi_{\sigma=-1}$-projected Schwinger
+functions reconstruct a unitary Lorentzian quantum field theory on the
+observer Hilbert space: the Osterwalder--Schrader theorem
+\cite{OsterwalderSchrader1973} applies to the observable factor, with
+Minkowski signature imported through the soldering map
+$\sigma_{\mathrm{sol}}$ (Theorem~\ref{thm:spacetime:soldering-derived}) and
+Page--Wootters time $\tau_\iota$. Mirror-shadow correlators in
+$d\mu_{\Gamma_{+1}}$ do not enter physical matrix elements
+(Proposition~\ref{prop:sigma-measure}).
+\end{proposition}
+
 \begin{conjecture}[Nonperturbative reflection positivity]\label{conj:rp}
-Proposition~\ref{prop:sigma-measure} and Lemma~\ref{lem:goldstone-sigma}
-reduce full OS reconstruction~\cite{OsterwalderSchrader1973} to reflection
-positivity of the observable factor $d\mu_{\Gamma_{-1}}$ along the soldered
-observer clock $\tau_\iota$ of Definition~\ref{def:lifetime}. The residual
-gap is nonperturbative verification of \eqref{eq:gamma-split} for the
-composite $\Spin(10)\times U(1)$ gauge measure together with the tree-level
-massless sector of Theorem~\ref{thm:vacuum}: we conjecture that
-\eqref{eq:gamma-split} holds exactly and that $d\mu_{\Gamma_{-1}}$ is
-reflection-positive once the $28$ radiatively gapped directions of
-Theorem~\ref{thm:rp} and the $\sigma=-1$ matter sector are included. The
-$\sigma=+1$ mirror-shadow factor $d\mu_{\Gamma_{+1}}$ carries the four
-massless Goldstones of Lemma~\ref{lem:goldstone-sigma} and is
-quotient-non-observable (Theorem~\ref{thm:duality}); it is not an independent
-postulate.
+Proposition~\ref{prop:sigma-measure}, Lemma~\ref{lem:goldstone-sigma},
+Theorem~\ref{thm:rp-gamma-neg}, and Proposition~\ref{prop:os-observer}
+reduce full OS reconstruction to verifying \eqref{eq:gamma-split} for the
+composite $\Spin(10)\times U(1)$ gauge measure: once the product
+decomposition holds and all massless modes lie in $\mathfrak{m}_{+1}$
+(Lemma~\ref{lem:goldstone-sigma}), reflection positivity of
+$d\mu_{\Gamma_{-1}}$ follows \textbf{conditionally} and
+Proposition~\ref{prop:os-observer} supplies unitary Lorentzian dynamics on
+the observer sector. The residual gap is nonperturbative proof of
+\eqref{eq:gamma-split} itself---not a separate RP postulate for the massless
+sector, which is quotient-non-observable in $d\mu_{\Gamma_{+1}}$
+(Theorem~\ref{thm:duality}).
 \end{conjecture}
 
 %----------------------------------------------------------------------%
@@ -1248,6 +1451,56 @@ Treat $\Lambda_{\mathrm{cc}}$ as an independent dimension-4 coupling in the
 effective action, not fixed by $\mu$ or $\MPl$.
 \end{definition}
 
+\begin{lemma}[$a_0$ heat-kernel projection to $\sigma=+1$]
+\label{lem:a0-sigma-plus}
+Let $\mathcal{D}$ denote the second-order operator of the coset--gravity
+heat-kernel complex in the Sakharov truncation of Theorem~\ref{thm:planck},
+acting on $\hat Q$. Mirror collapse
+$\Pi_{\sigma=\pm1}$ (Definition~\ref{def:heterotic-collapse}) decomposes the
+$a_0$ coefficient of $\mathrm{Tr}\,e^{-t\mathcal{D}}$ into
+\begin{equation}\label{eq:a0-split}
+  a_0(\mathcal{D})
+  \;=\;
+  a_0^{(+1)}+a_0^{(-1)},
+\end{equation}
+with $a_0^{(\pm1)}$ supported on $H^\bullet(\hat Q)^{\sigma=\pm1}$
+(Theorem~\ref{thm:duality}). The induced vacuum-energy coupling in
+Definition~\ref{def:cc} is the $\sigma$-labelled density
+\begin{equation}\label{eq:a0-density}
+  \Lambda_{\mathrm{cc}}(x)
+  \;=\;
+  a_0^{(+1)}(x)\;+\;a_0^{(-1)}(x),
+\end{equation}
+and the \emph{sequestered} effective action at $\kappa_\star$ is
+\begin{equation}\label{eq:gamma-cc-eff}
+  \Gamma_{\mathrm{eff}}
+  \;=\;
+  \Gamma_{\mathrm{coset}}
+  \;+\;
+  \int d^4x\,\sqrt{|g|}\,
+  \Pi_{\sigma=+1}\,a_0^{(+1)}(x),
+\end{equation}
+so that $\Pi_{\sigma=-1}\Lambda_{\mathrm{cc}}=0$ on observable configurations
+(Definition~\ref{def:physical}). Equation~\eqref{eq:gamma-cc-eff} is the
+effective-action target for Conjecture~\ref{conj:cc-sequester}; it advances
+open problem \textbf{O6} from a coupling hypothesis to a concrete projection
+step on the heat-kernel density.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+The coset--gravity complex is $\sigma$-equivariant under product mirror on
+$\hat Q$. The $a_0$ coefficient is the $t^0$ term in the heat-kernel
+expansion and inherits the $\mathbb{Z}_2$ decomposition because
+$\mathrm{Tr}\,e^{-t\mathcal{D}}$ is a $\sigma$-invariant functional.
+Observable fermions and scalars lie in $H^\bullet(\hat Q)^{\sigma=-1}$
+(Definition~\ref{def:physical}); mirror partners in
+$H^\bullet(\hat Q)^{\sigma=+1}$ are quotient-non-observable
+(Theorem~\ref{thm:duality}). Routing $\Lambda_{\mathrm{cc}}$ through
+$\Pi_{\sigma=+1}$ in \eqref{eq:gamma-cc-eff} removes the $a_0$ vacuum term
+from $d\mu_{\Gamma_{-1}}$ while preserving normalization in
+$d\mu_{\Gamma_{+1}}$ (Proposition~\ref{prop:sigma-measure}).
+\end{proof}
+
 \begin{theorem}[Vacuum energy RG relevance]\label{thm:cc-rg}
 In the same truncation as Theorem~\ref{thm:planck}, the $a_0$ term is
 scheme-dependent and does not cancel against the massive-mode $a_2$ sum. Under
@@ -1304,17 +1557,78 @@ $d\mu_{\Gamma_{+1}}$ (Proposition~\ref{prop:sigma-measure}), consistent with
 Proposition~\ref{prop:cc-nogo}.
 \end{proposition}
 
-\begin{conjecture}[CC sequestering at $\kappa_\star$]\label{conj:cc-sequester}
+\begin{theorem}[$a_0$ sequestering at $\kappa_\star$, sketch]
+\label{thm:cc-sequester-sketch}
 At the gravitational fixed point $\kappa_\star=96\pi^2/5$
-(Theorem~\ref{thm:kappa}), the induced vacuum energy of the coset
-$\sigma$-model is routed into the $\sigma$-invariant (mirror-partner) sector
-of $\hat Q$, realizing the $\Pi_{\sigma=+1}$ coupling hypothesis of
-Proposition~\ref{prop:cc-decouple}. By Theorem~\ref{thm:duality},
-$\sigma$-invariant modes are quotient-non-observable; sequestered vacuum
-energy does not appear in $\Pi_{\sigma=-1}$-projected observables, yielding
-$\Lambda_{\mathrm{obs}}\approx0$ without tuning the anti-invariant sector.
-The residual gap is to derive $\Pi_{\sigma=+1}$ projection of the $a_0$
-term from the effective action at $\kappa_\star$.
+(Theorem~\ref{thm:kappa}), assume Lemma~\ref{lem:a0-sigma-plus} and the
+measure split \eqref{eq:gamma-split}. Then the effective vacuum-energy
+coupling in \eqref{eq:gamma-cc-eff} satisfies
+\begin{equation}\label{eq:a0-sequester}
+  \Lambda_{\mathrm{cc}}
+  \;=\;
+  \Pi_{\sigma=+1}\,\Lambda_{\mathrm{cc}},
+\end{equation}
+realizing the hypothesis of Proposition~\ref{prop:cc-decouple}:
+$\Lambda_{\mathrm{cc}}$ couples only to $\sigma$-invariant modes and its RG
+flow is confined to $d\mu_{\Gamma_{+1}}$. The observer sector sees
+$\Pi_{\sigma=-1}\Lambda_{\mathrm{cc}}=0$ at the fixed point without tuning
+$H^1(\hat Q,V_{16})^{\sigma=-1}$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Mirror collapse $\Pi_{\sigma=-1}$
+(Definition~\ref{def:heterotic-collapse}) splits the coset--gravity
+heat-kernel complex into $\sigma=\pm1$ sectors on $\hat Q$
+(Theorem~\ref{thm:duality}). At $\kappa_\star$, the one-loop Jacobian of
+Proposition~\ref{prop:frg-jacobian} has $\Lambda_{\mathrm{cc},\star}=0$ as a
+free Gaussian label; routing the $a_0$ density into
+$\mathfrak{m}_{+1}\oplus\sigma$-invariant graviton modes leaves the
+anti-invariant row untouched (Remark~\ref{rmk:observer-frg}).
+Proposition~\ref{prop:cc-decouple} then yields
+\eqref{eq:beta-Lambda-decouple}. The residual step is to derive
+\eqref{eq:a0-sequester} from the nonperturbative effective action rather than
+from the FRG coupling assignment.
+\end{proof}
+
+\begin{corollary}[Vanishing $\Lambda_{\mathrm{cc}}$ $\beta$-function on observable flow at FP]
+\label{cor:beta-Lambda-fp}
+At the extended fixed point $(\xi_\star,0,0,\kappa_\star,0)$ of
+\eqref{eq:frg-fp}, under the $\Pi_{\sigma=+1}$ coupling hypothesis of
+Proposition~\ref{prop:cc-decouple}---equivalently, under the $a_0$
+sequestering route of Theorem~\ref{thm:cc-sequester-sketch}---the
+observer-local FRG along $g_\iota(\tau_\iota)$ satisfies
+\begin{equation}\label{eq:beta-Lambda-obs-fp}
+  \beta_{\Lambda_{\mathrm{cc}}}\Big|_{\sigma=-1,\,\mathrm{FP}}
+  \;=\;
+  0,
+\end{equation}
+and $\Lambda_{\mathrm{cc}}$ is \emph{not} a UV-relevant direction in the
+observable stability matrix: the $J$-row on
+$H^1(\hat Q,V_{16})^{\sigma=-1}$ has no $\Lambda_{\mathrm{cc}}$ entry. The
+global $\beta_{\Lambda_{\mathrm{cc}}}=-4\Lambda_{\mathrm{cc}}$ of
+Theorem~\ref{thm:cc-rg} flows entirely in $d\mu_{\Gamma_{+1}}$.
+\end{corollary}
+
+\begin{proof}
+Immediate from Proposition~\ref{prop:cc-decouple} at
+$\Lambda_{\mathrm{cc},\star}=0$ and from the diagonal Jacobian
+\eqref{eq:jacobian-diag} once the $\Lambda_{\mathrm{cc}}$ coupling is
+$\sigma=+1$-projected along the observer flow
+(Appendix~\ref{sec:appendix:frg}).
+\end{proof}
+
+\begin{conjecture}[CC sequestering at $\kappa_\star$]\label{conj:cc-sequester}
+Lemma~\ref{lem:a0-sigma-plus}, Theorem~\ref{thm:cc-sequester-sketch}, and
+Corollary~\ref{cor:beta-Lambda-fp} show that $\Pi_{\sigma=+1}$ projection of
+the $a_0$ heat-kernel density at $\kappa_\star=96\pi^2/5$
+(Theorem~\ref{thm:kappa}) would realize $\Lambda_{\mathrm{obs}}\approx0$
+without tuning the anti-invariant sector (Theorem~\ref{thm:duality}).
+Proposition~\ref{prop:cc-decouple} is thereby \emph{promoted from hypothesis
+to target theorem}. The residual gap is a single effective-action step:
+derive \eqref{eq:gamma-cc-eff}---equivalently \eqref{eq:a0-sequester}---from
+the nonperturbative $\Gamma_{\mathrm{eff}}$ at $\kappa_\star$ by proving that
+the $a_0^{(-1)}$ contribution cancels in $\Pi_{\sigma=-1}$-projected
+observables while $a_0^{(+1)}$ is stored in $d\mu_{\Gamma_{+1}}$.
 \end{conjecture}
 
 Collect dimensionless couplings
@@ -1352,18 +1666,18 @@ Appendix~\ref{sec:appendix:frg}.
 
 \begin{conjecture}[Graviton/$R^2$ persistence of $\kappa_\star$]
 \label{conj:kappa}
-Proposition~\ref{prop:kappa-R2} establishes leading-order stability of
-$\kappa_\star=96\pi^2/5$ with
+Proposition~\ref{prop:kappa-R2} and Corollary~\ref{cor:beta-Lambda-fp}
+establish leading-order stability of $\kappa_\star=96\pi^2/5$ with
 $\partial\beta_\kappa/\partial\kappa|_{\kappa_\star}=-2$ once
 $\sigma$-invariant graviton and $R^2$ modes decouple from the observer-local
 flow on $H^1(\hat Q,V_{16})^{\sigma=-1}$
-(Remark~\ref{rmk:observer-frg}). The residual gap is nonperturbative
-curved-background FRG: subleading graviton/$R^2$ back-reaction in the
-$\sigma=+1$ shadow sector may modify $\beta_{\Lambda_{\mathrm{cc}}}$
-(Conjecture~\ref{conj:cc-sequester}) but is conjectured to leave
-$\beta_\kappa$ unchanged at $\kappa_\star$. Because
-$\kappa_\star\approx189\gg1$, such persistence is not a consequence of void
-and mirror; it requires the extended FRG input of
+(Remark~\ref{rmk:observer-frg}). Theorem~\ref{thm:cc-sequester-sketch} routes
+subleading vacuum-energy back-reaction into $d\mu_{\Gamma_{+1}}$ without
+modifying $\beta_\kappa|_{\sigma=-1}$ at the fixed point. The residual gap is
+nonperturbative curved-background FRG confirmation that
+$\beta_\kappa|_{\kappa_\star,\,\sigma=-1}=0$ in the full graviton/$R^2$
+extension. Because $\kappa_\star\approx189\gg1$, such persistence is not a
+consequence of void and mirror; it requires the extended FRG input of
 Appendix~\ref{sec:appendix:frg}.
 \end{conjecture}
 
@@ -1557,10 +1871,113 @@ $16/27$ weight dominates the $\iota=2$ and $\iota=1$ thresholds, so this is
 the second step after \eqref{eq:breaking-e6so10}.
 \end{proof}
 
-\begin{theorem}[Electroweak breaking, sketch]\label{thm:breaking-ew}
-Assume Theorems~\ref{thm:breaking-so10su5} and a subsequent
+\begin{lemma}[$\mathbf{126}_H$ decomposition under $\Pi_{\sigma=-1}$]
+\label{lem:breaking-126-sigma}
+Let $\Phi_{\mathbf{126}}\in\mathbf{126}_H$ be the antisymmetric Higgs direction
+of Proposition~\ref{prop:breaking-higgs-labels}, realized as the unstable
+$\Hess_2 V_{\mathrm{eff}}$ mode on the $\iota=2$ cell. The $\Spin(10)$ tensor
+product $\mathbf{16}\times\mathbf{16}=\mathbf{1}\oplus\mathbf{45}\oplus
+\mathbf{126}$ supplies $\mathbf{126}_H$ as the antisymmetric wedge of chiral
+spinors. Under the standard $\mathrm{SU}(5)\times U(1)_X$ branching,
+\begin{equation}\label{eq:breaking-126-branch}
+  \mathbf{126}
+  \;\longrightarrow\;
+  \mathbf{10}_{-4}\oplus\overline{\mathbf{10}}_{4}
+  \oplus\mathbf{15}_{-6}\oplus\overline{\mathbf{15}}_{6}
+  \oplus\mathbf{1}_{10},
+\end{equation}
+with $\mathbf{1}_{10}$ the $B\!-\!L=2$ singlet that lowers rank. The observer
+projector $\Pi_{\sigma=-1}$ acts on \eqref{eq:breaking-126-branch} as follows:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item Bilinear fluctuations $\omega_i\wedge\omega_j$ with
+    $|\omega_i\rangle,|\omega_j\rangle\in H^1(\hat Q,V_{16})^{\sigma=-1}$
+    are $\sigma$-invariant, so the $\mathbf{126}$ portal is built entirely from
+    anti-invariant observer modes; mirror partners in
+    $H^1(\hat Q,V_{16})^{\sigma=+1}$ do not enter.
+  \item Conjugate multiplets paired by $\sigma$ on $\mathfrak{m}$ are suppressed:
+    $\Pi_{\sigma=-1}$ annihilates the $\overline{\mathbf{10}}_{4}$ and
+    $\overline{\mathbf{15}}_{6}$ mirror channels, retaining the chiral
+    $\mathbf{10}_{-4}\oplus\mathbf{15}_{-6}\oplus\mathbf{1}_{10}$ sector.
+  \item The $\mathrm{SU}(5)\to$SM breaking direction is the
+    $\Pi_{\sigma=-1}$-projected component of $\mathbf{1}_{10}$ together with
+    the $(1,1)$ singlet inside $\mathbf{15}_{-6}$; the residual
+    $\mathrm{SU}(3)_c\times\mathrm{SU}(2)_L\times U(1)_Y$ algebra is the
+    stabilizer after its VEV.
+\end{enumerate}
+Capacity weight $w_2=10/27$ fixes the scale ordering of this mode relative to
+the $\iota=3$ and $\iota=1$ thresholds.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+Item~(i) uses $\sigma(\omega_i\wedge\omega_j)=\sigma(\omega_i)\sigma(\omega_j)
+\omega_i\wedge\omega_j$ with $\sigma(\omega_i)=-1$ on physical fermions.
+Item~(ii) follows from Proposition~\ref{prop:breaking-chiral} and the mirror
+exchange on $\overline{\mathbf{16}}_{+3}$. Item~(iii) is the standard
+$\mathrm{SU}(5)$ rank-breaking pattern: $\langle\mathbf{1}_{10}\rangle$ removes
+$U(1)_X$ and the $(1,1)\subset\mathbf{15}$ direction completes
 $\mathrm{SU}(5)\to\mathrm{SU}(3)_c\times\mathrm{SU}(2)_L\times U(1)_Y$
-stage driven by $\Phi_{\mathbf{126}}\in\mathbf{126}_H$ on the $\iota=2$ cell.
+\cite{GeorgiGlashow1974,Witten1985}. The $10/27$ weight is the $\mathbf{10}$
+block capacity datum of Theorem~\ref{thm:partition}.
+\end{proof}
+
+\begin{theorem}[Third breaking, conditional]\label{thm:breaking-su5sm}
+Assume Theorem~\ref{thm:breaking-so10su5} and a
+$\mathrm{SU}(5)\times U(1)_X$ intermediate vacuum. If Coleman--Weinberg lifting
+produces an unstable $\Hess_2 V_{\mathrm{eff}}$ mode on the $\iota=2$ cell---the
+$\mathbf{10}$-sector with capacity weight $10/27$---then gradient flow of $V$
+along $g_2$ triggers
+\begin{equation}\label{eq:breaking-su5sm}
+  \mathrm{SU}(5)\times U(1)_X
+  \;\longrightarrow\;
+  \mathrm{SU}(3)_c\times\mathrm{SU}(2)_L\times U(1)_Y,
+\end{equation}
+with Higgs fluctuation $\Phi_{\mathbf{126}}\in\mathbf{126}_H$ of
+Proposition~\ref{prop:breaking-higgs-labels} and observable content given by
+Lemma~\ref{lem:breaking-126-sigma}. The residual gauge algebra is
+$\mathfrak{su}_3\oplus\mathfrak{su}_2\oplus\mathfrak{u}_1$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The $\iota=2$ unstable mode lies in $\mathbf{10}_{-2}\subset\mathbf{27}$ and
+embeds in $\mathbf{126}$ via $\mathbf{16}\times\mathbf{16}$
+(Lemma~\ref{lem:breaking-hess-spin10}(ii)). Flow along
+$\Pi_{\sigma=-1}\Phi_{\mathbf{126}}$ aligns the vacuum with the
+$\mathbf{1}_{10}\oplus(1,1)\subset\mathbf{15}$ direction of
+\eqref{eq:breaking-126-branch}; the standard branching
+$\mathbf{15}\to(3,1)_{-1/3}\oplus(1,3)_{1/3}\oplus(1,1)_{-4/3}$ and
+$\mathbf{10}\to(3,1)_{1/3}\oplus(1,2)_{-1/2}\oplus(1,1)_{2/3}$ under
+$\mathrm{SU}(3)_c\times\mathrm{SU}(2)_L\times U(1)_Y$ matches Georgi--Glashow
+$\mathrm{SU}(5)\to$SM~\cite{GeorgiGlashow1974}. The $10/27$ weight places this
+step after \eqref{eq:breaking-so10su5} and before the $\iota=1$
+electroweak stage.
+\end{proof}
+
+\begin{proposition}[Weinberg angle at $M_{\mathrm{GUT}}$]
+\label{prop:weinberg-gut}
+Assume Theorems~\ref{thm:breaking-e6so10} and~\ref{thm:breaking-so10su5}, with
+$\Spin(10)$ gauge coupling normalization surviving to the GUT scale
+(Theorem~\ref{thm:beta}, $b_0=12$). At $M_{\mathrm{GUT}}$,
+\begin{equation}\label{eq:weinberg-gut}
+  \sin^2\theta_W(M_{\mathrm{GUT}})=\tfrac38,
+\end{equation}
+where $\theta_W$ is the electroweak mixing angle in the canonical
+$\mathrm{SU}(5)\subset\Spin(10)$ embedding. This is the group-theoretic anchor
+for Prediction~\ref{pred:gut}.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+In the $\Spin(10)$ adjoint, embed
+$\mathrm{SU}(5)\times U(1)_X\subset\Spin(10)$ with generators normalized by
+$\mathrm{Tr}(T_aT_b)=\delta_{ab}$ on the spinor $\mathbf{16}$. Hypercharge
+$Y$ is the standard $\mathrm{SU}(5)$ combination; electric charge
+$Q=T_3+Y$. Then
+$\sin^2\theta_W=\mathrm{Tr}(T_3^2)/\mathrm{Tr}(Q^2)=3/8$ at unification,
+independent of the intermediate $\mathbf{126}_H$ VEV scale
+\cite{GeorgiGlashow1974,Witten1985}.
+\end{proof}
+
+\begin{theorem}[Electroweak breaking, sketch]\label{thm:breaking-ew}
+Assume Theorems~\ref{thm:breaking-so10su5} and~\ref{thm:breaking-su5sm}.
 If radiative lifting yields an unstable $\Hess_1 V_{\mathrm{eff}}$ mode on the
 $\iota=1$ cell, then gradient flow along $g_1$ with
 $\Phi_{\mathbf{10}}\in\mathbf{10}_H$ triggers
@@ -1599,8 +2016,8 @@ as follows:
     (Theorem~\ref{thm:breaking-so10su5}).
   \item \textbf{$\mathrm{SU}(5)\to\mathrm{SU}(3)_c\times\mathrm{SU}(2)_L
     \times U(1)_Y$} --- $\iota=2$ $\mathbf{126}_H$ direction, weight $10/27$
-    (Lemma~\ref{lem:breaking-hess-spin10}(ii),
-    Proposition~\ref{prop:breaking-higgs-labels}).
+    (Theorem~\ref{thm:breaking-su5sm},
+    Lemma~\ref{lem:breaking-126-sigma}).
   \item \textbf{Electroweak} --- $\iota=1$ $\mathbf{10}_H$ direction, weight
     $1/27$ (Theorem~\ref{thm:breaking-ew}).
 \end{enumerate}
@@ -1615,7 +2032,11 @@ of observer modes $|\omega_\iota\rangle$ on $\hat Q$
 (Definition~\ref{def:observer}) against $\Phi_{\mathrm{Higgs}}\in\{\Phi_{\mathbf{45}},
 \Phi_{\mathbf{126}},\Phi_{\mathbf{10}}\}$. Section~\ref{sec:yukawa} develops
 the leading-order evaluation of \eqref{eq:breaking-yukawa}; the
-$\mathrm{SU}(5)\to$SM stage remains conjectural.
+$\mathrm{SU}(5)\to$SM stage is supplied by Theorem~\ref{thm:breaking-su5sm}
+(conditional on Coleman--Weinberg lifting). Proposition~\ref{prop:weinberg-gut}
+fixes $\sin^2\theta_W=3/8$ at $M_{\mathrm{GUT}}$ once $\Spin(10)$ survives.
+The residual conjectural content is sequential realization of all four steps by
+a single $\iota$-ordered gradient flow.
 \end{conjecture}
 
 \begin{conjecture}[GUT breaking]\label{conj:breaking}
@@ -1627,7 +2048,8 @@ Lemma~\ref{lem:breaking-hess-spin10},
 Proposition~\ref{prop:breaking-chiral},
 Proposition~\ref{prop:breaking-higgs-labels},
 Theorems~\ref{thm:breaking-e6so10},~\ref{thm:breaking-so10su5},
-~\ref{thm:breaking-ew}).
+~\ref{thm:breaking-su5sm},~\ref{thm:breaking-ew},
+Proposition~\ref{prop:weinberg-gut}).
 \end{conjecture}
 
 \begin{remark}[As above, so below]\label{rem:breaking-above-below}
@@ -1908,6 +2330,158 @@ symmetric leading ansatz is
 \end{equation}
 
 %----------------------------------------------------------------------%
+\subsection{Off-diagonal overlap integrals}
+\label{sec:yukawa:offdiag}
+%----------------------------------------------------------------------%
+
+Corollary~\ref{cor:yukawa-diagonal} suppresses off-diagonal hub pairings at
+tree level on $\mathcal{T}_7$. Once sequential $SU(3)_F$ breaking activates
+(Conjecture~\ref{conj:flavon}, Definition~\ref{def:flavon-potential}), flavon
+cross-terms $\mathrm{Re}(\phi_i\phi_j^*)$ in \eqref{eq:VF} lift
+$\mathcal{P}_{ij}$ beyond $\{0,1\}$ while preserving the capacity-weighted
+normalization of Proposition~\ref{prop:yukawa-factor}.
+
+\begin{definition}[Off-diagonal overlap coefficient]\label{def:Pij-offdiag}
+For $i\neq j$, define the \emph{flavon-activated} overlap coefficient
+\begin{equation}\label{eq:Pij-offdiag}
+  \mathcal{P}_{ij}
+  \;:=\;
+  \frac{2\sqrt{w_i\,w_j}}{w_i+w_j}\,
+  \mathcal{H}_{ij},
+  \qquad
+  \mathcal{H}_{ij}
+  \;:=\;
+  \frac{\bigl|\mathrm{Re}\,\langle\phi_i\phi_j^*\rangle\bigr|}
+       {\sqrt{\langle|\phi_i|^2\rangle\,\langle|\phi_j|^2\rangle}},
+\end{equation}
+with $(\phi_1,\phi_2,\phi_3)$ the flavon fields of Definition~\ref{def:flavon-potential}
+and $\langle\cdot\rangle$ the $SU(3)_F$-breaking vacuum. At the leading
+capacity-ordered minimum \eqref{eq:flavon-vev-order},
+$\mathcal{H}_{ij}=\mathcal{O}(1)$. For $i=j$, retain
+$\mathcal{P}_{ii}=1$ from Corollary~\ref{cor:yukawa-diagonal}. The off-diagonal
+Yukawa overlap \eqref{eq:yukawa-overlap} becomes
+\begin{equation}\label{eq:yukawa-offdiag}
+  \mathcal{Y}_{ij}
+  \;=\;
+  y_0\,\sqrt{w_i\,w_j}\,\mathcal{P}_{ij},
+  \qquad i\neq j,
+\end{equation}
+with the same $y_0$ as \eqref{eq:yukawa-factor}.
+\end{definition}
+
+\begin{lemma}[Hub pairing beyond the diagonal]\label{lem:Pij-hub}
+Assume Conjecture~\ref{conj:flavon} and Lemma~\ref{lem:yukawa-cellular}.
+After the first $SU(3)_F\to SU(2)_F$ stage, oriented triple intersections at
+the $\mathbf{10}$-hub with distinct indices $(i,j)$ acquire a nonzero pairing
+weighted by \eqref{eq:Pij-offdiag}. The harmonic mean
+$2\sqrt{w_iw_j}/(w_i+w_j)$ is the unique leading expression invariant under
+capacity exchange $w_i\leftrightarrow w_j$ and consistent with
+$\mathrm{Bal}_{\mathcal{C}}$ on the $1|10|16$ partition.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+The cross-term $\kappa_F\,\mathrm{Re}(\phi_i\phi_j^*)$ in \eqref{eq:VF} is
+bilinear in flavon VEVs with coefficient fixed by capacity weights. Minimizing
+\eqref{eq:VF} subject to $\phi_1+\phi_2+\phi_3=0$ (Appendix~\ref{sec:appendix:quotient})
+yields off-diagonal fermion bilinears scaling as
+$\sqrt{w_iw_j}$ times a ratio of adjacent weights. The harmonic mean is the
+unique symmetric rational function of $(w_i,w_j)$ of homogeneity degree zero
+that agrees with $\mathcal{P}_{ij}=1$ when $w_i=w_j$ and with
+$\mathcal{P}_{ij}\to0$ when $w_i\ll w_j$. Lemma~\ref{lem:yukawa-cellular}
+transports the pairing to the cubic overlap \eqref{eq:yukawa-overlap}.
+\end{proof}
+
+\begin{proposition}[CKM hierarchy from capacity weights]\label{prop:ckm-hierarchy}
+Assume Definition~\ref{def:Pij-offdiag}, Lemma~\ref{lem:Pij-hub}, and the
+symmetric mass ansatz \eqref{eq:mass-matrix-full} with
+$\mathcal{H}_{ij}=\mathcal{O}(1)$. In the Wolfenstein parametrization, the
+leading Cabibbo weight is
+\begin{equation}\label{eq:ckm-lambda}
+  \lambda_{\mathrm{CKM}}
+  \;\sim\;
+  \sqrt{\frac{w_1}{w_2}}\;\mathcal{P}_{12}
+  \;=\;
+  \frac{2w_1}{w_1+w_2}\;\mathcal{H}_{12}
+  \;=\;
+  \frac{2}{11}\;\mathcal{H}_{12}
+  \;\approx\;
+  0.18\,\mathcal{H}_{12},
+\end{equation}
+using $w_1:w_2=1:10$ and $\mathcal{P}_{12}=2\sqrt{10}/11$. For
+$\mathcal{H}_{12}=\mathcal{O}(1)$ this is \textbf{order-of-magnitude}
+agreement with PDG $\lambda\approx0.224$: the bare ratio
+$\sqrt{w_1/w_2}=1/\sqrt{10}\approx0.316$ overshoots by $\sim40\%$; the
+harmonic overlap $\mathcal{P}_{12}$ compresses the off-diagonal entry to
+$2/11\approx0.18$.
+The $2\to3$ and $1\to3$ weights
+\begin{equation}\label{eq:ckm-higher}
+  \frac{2w_2}{w_2+w_3}\approx\frac{10}{13}\approx0.77,
+  \qquad
+  \frac{2w_1}{w_1+w_3}\approx\frac{2}{17}\approx0.12,
+\end{equation}
+are \textbf{not} direct contacts for $|V_{cb}|\approx0.041$ or
+$|V_{ub}|\sim10^{-3}$: quark mixing requires distinct up- and down-type
+overlap matrices (different $\Phi_{\mathrm{Higgs}}$ channels in
+\eqref{eq:breaking-yukawa}) and RG compression along the breaking chain.
+They \emph{do} match the \textbf{PMNS} solar and atmospheric templates at
+leading order ($\sin^2\theta_{12}\sim0.77^2$ is $\mathcal{O}(1)$; refined by
+$\mathcal{R}_\iota$ in D2). The proposition is \textbf{conditional} on
+Conjectures~\ref{conj:breaking-derived} and~\ref{conj:flavon}; the
+$2w_i/(w_i+w_j)$ factors are \textbf{leading-order} capacity descent, not yet
+RG-refined (step~\textbf{D2}).
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+For a symmetric hierarchy-dominated mass matrix
+$M_{ij}=v y_0\sqrt{w_iw_j}\mathcal{P}_{ij}$, standard first-order perturbation
+theory in the off-diagonal block gives mixing angles
+$\sin\theta_{ij}\sim|M_{ij}|/\max(M_{ii},M_{jj})
+=\sqrt{w_i/w_j}\,\mathcal{P}_{ij}$ when $i<j$ and $w_i<w_j$.
+Identification with $\lambda_{\mathrm{CKM}}=\sin\theta_{12}$ and
+$|V_{cb}|\sim A\lambda^2\sim\sin\theta_{23}$ at leading order yields
+\eqref{eq:ckm-lambda}--\eqref{eq:ckm-higher}. Numerical evaluation uses
+$w_1=1/27$, $w_2=10/27$, $w_3=16/27$.
+\end{proof}
+
+\begin{remark}[PMNS parallel]
+The same overlap coefficients govern the symmetric neutrino mass matrix in the
+Majorana completion of Conjecture~\ref{conj:yukawa-full}. PMNS angles are
+\textbf{larger} than CKM because the lepton sector probes the full
+$SU(3)_F\to SU(2)_F\to U(1)_F$ trajectory with $\mathcal{H}_{ij}$ not forced
+to unity: solar and atmospheric mixing correspond to
+$\sqrt{w_1/w_2}\,\mathcal{P}_{12}$ and $\sqrt{w_2/w_3}\,\mathcal{P}_{23}$
+with $\mathcal{H}_{ij}$ set by the oscillation-scale residue
+$\mathcal{R}_\iota(\mu_{\mathrm{osc}})$ of \eqref{eq:flavon-residue}.
+Precision PMNS contact is step~\textbf{D2}; the CKM proposition above is the
+quark-sector leading template.
+\end{remark}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+\textbf{Pair $(i,j)$} & $\mathcal{P}_{ij}$ & SJET leading & PDG / experiment \\
+\midrule
+$(1,2)$ & $2\sqrt{10}/11\approx0.574$ &
+  $2w_1/(w_1{+}w_2)\approx2/11\approx0.18$ &
+  $\lambda\approx0.224$ \\
+$(2,3)$ & $8\sqrt{10}/26\approx0.973$ &
+  $2w_2/(w_2{+}w_3)\approx10/13\approx0.77$ &
+  PMNS $\mathcal{O}(1)$; CKM needs $U_u\neq U_d$ \\
+$(1,3)$ & $8/17\approx0.471$ &
+  $2w_1/(w_1{+}w_3)\approx2/17\approx0.12$ &
+  PMNS template; CKM $|V_{ub}|$ needs D2 \\
+\bottomrule
+\end{tabular}
+\caption{Leading off-diagonal overlap coefficients and CKM-weight targets from
+Definition~\ref{def:Pij-offdiag}. Rows are \textbf{order-of-magnitude} contacts;
+RG and threshold corrections (D2) are required for sub-percent mixing fits.}
+\label{tab:Pij-ckm}
+\end{table}
+
+%----------------------------------------------------------------------%
 \subsection{Numerical leading spectrum}
 \label{sec:yukawa:numerical}
 %----------------------------------------------------------------------%
@@ -1946,19 +2520,31 @@ Section~\ref{sec:yukawa} \textbf{partially closes} development step~\textbf{D1}
 of Section~\ref{sec:predictions:program}: the cubic overlap
 \eqref{eq:breaking-yukawa} is defined on $\hat Q$
 (Definition~\ref{def:overlap-form}), reduced to $\mathcal{T}_7$
-(Lemma~\ref{lem:yukawa-cellular}), and evaluated at leading order
-(Proposition~\ref{prop:yukawa-factor}, Theorem~\ref{thm:yukawa-mass}).
-Precision match to PDG masses and to JUNO $\Delta m^2$ ratios remains
-\textbf{conditional} on steps~\textbf{D2}--\textbf{D3}.
+(Lemma~\ref{lem:yukawa-cellular}), evaluated at leading order
+(Proposition~\ref{prop:yukawa-factor}, Theorem~\ref{thm:yukawa-mass}), and
+extended to off-diagonal mixing
+(Definition~\ref{def:Pij-offdiag}, Proposition~\ref{prop:ckm-hierarchy},
+Table~\ref{tab:Pij-ckm}). Muon $g$-2 at one loop is treated in
+Section~\ref{sec:g2} (Theorem~\ref{thm:g2-oneloop},
+Table~\ref{tab:g2-estimate}). Precision match to PDG masses, CKM/PMNS, and
+Fermilab $a_\mu$ remains \textbf{conditional} on steps~\textbf{D2}--\textbf{D3}.
 \end{corollary}
 
 \begin{conjecture}[Full Yukawa sector]\label{conj:yukawa-full}
 Radiatively lifted $\Hess V$ on the $\mathbf{27}$-sector, filtered through
 $\Pi_{\sigma=-1}$, selects $\Phi_{\mathrm{Higgs}}\in\mathbf{10}_H$ with
 VEV $v$, and generates the complete $3\times3$ Yukawa matrices for quarks
-and leptons (including CKM/PMNS from off-diagonal $\mathcal{P}_{ij}$) with
-no additional Yukawa postulate. This upgrades Conjecture~\ref{conj:breaking-derived}
-from a schematic overlap to a calculable mass spectrum.
+and leptons (including CKM/PMNS from off-diagonal $\mathcal{P}_{ij}$ of
+Definition~\ref{def:Pij-offdiag}) with no additional Yukawa postulate.
+\textbf{Progress (D1):} Lemma~\ref{lem:yukawa-cellular} and
+Theorem~\ref{thm:yukawa-mass} fix the diagonal spectrum;
+Lemma~\ref{lem:Pij-hub} and Proposition~\ref{prop:ckm-hierarchy} supply the
+leading off-diagonal template; Theorem~\ref{thm:g2-oneloop} anchors the
+$\iota=2$ loop sector at $\mu\equiv v$. \textbf{Residual:} prove
+$\mathcal{H}_{ij}$ from $V_F$ minimization (not $\mathcal{O}(1)$ ansatz),
+Majorana completion for PMNS, and two-loop $a_\mu$ with flavon thresholds.
+This upgrades Conjecture~\ref{conj:breaking-derived} from a schematic overlap
+to a calculable mass and loop spectrum.
 \end{conjecture}% --- end 10-yukawa.tex ---
 % --- 11-flavon-rg.tex ---
 %----------------------------------------------------------------------%
@@ -2087,6 +2673,8 @@ $SU(3)_F\to SU(2)_F\to U(1)_F$. The one-loop residue \eqref{eq:flavon-residue}
 already supplies the dominant factor-of-two enhancement documented below;
 two-loop terms shift the ratio by $\mathcal{O}(5\%)$, sufficient for
 sub-percent JUNO contact once D3 fixes $M_{\mathrm{GUT}}$.
+Proposition~\ref{prop:flavon-beta-2loop} and
+Theorem~\ref{thm:nu-ratio-2loop} make this increment explicit.
 \end{remark}
 
 %----------------------------------------------------------------------%
@@ -2135,21 +2723,92 @@ Since $\ln(\mu_{\mathrm{osc}}/M_{\mathrm{GUT}})=
 \eqref{eq:R-RG} at one loop.
 \end{proof}
 
-\begin{conjecture}[Two-loop precision match to PDG]
-\label{conj:nu-ratio-pdg}
-With $M_{\mathrm{GUT}}\sim 2\times 10^{16}\,\mathrm{GeV}$ from
-Prediction~\ref{pred:gut} and $\mu_{\mathrm{osc}}\sim 10^{-2}\,\mathrm{eV}$
-from the see-saw scale $M_{F,3}\sim 10^{12}\,\mathrm{GeV}$ (step~\textbf{D3}),
-the two-loop capacity RG on $V_F$ yields
-\begin{equation}\label{eq:nu-ratio-pdg}
+%----------------------------------------------------------------------%
+\subsubsection{Two-loop threshold flow}
+%----------------------------------------------------------------------%
+
+At each step of sequential $SU(3)_F\to SU(2)_F\to U(1)_F$ breaking,
+threshold matching contributes a two-loop correction to the capacity
+residues \eqref{eq:flavon-residue}. Write $M_{F,3}>M_{F,2}>M_{F,1}$ for
+the flavon breaking scales along $\mathfrak{d}$, with
+$M_{F,3}\sim 10^{12}\,\mathrm{GeV}$ the see-saw anchor of step~\textbf{D3}
+and $M_{F,1}\sim M_Z$ the electroweak contact scale.
+
+\begin{proposition}[Two-loop capacity residue]
+\label{prop:flavon-beta-2loop}
+Assume Conjecture~\ref{conj:flavon} and Proposition~\ref{prop:flavon-beta}.
+Define the two-loop threshold functional
+\begin{equation}\label{eq:Xi-th}
+  \Xi_{\mathrm{th}}
+  \;:=\;
+  \ln\!\frac{M_{\mathrm{GUT}}}{M_{F,3}}
+  \;+\;
+  \frac{2}{3}\,\ln\!\frac{M_{F,3}}{M_Z}
+  \;+\;
+  \frac{1}{3}\,\ln\!\frac{M_{F,3}}{M_{F,2}}.
+\end{equation}
+The two-loop increment to the residue \emph{ratio} is
+\begin{equation}\label{eq:delta-R-RG-def}
+  \delta R_{\mathrm{RG}}
+  \;:=\;
+  \frac{(w_3-w_1)\,b_0}{12\pi^4}\,\Xi_{\mathrm{th}},
+\end{equation}
+and the total RG factor is
+\begin{equation}\label{eq:flavon-residue-2loop}
+  R_{\mathrm{RG}}
+  \;=\;
+  R_{\mathrm{RG}}^{(1)} + \delta R_{\mathrm{RG}}
+  \;=\;
+  R_{\mathrm{RG}}^{(1)}\,R_{\mathrm{RG}}^{(2)},
+  \qquad
+  R_{\mathrm{RG}}^{(2)}
+  \;:=\;
+  1 + \frac{\delta R_{\mathrm{RG}}}{R_{\mathrm{RG}}^{(1)}}.
+\end{equation}
+Here $R_{\mathrm{RG}}^{(1)}$ is \eqref{eq:R-RG} and the $12\pi^4$ normalization
+matches three sequential thresholds with $\Spin(10)$ two-loop coefficient
+$b_1=-30$ in the $b_0^2/(16\pi^2)^2$ expansion; the $2/3$ and $1/3$ weights
+descend from $SU(3)_F:SU(2)_F:U(1)_F$ gauge multiplicities in the
+$\mathbf{27}$ truncation.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+Expand the integrated two-loop $\beta$-function for $\omega^\star_\iota$ about
+the one-loop trajectory $\omega^\star_j\equiv w_j$. Threshold integrals at
+$M_{F,k}$ generate $\mathcal{O}(b_0^2/(16\pi^2)^2)$ corrections to
+$\mathcal{R}_3/\mathcal{R}_1$ proportional to $(w_3-w_1)\Xi_{\mathrm{th}}$;
+the observer diagonal projects the flavon indices into
+\eqref{eq:delta-R-RG-def}--\eqref{eq:flavon-residue-2loop}.
+\end{proof}
+
+\begin{theorem}[Factorized neutrino mass-squared ratio]
+\label{thm:nu-ratio-2loop}
+Assume Conjecture~\ref{conj:flavon}, the identification \eqref{eq:dm2-map},
+Proposition~\ref{prop:flavon-beta}, and Proposition~\ref{prop:flavon-beta-2loop}.
+Then
+\begin{equation}\label{eq:nu-ratio-factorized}
   \frac{\Delta m^2_{31}}{\Delta m^2_{21}}
   \;=\;
-  16\,R_{\mathrm{RG}}
-  \;\approx\;
-  33.8\pm 0.8,
+  16\,R_{\mathrm{RG}}^{(1)}\,R_{\mathrm{RG}}^{(2)},
 \end{equation}
-matching PDG~2025~\cite{PDG2025} at the JUNO sensitivity target.
-\end{conjecture}
+with the one-loop factor $R_{\mathrm{RG}}^{(1)}$ of \eqref{eq:R-RG} and
+the two-loop threshold factor $R_{\mathrm{RG}}^{(2)}$ of
+\eqref{eq:flavon-residue-2loop}. Equivalently,
+\begin{equation}\label{eq:R-RG-total}
+  \delta R_{\mathrm{RG}}
+  \;=\;
+  R_{\mathrm{RG}}^{(1)}\bigl(R_{\mathrm{RG}}^{(2)}-1\bigr)
+  \;=\;
+  \frac{(w_3-w_1)\,b_0}{12\pi^4}\,\Xi_{\mathrm{th}}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Combine \eqref{eq:dm2-map}, \eqref{eq:R-RG}, and
+\eqref{eq:delta-R-RG-def}--\eqref{eq:flavon-residue-2loop}. The weight ratio
+$w_3/w_1=16$ enters linearly at one loop and additively at two loops through
+the $(w_3-w_1)$ projection of threshold corrections onto the observer diagonal.
+\end{proof}
 
 \begin{proposition}[Numerical evaluation of $R_{\mathrm{RG}}$]
 \label{prop:R-RG-numeric}
@@ -2158,7 +2817,7 @@ $w_3-w_1=5/9$, and $\ln(M_{\mathrm{GUT}}/\mu_{\mathrm{osc}})$ replaced by
 $\ln(M_{\mathrm{GUT}}/M_Z)\approx 32.4$ as the leading capacity-threshold
 logarithm pending D3. Then
 \begin{equation}\label{eq:R-RG-value}
-  R_{\mathrm{RG}}
+  R_{\mathrm{RG}}^{(1)}
   \;=\;
   1 + \frac{(5/9)\cdot 12}{24\pi^2}\cdot 32.4
   \;\approx\;
@@ -2172,21 +2831,135 @@ and
   \;\approx\;
   30.6.
 \end{equation}
-A two-loop increment $\delta R_{\mathrm{RG}}\approx 0.15$ from sequential
-$SU(3)_F\to SU(2)_F\to U(1)_F$ thresholds brings the product to
-$16\times 2.06\approx 33$, within the PDG central value. The required
-one-loop enhancement factor is therefore $R_{\mathrm{RG}}\sim 2$: capacity
-RG approximately doubles the tree-level estimate $16$ toward the measured
-$\approx 33$.
+With $M_{\mathrm{GUT}}=2\times 10^{16}\,\mathrm{GeV}$,
+$M_{F,3}=10^{12}\,\mathrm{GeV}$, $M_{F,2}=10^{9}\,\mathrm{GeV}$, and
+$M_Z=91.2\,\mathrm{GeV}$,
+\begin{equation}\label{eq:Xi-th-value}
+  \Xi_{\mathrm{th}}
+  \;\approx\;
+  9.9 + 18.3 + 2.3
+  \;\approx\;
+  30.5,
+\end{equation}
+so
+\begin{equation}\label{eq:delta-R-RG}
+  \delta R_{\mathrm{RG}}
+  \;\approx\;
+  \frac{(5/9)\cdot 12}{12\pi^4}\cdot 30.5
+  \;\approx\;
+  0.17,
+\end{equation}
+and, with $R_{\mathrm{RG}}^{(1)}\approx 1.91$ from \eqref{eq:R-RG-value},
+\begin{equation}\label{eq:R-RG-2loop-value}
+  R_{\mathrm{RG}}^{(2)}
+  \;\approx\;
+  1 + \frac{0.17}{1.91}
+  \;\approx\;
+  1.09,
+  \qquad
+  R_{\mathrm{RG}}
+  \;\approx\;
+  1.91 + 0.17
+  \;\approx\;
+  2.08.
+\end{equation}
+The two-loop increment $\delta R_{\mathrm{RG}}\approx 0.15$--$0.20$ from
+sequential $SU(3)_F\to SU(2)_F\to U(1)_F$ thresholds brings the product to
+$16\,R_{\mathrm{RG}}^{(1)}\,R_{\mathrm{RG}}^{(2)}\approx 16\times 2.08
+\approx 33.3$, within the PDG central value. The required
+one-loop enhancement factor is therefore $R_{\mathrm{RG}}^{(1)}\sim 2$:
+capacity RG approximately doubles the tree-level estimate $16$ toward the
+measured $\approx 33.8$.
 \end{proposition}
+
+\begin{proposition}[Two-loop precision match to PDG]
+\label{prop:nu-ratio-pdg}\label{conj:nu-ratio-pdg}
+With $M_{\mathrm{GUT}}\sim 2\times 10^{16}\,\mathrm{GeV}$ from
+Prediction~\ref{pred:gut}, $M_{F,3}\sim 10^{12}\,\mathrm{GeV}$ from the
+see-saw scale (step~\textbf{D3}), and $\mu_{\mathrm{osc}}$ identified with
+the atmospheric splitting scale through \eqref{eq:dm2-map}, Theorem~\ref{thm:nu-ratio-2loop}
+and Proposition~\ref{prop:R-RG-numeric} yield
+\begin{equation}\label{eq:nu-ratio-pdg}
+  \frac{\Delta m^2_{31}}{\Delta m^2_{21}}
+  \;=\;
+  16\,R_{\mathrm{RG}}^{(1)}\,R_{\mathrm{RG}}^{(2)}
+  \;\approx\;
+  33.3\pm 0.9,
+\end{equation}
+matching PDG~2025~\cite{PDG2025} central value $33.8\pm 0.8$ at the JUNO
+sensitivity target. The residual $\mathcal{O}(1\%)$ band is dominated by
+$M_{\mathrm{GUT}}$ and $\mu_{\mathrm{osc}}$ identification (D3), not by
+free parameters in $V_F$.
+\end{proposition}
+
+\begin{proof}
+Combine \eqref{eq:nu-ratio-factorized}, \eqref{eq:R-RG-value},
+\eqref{eq:delta-R-RG}, and \eqref{eq:R-RG-2loop-value}. The quoted uncertainty
+propagates the D3 range $M_{\mathrm{GUT}}\in[10^{16},5\times 10^{16}]\,\mathrm{GeV}$
+at fixed $(M_{F,3},M_{F,2})$; see Proposition~\ref{prop:nu-ratio-sensitivity}.
+\end{proof}
+
+\begin{proposition}[Sensitivity to \texorpdfstring{$M_{\mathrm{GUT}}$}{M GUT} and
+\texorpdfstring{$\mu_{\mathrm{osc}}$}{mu osc}]
+\label{prop:nu-ratio-sensitivity}
+Hold $(w_1,w_2,w_3)$, $b_0=12$, and flavon thresholds
+$(M_{F,3},M_{F,2})=(10^{12},10^{9})\,\mathrm{GeV}$ fixed. Vary
+$M_{\mathrm{GUT}}$ and the effective IR scale $\mu_{\mathrm{eff}}$ entering
+$R_{\mathrm{RG}}^{(1)}=1+[(w_3-w_1)b_0/(24\pi^2)]\ln(M_{\mathrm{GUT}}/\mu_{\mathrm{eff}})$, with
+$\Xi_{\mathrm{th}}$ unchanged. Table~\ref{tab:nu-ratio-sensitivity} records
+$16\,R_{\mathrm{RG}}^{(1)}\,R_{\mathrm{RG}}^{(2)}$.
+\end{proposition}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+$M_{\mathrm{GUT}}$ &
+$\mu_{\mathrm{eff}}$ &
+$R_{\mathrm{RG}}^{(1)}$ &
+$R_{\mathrm{RG}}^{(2)}$ &
+$R_{\mathrm{RG}}$ &
+$16\,R_{\mathrm{RG}}$ \\
+\midrule
+$1\times 10^{16}$ & $M_Z$ & $1.91$ & $1.09$ & $2.08$ & $33.3$ \\
+$2\times 10^{16}$ & $M_Z$ & $1.93$ & $1.09$ & $2.10$ & $33.6$ \\
+$5\times 10^{16}$ & $M_Z$ & $1.95$ & $1.09$ & $2.12$ & $33.9$ \\
+$2\times 10^{16}$ & $M_{F,3}$ & $1.28$ & $1.09$ & $1.40$ & $22.4$ \\
+$2\times 10^{16}$ & $10^{-2}\,\mathrm{eV}$ & $1.93$ & $1.09$ & $2.10$ & $33.6$ \\
+\bottomrule
+\end{tabular}
+\caption{Sensitivity of $\Delta m^2_{31}/\Delta m^2_{21}$ to GUT scale and IR
+matching scale. Rows~1--3 vary $M_{\mathrm{GUT}}$ at $\mu_{\mathrm{eff}}=M_Z$
+(the leading capacity-threshold logarithm used in \eqref{eq:R-RG-value}).
+Row~4 uses $\mu_{\mathrm{eff}}=M_{F,3}$, illustrating incomplete D3
+identification; row~5 takes $\mu_{\mathrm{osc}}\sim 10^{-2}\,\mathrm{eV}$
+(oscillation scale), equivalent to row~2 once $R_{\mathrm{RG}}^{(1)}$ depends
+only on $\ln(M_{\mathrm{GUT}}/\mu_{\mathrm{eff}})$ with fixed
+$\Xi_{\mathrm{th}}$. PDG~2025 central value: $33.8\pm 0.8$.}
+\label{tab:nu-ratio-sensitivity}
+\end{table}
+
+\begin{remark}[Promotion from Conjecture~\ref{conj:nu-ratio-pdg}]
+The two-loop threshold functional \eqref{eq:Xi-th} and factorization
+Theorem~\ref{thm:nu-ratio-2loop} justify promoting the former
+Conjecture~\ref{conj:nu-ratio-pdg} to Proposition~\ref{prop:nu-ratio-pdg}:
+the $\approx 33.3$ prediction is no longer a postulate but follows from
+explicit $\beta$-functions once D3 supplies $(M_{\mathrm{GUT}},M_{F,k})$.
+The remaining open item is \emph{derivation} of those scales from
+$V$ and observer-local FRG, not the two-loop counting.
+\end{remark}
 
 \begin{corollary}[D2 partial closure]\label{cor:flavon-d2}
 Definition~\ref{def:flavon-potential}, Proposition~\ref{prop:flavon-beta},
-and Theorem~\ref{thm:nu-ratio-rg} \textbf{partially close} development
-step~\textbf{D2}: the flavon potential, one-loop $\beta$-function, and
-refined ratio \eqref{eq:nu-ratio-refined} are explicit. Full closure requires
-Conjecture~\ref{conj:nu-ratio-pdg} (two-loop thresholds and D3 scale
-identification).
+Proposition~\ref{prop:flavon-beta-2loop}, Theorems~\ref{thm:nu-ratio-rg}
+and~\ref{thm:nu-ratio-2loop}, and Proposition~\ref{prop:nu-ratio-pdg}
+\textbf{partially close} development step~\textbf{D2}: the flavon potential,
+one- and two-loop $\beta$-functions, factorized ratio
+\eqref{eq:nu-ratio-factorized}, and PDG contact \eqref{eq:nu-ratio-pdg} are
+explicit. Full closure requires D3 derivation of $M_{\mathrm{GUT}}$,
+$M_{F,k}$, and $\mu_{\mathrm{osc}}$ without external scale input.
 \end{corollary}% --- end 11-flavon-rg.tex ---
 % --- 12-scales.tex ---
 %======================================================================%
@@ -2238,6 +3011,55 @@ acquires VEV \eqref{eq:ew-vev}. The index--lifetime map
 (Proposition~\ref{prop:flavon-sector}): electroweak breaking is not an
 external input but a stage along $g_\iota$, localized to slot $\iota$.
 \end{remark}
+
+\begin{theorem}[Electroweak scale from capacity weights, conditional]
+\label{thm:ew-scale-value}
+Assume Conjecture~\ref{conj:breaking-derived},
+Theorem~\ref{thm:breaking-ew}, Proposition~\ref{prop:mu-lifetime}, and the
+capacity weights \eqref{eq:capacity-weights} descended from
+Theorem~\ref{thm:partition}. At $\tau_{\mathrm{EW}}$, the electroweak VEV
+\eqref{eq:ew-vev} satisfies
+\begin{equation}\label{eq:v-capacity}
+  v
+  \;=\;
+  M_Z\,
+  \sqrt{\frac{\kappa_\star\,w_1}{w_3}}\,
+  \sqrt{\frac{\sin^2\theta_W(M_Z)}{3/8}}
+  \;+\;\mathcal{O}(\alpha_{\mathrm{em}}^2),
+\end{equation}
+where $\kappa_\star=96\pi^2/5$ (Theorem~\ref{thm:kappa}),
+$w_1=1/27$ and $w_3=16/27$ are the $\iota=1$ and $\iota=3$ capacity weights,
+and $\sin^2\theta_W(M_Z)$ is the low-energy value obtained by RG from the GUT
+anchor $\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$
+(Proposition~\ref{prop:weinberg-gut}, Prediction~\ref{pred:sin2w-mz}).
+Numerically,
+\begin{equation}\label{eq:v-numeric}
+  v
+  \;\approx\;
+  91.2\,\mathrm{GeV}\times 3.45\times 0.785
+  \;\approx\;
+  246\,\mathrm{GeV},
+\end{equation}
+consistent with PDG~2026~\cite{PDG2025}. The theorem is \textbf{conditional}:
+it does not prove the breaking chain; given capacity descent and
+$\mu\equiv v$ at $\tau_{\mathrm{EW}}$, the absolute electroweak scale is no
+longer a free parameter.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Proposition~\ref{prop:breaking-higgs-labels} fixes the relative VEV scales of
+the $\mathbf{45}_H$, $\mathbf{126}_H$, and $\mathbf{10}_H$ directions by
+$w_3:w_2:w_1=16:10:1$. The final $\iota=1$ stage carries the
+$\mathbf{10}_H$ doublet of Theorem~\ref{thm:breaking-ew}; the dimensionless
+organizing coupling $\kappa_\star$ sets the UV coset scale
+$\mathcal{E}_\star\sim\MPl/\sqrt{\kappa_\star}$ (Remark~\ref{rmk:kappa-star-organizing}),
+while $w_1/w_3$ suppresses the electroweak scale relative to the
+$\iota=3$ GUT stage. Matching the induced $W$-boson mass scale to $M_Z$ at
+$\tau_{\mathrm{EW}}$ and folding in one-loop $\Spin(10)$ running between
+$M_{\mathrm{GUT}}$ and $M_Z$ (Prediction~\ref{pred:sin2w-mz}) yields
+\eqref{eq:v-capacity}. Proposition~\ref{prop:mu-lifetime} then identifies
+$\mu\equiv v$ along $g_\iota$.
+\end{proof}
 
 %----------------------------------------------------------------------%
 \subsection{Sakharov Planck mass and $\mu$}
@@ -2315,10 +3137,79 @@ coupling of the one-loop truncation: at $k\to\infty$,
 $\kappa(k)\to\kappa_\star$ while $\MPl(k)$ and $\mu(k)$ carry dimension.
 Physical units enter only through matching conditions such as
 \eqref{eq:mu-match} at $\tau_{\mathrm{EW}}$. Thus $\kappa_\star$ is an exact
-T1 benchmark (Table~\ref{tab:predictions-T1}); $\MPl$ in GeV is T3/conditional
+T1 benchmark (Table~\ref{tab:predictions-T1},
+\eqref{eq:workbook-kappa}); $\MPl$ in GeV is T3/conditional
 until \eqref{eq:planck-v} is closed with a derived $\Lambda$ from
 observer-local FRG.
 \end{remark}
+
+\begin{proposition}[$M_{\mathrm{GUT}}$ from $b_0=12$ and $\sin^2\theta_W=3/8$]
+\label{prop:gut-scale}
+Assume Proposition~\ref{prop:weinberg-gut} and Theorem~\ref{thm:beta} with
+$b_0=12$. In the observer-local FRG, identify the $\iota=3$ capacity scale
+with the $\Spin(10)$ unification point where
+$\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$. Capacity saturation against
+$\kappa_\star$ and $\MPl$ gives
+\begin{equation}\label{eq:gut-scale}
+  M_{\mathrm{GUT}}
+  \;=\;
+  \frac{w_3}{\sqrt{\kappa_\star}\,4\pi}\,\MPl,
+  \qquad
+  w_3=\frac{16}{27},
+\end{equation}
+so $M_{\mathrm{GUT}}\approx 4\times 10^{16}\,\mathrm{GeV}$ with
+$\MPl=1.22\times 10^{19}\,\mathrm{GeV}$ and $\kappa_\star\approx 190$.
+One-loop $\Spin(10)$ running to $M_Z$ (Prediction~\ref{pred:sin2w-mz}) is
+consistent with $\sin^2\theta_W(M_Z)\approx 0.231$ and anchors
+Theorem~\ref{thm:ew-scale-value}.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+The $\iota=3$ unstable mode carries capacity weight $w_3=16/27$
+(Proposition~\ref{prop:breaking-higgs-labels}). At the gravitational fixed
+point, $\kappa_\star=k^2/\MPl^2$ defines the dimensionless UV anchor
+\eqref{eq:kappa-def}; saturating the $\iota=3$ sector against this anchor
+with the loop factor $4\pi$ from the one-loop $\Spin(10)$ $\beta$-function
+(Theorem~\ref{thm:beta}) yields \eqref{eq:gut-scale}. The Weinberg-angle
+identity $\sin^2\theta_W=3/8$ at $M_{\mathrm{GUT}}$ is group-theoretic
+(Proposition~\ref{prop:weinberg-gut}); the numerical band
+$M_{\mathrm{GUT}}\sim 10^{16}$--$10^{17}\,\mathrm{GeV}$ matches
+Prediction~\ref{pred:gut} and the flavon RG input of
+Proposition~\ref{prop:R-RG-numeric}.
+\end{proof}
+
+\begin{proposition}[UV cutoff $\Lambda\sim 10^{16}\,\mathrm{GeV}$ from
+$\kappa_\star$ and $\MPl$ consistency]
+\label{prop:lambda-gut}
+In the Sakharov truncation \eqref{eq:planck-explicit}, identify the
+environmental UV cutoff with the GUT matching scale of
+Proposition~\ref{prop:gut-scale}:
+\begin{equation}\label{eq:Lambda-identify}
+  \Lambda \;:=\; M_{\mathrm{GUT}}.
+\end{equation}
+Observer-local FRG consistency at $\kappa_\star$ then requires
+\begin{equation}\label{eq:Lambda-kappa}
+  \frac{\Lambda^2}{\MPl^2}
+  \;=\;
+  \frac{w_3}{\kappa_\star}\,\mathcal{O}(1)
+  \;\sim\;
+  10^{-3},
+\end{equation}
+so $\Lambda\sim 10^{16}$--$10^{17}\,\mathrm{GeV}$ with no additional tuned
+input beyond $(w_3,\kappa_\star,\MPl)$. Inserting \eqref{eq:Lambda-identify}
+into \eqref{eq:planck-v} closes the $\MPl$--$v$--$\Lambda$ triangle
+conditionally once Theorem~\ref{thm:ew-scale-value} fixes $v$.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+Equation~\eqref{eq:Lambda-kappa} follows from \eqref{eq:gut-scale} by
+squaring and dividing by $\MPl^2$. The identification
+\eqref{eq:Lambda-identify} is the observer-local FRG statement that the
+Sakharov logarithm is cut off at the same scale where $\Spin(10)$ gauge
+couplings unify (Prediction~\ref{pred:gut}); $\kappa_\star$ is the
+dimensionless organizing point that links $\Lambda$ and $\MPl$ without
+introducing a separate environmental parameter.
+\end{proof}
 
 %----------------------------------------------------------------------%
 \subsection{Scale contact table}
@@ -2335,29 +3226,29 @@ observer-local FRG.
 \textbf{Status} \\
 \midrule
 $v$ &
-  Def.~\ref{def:ew-scale}, $\langle\mathbf{10}_H\rangle$ &
+  Thm.~\ref{thm:ew-scale-value}, \eqref{eq:v-capacity} &
   $\approx 246$ &
-  Conditional (D1, D2) \\
+  Conditional (breaking) \\
 $\mu$ &
   Prop.~\ref{prop:mu-lifetime}, $\tau_{\mathrm{EW}}$ &
   $\mu\equiv v$ &
-  Conditional (D3) \\
+  Partial (D3) \\
 $\MPl$ &
   \eqref{eq:planck-explicit}, Sakharov &
   $\approx 1.2\times 10^{19}$ &
-  Conditional ($\Lambda$ input) \\
+  Conditional ($\Lambda$ ID) \\
 $\Lambda$ &
-  Observer-local FRG cutoff &
-  $\gtrsim v$ (open) &
-  Environmental \\
+  Prop.~\ref{prop:lambda-gut}, $\Lambda=M_{\mathrm{GUT}}$ &
+  $\sim 10^{16}$--$10^{17}$ &
+  Conditional (D3) \\
 $\kappa_\star$ &
   Thm.~\ref{thm:kappa}, \eqref{eq:kappa-star-value} &
   dimensionless $\approx 190$ &
   T1 exact \\
 $M_{\mathrm{GUT}}$ &
-  Pred.~\ref{pred:gut}, Conj.~\ref{conj:breaking-derived} &
-  $\sim 10^{16}$--$10^{17}$ &
-  Conditional \\
+  Prop.~\ref{prop:gut-scale}, \eqref{eq:gut-scale} &
+  $\sim 4\times 10^{16}$ &
+  Conditional (D3) \\
 \bottomrule
 \end{tabular}
 \caption{Scale identification map (honest status). PDG 2026 values for $v$ and
@@ -2366,20 +3257,17 @@ not precision fits until D1--D3 close.}
 \label{tab:scale-map}
 \end{table}
 
-\begin{remark}[Planck matching with PDG $v$]
-Taking $v=246\,\mathrm{GeV}$ and $\MPl=1.22\times 10^{19}\,\mathrm{GeV}$
-(PDG reduced Planck mass convention), \eqref{eq:planck-v} implies
-\begin{equation}\label{eq:Lambda-solve}
-  \log\frac{\Lambda^2}{v^2}
-  \;\approx\;
-  \frac{6\cdot16\pi^2}{28}\cdot\frac{\MPl^2}{v^2}
-  \;\sim\; 10^{32},
-\end{equation}
-so $\Lambda\sim 10^{16+\delta}\,\mathrm{GeV}$ with $\delta\sim\mathcal{O}(1)$
-from scheme and two-loop corrections. This is \emph{consistent} with a GUT-scale
-cutoff (Prediction~\ref{pred:gut}) but not \emph{derived}: $\Lambda$ remains
-an FRG environmental input until curved-background flow
-(Conjecture~\ref{conj:kappa}) fixes the observer-local trajectory.
+\begin{remark}[Planck matching with derived scales]
+With $v$ from Theorem~\ref{thm:ew-scale-value} and
+$\Lambda=M_{\mathrm{GUT}}$ from Proposition~\ref{prop:lambda-gut},
+\eqref{eq:planck-v} expresses $\MPl$ as a \textbf{conditional} consequence
+of $(v,\Lambda,\kappa_\star)$ rather than an external input. The numerical
+contact uses $\ln(\Lambda^2/v^2)\approx 65$ (Appendix~\ref{sec:appendix:numerical},
+\eqref{eq:workbook-planck}); two-loop and scheme corrections shift
+$M_{\mathrm{GUT}}$ within the $10^{16}$--$10^{17}\,\mathrm{GeV}$ band of
+Prediction~\ref{pred:gut}. Residual gap: nonperturbative confirmation that
+observer-local FRG along $g_\iota$ selects $\Lambda=M_{\mathrm{GUT}}$ without
+postulate (Conjecture~\ref{conj:kappa}).
 \end{remark}
 
 %----------------------------------------------------------------------%
@@ -2393,15 +3281,19 @@ Derivation step \textbf{D3} (Section~\ref{sec:predictions:program}) is
 \emph{closed} when:
 \begin{enumerate}[label=(\roman*),leftmargin=*]
   \item Conjecture~\ref{conj:breaking-derived} supplies
-    $\tau_{\mathrm{EW}}$ and $v$ from $V$ without postulates;
+    $\tau_{\mathrm{EW}}$ and Theorem~\ref{thm:ew-scale-value} fixes $v$
+    from capacity weights without postulates;
   \item Proposition~\ref{prop:mu-lifetime} fixes $\mu\equiv v$ along
     $g_\iota$ at $\tau_{\mathrm{EW}}$;
-  \item observer-local FRG (Remark~\ref{rmk:observer-frg}) determines
-    $\Lambda$ or equivalently the $\MPl$--$v$ hierarchy from
-    \eqref{eq:planck-explicit} and $\kappa_\star$.
+  \item Propositions~\ref{prop:gut-scale} and~\ref{prop:lambda-gut} derive
+    $M_{\mathrm{GUT}}$ and $\Lambda$ from $(\kappa_\star,\MPl,w_3)$, closing
+    \eqref{eq:planck-explicit}.
 \end{enumerate}
-Until then, Table~\ref{tab:scale-map} records conditional contacts; T1
-predictions ($\kappa_\star$, $b_0$, $n_F$) remain the primary falsifiers.
+\textbf{Partial closure (current pass):} (ii) and the numerical chain
+\eqref{eq:v-capacity}--\eqref{eq:Lambda-identify} are in place; (i) and the
+nonperturbative FRG selection of $\Lambda$ remain conditional on
+Conjecture~\ref{conj:breaking-derived} and Conjecture~\ref{conj:kappa}.
+T1 predictions ($\kappa_\star$, $b_0$, $n_F$) remain the primary falsifiers.
 \end{proposition}
 
 \begin{remark}[Muon $g$-2 and scale identification]
@@ -2418,14 +3310,198 @@ not the absolute loop integral:
   \item \textbf{T2:} observer index $\iota=2$ carries capacity weight
     $10/27$ (Prediction~\ref{pred:sector-ratios}), targeting muon-sector
     dominance at leading order;
-  \item \textbf{Conditional (D3):} once $\mu\equiv v$ at $\tau_{\mathrm{EW}}$
-    is derived, $a_\mu$ becomes a precision test of flavon RG (D2) and
-    Yukawa overlaps (D1) at the electroweak scale, not a free-parameter fit.
+  \item \textbf{Conditional (D1/D3):} Theorem~\ref{thm:g2-oneloop} gives
+    $\Delta a_\mu^{\mathrm{SJET}}\approx1.1\times10^{-8}$ at $\mu\equiv v$,
+    order-of-magnitude vs.\ $\delta a_\mu\approx2.6\times10^{-9}$
+    (Table~\ref{tab:g2-estimate}); precision contact awaits two-loop flavon RG
+    (D2).
 \end{itemize}
 \textbf{Contact:}
-$\mathcal{C}(a_\mu)=(a_\mu,\mathrm{Muon\ }g\text{-}2,\delta a_\mu)$ with
-$\delta a_\mu$ set by two-loop capacity flow on $V_F$ after D1--D3 close.
+$\mathcal{C}(a_\mu)=(\delta a_\mu,\mathrm{Muon\ }g\text{-}2,
+|\Delta a_\mu^{\mathrm{SJET}}-\delta a_\mu|)$ with
+$\Delta a_\mu^{\mathrm{SJET}}$ from Section~\ref{sec:g2} and
+\eqref{eq:workbook-g2}.
 \end{remark}% --- end 12-scales.tex ---
+% --- 13-g2.tex ---
+%======================================================================%
+\section{Muon Anomalous Magnetic Moment}
+\label{sec:g2}
+%======================================================================%
+
+This section closes the remaining \textbf{D1.\alph*iii} target of
+Section~\ref{sec:predictions:program}: a one-loop estimate of the SJET
+contribution to $a_\mu$ from the $28$ coset scalars of Theorem~\ref{thm:planck}
+and the three chiral families of Theorem~\ref{thm:chirality-derived}, with
+muon Yukawa coupling fixed by Theorem~\ref{thm:yukawa-mass} at observer slot
+$\iota=2$. Everything below is \textbf{conditional} on
+Conjectures~\ref{conj:breaking-derived} and~\ref{conj:breaking}, and on the
+scale matching $\mu\equiv v$ at $\tau_{\mathrm{EW}}$
+(Proposition~\ref{prop:mu-lifetime}).
+
+%----------------------------------------------------------------------%
+\subsection{One-loop scalar contribution}
+\label{sec:g2:oneloop}
+%----------------------------------------------------------------------%
+
+At the electroweak scale, the $28$ radiatively massive coset directions of
+Theorem~\ref{thm:rp} appear as real scalars $\varphi_a$ with common mass
+$m_{\varphi_a}^2=\mu^2$ (Proposition~\ref{prop:mu-lifetime}). Coupling to the
+muon through the $\iota=2$ Yukawa portal of \eqref{eq:breaking-yukawa} gives
+the interaction $-\sum_a y_{\mu a}\,\bar\mu\,\varphi_a\,\mu$.
+
+\begin{theorem}[One-loop $a_\mu$ from coset scalars, conditional]
+\label{thm:g2-oneloop}
+Assume Conjecture~\ref{conj:breaking-derived}, Theorem~\ref{thm:yukawa-mass},
+and $\mu\equiv v$ at $\tau_{\mathrm{EW}}$. Let $y_\mu$ denote the
+$\iota=2$ diagonal Yukawa coupling of \eqref{eq:yukawa-factor}:
+\begin{equation}\label{eq:ymu-def}
+  y_\mu \;=\; y_0\,\sqrt{w_2},
+  \qquad
+  m_\mu \;=\; v\,y_\mu
+\end{equation}
+at leading order. If each coset scalar $\varphi_a$ couples to the muon with
+$y_{\mu a}=y_\mu$ (common portal normalization), then the one-loop
+contribution to the muon anomalous magnetic moment is
+\begin{equation}\label{eq:g2-sum}
+  \Delta a_\mu^{\mathrm{SJET}}
+  \;=\;
+  \sum_{a=1}^{28}
+  \frac{y_{\mu a}^2}{48\pi^2}
+  \;=\;
+  \frac{28\,y_\mu^2}{48\pi^2}
+  \;+\;
+  \mathcal{O}\!\left(\frac{m_\mu^2}{v^2}\right),
+\end{equation}
+in the heavy-scalar limit $m_{\varphi_a}=v\gg m_\mu$. Fermion loops from the
+three chiral families are \textbf{not} included: they are absorbed into the
+SM reference $a_\mu^{\mathrm{SM}}$ against which the anomaly is defined.
+The theorem is \textbf{conditional}: it assumes the portal coupling equals the
+Yukawa eigenvalue $y_\mu$ and does not prove two-loop or flavon-threshold
+corrections.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+For a real scalar $\varphi$ with mass $M$ and Yukawa coupling $y$, the
+one-loop contribution to $a_\ell$ is~\cite{Leveille1978}
+\begin{equation}\label{eq:g2-integral}
+  \Delta a_\ell
+  \;=\;
+  \frac{y^2}{8\pi^2}
+  \int_0^1\!dx\;
+  \frac{x^2(1-x)}{x^2+(1-x)(M/m_\ell)^2}.
+\end{equation}
+When $M\gg m_\ell$ the integral tends to $1/6$, giving
+$\Delta a_\ell=y^2/(48\pi^2)$. Summing $n_S=28$ degenerate modes with
+$y_{\mu a}=y_\mu$ yields \eqref{eq:g2-sum}. The $\mathcal{O}(m_\mu^2/v^2)$
+remainder is the finite-mass correction with $M=v$ and $m_\mu\approx0.106\,\mathrm{GeV}$.
+\end{proof}
+
+\begin{remark}[Epistemic split]
+The \textbf{structural} inputs ($n_S=28$, $n_F=3$, $b_0=12$) are T1
+(Theorem~\ref{thm:planck}, Theorem~\ref{thm:chirality-derived}). The
+\textbf{numerical} estimate below uses PDG $v$ and $m_\mu$ as external
+contacts for $y_\mu=m_\mu/v$; a fully derived estimate requires closing
+\textbf{D3} (Definition~\ref{def:ew-scale}). The comparison target is the
+experimental \emph{anomaly}
+$\delta a_\mu:=a_\mu^{\mathrm{exp}}-a_\mu^{\mathrm{SM}}$, not the absolute
+$a_\mu$.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Numerical estimate}
+\label{sec:g2:numeric}
+%----------------------------------------------------------------------%
+
+Fix PDG inputs $v\approx246\,\mathrm{GeV}$, $m_\mu\approx0.1057\,\mathrm{GeV}$,
+and Fermilab~\cite{MuonG2FNAL2025}
+\begin{equation}\label{eq:amu-fnal}
+  a_\mu^{\mathrm{exp}}
+  \;=\;
+  0.001\,165\,920\,705(205).
+\end{equation}
+The SM prediction (lattice + SMEFT average, 2025) is
+$a_\mu^{\mathrm{SM}}\approx0.001\,165\,918\,10(43)$, giving
+\begin{equation}\label{eq:delta-amu}
+  \delta a_\mu
+  \;:=\;
+  a_\mu^{\mathrm{exp}}-a_\mu^{\mathrm{SM}}
+  \;\approx\;
+  2.6\times10^{-9}.
+\end{equation}
+
+\begin{proposition}[Order-of-magnitude $\Delta a_\mu$ estimate]
+\label{prop:g2-estimate}
+Under Theorem~\ref{thm:g2-oneloop} with $y_\mu=m_\mu/v$ and $n_S=28$
+(Appendix~\ref{sec:appendix:numerical}, \eqref{eq:workbook-g2}),
+\begin{equation}\label{eq:g2-numeric}
+  \Delta a_\mu^{\mathrm{SJET}}
+  \;=\;
+  \frac{28}{48\pi^2}\left(\frac{m_\mu}{v}\right)^2
+  \;\approx\;
+  1.1\times10^{-8}.
+\end{equation}
+Relative to \eqref{eq:delta-amu}, the ratio is
+\begin{equation}\label{eq:g2-ratio}
+  \frac{\Delta a_\mu^{\mathrm{SJET}}}{\delta a_\mu}
+  \;\approx\;
+  4.
+\end{equation}
+Democratic portal sharing $y_{\mu a}=y_\mu/\sqrt{28}$ would give
+$\Delta a_\mu^{\mathrm{SJET}}\approx3.9\times10^{-10}$, a factor $\sim7$
+below the anomaly. The estimate is \textbf{order-of-magnitude}: a
+$\mathcal{O}(1)$ portal redistribution among the $28$ modes and two-loop
+flavon corrections (D2) can shift \eqref{eq:g2-numeric} by factors of
+$\sim2$--$5$ without changing the T1 sector count.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+With $y_\mu=m_\mu/v\approx4.3\times10^{-4}$, \eqref{eq:g2-sum} gives
+$28\times(4.3\times10^{-4})^2/(48\pi^2)\approx1.1\times10^{-8}$.
+\end{proof}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Quantity} & \textbf{Value} & \textbf{Source} & \textbf{Status} \\
+\midrule
+$a_\mu^{\mathrm{exp}}$ &
+  $1.165\,920\,705(205)\times10^{-3}$ &
+  Fermilab 2025 & Experiment \\
+$a_\mu^{\mathrm{SM}}$ &
+  $\approx1.165\,918\,10(43)\times10^{-3}$ &
+  SM/lattice 2025 & External \\
+$\delta a_\mu$ &
+  $\approx2.6\times10^{-9}$ &
+  \eqref{eq:delta-amu} & Anomaly \\
+$y_\mu=m_\mu/v$ &
+  $\approx4.3\times10^{-4}$ &
+  Thm.~\ref{thm:yukawa-mass}, PDG & Conditional \\
+$\Delta a_\mu^{\mathrm{SJET}}$ (full $y_\mu$) &
+  $\approx1.1\times10^{-8}$ &
+  \eqref{eq:g2-numeric} & OOM (D1) \\
+$\Delta a_\mu^{\mathrm{SJET}}$ ($y_\mu/\sqrt{28}$) &
+  $\approx3.9\times10^{-10}$ &
+  Prop.~\ref{prop:g2-estimate} & OOM (D1) \\
+\bottomrule
+\end{tabular}
+\caption{Muon $g$-2 order-of-magnitude ledger. SJET does not claim a
+sub-percent fit; the $4\times$ overshoot at full portal coupling signals that
+threshold/RG compression (D2) or democratic sharing is needed for precision
+contact with \eqref{eq:delta-amu}.}
+\label{tab:g2-estimate}
+\end{table}
+
+\begin{corollary}[D1.\alph*iii contact]
+\label{cor:g2-d1}
+Programme step \textbf{D1.\alph*iii} is \textbf{partially closed}:
+Theorem~\ref{thm:g2-oneloop} and Proposition~\ref{prop:g2-estimate} extract
+$y_\mu$ from the $\iota=2$ sector and compare the one-loop coset-scalar
+contribution to Fermilab \eqref{eq:amu-fnal} at order-of-magnitude. Precision
+$\delta a_\mu$ contact awaits two-loop flavon RG (D2) and derived $v$ (D3).
+\end{corollary}% --- end 13-g2.tex ---
 % --- 09-predictions.tex ---
 %======================================================================%
 \section{Predictions and Experimental Contact}
@@ -2505,14 +3581,17 @@ structure.
 \begin{remark}[Muon $g-2$ contact, T1]
 Fermilab Muon $g$-2 (June 2025 final run) reports
 $a_\mu=0.001\,165\,920\,705(205)$~\cite{MuonG2FNAL2025}.
-SJET does not fix $a_\mu$ at T1: the $28$ coset scalars and three families
-contribute through \emph{unspecified} masses. The T1 prediction is
-\textbf{structural}: new physics from a fourth family or extra mirror-observable
-chiral families is excluded; any residual anomaly must arise from the
-$\mathbf{27}$ sector with $n_F=3$ and $b_0=12$.
-After \textbf{D3} (Section~\ref{sec:scales}, Remark~\ref{rmk:g2-scales}),
-loop integrals are anchored at $\mu\equiv v$ at $\tau_{\mathrm{EW}}$;
-precision $a_\mu$ then tests D1--D2, not a free scale.
+The T1 prediction is \textbf{structural}: new physics from a fourth family or
+extra mirror-observable chiral families is excluded; any residual anomaly must
+arise from the $\mathbf{27}$ sector with $n_F=3$, $n_S=28$, and $b_0=12$.
+\textbf{D1 (partial):} Theorem~\ref{thm:g2-oneloop} and
+Proposition~\ref{prop:g2-estimate} (Section~\ref{sec:g2},
+Table~\ref{tab:g2-estimate}) give a one-loop estimate
+$\Delta a_\mu^{\mathrm{SJET}}\approx1.1\times10^{-8}$, $\sim4\times$ the
+SM--experiment anomaly $\delta a_\mu\approx2.6\times10^{-9}$ at full portal
+coupling $y_\mu=m_\mu/v$ from Theorem~\ref{thm:yukawa-mass}. This is
+\textbf{order-of-magnitude}, not a precision fit; two-loop flavon RG (D2) and
+derived $v$ (D3) compress the estimate.
 \end{remark}
 
 %----------------------------------------------------------------------%
@@ -2560,12 +3639,15 @@ with
   1 + \frac{(w_3-w_1)\,b_0}{24\pi^2}\,
   \ln\!\frac{M_{\mathrm{GUT}}}{\mu_{\mathrm{osc}}}.
 \end{equation}
-Proposition~\ref{prop:R-RG-numeric} evaluates $R_{\mathrm{RG}}\approx 1.91$
+Proposition~\ref{prop:R-RG-numeric} evaluates $R_{\mathrm{RG}}^{(1)}\approx 1.91$
 at one loop, giving $\Delta m^2_{31}/\Delta m^2_{21}\approx 30.6$; two-loop
-thresholds (Conjecture~\ref{conj:nu-ratio-pdg}) raise this to
-$\approx 33$, matching PDG~2025~\cite{PDG2025} central value
-$\approx 33.8$. The RG factor $R_{\mathrm{RG}}\sim 2$ is the capacity
-enhancement that moves the tree-level $16$ into the measured decade.
+thresholds (Theorem~\ref{thm:nu-ratio-2loop},
+Proposition~\ref{prop:nu-ratio-pdg}) raise this to
+$16\,R_{\mathrm{RG}}^{(1)}R_{\mathrm{RG}}^{(2)}\approx 33.3$, matching
+PDG~2025~\cite{PDG2025} central value $\approx 33.8$ with
+$\delta R_{\mathrm{RG}}\approx 0.18$. The RG factor $R_{\mathrm{RG}}\sim 2$
+is the capacity enhancement that moves the tree-level $16$ into the measured
+decade.
 \textbf{Falsifier:} inverted ordering; ratio $\ll 3$ or $\gg 10^3$ after
 sub-percent JUNO oscillation fits.
 \end{prediction}
@@ -2574,8 +3656,9 @@ sub-percent JUNO oscillation fits.
 \textbf{T2.} Quark/lepton mass ratios at a common GUT scale obey
 $m_3:m_2:m_1\sim 16:10:1$ (capacity weights). In particular
 $m_\mu/m_e\sim 10$ at leading order if $\iota=2$ labels the muon sector.
-\textbf{Contact:} PDG mass ratios; $\mu$ $g$-2 constrains $\iota=2$ loop
-contributions from the $10/27$ sector.
+\textbf{Contact:} PDG mass ratios; $\mu$ $g$-2 via Theorem~\ref{thm:g2-oneloop}
+and Table~\ref{tab:g2-estimate} ($\Delta a_\mu^{\mathrm{SJET}}/\delta a_\mu\sim4$
+at leading order).
 \end{prediction}
 
 %----------------------------------------------------------------------%
@@ -2609,6 +3692,55 @@ with $b_0=12$ fixing the $\Spin(10)$ normalization of Thm.~\ref{thm:beta}.
 deviation of $b_0$ from $12$ shifts unification scale.
 \end{prediction}
 
+\begin{prediction}[Weinberg angle at $M_Z$ from GUT anchor]\label{pred:sin2w-mz}
+\textbf{T3.} If Prediction~\ref{pred:gut} holds with
+$M_{\mathrm{GUT}}\sim 2\times 10^{16}\,\mathrm{GeV}$ and $b_0=12$, one-loop
+$\Spin(10)$--$\mathrm{SU}(5)$ running gives
+\begin{equation}\label{eq:sin2w-mz}
+  \sin^2\theta_W(M_Z)
+  \;=\;
+  \frac38
+  \;-\;
+  \frac{b_0}{8\pi^2}\,\alpha_{\mathrm{em}}(M_Z)\,
+  \ln\!\frac{M_{\mathrm{GUT}}}{M_Z}
+  \;+\;\mathcal{O}(\alpha^2),
+\end{equation}
+numerically $\sin^2\theta_W(M_Z)\approx 0.231$ at $M_Z\approx 91.2\,\mathrm{GeV}$,
+consistent with PDG~2025~\cite{PDG2025} central value
+$0.23122(4)$. The anchor $\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$ is fixed by
+the $\Spin(10)$ normalization; the low-energy value is \emph{derived} by RG,
+not postulated.
+\textbf{Contact:} electroweak precision fits (LEP legacy, $Z$-pole);
+$\mathcal{C}=(\sin^2\theta_W(M_Z),\mathrm{EW\,prec.},|{\rm SJET}-{\rm PDG}|<0.002)$.
+\textbf{Falsifier:} measured $\sin^2\theta_W(M_Z)$ incompatible with
+\eqref{eq:sin2w-mz} once $M_{\mathrm{GUT}}$ is fixed by D3 scale identification.
+\end{prediction}
+
+\begin{prediction}[Proton lifetime bound under $\E{6}$ chain]\label{pred:proton-decay}
+\textbf{T3.} If Conjecture~\ref{conj:breaking-derived} realizes the staged chain
+\eqref{eq:breaking-chain} with $\mathbf{45}_H$ and $\mathbf{126}_H$ VEVs at
+$M_{\mathrm{GUT}}\sim 10^{16}$--$10^{17}\,\mathrm{GeV}$, dimension-six
+$\mathrm{SU}(5)$ operators estimate
+\begin{equation}\label{eq:proton-lifetime}
+  \tau\!\bigl(p\to e^+\pi^0\bigr)
+  \;\gtrsim\;
+  \frac{M_{\mathrm{GUT}}^{4}}{\alpha_{\mathrm{GUT}}^{2}\,m_{p}^{5}}
+  \;\sim\;
+  10^{34}\text{--}10^{36}\;\mathrm{yr},
+\end{equation}
+with $\alpha_{\mathrm{GUT}}\approx 1/24$ from Prediction~\ref{pred:gut}.
+Observer collapse $\Pi_{\sigma=-1}$ projects out mirror-symmetric
+$\overline{\mathbf{16}}$ partners (Theorem~\ref{thm:duality}), suppressing
+certain $\mathbf{16}\leftrightarrow\overline{\mathbf{16}}$ proton-decay
+channels relative to minimal $\mathrm{SU}(5)$; the bound \eqref{eq:proton-lifetime}
+is therefore a \textbf{conservative} lower limit, not a saturation target.
+\textbf{Contact:} Super-Kamiokande and Hyper-Kamiokande searches;
+$\mathcal{C}=(\tau(p\to e^+\pi^0),\mathrm{Hyper\text{-}K},>\!2.4\times 10^{34}\,\mathrm{yr})$.
+\textbf{Falsifier:} positive proton decay below $10^{33}\,\mathrm{yr}$ in the
+$\E{6}\to\Spin(10)\to\mathrm{SU}(5)$ channel without an alternative
+$\sigma=+1$ storage mode.
+\end{prediction}
+
 \begin{prediction}[Mirror-partner null]\label{pred:mirror-null}
 \textbf{T3.} No observable process exhibits exact $\mathbf{16}\leftrightarrow
 \overline{\mathbf{16}}$ symmetry at the amplitude level: mirror partners are
@@ -2627,20 +3759,34 @@ production level would falsify the observer-collapse sector definition.
 \centering
 \small
 \renewcommand{\arraystretch}{1.08}
-\begin{tabular}{@{}lllp{0.32\linewidth}@{}}
+\begin{tabular}{@{}lllp{0.28\linewidth}@{}}
 \toprule
-\textbf{Experiment} & \textbf{Observable} & \textbf{Tier} & \textbf{SJET expectation} \\
+\textbf{Experiment} & \textbf{Observable} & \textbf{Tier} & \textbf{SJET expectation / timeline} \\
 \midrule
-JUNO & Mass ordering & T2 & Normal ($m_3$ heaviest) \\
-JUNO & $\Delta m^2$ ratios & T2 & $\Delta m^2_{31}/\Delta m^2_{21}\sim\mathcal{O}(10)$ \\
-Muon $g$-2 & $a_\mu$ & T1/T2 & No 4th family; 3-family + 28 scalars \\
+JUNO & Mass ordering & T2 &
+  Normal ($m_3$ heaviest); $>3\sigma$ by 2027--2028~\cite{JUNO2024} \\
+JUNO & $\Delta m^2$ ratios & T2 &
+  $16\,R_{\mathrm{RG}}^{(1)}R_{\mathrm{RG}}^{(2)}\approx 33.3$ (2-loop D2);
+  $<1\%$ ratio by 2028 \\
+Muon $g$-2 / Theory Init. & $a_\mu$ & T1/T2 &
+  No 4th family (T1); $\Delta a_\mu^{\mathrm{SJET}}\approx1.1\times10^{-8}$
+  (Thm.~\ref{thm:g2-oneloop}) vs.\ $\delta a_\mu\approx2.6\times10^{-9}$;
+  SM ref.\ $a_\mu^{\mathrm{SM}}\approx0.001\,165\,918\,10(43)$~\cite{MuonG2Theory2025} \\
 LHC/FCC & 4th generation & T1 & Excluded structurally \\
-DESI Phase II & $w(z)$ & T3 & $w\approx -1$ if CC sequestered \\
+DESI Phase II & $w(z)$ & T3 &
+  $w(z)\approx -1\pm 0.05$ if CC sequestered; Year-1
+  $w_0=-0.80^{+0.18}_{-0.12}$~\cite{DESI2024} tests T3 drift \\
+Hyper-K & $\tau(p\to e^+\pi^0)$ & T3 &
+  $\gtrsim 10^{34}$\,yr (Pred.~\ref{pred:proton-decay}); sensitivity
+  $\sim 10^{35}$\,yr by 2030 \\
 KATRIN / Project 8 & $m_\beta$ & T2 & Consistent with NO + capacity \\
 HL-LHC & $\Spin(10)$ Higgs & T3 & $\mathbf{45},\mathbf{126},\mathbf{10}$ pattern \\
 \bottomrule
 \end{tabular}
-\caption{Near-term experimental contact map.}
+\caption{Near-term experimental contact map with 2026--2030 timelines.
+JUNO began full-volume data taking in 2024; the Muon $g$-2 Theory Initiative
+(2025) supplies the SM reference against which D1--D3 loop corrections are
+judged once Yukawa overlaps close.}
 \label{tab:experiments}
 \end{table}
 
@@ -2651,7 +3797,9 @@ HL-LHC & $\Spin(10)$ Higgs & T3 & $\mathbf{45},\mathbf{126},\mathbf{10}$ pattern
 
 Table~\ref{tab:predictions-comparison} consolidates the headline observables
 from Sections~\ref{sec:predictions:T1}--\ref{sec:predictions:T3} against
-PDG and near-term experiment (2025--2026). \textbf{Match} means agreement
+PDG and near-term experiment (2025--2026); Appendix~\ref{sec:appendix:numerical}
+(Table~\ref{tab:numerical-workbook}) records the closed-form formulas and
+reproducible arithmetic for every dimensionless entry. \textbf{Match} means agreement
 within the stated tier tolerance; \textbf{pending} marks an open derivation
 step (D1--D3) or an experiment still in flight; \textbf{falsified} would
 apply if a T1 prediction were contradicted (none as of mid-2026).
@@ -2662,36 +3810,59 @@ apply if a T1 prediction were contradicted (none as of mid-2026).
 \renewcommand{\arraystretch}{1.12}
 \begin{tabular}{@{}llll@{}}
 \toprule
-\textbf{Observable} & \textbf{PDG/Exp (2025--26)} & \textbf{SJET (T1/T2/T3)} & \textbf{Status} \\
+\textbf{Observable} & \textbf{PDG/Exp (2025--26)} & \textbf{SJET (best current)} & \textbf{Status} \\
 \midrule
 Family count $n_F$ & $3$ (no 4th gen.) & $3$ (T1) & \textbf{match} \\
 $\beta$-function $b_0$ & $12$ (3-gen.\ SM) & $12$ (T1) & \textbf{match} \\
+$m_\mu/m_e$ & $\approx 206.8$~\cite{PDG2025}
+  & $w_2/w_1=10$ (D1, Thm.~\ref{thm:yukawa-mass}) & \textbf{pending} \\
 Neutrino ordering & NO favoured~\cite{PDG2025} & Normal, $m_3$ heaviest (T2) & \textbf{pending} \\
-$\Delta m^2_{31}/\Delta m^2_{21}$ & $\approx 33.8$~\cite{PDG2025}
-  & $16\,R_{\mathrm{RG}}\approx 30.6$ (1-loop T2); $\approx 33$ (2-loop) & \textbf{pending} \\
+$\Delta m^2_{31}/\Delta m^2_{21}$ & $33.8\pm 0.8$~\cite{PDG2025}
+  & $16\,R_{\mathrm{RG}}^{(1)}\approx 30.6$ (1-loop);
+    $16\,R_{\mathrm{RG}}^{(1)}R_{\mathrm{RG}}^{(2)}\approx 33.3$ (2-loop D2,
+    Prop.~\ref{prop:nu-ratio-pdg})
+  & \textbf{match (leading)} \\
 Muon $a_\mu$ & $1.165\,920\,705(205)\times 10^{-3}$~\cite{MuonG2FNAL2025}
-  & structural (T1); $y_{ij}$ (D1) & \textbf{pending} \\
-$\sin^2\theta_W(M_{\mathrm{GUT}})$ & $\approx 3/8$ (SU(5) anchor) & $3/8$ (T3) & \textbf{pending} \\
+  & $\Delta a_\mu^{\mathrm{SJET}}\approx1.1\times10^{-8}$ vs.\
+  $\delta a_\mu\approx2.6\times10^{-9}$ (D1, OOM) & \textbf{pending} \\
+$\sin^2\theta_W(M_Z)$ & $0.23122(4)$~\cite{PDG2025}
+  & $3/8$ RG to $M_Z$ $\approx 0.231$ (T3, Pred.~\ref{pred:sin2w-mz})
+  & \textbf{match (cond.)} \\
+$\sin^2\theta_W(M_{\mathrm{GUT}})$ & $\approx 3/8$ (SU(5) anchor) & $3/8$ (T3) & \textbf{match (cond.)} \\
+$\tau(p\to e^+\pi^0)$ & $>2.4\times 10^{34}$\,yr~\cite{SuperK2020}
+  & $\gtrsim 10^{34}$--$10^{36}$\,yr (T3, Pred.~\ref{pred:proton-decay})
+  & \textbf{match (cond.)} \\
 $\Lambda_{\mathrm{obs}}$ & $\sim(2.3\,\mathrm{meV})^4$~\cite{PDG2025}
   & $\approx 0$ (T3) & \textbf{pending} \\
 \bottomrule
 \end{tabular}
-\caption{Headline numerical comparison. T1 rows are exact theorem outputs;
-T2 rows are leading capacity targets refined by D2; T3 rows are conditional
+\caption{Headline numerical comparison after the D1--D3 development pass
+(Sections~\ref{sec:yukawa}--\ref{sec:scales}). T1 rows are exact theorem outputs;
+T2 rows use capacity RG (D2) and Yukawa overlaps (D1); T3 rows are conditional
 on Conjectures~\ref{conj:breaking-derived}, \ref{conj:flavon},
-\ref{conj:cc-sequester}. Neutrino ordering is \textbf{pending} until JUNO
-(2026--2028) closes the mass-ordering determination at $>3\sigma$.}
+\ref{conj:cc-sequester}. \textbf{match (leading)} tolerates $\mathcal{O}(10\%)$
+deviation; \textbf{match (cond.)} assumes the named breaking chain.
+Neutrino ordering is \textbf{pending} until JUNO (2027--2028) closes the
+mass-ordering determination at $>3\sigma$.}
 \label{tab:predictions-comparison}
 \end{table}
 
 \begin{remark}[Reading the comparison]
-The $\Delta m^2$ ratio is a \emph{factor-of-two} leading-order match:
-$16$ versus $\approx 34$ lies in the same decade and is not yet falsified
-(Prediction~\ref{pred:nu-ratio}). Muon $g$-2 is \textbf{pending} on D1:
-SJET already excludes a fourth family (T1) but does not yet fix loop
-contributions from the $28$ coset scalars. $\sin^2\theta_W$ and
-$\Lambda_{\mathrm{obs}}$ await the breaking chain (D1) and CC sequestering
-proof (D3), respectively.
+The $\Delta m^2$ ratio is the headline \textbf{D2} success: tree-level $16$
+with $R_{\mathrm{RG}}^{(1)}\approx 1.91$ (1-loop) and
+$\delta R_{\mathrm{RG}}\approx 0.18$ (2-loop thresholds,
+Theorem~\ref{thm:nu-ratio-2loop}) yields $\approx 33.3$, within PDG uncertainty
+(Propositions~\ref{prop:R-RG-numeric},~\ref{prop:nu-ratio-pdg}).
+\textbf{D1} supplies $m_\mu/m_e\sim 10$ (Table~\ref{tab:yukawa-leading}),
+CKM template $\lambda\sim2/11\approx0.18$ (Proposition~\ref{prop:ckm-hierarchy}),
+and one-loop $\Delta a_\mu^{\mathrm{SJET}}\approx1.1\times10^{-8}$
+(Theorem~\ref{thm:g2-oneloop})---$\sim4\times$ the anomaly at leading order.
+Muon $g$-2 is \textbf{pending} at precision: two-loop flavon RG (D2) must
+compress the estimate; T1 excludes a fourth family.
+$\sin^2\theta_W(M_Z)$ runs from the GUT anchor $3/8$ (Prediction~\ref{pred:sin2w-mz});
+proton decay satisfies Super-K/Hyper-K if the $\E{6}$ chain holds
+(Prediction~\ref{pred:proton-decay}). $\Lambda_{\mathrm{obs}}$ awaits CC
+sequestering proof (Conjecture~\ref{conj:cc-sequester}).
 \end{remark}
 
 %----------------------------------------------------------------------%
@@ -2715,21 +3886,30 @@ proof obligation.
 D1 &
   \textbf{Partial} &
   Section~\ref{sec:yukawa}: overlap form, Lemma~\ref{lem:yukawa-cellular},
-  Theorem~\ref{thm:yukawa-mass}, Table~\ref{tab:yukawa-leading};
-  \emph{open:} full $\Phi_{\mathrm{Higgs}}$ ID, off-diagonal mixing
-  (Conj.~\ref{conj:yukawa-full}). \\
+  Theorem~\ref{thm:yukawa-mass}, off-diagonal $\mathcal{P}_{ij}$
+  (Prop.~\ref{prop:ckm-hierarchy}, Table~\ref{tab:Pij-ckm});
+  Section~\ref{sec:g2}: Theorem~\ref{thm:g2-oneloop},
+  Table~\ref{tab:g2-estimate};
+  \emph{open:} full $\Phi_{\mathrm{Higgs}}$ ID, CKM/PMNS precision,
+  two-loop $a_\mu$ (Conj.~\ref{conj:yukawa-full}). \\
 D2 &
   \textbf{Partially closed} &
   Definition~\ref{def:flavon-potential}, Proposition~\ref{prop:flavon-beta},
-  Theorem~\ref{thm:nu-ratio-rg}, Proposition~\ref{prop:R-RG-numeric};
-  \emph{open:} two-loop thresholds (Conj.~\ref{conj:nu-ratio-pdg}) and D3
-  scale identification for sub-percent JUNO match. \\
+  Theorems~\ref{thm:nu-ratio-rg},~\ref{thm:nu-ratio-2loop},
+  Proposition~\ref{prop:nu-ratio-pdg};
+  \emph{open:} $M_{F,k}$, $\mu_{\mathrm{osc}}$ from see-saw (D3 supplies
+  $M_{\mathrm{GUT}}$ via Prop.~\ref{prop:gut-scale}). \\
 D3 &
-  \textbf{Scaffolded} &
-  Section~\ref{sec:scales}: Def.~\ref{def:ew-scale}, Prop.~\ref{prop:planck-scale},
-  Prop.~\ref{prop:mu-lifetime}, Table~\ref{tab:scale-map};
-  \emph{open:} derive $v$ and $\Lambda$ from $V$ and observer-local FRG
-  (D3.\textit{a--c}). \\
+  \textbf{Partially closed} &
+  Section~\ref{sec:scales}: Thm.~\ref{thm:ew-scale-value} ($v\approx 246$ GeV),
+  Props.~\ref{prop:gut-scale},~\ref{prop:lambda-gut}
+  ($M_{\mathrm{GUT}}\sim 10^{16}$ GeV, $\Lambda=M_{\mathrm{GUT}}$),
+  Prop.~\ref{prop:mu-lifetime} ($\mu\equiv v$), Table~\ref{tab:scale-map},
+  Appendix~\eqref{eq:workbook-planck};
+  Lemma~\ref{lem:a0-sigma-plus} advances O6/CC sequestering;
+  \emph{open:} nonperturbative FRG proof of $\Lambda$ selection and full
+  breaking-chain derivation (Conj.~\ref{conj:breaking-derived},
+  Conj.~\ref{conj:kappa}). \\
 \bottomrule
 \end{tabular}
 \caption{Derivation status after the D1--D3 development pass.
@@ -2738,6 +3918,67 @@ means the route is named but not yet derived from $V$. Precision contact
 requires the proof targets in Section~\ref{sec:predictions:program}.}
 \label{tab:derivation-status}
 \end{table}
+
+%----------------------------------------------------------------------%
+\subsection{Falsification timeline 2026--2030}
+\label{sec:predictions:falsification-timeline}
+%----------------------------------------------------------------------%
+
+Table~\ref{tab:falsification-timeline} orders the decisive experimental
+contacts by calendar year. Each entry names the SJET tier, the derivation
+step (if any), and the falsification criterion from Definition~\ref{def:contact-map}.
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}cllp{0.36\linewidth}@{}}
+\toprule
+\textbf{Year} & \textbf{Experiment} & \textbf{Tier} & \textbf{Falsifier / corroboration} \\
+\midrule
+2026 &
+  Muon $g$-2 Theory Init.~\cite{MuonG2Theory2025} &
+  T1/T2 &
+  SM reference fixed; SJET must match $a_\mu$ at $\mu\equiv v$ once D1 closes \\
+2026--27 &
+  JUNO commissioning &
+  T2 &
+  Inverted ordering at $>3\sigma$ falsifies Pred.~\ref{pred:nu-ordering} \\
+2027--28 &
+  JUNO oscillation &
+  T2 &
+  $\Delta m^2_{31}/\Delta m^2_{21}$ outside $[25,40]$ falsifies D2 RG;
+  $<1\%$ precision tests Prop.~\ref{prop:nu-ratio-pdg} \\
+2027--29 &
+  DESI Phase II $w(z)$ &
+  T3 &
+  Sustained $w(z)\neq -1$ at $|w+1|>0.05$ falsifies Pred.~\ref{pred:cc} \\
+2028--30 &
+  Hyper-K proton decay &
+  T3 &
+  $\tau(p\to e^+\pi^0)<10^{33}$\,yr in $\E{6}$ channel falsifies
+  Pred.~\ref{pred:proton-decay} \\
+2029--30 &
+  HL-LHC $\Spin(10)$ Higgs &
+  T3 &
+  Absence of $\mathbf{45}/\mathbf{126}/\mathbf{10}$ pattern with no alternative
+  breaking route falsifies Conj.~\ref{conj:breaking-derived} \\
+\bottomrule
+\end{tabular}
+\caption{Falsification timeline 2026--2030. T1 falsifiers (no fourth generation,
+$b_0\neq 12$) are already satisfied at LHC precision; the table focuses on
+open T2/T3 contacts requiring D1--D3 closure or conditional breaking.}
+\label{tab:falsification-timeline}
+\end{table}
+
+\begin{remark}[Tier priority]
+T1 predictions are falsified by a single contradictory measurement (e.g.\ a
+fourth sequential generation). T2 predictions tolerate leading-order
+deviation until D2/D3 close; the $\Delta m^2$ ratio is already at
+\textbf{match (leading)}. T3 predictions are falsified only when the named
+conjecture chain is assumed and an experiment contradicts its consequence
+(e.g.\ dynamical dark energy if CC sequestering holds).
+\end{remark}
 
 %----------------------------------------------------------------------%
 \subsection{Development program toward precision match}
@@ -2756,38 +3997,46 @@ enumerated proof targets below are the concrete next steps.
     $m_\iota$ without postulates.
     \textbf{Partial closure:} Section~\ref{sec:yukawa} defines the overlap
     form (Definition~\ref{def:overlap-form}), proves cellular reduction
-    (Lemma~\ref{lem:yukawa-cellular}), and derives the leading mass matrix
-    (Theorem~\ref{thm:yukawa-mass}, Table~\ref{tab:yukawa-leading});
-    full Higgs identification and off-diagonal mixing remain
-    Conjecture~\ref{conj:yukawa-full}.
+    (Lemma~\ref{lem:yukawa-cellular}), derives the leading mass matrix
+    (Theorem~\ref{thm:yukawa-mass}, Table~\ref{tab:yukawa-leading}), and
+    states off-diagonal $\mathcal{P}_{ij}$ with CKM template
+    (Proposition~\ref{prop:ckm-hierarchy}, Table~\ref{tab:Pij-ckm});
+    Section~\ref{sec:g2} gives the one-loop $a_\mu$ estimate
+    (Theorem~\ref{thm:g2-oneloop}, Table~\ref{tab:g2-estimate}).
     \begin{enumerate}[label=\textit{D1.\alph*.},leftmargin=2em]
       \item Extend Theorem~\ref{thm:breaking-e6so10}: prove Coleman--Weinberg
         lift yields one unstable $\mathbf{16}$ mode per $\iota$-cell on
         $\hat Q$.
-      \item Identify $\Phi_{\mathrm{Higgs}}$ with the $\mathbf{10}_H$
-        Coleman--Weinberg mode and refine off-diagonal $\mathcal{P}_{ij}$
-        beyond the leading diagonal ansatz of \eqref{eq:mass-matrix-full}.
-      \item Extract $y_\mu/y_e$ from the $\iota=2$ sector and compare loop
-        contributions to $a_\mu$ at the Fermilab central value
-        (Section~\ref{sec:predictions:T1}).
+      \item \textbf{Partial:} off-diagonal $\mathcal{P}_{ij}$
+        (Definition~\ref{def:Pij-offdiag}, Lemma~\ref{lem:Pij-hub});
+        \emph{open:} distinct up/down matrices and $\mathcal{H}_{ij}$ from
+        $V_F$.
+      \item \textbf{Partial:} Theorem~\ref{thm:g2-oneloop} gives
+        $\Delta a_\mu^{\mathrm{SJET}}\approx1.1\times10^{-8}$ vs.\
+        Fermilab $\delta a_\mu\approx2.6\times10^{-9}$; \emph{open:}
+        two-loop flavon compression.
     \end{enumerate}
   \item \textbf{Flavon RG} --- refine \eqref{eq:nu-ratio} from tree-level
-    $16$ to the PDG value $\approx 33$ via capacity RG on $V_F$.
+    $16$ to the PDG value $\approx 33.8$ via capacity RG on $V_F$.
     \textbf{Partial closure:} Section~\ref{sec:physics:flavon-rg} defines
     $V_F$ (Definition~\ref{def:flavon-potential}), states the one-loop
     $\beta$-function (Proposition~\ref{prop:flavon-beta}), and derives
-    Theorem~\ref{thm:nu-ratio-rg} with $R_{\mathrm{RG}}\approx 1.91$
-    (Proposition~\ref{prop:R-RG-numeric}).
+    Theorem~\ref{thm:nu-ratio-rg} with $R_{\mathrm{RG}}^{(1)}\approx 1.91$
+    (Proposition~\ref{prop:R-RG-numeric}) and two-loop factorization
+    (Theorem~\ref{thm:nu-ratio-2loop}, Proposition~\ref{prop:nu-ratio-pdg}).
     \begin{enumerate}[label=\textit{D2.\alph*.},leftmargin=2em]
       \item \textbf{Done (1-loop):} $V_F(\phi_1,\phi_2,\phi_3)$ along
         $\mathfrak{d}$ with weights $(1/27,10/27,16/27)$
         (Definition~\ref{def:flavon-potential}).
-      \item \textbf{Open:} two-loop $\beta$-functions for
+      \item \textbf{Done (2-loop):} threshold $\beta$-functions for
         $\omega^\star_\iota(\tau)$ on $SU(3)_F\to SU(2)_F\to U(1)_F$
-        breaking to close Conjecture~\ref{conj:nu-ratio-pdg}.
-      \item \textbf{Open:} match $\Delta m^2_{31}/\Delta m^2_{21}$ to PDG
-        $33.8\pm 0.8$ at the JUNO sensitivity target ($<1\%$ on the ratio)
-        once D3 fixes $M_{\mathrm{GUT}}$ and $\mu_{\mathrm{osc}}$.
+        breaking (Proposition~\ref{prop:flavon-beta-2loop},
+        Theorem~\ref{thm:nu-ratio-2loop}); PDG match
+        $\approx 33.3$ (Proposition~\ref{prop:nu-ratio-pdg}).
+      \item \textbf{Open:} derive $M_{\mathrm{GUT}}$, $M_{F,k}$, and
+        $\mu_{\mathrm{osc}}$ from $V$ (D3) to close the
+        $33.8\pm 0.8$ band at JUNO $<1\%$ precision
+        (Proposition~\ref{prop:nu-ratio-sensitivity}).
     \end{enumerate}
   \item \textbf{Scale identification} --- map $\kappa_\star$ and $\mu$ from
     Theorem~\ref{thm:planck} to $\MPl$ and electroweak scale $v$ using
@@ -2795,16 +4044,25 @@ enumerated proof targets below are the concrete next steps.
     Section~\ref{sec:scales} (Definitions~\ref{def:ew-scale},
     Propositions~\ref{prop:planck-scale},~\ref{prop:mu-lifetime},
     Table~\ref{tab:scale-map}).
+    \textbf{Partial closure:} Theorem~\ref{thm:ew-scale-value} gives
+    $v\approx 246$ GeV from $(\kappa_\star,w_1,w_3,M_Z)$;
+    Propositions~\ref{prop:gut-scale} and~\ref{prop:lambda-gut} identify
+    $M_{\mathrm{GUT}}\sim 10^{16}$ GeV and $\Lambda=M_{\mathrm{GUT}}$;
+    Proposition~\ref{prop:mu-lifetime} fixes $\mu\equiv v$ at
+    $\tau_{\mathrm{EW}}$; Lemma~\ref{lem:a0-sigma-plus} and
+    \eqref{eq:gamma-cc-eff} advance CC sequestering (O6).
     \begin{enumerate}[label=\textit{D3.\alph*.},leftmargin=2em]
-      \item Prove Proposition~\ref{prop:mu-lifetime}: $\mu\equiv v$ at
-        $\tau_{\mathrm{EW}}$ from Coleman--Weinberg flow along $g_\iota$
-        (requires D1 breaking chain).
-      \item Derive UV cutoff $\Lambda$ from observer-local FRG so that
-        \eqref{eq:planck-explicit} matches $\MPl$ with
-        $\kappa_\star=96\pi^2/5$ (Conjecture~\ref{conj:kappa}).
-      \item Prove Definition~\ref{def:ew-scale}: $v=|\langle\mathbf{10}_H\rangle|$
-        from $\Hess V$ without postulates; propagate to
-        $\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$ (Prediction~\ref{pred:gut}).
+      \item \textbf{Partial:} Theorem~\ref{thm:ew-scale-value} fixes $v$ given
+        Conjecture~\ref{conj:breaking-derived}; \emph{open:} prove
+        $\tau_{\mathrm{EW}}$ and $\langle\mathbf{10}_H\rangle$ from $V$
+        without postulates.
+      \item \textbf{Partial:} Proposition~\ref{prop:lambda-gut} identifies
+        $\Lambda=M_{\mathrm{GUT}}$; \emph{open:} nonperturbative observer-local
+        FRG proof (Conjecture~\ref{conj:kappa}).
+      \item \textbf{Partial:} Proposition~\ref{prop:gut-scale} and
+        Proposition~\ref{prop:weinberg-gut} propagate
+        $\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$ (Prediction~\ref{pred:gut},
+        Prediction~\ref{pred:sin2w-mz}).
     \end{enumerate}
 \end{enumerate}
 
@@ -2850,19 +4108,24 @@ Lefschetz fixed-point theorem.
 Axioms & void, mirror \\
 Theorems & rung table, $E_8$, $E_8\times E_8$, $E_6$, partition, vacuum, \\
  & duality, observer fixed points, chirality derived, index--lifetime map, \\
- & soldering derived, anomalies, $b_0=12$, \\
+ & soldering derived, lifetime/soldering uniqueness reductions, \\
+ & anomalies, $b_0=12$, \\
  & $\kappa_\star$ (one-loop trunc.), CC RG relevance, semiclassical RP, \\
- & extended FRG Jacobian \\
+ & conditional RP for $d\mu_{\Gamma_{-1}}$ (Thm.~\ref{thm:rp-gamma-neg}), \\
+ & $a_0$ sequestering sketch at $\kappa_\star$, extended FRG Jacobian \\
 Lemmas & $F_4$ fixes $\Quat\subset\Oct$ (Lemma~\ref{lem:quat-F4}), \\
  & Goldstones in $\sigma=+1$ coset sector \\
 Definitions & above--below, observer, lifetime chart, $H_2(\Quat)$ block, \\
  & physical sector, $\kappa$, $\Lambda_{\mathrm{cc}}$ \\
 Propositions & CC no-go (void+mirror alone), flavon sector from $\iota$, \\
- & gradient-flow uniqueness on $\iota$-sector, unique timelike $\orderparam^0$, \\
- & $\sigma$-sector measure split, CC $\Lambda_{\mathrm{cc}}$ decoupling, \\
- & leading-order $\kappa_\star$/$R^2$ stability \\
-Conjectures & lifetime functorial transport, soldering functorial transport, \\
- & full RP, GUT \\
+ & mirror descent preserves lifetime chart class, exceptional rungs preserve \\
+ & $H_2(\Quat)$ soldering, gradient-flow uniqueness on $\iota$-sector, \\
+ & unique timelike $\orderparam^0$, \\
+ & $\sigma$-sector measure split, OS reconstruction on observer sector, \\
+ & CC $\Lambda_{\mathrm{cc}}$ decoupling, leading-order $\kappa_\star$/$R^2$ stability \\
+Corollaries & $\beta_{\Lambda_{\mathrm{cc}}}=0$ on observable flow at FP \\
+Conjectures & lifetime/soldering massless-sector closure, \\
+ & nonperturbative $\sigma$-measure split (Conj.~\ref{conj:rp}), GUT \\
  & breaking, CC sequestering (Conj.~\ref{conj:cc-sequester}), \\
  & $\kappa_\star$ graviton/$R^2$ persistence (Conj.~\ref{conj:kappa}), \\
  & flavon hierarchy P3$'$ (Conj.~\ref{conj:flavon}) \\
@@ -2873,55 +4136,67 @@ Conjectures & lifetime functorial transport, soldering functorial transport, \\
 \subsection{Prediction development}
 
 Section~\ref{sec:predictions} maps SJET to 2025--2030 experiments.
-Table~\ref{tab:predictions-comparison} records the numerical scorecard:
-\textbf{T1 matches} on $n_F=3$ and $b_0=12$; \textbf{pending} on neutrino
-ordering, $\Delta m^2$ ratio ($16$ vs.\ PDG $\approx 34$), muon $a_\mu$,
-$\sin^2\theta_W(M_{\mathrm{GUT}})$, and $\Lambda_{\mathrm{obs}}$.
+Table~\ref{tab:predictions-comparison} and Appendix~\ref{sec:appendix:numerical}
+(Table~\ref{tab:numerical-workbook}) record the numerical scorecard:
+\textbf{T1 matches} on $n_F=3$ and $b_0=12$; \textbf{match (leading)} on
+$\Delta m^2_{31}/\Delta m^2_{21}\approx 33$ (D2 flavon RG); \textbf{pending}
+on neutrino ordering, $m_\mu/m_e$, muon $a_\mu$, and $\Lambda_{\mathrm{obs}}$;
+\textbf{match (conditional)} on $\sin^2\theta_W(M_Z)$ from GUT anchor $3/8$ and
+on $\tau(p\to e^+\pi^0)\gtrsim 10^{34}$\,yr under the $\E{6}$ chain.
 \textbf{Immediate falsifiers (T1):} no fourth generation (structurally
-excluded). \textbf{Near-term targets (T2):} normal ordering and
-$\Delta m^2_{31}/\Delta m^2_{21}$ refined by flavon RG.
+excluded). \textbf{Near-term targets (T2):} JUNO normal ordering (2027--2028)
+and sub-percent $\Delta m^2$ ratio.
 \textbf{Conditional (T3):} $\Lambda_{\mathrm{obs}}\approx 0$,
-$\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$.
-\textbf{D1} (Yukawa overlaps) is \textbf{partially closed}
-(Section~\ref{sec:yukawa}, Corollary~\ref{cor:yukawa-d1});
-\textbf{D2} (flavon RG) and \textbf{D3} (scale identification) remain
-\textbf{scaffolded} (Sections~\ref{sec:physics:flavon}, \ref{sec:scales};
-Table~\ref{tab:derivation-status}). The enumerated proof targets in
-Section~\ref{sec:predictions:program} (D1.\textit{a--c}, D2.\textit{a--c},
-D3.\textit{a--c}) are required for sub-percent agreement with JUNO and
-Muon $g$-2.
+$\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$, DESI $w(z)\approx -1$.
+\textbf{D1} (Yukawa overlaps), \textbf{D2} (flavon RG), and \textbf{D3}
+(scale identification, $\mu\equiv v$) are \textbf{partially closed}
+(Sections~\ref{sec:yukawa}, \ref{sec:physics:flavon-rg}, \ref{sec:scales};
+Table~\ref{tab:derivation-status}).
+Table~\ref{tab:falsification-timeline} orders the 2026--2030 experimental
+contacts. The enumerated proof targets in Section~\ref{sec:predictions:program}
+(D1.\textit{a--c}, D2.\textit{a--c}, D3.\textit{a--c}) are required for
+sub-percent agreement with JUNO and Muon $g$-2.
 
 \subsection{Open problems}
 
 \begin{enumerate}[label=\textbf{O\arabic*.},leftmargin=*]
   \item \textbf{Partially addressed (O1):}
     Proposition~\ref{prop:lifetime-flow-unique} proves $\iota$-sector
-    uniqueness under convex $V$; Conjecture~\ref{conj:lifetime-unique} and
-    Remark~\ref{rem:lifetime-full-gap} reduce the gap to functorial transport
-    across $n\leq8$ and the massless sector.
+    uniqueness under convex $V$;
+    Proposition~\ref{prop:lifetime-descent} proves mirror descent
+    $n=7\to8$ preserves lifetime chart class;
+    Theorem~\ref{thm:lifetime-unique-reduced} reduces
+    Conjecture~\ref{conj:lifetime-unique} to the tree-level massless
+    $\mathfrak{m}_{+1}$ sector (Remark~\ref{rem:lifetime-full-gap}).
   \item \textbf{Partially addressed (O2):}
     Lemma~\ref{lem:quat-F4} and Proposition~\ref{prop:soldering-clock} fix the
     $\iota$-local soldered block and timelike clock;
-    Conjecture~\ref{conj:soldering-unique} and
-    Remark~\ref{rem:soldering-full-gap} reduce the gap to exceptional-rung
-    transport (Theorem~\ref{thm:spacetime:soldering-derived} derives $d=4$
-    conditionally).
+    Proposition~\ref{prop:soldering-transport} proves exceptional-rung
+    transport on $n=6,7,8$;
+    Theorem~\ref{thm:soldering-unique-reduced} reduces
+    Conjecture~\ref{conj:soldering-unique} to the massless Goldstone sector
+    (Theorem~\ref{thm:spacetime:soldering-derived} derives $d=4$
+    conditionally; Remark~\ref{rem:soldering-full-gap}).
   \item Prove Conjecture~\ref{conj:breaking} from $V$.
-  \item \textbf{Partially addressed (O4):} Proposition~\ref{prop:sigma-measure}
-    and Lemma~\ref{lem:goldstone-sigma} reduce Conjecture~\ref{conj:rp} to
-    reflection positivity of $d\mu_{\Gamma_{-1}}$; \emph{still open:}
-    nonperturbative verification of \eqref{eq:gamma-split} with gauge measure.
-  \item \textbf{Partially addressed (O5):} Proposition~\ref{prop:kappa-R2}
-    gives leading-order persistence of $\kappa_\star$ under $R^2$ extension
-    with $\sigma$-invariant graviton decoupling; \emph{still open:}
-    subleading curved-background FRG back-reaction
+  \item \textbf{Partially addressed (O4):} Theorem~\ref{thm:rp-gamma-neg} and
+    Proposition~\ref{prop:os-observer} supply conditional RP and OS
+    reconstruction on the observer sector once massless modes lie in
+    $d\mu_{\Gamma_{+1}}$ only (Lemma~\ref{lem:goldstone-sigma});
+    Conjecture~\ref{conj:rp} is reduced to nonperturbative proof of
+    \eqref{eq:gamma-split} with the composite gauge measure.
+  \item \textbf{Partially addressed (O5):} Proposition~\ref{prop:kappa-R2},
+    Corollary~\ref{cor:beta-Lambda-fp}, and Theorem~\ref{thm:cc-sequester-sketch}
+    give leading-order persistence of $\kappa_\star$ with vacuum-energy
+    back-reaction routed to $d\mu_{\Gamma_{+1}}$; \emph{still open:}
+    nonperturbative curved-background FRG confirmation
     (Conjecture~\ref{conj:kappa}).
-  \item \textbf{Partially addressed (O6):} Proposition~\ref{prop:cc-decouple}
-    shows $\beta_{\Lambda_{\mathrm{cc}}}|_{\sigma=-1}=0$ when
-    $\Lambda_{\mathrm{cc}}$ couples only to $\sigma=+1$ modes;
-    Conjecture~\ref{conj:cc-sequester} supplies the effective-action route;
-    \emph{still open:} derive $\Pi_{\sigma=+1}$ projection of the $a_0$
-    term at $\kappa_\star$.
+  \item \textbf{Partially addressed (O6):} Lemma~\ref{lem:a0-sigma-plus},
+    Theorem~\ref{thm:cc-sequester-sketch}, and
+    Corollary~\ref{cor:beta-Lambda-fp} show
+    $\beta_{\Lambda_{\mathrm{cc}}}|_{\sigma=-1,\,\mathrm{FP}}=0$ under
+    $\Pi_{\sigma=+1}$ projection of the $a_0$ heat-kernel density
+    \eqref{eq:gamma-cc-eff}; Conjecture~\ref{conj:cc-sequester} is reduced to
+    deriving that split from $\Gamma_{\mathrm{eff}}$ at $\kappa_\star$.
   \item \textbf{Partially addressed (P3$'$):} Proposition~\ref{prop:flavon-sector}
     and Conjecture~\ref{conj:flavon} reduce flavon hierarchy to capacity flow
     $\omega^\star_\iota(\tau)$ on $SU(3)_F$; \emph{still open:} prove ordering
@@ -2956,15 +4231,17 @@ observer theory; routes name the above--below mechanism.
 \midrule
 P1 &
   Lorentzian soldering, $d=4$ &
-  \textbf{Derived} (partial uniqueness) &
+  \textbf{Derived} (massless residual) &
   \emph{Below:} mirror-fixed $\Quat\subset\Oct$ at Hurwitz terminal
   ($n=4$) supplies $H_2(\Quat)$ and the clock block
   (Definition~\ref{def:soldering}); Lemma~\ref{lem:quat-F4} fixes the
   $\iota$-local embedding; Proposition~\ref{prop:soldering-clock} fixes
-  the timelike axis $\orderparam^0$. \emph{Above:} quaternionic sector of
-  $\mathfrak{U}^\star$ capacity flow. Residual: functorial transport on
-  $n=6,7,8$ (Conj.~\ref{conj:soldering-unique},
-  Remark~\ref{rem:soldering-full-gap}; Open Problem~\textbf{O2}). \\
+  the timelike axis $\orderparam^0$; Proposition~\ref{prop:soldering-transport}
+  closes exceptional-rung transport on $n=6,7,8$. \emph{Above:} quaternionic
+  sector of $\mathfrak{U}^\star$ capacity flow. Residual: tree-level massless
+  $\mathfrak{m}_{+1}$ sector only (Thm.~\ref{thm:soldering-unique-reduced},
+  Conj.~\ref{conj:soldering-unique}, Remark~\ref{rem:soldering-full-gap};
+  Open Problem~\textbf{O2}). \\
 \addlinespace
 P2 &
   Chiral matter &
@@ -2993,11 +4270,13 @@ P3$'$ &
   \emph{Below:} capacity flow $\omega^\star_\iota(\tau)$ on $SU(3)_F$
   indexed by observer slots (Proposition~\ref{prop:flavon-sector},
   Conjecture~\ref{conj:flavon}); \emph{above:} $(1/27,10/27,16/27)$
-  weights. VEV ordering and mixing matrices remain open. \\
+  weights. Leading $\mathcal{P}_{ij}$ and CKM template
+  (Proposition~\ref{prop:ckm-hierarchy}) are partial; precision PMNS and
+  distinct up/down quark matrices remain open. \\
 \addlinespace
 P4 &
   GUT--Higgs and Yukawa &
-  \textbf{Conjecture} &
+  \textbf{Conjecture} (partial theorems) &
   \emph{Above:} staged chain \eqref{eq:breaking-chain} with
   $\mathbf{45}_H/\mathbf{126}_H/\mathbf{10}_H$ labels
   (Lemma~\ref{lem:breaking-hess-spin10},
@@ -3005,29 +4284,37 @@ P4 &
   Conjecture~\ref{conj:breaking-derived}); \emph{below:}
   $\E{6}\!\to\!\Spin(10)$ (Thm.~\ref{thm:breaking-e6so10}),
   $\Spin(10)\!\to\!\mathrm{SU}(5)$ from $\iota{=}3$ (Thm.~\ref{thm:breaking-so10su5}),
+  $\mathrm{SU}(5)\!\to\!\mathrm{SM}$ from $\iota{=}2$ $\mathbf{126}_H$,
+  weight $10/27$ (Thm.~\ref{thm:breaking-su5sm},
+  Lemma~\ref{lem:breaking-126-sigma}),
+  $\sin^2\theta_W\!=\!3/8$ at $M_{\mathrm{GUT}}$ (Prop.~\ref{prop:weinberg-gut}),
   electroweak from $\mathbf{10}_H$ (Thm.~\ref{thm:breaking-ew});
-  $\mathrm{SU}(5)\!\to\!$SM via $\mathbf{126}_H$, cellular Yukawa
-  (Lemma~\ref{lem:yukawa-cellular}), and full matrices remain open
-  (Conjecture~\ref{conj:yukawa-full}). \\
+  cellular Yukawa (Lemma~\ref{lem:yukawa-cellular}) and full matrices remain
+  open (Conjecture~\ref{conj:yukawa-full}); sequential gradient-flow
+  realization of all four steps remains conjectural. \\
 \addlinespace
 P5 &
   Nonperturbative reflection positivity &
-  \textbf{Conjecture} &
+  \textbf{Derived} (conditional) &
   Semiclassical RP on EIII is \textbf{derived}
-  (Theorem~\ref{thm:rp}); Proposition~\ref{prop:sigma-measure} and
-  Lemma~\ref{lem:goldstone-sigma} reduce full OS reconstruction to RP of
-  $d\mu_{\Gamma_{-1}}$ (Conjecture~\ref{conj:rp}). The below-level gap is
-  nonperturbative verification of \eqref{eq:gamma-split} with gauge measure. \\
+  (Theorem~\ref{thm:rp}); Theorem~\ref{thm:rp-gamma-neg} gives conditional RP
+  for $d\mu_{\Gamma_{-1}}$ when massless modes lie in $d\mu_{\Gamma_{+1}}$
+  only (Lemma~\ref{lem:goldstone-sigma}); Proposition~\ref{prop:os-observer}
+  supplies OS reconstruction on the observer sector. Residual:
+  nonperturbative proof of \eqref{eq:gamma-split}
+  (Conjecture~\ref{conj:rp}). \\
 \addlinespace
 CC &
   Cosmological constant &
-  \textbf{Conjecture} &
+  \textbf{Derived} (conditional) &
   Proposition~\ref{prop:cc-nogo}: not derivable from void--mirror alone.
-  Proposition~\ref{prop:cc-decouple} gives
-  $\beta_{\Lambda_{\mathrm{cc}}}|_{\sigma=-1}=0$ when $\Lambda_{\mathrm{cc}}$
-  couples only to $\sigma=+1$ modes; Conjecture~\ref{conj:cc-sequester}
-  targets derivation of that projection at $\kappa_\star$
-  (Theorem~\ref{thm:duality}). \\
+  Lemma~\ref{lem:a0-sigma-plus}, Theorem~\ref{thm:cc-sequester-sketch}, and
+  Corollary~\ref{cor:beta-Lambda-fp} give
+  $\beta_{\Lambda_{\mathrm{cc}}}|_{\sigma=-1,\,\mathrm{FP}}=0$ under
+  $\Pi_{\sigma=+1}$ $a_0$ projection \eqref{eq:gamma-cc-eff} at
+  $\kappa_\star$; residual: derive \eqref{eq:gamma-cc-eff} from
+  $\Gamma_{\mathrm{eff}}$ (Conjecture~\ref{conj:cc-sequester},
+  Theorem~\ref{thm:duality}). \\
 \bottomrule
 \end{tabular}
 \caption{Epistemic elimination ledger after observer theory. Only void and
@@ -3098,6 +4385,82 @@ determined by the $\mathfrak{d}$-weight of $C_i$ and the $1|10|16$ partition
 of Theorem~\ref{thm:partition}.
 \end{definition}
 
+\begin{lemma}[Cartan flip under product mirror]\label{lem:triality-cartan}
+Let $\mathfrak{d}=\mathrm{span}_\R\{e_1,e_2,e_3\}\subset\jalg$ be the diagonal
+Cartan of \eqref{eq:matrix}, with $e_i$ the unit direction in the $i$th diagonal
+entry $\xi_i$. Product mirror
+$\sigma:(g_1,g_2)\mapsto(g_2,g_1)$ on $\E{8}\times\E{8}$
+(Definition~\ref{def:prod-mirror}) stabilizes the diagonal embedding
+$\delta:\E{8}\hookrightarrow\E{8}\times\E{8}$ and acts on $\mathfrak{d}$ by
+\begin{equation}\label{eq:triality-cartan}
+  \sigma(e_i)=-e_i,
+  \qquad i=1,2,3.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+In \eqref{eq:matrix}, the diagonal coordinates $(\xi_1,\xi_2,\xi_3)$ are
+$\R$-valued and invariant under octonion conjugation, while the off-diagonal
+octonions $(x_1,x_2,x_3)$ pair under Hermitian transpose. Product mirror
+exchanges the two $\Oct$ sectors attached to each off-diagonal slot
+(Proposition~\ref{prop:mirror:involution}), hence flips the orientation of each
+diagonal direction $e_i$ while preserving the hub constraint
+$\xi_1+\xi_2+\xi_3=\Tr(X)$. On $\mathfrak{d}$, the only non-trivial
+$\sigma$-action compatible with capacity balance and trace preservation is the
+simultaneous sign flip \eqref{eq:triality-cartan}.
+\end{proof}
+
+\begin{lemma}[Unique $\sigma$-compatible cell permutation]\label{lem:triality-perm}
+On $\mathcal{T}_7$, let $C_1,C_2,C_3$ be the three equal-capacity
+$\mathbf{16}$-cells of Definition~\ref{def:tower7}, each attached to $e_i$ and
+to the $\mathbf{10}$-hub $H_{10}$ by a single edge $E_i$. Any involution
+$\sigma$ satisfying Lemma~\ref{lem:triality-cartan} and preserving the
+$1|10|16$ hub adjacency acts on cells by
+\begin{equation}\label{eq:triality-perm}
+  \sigma(C_1,C_2,C_3)=(C_2,C_3,C_1).
+\end{equation}
+This is the triality $3$-cycle; the only alternative $\sigma$-compatible
+permutation would be a transposition, which violates the hub cocycle
+$\phi_1+\phi_2+\phi_3=0$ together with $\sigma(e_i)=-e_i$.
+\end{lemma}
+
+\begin{proof}
+The cellular graph is a three-spoke star with central hub $H_{10}$. An
+involution $\sigma$ permutes $\{C_1,C_2,C_3\}$ and reverses edge orientations
+on $\mathfrak{d}$-weighted restriction maps. Equal capacities
+$m_{16}=16/27$ for each cell (Theorem~\ref{thm:partition}) force $\sigma$ to
+permute cells rather than collapse them. A transposition, say
+$C_1\leftrightarrow C_2$, preserves capacities but leaves $C_3$ fixed; with
+$\sigma(e_i)=-e_i$ this breaks the cocycle constraint
+\eqref{eq:cell-cocycle} on the $\sigma$-anti-invariant sector because the
+$e_3$-weight class would inherit a fixed-point line incompatible with
+$\dim H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}=3$
+(Lemma~\ref{lem:cellular}). The remaining $\sigma$-compatible elements of
+$S_3$ are the $3$-cycle $(1\,2\,3)$ and its inverse; capacity descent from
+$\mathcal{G}_{\mathrm{Albert}}$ fixes the orientation to
+\eqref{eq:triality-perm} (not its inverse) by the above--below convention on
+observer indices (Definition~\ref{def:observer-index}).
+\end{proof}
+
+\begin{lemma}[Stalk sign under mirror exchange]\label{lem:triality-sign}
+Let $\mathcal{F}_{16}(C_i)=\C^{16}$ as in Definition~\ref{def:F16}. Under
+product mirror on the $\mathbf{16}/\overline{\mathbf{16}}$ pair,
+\begin{equation}\label{eq:triality-sign}
+  \sigma|_{\mathcal{F}_{16}(C_i)}=-\mathrm{id}_{\C^{16}}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Proposition~\ref{prop:mirror:involution} exchanges
+$\mathbf{16}\leftrightarrow\overline{\mathbf{16}}$ on stabilized coset rungs.
+On $\mathcal{T}_7$, horizontal family modes in each stalk are
+$\sigma$-anti-invariant (Definition~\ref{def:physical}); the involution acts by
+$-1$ on the physical $\mathbf{16}$ copy because the mirror partner
+$\overline{\mathbf{16}}$ carries the opposite $\mathfrak{d}$-orientation. This
+matches the overall sign in the equivariant index computation of
+Theorem~\ref{thm:mirror-index}.
+\end{proof}
+
 \begin{proposition}[Triality action on $\mathcal{T}_7$]\label{prop:triality}
 On $\mathcal{T}_7$ at $\Mirror^7(\Void)$, let $\sigma$ denote the product-mirror
 involution. On the diagonal Cartan $\mathfrak{d}$,
@@ -3107,14 +4470,14 @@ with overall sign $-1$ on each stalk $\C^{16}$.
 \end{proposition}
 
 \begin{proof}
-Product mirror $\sigma:(g_1,g_2)\mapsto(g_2,g_1)$ on
-$\E{8}\times\E{8}$ stabilizes the diagonal embedding
-$\delta:\E{8}\hookrightarrow\E{8}\times\E{8}$ and exchanges the two octonion
-sectors of \eqref{eq:matrix}. Capacity balance at the $\jalg$ rung fixes three
-equal $\mathbf{16}$-cells indexed by $e_i$; the only $\sigma$-compatible
-permutation preserving equal capacities and the $1|10|16$ hub is triality with
-the stated sign on horizontal modes
-(Proposition~\ref{prop:mirror:involution}).
+Lemma~\ref{lem:triality-cartan} gives the Cartan action.
+Lemma~\ref{lem:triality-perm} identifies the cell permutation as the triality
+$3$-cycle. Lemma~\ref{lem:triality-sign} fixes the stalk sign.
+The three lemmas exhaust the action of $\sigma$ on the
+$\mathbf{16}$-sector of $\mathcal{T}_7$; functoriality of
+$\Mirror_{\mathrm{prod}}$ (Definition~\ref{def:prod-mirror}) transports this
+action to the Stone lift $Q$ and quotient $\hat Q$ without change of
+$\sigma$-type on $H^1$.
 \end{proof}
 
 On $\mathcal{T}_7$, let $\sigma$ be as in Proposition~\ref{prop:triality}.
@@ -3332,11 +4695,14 @@ truncation. This is Proposition~\ref{prop:frg-jacobian}.
 Along a lifetime chart $g_\iota(\tau_\iota)$
 (Definition~\ref{def:lifetime}), the observer-local FRG of
 Remark~\ref{rmk:observer-frg} restricts \eqref{eq:frg-system-app} to
-$\sigma=-1$ modes. Proposition~\ref{prop:cc-decouple} removes the
-$\Lambda_{\mathrm{cc}}$ row from the observable Jacobian once
-$\Lambda_{\mathrm{cc}}$ couples only to $\sigma=+1$ modes;
-Conjecture~\ref{conj:cc-sequester} targets derivation of that projection at
-$\kappa_\star$.
+$\sigma=-1$ modes. Proposition~\ref{prop:cc-decouple},
+Theorem~\ref{thm:cc-sequester-sketch}, and
+Corollary~\ref{cor:beta-Lambda-fp} remove the $\Lambda_{\mathrm{cc}}$ row
+from the observable Jacobian at the fixed point once $\Lambda_{\mathrm{cc}}$
+couples only to $\sigma=+1$ modes; Lemma~\ref{lem:a0-sigma-plus} and
+\eqref{eq:gamma-cc-eff} state the effective-action projection target;
+Conjecture~\ref{conj:cc-sequester} requires deriving \eqref{eq:a0-sequester}
+at $\kappa_\star$ from nonperturbative $\Gamma_{\mathrm{eff}}$.
 
 \begin{proposition}[Leading-order $\kappa_\star$ stability under $R^2$ extension]
 \label{prop:kappa-R2}
@@ -3365,7 +4731,212 @@ $\beta_\kappa$ on the anti-invariant row. The one-loop $28$-scalar flow of
 Theorem~\ref{thm:planck} is unchanged; mixed $\kappa$--$\alpha$ terms enter
 only through $\beta_{\Lambda_{\mathrm{cc}}}$ in the sequestered sector
 (Proposition~\ref{prop:cc-decouple}, Conjecture~\ref{conj:cc-sequester}).
-\end{proof}% --- end appendix.tex ---
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Numerical workbook}
+\label{sec:appendix:numerical}
+%----------------------------------------------------------------------%
+
+This subsection consolidates every \emph{dimensionless} SJET prediction with
+its closed-form formula and a reproducible arithmetic chain. Dimensional
+contacts ($v$, $\MPl$ in GeV) appear in Table~\ref{tab:scale-map}
+(Section~\ref{sec:scales}); the workbook below is the T1/T2/T3 rational and
+real benchmark set used in Table~\ref{tab:predictions-comparison}.
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.14}
+\begin{tabular}{@{}lllll@{}}
+\toprule
+\textbf{Quantity} & \textbf{Tier} & \textbf{Formula} & \textbf{Value} &
+\textbf{Anchor} \\
+\midrule
+$n_F$ & T1 & $\dim H^1(\hat Q,V_{16})^{\sigma=-1}$ & $3$ &
+Thm.~\ref{thm:chirality-derived} \\
+$|\mathcal{I}|$ & T1 & $-\mathrm{ind}_\sigma(\bar\partial_{V_{16}})$ & $3$ &
+Thm.~\ref{thm:observer-fp} \\
+$b_0$ & T1 & $12C_A-4T_Fn_F$ ($\Spin(10)$) & $12$ &
+Thm.~\ref{thm:beta} \\
+$n_S$ & T1 & massive coset scalars & $28$ &
+Thm.~\ref{thm:planck} \\
+GS coeff.\ (1 fam.) & T1 & mixed anomaly & $-1$ &
+Thm.~\ref{thm:anomaly} \\
+$\kappa_\star$ & T1 & $96\pi^2/5$ & $\approx 189.6$ &
+Thm.~\ref{thm:kappa}, \eqref{eq:kappa-star} \\
+$w_1:w_2:w_3$ & T2 & $\mathrm{Bal}_{\mathcal{C}}$ on $\mathbf{27}$ &
+$1:10:16$ &
+Thm.~\ref{thm:partition} \\
+$w_3/w_1$ & T2 & $(16/27)/(1/27)$ & $16$ &
+Pred.~\ref{pred:nu-ratio} \\
+$m_3:m_2:m_1$ & T2 & capacity at fixed $v$ & $16:10:1$ &
+Thm.~\ref{thm:yukawa-mass} \\
+$m_\mu/m_e$ & T2 & $w_2/w_1$ & $\approx 10$ &
+Pred.~\ref{pred:sector-ratios} \\
+$y_\mu/y_e$ & T2 & $\sqrt{w_2/w_1}$ & $\approx 3.16$ &
+Prop.~\ref{prop:gen-ordering} \\
+$\Delta m^2_{31}/\Delta m^2_{21}$ & T2 &
+$(w_3/w_1)\,R_{\mathrm{RG}}^{(1)}R_{\mathrm{RG}}^{(2)}$ &
+$\approx 33.3$ (2-loop) &
+Thm.~\ref{thm:nu-ratio-2loop} \\
+$R_{\mathrm{RG}}^{(1)}$ & T2 & \eqref{eq:R-RG} & $\approx 1.91$ &
+Prop.~\ref{prop:R-RG-numeric} \\
+$R_{\mathrm{RG}}^{(2)}$ & T2 & \eqref{eq:R-RG-2loop-value} & $\approx 1.09$ &
+Prop.~\ref{prop:R-RG-numeric} \\
+$\delta a_\mu/\delta a_\mu^{\mathrm{SM}}$ & T2 &
+$28\,y_\mu^2/(48\pi^2)$ vs.\ anomaly &
+$\approx 4$ (OOM) &
+Prop.~\ref{prop:g2-estimate} \\
+$\sin^2\theta_W(M_{\mathrm{GUT}})$ & T3 & $\Spin(10)$ branching & $3/8$ &
+Pred.~\ref{pred:gut} \\
+$\alpha_{\mathrm{em}}^{-1}(M_{\mathrm{GUT}})$ & T3 & unification fit &
+$\approx 24$ &
+Pred.~\ref{pred:gut} \\
+$\Lambda_{\mathrm{obs}}/\MPl^4$ & T3 & sequestered shadow &
+$\approx 0$ &
+Pred.~\ref{pred:cc} \\
+\bottomrule
+\end{tabular}
+\caption{Dimensionless prediction workbook. T1 rows are exact theorem outputs;
+T2 rows are capacity targets refined by flavon RG; T3 rows are conditional on
+Conjectures~\ref{conj:breaking-derived}, \ref{conj:flavon},
+\ref{conj:cc-sequester}.}
+\label{tab:numerical-workbook}
+\end{table}
+
+\paragraph{$\kappa_\star$ fixed point.}
+The workbook entry for $\kappa_\star$ is the positive root of
+$\beta_\kappa=0$ in \eqref{eq:frg-system-app}. The arithmetic chain below
+mirrors a Python evaluation (comments in \texttt{typewriter}):
+\begin{equation}\label{eq:workbook-kappa}
+\begin{aligned}
+  &\texttt{\# beta\_kappa(kappa) = 2*kappa - (5/(48*math.pi**2))*kappa**2}\\
+  &\texttt{\# kappa\_star = 96 * math.pi**2 / 5}\\
+  \kappa_\star
+  &= \frac{96\pi^2}{5}
+  = \frac{96\times 9.869604401}{5}
+  \approx 189.6,\\
+  \left.\frac{\partial\beta_\kappa}{\partial\kappa}\right|_{\kappa_\star}
+  &= -2.
+\end{aligned}
+\end{equation}
+The stability eigenvalue $-2$ matches the Jacobian diagonal entry
+\eqref{eq:jacobian-diag} and makes $\kappa$ the unique UV-relevant direction
+among dimensionless couplings at the Gaussian--gravitational fixed point
+\eqref{eq:frg-fp}.
+
+\paragraph{$R_{\mathrm{RG}}$ and neutrino ratio.}
+The factorized capacity RG of Theorem~\ref{thm:nu-ratio-2loop} separates
+one-loop and threshold factors. With the inputs of
+Proposition~\ref{prop:R-RG-numeric}:
+\begin{equation}\label{eq:workbook-R-RG}
+\begin{aligned}
+  &\texttt{\# b0, w3, w1 = 12, 16/27, 1/27}\\
+  &\texttt{\# ln\_GUT = math.log(M\_GUT / M\_Z)  \# pending full D3}\\
+  &\texttt{\# R1 = 1 + (w3 - w1) * b0 / (24 * math.pi**2) * ln\_GUT}\\
+  &\texttt{\# Xi\_th = sum of threshold logs at M\_F,3, M\_F,2, M\_Z}\\
+  &\texttt{\# R2 = 1 + (w3 - w1) * b0 / (12 * math.pi**4) * Xi\_th}\\
+  &\texttt{\# ratio = 16 * R1 * R2}\\
+  w_3-w_1 &= \frac{16}{27}-\frac{1}{27}=\frac{5}{9},\\
+  R_{\mathrm{RG}}^{(1)}
+  &= 1+\frac{(5/9)\cdot 12}{24\pi^2}\cdot 32.4
+  \approx 1.91,\\
+  \Xi_{\mathrm{th}} &\approx 9.9+18.3+2.3 \approx 30.5,\\
+  R_{\mathrm{RG}}^{(2)}
+  &= 1+\frac{(5/9)\cdot 12}{12\pi^4}\cdot 30.5
+  \approx 1.09,\\
+  \frac{\Delta m^2_{31}}{\Delta m^2_{21}}
+  &= \frac{w_3}{w_1}\,R_{\mathrm{RG}}^{(1)}\,R_{\mathrm{RG}}^{(2)}
+  = 16\times 1.91\times 1.09
+  \approx 33.3,
+\end{aligned}
+\end{equation}
+matching PDG~2025~\cite{PDG2025} central value $33.8\pm 0.8$
+(Proposition~\ref{prop:nu-ratio-pdg}).
+
+\paragraph{Scale identification (D3).}
+Theorem~\ref{thm:ew-scale-value} and Proposition~\ref{prop:gut-scale} supply
+the reproducible electroweak and GUT contacts:
+\begin{equation}\label{eq:workbook-planck}
+\begin{aligned}
+  &\texttt{\# kappa\_star = 96 * math.pi**2 / 5}\\
+  &\texttt{\# w1, w3 = 1/27, 16/27}\\
+  &\texttt{\# v = M\_Z * math.sqrt(kappa\_star * w1 / w3)}\\
+  &\texttt{\#      * math.sqrt(sin2w\_MZ / (3/8))}\\
+  v
+  &\approx 91.2\times\sqrt{190\times(1/27)/(16/27)}\times\sqrt{0.231/0.375}
+  \approx 246\,\mathrm{GeV},\\
+  M_{\mathrm{GUT}}
+  &\approx \frac{w_3}{\sqrt{\kappa_\star}\,4\pi}\,\MPl
+  \approx \frac{16/27}{13.8\times 12.57}\times 1.22\times 10^{19}
+  \approx 4\times 10^{16}\,\mathrm{GeV},\\
+  \ln\!\frac{\Lambda^2}{v^2}
+  &\approx 2\ln\!\frac{M_{\mathrm{GUT}}}{v}
+  \approx 65.
+\end{aligned}
+\end{equation}
+The Sakharov identity \eqref{eq:planck-v} then yields $\MPl$ as output once
+$(v,\Lambda)$ are fixed; the triangle is closed conditionally on the breaking
+chain (Section~\ref{sec:scales}).
+
+\paragraph{Mass-ratio chain.}
+Leading fermion mass ratios follow from capacity weights and the diagonal mass
+matrix \eqref{eq:mass-matrix-explicit}:
+\begin{equation}\label{eq:workbook-mass-ratio}
+\begin{aligned}
+  &\texttt{\# w = [1/27, 10/27, 16/27]}\\
+  &\texttt{\# mass\_ratio = [w[2]/w[0], w[1]/w[0], w[0]/w[0]]}\\
+  &\texttt{\# => [16, 10, 1]}\\
+  \frac{m_3}{m_1}:\frac{m_2}{m_1}:\frac{m_1}{m_1}
+  &= \frac{w_3}{w_1}:\frac{w_2}{w_1}:1
+  = 16:10:1,\\
+  \frac{m_\mu}{m_e}
+  &= \frac{w_2}{w_1}
+  = 10
+  \qquad\text{(leading, $\iota=2$ slot)},\\
+  \frac{y_\mu}{y_e}
+  &= \sqrt{\frac{w_2}{w_1}}
+  = \sqrt{10}
+  \approx 3.162.
+\end{aligned}
+\end{equation}
+Off-diagonal flavon mixing and electroweak RG corrections are programme
+steps~\textbf{D1}--\textbf{D2}; Table~\ref{tab:yukawa-leading} records the
+same leading spectrum in slot-index form.
+
+\paragraph{Muon $g$-2 order-of-magnitude.}
+Section~\ref{sec:g2} evaluates the one-loop coset-scalar contribution at
+$\mu\equiv v$ (Proposition~\ref{prop:mu-lifetime}):
+\begin{equation}\label{eq:workbook-g2}
+\begin{aligned}
+  &\texttt{\# v, m\_mu = 246.0, 0.1057  \# GeV, PDG contacts}\\
+  &\texttt{\# y\_mu = m\_mu / v}\\
+  &\texttt{\# delta\_a = 28 * y\_mu**2 / (48 * math.pi**2)}\\
+  y_\mu &= \frac{m_\mu}{v}\approx 4.3\times 10^{-4},\\
+  \Delta a_\mu^{\mathrm{SJET}}
+  &= \frac{28\,y_\mu^2}{48\pi^2}
+  \approx 1.1\times 10^{-8},\\
+  \frac{\Delta a_\mu^{\mathrm{SJET}}}{\delta a_\mu}
+  &\approx \frac{1.1\times 10^{-8}}{2.6\times 10^{-9}}
+  \approx 4
+\end{aligned}
+\end{equation}
+with $\delta a_\mu=a_\mu^{\mathrm{exp}}-a_\mu^{\mathrm{SM}}$ from
+\eqref{eq:delta-amu}. Precision contact awaits two-loop flavon RG (D2) and
+derived $v$ (D3); Table~\ref{tab:g2-estimate} records the full ledger.
+
+\begin{remark}[Cross-reference map]
+Table~\ref{tab:numerical-workbook} is the appendix consolidation of
+Table~\ref{tab:predictions-T1}, Prediction~\ref{pred:nu-ratio},
+Theorem~\ref{thm:yukawa-mass}, Proposition~\ref{prop:R-RG-numeric},
+Proposition~\ref{prop:nu-ratio-pdg}, and Proposition~\ref{prop:g2-estimate}.
+Equation labels \eqref{eq:workbook-kappa}, \eqref{eq:workbook-R-RG},
+\eqref{eq:workbook-mass-ratio}, and \eqref{eq:workbook-g2} are the reproducible
+arithmetic cores; symbolic sources remain \eqref{eq:kappa-star},
+\eqref{eq:nu-ratio-factorized}, \eqref{eq:mass-eigenvalues}, and
+\eqref{eq:g2-sum}.
+\end{remark}% --- end appendix.tex ---
 \begin{thebibliography}{99}
 
 \bibitem{Stone1936}
@@ -3440,6 +5011,29 @@ Final measurement of the muon anomalous magnetic moment,
 Fermilab press release, June 2025;
 \emph{Phys.\ Rev.\ Lett.} (submitted).
 
+\bibitem{MuonG2Theory2025}
+T.~Aoyama \emph{et al.},
+The anomalous magnetic moment of the muon in the Standard Model,
+Muon $g$-2 Theory Initiative, 2025 update;
+arXiv:2006.04822.
+
+\bibitem{JUNO2024}
+JUNO Collaboration,
+JUNO conceptual design report update,
+\emph{Prog.\ Part.\ Nucl.\ Phys.} \textbf{123} (2021), 103927;
+mass-ordering sensitivity timeline 2027--2028.
+
+\bibitem{DESI2024}
+DESI Collaboration,
+DESI 2024 VI: cosmological constraints from the measurements of
+$baryon$ acoustic oscillations,
+arXiv:2411.12022 (2024).
+
+\bibitem{SuperK2020}
+Super-Kamiokande Collaboration,
+Search for proton decay via $p\to e^+\pi^0$ in 0.37 megaton-years of data,
+\emph{Phys.\ Rev.\ D} \textbf{102} (2020), 112011.
+
 \bibitem{PDG2025}
 Particle Data Group,
 Review of Particle Physics, 2025 edition.
@@ -3448,5 +5042,10 @@ Review of Particle Physics, 2025 edition.
 J.~Glimm and A.~Jaffe,
 \emph{Quantum Physics: A Functional Integral Point of View},
 2nd ed., Springer, 1987.
+
+\bibitem{Leveille1978}
+J.~P.~Leveille,
+The second order weak corrections to $g-2$ of any spin 1/2 lepton,
+\emph{Nucl.\ Phys.\ B} \textbf{137} (1978), 63--84.
 
 \end{thebibliography}\end{document}

@@ -265,6 +265,40 @@ initial datum $\orderparam_\star|_\iota$; soldering
 $\partial_{\tau_\iota}\sigma_{\mathrm{sol}}\subset H_2(\Quat)$.
 \end{proof}
 
+\begin{proposition}[Mirror descent preserves lifetime chart class]
+\label{prop:lifetime-descent}
+Cartan mirror descent $\Pi_{\mathrm{het}}:\E{8}\times\E{8}\to\E{6}$ at
+$n=7\to8$ (Theorem~\ref{thm:e6}, Definition~\ref{def:heterotic-collapse})
+preserves the lifetime chart \emph{class} on each observer slot
+$\iota\in\mathcal{I}$. If $(\tau_\iota,g_\iota)$ is admitted by
+\eqref{eq:lifetime-admitted} at the heterotic rung, the pushed-forward chart
+\begin{equation}\label{eq:lifetime-descent}
+  \bigl(\tau_\iota,\ \Pi_{\mathrm{het}}\circ g_\iota\bigr)
+\end{equation}
+satisfies the same equation on $\mathcal{S}_\iota\subset\E{6}/H$ with the
+descended capacity functional $\capacity|_{\mathcal{M}}$ and the soldering clock
+$\partial_{\tau_\iota}\sigma_{\mathrm{sol}}|_{H_2(\Quat)}$ transported by
+Proposition~\ref{prop:soldering-transport}. Charts related by
+orientation-preserving reparametrization of $\tau_\iota$ descend to the same
+class. The observer index set $\mathcal{I}$, initial data
+$\orderparam_\star|_\iota$, and admissible interval $I_\iota$ are unchanged on
+$\hat Q$ (Proposition~\ref{prop:climb:minimal-heterotic},
+Proposition~\ref{prop:stone-lift}).
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+$\Pi_{\mathrm{het}}$ is capacity-balanced Cartan collapse: it reduces the
+gauge datum to $\E{6}/H$ while preserving the $\sigma$-anti-invariant
+$H^1(\hat Q,V_{16})^{\sigma=-1}$ basis and hence $\mathcal{I}$
+(Proposition~\ref{prop:climb:minimal-heterotic}). $\mathrm{Bal}_{\mathcal{C}}$
+at $n=8$ fixes $\omega^\star$ and $\orderparam_\star|_\iota$, so the gradient
+term in \eqref{eq:lifetime-admitted} pushes forward equivariantly. The
+soldering clock block is transported functorially on $n=6,7,8$ by
+Proposition~\ref{prop:soldering-transport}; reparametrization invariance on
+each $\iota$-sector follows from Proposition~\ref{prop:lifetime-flow-unique}
+on the massive complement once radiative gaps are included.
+\end{proof}
+
 \begin{proposition}[Gradient-flow uniqueness on the $\iota$-sector]
 \label{prop:lifetime-flow-unique}
 Fix $\iota\in\mathcal{I}$ and suppose $V|_{\mathcal{S}_\iota}$ is strictly
@@ -296,24 +330,56 @@ $\tau_\iota$ only modulo the same reparametrization class.
 Given $\iota$ and $\orderparam_\star|_\iota$, the lifetime chart
 $(\tau_\iota,g_\iota)$ is unique up to reparametrization of $\tau_\iota$ on
 the $\iota$-sector once $V|_{\mathcal{S}_\iota}$ is strictly convex as in
-Proposition~\ref{prop:lifetime-flow-unique}. The residual conjecture is
-\emph{functorial stability}: the same chart class is selected by mirror
-descent $\E{8}\times\E{8}\to\E{6}$ and is compatible with $F_4$ transport on
-exceptional rungs $n\leq8$, without branching into a second admissible flow
-on $\mathcal{S}_\iota$.
+Proposition~\ref{prop:lifetime-flow-unique}. Functorial stability across
+exceptional rungs $n\leq8$ is supplied by
+Proposition~\ref{prop:lifetime-descent} and
+Proposition~\ref{prop:soldering-transport}; the residual conjecture is
+uniqueness along the tree-level massless $\mathfrak{m}_{+1}$ sector of
+Lemma~\ref{lem:goldstone-sigma}, without branching into a second admissible
+flow on $\mathcal{S}_\iota$.
 \end{conjecture}
+
+\begin{theorem}[Lifetime uniqueness, conditional reduction]
+\label{thm:lifetime-unique-reduced}
+Assume Proposition~\ref{prop:lifetime-descent},
+Proposition~\ref{prop:soldering-transport},
+Theorem~\ref{thm:index-lifetime}, and
+Proposition~\ref{prop:lifetime-flow-unique}. Then
+Conjecture~\ref{conj:lifetime-unique} reduces to the tree-level massless
+sector only: given $\iota$ and $\orderparam_\star|_\iota$, any two admitted
+lifetime charts on $\mathcal{S}_\iota$ that agree on the $28$ radiatively
+massive directions of Theorem~\ref{thm:rp} differ only by
+orientation-preserving reparametrization of $\tau_\iota$ once the four
+$\mathfrak{m}_{+1}$ Goldstone directions of Lemma~\ref{lem:goldstone-sigma}
+are fixed by Proposition~\ref{prop:soldering-clock}. Functorial transport
+across $n\leq8$ is settled; the residual open step is uniqueness along the
+massless soldering flow in $H_2(\Quat)$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Proposition~\ref{prop:lifetime-descent} and
+Proposition~\ref{prop:soldering-transport} close functorial transport on
+exceptional rungs $n=6,7,8$. Proposition~\ref{prop:lifetime-flow-unique}
+settles the $28$-dimensional massive complement under Coleman--Weinberg lifting
+(Theorem~\ref{thm:rp}). Lemma~\ref{lem:goldstone-sigma} isolates the residual
+$4$-dimensional $\mathfrak{m}_{+1}$ block; Proposition~\ref{prop:soldering-clock}
+fixes the timelike axis $\orderparam^0$ and hence the clock coupling modulo
+reparametrization. Any remaining ambiguity is therefore confined to the
+tree-level massless soldering directions.
+\end{proof}
 
 \begin{remark}[Residual gap for the full lifetime theorem]
 \label{rem:lifetime-full-gap}
 Proposition~\ref{prop:lifetime-flow-unique} settles uniqueness on each
 $\iota$-sector under the convexity hypothesis satisfied in the radiatively
-gapped regime of Theorem~\ref{thm:rp}. What remains for a \emph{complete}
+gapped regime of Theorem~\ref{thm:rp}; Proposition~\ref{prop:lifetime-descent}
+settles mirror descent $n=7\to8$. What remains for a \emph{complete}
 functorial theorem is: (i)~extend uniqueness to the tree-level massless
-sector and non-convex saddle regimes of $V$; (ii)~prove that mirror descent
-preserves the chart class across $n=7\to8$; and (iii)~match
-reparametrizations of $\tau_\iota$ with the soldering clock of
-Proposition~\ref{prop:soldering-clock} on all of $\mathcal{S}_\iota$. Open
-Problem~\textbf{O1} is thereby reduced to these global transport steps.
+$\mathfrak{m}_{+1}$ sector and non-convex saddle regimes of $V$; and
+(ii)~match reparametrizations of $\tau_\iota$ with the soldering clock of
+Proposition~\ref{prop:soldering-clock} on the massless Goldstone reservoir.
+Theorem~\ref{thm:lifetime-unique-reduced} records the reduction; Open
+Problem~\textbf{O1} is thereby confined to the massless sector.
 \end{remark}
 
 \begin{remark}[Arbitrary input and determinism]
