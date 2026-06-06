@@ -208,9 +208,9 @@ $G_2\times F_4\subset\E{8}$ is maximal; no smaller simple group contains the
 tower together with the mirrored octonion sector.
 
 \emph{Step 3 (dimension and Stone lift).}
-$d_6=\dim\E{8}=248$. The Stone spectrum $|S_6|$ is the profinite refinement
-of the $248$-dimensional observable chart; uniqueness and Albert compatibility
-are Theorem~\ref{thm:ladder:stone-e8}.
+$d_6=\dim\E{8}=248$. The synchronized Stone chart has
+$\chi(S_6)=248$ (Definition~\ref{def:ladder:chart-dim}); profinite
+refinement and Albert compatibility are Theorem~\ref{thm:ladder:stone-e8}.
 \end{proof}
 
 %----------------------------------------------------------------------%
@@ -350,9 +350,11 @@ Definitions~\ref{def:ladder:aut-mirror}--\ref{def:ladder:cartan-mirror}.
 
 \begin{definition}[Chart dimension]\label{def:ladder:chart-dim}
 For a stabilized rung $(S_n,A_n)$, the \emph{chart dimension} is
-$\chi(S_n):=\dim_{\R}A_n$. Along rungs $0$--$5$,
-$\chi(S_n)=|S_n|$ (Theorem~\ref{thm:void-mirror:table}); at $n\geq6$,
-$\chi(S_n)$ is the Lie chart size while $S_n$ is profinite.
+$\chi(S_n):=\dim_{\R}A_n$, a Lie/algebra chart size \emph{not} the profinite
+clopen cardinality $|S_n|$ when $S_n$ is an inverse limit. Along rungs
+$0$--$5$, $\chi(S_n)=|S_n|$ (Theorem~\ref{thm:void-mirror:table}); at
+$n\geq6$, $\chi(S_n)\in\{248,496,78\}$ while $|S_n|$ is generally infinite
+(profinite).
 \end{definition}
 
 \begin{definition}[Capacity balancing]\label{def:ladder:bal-capacity}
@@ -470,8 +472,8 @@ unchanged.
 \begin{theorem}[Stone refinement at exceptional rungs]
 \label{thm:ladder:stone-e8}
 There exist profinite Stone spaces $S_6,S_7,S_8$ as in
-\eqref{eq:ladder:stone-exc}, unique up to isomorphism in
-$\mathbf{Stone}^{\mathrm{exc}}$, such that:
+\eqref{eq:ladder:stone-exc}, unique up to chart-synchronized isomorphism in
+$\mathbf{Stone}^{\mathrm{exc}}$ (not classified by finite cardinality), such that:
 \begin{enumerate}[label=(\roman*),leftmargin=*]
   \item $\chi(S_6)=248$, $\chi(S_7)=496$, $\chi(S_8)=78$;
   \item $\Mirror_{\mathrm{St}}^{\mathrm{prod}}(S_6)=S_7$ and
@@ -482,10 +484,11 @@ $\mathbf{Stone}^{\mathrm{exc}}$, such that:
   \item the Albert--Cayley graph is the coarse capacity backbone: sector masses
     $(1/27,10/27,16/27)$ persist under all profinite refinements at $n\geq6$.
 \end{enumerate}
-Any alternative profinite refinements $|S'_6|$, $|S'_7|$, $|S'_8|$ compatible
+Any alternative profinite refinements $S'_6,S'_7,S'_8$ compatible
 with functoriality of $\Mirror$ and $\mathrm{Bal}_\capacity$ have chart
-dimensions $248$, $496$, and $78$ respectively, hence are isomorphic to
-$(S_6,S_7,S_8)$.
+dimensions $\chi(S'_6)=248$, $\chi(S'_7)=496$, and $\chi(S'_8)=78$
+respectively, hence are isomorphic to $(S_6,S_7,S_8)$ in
+$\mathbf{Stone}^{\mathrm{exc}}$.
 \end{theorem}
 
 \begin{proof}
@@ -516,7 +519,9 @@ $\Mirror_{\mathrm{prod}}$ forces $\chi(S'_7)=2\chi(S'_6)=496$
 Theorem~\ref{thm:ladder:e6} and the $1|10|16$ partition forces the Cartan
 descent to $\E{6}$, hence $\chi(S'_8)=78$. Fully faithfulness of
 $\mathrm{Arith}^{\mathrm{exc}}$ (Lemma~\ref{lem:ladder:aut-sync-exc}) pins
-each $S'_k$ up to unique isomorphism in $\mathbf{Stone}^{\mathrm{exc}}$.
+each $S'_k$ up to the unique chart-synchronized profinite lift fixed by
+$\chi$ and mirror functoriality---not by matching finite cardinalities
+$|S'_k|$.
 \end{proof}
 
 \begin{corollary}[Exceptional mirror--Stone equivalence]
@@ -541,8 +546,8 @@ and
 \end{corollary}
 
 \begin{remark}[Explicit cell labeling]\label{rem:ladder:stone-cells}
-Theorem~\ref{thm:ladder:stone-e8} proves uniqueness of the profinite
-\emph{chart} and sector mass compatibility with
+Theorem~\ref{thm:ladder:stone-e8} establishes uniqueness of the synchronized
+\emph{chart} $\chi$ and sector mass compatibility with
 $\mathcal{G}_{\mathrm{Albert}}$. An explicit bijection between the $248$
 clopen generators of $S_6$ and a Chevalley basis of $\mathfrak{e}_8$, and the
 sector-wise refinement counts under $G_2\times F_4\subset\E{8}$, is a
@@ -579,9 +584,49 @@ $m_i>0$, $\sum_i m_i=1$, there exists unique $\omega^\star$ with
 $\partial\capacity/\partial\omega_i(\omega^\star)=m_i$.
 \end{theorem}
 
+\begin{proof}
+For each $a\in V$ write $f_a(\omega)=-\log Z_a(\omega)$ with
+$Z_a(\omega)=\sum_i e^{c_i(a)-\omega_i}$. The map $\omega\mapsto Z_a(\omega)$
+is the log-sum-exp function, strictly convex on $\R^K$; hence $f_a$ is strictly
+concave. For $\mu(a)>0$, $\capacity=\sum_a\mu(a)f_a$ is strictly concave on
+$\R^K$ and restricts to a strictly concave function on the affine hyperplane
+$H=\{\sum_i\omega_i=0\}$.
+
+Differentiating,
+\[
+  \frac{\partial\capacity}{\partial\omega_i}(\omega)
+  =\sum_{a\in V}\mu(a)\,
+  \frac{e^{c_i(a)-\omega_i}}{Z_a(\omega)}
+  =:\pi_i(\omega),
+\]
+the marginal sector mass. Since $\sum_i\pi_i(\omega)=1$, the gradient lies in
+$T_0H$. Strict concavity on $H$ gives at most one stationary point; existence
+follows because $\capacity$ is bounded above on $H$ (as some $\omega_i\to+\infty$
+with $\sum_i\omega_i=0$, some $\omega_j\to-\infty$ and $\capacity\to-\infty$).
+
+Setting $\partial\capacity/\partial\omega_i(\omega^\star)=m_i$ is therefore
+equivalent to $\pi_i(\omega^\star)=m_i$; strict concavity yields uniqueness.
+\end{proof}
+
 \begin{theorem}[Capacity at the Jordan rung]\label{thm:ladder:capacity-jordan}
 On $\mathcal{G}_{\mathrm{Albert}}$ at $\Mirror^5(\Void)$, the unique capacity
 maximizer yields the $1|10|16$ partition of
 Proposition~\ref{prop:foundations:partition}. This is the mirror-dual of the
 $\mathbf{27}$ branching \eqref{eq:foundations:27branch}.
 \end{theorem}
+
+\begin{proof}[Proof sketch]
+On $\mathcal{G}_{\mathrm{Albert}}$ (Definition~\ref{def:foundations:albert})
+take territory costs $c_i(a)=d_{\mathcal{G}}(a,z_i)^2$ to the generators
+$z_1,z_{10},z_{16}$ of the $\E{6}$ sectors. Target masses
+$m_i=\dim(\mathrm{irrep}_i)/27=(1/27,10/27,16/27)$ sum to $\mu(V)=1$.
+
+Theorem~\ref{thm:ladder:concave} gives a unique maximizer
+$\omega^\star\in H$ with $\pi_i(\omega^\star)=m_i$. The softmax cells
+$C_i(\omega^\star)=\{a: c_i(a)-\omega^\star_i\le c_j(a)-\omega^\star_j\
+\forall j\}$ therefore carry masses $1/27$, $10/27$, $16/27$. On the coarse
+$27$-vertex graph these are cells of cardinalities $1$, $10$, $16$
+(Proposition~\ref{prop:foundations:partition}), matching the $\mathbf{27}$
+branching \eqref{eq:foundations:27branch}. Mirror balancing
+$\mathrm{Bal}_\capacity$ is the functorial iteration of this unique maximizer.
+\end{proof}

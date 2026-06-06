@@ -25,28 +25,31 @@ Hurwitz ladder & Theorem & dims $0,1,2,4,8$ & \ref{thm:ladder:hurwitz} \\
 $\Mirror^6(\Void)=\E{8}$ & Theorem & Freudenthal & \ref{thm:ladder:e8} \\
 $\Mirror^7(\Void)=\E{8}\times\E{8}$ & Theorem & prod.\ mirror & \ref{thm:ladder:e8e8} \\
 $\Mirror^8(\Void)=\E{6}$ & Theorem & Cartan mirror & \ref{thm:ladder:e6} \\
-$|S_6|,|S_7|,|S_8|=248,496,78$ & Theorem & Stone exc.\ lift & \ref{thm:ladder:stone-e8} \\
+$\chi(S_6),\chi(S_7),\chi(S_8)=248,496,78$ & Theorem & chart dim $\chi$ & \ref{thm:ladder:stone-e8} \\
 $\mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}\simeq\mathbf{Obs}^{\mathrm{climb}}$ & Cor. & rungs $0$--$8$ & \ref{cor:void-mirror:global-equiv} \\
 $\Climb^\infty(\Void)\cong\jalg$ & Theorem & 27 stable & \ref{thm:foundations:stone-lift} \\
-$1|10|16$ partition & Prop. & capacity & \ref{prop:foundations:partition} \\
-Potential from $\capacity$ & Theorem & limit & \ref{thm:dynamics:potential} \\
-EIII vacuum & Theorem & coercivity & \ref{thm:dynamics:vacuum} \\
-Coset mirror $16\leftrightarrow\overline{16}$ & Theorem & $U(1)$ charge & \ref{prop:ladder:e6branch} \\
+Capacity concavity & Theorem & log-sum-exp & \ref{thm:ladder:concave} \\
+$1|10|16$ partition & Theorem & concave dual & \ref{thm:ladder:capacity-jordan} \\
+Potential from $\capacity$ & Theorem & sharp limit & \ref{thm:dynamics:potential} \\
+EIII vacuum & Theorem & EIII coercivity & \ref{thm:dynamics:vacuum} \\
+Three $\mathbf{16}$ cells at $\Mirror^7$ & Prop. & $k\leq3$, $k\geq3$ & \ref{prop:sm:capacity7} \\
+Coset mirror $16\leftrightarrow\overline{16}$ & Prop. & $U(1)$ charge & \ref{prop:ladder:e6branch} \\
 Anomaly cancellation & Theorem & $16-80+64$; GS $-1$ & \ref{thm:gauge-gravity:gs} \\
 $b_0(3)=12$ & Theorem & \eqref{eq:gauge-gravity:b0} & \ref{thm:gauge-gravity:beta-g} \\
-$\mathfrak{U}^\star=\Climb^\infty(\Void)$ & Theorem & under P1--P4 & \ref{thm:dynamics:universe} \\
+$\mathfrak{U}^\star=\Climb^\infty(\Void)$ & Theorem & under P1,P2,P4 & \ref{thm:dynamics:universe} \\
 \midrule
 Soldering, $d=4$ & Postulate & P1 & \ref{post:spacetime:P1} \\
 Chiral matter & Postulate & P2 & \ref{post:sm:P2} \\
-Three families & Theorem & $\Mirror^7$; P2 & \ref{thm:sm:three-families} \\
+Three families & Theorem & P2; \ref{prop:sm:capacity7} sketch & \ref{thm:sm:three-families} \\
 GUT--Higgs & Postulate & P4 & \ref{post:sm:P4} \\
+Flavon hierarchy & Postulate & P3$'$ & \ref{post:sm:flavons} \\
 \midrule
 $\kappa_\star=96\pi^2/5$ & Theorem & trunc.\ (i)--(iv) & \ref{thm:gauge-gravity:kappa-oneloop} \\
 FRG Jacobian $\{+2,+2,+2,-2,-4\}$ & Prop. & ext.\ trunc. & \ref{prop:gauge-gravity:jacobian} \\
 $\kappa_\star$ beyond ext.\ trunc. & Conjecture & $R^2$/graviton & \ref{conj:gauge-gravity:kappa} \\
 P1 from mirror & No-go & --- & \ref{prop:spacetime:p1-nogo} \\
 P2 from mirror & No-go & --- & \ref{prop:sm:p2-nogo} \\
-$\Lambda_{\mathrm{cc}}$ & Postulate & no-go & \ref{prop:gauge-gravity:cc-nogo} \\
+$\Lambda_{\mathrm{cc}}$ & Postulate & tuned; no-go & \ref{post:gauge-gravity:cc} \\
 OS reconstruction & Theorem & if RP & \ref{thm:spacetime:OS} \\
 RP (semiclassical EIII) & Theorem & $\mu^2>0$ & \ref{thm:spacetime:rp-semiclassical} \\
 RP (nonperturbative) & Postulate & P5 & \ref{post:spacetime:P5} \\
@@ -76,15 +79,18 @@ graph; capacity partition; potential and EIII vacuum; composite gauge;
 anomaly cancellation; Sakharov $\MPl$; one-loop $\kappa_\star$ and extended
 FRG Jacobian (Table~\ref{tab:gauge-gravity:jacobian}).
 
-\textbf{Conditional on P2:} $n_F=3$ (Theorem~\ref{thm:sm:three-families}).
+\textbf{Conditional on P2:} $n_F=3$ (Theorem~\ref{thm:sm:three-families}, via
+Proposition~\ref{prop:sm:capacity7} sketch).
 
 \textbf{Postulates (not derivable):} P1 soldering; P2 chirality;
-P4 GUT--Higgs; P5 reflection positivity; tuned $\Lambda_{\mathrm{cc}}$
-(Proposition~\ref{prop:gauge-gravity:cc-nogo}).
+P3$'$ flavon hierarchy; P4 GUT--Higgs; P5 reflection positivity; tuned
+$\Lambda_{\mathrm{cc}}$ (Postulate~\ref{post:gauge-gravity:cc}).
 
 \textbf{Open (minimal):} Conjecture~\ref{conj:gauge-gravity:kappa};
-P5; Chevalley cell labeling (Remark~\ref{rem:ladder:stone-cells});
-cosmological constant (external to core).
+nonperturbative reflection positivity (Postulate~\ref{post:spacetime:P5});
+Chevalley cell labeling (Remark~\ref{rem:ladder:stone-cells});
+cosmological constant (external to core;
+Proposition~\ref{prop:gauge-gravity:cc-nogo}).
 
 %----------------------------------------------------------------------%
 \subsection{Falsifiable predictions}

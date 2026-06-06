@@ -69,15 +69,28 @@ rank-$3$ diagonal of Lemma~\ref{lem:sm:rank3}.
 \begin{proof}[Proof sketch]
 The heterotic product supplies two \emph{gauge} sectors, not two generations:
 matter families are horizontal copies indexed by $\mathfrak{d}$, the
-mirror-dual of capacity on $\mathcal{G}_{\mathrm{Albert}}$. Concavity of
-$\capacity$ (Theorem~\ref{thm:ladder:concave}) forces equal cells; the
-$1|10|16$ partition fixes $k\cdot(16/27k)=16/27$, so only the integer $k$ is
-constrained. Since $\dim\mathfrak{d}=3$, mirror stabilisation can occupy at
-most three diagonal directions, so $k\leq3$; Postulate~\ref{post:sm:P2}
-requires one chiral $\mathbf{16}$ per occupied cell and capacity saturation
-requires all three diagonal weights, hence $k=3$. The value
-$b_0(3\,\mathrm{gen})=12$ in \eqref{eq:gauge-gravity:b0} is then fixed
-uniquely, not chosen.
+mirror-dual of capacity on $\mathcal{G}_{\mathrm{Albert}}$.
+
+\emph{Upper bound ($k\leq3$).}
+By Lemma~\ref{lem:sm:rank3}, $\mathfrak{d}\cong\R^3$ is the unique maximal
+abelian $F_4$-invariant diagonal; mirror stabilisation assigns each
+$\mathbf{16}$-subcell to a distinct diagonal weight $e_i$, so at most
+$\dim\mathfrak{d}=3$ mirror-stable cells can coexist.
+
+\emph{Lower bound ($k\geq3$).}
+Capacity saturation on the $1|10|16$ backbone requires the full
+$16/27$ mass of the $\mathbf{16}$-sector to be distributed across occupied
+diagonal weights. A single cell ($k=1$) or double cell ($k=2$) leaves
+unassigned $\mathfrak{d}$-directions; concavity
+(Theorem~\ref{thm:ladder:concave}) then permits capacity redistribution that
+lowers $\capacity$, contradicting $\mathrm{Bal}_\capacity$ maximality.
+Hence $k\geq3$.
+
+\emph{Conclusion ($k=3$).}
+Strict concavity forces equal subcells of capacity $16/(27k)$ each; with
+$k=3$ this is $16/81$. Postulate~\ref{post:sm:P2} assigns one chiral
+$\mathbf{16}$ per cell, fixing $b_0(3\,\mathrm{gen})=12$ in
+\eqref{eq:gauge-gravity:b0} uniquely, not chosen.
 \end{proof}
 
 \begin{theorem}[Three families from mirror stabilisation]\label{thm:sm:three-families}
@@ -105,9 +118,10 @@ $\mathbf{16}$-sector. Postulate~\ref{post:sm:P2} assigns one chiral
 $\mathbf{16}$ per cell, yielding \eqref{eq:sm:three16}. The triality
 organization of Proposition~\ref{prop:sm:triality} aligns the three cells with
 the three diagonal directions of Lemma~\ref{lem:sm:rank3}, hence with
-$SU(3)_F\subset U(3)$ on $\C^3$. Anomaly cancellation
-(Theorem~\ref{thm:gauge-gravity:gs}) extends family-wise once
-\eqref{eq:sm:nF} is fixed.
+$SU(3)_F\subset U(3)$ on $\C^3$. Anomaly freedom with \eqref{eq:sm:nF} follows from
+Proposition~\ref{prop:gauge-gravity:anomaly-nF}: three replicas of the
+embedded $\mathbf{27}$ arithmetic of Theorem~\ref{thm:gauge-gravity:gs}
+($1+10+16$ per generation), not from the three chiral $\mathbf{16}$s alone.
 \end{proof}
 
 \begin{corollary}[No fourth generation]\label{cor:sm:no4th}

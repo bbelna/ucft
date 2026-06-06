@@ -29,6 +29,19 @@ $\langle X^{\#},X^{\#}\rangle$ vanishing on rank $\leq1$, induced by the
 mirror-dual capacity on $\mathcal{G}_{\mathrm{Albert}}$.
 \end{theorem}
 
+\begin{proof}[Proof sketch]
+On each mirror refinement $\mathcal{G}_n$ of $\mathcal{G}_{\mathrm{Albert}}$,
+$\mathrm{Bal}_\capacity$ maximizes $\capacity$ (Theorem~\ref{thm:ladder:concave})
+and induces a graph penalty whose profinite limit is \eqref{eq:dynamics:V}.
+The sharp term arises because the only $\E{6}$-invariant quartic vanishing on
+$\{X^{\#}=0\}$ is $\langle X^{\#},X^{\#}\rangle$
+(Appendix~\ref{sec:appendix:freudenthal}); the $\Tr(X^2)^k$ terms are the
+$F_4$-invariant remainder forced by capacity saturation on the $1|10|16$
+backbone (Theorem~\ref{thm:ladder:capacity-jordan}). Uniqueness: any other
+$\E{6}$-invariant quartic agreeing on rank $\leq1$ differs by $F_4$ invariants
+already fixed by $\mathrm{Bal}_\capacity$.
+\end{proof}
+
 %----------------------------------------------------------------------%
 \subsection{Vacuum selection}
 \label{sec:dynamics:vacuum}
@@ -42,6 +55,26 @@ $\langle X^{\#},X^{\#}\rangle\geq0$ with equality iff $\rank X\leq1$.
 $V$ is coercive on compact $\E{6}$. Global minima lie on the rank-one orbit
 $\mathcal{M}=\mathrm{EIII}$; the origin is a strict local maximum.
 \end{theorem}
+
+\begin{proof}[Proof sketch]
+On the compact real form of $\E{6}$, $\langle X^{\#},X^{\#}\rangle\geq0$
+(Lemma~\ref{lem:dynamics:sharp}) and is positive on orbits with $\rank X\geq2$.
+With $\alpha,\beta,\gamma>0$ and even $k\geq2$, $V$ is bounded below and
+\textbf{coercive} on $\E{6}$: $V(X)\to\infty$ along any divergent direction in
+the cubic-norm foliation (standard Jordan-algebra fact;
+\cite{SpringerVeldkamp2000}). Hence global minima exist.
+
+On the rank-one locus $\rank X\leq1$, Lemma~\ref{lem:dynamics:sharp} gives
+$X^{\#}=0$, so the sharp term vanishes; choosing $c_2$ at the $F_4$ orbit
+representative on $\mathcal{M}=\mathrm{EIII}$ minimizes the remaining terms.
+Thus global minima lie on the symmetric space $\mathcal{M}=\E{6}/H$.
+
+At the origin, $\Hess V$ has nullity $32$ on $\mathfrak{m}$
+(Corollary~\ref{cor:dynamics:goldstone}), so the origin is a saddle with $32$
+flat Goldstone directions and is not a global minimum. Scope: tree-level
+$\sigma$-model on EIII; radiative stability is
+Theorem~\ref{thm:sm:radiative}.
+\end{proof}
 
 \begin{corollary}[Tree-level Goldstones]\label{cor:dynamics:goldstone}
 $\Hess V(\orderparam_\star)=0$ on $\mathfrak{m}$: $32$ exact Goldstones at tree

@@ -58,6 +58,30 @@ Direct arithmetic on charges and indices; see~\cite{GreenSchwarz1984} for the
 mechanism.
 \end{proof}
 
+\begin{proposition}[Replication of the embedded $\mathbf{27}$ with $n_F$ families]
+\label{prop:gauge-gravity:anomaly-nF}
+Theorem~\ref{thm:gauge-gravity:gs} checks \emph{one} complete embedded
+$\Spin(10)$ multiplet
+$\mathbf{27}=\mathbf{1}_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}$:
+cubic $16-80+64=0$, mixed coefficient $-1$ cancelled by Green--Schwarz.
+Postulate~\ref{post:sm:P2} places one chiral $\mathbf{16}$ in each horizontal
+family cell. The fermionic cubic $U(1)^3$ coefficient then scales as
+$n_F\cdot 16$ (for $n_F=3$, $48$) and does \emph{not} vanish unless the
+$\mathbf{10}_{-2}\oplus\mathbf{1}_{+4}$ partners of the same embedded
+$\mathbf{27}$ are included in the anomaly polynomial for each generation.
+Extending Theorem~\ref{thm:gauge-gravity:gs} to $n_F$ families therefore
+requires summing $n_F$ replicas of the full $\mathbf{27}$ arithmetic,
+\[
+  n_F\bigl(16\cdot1^3+10\cdot(-2)^3+1\cdot4^3\bigr)=0,
+\]
+equivalently $n_F$ copies of the $16+10+1$ charge assignment, with mixed
+coefficient $-1$ per embedded $\mathbf{27}$ replica absorbed by the axion
+sector $\mathbf{1}_{+4}$. Chiral $\mathbf{16}$s alone do not
+``extend family-wise''; only the embedded $\mathbf{27}$ multiplet does.
+The gauge $\beta$-function count in \eqref{eq:gauge-gravity:b0} uses
+$n_F=3$ as the number of chiral families, yielding $b_0=12$.
+\end{proposition}
+
 %----------------------------------------------------------------------%
 \subsection{Induced gravity}
 \label{sec:gauge-gravity:gravity}
@@ -178,7 +202,7 @@ Remark~\ref{rmk:gauge-gravity:kappa-convention}).
 \begin{proof}
 With \eqref{eq:gauge-gravity:kappa-def} and
 $\MPl^2(k)\propto k^{\eta_{\MPl}}$ in the truncation,
-$\beta_\kappa=2\kappa-\kappa\,\eta_{\MPl}$. Substituting
+$\beta_\kappa=2\kappa+\kappa\,\eta_{\MPl}$. Substituting
 $\eta_{\MPl}=-(5/48\pi^2)\kappa$ yields
 \eqref{eq:gauge-gravity:betakappa}. Setting $\beta_\kappa=0$ for
 $\kappa\neq0$ gives $\kappa_\star=96\pi^2/5$; differentiation gives slope
@@ -303,17 +327,15 @@ $(\xi,\hat g^2,\hat y^2)$ encode asymptotic freedom, not a pathology
 
 \begin{conjecture}[Gravitational UV fixed point beyond one loop]
 \label{conj:gauge-gravity:kappa}
-The interacting fixed point $\kappa_\star=96\pi^2/5$ and its stability
-eigenvalue $-2$ of Theorem~\ref{thm:gauge-gravity:kappa-oneloop} survive
-in the extended truncation of \eqref{eq:gauge-gravity:frg-system}:
-Proposition~\ref{prop:gauge-gravity:jacobian} and
-Table~\ref{tab:gauge-gravity:jacobian} show that, once the $27\times27$
-scalar block and gauge--Yukawa sector are included but higher-curvature
-operators and graviton loops are still neglected, $\kappa_\star$ remains
-the sole interacting UV-relevant matter--gravity coupling. \emph{Remaining
-gap:} curved-background FRG with $R^2$, $R_{\mu\nu}^2$, and graviton
-self-interaction may shift $\kappa_\star$ and $\partial_\kappa\beta_\kappa$.
-Because $\kappa_\star\approx189\gg1$, this is \emph{not} a consequence of
+Within the extended one-loop truncation of \eqref{eq:gauge-gravity:frg-system},
+Proposition~\ref{prop:gauge-gravity:jacobian} already establishes the fixed point
+$\kappa_\star=96\pi^2/5$ with stability eigenvalue $-2$ and Jacobian spectrum
+\eqref{eq:gauge-gravity:jacobian-eig} (Table~\ref{tab:gauge-gravity:jacobian}).
+The \emph{remaining} conjecture is that $\kappa_\star$ and
+$\partial_\kappa\beta_\kappa=-2$ persist in curved-background FRG once $R^2$,
+$R_{\mu\nu}^2$, and graviton self-interaction are included: these sectors may
+shift $\kappa_\star$ and the gravitational fixed-point structure. Because
+$\kappa_\star\approx189\gg1$, such persistence is \emph{not} a consequence of
 the SJET axioms; it requires external nonperturbative FRG input.
 \end{conjecture}
 

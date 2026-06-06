@@ -108,8 +108,9 @@ two-fold:
 Everything else --- graphs, Albert algebra, capacity dual, $\E{6}$ potential,
 gauge sector, induced gravitation, anomaly cancellation --- is \textbf{derived}
 from $\Mirror^n(\Void)$ and capacity balancing on mirror-refined partitions.
-Physical postulates P1, P2, P4, P5 (soldering, chiral matter, GUT--Higgs,
-reflection positivity) remain the honest boundary between proved mathematics
+Physical postulates P1, P2, P3$'$, P4, P5 (soldering, chiral matter, flavon
+hierarchy, GUT--Higgs, reflection positivity) remain the honest boundary
+between proved mathematics
 and four-dimensional quantum field theory; three families are \textbf{derived}
 (Theorem~\ref{thm:sm:three-families}), not postulated. P1 and P2 were checked
 for derivation from mirror stabilisation and \emph{not} promoted
@@ -142,7 +143,7 @@ balanced partition at each level (BAMLP), not a separate axiom.
   \item \textbf{Theorem} --- proved from Axioms~1--2 and standard mathematics.
   \item \textbf{Derived} --- explicit construction from mirror climb (no extra
     postulate).
-  \item \textbf{Postulate} --- added four-dimensional physics (P1, P2, P4, P5, CC), named once.
+  \item \textbf{Postulate} --- added four-dimensional physics (P1, P2, P3$'$, P4, P5, CC), named once.
   \item \textbf{Conjecture} --- motivated but not controlled.
 \end{itemize}
 
@@ -163,7 +164,7 @@ $\Mirror^5(\Void)=\jalg$); Theorems~\ref{thm:ladder:e8}--\ref{thm:ladder:e8e8}
 Section~\ref{sec:ladder}: exceptional continuation and capacity dual.
 Section~\ref{sec:foundations}: derived graph, Stone lift, and order parameter.
 Section~\ref{sec:dynamics}: capacity, potential, vacuum.
-Sections~\ref{sec:spacetime}--\ref{sec:sm}: physics under P1--P4.
+Sections~\ref{sec:spacetime}--\ref{sec:sm}: physics under P1, P2, P4, P5.
 Section~\ref{sec:verification}: ledger.
 Appendix~\ref{sec:appendix}: Albert identities.% --- end 01-introduction.tex ---
 % --- 02-foundations.tex ---
@@ -690,11 +691,22 @@ Proposition~\ref{prop:ladder:exceptional}.
 
 \emph{(iii).} The Lie labels $A_6,A_7,A_8$ are proved in
 Section~\ref{sec:ladder:exceptional}. The Stone objects $S_6,S_7,S_8$ are
-constructed and proved unique in Theorem~\ref{thm:ladder:stone-e8}; hence
+constructed with chart-synchronized uniqueness in
+Theorem~\ref{thm:ladder:stone-e8}; hence
 $\mathrm{Spec}^{\mathrm{ext}}$ hits every exceptional Stone object exactly once
 and the extended equivalence is complete on
 $\mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}$.
 \end{proof}
+
+\begin{remark}[Synchronization packaging]\label{rem:void-mirror:sync-pack}
+Theorem~\ref{thm:void-mirror:equiv-ext} records \emph{mirror-climb
+synchronization packaging}: Lie charts and profinite Stone lifts are paired
+rung by rung through $\mathrm{Arith}^{\mathrm{ext}}$ and
+$\mathrm{Spec}^{\mathrm{ext}}$. This is not classical Stone-duality
+reconstruction of $\mathbf{Bool}^{\mathrm{op}}$ from $\mathbf{Stone}$; at
+$n\geq6$ the pairing is fixed by chart dimension $\chi$ and mirror
+functoriality, not by profinite cardinality.
+\end{remark}
 
 \begin{definition}[Profinite climb tower]\label{def:void-mirror:profinite}
 For each $n$, let $\pi_{n+1,n}:S_{n+1}\to S_n$ be the unique surjective
@@ -752,9 +764,12 @@ where $A_\infty$ stabilizes on the $\jalg$--$\E{6}$ sector:
     $\E{6}$ after $\mathrm{Bal}_\capacity$
     (Theorem~\ref{thm:dynamics:universe}).
 \end{enumerate}
-Hence global equivalence $\mathbf{Stone}\simeq\mathbf{Obs}$ on the profinite
-tower is \textbf{proved} through the Jordan rung and through exceptional rungs
-$n=6,7,8$ (Theorem~\ref{thm:ladder:stone-e8}).
+Together (i)--(iii) package profinite-tower functoriality and Lie--Stone
+synchronization through the Jordan rung and the finite exceptional segment
+$n=6,7,8$ (Theorem~\ref{thm:ladder:stone-e8}). The physical identification
+$\mathfrak{U}^\star$ in Theorem~\ref{thm:dynamics:universe} is separate input
+under Postulates P1--P4; it does \emph{not} by itself establish global
+$\mathbf{Stone}\simeq\mathbf{Obs}$ equivalence.
 \end{proposition}
 
 \begin{proof}
@@ -765,18 +780,21 @@ cyclic extension of the stabilized $\jalg$ datum
 (Proposition~\ref{prop:ladder:exceptional}), so $A_\infty$ is not an infinite
 Lie extension but the capacity-balanced stabilization
 $\jalg\to\E{8}\to\E{8}\times\E{8}\to\E{6}$. Theorem~\ref{thm:dynamics:universe}
-completes the physical identification of $\mathfrak{U}^\star$.
+identifies the universe datum $\mathfrak{U}^\star$ under P1--P4; the climb
+equivalence of Theorem~\ref{thm:void-mirror:equiv-ext} is already established
+independently on rungs $0$--$8$.
 \end{proof}
 
 \begin{corollary}[Global mirror-climb equivalence]\label{cor:void-mirror:global-equiv}
 The extended equivalence of Theorem~\ref{thm:void-mirror:equiv-ext}, the
-profinite identifications of
+profinite synchronization of
 Propositions~\ref{prop:void-mirror:profinite-jordan}--\ref{prop:void-mirror:profinite-func},
-and the arena lift of Theorem~\ref{thm:foundations:stone-lift} yield
+and the arena lift of Theorem~\ref{thm:foundations:stone-lift} \emph{package}
+chart-by-chart mirror-climb synchronization
 \[
   \mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}\;\simeq\;\mathbf{Obs}^{\mathrm{climb}}
 \]
-on rungs $0$--$8$. The universe profinite fixed point
+on rungs $0$--$8$ (Remark~\ref{rem:void-mirror:sync-pack}). The universe profinite fixed point
 \eqref{eq:void-mirror:universe} has capacity backbone $\jalg$ and stabilized
 gauge datum $\E{6}$ after $\mathrm{Bal}_\capacity$. On the normed--Jordan
 sector this specializes to
@@ -791,8 +809,10 @@ Classical Stone duality identifies $\mathbf{Stone}$ with $\mathbf{Bool}^{\mathrm
 Theorem~\ref{thm:void-mirror:equiv} is the \emph{arithmetic lift} through the
 Jordan rung; Theorem~\ref{thm:void-mirror:equiv-ext} and
 Propositions~\ref{prop:void-mirror:profinite-jordan}--\ref{prop:void-mirror:profinite-func}
-extend it to exceptional Lie rungs and profinite limits. Corollary~\ref{cor:void-mirror:global-equiv}
-packages the global equivalence
+extend this by \emph{synchronization packaging} along exceptional Lie rungs and
+profinite limits---not by reconstructing Boolean algebras from Stone spaces in
+the classical sense. Corollary~\ref{cor:void-mirror:global-equiv} records the
+resulting chart equivalence
 $\mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}\simeq\mathbf{Obs}^{\mathrm{climb}}$
 on rungs $0$--$8$, including the universe limit \eqref{eq:void-mirror:universe}.
 What remains open is computational labeling of exceptional clopen cells
@@ -1033,9 +1053,9 @@ $G_2\times F_4\subset\E{8}$ is maximal; no smaller simple group contains the
 tower together with the mirrored octonion sector.
 
 \emph{Step 3 (dimension and Stone lift).}
-$d_6=\dim\E{8}=248$. The Stone spectrum $|S_6|$ is the profinite refinement
-of the $248$-dimensional observable chart; uniqueness and Albert compatibility
-are Theorem~\ref{thm:ladder:stone-e8}.
+$d_6=\dim\E{8}=248$. The synchronized Stone chart has
+$\chi(S_6)=248$ (Definition~\ref{def:ladder:chart-dim}); profinite
+refinement and Albert compatibility are Theorem~\ref{thm:ladder:stone-e8}.
 \end{proof}
 
 %----------------------------------------------------------------------%
@@ -1175,9 +1195,11 @@ Definitions~\ref{def:ladder:aut-mirror}--\ref{def:ladder:cartan-mirror}.
 
 \begin{definition}[Chart dimension]\label{def:ladder:chart-dim}
 For a stabilized rung $(S_n,A_n)$, the \emph{chart dimension} is
-$\chi(S_n):=\dim_{\R}A_n$. Along rungs $0$--$5$,
-$\chi(S_n)=|S_n|$ (Theorem~\ref{thm:void-mirror:table}); at $n\geq6$,
-$\chi(S_n)$ is the Lie chart size while $S_n$ is profinite.
+$\chi(S_n):=\dim_{\R}A_n$, a Lie/algebra chart size \emph{not} the profinite
+clopen cardinality $|S_n|$ when $S_n$ is an inverse limit. Along rungs
+$0$--$5$, $\chi(S_n)=|S_n|$ (Theorem~\ref{thm:void-mirror:table}); at
+$n\geq6$, $\chi(S_n)\in\{248,496,78\}$ while $|S_n|$ is generally infinite
+(profinite).
 \end{definition}
 
 \begin{definition}[Capacity balancing]\label{def:ladder:bal-capacity}
@@ -1295,8 +1317,8 @@ unchanged.
 \begin{theorem}[Stone refinement at exceptional rungs]
 \label{thm:ladder:stone-e8}
 There exist profinite Stone spaces $S_6,S_7,S_8$ as in
-\eqref{eq:ladder:stone-exc}, unique up to isomorphism in
-$\mathbf{Stone}^{\mathrm{exc}}$, such that:
+\eqref{eq:ladder:stone-exc}, unique up to chart-synchronized isomorphism in
+$\mathbf{Stone}^{\mathrm{exc}}$ (not classified by finite cardinality), such that:
 \begin{enumerate}[label=(\roman*),leftmargin=*]
   \item $\chi(S_6)=248$, $\chi(S_7)=496$, $\chi(S_8)=78$;
   \item $\Mirror_{\mathrm{St}}^{\mathrm{prod}}(S_6)=S_7$ and
@@ -1307,10 +1329,11 @@ $\mathbf{Stone}^{\mathrm{exc}}$, such that:
   \item the Albert--Cayley graph is the coarse capacity backbone: sector masses
     $(1/27,10/27,16/27)$ persist under all profinite refinements at $n\geq6$.
 \end{enumerate}
-Any alternative profinite refinements $|S'_6|$, $|S'_7|$, $|S'_8|$ compatible
+Any alternative profinite refinements $S'_6,S'_7,S'_8$ compatible
 with functoriality of $\Mirror$ and $\mathrm{Bal}_\capacity$ have chart
-dimensions $248$, $496$, and $78$ respectively, hence are isomorphic to
-$(S_6,S_7,S_8)$.
+dimensions $\chi(S'_6)=248$, $\chi(S'_7)=496$, and $\chi(S'_8)=78$
+respectively, hence are isomorphic to $(S_6,S_7,S_8)$ in
+$\mathbf{Stone}^{\mathrm{exc}}$.
 \end{theorem}
 
 \begin{proof}
@@ -1341,7 +1364,9 @@ $\Mirror_{\mathrm{prod}}$ forces $\chi(S'_7)=2\chi(S'_6)=496$
 Theorem~\ref{thm:ladder:e6} and the $1|10|16$ partition forces the Cartan
 descent to $\E{6}$, hence $\chi(S'_8)=78$. Fully faithfulness of
 $\mathrm{Arith}^{\mathrm{exc}}$ (Lemma~\ref{lem:ladder:aut-sync-exc}) pins
-each $S'_k$ up to unique isomorphism in $\mathbf{Stone}^{\mathrm{exc}}$.
+each $S'_k$ up to the unique chart-synchronized profinite lift fixed by
+$\chi$ and mirror functoriality---not by matching finite cardinalities
+$|S'_k|$.
 \end{proof}
 
 \begin{corollary}[Exceptional mirror--Stone equivalence]
@@ -1366,8 +1391,8 @@ and
 \end{corollary}
 
 \begin{remark}[Explicit cell labeling]\label{rem:ladder:stone-cells}
-Theorem~\ref{thm:ladder:stone-e8} proves uniqueness of the profinite
-\emph{chart} and sector mass compatibility with
+Theorem~\ref{thm:ladder:stone-e8} establishes uniqueness of the synchronized
+\emph{chart} $\chi$ and sector mass compatibility with
 $\mathcal{G}_{\mathrm{Albert}}$. An explicit bijection between the $248$
 clopen generators of $S_6$ and a Chevalley basis of $\mathfrak{e}_8$, and the
 sector-wise refinement counts under $G_2\times F_4\subset\E{8}$, is a
@@ -1404,12 +1429,52 @@ $m_i>0$, $\sum_i m_i=1$, there exists unique $\omega^\star$ with
 $\partial\capacity/\partial\omega_i(\omega^\star)=m_i$.
 \end{theorem}
 
+\begin{proof}
+For each $a\in V$ write $f_a(\omega)=-\log Z_a(\omega)$ with
+$Z_a(\omega)=\sum_i e^{c_i(a)-\omega_i}$. The map $\omega\mapsto Z_a(\omega)$
+is the log-sum-exp function, strictly convex on $\R^K$; hence $f_a$ is strictly
+concave. For $\mu(a)>0$, $\capacity=\sum_a\mu(a)f_a$ is strictly concave on
+$\R^K$ and restricts to a strictly concave function on the affine hyperplane
+$H=\{\sum_i\omega_i=0\}$.
+
+Differentiating,
+\[
+  \frac{\partial\capacity}{\partial\omega_i}(\omega)
+  =\sum_{a\in V}\mu(a)\,
+  \frac{e^{c_i(a)-\omega_i}}{Z_a(\omega)}
+  =:\pi_i(\omega),
+\]
+the marginal sector mass. Since $\sum_i\pi_i(\omega)=1$, the gradient lies in
+$T_0H$. Strict concavity on $H$ gives at most one stationary point; existence
+follows because $\capacity$ is bounded above on $H$ (as some $\omega_i\to+\infty$
+with $\sum_i\omega_i=0$, some $\omega_j\to-\infty$ and $\capacity\to-\infty$).
+
+Setting $\partial\capacity/\partial\omega_i(\omega^\star)=m_i$ is therefore
+equivalent to $\pi_i(\omega^\star)=m_i$; strict concavity yields uniqueness.
+\end{proof}
+
 \begin{theorem}[Capacity at the Jordan rung]\label{thm:ladder:capacity-jordan}
 On $\mathcal{G}_{\mathrm{Albert}}$ at $\Mirror^5(\Void)$, the unique capacity
 maximizer yields the $1|10|16$ partition of
 Proposition~\ref{prop:foundations:partition}. This is the mirror-dual of the
 $\mathbf{27}$ branching \eqref{eq:foundations:27branch}.
-\end{theorem}% --- end 03-ladder.tex ---
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+On $\mathcal{G}_{\mathrm{Albert}}$ (Definition~\ref{def:foundations:albert})
+take territory costs $c_i(a)=d_{\mathcal{G}}(a,z_i)^2$ to the generators
+$z_1,z_{10},z_{16}$ of the $\E{6}$ sectors. Target masses
+$m_i=\dim(\mathrm{irrep}_i)/27=(1/27,10/27,16/27)$ sum to $\mu(V)=1$.
+
+Theorem~\ref{thm:ladder:concave} gives a unique maximizer
+$\omega^\star\in H$ with $\pi_i(\omega^\star)=m_i$. The softmax cells
+$C_i(\omega^\star)=\{a: c_i(a)-\omega^\star_i\le c_j(a)-\omega^\star_j\
+\forall j\}$ therefore carry masses $1/27$, $10/27$, $16/27$. On the coarse
+$27$-vertex graph these are cells of cardinalities $1$, $10$, $16$
+(Proposition~\ref{prop:foundations:partition}), matching the $\mathbf{27}$
+branching \eqref{eq:foundations:27branch}. Mirror balancing
+$\mathrm{Bal}_\capacity$ is the functorial iteration of this unique maximizer.
+\end{proof}% --- end 03-ladder.tex ---
 % --- 04-arena.tex ---
 %======================================================================%
 \section{Derived Arena: Graph, Albert Algebra, Order Parameter}
@@ -1510,6 +1575,19 @@ $\langle X^{\#},X^{\#}\rangle$ vanishing on rank $\leq1$, induced by the
 mirror-dual capacity on $\mathcal{G}_{\mathrm{Albert}}$.
 \end{theorem}
 
+\begin{proof}[Proof sketch]
+On each mirror refinement $\mathcal{G}_n$ of $\mathcal{G}_{\mathrm{Albert}}$,
+$\mathrm{Bal}_\capacity$ maximizes $\capacity$ (Theorem~\ref{thm:ladder:concave})
+and induces a graph penalty whose profinite limit is \eqref{eq:dynamics:V}.
+The sharp term arises because the only $\E{6}$-invariant quartic vanishing on
+$\{X^{\#}=0\}$ is $\langle X^{\#},X^{\#}\rangle$
+(Appendix~\ref{sec:appendix:freudenthal}); the $\Tr(X^2)^k$ terms are the
+$F_4$-invariant remainder forced by capacity saturation on the $1|10|16$
+backbone (Theorem~\ref{thm:ladder:capacity-jordan}). Uniqueness: any other
+$\E{6}$-invariant quartic agreeing on rank $\leq1$ differs by $F_4$ invariants
+already fixed by $\mathrm{Bal}_\capacity$.
+\end{proof}
+
 %----------------------------------------------------------------------%
 \subsection{Vacuum selection}
 \label{sec:dynamics:vacuum}
@@ -1523,6 +1601,26 @@ $\langle X^{\#},X^{\#}\rangle\geq0$ with equality iff $\rank X\leq1$.
 $V$ is coercive on compact $\E{6}$. Global minima lie on the rank-one orbit
 $\mathcal{M}=\mathrm{EIII}$; the origin is a strict local maximum.
 \end{theorem}
+
+\begin{proof}[Proof sketch]
+On the compact real form of $\E{6}$, $\langle X^{\#},X^{\#}\rangle\geq0$
+(Lemma~\ref{lem:dynamics:sharp}) and is positive on orbits with $\rank X\geq2$.
+With $\alpha,\beta,\gamma>0$ and even $k\geq2$, $V$ is bounded below and
+\textbf{coercive} on $\E{6}$: $V(X)\to\infty$ along any divergent direction in
+the cubic-norm foliation (standard Jordan-algebra fact;
+\cite{SpringerVeldkamp2000}). Hence global minima exist.
+
+On the rank-one locus $\rank X\leq1$, Lemma~\ref{lem:dynamics:sharp} gives
+$X^{\#}=0$, so the sharp term vanishes; choosing $c_2$ at the $F_4$ orbit
+representative on $\mathcal{M}=\mathrm{EIII}$ minimizes the remaining terms.
+Thus global minima lie on the symmetric space $\mathcal{M}=\E{6}/H$.
+
+At the origin, $\Hess V$ has nullity $32$ on $\mathfrak{m}$
+(Corollary~\ref{cor:dynamics:goldstone}), so the origin is a saddle with $32$
+flat Goldstone directions and is not a global minimum. Scope: tree-level
+$\sigma$-model on EIII; radiative stability is
+Theorem~\ref{thm:sm:radiative}.
+\end{proof}
 
 \begin{corollary}[Tree-level Goldstones]\label{cor:dynamics:goldstone}
 $\Hess V(\orderparam_\star)=0$ on $\mathfrak{m}$: $32$ exact Goldstones at tree
@@ -1809,13 +1907,17 @@ interaction input; vacuum selection on EIII
 
 \begin{corollary}[Derived partial RP from void--mirror dynamics]
 \label{cor:spacetime:rp-derived}
-Under Axioms~\ref{ax:void-mirror:void}--\ref{ax:void-mirror:mirror}, the
-capacity potential (Theorem~\ref{thm:dynamics:potential}), EIII vacuum
+Under Axioms~\ref{ax:void-mirror:void}--\ref{ax:void-mirror:mirror},
+\emph{together with} Postulate~\ref{post:spacetime:P1} (soldering and $d=4$)
+and the one-loop Coleman--Weinberg radiative mass of
+Theorem~\ref{thm:sm:radiative} (via Proposition~\ref{prop:spacetime:rp-mass}),
+the capacity potential (Theorem~\ref{thm:dynamics:potential}), EIII vacuum
 (Theorem~\ref{thm:dynamics:vacuum}), and positive-definite coset metric
 (Theorem~\ref{thm:spacetime:metric}), reflection positivity
 \eqref{eq:spacetime:reflpos} holds for the semiclassical effective
 $\sigma$-model of Theorem~\ref{thm:spacetime:rp-semiclassical}. This is
-\emph{derived}; it does not yet cover the tree-level massless sector or
+\emph{derived}; it does \emph{not} follow from the void--mirror axioms alone,
+and it does not yet cover the tree-level massless sector or
 the nonperturbative gauge measure.
 \end{corollary}
 
@@ -1921,6 +2023,30 @@ with axion $B$ from the $\mathbf{1}_{+4}$ sector.
 Direct arithmetic on charges and indices; see~\cite{GreenSchwarz1984} for the
 mechanism.
 \end{proof}
+
+\begin{proposition}[Replication of the embedded $\mathbf{27}$ with $n_F$ families]
+\label{prop:gauge-gravity:anomaly-nF}
+Theorem~\ref{thm:gauge-gravity:gs} checks \emph{one} complete embedded
+$\Spin(10)$ multiplet
+$\mathbf{27}=\mathbf{1}_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}$:
+cubic $16-80+64=0$, mixed coefficient $-1$ cancelled by Green--Schwarz.
+Postulate~\ref{post:sm:P2} places one chiral $\mathbf{16}$ in each horizontal
+family cell. The fermionic cubic $U(1)^3$ coefficient then scales as
+$n_F\cdot 16$ (for $n_F=3$, $48$) and does \emph{not} vanish unless the
+$\mathbf{10}_{-2}\oplus\mathbf{1}_{+4}$ partners of the same embedded
+$\mathbf{27}$ are included in the anomaly polynomial for each generation.
+Extending Theorem~\ref{thm:gauge-gravity:gs} to $n_F$ families therefore
+requires summing $n_F$ replicas of the full $\mathbf{27}$ arithmetic,
+\[
+  n_F\bigl(16\cdot1^3+10\cdot(-2)^3+1\cdot4^3\bigr)=0,
+\]
+equivalently $n_F$ copies of the $16+10+1$ charge assignment, with mixed
+coefficient $-1$ per embedded $\mathbf{27}$ replica absorbed by the axion
+sector $\mathbf{1}_{+4}$. Chiral $\mathbf{16}$s alone do not
+``extend family-wise''; only the embedded $\mathbf{27}$ multiplet does.
+The gauge $\beta$-function count in \eqref{eq:gauge-gravity:b0} uses
+$n_F=3$ as the number of chiral families, yielding $b_0=12$.
+\end{proposition}
 
 %----------------------------------------------------------------------%
 \subsection{Induced gravity}
@@ -2042,7 +2168,7 @@ Remark~\ref{rmk:gauge-gravity:kappa-convention}).
 \begin{proof}
 With \eqref{eq:gauge-gravity:kappa-def} and
 $\MPl^2(k)\propto k^{\eta_{\MPl}}$ in the truncation,
-$\beta_\kappa=2\kappa-\kappa\,\eta_{\MPl}$. Substituting
+$\beta_\kappa=2\kappa+\kappa\,\eta_{\MPl}$. Substituting
 $\eta_{\MPl}=-(5/48\pi^2)\kappa$ yields
 \eqref{eq:gauge-gravity:betakappa}. Setting $\beta_\kappa=0$ for
 $\kappa\neq0$ gives $\kappa_\star=96\pi^2/5$; differentiation gives slope
@@ -2167,17 +2293,15 @@ $(\xi,\hat g^2,\hat y^2)$ encode asymptotic freedom, not a pathology
 
 \begin{conjecture}[Gravitational UV fixed point beyond one loop]
 \label{conj:gauge-gravity:kappa}
-The interacting fixed point $\kappa_\star=96\pi^2/5$ and its stability
-eigenvalue $-2$ of Theorem~\ref{thm:gauge-gravity:kappa-oneloop} survive
-in the extended truncation of \eqref{eq:gauge-gravity:frg-system}:
-Proposition~\ref{prop:gauge-gravity:jacobian} and
-Table~\ref{tab:gauge-gravity:jacobian} show that, once the $27\times27$
-scalar block and gauge--Yukawa sector are included but higher-curvature
-operators and graviton loops are still neglected, $\kappa_\star$ remains
-the sole interacting UV-relevant matter--gravity coupling. \emph{Remaining
-gap:} curved-background FRG with $R^2$, $R_{\mu\nu}^2$, and graviton
-self-interaction may shift $\kappa_\star$ and $\partial_\kappa\beta_\kappa$.
-Because $\kappa_\star\approx189\gg1$, this is \emph{not} a consequence of
+Within the extended one-loop truncation of \eqref{eq:gauge-gravity:frg-system},
+Proposition~\ref{prop:gauge-gravity:jacobian} already establishes the fixed point
+$\kappa_\star=96\pi^2/5$ with stability eigenvalue $-2$ and Jacobian spectrum
+\eqref{eq:gauge-gravity:jacobian-eig} (Table~\ref{tab:gauge-gravity:jacobian}).
+The \emph{remaining} conjecture is that $\kappa_\star$ and
+$\partial_\kappa\beta_\kappa=-2$ persist in curved-background FRG once $R^2$,
+$R_{\mu\nu}^2$, and graviton self-interaction are included: these sectors may
+shift $\kappa_\star$ and the gravitational fixed-point structure. Because
+$\kappa_\star\approx189\gg1$, such persistence is \emph{not} a consequence of
 the SJET axioms; it requires external nonperturbative FRG input.
 \end{conjecture}
 
@@ -2272,15 +2396,28 @@ rank-$3$ diagonal of Lemma~\ref{lem:sm:rank3}.
 \begin{proof}[Proof sketch]
 The heterotic product supplies two \emph{gauge} sectors, not two generations:
 matter families are horizontal copies indexed by $\mathfrak{d}$, the
-mirror-dual of capacity on $\mathcal{G}_{\mathrm{Albert}}$. Concavity of
-$\capacity$ (Theorem~\ref{thm:ladder:concave}) forces equal cells; the
-$1|10|16$ partition fixes $k\cdot(16/27k)=16/27$, so only the integer $k$ is
-constrained. Since $\dim\mathfrak{d}=3$, mirror stabilisation can occupy at
-most three diagonal directions, so $k\leq3$; Postulate~\ref{post:sm:P2}
-requires one chiral $\mathbf{16}$ per occupied cell and capacity saturation
-requires all three diagonal weights, hence $k=3$. The value
-$b_0(3\,\mathrm{gen})=12$ in \eqref{eq:gauge-gravity:b0} is then fixed
-uniquely, not chosen.
+mirror-dual of capacity on $\mathcal{G}_{\mathrm{Albert}}$.
+
+\emph{Upper bound ($k\leq3$).}
+By Lemma~\ref{lem:sm:rank3}, $\mathfrak{d}\cong\R^3$ is the unique maximal
+abelian $F_4$-invariant diagonal; mirror stabilisation assigns each
+$\mathbf{16}$-subcell to a distinct diagonal weight $e_i$, so at most
+$\dim\mathfrak{d}=3$ mirror-stable cells can coexist.
+
+\emph{Lower bound ($k\geq3$).}
+Capacity saturation on the $1|10|16$ backbone requires the full
+$16/27$ mass of the $\mathbf{16}$-sector to be distributed across occupied
+diagonal weights. A single cell ($k=1$) or double cell ($k=2$) leaves
+unassigned $\mathfrak{d}$-directions; concavity
+(Theorem~\ref{thm:ladder:concave}) then permits capacity redistribution that
+lowers $\capacity$, contradicting $\mathrm{Bal}_\capacity$ maximality.
+Hence $k\geq3$.
+
+\emph{Conclusion ($k=3$).}
+Strict concavity forces equal subcells of capacity $16/(27k)$ each; with
+$k=3$ this is $16/81$. Postulate~\ref{post:sm:P2} assigns one chiral
+$\mathbf{16}$ per cell, fixing $b_0(3\,\mathrm{gen})=12$ in
+\eqref{eq:gauge-gravity:b0} uniquely, not chosen.
 \end{proof}
 
 \begin{theorem}[Three families from mirror stabilisation]\label{thm:sm:three-families}
@@ -2308,9 +2445,10 @@ $\mathbf{16}$-sector. Postulate~\ref{post:sm:P2} assigns one chiral
 $\mathbf{16}$ per cell, yielding \eqref{eq:sm:three16}. The triality
 organization of Proposition~\ref{prop:sm:triality} aligns the three cells with
 the three diagonal directions of Lemma~\ref{lem:sm:rank3}, hence with
-$SU(3)_F\subset U(3)$ on $\C^3$. Anomaly cancellation
-(Theorem~\ref{thm:gauge-gravity:gs}) extends family-wise once
-\eqref{eq:sm:nF} is fixed.
+$SU(3)_F\subset U(3)$ on $\C^3$. Anomaly freedom with \eqref{eq:sm:nF} follows from
+Proposition~\ref{prop:gauge-gravity:anomaly-nF}: three replicas of the
+embedded $\mathbf{27}$ arithmetic of Theorem~\ref{thm:gauge-gravity:gs}
+($1+10+16$ per generation), not from the three chiral $\mathbf{16}$s alone.
 \end{proof}
 
 \begin{corollary}[No fourth generation]\label{cor:sm:no4th}
@@ -2460,28 +2598,31 @@ Hurwitz ladder & Theorem & dims $0,1,2,4,8$ & \ref{thm:ladder:hurwitz} \\
 $\Mirror^6(\Void)=\E{8}$ & Theorem & Freudenthal & \ref{thm:ladder:e8} \\
 $\Mirror^7(\Void)=\E{8}\times\E{8}$ & Theorem & prod.\ mirror & \ref{thm:ladder:e8e8} \\
 $\Mirror^8(\Void)=\E{6}$ & Theorem & Cartan mirror & \ref{thm:ladder:e6} \\
-$|S_6|,|S_7|,|S_8|=248,496,78$ & Theorem & Stone exc.\ lift & \ref{thm:ladder:stone-e8} \\
+$\chi(S_6),\chi(S_7),\chi(S_8)=248,496,78$ & Theorem & chart dim $\chi$ & \ref{thm:ladder:stone-e8} \\
 $\mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}\simeq\mathbf{Obs}^{\mathrm{climb}}$ & Cor. & rungs $0$--$8$ & \ref{cor:void-mirror:global-equiv} \\
 $\Climb^\infty(\Void)\cong\jalg$ & Theorem & 27 stable & \ref{thm:foundations:stone-lift} \\
-$1|10|16$ partition & Prop. & capacity & \ref{prop:foundations:partition} \\
-Potential from $\capacity$ & Theorem & limit & \ref{thm:dynamics:potential} \\
-EIII vacuum & Theorem & coercivity & \ref{thm:dynamics:vacuum} \\
-Coset mirror $16\leftrightarrow\overline{16}$ & Theorem & $U(1)$ charge & \ref{prop:ladder:e6branch} \\
+Capacity concavity & Theorem & log-sum-exp & \ref{thm:ladder:concave} \\
+$1|10|16$ partition & Theorem & concave dual & \ref{thm:ladder:capacity-jordan} \\
+Potential from $\capacity$ & Theorem & sharp limit & \ref{thm:dynamics:potential} \\
+EIII vacuum & Theorem & EIII coercivity & \ref{thm:dynamics:vacuum} \\
+Three $\mathbf{16}$ cells at $\Mirror^7$ & Prop. & $k\leq3$, $k\geq3$ & \ref{prop:sm:capacity7} \\
+Coset mirror $16\leftrightarrow\overline{16}$ & Prop. & $U(1)$ charge & \ref{prop:ladder:e6branch} \\
 Anomaly cancellation & Theorem & $16-80+64$; GS $-1$ & \ref{thm:gauge-gravity:gs} \\
 $b_0(3)=12$ & Theorem & \eqref{eq:gauge-gravity:b0} & \ref{thm:gauge-gravity:beta-g} \\
-$\mathfrak{U}^\star=\Climb^\infty(\Void)$ & Theorem & under P1--P4 & \ref{thm:dynamics:universe} \\
+$\mathfrak{U}^\star=\Climb^\infty(\Void)$ & Theorem & under P1,P2,P4 & \ref{thm:dynamics:universe} \\
 \midrule
 Soldering, $d=4$ & Postulate & P1 & \ref{post:spacetime:P1} \\
 Chiral matter & Postulate & P2 & \ref{post:sm:P2} \\
-Three families & Theorem & $\Mirror^7$; P2 & \ref{thm:sm:three-families} \\
+Three families & Theorem & P2; \ref{prop:sm:capacity7} sketch & \ref{thm:sm:three-families} \\
 GUT--Higgs & Postulate & P4 & \ref{post:sm:P4} \\
+Flavon hierarchy & Postulate & P3$'$ & \ref{post:sm:flavons} \\
 \midrule
 $\kappa_\star=96\pi^2/5$ & Theorem & trunc.\ (i)--(iv) & \ref{thm:gauge-gravity:kappa-oneloop} \\
 FRG Jacobian $\{+2,+2,+2,-2,-4\}$ & Prop. & ext.\ trunc. & \ref{prop:gauge-gravity:jacobian} \\
 $\kappa_\star$ beyond ext.\ trunc. & Conjecture & $R^2$/graviton & \ref{conj:gauge-gravity:kappa} \\
 P1 from mirror & No-go & --- & \ref{prop:spacetime:p1-nogo} \\
 P2 from mirror & No-go & --- & \ref{prop:sm:p2-nogo} \\
-$\Lambda_{\mathrm{cc}}$ & Postulate & no-go & \ref{prop:gauge-gravity:cc-nogo} \\
+$\Lambda_{\mathrm{cc}}$ & Postulate & tuned; no-go & \ref{post:gauge-gravity:cc} \\
 OS reconstruction & Theorem & if RP & \ref{thm:spacetime:OS} \\
 RP (semiclassical EIII) & Theorem & $\mu^2>0$ & \ref{thm:spacetime:rp-semiclassical} \\
 RP (nonperturbative) & Postulate & P5 & \ref{post:spacetime:P5} \\
@@ -2511,15 +2652,18 @@ graph; capacity partition; potential and EIII vacuum; composite gauge;
 anomaly cancellation; Sakharov $\MPl$; one-loop $\kappa_\star$ and extended
 FRG Jacobian (Table~\ref{tab:gauge-gravity:jacobian}).
 
-\textbf{Conditional on P2:} $n_F=3$ (Theorem~\ref{thm:sm:three-families}).
+\textbf{Conditional on P2:} $n_F=3$ (Theorem~\ref{thm:sm:three-families}, via
+Proposition~\ref{prop:sm:capacity7} sketch).
 
 \textbf{Postulates (not derivable):} P1 soldering; P2 chirality;
-P4 GUT--Higgs; P5 reflection positivity; tuned $\Lambda_{\mathrm{cc}}$
-(Proposition~\ref{prop:gauge-gravity:cc-nogo}).
+P3$'$ flavon hierarchy; P4 GUT--Higgs; P5 reflection positivity; tuned
+$\Lambda_{\mathrm{cc}}$ (Postulate~\ref{post:gauge-gravity:cc}).
 
 \textbf{Open (minimal):} Conjecture~\ref{conj:gauge-gravity:kappa};
-P5; Chevalley cell labeling (Remark~\ref{rem:ladder:stone-cells});
-cosmological constant (external to core).
+nonperturbative reflection positivity (Postulate~\ref{post:spacetime:P5});
+Chevalley cell labeling (Remark~\ref{rem:ladder:stone-cells});
+cosmological constant (external to core;
+Proposition~\ref{prop:gauge-gravity:cc-nogo}).
 
 %----------------------------------------------------------------------%
 \subsection{Falsifiable predictions}
@@ -2592,6 +2736,7 @@ Former Postulate~P3 is retired.
 \midrule
 P1 & Lorentzian soldering, $d=4$ & No (\ref{prop:spacetime:p1-nogo}) \\
 P2 & Chiral matter, no $\overline{\mathbf{16}}$ partners & No (\ref{prop:sm:p2-nogo}) \\
+P3$'$ & Flavon hierarchy, CKM/PMNS mixing & No (mirror fixes $n_F=3$ only) \\
 P4 & GUT--Higgs and Yukawa & No (breaking chain input) \\
 P5 & Nonperturbative reflection positivity & No (\ref{prop:spacetime:rp-nogo}) \\
 CC & Tuned $\Lambda_{\mathrm{cc}}$ & No (\ref{prop:gauge-gravity:cc-nogo}) \\
@@ -2600,8 +2745,9 @@ CC & Tuned $\Lambda_{\mathrm{cc}}$ & No (\ref{prop:gauge-gravity:cc-nogo}) \\
 \end{center}
 \noindent
 P1 and P2 were examined for promotion from mirror stabilisation; neither
-passes a no-go test. P4 encodes electroweak and GUT breaking beyond the
-coset $\sigma$-model. Semiclassical reflection positivity on EIII is
+passes a no-go test. P3$'$ encodes flavon-driven Yukawa hierarchy and mixing beyond the family
+count fixed by mirror stabilisation. P4 encodes electroweak and GUT breaking
+beyond the coset $\sigma$-model. Semiclassical reflection positivity on EIII is
 \emph{derived} (Theorem~\ref{thm:spacetime:rp-semiclassical},
 Corollary~\ref{cor:spacetime:rp-derived}); the narrowed P5 is the residual
 gap to \emph{nonperturbative} unitary Lorentzian dynamics

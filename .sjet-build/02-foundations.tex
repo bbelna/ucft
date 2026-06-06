@@ -521,11 +521,22 @@ Proposition~\ref{prop:ladder:exceptional}.
 
 \emph{(iii).} The Lie labels $A_6,A_7,A_8$ are proved in
 Section~\ref{sec:ladder:exceptional}. The Stone objects $S_6,S_7,S_8$ are
-constructed and proved unique in Theorem~\ref{thm:ladder:stone-e8}; hence
+constructed with chart-synchronized uniqueness in
+Theorem~\ref{thm:ladder:stone-e8}; hence
 $\mathrm{Spec}^{\mathrm{ext}}$ hits every exceptional Stone object exactly once
 and the extended equivalence is complete on
 $\mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}$.
 \end{proof}
+
+\begin{remark}[Synchronization packaging]\label{rem:void-mirror:sync-pack}
+Theorem~\ref{thm:void-mirror:equiv-ext} records \emph{mirror-climb
+synchronization packaging}: Lie charts and profinite Stone lifts are paired
+rung by rung through $\mathrm{Arith}^{\mathrm{ext}}$ and
+$\mathrm{Spec}^{\mathrm{ext}}$. This is not classical Stone-duality
+reconstruction of $\mathbf{Bool}^{\mathrm{op}}$ from $\mathbf{Stone}$; at
+$n\geq6$ the pairing is fixed by chart dimension $\chi$ and mirror
+functoriality, not by profinite cardinality.
+\end{remark}
 
 \begin{definition}[Profinite climb tower]\label{def:void-mirror:profinite}
 For each $n$, let $\pi_{n+1,n}:S_{n+1}\to S_n$ be the unique surjective
@@ -583,9 +594,12 @@ where $A_\infty$ stabilizes on the $\jalg$--$\E{6}$ sector:
     $\E{6}$ after $\mathrm{Bal}_\capacity$
     (Theorem~\ref{thm:dynamics:universe}).
 \end{enumerate}
-Hence global equivalence $\mathbf{Stone}\simeq\mathbf{Obs}$ on the profinite
-tower is \textbf{proved} through the Jordan rung and through exceptional rungs
-$n=6,7,8$ (Theorem~\ref{thm:ladder:stone-e8}).
+Together (i)--(iii) package profinite-tower functoriality and Lie--Stone
+synchronization through the Jordan rung and the finite exceptional segment
+$n=6,7,8$ (Theorem~\ref{thm:ladder:stone-e8}). The physical identification
+$\mathfrak{U}^\star$ in Theorem~\ref{thm:dynamics:universe} is separate input
+under Postulates P1--P4; it does \emph{not} by itself establish global
+$\mathbf{Stone}\simeq\mathbf{Obs}$ equivalence.
 \end{proposition}
 
 \begin{proof}
@@ -596,18 +610,21 @@ cyclic extension of the stabilized $\jalg$ datum
 (Proposition~\ref{prop:ladder:exceptional}), so $A_\infty$ is not an infinite
 Lie extension but the capacity-balanced stabilization
 $\jalg\to\E{8}\to\E{8}\times\E{8}\to\E{6}$. Theorem~\ref{thm:dynamics:universe}
-completes the physical identification of $\mathfrak{U}^\star$.
+identifies the universe datum $\mathfrak{U}^\star$ under P1--P4; the climb
+equivalence of Theorem~\ref{thm:void-mirror:equiv-ext} is already established
+independently on rungs $0$--$8$.
 \end{proof}
 
 \begin{corollary}[Global mirror-climb equivalence]\label{cor:void-mirror:global-equiv}
 The extended equivalence of Theorem~\ref{thm:void-mirror:equiv-ext}, the
-profinite identifications of
+profinite synchronization of
 Propositions~\ref{prop:void-mirror:profinite-jordan}--\ref{prop:void-mirror:profinite-func},
-and the arena lift of Theorem~\ref{thm:foundations:stone-lift} yield
+and the arena lift of Theorem~\ref{thm:foundations:stone-lift} \emph{package}
+chart-by-chart mirror-climb synchronization
 \[
   \mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}\;\simeq\;\mathbf{Obs}^{\mathrm{climb}}
 \]
-on rungs $0$--$8$. The universe profinite fixed point
+on rungs $0$--$8$ (Remark~\ref{rem:void-mirror:sync-pack}). The universe profinite fixed point
 \eqref{eq:void-mirror:universe} has capacity backbone $\jalg$ and stabilized
 gauge datum $\E{6}$ after $\mathrm{Bal}_\capacity$. On the normed--Jordan
 sector this specializes to
@@ -622,8 +639,10 @@ Classical Stone duality identifies $\mathbf{Stone}$ with $\mathbf{Bool}^{\mathrm
 Theorem~\ref{thm:void-mirror:equiv} is the \emph{arithmetic lift} through the
 Jordan rung; Theorem~\ref{thm:void-mirror:equiv-ext} and
 Propositions~\ref{prop:void-mirror:profinite-jordan}--\ref{prop:void-mirror:profinite-func}
-extend it to exceptional Lie rungs and profinite limits. Corollary~\ref{cor:void-mirror:global-equiv}
-packages the global equivalence
+extend this by \emph{synchronization packaging} along exceptional Lie rungs and
+profinite limits---not by reconstructing Boolean algebras from Stone spaces in
+the classical sense. Corollary~\ref{cor:void-mirror:global-equiv} records the
+resulting chart equivalence
 $\mathbf{Stone}^{\mathrm{climb}}_{\mathrm{ext}}\simeq\mathbf{Obs}^{\mathrm{climb}}$
 on rungs $0$--$8$, including the universe limit \eqref{eq:void-mirror:universe}.
 What remains open is computational labeling of exceptional clopen cells
