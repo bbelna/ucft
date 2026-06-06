@@ -1,0 +1,80 @@
+%======================================================================%
+\section{Building the Universe}
+\label{sec:universe}
+%======================================================================%
+
+The universe is not assumed. It is the profinite fixed point of mirror climb
+with capacity balancing.
+
+%----------------------------------------------------------------------%
+\subsection{Capacity dual}
+\label{sec:universe:capacity}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Albert graph and capacity]\label{def:capacity}
+On the mirror-refined Albert--Cayley graph $\mathcal{G}$ with costs $c_i$,
+\begin{equation}\label{eq:capacity}
+  \capacity(\omega)=-\sum_{a\in V}\mu(a)\log\!\Bigl(\sum_i e^{c_i(a)-\omega_i}\Bigr).
+\end{equation}
+$\mathrm{Bal}_{\mathcal{C}}$ is the unique maximizer on $\{\sum_i\omega_i=0\}$.
+\end{definition}
+
+\begin{theorem}[Concavity]\label{thm:concave}
+$\capacity$ is strictly concave; for targets $m_i>0$, $\sum m_i=1$, there is
+unique $\omega^\star$ with $\partial\capacity/\partial\omega_i(\omega^\star)=m_i$.
+\end{theorem}
+
+\begin{theorem}[$1|10|16$ partition]\label{thm:partition}
+At $\Mirror^5(\Void)$, $\mathrm{Bal}_{\mathcal{C}}$ yields sector masses
+$(1/27,10/27,16/27)$ on $\mathbf{27}=\mathbf{1}\oplus\mathbf{10}\oplus\mathbf{16}$.
+\end{theorem}
+
+%----------------------------------------------------------------------%
+\subsection{Potential and vacuum}
+\label{sec:universe:potential}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Potential]\label{def:potential}
+\begin{equation}\label{eq:potential}
+  V(X)=\alpha\langle X^{\#},X^{\#}\rangle+\beta[\Tr(X^2)-c_2]^2+\gamma\Tr(X^2)^k,
+  \quad \alpha,\beta,\gamma>0,\ k\ \text{even},
+\end{equation}
+is the profinite limit of graph penalties under $\mathrm{Bal}_{\mathcal{C}}$.
+\end{definition}
+
+\begin{theorem}[EIII vacuum]\label{thm:vacuum}
+$V$ is coercive on compact $\E{6}$. Global minima lie on rank-one EIII
+$\mathcal{M}=\E{6}/H$; the origin is a saddle with $32$ Goldstone directions.
+\end{theorem}
+
+%----------------------------------------------------------------------%
+\subsection{Universe datum}
+\label{sec:universe:datum}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Universe]\label{def:universe}
+The \emph{universe datum} is
+\begin{equation}\label{eq:universe}
+  \mathfrak{U}^\star=\Climb^\infty(\Void)
+  =\varprojlim_{n\to\infty}\Climb^n(\Void),
+\end{equation}
+stabilizing at $\jalg$ with Albert graph $\mathcal{G}_{\mathrm{Albert}}$,
+capacity maximizer $\omega^\star$, and vacuum $\orderparam_\star\in\mathcal{M}$.
+\end{definition}
+
+\begin{theorem}[Universe from the mirror]\label{thm:universe}
+$\mathfrak{U}^\star$ carries: (i) $27$ stable Jordan coordinates;
+(ii) $1|10|16$ capacity partition; (iii) $E_6$ gauge sector with
+$\mathfrak{h}=\mathfrak{so}_{10}\oplus\mathfrak{u}_1$; (iv) EIII coset
+$\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$.
+\end{theorem}
+
+\begin{proof}
+Items (i)--(ii) from Theorems~\ref{thm:rung-table} and~\ref{thm:partition}.
+Items (iii)--(iv) from Theorem~\ref{thm:e6} and standard $E_6$ branching.
+\end{proof}
+
+\begin{equation}\label{eq:action}
+  S[\orderparam]=\int d^4x\,\sqrt{|g|}\left[\tfrac12 K_{AB}\nabla_\mu\orderparam^A\nabla^\mu\orderparam^B+V(\orderparam)\right],
+\end{equation}
+with $K$ the unique $H$-invariant metric on $\mathfrak{m}$.

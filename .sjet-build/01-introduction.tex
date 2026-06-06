@@ -3,81 +3,39 @@
 \label{sec:intro}
 %======================================================================%
 
-SJET asks: what is the minimal mathematical seed from which the Standard Model
-and gravitation can be \emph{derived}, not merely embedded? Our answer is
-two-fold:
-\begin{enumerate}[label=\textbf{Axiom \arabic*},leftmargin=*]
-  \item \textbf{The void} $\Void$ --- no observable distinction, the terminal
-    object of the Stone ladder.
-  \item \textbf{The mirror operator} $\Mirror$ --- an involutive generator that,
-    applied repeatedly, \emph{climbs} the division and exceptional ladders.
+This paper develops \emph{Stone--Jordan Exceptional Theory} (SJET) as a
+\textbf{mathematical physics} construction: starting from a void and a mirror,
+we build a universe datum $\mathfrak{U}^\star$ with Lie--Jordan structure,
+capacity-selected dynamics, and a contact layer with four-dimensional gauge
+theory. The mirror is not metaphor; it is a functorial involution on Stone
+spectra whose orbit generates all arithmetic and exceptional data.
+
+\subsection{Contributions}
+
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Two axioms only:} void $\Void$ and mirror $\Mirror$.
+  \item \textbf{Universe construction:}
+    $\mathfrak{U}^\star=\varprojlim_n(\mathrm{Bal}_{\mathcal{C}}\circ\Mirror)^n(\Void)$.
+  \item \textbf{Proved mirror rungs} through $E_6$ and chart synchronization
+    on exceptional rungs $E_8$, $E_8\times E_8$.
+  \item \textbf{Physical sector} as mirror-quotient $\sigma$-anti-invariant
+    cohomology; three families without a separate family postulate.
+  \item \textbf{Honest epistemic scope:} theorems, derived definitions, and
+    named conjectures for remaining physical inputs.
 \end{enumerate}
-Everything else --- graphs, Albert algebra, capacity dual, $\E{6}$ potential,
-gauge sector, induced gravitation, anomaly cancellation --- is \textbf{derived}
-from $\Mirror^n(\Void)$ and capacity balancing on mirror-refined partitions.
-Physical postulates P1, P2, P3$'$, P4, and nonperturbative P5 (soldering,
-chiral matter, flavon hierarchy, GUT--Higgs, full reflection positivity)
-remain the honest boundary between proved mathematics and four-dimensional
-quantum field theory. Three families are \textbf{derived}
-(Theorem~\ref{thm:sm:three-families}, conditional on P2); semiclassical
-reflection positivity on EIII is \textbf{derived}
-(Theorem~\ref{thm:spacetime:rp-semiclassical}, under P1 and one-loop CW mass);
-Postulate~P5 governs only the nonperturbative completion
-(Proposition~\ref{prop:spacetime:rp-nogo}). P1 and P2 were checked for
-derivation from mirror stabilisation and \emph{not} promoted
-(Propositions~\ref{prop:spacetime:p1-nogo}, \ref{prop:sm:p2-nogo}).
-Section~\ref{sec:conclusions:toe} records the conditional ToE closure ledger;
-Section~\ref{sec:axiomatic} records the \textbf{axiomatic physics} program to
-eliminate remaining postulates.
-
-\subsection{The climb picture}
-\label{sec:intro:climb}
-
-Schematically:
-\begin{equation}\label{eq:intro:climb}
-  \Void
-  \;\xrightarrow{\;\Mirror\;}\;
-  S_{\R}\;\xrightarrow{\;\Mirror\;}\;S_{\C}\;\xrightarrow{\;\Mirror\;}\;
-  S_{\Quat}\;\xrightarrow{\;\Mirror\;}\;S_{\Oct}\;\xrightarrow{\;\Mirror\;}\;
-  \jalg
-  \;\xrightarrow{\;\Mirror\;}\;
-  \cdots\;\xrightarrow{\;\Mirror\;}\;\Void.
-\end{equation}
-The bottom and top $0$ are the same void: the climb is a \emph{closed} ladder.
-At each rung, $\Mirror$ acts as Boolean complement (discrete), Cayley--Dickson
-doubling (normed division), or heterotic/Cartan doubling (exceptional Lie).
-Capacity balancing $\capacity$ is the \emph{dual mirror}: it selects the unique
-balanced partition at each level (BAMLP), not a separate axiom.
-
-\subsection{Epistemic conventions}
-\label{sec:intro:status}
-
-\begin{itemize}
-  \item \textbf{Theorem} --- proved from Axioms~1--2 and standard mathematics.
-  \item \textbf{Derived} --- explicit construction from mirror climb (no extra
-    postulate).
-  \item \textbf{Postulate} --- added four-dimensional physics (P1, P2, P3$'$, P4,
-    nonperturbative P5, CC); semiclassical RP is derived, not postulated.
-  \item \textbf{Conjecture} --- motivated but not controlled.
-\end{itemize}
 
 \subsection{Conventions}
-\label{sec:intro:conventions}
 
-Signature $(-,+,+,+)$; compact $\E{6}$ for dynamics; $\orderparam\in\jalg$
-order parameter; $\capacity$ capacity functional; $\Mirror$ mirror operator;
-$\Void$ void. Casimirs: $C_A(\Spin(10))=8$, $T(\mathbf{16})=2$,
-$C_2(\mathbf{16})=45/8$. Branchings as in \eqref{eq:foundations:27branch}.
+Compact real $E_6$; order parameter $\orderparam\in\jalg$; capacity functional
+$\capacity$. Branching $\mathbf{27}=\mathbf{1}_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}$
+under $H=\Spin(10)\times U(1)$. Signature $(-,+,+,+)$ when a Lorentzian
+soldering map is fixed (Section~\ref{sec:physics:spacetime}).
 
 \subsection{Organization}
 
-Section~\ref{sec:void-mirror}: void and mirror axioms; functor $\Mirror$;
-Theorem~\ref{thm:void-mirror:table} ($\Mirror^4(\Void)=\Oct$,
-$\Mirror^5(\Void)=\jalg$); Theorems~\ref{thm:ladder:e8}--\ref{thm:ladder:e8e8}
-($\Mirror^6(\Void)=\E{8}$, $\Mirror^7(\Void)=\E{8}\times\E{8}$).
-Section~\ref{sec:ladder}: exceptional continuation and capacity dual.
-Section~\ref{sec:foundations}: derived graph, Stone lift, and order parameter.
-Section~\ref{sec:dynamics}: capacity, potential, vacuum.
-Sections~\ref{sec:spacetime}--\ref{sec:sm}: physics under P1, P2, P4, P5.
-Section~\ref{sec:verification}: ledger.
+Section~\ref{sec:mirror}: axioms and mirror functor.
+Section~\ref{sec:climb}: division and exceptional ladders.
+Section~\ref{sec:universe}: capacity, potential, universe fixed point.
+Section~\ref{sec:physics}: physical sector, spacetime, gauge, matter.
+Section~\ref{sec:conclusions}: status and open problems.
 Appendix~\ref{sec:appendix}: Albert identities.

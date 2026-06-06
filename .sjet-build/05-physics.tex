@@ -1,0 +1,94 @@
+%======================================================================%
+\section{The Physical Universe}
+\label{sec:physics}
+%======================================================================%
+
+Mathematical data of $\mathfrak{U}^\star$ becomes physical through mirror
+quotient observability and soldering on the Jordan--octonionic block.
+
+%----------------------------------------------------------------------%
+\subsection{Physical sector}
+\label{sec:physics:sector}
+%----------------------------------------------------------------------%
+
+At $\Mirror^7(\Void)=\E{8}\times\E{8}$, let $Q$ be the Stone lift of the
+stabilized Albert tower and $\sigma$ the product-mirror involution
+$(g_1,g_2)\mapsto(g_2,g_1)$.
+
+\begin{definition}[Physical configurations]\label{def:physical}
+A configuration is \emph{observable} if it lies in the $\sigma$-anti-invariant
+sector of $\hat Q=Q/\sigma$. Fermions are cohomology classes in
+$H^1(\hat Q,V_{16})^{\sigma=-1}$ for the $\mathbf{16}$-bundle $V_{16}$.
+\end{definition}
+
+\begin{theorem}[Three families]\label{thm:three-families}
+$\dim H^1(\hat Q,V_{16})^{\sigma=-1}=3$. Each class is one chiral
+$\mathbf{16}$ of $\Spin(10)$; mirror partners are $\sigma$-invariant and
+non-observable. Hence $n_F=3$.
+\end{theorem}
+
+\begin{proof}
+Cellular count on the rank-$3$ diagonal $\mathfrak{d}\subset\jalg$; index
+theorem on $\hat Q$~\cite{AtiyahBott1966}. See Appendix~\ref{sec:appendix:quotient}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Spacetime from the climb}
+\label{sec:physics:spacetime}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Soldering]\label{def:soldering}
+Embed $\Quat\subset\Oct$ from the mirror-fixed associative subalgebra at the
+Jordan exit. The block $H_2(\Quat)\subset H_2(\Oct)\cong\R^{1,9}$ carries
+Lorentzian signature via $\det$. The soldering map $\sigma$ identifies four
+clock components $\orderparam^0,\ldots,\orderparam^3$ with this block;
+$d=4$.
+\end{definition}
+
+\begin{proposition}[Coset metric]\label{prop:coset-metric}
+$K|_{\mathfrak{m}}$ is positive-definite and $H$-invariant. Lorentzian
+signature is carried by $\sigma$, not by Wick rotation of $K$.
+\end{proposition}
+
+\begin{theorem}[Semiclassical reflection positivity]\label{thm:rp}
+On EIII, with radiative mass $\mu^2>0$ on $28$ coset scalars
+(Coleman--Weinberg), the Euclidean $\sigma$-model \eqref{eq:action} satisfies
+reflection positivity along $\orderparam^0$ in the semiclassical regime.
+\end{theorem}
+
+\begin{conjecture}[Nonperturbative reflection positivity]\label{conj:rp}
+Tree-level Goldstones and the nonperturbative gauge measure satisfy full
+reflection positivity, yielding OS reconstruction~\cite{OsterwalderSchrader1973}.
+\end{conjecture}
+
+%----------------------------------------------------------------------%
+\subsection{Gauge, anomalies, gravity}
+\label{sec:physics:gauge}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Anomaly cancellation]\label{thm:anomaly}
+For one embedded $\mathbf{27}$: cubic $16-80+64=0$; mixed coefficient $-1$
+cancelled by Green--Schwarz~\cite{GreenSchwarz1984}. With $n_F=3$ replicas of
+the full $\mathbf{27}$ arithmetic, anomalies cancel family-wise.
+\end{theorem}
+
+\begin{theorem}[$b_0=12$]\label{thm:beta}
+With $C_A(\Spin(10))=8$, $T(\mathbf{16})=2$, $n_F=3$, $n_S=28$:
+$b_0=(88-24-28)/3=12$.
+\end{theorem}
+
+\begin{theorem}[Induced Planck mass]\label{thm:planck}
+Sakharov induction from $28$ massive coset scalars gives
+$\MPl^2\propto 28\mu^2/(6\cdot16\pi^2)\log(\Lambda^2/\mu^2)$.
+\end{theorem}
+
+\begin{theorem}[Gravitational fixed point]\label{thm:kappa}
+One-loop truncation gives $\kappa_\star=96\pi^2/5$ with
+$\partial\beta_\kappa/\partial\kappa|_{\kappa_\star}=-2$.
+\end{theorem}
+
+\begin{conjecture}[GUT breaking]\label{conj:breaking}
+Gradient flow of $V$ on coset directions triggers
+$\E{6}\to\Spin(10)\times U(1)\to\cdots\to SU(3)_c\times U(1)_{\mathrm{em}}$
+with Higgs content $\mathbf{45}_H$, $\mathbf{126}_H$, $\mathbf{10}_H$.
+\end{conjecture}

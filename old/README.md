@@ -1,27 +1,21 @@
-# Universal Coset Field Theory (UCFT)
+# Archive
 
-Complete manuscript: graph--Stone--BAMLP foundation $\to$ $E_6$/Albert coset $\to$
-induced gravitation and Standard Model embedding. The universe is the unique fixed
-point $\mathfrak{U}^\star$ of the master operator $\mathbb{U}$.
+Prior manuscripts and build tooling preserved when SJET was rewritten as a focused mathematical-physics paper (June 2026).
 
-## Build
+## `sjet-stack/`
 
-```bash
-.ucft-build/assemble-ucft-final.sh
-latexmk -pdf -f ucft-final.tex
-```
+Full previous SJET manuscript (~39 pages): modular `.sjet-build/` units (including §11 axiomatic physics), assembled `sjet.tex`, PDF, and verification ledger.
 
-With Fedora toolbox:
+Build (historical):
 
 ```bash
-toolbox run -c latex bash -lc 'cd /path/to/ucft && latexmk -pdf -f ucft-final.tex'
+cd sjet-stack
+bash .sjet-build/assemble-sjet.sh
+latexmk -pdf sjet.tex
 ```
 
-## Layout
+## UCFT era
 
-- `ucft-final.tex` — standalone master manuscript (generated; do not edit by hand)
-- `ucft.tex` — condensed modular wrapper
-- `.ucft-build/unit-*.tex` — source units
-- `.ucft-build/assemble-ucft-final.sh` — regeneration script
-
-Edit the unit files, then rerun the assembly script before compiling.
+- `ucft.tex`, `ucft-final.tex`, `ucft-final.pdf` — UCFT master documents
+- `.ucft-build/` — modular UCFT units and assemble script
+- `BAMLP-FOUNDATION.md`, `UCFT-SPINE.md` — design notes

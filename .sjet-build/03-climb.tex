@@ -1,0 +1,78 @@
+%======================================================================%
+\section{The Mirror Climb}
+\label{sec:climb}
+%======================================================================%
+
+\begin{equation}\label{eq:climb:unified}
+  \Void\to\R\to\C\to\Quat\to\Oct\to\jalg\to\E{8}\to\E{8}\times\E{8}\to\E{6}\to\cdots\to\Void
+\end{equation}
+
+%----------------------------------------------------------------------%
+\subsection{Division rungs}
+\label{sec:climb:division}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Mirror rung table, $n\leq5$]\label{thm:rung-table}
+\begin{center}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}rcccc@{}}
+\toprule
+$n$ & $A_n$ & $d_n$ & Mode & \\
+\midrule
+$0$ & $\{0\}$ & $0$ & void & \\
+$1$ & $\R$ & $1$ & discrete & \\
+$2$ & $\C$ & $2$ & arithmetic & \\
+$3$ & $\Quat$ & $4$ & arithmetic & \\
+$4$ & $\Oct$ & $8$ & Hurwitz terminal & \\
+$5$ & $\jalg$ & $27$ & Jordan exit & \\
+\bottomrule
+\end{tabular}
+\end{center}
+In particular $\Mirror^4(\Void)=\Oct$ and $\Mirror^5(\Void)\cong\jalg$.
+\end{theorem}
+
+\begin{proof}
+Cayley--Dickson doubling until $\Oct$; Hurwitz uniqueness of normed division
+algebras; sedenion zero divisors force Jordan exit to the unique formally real
+$H_3(\Oct)$~\cite{Hurwitz1898,SpringerVeldkamp2000}.
+\end{proof}
+
+\begin{lemma}[Sedenion failure]\label{lem:sedenion}
+$\Mirror_{\mathrm{arith}}(\Oct)$ is $16$-dimensional and not division.
+\end{lemma}
+
+%----------------------------------------------------------------------%
+\subsection{Exceptional rungs}
+\label{sec:climb:exceptional}
+%----------------------------------------------------------------------%
+
+On $\jalg$, the stabilizer tower is $G_2\subset F_4\subset\E{6}$. The
+Freudenthal diagonal $\mathfrak{M}(\Oct,\Oct)=\mathfrak{e}_8$ yields:
+
+\begin{theorem}[$\Mirror^6(\Void)=\E{8}$]\label{thm:e8}
+Automorphism mirror on the octonion--Jordan pair gives $\E{8}$, $d_6=248$.
+\end{theorem}
+
+\begin{theorem}[$\Mirror^7(\Void)=\E{8}\times\E{8}$]\label{thm:e8e8}
+Product mirror $\Mirror_{\mathrm{prod}}(G)=G\times G$ gives $d_7=496$.
+\end{theorem}
+
+\begin{theorem}[$\Mirror^8(\Void)=\E{6}$]\label{thm:e6}
+Cartan mirror after capacity descent on the Albert graph gives $d_8=78$,
+$H=\Spin(10)\times U(1)$, $\mathcal{M}=\E{6}/H$ (EIII), $\dim\mathcal{M}=32$.
+\end{theorem}
+
+\begin{proof}[Proof sketches]
+\emph{$E_8$:} couple pre-projection octonion data to $J_3(\mathbb{O})$ via
+Freudenthal--Tits~\cite{Freudenthal1954,Tits1966}.
+\emph{$E_8\times E_8$:} functorial product involution.
+\emph{$E_6$:} capacity-balanced collapse of heterotic product to reduced
+structure group of $\jalg$ with branching
+$\mathbf{27}=\mathbf{1}\oplus\mathbf{10}\oplus\mathbf{16}$.
+\end{proof}
+
+\begin{definition}[Chart dimension]\label{def:chart-dim}
+At $n\geq6$, $\chi(S_n)=\dim A_n\in\{248,496,78\}$; profinite $|S_n|$ is
+generally infinite. Stone refinement is chart synchronization, not cardinality
+matching~\cite{Stone1936}.
+\end{definition}

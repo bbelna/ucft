@@ -1,14 +1,13 @@
-% sjet.tex — Stone–Jordan Exceptional Theory (standalone)
 \documentclass[11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
-\usepackage{xcolor}
 \usepackage{booktabs}
 \usepackage{enumitem}
+\usepackage{xcolor}
 \usepackage{hyperref}
-\hypersetup{colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black}
 
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
@@ -19,48 +18,30 @@
 \theoremstyle{definition}
 \newtheorem{axiom}[theorem]{Axiom}
 \newtheorem{definition}[theorem]{Definition}
-\newtheorem{postulate}[theorem]{Postulate}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
 
 \numberwithin{equation}{section}
 
-%--- Division algebras ------------------------------------------------
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Quat}{\mathbb{H}}
 \newcommand{\Oct}{\mathbb{O}}
-
-%--- Lie / algebra ----------------------------------------------------
 \newcommand{\jalg}{J_3(\mathbb{O})}
 \newcommand{\E}[1]{\mathrm{E}_{#1}}
 \newcommand{\Spin}{\mathrm{Spin}}
-\newcommand{\SO}{\mathrm{SO}}
 \newcommand{\Tr}{\operatorname{Tr}}
-\newcommand{\tr}{\operatorname{tr}}
 \newcommand{\rank}{\operatorname{rank}}
-\newcommand{\Hess}{\operatorname{Hess}}
-\newcommand{\argmax}{\operatorname*{arg\,max}}
-\newcommand{\argmin}{\operatorname*{arg\,min}}
-\newcommand{\Rep}[1]{\mathbf{#1}}
-\newcommand{\adj}{\mathrm{adj}}
-
-% Void, mirror, climb
 \newcommand{\Void}{\mathcal{V}}
 \newcommand{\Mirror}{\mathsf{M}}
 \newcommand{\Climb}{\mathsf{C}}
-\newcommand{\Clop}{\operatorname{Clop}}
 \newcommand{\capacity}{\mathcal{C}}
-
-% Order parameter (no collision with capacity)
 \newcommand{\orderparam}{\Phi}
-
-\newcommand{\MGUT}{M_{\mathrm{GUT}}}
 \newcommand{\MPl}{M_{\mathrm{Pl}}}
 
-\title{Stone--Jordan Exceptional Theory\\[0.4em]
-\large From the Void by Mirror Climb}
+\title{Stone--Jordan Exceptional Theory\\[0.35em]
+\large Building the Universe from the Mirror}
 \author{Brandon Belna}
 \date{June 6, 2026}
 
@@ -68,26 +49,25 @@
 \maketitle
 
 \begin{abstract}
-We formulate \emph{Stone--Jordan Exceptional Theory} (SJET) from two primitive
-axioms: the \textbf{void} $\Void$ (no observable distinction) and a
-\textbf{mirror operator} $\Mirror$ that generates structure by involutive
-doubling. Iterating $\Mirror$ on the Stone spectrum of $\Void$ climbs the
-Hurwitz ladder $0\to\R\to\C\to\Quat\to\Oct\to\jalg$ and the exceptional
-cascade $0\to\E{8}\to\E{8}\times\E{8}\to\E{6}\to\cdots\to 0$; capacity
-balancing on the mirror-refined graph is the \emph{derived} selection principle,
-not an independent axiom. At the $\E{6}$ rung we prove vacuum selection on
-EIII, composite $\Spin(10)\times U(1)$ gauge theory with anomaly cancellation,
-and induced gravitation. The axiomatic physics program
-(Section~\ref{sec:axiomatic}) eliminates postulates: P2/P3 retired, P1
-derivation target. Interim inputs P1, P4, P5, P3$'$, CC remain until
-elimination is complete.
-closure is recorded in Section~\ref{sec:conclusions:toe}. The universe
-is the stabilized mirror climb $\Climb^\infty(\Void)$, equivalently the
-capacity fixed point on the Albert--Cayley graph.
+We construct a mathematical model of the universe from two primitives: the
+\textbf{void} (no observable distinction) and an involutive \textbf{mirror
+operator} $\Mirror$ on profinite observable spectra. Iterating $\Mirror$ climbs
+the Hurwitz division ladder and the exceptional Lie cascade; capacity
+balancing $\mathrm{Bal}_{\mathcal{C}}$ is the dual mirror selecting unique
+partitions at each rung. The universe is the profinite fixed point
+$\mathfrak{U}^\star=\Climb^\infty(\Void)$, stabilizing on the Albert algebra
+$J_3(\mathbb{O})$ and the compact exceptional group $E_6$. Physical observables
+are $\sigma$-anti-invariant modes on the mirror quotient at the heterotic
+rung; soldering, dynamics, and gauge data follow from the Jordan--octonionic
+block $H_2(\mathbb{O})$. We state proved results (mirror rung table,
+three-family multiplicity, anomaly cancellation, induced gravitation) and
+isolate conjectural steps (full GUT breaking, nonperturbative reflection
+positivity, cosmological constant) without overclaiming a completed physical
+theory.
 \end{abstract}
 
 \noindent\textbf{Keywords:} void; mirror operator; Stone duality; exceptional
-Jordan algebra; $E_6$ coset; induced gravity.
+Jordan algebra; profinite limit; $E_6$ coset.
 
 \noindent\textbf{MSC 2020:} 03G05, 17C27, 22E46, 81T13.
 
