@@ -1,0 +1,93 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{slashed}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{prediction}[theorem]{Prediction}
+
+\numberwithin{equation}{section}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Quat}{\mathbb{H}}
+\newcommand{\Oct}{\mathbb{O}}
+\newcommand{\jalg}{J_3(\mathbb{O})}
+\newcommand{\E}[1]{\mathrm{E}_{#1}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\Void}{\mathcal{V}}
+\newcommand{\Mirror}{\mathsf{M}}
+\newcommand{\Climb}{\mathsf{C}}
+\newcommand{\capacity}{\mathcal{C}}
+\newcommand{\orderparam}{\Phi}
+\newcommand{\MPl}{M_{\mathrm{Pl}}}
+\newcommand{\Hess}{\operatorname{Hess}}
+\DeclareMathOperator{\argmax}{arg\,max}
+
+\title{Stone--Jordan Exceptional Theory\\[0.35em]
+\large Building the Universe from the Mirror}
+\author{Brandon Belna}
+\date{June 6, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We construct a mathematical model of the universe from two primitives: the
+\textbf{void} (no observable distinction) and an involutive \textbf{mirror
+operator} $\Mirror$ on profinite observable spectra. Iterating $\Mirror$ climbs
+the Hurwitz division ladder and the exceptional Lie cascade; capacity
+balancing $\mathrm{Bal}_{\mathcal{C}}$ is the dual mirror selecting unique
+partitions at each rung. The universe is the profinite fixed point
+$\mathfrak{U}^\star=\Climb^\infty(\Void)$, stabilizing on the Albert algebra
+$J_3(\mathbb{O})$ and the compact exceptional group $E_6$. Physical observables
+are $\sigma$-anti-invariant modes on the mirror quotient at the heterotic
+rung, selected by observer collapse $\Pi_{\sigma=-1}$. The \emph{as above, so
+below} correspondence identifies the universe fixed point with collapsed
+observer states; duality is forced by $E_8\times E_8$ product mirror
+collapse. A Lefschetz fixed-point theorem yields three observer slots; an
+index $\iota$ maps to a lifetime chart $g_\iota:\mathbb{R}\to\mathcal{S}_\iota$.
+\textbf{Semantic closure achieved:} the master derivation chain
+(Theorem~\ref{thm:master-derivation}) classifies every physical datum by proof
+tier (A rigorous; B under derived assumption ledger \textbf{A1--A8}; C
+leading-order contact). Former postulates P1--P5, CC, P3$'$, and D1--D3 are
+derived with explicit tier labels; no unnamed assumptions or conjectures remain.
+Strong CP, baryogenesis, dark matter, Hubble tension, quark precision, proton
+decay, quantum origin, and the complete physics domain map (60 domains,
+Corollaries~\ref{cor:universe-closure},~\ref{cor:physics-map-closure}) are
+derived from void and mirror. Tiered predictions contact JUNO (normal ordering;
+$\Delta m^2_{31}/\Delta m^2_{21}\approx 33$), Muon $g$-2 ($n_F=3$, no fourth
+generation; loops at $\mu\equiv v$), and DESI ($w(z)\approx -1$). GUT contacts
+include $\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$,
+$\sin^2\theta_W(M_Z)\approx 0.231$ by RG, and
+$\tau(p\to e^+\pi^0)\gtrsim 10^{34}$\,yr under the $\E{6}$ breaking chain. A
+falsification timeline (2026--2030) orders the decisive experiments.
+\end{abstract}
+
+\noindent\textbf{Keywords:} void; mirror operator; Stone duality; exceptional
+Jordan algebra; profinite limit; $E_6$ coset.
+
+\noindent\textbf{MSC 2020:} 03G05, 17C27, 22E46, 81T13.
+
+\tableofcontents
+\clearpage

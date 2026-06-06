@@ -1,30 +1,26 @@
-# SJET — Stone–Jordan Exceptional Theory
+# SJET — Mathematical Physics Deliverable
 
-**Building the universe from the mirror.**
-
-This repository contains a single mathematical-physics manuscript, `sjet.tex`, that develops SJET from two axioms (void and mirror) through the exceptional ladder to Standard Model and gravity invariants.
+**Stone–Jordan Exceptional Theory:** mathematical construction from void and
+mirror to four-dimensional gauge theory, gravity, and cosmology, with contact
+to SM, GR, QFT, and PDG/Planck data.
 
 ## Build
 
-The manuscript is self-contained in `sjet.tex`. Modular sources live in `.sjet-build/`:
-
 ```bash
-bash .sjet-build/assemble-sjet.sh   # optional: regenerate sjet.tex
-latexmk -pdf sjet.tex
-```
-
-Or with the LaTeX toolbox container:
-
-```bash
+bash .sjet-build/assemble-sjet.sh
 toolbox run --container latex latexmk -pdf sjet.tex
 ```
 
-## Archive
+Output: `sjet.pdf` (mathematical-physics manuscript).
 
-The previous modular manuscript (verification ledger, unit files, assemble script) lives in `old/`:
+## Repository layout
 
-- `old/sjet.tex` — prior master document
-- `old/.sjet-build/` — modular unit sources and `assemble-sjet.sh`
+| Path | Contents |
+|------|----------|
+| `.sjet-build/` | Current math-physics sources |
+| `sjet.tex`, `sjet.pdf` | Assembled deliverable |
+| `old/programme-full/` | Full programme archive (Waves 1–7, threads, formalization, ~205 pp) |
+| `old/sjet-stack/`, `old/.ucft-build/` | Earlier UCFT modular manuscript |
 
 ## Citation
 

@@ -1,0 +1,95 @@
+%======================================================================%
+\section{Introduction}
+\label{sec:intro}
+%======================================================================%
+
+This document presents SJET as \textbf{mathematical physics}: a construction
+from minimal axioms to four-dimensional gauge theory, gravity, and cosmology,
+with quantitative contact to laboratory and astrophysical data. The emphasis is
+on \emph{what is mathematically derived}, \emph{what effective truncations are
+selected}, and \emph{how outputs compare to the Standard Model (SM),
+general relativity (GR), and $\Lambda$CDM} as used in contemporary phenomenology.
+
+\subsection{Mathematical starting point}
+
+SJET begins with two primitives:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item the \textbf{void} $\Void$---trivial Boolean algebra, no local quantum
+    number (Axiom~\ref{ax:void});
+  \item an involutive \textbf{mirror} $\Mirror$ on Stone spectra generating the
+    climb $\Void\to\R\to\C\to\Quat\to\Oct\to\jalg\to\E{8}\to\E{8}\times\E{8}\to\E{6}$
+    (Axiom~\ref{ax:mirror}, Section~\ref{sec:climb}).
+\end{enumerate}
+Capacity balancing $\mathrm{Bal}_{\mathcal{C}}$ selects the $1|10|16$ partition
+$(1/27,10/27,16/27)$; observer collapse $\Pi_{\sigma=-1}$ on the heterotic
+quotient $\hat Q$ at $\Mirror^7(\Void)$ yields three fermion families
+(Theorem~\ref{thm:observer-fp}). The universe datum is assembled in
+Theorem~\ref{thm:universe-summary}.
+
+\subsection{Relation to established physics}
+
+SJET does not replace SM+GR+QFT; it supplies a \textbf{derivation route} and
+\textbf{numerical contacts}. Section~\ref{sec:standard-theories} maps:
+\begin{itemize}[leftmargin=*]
+  \item SJET $\to$ SM gauge group and representations
+    (Section~\ref{sec:sm-lagrangian}, Theorem~\ref{thm:breaking-complete});
+  \item SJET $\to$ Einstein--Hilbert gravity with $\kappa_\star=96\pi^2/5$
+    (Theorem~\ref{thm:kappa});
+  \item SJET $\to$ OS-reconstructed QFT on $\mathcal{H}_{\mathrm{obs}}$
+    (Theorem~\ref{thm:qm-derived});
+  \item SJET $\to$ $\Lambda$CDM anchors ($\Omega_b$, $n_s$, $H_0$, $\Omega_{\mathrm{DM}}$)
+    (Sections~\ref{sec:dark-sector},~\ref{sec:cosmology},
+    Prediction~\ref{pred:cmb}).
+\end{itemize}
+Discrepancies and tolerances are recorded in
+Tables~\ref{tab:predictions-comparison},~\ref{tab:tier-c-precision},
+and~\ref{tab:experimental-validation}.
+
+\subsection{What this document contains}
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Block} & \textbf{Content} \\
+\midrule
+\ref{sec:mirror}--\ref{sec:universe} &
+  Axioms, climb, capacity, vacuum \\
+\ref{sec:observer}--\ref{sec:physics} &
+  Quotient, observers, spacetime, gauge \\
+\ref{sec:sm-lagrangian} &
+  SM Lagrangian specialization \\
+\ref{sec:yukawa}--\ref{sec:g2} &
+  Masses, mixing, $g$-2 \\
+\ref{sec:quark-precision}, \ref{sec:qcd}, \ref{sec:ew-precision} &
+  Flavour and QCD contacts \\
+\ref{sec:baryogenesis}--\ref{sec:cosmology}, \ref{sec:nuclear-atomic-cosmo} &
+  CP, dark sector, Hubble tension \\
+\ref{sec:quantum-origin} &
+  QM from OS reconstruction \\
+\ref{sec:standard-theories} &
+  Bridge to SM, GR, QFT, cosmology \\
+\ref{sec:predictions}--\ref{sec:tier-c-precision} &
+  Data comparison and validation \\
+Appendix~\ref{sec:appendix} &
+  Albert algebra, quotient, numerics \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Archive note}
+
+The extended programme manuscript (nine-thread map, Waves~1--7, residual
+ledgers, formalization roadmap) is archived at
+\texttt{old/programme-full/}. This PDF is the standalone mathematical-physics
+deliverable.
+
+\subsection{Conventions}
+
+Compact real $E_6$; order parameter $\orderparam\in\jalg$; capacity
+$\capacity$. Branching
+$\mathbf{27}=\mathbf{1}_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}$
+under $H=\Spin(10)\times U(1)$. Metric signature $(-,+,+,+)$ after soldering
+(Section~\ref{sec:physics:spacetime}). PDG~2025~\cite{PDG2025} and Planck~2018
+are default experimental references unless noted.

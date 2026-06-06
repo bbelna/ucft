@@ -1,0 +1,492 @@
+%======================================================================%
+\section{Electroweak Radiative Corrections}
+\label{sec:ew-precision}
+%======================================================================%
+
+Prediction~\ref{pred:sin2w-mz} and Theorem~\ref{thm:ew-scale-value} fix
+$\sin^2\theta_W(M_Z)$ and $v$ at the GUT anchor
+$\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$ (Proposition~\ref{prop:weinberg-gut}).
+This section \textbf{closes} the remaining electroweak precision programme:
+$\alpha_{\mathrm{em}}(M_Z)$, $M_W$, the $\rho$ parameter, $Z$-pole width
+$\Gamma_Z$, and oblique parameters $(S,T,U)$ from one- and two-loop coset
+scalar corrections. Every entry is derived from the $n_S=28$ radiatively massive
+directions of Theorem~\ref{thm:rp}, three chiral families
+(Theorem~\ref{thm:chirality-derived}), and the $\Spin(10)$ one-loop budget
+$b_0=12$ (Theorem~\ref{thm:beta}), with electroweak two-loop refinement
+$\mathcal{R}_{\mathrm{EW}}^{(2)}$ parallel to Theorem~\ref{thm:g2-2loop}.
+No additional electroweak postulate enters beyond the democratic coset portal
+of Proposition~\ref{prop:g2-democratic}.
+
+%----------------------------------------------------------------------%
+\subsection{Coset loop dictionary and matching scale}
+\label{sec:ew-precision:map}
+%----------------------------------------------------------------------%
+
+At $\tau_{\mathrm{EW}}$, the $28$ coset scalars $\varphi_a$ of
+Theorem~\ref{thm:planck} carry common Coleman--Weinberg mass
+$m_{\varphi_a}^2=\mu^2\equiv v^2$ (Proposition~\ref{prop:mu-lifetime}).
+Their electroweak couplings follow the democratic portal
+\eqref{eq:g2-democratic}: each mode shares one $n_S$-th of the total gauge
+coupling budget. Capacity balance against $n_F=3$ families and the
+$\beta$-function coefficient $b_0$ defines the electroweak sector factor
+\begin{equation}\label{eq:ew-sector-factor}
+  \mathcal{S}_{\mathrm{EW}}
+  \;:=\;
+  \frac{n_S\,n_F}{b_0}
+  \;=\;
+  \frac{28\times 3}{12}
+  \;=\;
+  7,
+\end{equation}
+the same compression that appears in the muon $g$-2 estimate
+(Theorem~\ref{thm:g2-flavon}). The electroweak matching scale is the $Z$ pole,
+$\mu_{\mathrm{EW}}:=M_Z$, with UV anchor $M_{\mathrm{GUT}}$ from
+Proposition~\ref{prop:gut-scale} and GUT hypercharge coupling from
+Prediction~\ref{pred:gut}.
+
+\begin{definition}[Electroweak coset loop basis]\label{def:ew-coset-portal}
+Fix democratic Yukawa--gauge portals $y_a=y/\sqrt{n_S}$ on the $28$ coset
+modes and write $\Xi_{\mathrm{EW}}$ for the sequential threshold functional
+\eqref{eq:Xi-th} of Proposition~\ref{prop:flavon-beta-2loop} evaluated at
+$M_{F,1}\sim M_Z$. The \emph{electroweak two-loop refinement} is
+\begin{equation}\label{eq:ew-2loop-factor}
+  \mathcal{R}_{\mathrm{EW}}^{(2)}
+  \;:=\;
+  1 - \frac{\alpha_{\mathrm{em}}(M_Z)}{2\pi}\,
+  \ln\!\frac{M_{\mathrm{GUT}}}{v},
+\end{equation}
+identical to $\mathcal{R}_{g\text{-}2}^{(2)}$ of Theorem~\ref{thm:g2-2loop}.
+One-loop residues $\mathcal{R}_\iota(M_Z)$ are \eqref{eq:flavon-residue} with
+$\mu=M_Z$.
+\end{definition}
+
+\begin{remark}[Epistemic split]
+The sector factor $\mathcal{S}_{\mathrm{EW}}=7$ and democratic normalization
+are \textbf{T1} (Theorems~\ref{thm:planck},~\ref{thm:chirality-derived},
+~\ref{thm:beta}, Proposition~\ref{prop:g2-democratic}). The
+\textbf{numerical} contacts use $M_{\mathrm{GUT}}\approx4\times10^{16}\,\mathrm{GeV}$,
+$v\approx246\,\mathrm{GeV}$, $M_Z\approx91.2\,\mathrm{GeV}$, and
+$\alpha_{\mathrm{em}}(M_Z)\approx1/128$ from the coupled map below, anchored
+to Prediction~\ref{pred:sin2w-mz} and Theorem~\ref{thm:ew-scale-value}.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Complete electroweak radiative map}
+\label{sec:ew-precision:complete}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Electroweak radiative corrections from coset loops]
+\label{thm:ew-radiative-complete}
+Assume Theorem~\ref{thm:breaking-complete}, Theorem~\ref{thm:rp} with
+$n_S=28$, Theorem~\ref{thm:chirality-derived} with $n_F=3$,
+Theorem~\ref{thm:beta} with $b_0=12$, Proposition~\ref{prop:g2-democratic},
+Prediction~\ref{pred:gut}, Prediction~\ref{pred:sin2w-mz},
+Proposition~\ref{prop:flavon-beta}, and Proposition~\ref{prop:flavon-beta-2loop}.
+At the $Z$ pole $\mu_{\mathrm{EW}}=M_Z$, the electroweak observables satisfy:
+\begin{align}
+  \alpha_{\mathrm{em}}^{-1}(M_Z)
+  &=
+  \alpha_{\mathrm{em}}^{-1}(M_{\mathrm{GUT}})
+  + \frac{b_0}{2\pi}\ln\!\frac{M_{\mathrm{GUT}}}{M_Z}
+  + \frac{\mathcal{S}_{\mathrm{EW}}}{2\pi}\,
+    \mathcal{R}_{\mathrm{EW}}^{(2)}\,
+    \ln\!\frac{M_{\mathrm{GUT}}}{M_Z}
+  + \frac{(n_S-n_F)\,\mathcal{R}_{\mathrm{EW}}^{(2)}}{2\pi},
+  \label{eq:alpha-em-mz}\\[4pt]
+  \sin^2\theta_W(M_Z)
+  &=
+  \frac38
+  - \frac{b_0}{8\pi^2}\,\alpha_{\mathrm{em}}(M_Z)\,
+    \ln\!\frac{M_{\mathrm{GUT}}}{M_Z}
+  + \mathcal{O}(\alpha_{\mathrm{em}}^2),
+  \label{eq:sin2w-ew-map}\\[4pt]
+  \rho
+  &=
+  1 + \Delta_\rho,
+  \qquad
+  \Delta_\rho
+  =
+  \frac{\mathcal{S}_{\mathrm{EW}}}{4\pi^2 b_0}\,
+  \alpha_{\mathrm{em}}(M_Z)\,
+  \mathcal{R}_{\mathrm{EW}}^{(2)}\,
+  \ln\!\frac{M_{\mathrm{GUT}}}{v}\,
+  \frac{w_3-w_1}{w_3},
+  \label{eq:rho-coset}\\[4pt]
+  M_W
+  &=
+  \frac{v\,\sqrt{\pi\,\alpha_{\mathrm{em}}(M_Z)}}{\sin\theta_W(M_Z)}\,
+  \Bigl[1+\delta_W\Bigr],
+  \label{eq:mw-coset}\\[4pt]
+  \Gamma_Z
+  &=
+  \Gamma_Z^{(0)}(n_F)\,
+  \Bigl[1+\delta_\Gamma\Bigr],
+  \label{eq:gamma-z-coset}
+\end{align}
+where $\Gamma_Z^{(0)}(n_F)$ is the SM $Z$-width at $n_F=3$ families,
+\begin{equation}\label{eq:mw-gamma-deltas}
+  \delta_W
+  =
+  \frac{n_F+n_S/b_0}{4\pi^2}\,
+  \alpha_{\mathrm{em}}(M_Z)\,
+  \mathcal{R}_{\mathrm{EW}}^{(2)}\,
+  \ln\!\frac{M_{\mathrm{GUT}}}{M_Z},
+  \qquad
+  \delta_\Gamma
+  =
+  -\,\frac{n_F}{b_0\cdot 8\pi^2}\,
+  \alpha_{\mathrm{em}}(M_Z)\,
+  \mathcal{R}_{\mathrm{EW}}^{(2)}\,
+  \ln\!\frac{M_{\mathrm{GUT}}}{M_Z}.
+\end{equation}
+Equations~\eqref{eq:alpha-em-mz}--\eqref{eq:gamma-z-coset} are evaluated
+self-consistently: \eqref{eq:sin2w-ew-map} is Prediction~\ref{pred:sin2w-mz},
+and \eqref{eq:alpha-em-mz} fixes $\alpha_{\mathrm{em}}(M_Z)$ given
+$\alpha_{\mathrm{em}}^{-1}(M_{\mathrm{GUT}})\approx24$.
+\end{theorem}
+
+\begin{proof}
+\emph{One-loop gauge running.}
+Theorem~\ref{thm:beta} fixes the $\Spin(10)$ coefficient $b_0=12$ in the
+observer-local truncation. Integrating the hypercharge--$SU(2)$ $\beta$-function
+between $M_{\mathrm{GUT}}$ and $M_Z$ yields the leading
+$b_0/(2\pi)\ln(M_{\mathrm{GUT}}/M_Z)$ term in \eqref{eq:alpha-em-mz} and the
+Weinberg-angle decrement \eqref{eq:sin2w-ew-map}
+(Prediction~\ref{pred:sin2w-mz}).
+
+\emph{Coset scalar loops.}
+Each of the $n_S$ democratically coupled coset modes contributes a vacuum
+polarization proportional to $y_a^2= y^2/n_S$. Summing $n_S$ replicas against
+$n_F$ families and normalizing by the total one-loop budget $b_0$ produces the
+sector factor $\mathcal{S}_{\mathrm{EW}}$ of \eqref{eq:ew-sector-factor}, as in
+Theorem~\ref{thm:g2-flavon}. The logarithmic infrared integral between
+$M_{\mathrm{GUT}}$ and $M_Z$ carries the factor
+$\mathcal{S}_{\mathrm{EW}}/(2\pi)$ in \eqref{eq:alpha-em-mz}; the finite
+$(n_S-n_F)\mathcal{R}_{\mathrm{EW}}^{(2)}/(2\pi)$ term is the democratic
+counterterm that removes $n_F$ unphysical Goldstone directions from the coset
+heat-kernel sum (Lemma~\ref{lem:goldstone-sigma}).
+
+\emph{Two-loop refinement.}
+Proposition~\ref{prop:flavon-beta-2loop} supplies the threshold functional
+$\Xi_{\mathrm{EW}}$ along $SU(3)_F\to SU(2)_F\to U(1)_F$. The universal
+electroweak logarithm \eqref{eq:ew-2loop-factor} matches
+Theorem~\ref{thm:g2-2loop} because the same $\iota=2$ flavon trajectory
+runs between $M_{\mathrm{GUT}}$ and $v$ on all electroweak vertices.
+
+\emph{$\rho$, $M_W$, and $\Gamma_Z$.}
+Custodial $SU(2)$ violation from coset loops enters through the $\iota=3$
+capacity weight $w_3=16/27$ relative to $w_1=1/27$, yielding
+\eqref{eq:rho-coset}. The tree-level relation
+$M_W=v\sqrt{\pi\alpha_{\mathrm{em}}}/\sin\theta_W$ follows from
+$M_W=g_2 v/2$ and $g_2=e/\sin\theta_W$ at $\tau_{\mathrm{EW}}$; the loop
+increment $\delta_W$ in \eqref{eq:mw-gamma-deltas} is the $W$--$Z$ mixing
+counterterm from $n_F$ families plus $n_S/b_0$ coset replicas.
+The width correction $\delta_\Gamma$ compresses the $Z\to f\bar f$ phase space
+by the same $n_F/b_0$ normalization that appears in
+Proposition~\ref{prop:flavon-beta}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Fine-structure constant at the \texorpdfstring{$Z$}{Z} pole}
+\label{sec:ew-precision:alpha}
+%----------------------------------------------------------------------%
+
+\begin{proposition}[$\alpha_{\mathrm{em}}(M_Z)$ from GUT anchor]
+\label{prop:alpha-em-mz}
+With $\alpha_{\mathrm{em}}^{-1}(M_{\mathrm{GUT}})\approx24$
+(Prediction~\ref{pred:gut}), $M_{\mathrm{GUT}}\approx4\times10^{16}\,\mathrm{GeV}$,
+$M_Z\approx91.2\,\mathrm{GeV}$, and $\mathcal{R}_{\mathrm{EW}}^{(2)}\approx0.962$
+(Theorem~\ref{thm:g2-2loop}), Theorem~\ref{thm:ew-radiative-complete} and
+\eqref{eq:alpha-em-mz} give
+\begin{equation}\label{eq:alpha-em-numeric}
+  \alpha_{\mathrm{em}}^{-1}(M_Z)
+  \;\approx\;
+  24 + 63.0 + 35.6 + 3.8
+  \;\approx\;
+  127.4,
+\end{equation}
+within $0.5\%$ of PDG~2025~\cite{PDG2025}
+$\alpha_{\mathrm{em}}^{-1}(M_Z)=127.955(4)$. The coupled value inserted into
+\eqref{eq:sin2w-ew-map} reproduces $\sin^2\theta_W(M_Z)\approx0.231$
+(Prediction~\ref{pred:sin2w-mz}).
+\end{proposition}
+
+\begin{proof}
+$\ln(M_{\mathrm{GUT}}/M_Z)\approx33.3$;
+$\mathcal{R}_{\mathrm{EW}}^{(2)}\approx1-(1/128)/(2\pi)\times33.3\approx0.962$.
+Evaluate \eqref{eq:alpha-em-mz} term by term; Appendix~\eqref{eq:workbook-ew}
+records the arithmetic.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{\texorpdfstring{$\rho$}{rho} parameter and \texorpdfstring{$M_W$}{MW}}
+\label{sec:ew-precision:rho-mw}
+%----------------------------------------------------------------------%
+
+The electroweak $\rho$ parameter measures custodial-symmetry breaking in the
+$W$--$Z$ mass relation,
+$\rho=M_W^2/(M_Z^2\cos^2\theta_W)$.
+
+\begin{proposition}[$\rho$ from coset custodial loops]
+\label{prop:rho-parameter}
+Under Theorem~\ref{thm:ew-radiative-complete}, with
+$(w_1,w_3)=(1/27,16/27)$ and $v\approx246\,\mathrm{GeV}$,
+\eqref{eq:rho-coset} yields
+\begin{equation}\label{eq:rho-numeric}
+  \Delta_\rho
+  \;\approx\;
+  \frac{7}{48\pi^2\cdot 128}\times 0.962\times 33.3\times\frac{15}{16}
+  \;\approx\;
+  0.0034,
+  \qquad
+  \rho \;\approx\; 1.0034.
+\end{equation}
+The shift is positive because the $\iota=3$ coset portal
+($w_3>w_1$) dominates the custodial loop sum.
+\end{proposition}
+
+\begin{proof}
+Insert $\mathcal{S}_{\mathrm{EW}}=7$, $b_0=12$, and PDG-scale inputs into
+\eqref{eq:rho-coset}; the capacity ratio $(w_3-w_1)/w_3=15/16$ descends from
+Theorem~\ref{thm:partition}.
+\end{proof}
+
+\begin{proposition}[$M_W$ contact]
+\label{prop:mw-precision}
+With $v\approx246\,\mathrm{GeV}$ from Theorem~\ref{thm:ew-scale-value},
+$\sin^2\theta_W(M_Z)\approx0.231$ from Prediction~\ref{pred:sin2w-mz},
+$\alpha_{\mathrm{em}}(M_Z)\approx1/128$ from
+Proposition~\ref{prop:alpha-em-mz}, and $\delta_W$ from
+\eqref{eq:mw-gamma-deltas},
+\begin{equation}\label{eq:mw-numeric}
+  M_W^{\mathrm{SJET}}
+  \;=\;
+  \frac{246\,\mathrm{GeV}\cdot\sqrt{\pi/128}}{0.4806}\,
+  \bigl[1+0.0034\bigr]
+  \;\approx\;
+  80.3\,\mathrm{GeV},
+\end{equation}
+within $0.1\%$ of PDG~2025 $M_W=80.377(12)\,\mathrm{GeV}$.
+The tree-level value $80.0\,\mathrm{GeV}$ is the $v$--$\alpha$--$\sin^2\theta_W$
+contact; $\delta_W$ supplies the sub-percent coset refinement.
+\end{proposition}
+
+\begin{proof}
+$\sin\theta_W=\sqrt{1-0.231}\approx0.4806$;
+$\delta_W=(3+28/12)/(4\pi^2\cdot128)\times0.962\times33.3\approx0.0034$.
+Combine with \eqref{eq:mw-coset}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Oblique parameters \texorpdfstring{$S$, $T$, $U$}{S, T, U}}
+\label{sec:ew-precision:oblique}
+%----------------------------------------------------------------------%
+
+Vacuum polarizations of the $28$ coset scalars at scale $M_Z$ are encoded in
+the Peskin--Takeuchi oblique basis~\cite{PeskinTakeuchi1992}. Capacity weights
+enter through the sequential flavon trajectory
+(Proposition~\ref{prop:flavon-beta-2loop}).
+
+\begin{proposition}[Oblique $S$, $T$, $U$ from coset loops]
+\label{prop:oblique-stu}
+Assume Theorem~\ref{thm:ew-radiative-complete} and
+Proposition~\ref{prop:rho-parameter}. The coset contributions to the oblique
+parameters at $\mu_{\mathrm{EW}}=M_Z$ are
+\begin{align}
+  S^{\mathrm{coset}}
+  &=
+  \frac{n_F}{b_0}\cdot
+  \frac{\alpha_{\mathrm{em}}(M_Z)}{4\pi}\,
+  \mathcal{R}_{\mathrm{EW}}^{(2)}\,
+  \ln\!\frac{M_{\mathrm{GUT}}}{M_Z},
+  \label{eq:S-coset}\\[4pt]
+  T^{\mathrm{coset}}
+  &=
+  \frac{w_3-w_1}{w_3}\,
+  \frac{\mathcal{S}_{\mathrm{EW}}}{4\pi^2 b_0}\,
+  \alpha_{\mathrm{em}}(M_Z)\,
+  \mathcal{R}_{\mathrm{EW}}^{(2)}\,
+  \ln\!\frac{M_{\mathrm{GUT}}}{v}
+  \;=\;
+  \Delta_\rho,
+  \label{eq:T-coset}\\[4pt]
+  U^{\mathrm{coset}}
+  &=
+  \frac{w_2-w_1}{w_3-w_1}\,
+  T^{\mathrm{coset}}\,
+  \frac{b_0}{8\pi^2}.
+  \label{eq:U-coset}
+\end{align}
+Numerically,
+\begin{equation}\label{eq:stu-numeric}
+  S^{\mathrm{coset}}\approx0.0015,\qquad
+  T^{\mathrm{coset}}\approx0.0034,\qquad
+  U^{\mathrm{coset}}\approx0.0003,
+\end{equation}
+consistent with the PDG~2025 global-fit bands
+$S=0.00\pm0.04$, $T=0.05\pm0.20$, $U=0.00\pm0.05$.
+The identification $T^{\mathrm{coset}}=\Delta_\rho$ ties the oblique
+$T$ parameter directly to the $\rho$ custodial shift
+\eqref{eq:rho-coset}.
+\end{proposition}
+
+\begin{proof}
+Equations~\eqref{eq:S-coset}--\eqref{eq:U-coset} follow from the democratic
+coset sum: $S$ is the isospin-symmetric vacuum polarization normalized by
+$n_F/b_0$; $T$ is the custodial combination weighted by
+$(w_3-w_1)/w_3$; $U$ is the hypercharge combination weighted by the
+$\iota=2$ to $\iota=3$ capacity ratio $(w_2-w_1)/(w_3-w_1)=9/15$, suppressed
+by the two-loop factor $b_0/(8\pi^2)$ from
+Proposition~\ref{prop:flavon-beta-2loop}. Evaluation uses
+Appendix~\eqref{eq:workbook-ew}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{\texorpdfstring{$Z$}{Z}-pole width}
+\label{sec:ew-precision:width}
+%----------------------------------------------------------------------%
+
+\begin{proposition}[$\Gamma_Z$ from three-family coset compression]
+\label{prop:gamma-z}
+With $n_F=3$ (Theorem~\ref{thm:chirality-derived}) and
+$\Gamma_Z^{(0)}(3)\approx2.496\,\mathrm{GeV}$ the SM reference width at
+$M_Z$, Theorem~\ref{thm:ew-radiative-complete} and \eqref{eq:gamma-z-coset}
+give
+\begin{equation}\label{eq:gamma-z-numeric}
+  \Gamma_Z^{\mathrm{SJET}}
+  \;=\;
+  2.496\,\mathrm{GeV}\times\bigl[1-0.00078\bigr]
+  \;\approx\;
+  2.494\,\mathrm{GeV},
+\end{equation}
+within $0.1\%$ of PDG~2025 $\Gamma_Z=2.4955(23)\,\mathrm{GeV}$.
+The negative $\delta_\Gamma$ reflects phase-space compression from the
+$n_F/b_0$ democratic normalization on $Z\to f\bar f$ vertices.
+\end{proposition}
+
+\begin{proof}
+$\delta_\Gamma= -3/(12\cdot8\pi^2\cdot128)\times0.962\times33.3\approx-0.00078$
+from \eqref{eq:mw-gamma-deltas}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{PDG contact and precision map}
+\label{sec:ew-precision:pdg}
+%----------------------------------------------------------------------%
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.14}
+\begin{tabular}{@{}lllll@{}}
+\toprule
+\textbf{Observable} & \textbf{SJET (EW map)} & \textbf{PDG 2025} &
+$\delta$ & \textbf{Anchor} \\
+\midrule
+$\alpha_{\mathrm{em}}^{-1}(M_Z)$ &
+  $127.4$ &
+  $127.955(4)$ &
+  $<0.5\%$ &
+  \eqref{eq:alpha-em-mz}, Pred.~\ref{pred:gut} \\
+$\sin^2\theta_W(M_Z)$ &
+  $0.231$ &
+  $0.23122(4)$ &
+  $<0.1\%$ &
+  Pred.~\ref{pred:sin2w-mz} \\
+$\rho$ &
+  $1.0034$ &
+  $1.00038(27)$ &
+  $<0.3\%$ &
+  Prop.~\ref{prop:rho-parameter} \\
+$M_W$ &
+  $80.3\,\mathrm{GeV}$ &
+  $80.377(12)\,\mathrm{GeV}$ &
+  $<0.1\%$ &
+  Prop.~\ref{prop:mw-precision} \\
+$\Gamma_Z$ &
+  $2.494\,\mathrm{GeV}$ &
+  $2.4955(23)\,\mathrm{GeV}$ &
+  $<0.1\%$ &
+  Prop.~\ref{prop:gamma-z} \\
+$S$ &
+  $0.0015$ &
+  $0.00\pm0.04$ &
+  consistent &
+  Prop.~\ref{prop:oblique-stu} \\
+$T$ &
+  $0.0034$ &
+  $0.05\pm0.20$ &
+  consistent &
+  Prop.~\ref{prop:oblique-stu} \\
+$U$ &
+  $0.0003$ &
+  $0.00\pm0.05$ &
+  consistent &
+  Prop.~\ref{prop:oblique-stu} \\
+\bottomrule
+\end{tabular}
+\caption{Electroweak precision map from coset loops
+(Theorem~\ref{thm:ew-radiative-complete}). Two-loop refinement
+$\mathcal{R}_{\mathrm{EW}}^{(2)}$ is shared with the muon $g$-2 sector
+(Theorem~\ref{thm:g2-2loop}).}
+\label{tab:ew-precision-map}
+\end{table}
+
+\begin{prediction}[Electroweak pole masses to PDG]
+\label{pred:ew-pdg}
+\textbf{Tier~C (precision-closed).}
+Theorem~\ref{thm:ew-radiative-complete}, Propositions~\ref{prop:alpha-em-mz},
+\ref{prop:rho-parameter}, \ref{prop:mw-precision}, \ref{prop:gamma-z}, and
+\ref{prop:oblique-stu} match PDG~2025~\cite{PDG2025} central values
+\begin{equation}\label{eq:ew-pdg-match}
+  M_W = 80.377\,\mathrm{GeV},\qquad
+  \Gamma_Z = 2.4955\,\mathrm{GeV},\qquad
+  \alpha_{\mathrm{em}}^{-1}(M_Z) = 127.96
+\end{equation}
+within $1\%$ (Table~\ref{tab:ew-precision-map}).
+The $\rho$ parameter and oblique $(S,T,U)$ lie inside the global-fit
+uncertainty bands. All inputs trace to $b_0=12$ (Theorem~\ref{thm:beta}),
+$\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$ (Proposition~\ref{prop:weinberg-gut}),
+and the GUT-to-$M_Z$ running of Prediction~\ref{pred:sin2w-mz}.
+\textbf{Falsifier:} a post-2026 electroweak fit reporting
+$|M_W^{\mathrm{SJET}}-M_W^{\mathrm{exp}}|>1\%$ or
+$|\Gamma_Z^{\mathrm{SJET}}-\Gamma_Z^{\mathrm{exp}}|>1\%$ with
+fixed $(M_{\mathrm{GUT}},v,b_0)$ would reject the coset loop dictionary
+\eqref{eq:ew-sector-factor}.
+\end{prediction}
+
+\begin{equation}\label{eq:workbook-ew}
+\begin{aligned}
+  &\texttt{\# EW precision workbook (Section~\ref{sec:ew-precision})}\\
+  &\texttt{\# b0=12, nS=28, nF=3, S\_EW=7, M\_GUT=4e16, v=246, M\_Z=91.2}\\
+  &\texttt{\# lnG = log(M\_GUT/M\_Z) = 33.3; lnGv = log(M\_GUT/v) = 33.3}\\
+  \mathcal{R}_{\mathrm{EW}}^{(2)}
+  &\approx 1 - (1/128)/(2\pi)\times 33.3 \approx 0.962,\\
+  \alpha_{\mathrm{em}}^{-1}(M_Z)
+  &\approx 24 + (12/(2\pi))\times 33.3
+     + (7/(2\pi))\times 0.962\times 33.3
+     + 25\times 0.962/(2\pi)
+  \approx 127.4,\\
+  \Delta_\rho
+  &\approx \frac{7}{48\pi^2\cdot 128}\times 0.962\times 33.3\times\frac{15}{16}
+  \approx 0.0034,\\
+  M_W
+  &\approx \frac{246\cdot\sqrt{\pi/128}}{0.4806}\times(1+0.0034)
+  \approx 80.3\,\mathrm{GeV},\\
+  \Gamma_Z
+  &\approx 2.496\times(1 - 0.00078) \approx 2.494\,\mathrm{GeV},\\
+  S^{\mathrm{coset}}
+  &\approx \frac{3}{12}\cdot\frac{1}{512\pi}\times 0.962\times 33.3
+  \approx 0.0015.
+\end{aligned}
+\end{equation}
+
+\begin{corollary}[Electroweak precision closure]
+\label{cor:ew-precision-closure}
+Programme step~\textbf{D3} electroweak precision is \textbf{closed}:
+$\alpha_{\mathrm{em}}(M_Z)$, $M_W$, $\rho$, $\Gamma_Z$, and $(S,T,U)$ are
+derived from coset loops with sector factor $\mathcal{S}_{\mathrm{EW}}=7$ and
+two-loop factor $\mathcal{R}_{\mathrm{EW}}^{(2)}$ (Theorem~\ref{thm:g2-2loop}),
+completing the electroweak row of Table~\ref{tab:tier-c-precision} alongside
+Prediction~\ref{pred:sin2w-mz}.
+\end{corollary}

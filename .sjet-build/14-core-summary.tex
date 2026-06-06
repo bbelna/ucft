@@ -1,0 +1,101 @@
+%======================================================================%
+\section{Universe Datum and Assumption Ledger}
+\label{sec:derivation-complete}
+%======================================================================%
+
+This section records the universe summary theorem and the derived assumption
+ledger used throughout the mathematical-physics sections. Proof tiers classify
+what follows from void and mirror alone versus what requires effective
+truncations.
+
+\begin{definition}[Proof tiers]\label{def:proof-tiers}
+Each result carries one of three \emph{proof tiers}:
+\begin{enumerate}[label=\textbf{Tier~\Alph* :},leftmargin=*]
+  \item \textbf{Rigorous} --- from void and mirror with standard mathematical
+    imports (Lie theory, Stone duality, linear algebra).
+  \item \textbf{Ledger-conditional} --- from Tier~A plus entries of
+    Definition~\ref{def:assumption-ledger}.
+  \item \textbf{Leading contact} --- numerical prediction at stated loop order
+    with tolerance $\delta$ (Definition~\ref{def:contact-map}).
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Derived assumption ledger]\label{def:assumption-ledger}
+The following are \textbf{not primitive axioms}. Each is the
+$\Pi_{\sigma=-1}$-sector effective description selected by capacity balance:
+\begin{enumerate}[label=\textbf{A\arabic*},leftmargin=*]
+  \item \label{asm:eh} Einstein--Hilbert gravity: $\MPl^2 R$
+    (Theorem~\ref{thm:kappa}).
+  \item \label{asm:sakharov} Sakharov heat kernel: induced $\MPl$
+    (Theorem~\ref{thm:planck}).
+  \item \label{asm:cw} Coleman--Weinberg gap on $28$ coset directions
+    (Theorem~\ref{thm:rp}).
+  \item \label{asm:frg} One-loop FRG with $b_0=12$
+    (Proposition~\ref{prop:frg-jacobian}).
+  \item \label{asm:flavon} $SU(3)_F$ flavon truncation
+    (Theorem~\ref{thm:flavon-vev}).
+  \item \label{asm:convex} $\iota$-sector convexity
+    (Proposition~\ref{prop:lifetime-flow-unique}).
+  \item \label{asm:os} OS axioms on $d\mu_{\Gamma_{-1}}$
+    (Proposition~\ref{prop:os-observer}).
+  \item \label{asm:grav-loops} $\sigma$-routed $R^2$/graviton loops
+    (Theorem~\ref{thm:kappa-persistence}, Theorem~\ref{thm:cc-sequester}).
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Summary of the universe]\label{thm:universe-summary}
+Let $(\Void,\Mirror)$ satisfy Axioms~\ref{ax:void} and~\ref{ax:mirror}. Then
+there exists a unique (up to stabilized mirror gauge) universe datum
+\begin{equation}\label{eq:universe-summary}
+  \boxed{%
+  \mathfrak{E}
+  \;=\;
+  \mathcal{U}\!\Bigl(
+    \Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}\circ\Mirror^{\leq 8}
+  \Bigr)(\Void)}
+\end{equation}
+with:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item $\mathfrak{U}^\star=\Climb^\infty(\Void)$, $1|10|16$ partition, EIII
+    vacuum (Theorems~\ref{thm:universe},~\ref{thm:partition},~\ref{thm:vacuum}).
+  \item Forced climb $\Void\to\cdots\to\E{6}$ (Section~\ref{sec:climb}).
+  \item Mirror quotient $\hat Q$ and above--below correspondence
+    (Definitions~\ref{def:above-below},~\ref{def:Qhat}).
+  \item Three observer slots (Theorem~\ref{thm:observer-fp}).
+  \item Shadow split and measure factorization
+    (Theorems~\ref{thm:duality},~\ref{thm:sigma-measure}).
+  \item Lifetime charts and $d=4$ soldering
+    (Theorem~\ref{thm:spacetime:soldering-derived}).
+  \item $S_{\mathrm{eff}}=S[\orderparam]+S_{\mathrm{EH}}+S_{\mathrm{SM}}$
+    under \textbf{A1--A8}
+    (Theorem~\ref{thm:breaking-complete}, Definition~\ref{def:sm-lagrangian}).
+  \item Experimental contacts in Sections~\ref{sec:standard-theories},
+    \ref{sec:predictions} at tiers A/B/C.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Items~(i)--(vi) follow from Sections~\ref{sec:climb}--\ref{sec:observer} and
+Section~\ref{sec:physics}. Item~(vii) uses Definition~\ref{def:assumption-ledger}.
+Item~(viii) is the prediction and data-comparison programme of
+Sections~\ref{sec:standard-theories}--\ref{sec:tier-c-precision}.
+Uniqueness follows from strict concavity of $\capacity$, orthogonal projector
+$\Pi_{\sigma=-1}$, and Lefschetz index $-3$.
+\end{proof}
+
+\begin{equation}\label{eq:master-pipeline}
+  D
+  \;=\;
+  \mathcal{F}_D\!\bigl(
+    \Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}\circ\Mirror^{\leq 8}
+  \bigr)(\Void),
+\end{equation}
+records the functorial pipeline from void and mirror to each physical datum
+$D$ (Sections~\ref{sec:physics}--\ref{sec:predictions}).
+
+\begin{corollary}[Semantic closure on the contact layer]\label{cor:semantic-closure}
+Every headline observable in Tables~\ref{tab:predictions-comparison},
+\ref{tab:cosmo-bridge}, and~\ref{tab:lab-bridge} is either Tier~A (void and
+mirror), Tier~B (ledger \textbf{A1--A8}), or Tier~C (contact with tolerance
+$\delta$). No unnamed postulates remain in this manuscript.
+\end{corollary}

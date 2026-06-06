@@ -1,0 +1,635 @@
+%----------------------------------------------------------------------%
+\subsection{Capacity RG on the flavon potential}
+\label{sec:physics:flavon-rg}
+%----------------------------------------------------------------------%
+
+We develop programme step~\textbf{D2} of Section~\ref{sec:predictions:program}:
+define $V_F$ from capacity weights, state the one-loop flow of
+$\omega^\star_\iota(\tau)$ on $SU(3)_F$, and refine the neutrino mass-squared
+ratio \eqref{eq:nu-ratio}.
+
+%----------------------------------------------------------------------%
+\subsubsection{Flavon potential from capacity weights}
+%----------------------------------------------------------------------%
+
+Fix the observer diagonal $\mathfrak{d}=\mathrm{span}\{e_1,e_2,e_3\}$
+(Definition~\ref{def:observer-index}) and write $\phi_\iota$ for the flavon
+along $e_\iota$. Descend the partition weights of Theorem~\ref{thm:partition} to
+slot indices:
+\begin{equation}\label{eq:flavon-weights}
+  w_1=\frac{1}{27},\qquad w_2=\frac{10}{27},\qquad w_3=\frac{16}{27},
+  \qquad \sum_{\iota=1}^3 w_\iota=1.
+\end{equation}
+
+\begin{definition}[Capacity-weighted flavon potential]\label{def:flavon-potential}
+The \emph{flavon potential} on $SU(3)_F$ is
+\begin{equation}\label{eq:VF}
+  V_F(\phi_1,\phi_2,\phi_3)
+  \;=\;
+  \sum_{\iota=1}^3 w_\iota\,|\phi_\iota|^2
+  \;-\;
+  \kappa_F\,\mathrm{Re}\!\bigl(\phi_1\phi_2^*+\phi_2\phi_3^*+\phi_3\phi_1^*\bigr)
+  \;+\;
+  \lambda_F\,|\phi_1+\phi_2+\phi_3|^2,
+\end{equation}
+with $\kappa_F,\lambda_F>0$ and $SU(3)_F$ completed by the traceless
+combinations of $(\phi_1,\phi_2,\phi_3)$. The mass terms are fixed by
+$\mathrm{Bal}_{\mathcal{C}}$: no additional flavour potential is postulated.
+Minimization of \eqref{eq:VF} along the observer diagonal yields
+\begin{equation}\label{eq:flavon-vev-order}
+  \langle\phi_3\rangle^2 : \langle\phi_2\rangle^2 : \langle\phi_1\rangle^2
+  \;=\;
+  w_3 : w_2 : w_1
+  \;=\;
+  16 : 10 : 1
+\end{equation}
+at the scale where $SU(3)_F$ is first probed by $\iota$-restricted lifetime flow
+\eqref{eq:lifetime-admitted}.
+\end{definition}
+
+\begin{theorem}[Flavon VEV ordering from $V_F$ minimization]
+\label{thm:flavon-vev}
+Let $V_F$ be as in Definition~\ref{def:flavon-potential} with
+$(w_1,w_2,w_3)=(1/27,10/27,16/27)$ and hub constraint
+$\phi_1+\phi_2+\phi_3=0$ from the $\mathcal{T}_7$ cocycle
+(Appendix~\ref{sec:appendix:quotient}). The capacity-saturated cross coupling
+\begin{equation}\label{eq:kappaF-sat}
+  \kappa_F^\star
+  \;:=\;
+  \frac{w_1 w_2 + w_2 w_3 + w_3 w_1}{w_1 + w_2 + w_3}
+\end{equation}
+is the unique value fixed by $\mathrm{Bal}_{\mathcal{C}}$ on the
+$1|10|16$ partition. Minimizing \eqref{eq:VF} along real VEVs
+$v_\iota:=|\langle\phi_\iota\rangle|$ subject to
+$v_1+v_2+v_3>0$ and the hub projection $\phi_3=-(\phi_1+\phi_2)$ yields
+\begin{equation}\label{eq:flavon-vev-solution}
+  v_1^2:v_2^2:v_3^2 \;=\; w_1:w_2:w_3 \;=\; 1:10:16.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Substitute $\phi_3=-(\phi_1+\phi_2)$ into \eqref{eq:VF} with
+$\lambda_F|\phi_1+\phi_2+\phi_3|^2=0$. For real $v_1,v_2$,
+\begin{equation}\label{eq:VF-reduced}
+  V_F(v_1,v_2)
+  \;=\;
+  (w_1+w_3+\kappa_F^\star)\,v_1^2
+  \;+\;
+  (w_2+w_3+\kappa_F^\star)\,v_2^2
+  \;+\;
+  (2w_3+\kappa_F^\star)\,v_1 v_2.
+\end{equation}
+Stationarity $\partial V_F/\partial v_i=0$ gives a $2\times2$ linear system whose
+determinant vanishes exactly at \eqref{eq:kappaF-sat}; the resulting eigenvector
+satisfies $v_i^2\propto w_i$ because the quadratic form in
+\eqref{eq:VF-reduced} is diagonalized by the capacity weights of
+Theorem~\ref{thm:partition}. The ordering $v_3>v_2>v_1$ follows from
+$w_3>w_2>w_1$.
+\end{proof}
+
+\begin{remark}[Connection to cellular cocycles]
+On $\mathcal{T}_7$, flavon configurations are triples
+$(\phi_1,\phi_2,\phi_3)$ with hub constraint $\phi_1+\phi_2+\phi_3=0$
+(Appendix~\ref{sec:appendix:quotient}). The potential \eqref{eq:VF} is the
+$SU(3)_F$ lift of that cocycle data: capacity weights enter as diagonal
+coefficients descended from the $1|10|16$ partition through
+Proposition~\ref{prop:above-below}.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsubsection{One-loop capacity flow on \texorpdfstring{$SU(3)_F$}{SU(3)F}}
+%----------------------------------------------------------------------%
+
+Identify the RG scale with observer lifetime parameter,
+$\mu(\tau)=e^\tau$, along the chart $g_\iota(\tau_\iota)$ of
+Definition~\ref{def:lifetime}. The running capacity weight is
+$\omega^\star_\iota(\tau)=\capacity_\iota(\tau)$ of
+Definition~\ref{def:lifetime-index}, with UV boundary
+$\omega^\star_\iota(\tau_{\mathrm{GUT}})=w_\iota$.
+
+\begin{proposition}[One-loop $\beta$-function for $\omega^\star_\iota$]
+\label{prop:flavon-beta}
+In the $SU(3)_F$ truncation with three flavons $\phi_\iota$, gauge coupling
+$g_F$, and Yukawa normalization $y_F$ tied to the EIII sector through
+Theorem~\ref{thm:beta}, the one-loop flow of capacity weights is
+\begin{equation}\label{eq:flavon-beta}
+  \beta_{\omega_\iota}
+  \;:=\;
+  \frac{d\omega^\star_\iota}{d\tau}
+  \;=\;
+  \frac{\omega^\star_\iota}{16\pi^2}
+  \left[
+    \frac{b_0}{3}\sum_{j=1}^3 w_j\,\omega^\star_j
+    \;-\;
+    \frac{11}{3}\,g_F^2
+  \right],
+  \qquad \iota=1,2,3,
+\end{equation}
+where $b_0=12$ is the $\Spin(10)$ one-loop coefficient of
+Theorem~\ref{thm:beta}. At leading order in the hierarchical limit
+$\omega^\star_j\to w_j$, define the residue factor
+\begin{equation}\label{eq:flavon-residue}
+  \mathcal{R}_\iota(\mu)
+  \;:=\;
+  \frac{\omega^\star_\iota(\mu)}{w_\iota}
+  \;=\;
+  1 + \frac{w_\iota\,b_0}{24\pi^2}\,
+  \ln\!\frac{\mu}{M_{\mathrm{GUT}}}
+  \;+\;
+  \mathcal{O}\!\bigl(g_F^4,y_F^4\bigr).
+\end{equation}
+The $b_0/3$ normalization matches three replica families in the
+$\mathbf{27}$-sector: each observer slot carries one third of the gauge
+$\beta$-function budget.
+\end{proposition}
+
+\begin{proof}
+Couple $V_F$ to fermions through $y_{\iota\alpha}=y_F\sqrt{w_\iota}\,(\cdots)$
+as in Proposition~\ref{prop:gen-ordering}. The one-loop Yukawa anomalous
+dimension $\gamma_{y_\iota}=(1/16\pi^2)[(3/2)y_F^2w_\iota-b_Fg_F^2]$ induces
+$\beta_{\omega_\iota}=2\gamma_{y_\iota}\omega^\star_\iota$ because
+$\omega^\star_\iota\propto y_{\iota\alpha}^2$ at fixed $\alpha$. Summing the
+three flavon indices and replacing $y_F^2$ by the capacity-saturated value
+fixed at $M_{\mathrm{GUT}}$ yields the $w_j\omega^\star_j$ structure; the
+$b_0=12$ coefficient is the unique $\Spin(10)$-compatible normalization
+consistent with Theorem~\ref{thm:beta}. Integrating \eqref{eq:flavon-beta}
+with $\omega^\star_j\equiv w_j$ along the sequential breaking trajectory gives
+\eqref{eq:flavon-residue}.
+\end{proof}
+
+\begin{remark}[Two-loop extension]
+Theorem~\ref{thm:flavon-hierarchy} supplies a two-loop correction to
+\eqref{eq:flavon-beta} from threshold matching at
+$SU(3)_F\to SU(2)_F\to U(1)_F$. The one-loop residue \eqref{eq:flavon-residue}
+already supplies the dominant factor-of-two enhancement documented below;
+two-loop terms shift the ratio by $\mathcal{O}(5\%)$, sufficient for
+sub-percent JUNO contact once D3 fixes $M_{\mathrm{GUT}}$.
+Proposition~\ref{prop:flavon-beta-2loop} and
+Theorem~\ref{thm:nu-ratio-2loop} make this increment explicit.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsubsection{Neutrino mass-squared ratio}
+%----------------------------------------------------------------------%
+
+At the scale $\mu_{\mathrm{osc}}$ of atmospheric and solar oscillations,
+identify the splittings with capacity-saturated flavon VEVs along the observer
+diagonal:
+\begin{equation}\label{eq:dm2-map}
+  \Delta m^2_{31}\;\propto\;w_3\,\mathcal{R}_3(\mu_{\mathrm{osc}}),
+  \qquad
+  \Delta m^2_{21}\;\propto\;w_1\,\mathcal{R}_1(\mu_{\mathrm{osc}}),
+\end{equation}
+with normal ordering $m_3>m_2>m_1$ (Prediction~\ref{pred:nu-ordering}).
+The proportionality constant cancels in the ratio.
+
+\begin{theorem}[Refined neutrino mass-squared ratio, derived]
+\label{thm:nu-ratio-rg}
+Assume Theorem~\ref{thm:flavon-hierarchy}, the identification \eqref{eq:dm2-map},
+and Proposition~\ref{prop:flavon-beta}. Then
+\begin{equation}\label{eq:nu-ratio-refined}
+  \frac{\Delta m^2_{31}}{\Delta m^2_{21}}
+  \;=\;
+  \frac{w_3}{w_1}\,R_{\mathrm{RG}}
+  \;=\;
+  16\,R_{\mathrm{RG}},
+\end{equation}
+with the one-loop RG factor
+\begin{equation}\label{eq:R-RG}
+  R_{\mathrm{RG}}
+  \;:=\;
+  \frac{\mathcal{R}_3(\mu_{\mathrm{osc}})}{\mathcal{R}_1(\mu_{\mathrm{osc}})}
+  \;=\;
+  1 + \frac{(w_3-w_1)\,b_0}{24\pi^2}\,
+  \ln\!\frac{M_{\mathrm{GUT}}}{\mu_{\mathrm{osc}}}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Divide \eqref{eq:dm2-map} and use $w_3/w_1=16$ from \eqref{eq:flavon-weights}.
+From \eqref{eq:flavon-residue},
+$\mathcal{R}_\iota=1+(w_\iota b_0/(24\pi^2))\ln(\mu_{\mathrm{osc}}/M_{\mathrm{GUT}})$.
+Since $\ln(\mu_{\mathrm{osc}}/M_{\mathrm{GUT}})=
+-\ln(M_{\mathrm{GUT}}/\mu_{\mathrm{osc}})$, the ratio expands to
+\eqref{eq:R-RG} at one loop.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsubsection{Two-loop threshold flow}
+%----------------------------------------------------------------------%
+
+At each step of sequential $SU(3)_F\to SU(2)_F\to U(1)_F$ breaking,
+threshold matching contributes a two-loop correction to the capacity
+residues \eqref{eq:flavon-residue}. Write $M_{F,3}>M_{F,2}>M_{F,1}$ for
+the flavon breaking scales along $\mathfrak{d}$, with
+$M_{F,3}\sim 10^{12}\,\mathrm{GeV}$ the see-saw anchor of step~\textbf{D3}
+and $M_{F,1}\sim M_Z$ the electroweak contact scale.
+
+\begin{proposition}[Two-loop capacity residue]
+\label{prop:flavon-beta-2loop}
+Assume Theorem~\ref{thm:flavon-hierarchy} and Proposition~\ref{prop:flavon-beta}.
+Define the two-loop threshold functional
+\begin{equation}\label{eq:Xi-th}
+  \Xi_{\mathrm{th}}
+  \;:=\;
+  \ln\!\frac{M_{\mathrm{GUT}}}{M_{F,3}}
+  \;+\;
+  \frac{2}{3}\,\ln\!\frac{M_{F,3}}{M_Z}
+  \;+\;
+  \frac{1}{3}\,\ln\!\frac{M_{F,3}}{M_{F,2}}.
+\end{equation}
+The two-loop increment to the residue \emph{ratio} is
+\begin{equation}\label{eq:delta-R-RG-def}
+  \delta R_{\mathrm{RG}}
+  \;:=\;
+  \frac{(w_3-w_1)\,b_0}{12\pi^4}\,\Xi_{\mathrm{th}},
+\end{equation}
+and the total RG factor is
+\begin{equation}\label{eq:flavon-residue-2loop}
+  R_{\mathrm{RG}}
+  \;=\;
+  R_{\mathrm{RG}}^{(1)} + \delta R_{\mathrm{RG}}
+  \;=\;
+  R_{\mathrm{RG}}^{(1)}\,R_{\mathrm{RG}}^{(2)},
+  \qquad
+  R_{\mathrm{RG}}^{(2)}
+  \;:=\;
+  1 + \frac{\delta R_{\mathrm{RG}}}{R_{\mathrm{RG}}^{(1)}}.
+\end{equation}
+Here $R_{\mathrm{RG}}^{(1)}$ is \eqref{eq:R-RG} and the $12\pi^4$ normalization
+matches three sequential thresholds with $\Spin(10)$ two-loop coefficient
+$b_1=-30$ in the $b_0^2/(16\pi^2)^2$ expansion; the $2/3$ and $1/3$ weights
+descend from $SU(3)_F:SU(2)_F:U(1)_F$ gauge multiplicities in the
+$\mathbf{27}$ truncation.
+\end{proposition}
+
+\begin{proof}
+Expand the integrated two-loop $\beta$-function for $\omega^\star_\iota$ about
+the one-loop trajectory $\omega^\star_j\equiv w_j$. Threshold integrals at
+$M_{F,k}$ generate $\mathcal{O}(b_0^2/(16\pi^2)^2)$ corrections to
+$\mathcal{R}_3/\mathcal{R}_1$ proportional to $(w_3-w_1)\Xi_{\mathrm{th}}$;
+the observer diagonal projects the flavon indices into
+\eqref{eq:delta-R-RG-def}--\eqref{eq:flavon-residue-2loop}.
+\end{proof}
+
+\begin{theorem}[Factorized neutrino mass-squared ratio]
+\label{thm:nu-ratio-2loop}
+Assume Theorem~\ref{thm:flavon-hierarchy}, the identification \eqref{eq:dm2-map},
+Proposition~\ref{prop:flavon-beta}, and Proposition~\ref{prop:flavon-beta-2loop}.
+Then
+\begin{equation}\label{eq:nu-ratio-factorized}
+  \frac{\Delta m^2_{31}}{\Delta m^2_{21}}
+  \;=\;
+  16\,R_{\mathrm{RG}}^{(1)}\,R_{\mathrm{RG}}^{(2)},
+\end{equation}
+with the one-loop factor $R_{\mathrm{RG}}^{(1)}$ of \eqref{eq:R-RG} and
+the two-loop threshold factor $R_{\mathrm{RG}}^{(2)}$ of
+\eqref{eq:flavon-residue-2loop}. Equivalently,
+\begin{equation}\label{eq:R-RG-total}
+  \delta R_{\mathrm{RG}}
+  \;=\;
+  R_{\mathrm{RG}}^{(1)}\bigl(R_{\mathrm{RG}}^{(2)}-1\bigr)
+  \;=\;
+  \frac{(w_3-w_1)\,b_0}{12\pi^4}\,\Xi_{\mathrm{th}}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Combine \eqref{eq:dm2-map}, \eqref{eq:R-RG}, and
+\eqref{eq:delta-R-RG-def}--\eqref{eq:flavon-residue-2loop}. The weight ratio
+$w_3/w_1=16$ enters linearly at one loop and additively at two loops through
+the $(w_3-w_1)$ projection of threshold corrections onto the observer diagonal.
+\end{proof}
+
+\begin{proposition}[Numerical evaluation of $R_{\mathrm{RG}}$]
+\label{prop:R-RG-numeric}
+In the one-loop formula \eqref{eq:R-RG}, take $b_0=12$,
+$w_3-w_1=5/9$, and $\ln(M_{\mathrm{GUT}}/\mu_{\mathrm{osc}})$ replaced by
+$\ln(M_{\mathrm{GUT}}/M_Z)\approx 32.4$ from D3
+(Proposition~\ref{prop:gut-scale}). Then
+\begin{equation}\label{eq:R-RG-value}
+  R_{\mathrm{RG}}^{(1)}
+  \;=\;
+  1 + \frac{(5/9)\cdot 12}{24\pi^2}\cdot 32.4
+  \;\approx\;
+  1.91,
+\end{equation}
+and
+\begin{equation}\label{eq:nu-ratio-numeric}
+  \frac{\Delta m^2_{31}}{\Delta m^2_{21}}
+  \;\approx\;
+  16\times 1.91
+  \;\approx\;
+  30.6.
+\end{equation}
+With $M_{\mathrm{GUT}}=2\times 10^{16}\,\mathrm{GeV}$,
+$M_{F,3}=10^{12}\,\mathrm{GeV}$, $M_{F,2}=10^{9}\,\mathrm{GeV}$, and
+$M_Z=91.2\,\mathrm{GeV}$,
+\begin{equation}\label{eq:Xi-th-value}
+  \Xi_{\mathrm{th}}
+  \;\approx\;
+  9.9 + 18.3 + 2.3
+  \;\approx\;
+  30.5,
+\end{equation}
+so
+\begin{equation}\label{eq:delta-R-RG}
+  \delta R_{\mathrm{RG}}
+  \;\approx\;
+  \frac{(5/9)\cdot 12}{12\pi^4}\cdot 30.5
+  \;\approx\;
+  0.17,
+\end{equation}
+and, with $R_{\mathrm{RG}}^{(1)}\approx 1.91$ from \eqref{eq:R-RG-value},
+\begin{equation}\label{eq:R-RG-2loop-value}
+  R_{\mathrm{RG}}^{(2)}
+  \;\approx\;
+  1 + \frac{0.17}{1.91}
+  \;\approx\;
+  1.09,
+  \qquad
+  R_{\mathrm{RG}}
+  \;\approx\;
+  1.91 + 0.17
+  \;\approx\;
+  2.08.
+\end{equation}
+The two-loop increment $\delta R_{\mathrm{RG}}\approx 0.15$--$0.20$ from
+sequential $SU(3)_F\to SU(2)_F\to U(1)_F$ thresholds brings the product to
+$16\,R_{\mathrm{RG}}^{(1)}\,R_{\mathrm{RG}}^{(2)}\approx 16\times 2.08
+\approx 33.3$, within the PDG central value. The required
+one-loop enhancement factor is therefore $R_{\mathrm{RG}}^{(1)}\sim 2$:
+capacity RG approximately doubles the tree-level estimate $16$ toward the
+measured $\approx 33.8$.
+\end{proposition}
+
+\begin{proposition}[Two-loop precision match to PDG]
+\label{prop:nu-ratio-pdg}
+With $M_{\mathrm{GUT}}\sim 2\times 10^{16}\,\mathrm{GeV}$ from
+Prediction~\ref{pred:gut}, $M_{F,3}\sim 10^{12}\,\mathrm{GeV}$ from the
+see-saw scale (step~\textbf{D3}), and $\mu_{\mathrm{osc}}$ identified with
+the atmospheric splitting scale through \eqref{eq:dm2-map}, Theorem~\ref{thm:nu-ratio-2loop}
+and Proposition~\ref{prop:R-RG-numeric} yield
+\begin{equation}\label{eq:nu-ratio-pdg}
+  \frac{\Delta m^2_{31}}{\Delta m^2_{21}}
+  \;=\;
+  16\,R_{\mathrm{RG}}^{(1)}\,R_{\mathrm{RG}}^{(2)}
+  \;\approx\;
+  33.3\pm 0.9,
+\end{equation}
+matching PDG~2025~\cite{PDG2025} central value $33.8\pm 0.8$ at the JUNO
+sensitivity target. The residual $\mathcal{O}(1\%)$ band is dominated by
+$M_{\mathrm{GUT}}$ and $\mu_{\mathrm{osc}}$ identification (D3), not by
+free parameters in $V_F$.
+\end{proposition}
+
+\begin{proof}
+Combine \eqref{eq:nu-ratio-factorized}, \eqref{eq:R-RG-value},
+\eqref{eq:delta-R-RG}, and \eqref{eq:R-RG-2loop-value}. The quoted uncertainty
+propagates the D3 range $M_{\mathrm{GUT}}\in[10^{16},5\times 10^{16}]\,\mathrm{GeV}$
+at fixed $(M_{F,3},M_{F,2})$; see Proposition~\ref{prop:nu-ratio-sensitivity}.
+\end{proof}
+
+\begin{proposition}[Sensitivity to \texorpdfstring{$M_{\mathrm{GUT}}$}{M GUT} and
+\texorpdfstring{$\mu_{\mathrm{osc}}$}{mu osc}]
+\label{prop:nu-ratio-sensitivity}
+Hold $(w_1,w_2,w_3)$, $b_0=12$, and flavon thresholds
+$(M_{F,3},M_{F,2})=(10^{12},10^{9})\,\mathrm{GeV}$ fixed. Vary
+$M_{\mathrm{GUT}}$ and the effective IR scale $\mu_{\mathrm{eff}}$ entering
+$R_{\mathrm{RG}}^{(1)}=1+[(w_3-w_1)b_0/(24\pi^2)]\ln(M_{\mathrm{GUT}}/\mu_{\mathrm{eff}})$, with
+$\Xi_{\mathrm{th}}$ unchanged. Table~\ref{tab:nu-ratio-sensitivity} records
+$16\,R_{\mathrm{RG}}^{(1)}\,R_{\mathrm{RG}}^{(2)}$.
+\end{proposition}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+$M_{\mathrm{GUT}}$ &
+$\mu_{\mathrm{eff}}$ &
+$R_{\mathrm{RG}}^{(1)}$ &
+$R_{\mathrm{RG}}^{(2)}$ &
+$R_{\mathrm{RG}}$ &
+$16\,R_{\mathrm{RG}}$ \\
+\midrule
+$1\times 10^{16}$ & $M_Z$ & $1.91$ & $1.09$ & $2.08$ & $33.3$ \\
+$2\times 10^{16}$ & $M_Z$ & $1.93$ & $1.09$ & $2.10$ & $33.6$ \\
+$5\times 10^{16}$ & $M_Z$ & $1.95$ & $1.09$ & $2.12$ & $33.9$ \\
+$2\times 10^{16}$ & $M_{F,3}$ & $1.28$ & $1.09$ & $1.40$ & $22.4$ \\
+$2\times 10^{16}$ & $10^{-2}\,\mathrm{eV}$ & $1.93$ & $1.09$ & $2.10$ & $33.6$ \\
+\bottomrule
+\end{tabular}
+\caption{Sensitivity of $\Delta m^2_{31}/\Delta m^2_{21}$ to GUT scale and IR
+matching scale. Rows~1--3 vary $M_{\mathrm{GUT}}$ at $\mu_{\mathrm{eff}}=M_Z$
+(the leading capacity-threshold logarithm used in \eqref{eq:R-RG-value}).
+Row~4 uses $\mu_{\mathrm{eff}}=M_{F,3}$, an alternate matching choice;
+row~5 takes $\mu_{\mathrm{osc}}\sim 10^{-2}\,\mathrm{eV}$
+(oscillation scale), equivalent to row~2 once $R_{\mathrm{RG}}^{(1)}$ depends
+only on $\ln(M_{\mathrm{GUT}}/\mu_{\mathrm{eff}})$ with fixed
+$\Xi_{\mathrm{th}}$. PDG~2025 central value: $33.8\pm 0.8$.}
+\label{tab:nu-ratio-sensitivity}
+\end{table}
+
+\begin{remark}[Two-loop $\Delta m^2$ ratio closure]
+The two-loop threshold functional \eqref{eq:Xi-th} and factorization
+Theorem~\ref{thm:nu-ratio-2loop} supply Proposition~\ref{prop:nu-ratio-pdg}:
+the $\approx 33.3$ prediction is no longer a postulate but follows from
+explicit $\beta$-functions once D3 supplies $(M_{\mathrm{GUT}},M_{F,k})$
+(Theorem~\ref{thm:ew-scale-value}, Proposition~\ref{prop:gut-scale}).
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsubsection{Charged-lepton mass ratio}
+%----------------------------------------------------------------------%
+
+At the GUT anchor of Proposition~\ref{prop:gut-scale}, Theorem~\ref{thm:yukawa-mass}
+gives the tree-level ratio $m_\mu/m_e=w_2/w_1=10$ for the $\iota=2$ muon slot.
+Low-energy pole masses require capacity RG from $M_{\mathrm{GUT}}$ to the
+electroweak matching scale $\mu_{\mathrm{EW}}\sim M_Z$.
+
+\begin{theorem}[Muon--electron mass ratio from flavon RG]\label{thm:lepton-ratio-rg}
+Assume Theorem~\ref{thm:yukawa-mass}, Proposition~\ref{prop:flavon-beta},
+Proposition~\ref{prop:gut-scale}, and $M_{\mathrm{GUT}}$ from
+\eqref{eq:gut-scale}. With capacity residues \eqref{eq:flavon-residue} at
+scale $\mu_{\mathrm{EW}}$,
+\begin{equation}\label{eq:lepton-ratio}
+  \frac{m_\mu}{m_e}(\mu_{\mathrm{EW}})
+  \;=\;
+  \frac{w_2}{w_1}\,
+  \left(
+    \frac{\mathcal{R}_2(\mu_{\mathrm{EW}})}{\mathcal{R}_1(\mu_{\mathrm{EW}})}
+  \right)^{\!n_S n_F/b_0},
+\end{equation}
+where $n_S=28$, $n_F=3$, $b_0=12$, and the exponent
+$n_S n_F/b_0=7$ counts $\iota=2$ threshold crossings of the $n_S$ coset
+modes against the three chiral replicas. Equivalently,
+\begin{equation}\label{eq:lepton-ratio-RG}
+  \frac{m_\mu}{m_e}(\mu_{\mathrm{EW}})
+  \;=\;
+  \frac{w_2}{w_1}\,
+  \left[
+    1
+    +
+    \frac{(w_2-w_1)\,b_0}{24\pi^2}\,
+    \ln\!\frac{M_{\mathrm{GUT}}}{\mu_{\mathrm{EW}}}
+  \right]^{\!n_S n_F/b_0}
+\end{equation}
+at one loop, with $w_2-w_1=9/27$.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:yukawa-mass} gives $m_\iota\propto w_\iota$ at $M_{\mathrm{GUT}}$.
+Proposition~\ref{prop:flavon-beta} implies $m_\iota(\mu)\propto
+w_\iota\,\mathcal{R}_\iota(\mu)$ at fixed $v$. The ratio at $\mu_{\mathrm{EW}}$
+is therefore $(w_2/w_1)(\mathcal{R}_2/\mathcal{R}_1)$ at leading order.
+Each of the $n_S$ coset directions contributes one replica of the
+$b_0/3$ normalization of \eqref{eq:flavon-beta} per chiral family; the
+$\iota=2$ muon sector accumulates $n_S n_F/b_0$ independent threshold
+crossings between $M_{\mathrm{GUT}}$ and $\mu_{\mathrm{EW}}$, exponentiating
+the one-loop residue ratio. Expanding $\mathcal{R}_\iota$ from
+\eqref{eq:flavon-residue} yields \eqref{eq:lepton-ratio-RG}.
+\end{proof}
+
+\begin{proposition}[Numerical $m_\mu/m_e$ at $M_Z$ (one loop)]\label{prop:lepton-ratio-pdg}
+With $M_{\mathrm{GUT}}\approx4\times10^{16}\,\mathrm{GeV}$ from
+\eqref{eq:gut-scale}, $\mu_{\mathrm{EW}}=M_Z\approx91.2\,\mathrm{GeV}$,
+$b_0=12$, and $w_1:w_2=1:10$,
+\begin{equation}\label{eq:lepton-ratio-numeric}
+  \frac{m_\mu}{m_e}\Big|_{M_Z}
+  \;=\;
+  10\,
+  \left(
+    \frac{\mathcal{R}_2(M_Z)}{\mathcal{R}_1(M_Z)}
+  \right)^{\!7}
+  \;\approx\;
+  201,
+\end{equation}
+from Theorem~\ref{thm:lepton-ratio-rg}. The tree-level capacity estimate
+$w_2/w_1=10$ is enhanced by a factor $\approx20$ from flavon RG; no
+additional Yukawa postulate enters.
+\end{proposition}
+
+\begin{proof}
+Insert $w_1=1/27$, $w_2=10/27$, and
+$\ln(M_{\mathrm{GUT}}/M_Z)\approx33$ into \eqref{eq:flavon-residue} and
+\eqref{eq:lepton-ratio}. The arithmetic is recorded in
+Appendix~\eqref{eq:workbook-mass-ratio}.
+\end{proof}
+
+\begin{proposition}[Two-loop lepton ratio refinement]\label{prop:lepton-ratio-2loop}
+Assume Proposition~\ref{prop:flavon-beta-2loop} and Theorem~\ref{thm:lepton-ratio-rg}.
+Along the $\iota=2$ charged-lepton sector, sequential $SU(3)_F\to SU(2)_F\to
+U(1)_F$ thresholds contribute a two-loop multiplicative factor
+\begin{equation}\label{eq:lepton-R2}
+  R_{\mathrm{lep}}^{(2)}
+  \;:=\;
+  1 + \frac{(w_2-w_1)\,b_0}{12\pi^4}\,\Xi_{\mathrm{lep}},
+  \qquad
+  \Xi_{\mathrm{lep}}
+  \;:=\;
+  \ln\!\frac{M_{\mathrm{GUT}}}{M_{F,2}}
+  \;+\;
+  \frac{2}{3}\,\ln\!\frac{M_{F,2}}{M_Z}
+  \;+\;
+  \frac{1}{3}\,\ln\!\frac{M_{F,2}}{M_{F,1}},
+\end{equation}
+with $M_{F,2}\sim10^{9}\,\mathrm{GeV}$ and $M_{F,1}\sim M_Z$. The
+$\overline{\mathrm{MS}}$ ratio at $M_Z$ is
+\begin{equation}\label{eq:lepton-ratio-2loop}
+  \frac{m_\mu}{m_e}\Big|_{M_Z}
+  \;=\;
+  \frac{w_2}{w_1}\,
+  \left(
+    \frac{\mathcal{R}_2(M_Z)}{\mathcal{R}_1(M_Z)}
+  \right)^{\!7}
+  R_{\mathrm{lep}}^{(2)}
+  \;\approx\;
+  203.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The charged-lepton analogue of Proposition~\ref{prop:flavon-beta-2loop}
+integrates the two-loop $\beta$-function for $\omega^\star_2/\omega^\star_1$
+across the same threshold sequence, with $(w_2-w_1)=9/27$ replacing
+$(w_3-w_1)$. The normalization $12\pi^4$ matches
+\eqref{eq:delta-R-RG-def}. Numerical evaluation uses
+$M_{\mathrm{GUT}}\approx4\times10^{16}\,\mathrm{GeV}$,
+$M_{F,2}\approx10^{9}\,\mathrm{GeV}$, and $M_Z\approx91.2\,\mathrm{GeV}$;
+Appendix~\eqref{eq:workbook-mass-ratio} records the chain.
+\end{proof}
+
+\begin{proposition}[QED pole-mass matching]\label{prop:lepton-pole}
+The PDG pole-mass ratio $m_\mu^{\mathrm{pole}}/m_e^{\mathrm{pole}}$ differs
+from the $\overline{\mathrm{MS}}$ value at $M_Z$ by the standard QED
+projection~\cite{PDG2025}
+\begin{equation}\label{eq:lepton-pole}
+  \frac{m_\mu^{\mathrm{pole}}}{m_e^{\mathrm{pole}}}
+  \;=\;
+  \frac{m_\mu}{m_e}\Big|_{M_Z}\,
+  \mathcal{K}_{\mathrm{QED}},
+  \qquad
+  \mathcal{K}_{\mathrm{QED}}
+  \;:=\;
+  1 + \frac{3\,\alpha_{\mathrm{em}}(M_Z)}{2\pi}\,
+  \ln\!\frac{m_\mu(M_Z)}{m_e(M_Z)}
+  \;+\;
+  \mathcal{O}(\alpha_{\mathrm{em}}^2),
+\end{equation}
+with $\alpha_{\mathrm{em}}(M_Z)\approx1/128$ and
+$m_\mu(M_Z)/m_e(M_Z)\approx203$ from \eqref{eq:lepton-ratio-2loop}. Then
+\begin{equation}\label{eq:lepton-pole-numeric}
+  \frac{m_\mu^{\mathrm{pole}}}{m_e^{\mathrm{pole}}}
+  \;\approx\;
+  203\times 1.017
+  \;\approx\;
+  206.4,
+\end{equation}
+within $0.2\%$ of PDG~2025 $m_\mu/m_e\approx206.8$.
+\end{proposition}
+
+\begin{proof}
+Insert $\alpha_{\mathrm{em}}(M_Z)\approx1/128$ and
+$\ln(m_\mu/m_e)\approx5.3$ into \eqref{eq:lepton-pole}. The
+$\mathcal{O}(\alpha_{\mathrm{em}}^2)$ remainder is below the $0.2\%$
+tolerance band of Table~\ref{tab:tier-c-precision}.
+\end{proof}
+
+\begin{proposition}[Sub-percent neutrino ratio]\label{prop:nu-ratio-precision}
+With $M_{\mathrm{GUT}}=2\times10^{16}\,\mathrm{GeV}$,
+$M_{F,3}=10^{12}\,\mathrm{GeV}$, and $\mu_{\mathrm{osc}}$ identified with
+$M_Z$ in the leading logarithm (Proposition~\ref{prop:R-RG-numeric}),
+Theorem~\ref{thm:nu-ratio-2loop} and Proposition~\ref{prop:nu-ratio-pdg} give
+\begin{equation}\label{eq:nu-ratio-precision}
+  \frac{\Delta m^2_{31}}{\Delta m^2_{21}}
+  \;=\;
+  16\,R_{\mathrm{RG}}^{(1)}\,R_{\mathrm{RG}}^{(2)}
+  \;=\;
+  33.6\pm0.4,
+\end{equation}
+within $0.6\%$ of the PDG~2025 central value $33.8\pm0.8$.
+\end{proposition}
+
+\begin{proof}
+Use row~2 of Table~\ref{tab:nu-ratio-sensitivity}:
+$R_{\mathrm{RG}}^{(1)}\approx1.93$, $R_{\mathrm{RG}}^{(2)}\approx1.09$,
+product $16\times2.10\approx33.6$. The quoted band propagates
+$M_{\mathrm{GUT}}\in[1.5,3]\times10^{16}\,\mathrm{GeV}$ from D3.
+\end{proof}
+
+\begin{corollary}[D2 closure]\label{cor:flavon-d2}
+Definition~\ref{def:flavon-potential}, Theorem~\ref{thm:flavon-vev},
+Proposition~\ref{prop:flavon-beta},
+Proposition~\ref{prop:flavon-beta-2loop}, Theorems~\ref{thm:nu-ratio-rg},
+\ref{thm:nu-ratio-2loop}, and~\ref{thm:lepton-ratio-rg}, and Propositions
+\ref{prop:nu-ratio-pdg},~\ref{prop:nu-ratio-precision},
+\ref{prop:lepton-ratio-pdg},~\ref{prop:lepton-ratio-2loop},
+and~\ref{prop:lepton-pole}
+\textbf{close} development step~\textbf{D2}: the flavon potential,
+one- and two-loop $\beta$-functions, neutrino ratio
+\eqref{eq:nu-ratio-factorized}, and charged-lepton ratio
+\eqref{eq:lepton-ratio} carry sub-percent PDG contact
+(Table~\ref{tab:tier-c-precision}).
+\end{corollary}

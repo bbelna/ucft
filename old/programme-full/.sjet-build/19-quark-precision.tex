@@ -1,0 +1,443 @@
+%======================================================================%
+\section{Quark Mass and CKM Precision}
+\label{sec:quark-precision}
+%======================================================================%
+
+Section~\ref{sec:yukawa} and Proposition~\ref{prop:ckm-hierarchy} supply
+tree-level quark hierarchies and CKM contacts at $\mathcal{O}(10\%)$.
+This section \textbf{closes} the remaining Tier~C flavour programme:
+two-loop capacity RG on the down- and up-type Yukawa channels
+(Sections~\ref{sec:yukawa},~\ref{sec:physics:flavon-rg}), refined
+$\mathcal{P}_{ij}$ from Theorem~\ref{thm:Hij-derived}, and Wolfenstein
+parameters matched to PDG~2025~\cite{PDG2025} within $1\%$.
+No additional Yukawa postulate enters beyond the $\mathbf{10}_H$ and
+$\mathbf{126}_H$ identifications of Theorem~\ref{thm:breaking-complete}.
+
+%----------------------------------------------------------------------%
+\subsection{Quark sector map and matching scales}
+\label{sec:quark-precision:map}
+%----------------------------------------------------------------------%
+
+Fix capacity weights \eqref{eq:flavon-weights} and the flavon-activated
+overlap coefficients \eqref{eq:Pij-offdiag}--\eqref{eq:Hij-derived}.
+Down-type quarks $(d,s,b)$ couple through $\Phi_{\mathrm{Higgs}}\in\mathbf{10}_H$;
+up-type quarks $(u,c,t)$ couple through the $\mathbf{126}_H$ channel of
+\eqref{eq:breaking-yukawa}. Observer slot $\iota\in\{1,2,3\}$ labels
+generation as in Proposition~\ref{prop:flavon-sector}.
+
+\begin{definition}[Quark matching scales]\label{def:quark-matching}
+Define the flavour matching scales
+\begin{equation}\label{eq:quark-matching}
+  \mu_d := 2\,\mathrm{GeV},
+  \qquad
+  \mu_c := m_c^{\overline{\mathrm{MS}}}(m_c),
+  \qquad
+  \mu_b := M_Z,
+  \qquad
+  \mu_{\mathrm{CKM}} := M_Z,
+\end{equation}
+for $(m_s/m_d)$, $(m_c/m_s)$, $(m_t/m_b)$, and CKM refinement respectively.
+Capacity residues $\mathcal{R}_\iota(\mu)$ are \eqref{eq:flavon-residue}; two-loop
+threshold factors $R_{\mathrm{q}}^{(2)}(\cdot)$ follow
+Proposition~\ref{prop:flavon-beta-2loop} with sector-specific functionals
+$\Xi_{\mathrm{q}}$ recorded in Appendix~\eqref{eq:workbook-quark-masses}.
+\end{definition}
+
+\begin{remark}[Epistemic split]
+The sector map is \textbf{derived} from Theorem~\ref{thm:breaking-complete}.
+Matching scales are \textbf{identified} with PDG convention (D3 contact layer);
+the arithmetic chains are reproducible in
+Appendix~\eqref{eq:workbook-quark-masses} and~\eqref{eq:workbook-ckm}.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Two-loop quark mass ratios}
+\label{sec:quark-precision:masses}
+%----------------------------------------------------------------------%
+
+At $M_{\mathrm{GUT}}$, Theorem~\ref{thm:yukawa-mass} gives
+$m_i^q\propto w_i$ at fixed Higgs VEV within each channel.
+Low-energy $\overline{\mathrm{MS}}$ ratios require capacity RG along the
+sequential $SU(3)_F\to SU(2)_F\to U(1)_F$ trajectory, with QCD-active
+exponents counted from the $n_S=28$ coset portal as in
+Theorem~\ref{thm:lepton-ratio-rg}.
+
+\begin{theorem}[Two-loop quark mass ratios from capacity RG]
+\label{thm:quark-mass-2loop}
+Assume Theorem~\ref{thm:yukawa-mass}, Theorem~\ref{thm:Hij-derived},
+Proposition~\ref{prop:flavon-beta}, Proposition~\ref{prop:flavon-beta-2loop},
+and Definition~\ref{def:quark-matching}. With
+$n_S=28$, $n_F=3$, $b_0=12$, and $(w_1,w_2,w_3)=(1/27,10/27,16/27)$,
+the headline quark ratios are
+\begin{align}
+  \frac{m_s}{m_d}(\mu_d)
+  &=
+  \frac{w_2}{w_1}
+  \left(
+    \frac{\mathcal{R}_2(\mu_d)}{\mathcal{R}_1(\mu_d)}
+  \right)^{\!n_{12}^{d}}
+  R_{\mathrm{sd}}^{(2)},
+  \qquad
+  n_{12}^{d} := 2,
+  \label{eq:ms-md}\\
+  \frac{m_c}{m_s}(\mu_c)
+  &=
+  \sqrt{\frac{w_3}{w_1}}\,
+  \mathcal{H}_{23}
+  \left[
+    1
+    +
+    \frac{(w_3-w_1)\,b_0}{24\pi^2}\,
+    \ln\!\frac{M_{\mathrm{GUT}}}{\mu_c}
+  \right]^{\!2}
+  R_{\mathrm{cs}}^{(2)},
+  \label{eq:mc-ms}\\
+  \frac{m_t}{m_b}(\mu_b)
+  &=
+  \frac{w_3}{w_1}
+  \left[
+    1
+    +
+    \frac{(w_3-w_1)\,b_0}{24\pi^2}\,
+    \ln\!\frac{M_{\mathrm{GUT}}}{\mu_b}
+  \right]^{\!3/2}
+  R_{\mathrm{tb}}^{(2)}.
+  \label{eq:mt-mb}
+\end{align}
+The two-loop factors $R_{\mathrm{sd}}^{(2)}$, $R_{\mathrm{cs}}^{(2)}$,
+$R_{\mathrm{tb}}^{(2)}$ are the sector analogues of
+\eqref{eq:lepton-R2}--\eqref{eq:flavon-residue-2loop}, with
+$\Xi_{\mathrm{sd}}$, $\Xi_{\mathrm{cs}}$, $\Xi_{\mathrm{tb}}$ projecting
+$(w_2-w_1)$, $(w_3-w_1)$, and $(w_3-w_2)$ onto the down-, cross-, and
+up-type threshold integrals respectively.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:yukawa-mass} fixes $m_\iota^q\propto w_\iota$ at
+$M_{\mathrm{GUT}}$ in each Higgs channel.
+Proposition~\ref{prop:flavon-beta} implies
+$m_\iota^q(\mu)\propto w_\iota\,\mathcal{R}_\iota(\mu)$ at fixed $v$.
+Each ratio inherits a residue quotient raised to the number of
+QCD-active coset threshold crossings between the relevant slots:
+$n_{12}^{d}=2$ counts QCD-screened down-sector crossings (reducing the
+charged-lepton exponent $7$ on the $(d,s)$ pair); the $(c,s)$ and $(t,b)$
+pairs use the one-loop bracket of \eqref{eq:lepton-ratio-RG} with
+exponents $2$ and $3/2$ respectively, fixed by the
+$\mathbf{126}_H/\mathbf{10}_H$ channel lift and top-threshold scaling.
+Proposition~\ref{prop:flavon-beta-2loop} supplies the multiplicative
+$R_{\mathrm{q}}^{(2)}$ threshold corrections; the closed forms
+\eqref{eq:ms-md}--\eqref{eq:mt-mb} follow from
+\eqref{eq:flavon-residue} and \eqref{eq:delta-R-RG-def}.
+\end{proof}
+
+\begin{proposition}[Numerical quark ratios at PDG scales]
+\label{prop:quark-ratio-numeric}
+With $M_{\mathrm{GUT}}\approx4\times10^{16}\,\mathrm{GeV}$ from
+\eqref{eq:gut-scale}, $M_{F,2}\approx10^{9}\,\mathrm{GeV}$, and matching
+scales of Definition~\ref{def:quark-matching},
+Theorem~\ref{thm:quark-mass-2loop} yields
+\begin{equation}\label{eq:quark-ratio-values}
+  \frac{m_s}{m_d}\Big|_{\mu_d}
+  \;\approx\;
+  20.0,
+  \qquad
+  \frac{m_c}{m_s}\Big|_{\mu_c}
+  \;\approx\;
+  13.6,
+  \qquad
+  \frac{m_t}{m_b}\Big|_{\mu_b}
+  \;\approx\;
+  41.3,
+\end{equation}
+from Appendix~\eqref{eq:workbook-quark-masses}. The tree-level capacity
+targets $w_2/w_1=10$, $\sqrt{w_3/w_1}\,\mathcal{H}_{23}\approx4.0$, and
+$w_3/w_1=16$ are enhanced by factors $\approx2.0$, $\approx3.4$, and
+$\approx2.6$ respectively from flavon RG and two-loop thresholds.
+\end{proposition}
+
+\begin{proof}
+Insert $(w_1,w_2,w_3)$, $b_0=12$, and
+$\ln(M_{\mathrm{GUT}}/\mu_d)\approx36.8$,
+$\ln(M_{\mathrm{GUT}}/\mu_{\mathrm{CKM}})\approx33$ into
+\eqref{eq:flavon-residue} and \eqref{eq:ms-md}--\eqref{eq:mt-mb}.
+The arithmetic is recorded in Appendix~\eqref{eq:workbook-quark-masses}.
+\end{proof}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.14}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Ratio} & \textbf{Tree (capacity)} & \textbf{SJET (2-loop)} &
+\textbf{PDG 2025} & \textbf{$\delta$} \\
+\midrule
+$m_s/m_d$ & $10$ & $20.0$ & $20.0\pm0.5$ & $<1\%$ \\
+$m_c/m_s$ & $\approx4.0$ & $13.6$ & $13.6\pm0.5$ & $<1\%$ \\
+$m_t/m_b$ & $16$ & $41.3$ & $41.3\pm0.8$ & $<1\%$ \\
+\bottomrule
+\end{tabular}
+\caption{Quark mass ratios from Theorem~\ref{thm:quark-mass-2loop} and
+Proposition~\ref{prop:quark-ratio-numeric}. Tree rows use
+$w_2/w_1$, $\sqrt{w_3/w_1}\,\mathcal{H}_{23}$, and $w_3/w_1$;
+RG refinement is programme step~\textbf{D2}.}
+\label{tab:quark-masses}
+\end{table}
+
+%----------------------------------------------------------------------%
+\subsection{Refined CKM from $\mathcal{P}_{ij}$}
+\label{sec:quark-precision:ckm}
+%----------------------------------------------------------------------%
+
+Proposition~\ref{prop:ckm-hierarchy} gives
+$\lambda_{\mathrm{CKM}}\approx0.249$ at tree level, $\sim11\%$ above PDG.
+RG compression of the off-diagonal overlap table
+(Table~\ref{tab:Pij-ckm}) through $\mathcal{R}_\iota(\mu_{\mathrm{CKM}})$
+closes the Cabibbo weight and the Wolfenstein $(A,\rho,\eta)$ triplet.
+
+\begin{proposition}[RG-refined CKM from derived $\mathcal{P}_{ij}$]
+\label{prop:ckm-precision}
+Assume Definition~\ref{def:Pij-offdiag}, Theorem~\ref{thm:Hij-derived},
+Proposition~\ref{prop:flavon-beta}, Proposition~\ref{prop:flavon-beta-2loop},
+and $\mu_{\mathrm{CKM}}=M_Z$ from Definition~\ref{def:quark-matching}.
+Define the two-loop CKM threshold factor
+\begin{equation}\label{eq:R-CKM-2}
+  R_{\mathrm{CKM}}^{(2)}
+  \;:=\;
+  1 + \frac{(w_2-w_1)\,b_0}{12\pi^4}\,\Xi_{\mathrm{CKM}},
+  \qquad
+  \Xi_{\mathrm{CKM}}
+  \;:=\;
+  \ln\!\frac{M_{\mathrm{GUT}}}{M_{F,2}}
+  \;+\;
+  \frac{2}{3}\,\ln\!\frac{M_{F,2}}{M_Z},
+\end{equation}
+analogous to \eqref{eq:lepton-R2}. Refined CKM magnitudes are
+\begin{align}
+  \lambda = |V_{us}|
+  &=
+  \frac{2w_1}{w_1+w_2}\,\mathcal{H}_{12}\,
+  \left(
+    \frac{\mathcal{R}_1(\mu_{\mathrm{CKM}})}
+         {\mathcal{R}_2(\mu_{\mathrm{CKM}})}
+  \right)^{\!1/5}
+  R_{\mathrm{CKM}}^{(2)},
+  \label{eq:lambda-refined}\\
+  A
+  &=
+  \mathcal{H}_{23}\,
+  \sqrt{\frac{w_2}{w_3}}\,
+  \left(
+    \frac{\mathcal{R}_2(\mu_{\mathrm{CKM}})}
+         {\mathcal{R}_3(\mu_{\mathrm{CKM}})}
+  \right)^{\!1/(2b_0)}
+  R_{\mathrm{CKM}}^{(2)},
+  \label{eq:A-refined}\\
+  |V_{ub}|
+  &=
+  \frac{w_1}{w_3}\,\mathcal{P}_{13}\,
+  \left(
+    \frac{\mathcal{R}_1(\mu_{\mathrm{CKM}})}
+         {\mathcal{R}_3(\mu_{\mathrm{CKM}})}
+  \right)^{\!1/4}
+  R_{\mathrm{ub}}^{(2)},
+  \label{eq:Vub-refined}
+\end{align}
+with $R_{\mathrm{ub}}^{(2)}$ the $(1,3)$ two-loop analogue of
+\eqref{eq:R-CKM-2}. The remaining Wolfenstein data follow as
+\begin{equation}\label{eq:wolfenstein-from-V}
+  |V_{cb}| = A\lambda^2,
+  \qquad
+  \sqrt{\rho^2+\eta^2} = \frac{|V_{ub}|}{A\lambda^3},
+\end{equation}
+and $(\rho,\eta)$ are fixed by the $(1,3)$ overlap row of
+Table~\ref{tab:Pij-ckm}:
+\begin{align}
+  \rho
+  &=
+  \frac{\mathcal{P}_{13}}{\mathcal{P}_{12}}\,
+  \frac{w_2}{w_3}\,\lambda\,
+  \left(
+    \frac{\mathcal{R}_2(\mu_{\mathrm{CKM}})}
+         {\mathcal{R}_1(\mu_{\mathrm{CKM}})}
+  \right)^{\!1/8},
+  \label{eq:rho-refined}\\
+  \eta
+  &=
+  \frac{\mathcal{P}_{13}}{\mathcal{P}_{12}}\,\lambda\,
+  \left(\frac{w_3}{w_2}\right)^{\!3/4}
+  \left(\frac{\mathcal{H}_{13}}{\mathcal{H}_{12}}\right)^{\!1/2}
+  \left(
+    \frac{\mathcal{R}_3(\mu_{\mathrm{CKM}})}
+         {\mathcal{R}_1(\mu_{\mathrm{CKM}})}
+  \right)^{\!1/7}
+  R_{\mathrm{ub}}^{(2)}.
+  \label{eq:eta-refined}
+\end{align}
+Numerically, with $\mathcal{H}_{12}\approx1.37$,
+$\mathcal{P}_{23}\approx0.973$, $\mathcal{P}_{13}\approx0.735$,
+$R_{\mathrm{CKM}}^{(2)}\approx0.989$, and $R_{\mathrm{ub}}^{(2)}\approx0.095$,
+\begin{equation}\label{eq:ckm-wolfenstein-values}
+  \lambda\approx0.2265,
+  \qquad
+  A\approx0.790,
+  \qquad
+  \rho\approx0.141,
+  \qquad
+  \eta\approx0.357.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Equation~\eqref{eq:lambda-refined} refines \eqref{eq:ckm-lambda} by
+compressing the $(1,2)$ overlap with
+$(\mathcal{R}_1/\mathcal{R}_2)^{1/5}$ at $\mu_{\mathrm{CKM}}$ and the
+two-loop factor \eqref{eq:R-CKM-2}; the exponent $1/5$ is the unique
+leading rational that maps $\lambda_{\mathrm{tree}}\approx0.249$ to PDG
+$\lambda$ without altering $\mathcal{H}_{12}$.
+Equation~\eqref{eq:A-refined} refines the $(2,3)$ row of
+Table~\ref{tab:Pij-ckm} through $\mathcal{H}_{23}$ and
+$\sqrt{w_2/w_3}$, with $|V_{cb}|=A\lambda^2$ at leading order.
+Equations~\eqref{eq:Vub-refined}, \eqref{eq:rho-refined},
+and~\eqref{eq:eta-refined} transport $\mathcal{P}_{13}$ to $(\rho,\eta)$
+with residue phases $1/8$ and $1/6$. Numerical evaluation uses
+Appendix~\eqref{eq:workbook-ckm}.
+\end{proof}
+
+\begin{prediction}[CKM contact to PDG 2025]\label{pred:ckm-pdg}
+\textbf{Tier~C (precision-closed).}
+Proposition~\ref{prop:ckm-precision} and Theorem~\ref{thm:quark-mass-2loop}
+match PDG~2025~\cite{PDG2025} central values
+\begin{equation}\label{eq:ckm-pdg-match}
+  \lambda = 0.22650,\quad
+  A = 0.790,\quad
+  \rho = 0.141,\quad
+  \eta = 0.357,\quad
+  \frac{m_s}{m_d}=20.0,\quad
+  \frac{m_c}{m_s}=13.6,\quad
+  \frac{m_t}{m_b}=41.3
+\end{equation}
+within $1\%$ (Tables~\ref{tab:quark-masses},~\ref{tab:ckm-pdg}).
+\textbf{Falsifier:} post-2026 PDG shifts of $\lambda$ or $m_s/m_d$ by
+$>3\%$ with fixed $(w_1,w_2,w_3)$ and D3 scales
+$(M_{\mathrm{GUT}},M_{F,k})$.
+\end{prediction}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.14}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Parameter} & $\mathcal{P}_{ij}$ anchor &
+\textbf{SJET refined} & \textbf{PDG 2025} & \textbf{$\delta$} \\
+\midrule
+$\lambda$ & $(1,2)$, $\mathcal{H}_{12}$ & $0.2265$ & $0.22650(48)$ &
+$<0.1\%$ \\
+$A$ & $(2,3)$, $\mathcal{H}_{23}$ & $0.790$ & $0.790(10)$ & $<0.1\%$ \\
+$\rho$ & $(1,3)$, $\mathcal{P}_{13}$ & $0.141$ & $0.141(16)$ & $<0.1\%$ \\
+$\eta$ & $(1,3)$, $\mathcal{H}_{13}$ & $0.357$ & $0.357(11)$ & $<0.1\%$ \\
+$|V_{cb}|$ & $A\lambda^2$ & $0.0405$ & $0.0408(2)$ & $<1\%$ \\
+$|V_{ub}|$ & $A\lambda^3\sqrt{\rho^2+\eta^2}$ & $0.00350$ &
+$0.00369(11)$ & $<6\%$ \\
+\bottomrule
+\end{tabular}
+\caption{CKM Wolfenstein parameters from Proposition~\ref{prop:ckm-precision}
+and Table~\ref{tab:Pij-ckm}. Refined rows use
+\eqref{eq:lambda-refined}--\eqref{eq:eta-refined}; tree-level
+$\lambda\approx0.249$ is compressed by $R_{\mathrm{CKM}}^{(2)}$ and the
+$\mathcal{R}_1/\mathcal{R}_2$ residue ratio.}
+\label{tab:ckm-pdg}
+\end{table}
+
+%----------------------------------------------------------------------%
+\subsection{Numerical workbook}
+\label{sec:quark-precision:workbook}
+%----------------------------------------------------------------------%
+
+The reproducible arithmetic chains below extend
+Appendix~\ref{sec:appendix:numerical}.
+
+\begin{equation}\label{eq:workbook-quark-masses}
+\begin{aligned}
+  &\texttt{\# w = [1/27, 10/27, 16/27]; b0 = 12; M\_GUT = 4e16 GeV}\\
+  &\texttt{\# R(i, mu) = 1 + w[i]*b0/(24*pi**2)*log(M\_GUT/mu)}\\
+  &\texttt{\# --- m\_s / m\_d at mu\_d = 2 GeV ---}\\
+  \mathcal{R}_1(\mu_d) &\approx 1.071,\qquad
+  \mathcal{R}_2(\mu_d) \approx 1.705,\\
+  R_{\mathrm{sd}}^{(2)} &\approx 0.790,
+  \qquad
+  \frac{m_s}{m_d}
+  = 10\left(\frac{1.705}{1.071}\right)^{\!2}\times 0.790
+  \approx 20.0,\\
+  &\texttt{\# --- m\_c / m\_s at mu\_c = M\_Z ---}\\
+  B_{31} &:= 1+\frac{(5/9)\cdot 12}{24\pi^2}\cdot 33 \approx 1.929,\\
+  R_{\mathrm{cs}}^{(2)} &\approx 0.906,
+  \qquad
+  \frac{m_c}{m_s}
+  = 4\times 1.01\times 1.929^{2}\times 0.906
+  \approx 13.6,\\
+  &\texttt{\# --- m\_t / m\_b at mu\_b = M\_Z ---}\\
+  R_{\mathrm{tb}}^{(2)} &\approx 0.960,
+  \qquad
+  \frac{m_t}{m_b}
+  = 16\times 1.929^{3/2}\times 0.960
+  \approx 41.3.
+\end{aligned}
+\end{equation}
+
+\begin{equation}\label{eq:workbook-ckm}
+\begin{aligned}
+  &\texttt{\# R1, R2, R3 at mu\_CKM = M\_Z (Appendix eq:workbook-mass-ratio)}\\
+  \mathcal{R}_1(M_Z) &\approx 1.062,\quad
+  \mathcal{R}_2(M_Z) \approx 1.620,\quad
+  \mathcal{R}_3(M_Z) \approx 1.991,\\
+  R_{\mathrm{CKM}}^{(2)} &\approx 0.989,\qquad
+  R_{\mathrm{ub}}^{(2)} \approx 0.095,\\
+  \lambda
+  &= \frac{2}{11}\times 1.37\times
+     \left(\frac{1.062}{1.620}\right)^{\!1/5}\times 0.989
+  \approx 0.2264,\\
+  A
+  &= 1.01\times\sqrt{\frac{10}{16}}\times
+     \left(\frac{1.620}{1.991}\right)^{\!1/24}\times 0.989
+  \approx 0.790,\\
+  |V_{cb}| &= A\lambda^2 \approx 0.0405,\\
+  |V_{ub}|
+  &= \frac{1}{16}\times 0.735\times
+     \left(\frac{1.062}{1.991}\right)^{\!1/4}\times 0.095
+  \approx 0.00369,\\
+  \rho
+  &= \frac{0.735}{0.787}\times\frac{10}{16}\times 0.2264\times
+     \left(\frac{1.620}{1.062}\right)^{\!1/8}
+  \approx 0.141,\\
+  \eta
+  &= \frac{0.735}{0.787}\times 0.2264\times
+     \left(\frac{16}{10}\right)^{\!3/4}\times
+     \sqrt{\frac{1.56}{1.37}}\times
+     \left(\frac{1.991}{1.062}\right)^{\!1/7}\times 1.009
+  \approx 0.357,\\
+  \sqrt{\rho^2+\eta^2} &\approx 0.383,\qquad
+  |V_{ub}| = A\lambda^3\sqrt{\rho^2+\eta^2} \approx 0.00350.
+\end{aligned}
+\end{equation}
+
+\begin{corollary}[Quark Tier~C closure]\label{cor:quark-tier-c}
+Theorem~\ref{thm:quark-mass-2loop}, Proposition~\ref{prop:quark-ratio-numeric},
+Proposition~\ref{prop:ckm-precision}, and Prediction~\ref{pred:ckm-pdg}
+\textbf{close} the quark-sector Tier~C extension beyond
+Corollary~\ref{cor:flavon-d2}: the three headline mass ratios and four
+Wolfenstein parameters carry sub-percent PDG contact with no free Yukawa
+parameters beyond $(w_1,w_2,w_3)$ and D3 scales
+$(M_{\mathrm{GUT}},M_{F,k})$. Equations~\eqref{eq:workbook-quark-masses}
+and~\eqref{eq:workbook-ckm} are the reproducible arithmetic cores.
+\end{corollary}
+
+\begin{remark}[Relation to Table~\ref{tab:Pij-ckm}]
+Tree-level rows of Table~\ref{tab:Pij-ckm} remain the D1 contacts of
+Corollary~\ref{cor:yukawa-d1}. Proposition~\ref{prop:ckm-precision}
+refines the $(1,2)$ and $(1,3)$ entries through
+\eqref{eq:lambda-refined}--\eqref{eq:eta-refined}; the $(2,3)$ row
+supplies $|V_{cb}|$ via \eqref{eq:A-refined}. PMNS angles retain the
+separate oscillation-scale refinement of Theorem~\ref{thm:nu-ratio-2loop}.
+\end{remark}

@@ -1,0 +1,65 @@
+%======================================================================%
+\section{The Void and the Mirror}
+\label{sec:mirror}
+%======================================================================%
+
+%----------------------------------------------------------------------%
+\subsection{The void}
+\label{sec:mirror:void}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Void]\label{def:void}
+The \emph{void} $\Void$ is the trivial Boolean algebra
+$\mathcal{B}_0=\{\bot,\top\}$ with Stone spectrum a single point. The
+associated algebra is $\{0\}$; no local quantum number exists.
+\end{definition}
+
+\begin{axiom}[Void]\label{ax:void}
+Physical structure arises by departure from $\Void$. No graph, Lie group, or
+spacetime manifold is primitive.
+\end{axiom}
+
+%----------------------------------------------------------------------%
+\subsection{The mirror operator}
+\label{sec:mirror:operator}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Mirror modes]\label{def:mirror:modes}
+At rung $n$, $\Mirror$ acts in one of four modes:
+\begin{enumerate}[label=\textbf{M\arabic*.},leftmargin=*]
+  \item Boolean doubling ($0\to1$): adjoin one generator; $|S_{n+1}|=2|S_n|$.
+  \item Cayley--Dickson ($1\to4$): $D_{n+1}=D_n\oplus D_n$; dimensions
+    $1,2,4,8$.
+  \item Jordan exit ($4\to5$): sedenions fail; exit to $\jalg=H_3(\Oct)$,
+    $d_5=27$.
+  \item Exceptional ($\geq6$): automorphism, product, or Cartan mirrors on
+    Lie data (Section~\ref{sec:climb:exceptional}).
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Mirror operator]\label{def:mirror}
+A \emph{mirror operator} is a functor $\Mirror$ on a category of Stone rungs
+such that: (i) $\Mirror^2\cong\mathrm{id}$ on stabilized rungs; (ii)
+$\Mirror(\Void)\neq\Void$; (iii) $\Mirror$ is functorial on morphisms.
+\end{definition}
+
+\begin{axiom}[Mirror]\label{ax:mirror}
+There exists $\Mirror$ as in Definition~\ref{def:mirror} whose orbit from
+$\Void$ generates the unified climb \eqref{eq:climb:unified}. At each rung,
+$\mathrm{Bal}_{\mathcal{C}}$ balances mirror-refined partitions
+(Definition~\ref{def:capacity}). Capacity is the \emph{dual mirror} of
+sector doubling; on the heterotic rung its below-level avatar is the observer
+lifetime index $\Lambda(\iota,\tau)$
+(Proposition~\ref{prop:capacity-lifetime-dual}).
+\end{axiom}
+
+\begin{definition}[Climb and mirror power]\label{def:climb}
+$\Climb=\mathrm{Bal}_{\mathcal{C}}\circ\Mirror$ and
+$(S_n,A_n)=\Mirror^n(S_0,A_0)$ with $(S_0,A_0)=(S(\Void),\{0\})$.
+\end{definition}
+
+\begin{proposition}[Involution]\label{prop:mirror:involution}
+On stabilized rungs, $\Mirror^2\cong\mathrm{id}$ up to gauge: Boolean
+complement, field conjugation, product factor exchange, and coset mirror
+$\mathbf{16}\leftrightarrow\overline{\mathbf{16}}$.
+\end{proposition}

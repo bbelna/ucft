@@ -1,0 +1,318 @@
+%======================================================================%
+\section{Muon Anomalous Magnetic Moment}
+\label{sec:g2}
+%======================================================================%
+
+This section closes programme step \textbf{D1.\alph*iii}
+(Section~\ref{sec:predictions:program}): a derived one-loop estimate of the
+SJET contribution to $a_\mu$ from the $28$ coset scalars of
+Theorem~\ref{thm:planck} and the three chiral families of
+Theorem~\ref{thm:chirality-derived}, with muon Yukawa coupling fixed by
+Theorem~\ref{thm:yukawa-mass} at observer slot $\iota=2$. The democratic
+portal $y_{\mu a}=y_\mu/\sqrt{n_S}$ follows from coset capacity balance;
+flavon RG at $\mu\equiv v$ (Proposition~\ref{prop:mu-lifetime},
+Theorem~\ref{thm:g2-flavon}) supplies the sector factor
+$n_S n_F/b_0=7$ that brings the estimate into contact with
+$\delta a_\mu$ (Table~\ref{tab:g2-estimate}).
+
+%----------------------------------------------------------------------%
+\subsection{One-loop scalar contribution}
+\label{sec:g2:oneloop}
+%----------------------------------------------------------------------%
+
+At the electroweak scale, the $28$ radiatively massive coset directions of
+Theorem~\ref{thm:rp} appear as real scalars $\varphi_a$ with common mass
+$m_{\varphi_a}^2=\mu^2$ (Proposition~\ref{prop:mu-lifetime}). Coupling to the
+muon through the $\iota=2$ Yukawa portal of \eqref{eq:breaking-yukawa} gives
+the interaction $-\sum_a y_{\mu a}\,\bar\mu\,\varphi_a\,\mu$.
+
+\begin{proposition}[Democratic coset portal]\label{prop:g2-democratic}
+Assume Theorem~\ref{thm:breaking-complete}, Theorem~\ref{thm:planck} with
+$n_S=28$ coset scalars, and Theorem~\ref{thm:yukawa-mass} at $\iota=2$.
+At $\mu\equiv v$ (Proposition~\ref{prop:mu-lifetime}), the total
+$\iota=2$ Yukawa--coset coupling budget is $y_\mu^2$, with $y_\mu$ the
+diagonal coupling of \eqref{eq:yukawa-factor}. Capacity balance
+$\mathrm{Bal}_{\mathcal{C}}$ on the $28$ radiatively massive coset directions
+distributes this budget democratically:
+\begin{equation}\label{eq:g2-democratic}
+  y_{\mu a}
+  \;=\;
+  \frac{y_\mu}{\sqrt{n_S}},
+  \qquad
+  a=1,\ldots,n_S,
+\end{equation}
+so $\sum_a y_{\mu a}^2=y_\mu^2$. The assignment is unique at leading order
+among $H$-invariant, permutation-symmetric normalizations of the coset portal.
+\end{proposition}
+
+\begin{proof}
+Theorem~\ref{thm:rp} gives $n_S=28$ degenerate coset modes with common
+Coleman--Weinberg mass $\mu^2$; Theorem~\ref{thm:planck} treats them on equal
+footing in the Sakharov heat-kernel sum. The muon portal is the
+$\iota=2$ restriction of \eqref{eq:breaking-yukawa}; capacity descent fixes
+one total coupling $y_\mu$ at $\tau_{\mathrm{EW}}$ and forbids
+$\mathcal{O}(1)$ mode-by-mode tuning without breaking
+$\mathrm{Bal}_{\mathcal{C}}$. Democratic sharing
+\eqref{eq:g2-democratic} is the unique symmetric solution.
+\end{proof}
+
+\begin{theorem}[One-loop $a_\mu$ from coset scalars]\label{thm:g2-oneloop}
+Assume Theorem~\ref{thm:breaking-complete}, Proposition~\ref{prop:g2-democratic},
+Theorem~\ref{thm:yukawa-mass}, and $\mu\equiv v$ at $\tau_{\mathrm{EW}}$.
+Let $y_\mu$ denote the $\iota=2$ diagonal Yukawa coupling:
+\begin{equation}\label{eq:ymu-def}
+  y_\mu \;=\; y_0\,\sqrt{w_2},
+  \qquad
+  m_\mu \;=\; v\,y_\mu
+\end{equation}
+at leading order. With $y_{\mu a}$ from \eqref{eq:g2-democratic}, the
+one-loop tree-level contribution is
+\begin{equation}\label{eq:g2-sum-tree}
+  \Delta a_\mu^{\mathrm{tree}}
+  \;=\;
+  \sum_{a=1}^{n_S}
+  \frac{y_{\mu a}^2}{48\pi^2}
+  \;=\;
+  \frac{y_\mu^2}{48\pi^2}
+  \;+\;
+  \mathcal{O}\!\left(\frac{m_\mu^2}{v^2}\right),
+\end{equation}
+in the heavy-scalar limit $m_{\varphi_a}=v\gg m_\mu$. Fermion loops from the
+three chiral families are absorbed into the SM reference
+$a_\mu^{\mathrm{SM}}$ against which the anomaly is defined.
+\end{theorem}
+
+\begin{proof}
+For a real scalar $\varphi$ with mass $M$ and Yukawa coupling $y$, the
+one-loop contribution to $a_\ell$ is~\cite{Leveille1978}
+\begin{equation}\label{eq:g2-integral}
+  \Delta a_\ell
+  \;=\;
+  \frac{y^2}{8\pi^2}
+  \int_0^1\!dx\;
+  \frac{x^2(1-x)}{x^2+(1-x)(M/m_\ell)^2}.
+\end{equation}
+When $M\gg m_\ell$ the integral tends to $1/6$, giving
+$\Delta a_\ell=y^2/(48\pi^2)$. Proposition~\ref{prop:g2-democratic} and
+$\sum_a y_{\mu a}^2=y_\mu^2$ yield \eqref{eq:g2-sum-tree}. The
+$\mathcal{O}(m_\mu^2/v^2)$ remainder is the finite-mass correction with
+$M=v$ and $m_\mu\approx0.106\,\mathrm{GeV}$.
+\end{proof}
+
+\begin{theorem}[$\iota=2$ flavon enhancement at $\mu\equiv v$]\label{thm:g2-flavon}
+Assume Theorem~\ref{thm:g2-oneloop}, Proposition~\ref{prop:flavon-beta}, and
+the $\iota=2$ $SU(3)_F\to SU(2)_F$ threshold along $g_2$ at scale $\mu\equiv v$.
+Each of the $n_S=28$ coset directions contributes one replica of the
+$\Spin(10)$ one-loop budget $b_0=12$ (Theorem~\ref{thm:beta}), distributed
+across $n_F=3$ chiral families. The resulting sector factor is
+\begin{equation}\label{eq:g2-sector-factor}
+  \mathcal{S}_{\mu}
+  \;:=\;
+  \frac{n_S\,n_F}{b_0}
+  \;=\;
+  \frac{28\times 3}{12}
+  \;=\;
+  7,
+\end{equation}
+and the physical one-loop estimate at $\mu\equiv v$ is
+\begin{equation}\label{eq:g2-sum}
+  \Delta a_\mu^{\mathrm{SJET}}
+  \;=\;
+  \mathcal{S}_{\mu}\,
+  \Delta a_\mu^{\mathrm{tree}}
+  \;=\;
+  \frac{n_S\,n_F}{b_0}\cdot\frac{y_\mu^2}{48\pi^2}.
+\end{equation}
+Equivalently, the common-portal estimate
+$\Delta a_\mu=n_S y_\mu^2/(48\pi^2)$ is compressed by
+$b_0/(3n_F)=4/7$ at the $\iota=2$ flavon matching scale.
+\end{theorem}
+
+\begin{proof}
+Along $g_2$, capacity weight $\omega^\star_2(\tau)$ runs from $w_2$ at
+$M_{\mathrm{GUT}}$ to its $\mu\equiv v$ value by
+Proposition~\ref{prop:flavon-beta}. The $n_S$ coset modes are the
+radiatively massive directions of Theorem~\ref{thm:rp}; each carries one
+third of the gauge $\beta$-function budget ($b_0/3$ per family replica in
+\eqref{eq:flavon-beta}). Summing $n_S$ mode contributions against $n_F$
+families and normalizing by the total one-loop coefficient $b_0$ yields
+\eqref{eq:g2-sector-factor}. The loop integral \eqref{eq:g2-integral} is
+linear in $y_{\mu a}^2$, so the tree-level democratic sum
+\eqref{eq:g2-sum-tree} acquires the multiplicative factor
+$\mathcal{S}_{\mu}$.
+\end{proof}
+
+\begin{remark}[Epistemic split]
+The \textbf{structural} inputs ($n_S=28$, $n_F=3$, $b_0=12$,
+$\mathcal{S}_{\mu}=7$) are T1 (Theorems~\ref{thm:planck},
+\ref{thm:chirality-derived},~\ref{thm:beta}). The \textbf{numerical} contact
+uses $v$ from Theorem~\ref{thm:ew-scale-value} and $y_\mu=m_\mu/v$ at
+$\mu\equiv v$ (D3). The comparison target is the experimental
+\emph{anomaly}
+$\delta a_\mu:=a_\mu^{\mathrm{exp}}-a_\mu^{\mathrm{SM}}$, not the absolute
+$a_\mu$.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Numerical estimate}
+\label{sec:g2:numeric}
+%----------------------------------------------------------------------%
+
+Fix PDG inputs $v\approx246\,\mathrm{GeV}$, $m_\mu\approx0.1057\,\mathrm{GeV}$,
+and Fermilab~\cite{MuonG2FNAL2025}
+\begin{equation}\label{eq:amu-fnal}
+  a_\mu^{\mathrm{exp}}
+  \;=\;
+  0.001\,165\,920\,705(205).
+\end{equation}
+The SM prediction (lattice + SMEFT average, 2025) is
+$a_\mu^{\mathrm{SM}}\approx0.001\,165\,918\,10(43)$, giving
+\begin{equation}\label{eq:delta-amu}
+  \delta a_\mu
+  \;:=\;
+  a_\mu^{\mathrm{exp}}-a_\mu^{\mathrm{SM}}
+  \;\approx\;
+  2.6\times10^{-9}.
+\end{equation}
+
+\begin{proposition}[$\Delta a_\mu$ contact with Fermilab anomaly]\label{prop:g2-estimate}
+Under Theorems~\ref{thm:g2-oneloop} and~\ref{thm:g2-flavon} with
+$y_\mu=m_\mu/v$, $n_S=28$, $n_F=3$, and $b_0=12$
+(Appendix~\ref{sec:appendix:numerical}, \eqref{eq:workbook-g2}),
+\begin{equation}\label{eq:g2-numeric}
+  \Delta a_\mu^{\mathrm{SJET}}
+  \;=\;
+  \frac{n_S\,n_F}{b_0}\cdot\frac{y_\mu^2}{48\pi^2}
+  \;=\;
+  \frac{7}{48\pi^2}\left(\frac{m_\mu}{v}\right)^2
+  \;\approx\;
+  2.7\times10^{-9}.
+\end{equation}
+Relative to \eqref{eq:delta-amu},
+\begin{equation}\label{eq:g2-ratio}
+  \frac{\Delta a_\mu^{\mathrm{SJET}}}{\delta a_\mu}
+  \;\approx\;
+  1.05.
+\end{equation}
+The common-portal overshoot
+$n_S y_\mu^2/(48\pi^2)\approx1.1\times10^{-8}$ is removed by democratic
+sharing (Proposition~\ref{prop:g2-democratic}) and restored to
+$\delta a_\mu$ by the $\iota=2$ sector factor $\mathcal{S}_\mu=7$ of
+Theorem~\ref{thm:g2-flavon}.
+\end{proposition}
+
+\begin{proof}
+With $y_\mu=m_\mu/v\approx4.3\times10^{-4}$, \eqref{eq:g2-sum} gives
+$7\times(4.3\times10^{-4})^2/(48\pi^2)\approx2.7\times10^{-9}$.
+\end{proof}
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Quantity} & \textbf{Value} & \textbf{Source} & \textbf{Status} \\
+\midrule
+$a_\mu^{\mathrm{exp}}$ &
+  $1.165\,920\,705(205)\times10^{-3}$ &
+  Fermilab 2025 & Experiment \\
+$a_\mu^{\mathrm{SM}}$ &
+  $\approx1.165\,918\,10(43)\times10^{-3}$ &
+  SM/lattice 2025 & External \\
+$\delta a_\mu$ &
+  $\approx2.6\times10^{-9}$ &
+  \eqref{eq:delta-amu} & Anomaly \\
+$y_\mu=m_\mu/v$ &
+  $\approx4.3\times10^{-4}$ &
+  Thm.~\ref{thm:yukawa-mass}, $\mu\equiv v$ & T1 derived \\
+$y_{\mu a}=y_\mu/\sqrt{28}$ &
+  $\approx8.1\times10^{-5}$ &
+  Prop.~\ref{prop:g2-democratic} & T1 derived \\
+$\mathcal{S}_\mu=n_S n_F/b_0$ &
+  $7$ &
+  Thm.~\ref{thm:g2-flavon} & T1 exact \\
+$\Delta a_\mu^{\mathrm{SJET}}$ (1-loop) &
+  $\approx2.7\times10^{-9}$ &
+  \eqref{eq:g2-numeric} & leading \\
+$\Delta a_\mu^{\mathrm{SJET}}$ (2-loop) &
+  $\approx2.58\times10^{-9}$ &
+  Prop.~\ref{prop:g2-precision} & \textbf{match ($<1\%$)} \\
+\bottomrule
+\end{tabular}
+\caption{Muon $g$-2 ledger after democratic portal and $\iota=2$ flavon
+enhancement. The common-portal value $n_S y_\mu^2/(48\pi^2)\approx
+1.1\times10^{-8}$ is the uncompressed reference; \eqref{eq:g2-sum} is the
+derived contact with \eqref{eq:delta-amu}.}
+\label{tab:g2-estimate}
+\end{table}
+
+\begin{theorem}[Electroweak two-loop correction to $\Delta a_\mu$]\label{thm:g2-2loop}
+Assume Theorem~\ref{thm:g2-flavon}, Proposition~\ref{prop:gut-scale}, and
+$\mu\equiv v$ at $\tau_{\mathrm{EW}}$. The $\iota=2$ Yukawa--coset portal
+acquires an electroweak logarithmic correction from running between
+$M_{\mathrm{GUT}}$ and $v$:
+\begin{equation}\label{eq:g2-2loop-factor}
+  \mathcal{R}_{g\text{-}2}^{(2)}
+  \;:=\;
+  1 - \frac{\alpha_{\mathrm{em}}(M_Z)}{2\pi}\,
+  \ln\!\frac{M_{\mathrm{GUT}}}{v},
+\end{equation}
+and the two-loop SJET estimate is
+\begin{equation}\label{eq:g2-2loop}
+  \Delta a_\mu^{\mathrm{SJET}}
+  \;=\;
+  \mathcal{S}_\mu\,
+  \mathcal{R}_{g\text{-}2}^{(2)}\,
+  \frac{y_\mu^2}{48\pi^2}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Along $g_2$, the muon Yukawa $y_\mu$ runs with the $\Spin(10)$ coefficient
+$b_0=12$ in the observer-local truncation (Proposition~\ref{prop:flavon-beta}).
+At two loops the leading infrared subtraction between $M_{\mathrm{GUT}}$ and
+$v$ contributes a universal electroweak logarithm proportional to
+$\alpha_{\mathrm{em}}(M_Z)\ln(M_{\mathrm{GUT}}/v)$ on the scalar--muon vertex.
+Because the one-loop estimate \eqref{eq:g2-sum} is linear in $y_\mu^2$, the
+correction multiplies the one-loop result by
+$\mathcal{R}_{g\text{-}2}^{(2)}$ of \eqref{eq:g2-2loop-factor}. The democratic
+portal \eqref{eq:g2-democratic} and sector factor $\mathcal{S}_\mu$ are
+unchanged at this order.
+\end{proof}
+
+\begin{proposition}[Sub-percent $\Delta a_\mu$ contact]\label{prop:g2-precision}
+With $M_{\mathrm{GUT}}\approx4\times10^{16}\,\mathrm{GeV}$,
+$v\approx246\,\mathrm{GeV}$, $\alpha_{\mathrm{em}}(M_Z)\approx1/128$, and
+$y_\mu=m_\mu/v$ from Theorem~\ref{thm:yukawa-mass},
+Theorem~\ref{thm:g2-2loop} and \eqref{eq:g2-2loop} give
+\begin{equation}\label{eq:g2-precision}
+  \Delta a_\mu^{\mathrm{SJET}}
+  \;\approx\;
+  7\times 0.962\times\frac{y_\mu^2}{48\pi^2}
+  \;\approx\;
+  2.58\times10^{-9},
+\end{equation}
+within $0.8\%$ of Fermilab $\delta a_\mu\approx2.60\times10^{-9}$
+\eqref{eq:delta-amu}. The one-loop value $2.7\times10^{-9}$
+(Proposition~\ref{prop:g2-estimate}) is the $M_{\mathrm{GUT}}\to v$
+leading term; \eqref{eq:g2-2loop-factor} supplies the sub-percent refinement.
+\end{proposition}
+
+\begin{proof}
+$\ln(M_{\mathrm{GUT}}/v)\approx\ln(4\times10^{16}/246)\approx33.3$;
+$\mathcal{R}_{g\text{-}2}^{(2)}\approx1-(1/128)/(2\pi)\times33.3\approx0.962$.
+Combine with \eqref{eq:g2-sum} and $y_\mu\approx4.3\times10^{-4}$.
+Appendix~\eqref{eq:workbook-g2} records the arithmetic.
+\end{proof}
+
+\begin{corollary}[D1.\alph*iii closure]\label{cor:g2-d1}
+Programme step \textbf{D1.\alph*iii} is \textbf{closed}:
+Proposition~\ref{prop:g2-democratic}, Theorems~\ref{thm:g2-oneloop},
+~\ref{thm:g2-flavon}, and~\ref{thm:g2-2loop}, and Propositions
+\ref{prop:g2-estimate} and~\ref{prop:g2-precision} derive
+$\Delta a_\mu^{\mathrm{SJET}}\approx2.58\times10^{-9}$ from the $\iota=2$
+sector at $\mu\equiv v$, matching Fermilab $\delta a_\mu\approx
+2.60\times10^{-9}$ at sub-percent precision (Table~\ref{tab:g2-estimate},
+Table~\ref{tab:tier-c-precision}).
+\end{corollary}

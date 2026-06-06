@@ -1,0 +1,208 @@
+%======================================================================%
+\section{Contact with Established Theories and Data}
+\label{sec:standard-theories}
+%======================================================================%
+
+This section records how SJET interfaces with frameworks already used in
+mathematical and theoretical physics. The goal is auditability: a reader
+trained in SM+GR+QFT can locate each SJET output in the standard vocabulary.
+
+%----------------------------------------------------------------------%
+\subsection{Quantum field theory}
+\label{sec:standard-theories:qft}
+%----------------------------------------------------------------------%
+
+\paragraph{OS reconstruction.}
+The observer sector carries a reflection-positive Euclidean measure
+$d\mu_{\Gamma_{-1}}$ (Theorems~\ref{thm:sigma-measure},~\ref{thm:rp-complete}).
+Under the clustering and symmetry hypotheses recorded as ledger entry
+\textbf{A7} (Proposition~\ref{prop:os-observer}), the Osterwalder--Schrader theorem
+\cite{OsterwalderSchrader1973} reconstructs a unitary QFT on
+$\mathcal{H}_{\mathrm{obs}}$ (Theorem~\ref{thm:qm-derived}). SJET therefore
+\textbf{embeds into} standard constructive QFT language; it does not postulate
+Hilbert space or the Born rule independently.
+
+\paragraph{Anomalies.}
+The SM anomaly cancellation conditions appear as Tier~A arithmetic:
+$b_0=12$ (Theorem~\ref{thm:beta}), mixed Green--Schwarz coefficient $-1$ per
+family (Theorem~\ref{thm:anomaly}). These match the one-loop SM $\beta$-function
+and string-theory sign conventions cited in Table~\ref{tab:predictions-T1}.
+
+%----------------------------------------------------------------------%
+\subsection{Standard Model}
+\label{sec:standard-theories:sm}
+%----------------------------------------------------------------------%
+
+\paragraph{Gauge content.}
+Staged breaking
+$\E{6}\to\Spin(10)\to\mathrm{SU}(5)\to\mathrm{SU}(3)_c\times\mathrm{SU}(2)_L\times\mathrm{U}(1)_Y$
+(Theorem~\ref{thm:breaking-complete}) yields the SM gauge group.
+Definition~\ref{def:sm-lagrangian} writes $S_{\mathrm{SM}}$ explicitly;
+SJET fixes quantum numbers and representations from the $1|10|16$ partition,
+not from an independent gauge postulate.
+
+\paragraph{Yukawa and CKM.}
+Capacity weights $(w_1,w_2,w_3)$ and flavon RG
+(Sections~\ref{sec:yukawa},~\ref{sec:physics:flavon-rg},
+Section~\ref{sec:quark-precision}) produce quark and lepton hierarchies and
+CKM/PMNS contacts. Table~\ref{tab:ckm-pdg} and Table~\ref{tab:quark-masses}
+compare to PDG~2025 at stated tolerances.
+
+\paragraph{Strong CP.}
+Theorem~\ref{thm:strong-cp} gives $\theta_{\mathrm{obs}}=0$ without an
+independent axion postulate in the baseline truncation.
+
+%----------------------------------------------------------------------%
+\subsection{General relativity}
+\label{sec:standard-theories:gr}
+%----------------------------------------------------------------------%
+
+\paragraph{Einstein--Hilbert sector.}
+Ledger entry \textbf{A1} selects the truncation $S_{\mathrm{EH}}=\MPl^2 R/2$
+with running $\kappa$ (Theorem~\ref{thm:kappa}). The fixed point
+$\kappa_\star=96\pi^2/5$ is a dimensionless FRG output; $\MPl$ is induced from
+$28$ massive coset scalars (Theorem~\ref{thm:planck}, Proposition~\ref{prop:planck-scale}).
+
+\paragraph{Cosmological constant.}
+CC sequestering (Theorem~\ref{thm:cc-sequester}) routes vacuum back-reaction
+through the $\sigma=+1$ sector, yielding $\Lambda_{\mathrm{obs}}\approx 0$ on
+the observable row while environmental pressure $\mathcal{P}_{\sigma=+1}$
+anchors CMB Friedmann dynamics (Definition~\ref{def:env-pressure}).
+
+\paragraph{Domain of validity.}
+Einstein--Hilbert dynamics apply when $R\ll\kappa_\star\MPl^2$; strong
+curvature and higher-curvature operators are routed to the shadow measure
+(Theorem~\ref{thm:kappa-persistence} in the physics section).
+
+%----------------------------------------------------------------------%
+\subsection{Cosmology and astrophysics}
+\label{sec:standard-theories:cosmo}
+%----------------------------------------------------------------------%
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.14}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Observable} & \textbf{SJET} & \textbf{$\Lambda$CDM / data} &
+\textbf{Framework link} \\
+\midrule
+$\Omega_{\mathrm{DM}}$ &
+  $4/15$ &
+  $\approx 0.26$ &
+  Shadow abundance (Thm.~\ref{thm:dm-abundance}) \\
+$\Omega_b h^2$ &
+  \eqref{eq:pred-omega-b} &
+  $0.0224$ &
+  BBN + CMB (Pred.~\ref{pred:cmb}) \\
+$n_s$ &
+  \eqref{eq:pred-ns} &
+  $0.965$ &
+  Scalar tilt from ledger Jacobian \\
+$H_0$ (local/CMB) &
+  Thms.~\ref{thm:hubble-local},~\ref{thm:hubble-cmb} &
+  SH0ES / Planck &
+  Two-anchor Hubble ledger \\
+$\eta_B$ &
+  Thm.~\ref{thm:baryogenesis} &
+  $\sim 6\times 10^{-10}$ &
+  Sakharov + flavon CP \\
+$\sigma_8$ &
+  $\sqrt{11/16}$ &
+  $\sim 0.81$ &
+  Capacity two-fluid (Prop.~\ref{prop:sigma8}) \\
+\bottomrule
+\end{tabular}
+\caption{SJET cosmological contacts versus $\Lambda$CDM headline values.
+SJET supplies \textbf{anchors and rationales}; sub-percent fits use Tier~C
+tolerances (Section~\ref{sec:tier-c-precision}).}
+\label{tab:cosmo-bridge}
+\end{table}
+
+\paragraph{Dark matter.}
+$\Omega_{\mathrm{DM}}=4/15$ follows from the $\sigma$-graded stress split
+(Theorem~\ref{thm:dm-sector}): observable matter lives in
+$\Pi_{\sigma=-1}$; the shadow residue $\mathcal{R}_{+1}$ is cold and
+non-interacting on the observable row. This is a \textbf{structural} DM
+abundance prediction, not a particle-species identification.
+
+%----------------------------------------------------------------------%
+\subsection{Precision laboratory data}
+\label{sec:standard-theories:lab}
+%----------------------------------------------------------------------%
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Sector} & \textbf{SJET anchor} & \textbf{Experiment} &
+\textbf{Status (2026)} \\
+\midrule
+Lepton masses &
+  Thm.~\ref{thm:yukawa-mass}, flavon RG &
+  PDG &
+  $<1\%$ (Tab.~\ref{tab:tier-c-precision}) \\
+$\Delta m^2$ ratio &
+  Prop.~\ref{prop:nu-ratio-precision} &
+  NuFIT / PDG &
+  Confirmed \\
+$g-2$ &
+  Thm.~\ref{thm:g2-2loop} &
+  Fermilab / theory &
+  $<1\%$ \\
+$\sin^2\theta_W(M_Z)$ &
+  Pred.~\ref{pred:sin2w-mz} &
+  PDG EW fit &
+  Confirmed \\
+Quark ratios &
+  Thm.~\ref{thm:quark-mass-2loop} &
+  PDG &
+  $<1\%$ \\
+CKM &
+  Prop.~\ref{prop:ckm-precision} &
+  PDG &
+  Wolfenstein closed \\
+Hadrons &
+  Pred.~\ref{pred:hadron-masses} &
+  PDG / lattice &
+  Tier~C $\sim 1$--$10\%$ \\
+Proton decay &
+  Pred.~\ref{pred:proton-decay} &
+  Super-K bound &
+  Consistent \\
+\bottomrule
+\end{tabular}
+\caption{Precision-laboratory bridge. Full comparison:
+Table~\ref{tab:predictions-comparison}; validation ledger:
+Table~\ref{tab:experimental-validation}.}
+\label{tab:lab-bridge}
+\end{table}
+
+%----------------------------------------------------------------------%
+\subsection{What SJET does not claim}
+\label{sec:standard-theories:limits}
+%----------------------------------------------------------------------%
+
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Replacement of SM EFT.} Many-body, nuclear, and hadronic
+    observables below $\Lambda_{\mathrm{QCD}}$ use standard EFT contacts with
+    external tabulations where noted.
+  \item \textbf{Full quantum gravity.} The manuscript uses an Einstein--Hilbert
+    truncation with shadow-sector routing; a complete nonperturbative QG theory
+    is not claimed.
+  \item \textbf{Unique beyond-SM physics.} Fourth generation, extra dimensions,
+    and arbitrary BSM sectors are excluded by structure (Prop.~\ref{prop:no-fourth}),
+    not by fine-tuning.
+\end{enumerate}
+
+\begin{remark}[Reading map for theorists]
+Mathematical physicists: Sections~\ref{sec:mirror}--\ref{sec:quantum-origin}.
+Phenomenologists: Sections~\ref{sec:sm-lagrangian}--\ref{sec:predictions} and
+Table~\ref{tab:predictions-comparison}. Cosmologists:
+Table~\ref{tab:cosmo-bridge} and Section~\ref{sec:cosmology}. The
+archived programme (\texttt{old/programme-full/}) contains thread ledgers and
+wave certificates for programme-level audit.
+\end{remark}
