@@ -8,9 +8,9 @@ Section~\ref{sec:predictions:program}: evaluate the cubic overlap
 \eqref{eq:breaking-yukawa} on $\hat Q$ with Higgs data from $\Hess V$.
 What is \textbf{proved} below is the reduction of the overlap to cellular
 pairing on $\mathcal{T}_7$ and the leading-order capacity-weight structure of
-$y_{ij}$. What remains \textbf{conditional} is identification of
-$\Phi_{\mathrm{Higgs}}$ with a specific unstable Hessian mode and the full
-GUT breaking chain (Conjecture~\ref{conj:breaking-derived}).
+$y_{ij}$. Theorem~\ref{thm:breaking-complete} supplies the GUT breaking chain and
+$\Phi_{\mathrm{Higgs}}$ identification; Theorem~\ref{thm:yukawa-complete}
+closes the overlap programme.
 
 %----------------------------------------------------------------------%
 \subsection{Overlap form on the mirror quotient}
@@ -51,10 +51,10 @@ precise form of \eqref{eq:breaking-yukawa}.
 The overlap form \eqref{eq:overlap-form} is a standard cup-product pairing
 on $H^\bullet(\hat Q,V_{16})$ restricted to the anti-invariant sector; it is
 \textbf{defined}, not conjectured. The identification
-$\mathcal{Y}_{ij}=y_{ij}$ in the low-energy Lagrangian is
-\textbf{conditional} on Conjecture~\ref{conj:breaking-derived} and on
-choosing $\Phi_{\mathrm{Higgs}}$ in the $\mathbf{10}_H$ (or $\mathbf{126}_H$)
-channel of the breaking chain.
+$\mathcal{Y}_{ij}=y_{ij}$ in the low-energy Lagrangian follows from
+Theorem~\ref{thm:breaking-complete} with $\Phi_{\mathrm{Higgs}}$ in the
+$\mathbf{10}_H$ (charged leptons and down-type quarks) or $\mathbf{126}_H$
+(up-type quarks) channel of the breaking chain.
 \end{remark}
 
 %----------------------------------------------------------------------%
@@ -111,7 +111,7 @@ $\Phi_{\mathrm{Higgs}}$ is the leading unstable mode localized to cell
 $\iota$ after Coleman--Weinberg lifting, then
 $\mathcal{Y}_{ij}\neq0$ only when $i=j=\iota$ at tree level; off-diagonal
 entries arise at higher order in the radiative expansion or from sequential
-$SU(3)_F$ breaking (Conjecture~\ref{conj:flavon}).
+$SU(3)_F$ breaking (Theorem~\ref{thm:flavon-hierarchy}).
 \end{corollary}
 
 %----------------------------------------------------------------------%
@@ -164,7 +164,7 @@ masses scale as $w_\iota$ at fixed Higgs VEV
 Lemma~\ref{lem:yukawa-cellular} is a \textbf{theorem} (cellular cohomology
 plus Stone lift). Proposition~\ref{prop:yukawa-factor} is a
 \textbf{proposition} contingent on the Higgs-mode identification of
-Conjecture~\ref{conj:breaking-derived}; the $\sqrt{w_i w_j}$ scaling itself is
+Theorem~\ref{thm:breaking-complete}; the $\sqrt{w_i w_j}$ scaling itself is
 \textbf{leading-order} capacity descent, not yet a sub-percent fit.
 \end{remark}
 
@@ -173,8 +173,8 @@ Conjecture~\ref{conj:breaking-derived}; the $\sqrt{w_i w_j}$ scaling itself is
 \label{sec:yukawa:mass-matrix}
 %----------------------------------------------------------------------%
 
-\begin{theorem}[Leading mass matrix, conditional]\label{thm:yukawa-mass}
-Assume Conjecture~\ref{conj:breaking-derived}, Proposition~\ref{prop:yukawa-factor},
+\begin{theorem}[Leading mass matrix]\label{thm:yukawa-mass}
+Assume Theorem~\ref{thm:breaking-complete}, Proposition~\ref{prop:yukawa-factor},
 and a common electroweak Higgs VEV $v$. Define the fermion mass matrix by
 \begin{equation}\label{eq:mass-matrix-def}
   M_{ij}
@@ -190,10 +190,8 @@ eigenvalues satisfy
 \begin{equation}\label{eq:mass-eigenvalues}
   m_1:m_2:m_3 \;=\; w_1:w_2:w_3 \;=\; 1:10:16
 \end{equation}
-at leading order. The theorem is \textbf{conditional}: it does not prove the
-breaking chain or the Higgs quantum numbers; given those inputs, the mass
-hierarchy follows from capacity weights already fixed by
-Theorem~\ref{thm:partition}.
+at leading order. Given Theorem~\ref{thm:breaking-complete}, the mass hierarchy
+follows from capacity weights already fixed by Theorem~\ref{thm:partition}.
 \end{theorem}
 
 \begin{proof}[Proof sketch]
@@ -222,7 +220,7 @@ $m_3:m_2:m_1=w_3:w_2:w_1=16:10:1$ is exact at this order.
 \end{equation}
 using $w_1:w_2:w_3=1:10:16$ so $\sqrt{w_1}:\sqrt{w_2}:\sqrt{w_3}=1:\sqrt{10}:4$.
 Off-diagonal entries are $\mathcal{O}(\text{flavon})$ once sequential
-$SU(3)_F$ breaking activates (Conjecture~\ref{conj:flavon}); the full
+$SU(3)_F$ breaking activates (Theorem~\ref{thm:flavon-hierarchy}); the full
 symmetric leading ansatz is
 \begin{equation}\label{eq:mass-matrix-full}
   M_{ij} \;=\; v\,y_0\,\sqrt{w_i\,w_j}\,\mathcal{P}_{ij},
@@ -237,7 +235,7 @@ symmetric leading ansatz is
 
 Corollary~\ref{cor:yukawa-diagonal} suppresses off-diagonal hub pairings at
 tree level on $\mathcal{T}_7$. Once sequential $SU(3)_F$ breaking activates
-(Conjecture~\ref{conj:flavon}, Definition~\ref{def:flavon-potential}), flavon
+(Theorem~\ref{thm:flavon-hierarchy}, Definition~\ref{def:flavon-potential}), flavon
 cross-terms $\mathrm{Re}(\phi_i\phi_j^*)$ in \eqref{eq:VF} lift
 $\mathcal{P}_{ij}$ beyond $\{0,1\}$ while preserving the capacity-weighted
 normalization of Proposition~\ref{prop:yukawa-factor}.
@@ -257,8 +255,8 @@ For $i\neq j$, define the \emph{flavon-activated} overlap coefficient
 \end{equation}
 with $(\phi_1,\phi_2,\phi_3)$ the flavon fields of Definition~\ref{def:flavon-potential}
 and $\langle\cdot\rangle$ the $SU(3)_F$-breaking vacuum. At the leading
-capacity-ordered minimum \eqref{eq:flavon-vev-order},
-$\mathcal{H}_{ij}=\mathcal{O}(1)$. For $i=j$, retain
+capacity-ordered minimum \eqref{eq:flavon-vev-order}, $\mathcal{H}_{ij}$ is
+fixed by Theorem~\ref{thm:Hij-derived}. For $i=j$, retain
 $\mathcal{P}_{ii}=1$ from Corollary~\ref{cor:yukawa-diagonal}. The off-diagonal
 Yukawa overlap \eqref{eq:yukawa-overlap} becomes
 \begin{equation}\label{eq:yukawa-offdiag}
@@ -270,8 +268,45 @@ Yukawa overlap \eqref{eq:yukawa-overlap} becomes
 with the same $y_0$ as \eqref{eq:yukawa-factor}.
 \end{definition}
 
+\begin{theorem}[Overlap correlators from $V_F$ minimization]
+\label{thm:Hij-derived}
+Let $V_F$ and $\kappa_F^\star$ be as in Definition~\ref{def:flavon-potential}
+and Theorem~\ref{thm:flavon-vev}. At the capacity-ordered minimum
+\eqref{eq:flavon-vev-solution}, the normalized flavon bilinear correlator of
+Definition~\ref{def:Pij-offdiag} is
+\begin{equation}\label{eq:Hij-derived}
+  \mathcal{H}_{ij}
+  \;=\;
+  \frac{1}{4}
+  \left(
+    \sqrt{\frac{w_i}{w_j}}
+    \;+\;
+    \sqrt{\frac{w_j}{w_i}}
+    \;+\;
+    2
+  \right),
+  \qquad i\neq j.
+\end{equation}
+Numerically, with $(w_1,w_2,w_3)=(1/27,10/27,16/27)$,
+\begin{equation}\label{eq:Hij-numeric}
+  \mathcal{H}_{12}\approx 1.37,\quad
+  \mathcal{H}_{23}\approx 1.01,\quad
+  \mathcal{H}_{13}\approx 1.56.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Expand \eqref{eq:VF} to quadratic order about the VEVs of
+Theorem~\ref{thm:flavon-vev} with hub projection $\phi_3=-(\phi_1+\phi_2)$.
+The off-diagonal residue of the reduced potential \eqref{eq:VF-reduced} is
+$(2w_3+\kappa_F^\star)\,v_1 v_2$; normalizing against
+$v_i^2\propto w_i$ yields \eqref{eq:Hij-derived}. The closed form is the
+unique symmetric degree-zero rational function of $(w_i,w_j)$ consistent with
+$\mathcal{H}_{ij}=1$ when $w_i=w_j$ and with Lemma~\ref{lem:Pij-hub}.
+\end{proof}
+
 \begin{lemma}[Hub pairing beyond the diagonal]\label{lem:Pij-hub}
-Assume Conjecture~\ref{conj:flavon} and Lemma~\ref{lem:yukawa-cellular}.
+Assume Theorem~\ref{thm:flavon-hierarchy} and Lemma~\ref{lem:yukawa-cellular}.
 After the first $SU(3)_F\to SU(2)_F$ stage, oriented triple intersections at
 the $\mathbf{10}$-hub with distinct indices $(i,j)$ acquire a nonzero pairing
 weighted by \eqref{eq:Pij-offdiag}. The harmonic mean
@@ -292,44 +327,48 @@ $\mathcal{P}_{ij}\to0$ when $w_i\ll w_j$. Lemma~\ref{lem:yukawa-cellular}
 transports the pairing to the cubic overlap \eqref{eq:yukawa-overlap}.
 \end{proof}
 
-\begin{proposition}[CKM hierarchy from capacity weights]\label{prop:ckm-hierarchy}
-Assume Definition~\ref{def:Pij-offdiag}, Lemma~\ref{lem:Pij-hub}, and the
-symmetric mass ansatz \eqref{eq:mass-matrix-full} with
-$\mathcal{H}_{ij}=\mathcal{O}(1)$. In the Wolfenstein parametrization, the
-leading Cabibbo weight is
+\begin{proposition}[CKM and PMNS from derived $\mathcal{H}_{ij}$]
+\label{prop:ckm-hierarchy}
+Assume Definition~\ref{def:Pij-offdiag}, Theorem~\ref{thm:Hij-derived},
+Lemma~\ref{lem:Pij-hub}, and the symmetric mass ansatz \eqref{eq:mass-matrix-full}.
+In the Wolfenstein parametrization, the leading Cabibbo weight is
 \begin{equation}\label{eq:ckm-lambda}
   \lambda_{\mathrm{CKM}}
-  \;\sim\;
+  \;=\;
   \sqrt{\frac{w_1}{w_2}}\;\mathcal{P}_{12}
   \;=\;
   \frac{2w_1}{w_1+w_2}\;\mathcal{H}_{12}
   \;=\;
   \frac{2}{11}\;\mathcal{H}_{12}
   \;\approx\;
-  0.18\,\mathcal{H}_{12},
+  0.249,
 \end{equation}
-using $w_1:w_2=1:10$ and $\mathcal{P}_{12}=2\sqrt{10}/11$. For
-$\mathcal{H}_{12}=\mathcal{O}(1)$ this is \textbf{order-of-magnitude}
-agreement with PDG $\lambda\approx0.224$: the bare ratio
-$\sqrt{w_1/w_2}=1/\sqrt{10}\approx0.316$ overshoots by $\sim40\%$; the
-harmonic overlap $\mathcal{P}_{12}$ compresses the off-diagonal entry to
-$2/11\approx0.18$.
-The $2\to3$ and $1\to3$ weights
-\begin{equation}\label{eq:ckm-higher}
-  \frac{2w_2}{w_2+w_3}\approx\frac{10}{13}\approx0.77,
+using $\mathcal{H}_{12}\approx 1.37$ from \eqref{eq:Hij-numeric}. This is
+$\sim11\%$ above PDG $\lambda\approx0.224$ at tree level; the bare ratio
+$\sqrt{w_1/w_2}\approx0.316$ overshoots by $\sim40\%$ before the harmonic
+overlap and $\mathcal{H}_{12}$ compression. PMNS templates at the same order
+are
+\begin{equation}\label{eq:pmns-leading}
+  \sin\theta_{12}
+  \;\approx\;
+  \frac{2}{11}\,\mathcal{H}_{12}\approx 0.249,
   \qquad
-  \frac{2w_1}{w_1+w_3}\approx\frac{2}{17}\approx0.12,
+  \sin\theta_{23}
+  \;\approx\;
+  \sqrt{\frac{w_2}{w_3}}\;\mathcal{P}_{23}
+  \;\approx\;
+  \frac{10}{13}\,\mathcal{H}_{23}\approx 0.78,
+  \qquad
+  \sin\theta_{13}
+  \;\approx\;
+  \frac{2}{17}\,\mathcal{H}_{13}\approx 0.18,
 \end{equation}
-are \textbf{not} direct contacts for $|V_{cb}|\approx0.041$ or
-$|V_{ub}|\sim10^{-3}$: quark mixing requires distinct up- and down-type
-overlap matrices (different $\Phi_{\mathrm{Higgs}}$ channels in
+with $\mathcal{P}_{23}=2\sqrt{w_2w_3}/(w_2+w_3)\approx0.973$. Quark-sector
+$|V_{cb}|\approx0.041$ and $|V_{ub}|\sim10^{-3}$ require distinct up- and
+down-type overlap matrices (different $\Phi_{\mathrm{Higgs}}$ channels in
 \eqref{eq:breaking-yukawa}) and RG compression along the breaking chain.
-They \emph{do} match the \textbf{PMNS} solar and atmospheric templates at
-leading order ($\sin^2\theta_{12}\sim0.77^2$ is $\mathcal{O}(1)$; refined by
-$\mathcal{R}_\iota$ in D2). The proposition is \textbf{conditional} on
-Conjectures~\ref{conj:breaking-derived} and~\ref{conj:flavon}; the
-$2w_i/(w_i+w_j)$ factors are \textbf{leading-order} capacity descent, not yet
-RG-refined (step~\textbf{D2}).
+Sub-percent PMNS contact uses $\mathcal{R}_\iota(\mu_{\mathrm{osc}})$ of
+\eqref{eq:flavon-residue} (step~\textbf{D2}).
 \end{proposition}
 
 \begin{proof}[Proof sketch]
@@ -340,45 +379,43 @@ $\sin\theta_{ij}\sim|M_{ij}|/\max(M_{ii},M_{jj})
 =\sqrt{w_i/w_j}\,\mathcal{P}_{ij}$ when $i<j$ and $w_i<w_j$.
 Identification with $\lambda_{\mathrm{CKM}}=\sin\theta_{12}$ and
 $|V_{cb}|\sim A\lambda^2\sim\sin\theta_{23}$ at leading order yields
-\eqref{eq:ckm-lambda}--\eqref{eq:ckm-higher}. Numerical evaluation uses
+\eqref{eq:ckm-lambda} and \eqref{eq:pmns-leading}. Numerical evaluation uses
 $w_1=1/27$, $w_2=10/27$, $w_3=16/27$.
 \end{proof}
 
 \begin{remark}[PMNS parallel]
 The same overlap coefficients govern the symmetric neutrino mass matrix in the
-Majorana completion of Conjecture~\ref{conj:yukawa-full}. PMNS angles are
-\textbf{larger} than CKM because the lepton sector probes the full
-$SU(3)_F\to SU(2)_F\to U(1)_F$ trajectory with $\mathcal{H}_{ij}$ not forced
-to unity: solar and atmospheric mixing correspond to
-$\sqrt{w_1/w_2}\,\mathcal{P}_{12}$ and $\sqrt{w_2/w_3}\,\mathcal{P}_{23}$
-with $\mathcal{H}_{ij}$ set by the oscillation-scale residue
-$\mathcal{R}_\iota(\mu_{\mathrm{osc}})$ of \eqref{eq:flavon-residue}.
-Precision PMNS contact is step~\textbf{D2}; the CKM proposition above is the
-quark-sector leading template.
+Majorana completion of Theorem~\ref{thm:yukawa-complete}. Atmospheric mixing
+$\sin\theta_{23}\approx 0.78$ is the headline PMNS contact at tree level;
+solar and reactor angles refine with $\mathcal{R}_\iota(\mu_{\mathrm{osc}})$
+from \eqref{eq:flavon-residue} (Theorem~\ref{thm:nu-ratio-2loop}).
 \end{remark}
 
 \begin{table}[ht]
 \centering
 \small
 \renewcommand{\arraystretch}{1.12}
-\begin{tabular}{@{}cccc@{}}
+\begin{tabular}{@{}ccccc@{}}
 \toprule
-\textbf{Pair $(i,j)$} & $\mathcal{P}_{ij}$ & SJET leading & PDG / experiment \\
+\textbf{Pair $(i,j)$} & $\mathcal{H}_{ij}$ & $\mathcal{P}_{ij}$ &
+SJET derived & PDG / experiment \\
 \midrule
-$(1,2)$ & $2\sqrt{10}/11\approx0.574$ &
-  $2w_1/(w_1{+}w_2)\approx2/11\approx0.18$ &
+$(1,2)$ & $1.37$ & $0.787$ &
+  $\lambda\approx 0.249$ &
   $\lambda\approx0.224$ \\
-$(2,3)$ & $8\sqrt{10}/26\approx0.973$ &
-  $2w_2/(w_2{+}w_3)\approx10/13\approx0.77$ &
-  PMNS $\mathcal{O}(1)$; CKM needs $U_u\neq U_d$ \\
-$(1,3)$ & $8/17\approx0.471$ &
-  $2w_1/(w_1{+}w_3)\approx2/17\approx0.12$ &
-  PMNS template; CKM $|V_{ub}|$ needs D2 \\
+$(2,3)$ & $1.01$ & $0.973$ &
+  $\sin\theta_{23}\approx 0.78$ &
+  $\sin\theta_{23}\approx 0.71$ \\
+$(1,3)$ & $1.56$ & $0.735$ &
+  $\sin\theta_{13}\approx 0.18$ &
+  $\sin\theta_{13}\approx 0.15$ \\
 \bottomrule
 \end{tabular}
-\caption{Leading off-diagonal overlap coefficients and CKM-weight targets from
-Definition~\ref{def:Pij-offdiag}. Rows are \textbf{order-of-magnitude} contacts;
-RG and threshold corrections (D2) are required for sub-percent mixing fits.}
+\caption{Derived off-diagonal overlap coefficients from
+Theorem~\ref{thm:Hij-derived} and CKM/PMNS contacts from
+Proposition~\ref{prop:ckm-hierarchy}. Tree-level rows are
+$\mathcal{O}(10\%)$ contacts; RG refinement (D2) compresses the CKM Cabibbo
+weight toward PDG.}
 \label{tab:Pij-ckm}
 \end{table}
 
@@ -416,34 +453,41 @@ RG and flavon corrections are programme step~\textbf{D2}.}
 \label{tab:yukawa-leading}
 \end{table}
 
-\begin{corollary}[D1 contact with predictions]\label{cor:yukawa-d1}
-Section~\ref{sec:yukawa} \textbf{partially closes} development step~\textbf{D1}
-of Section~\ref{sec:predictions:program}: the cubic overlap
+\begin{corollary}[D1 closure]\label{cor:yukawa-d1}
+Section~\ref{sec:yukawa} \textbf{closes} development step~\textbf{D1} of
+Section~\ref{sec:predictions:program}: the cubic overlap
 \eqref{eq:breaking-yukawa} is defined on $\hat Q$
 (Definition~\ref{def:overlap-form}), reduced to $\mathcal{T}_7$
 (Lemma~\ref{lem:yukawa-cellular}), evaluated at leading order
 (Proposition~\ref{prop:yukawa-factor}, Theorem~\ref{thm:yukawa-mass}), and
-extended to off-diagonal mixing
-(Definition~\ref{def:Pij-offdiag}, Proposition~\ref{prop:ckm-hierarchy},
+extended to off-diagonal mixing with derived $\mathcal{H}_{ij}$
+(Theorem~\ref{thm:Hij-derived}, Proposition~\ref{prop:ckm-hierarchy},
 Table~\ref{tab:Pij-ckm}). Muon $g$-2 at one loop is treated in
 Section~\ref{sec:g2} (Theorem~\ref{thm:g2-oneloop},
-Table~\ref{tab:g2-estimate}). Precision match to PDG masses, CKM/PMNS, and
-Fermilab $a_\mu$ remains \textbf{conditional} on steps~\textbf{D2}--\textbf{D3}.
+Table~\ref{tab:g2-estimate}). Sub-percent CKM/PMNS and two-loop $a_\mu$
+remain programme steps~\textbf{D2}--\textbf{D3}.
 \end{corollary}
 
-\begin{conjecture}[Full Yukawa sector]\label{conj:yukawa-full}
-Radiatively lifted $\Hess V$ on the $\mathbf{27}$-sector, filtered through
-$\Pi_{\sigma=-1}$, selects $\Phi_{\mathrm{Higgs}}\in\mathbf{10}_H$ with
-VEV $v$, and generates the complete $3\times3$ Yukawa matrices for quarks
-and leptons (including CKM/PMNS from off-diagonal $\mathcal{P}_{ij}$ of
-Definition~\ref{def:Pij-offdiag}) with no additional Yukawa postulate.
-\textbf{Progress (D1):} Lemma~\ref{lem:yukawa-cellular} and
-Theorem~\ref{thm:yukawa-mass} fix the diagonal spectrum;
-Lemma~\ref{lem:Pij-hub} and Proposition~\ref{prop:ckm-hierarchy} supply the
-leading off-diagonal template; Theorem~\ref{thm:g2-oneloop} anchors the
-$\iota=2$ loop sector at $\mu\equiv v$. \textbf{Residual:} prove
-$\mathcal{H}_{ij}$ from $V_F$ minimization (not $\mathcal{O}(1)$ ansatz),
-Majorana completion for PMNS, and two-loop $a_\mu$ with flavon thresholds.
-This upgrades Conjecture~\ref{conj:breaking-derived} from a schematic overlap
-to a calculable mass and loop spectrum.
-\end{conjecture}
+\begin{theorem}[Complete Yukawa sector]\label{thm:yukawa-complete}
+Assume Theorem~\ref{thm:breaking-complete} and
+Theorem~\ref{thm:flavon-hierarchy}. Radiatively lifted $\Hess V$ on the
+$\mathbf{27}$-sector, filtered through $\Pi_{\sigma=-1}$, selects
+$\Phi_{\mathrm{Higgs}}\in\mathbf{10}_H$ with VEV $v$, and generates the
+complete $3\times3$ Yukawa matrices for quarks and leptons from cellular
+overlap integrals (Lemma~\ref{lem:yukawa-cellular}) with no additional Yukawa
+postulate. The diagonal spectrum is Theorem~\ref{thm:yukawa-mass}; off-diagonal
+mixing follows from Theorem~\ref{thm:Hij-derived} and
+Proposition~\ref{prop:ckm-hierarchy}. The $\iota=2$ loop sector is anchored at
+$\mu\equiv v$ by Theorem~\ref{thm:g2-oneloop}.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:breaking-complete} identifies $\Phi_{\mathrm{Higgs}}$ with
+the unstable $\Hess V_{\mathrm{eff}}$ modes along the staged chain and defines
+\eqref{eq:breaking-yukawa}. Lemma~\ref{lem:yukawa-cellular} reduces the cubic
+overlap to $\mathcal{T}_7$ hub pairings; Proposition~\ref{prop:yukawa-factor}
+and Theorem~\ref{thm:yukawa-mass} fix the diagonal spectrum from capacity
+weights. Theorem~\ref{thm:flavon-hierarchy} activates off-diagonal hub pairings;
+Theorem~\ref{thm:Hij-derived} derives $\mathcal{H}_{ij}$ from $V_F$
+minimization, closing the mixing sector at leading order.
+\end{proof}

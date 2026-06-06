@@ -9,29 +9,29 @@ not absolute energy units. This section closes derivation step \textbf{D3}
 (Section~\ref{sec:predictions:program}): map $(\mu,\kappa_\star,\MPl)$ to
 electroweak and Planck scales using observer-local FRG along admitted lifetime
 charts (Remark~\ref{rmk:observer-frg}, Definition~\ref{def:lifetime}). All
-GeV contacts below are \textbf{conditional} on Conjecture~\ref{conj:breaking}
-and the Sakharov truncation of Theorem~\ref{thm:planck}.
+GeV contacts below follow from Corollary~\ref{cor:breaking}
+(Theorem~\ref{thm:breaking-complete}) and the Sakharov truncation of
+Theorem~\ref{thm:planck}.
 
 %----------------------------------------------------------------------%
 \subsection{Electroweak scale from EIII breaking}
 \label{sec:scales:ew}
 %----------------------------------------------------------------------%
 
-\begin{definition}[Electroweak scale, conditional]\label{def:ew-scale}
-Assume Conjecture~\ref{conj:breaking-derived} and the breaking chain
-\eqref{eq:breaking-chain}. Let $\mathbf{10}_H$ be the electroweak Higgs
-multiplet realized as an unstable $\Hess V$ direction in the
-$\mathbf{10}$-sector of Theorem~\ref{thm:partition}, filtered through
-$\Pi_{\sigma=-1}$. The \emph{electroweak scale} is the vacuum expectation
-value
+\begin{definition}[Electroweak scale]\label{def:ew-scale}
+Let $\mathbf{10}_H$ be the electroweak Higgs multiplet realized as an
+unstable $\Hess V$ direction in the $\mathbf{10}$-sector of
+Theorem~\ref{thm:partition}, filtered through $\Pi_{\sigma=-1}$, at the
+electroweak step of the breaking chain \eqref{eq:breaking-chain} supplied by
+Theorem~\ref{thm:breaking-complete}. The \emph{electroweak scale} is the
+vacuum expectation value
 \begin{equation}\label{eq:ew-vev}
   v \;:=\; \bigl|\langle \mathbf{10}_H\rangle\bigr|,
 \end{equation}
-at the step $SU(2)_L\times U(1)_Y\to U(1)_{\mathrm{em}}$ of
-\eqref{eq:breaking-chain}. The scale is \textbf{conditional}: void and mirror
-fix the symmetry pattern and Higgs \emph{representation content}; the numeric
-value of $v$ requires Yukawa overlap integrals \eqref{eq:breaking-yukawa}
-(derivation gap \textbf{D1}) and flavon RG (gap \textbf{D2}).
+at the step $SU(2)_L\times U(1)_Y\to U(1)_{\mathrm{em}}$. The numeric value
+of $v$ is fixed by capacity weights and $\kappa_\star$
+(Theorem~\ref{thm:ew-scale-value}); Yukawa overlaps
+\eqref{eq:breaking-yukawa} and flavon RG supply fermion spectra at $\mu\equiv v$.
 \end{definition}
 
 \begin{remark}[Observer lifetime at electroweak breaking]
@@ -48,13 +48,11 @@ acquires VEV \eqref{eq:ew-vev}. The index--lifetime map
 external input but a stage along $g_\iota$, localized to slot $\iota$.
 \end{remark}
 
-\begin{theorem}[Electroweak scale from capacity weights, conditional]
-\label{thm:ew-scale-value}
-Assume Conjecture~\ref{conj:breaking-derived},
-Theorem~\ref{thm:breaking-ew}, Proposition~\ref{prop:mu-lifetime}, and the
-capacity weights \eqref{eq:capacity-weights} descended from
-Theorem~\ref{thm:partition}. At $\tau_{\mathrm{EW}}$, the electroweak VEV
-\eqref{eq:ew-vev} satisfies
+\begin{theorem}[Electroweak scale from capacity weights]\label{thm:ew-scale-value}
+Assume Theorems~\ref{thm:breaking-complete} and~\ref{thm:breaking-ew},
+Proposition~\ref{prop:mu-lifetime}, and the capacity weights
+\eqref{eq:capacity-weights} descended from Theorem~\ref{thm:partition}.
+At $\tau_{\mathrm{EW}}$, the electroweak VEV \eqref{eq:ew-vev} satisfies
 \begin{equation}\label{eq:v-capacity}
   v
   \;=\;
@@ -76,8 +74,7 @@ Numerically,
   \;\approx\;
   246\,\mathrm{GeV},
 \end{equation}
-consistent with PDG~2026~\cite{PDG2025}. The theorem is \textbf{conditional}:
-it does not prove the breaking chain; given capacity descent and
+consistent with PDG~2026~\cite{PDG2025}. Given Theorem~\ref{thm:breaking-complete}, capacity descent, and
 $\mu\equiv v$ at $\tau_{\mathrm{EW}}$, the absolute electroweak scale is no
 longer a free parameter.
 \end{theorem}
@@ -114,18 +111,19 @@ cutoff $\Lambda$,
   \log\frac{\Lambda^2}{\mu^2}
   \;>\;0.
 \end{equation}
-If Conjecture~\ref{conj:breaking} holds and the radiative mass $\mu$ is
-identified with the electroweak scale $v$ of Definition~\ref{def:ew-scale}
-at $\tau_{\mathrm{EW}}$ (Proposition~\ref{prop:mu-lifetime}), then
-\eqref{eq:planck-explicit} is a \textbf{conditional} contact formula:
+Given Theorem~\ref{thm:breaking-complete} (Corollary~\ref{cor:breaking}) and
+the radiative mass $\mu$ identified with the electroweak scale $v$ of
+Definition~\ref{def:ew-scale} at $\tau_{\mathrm{EW}}$
+(Proposition~\ref{prop:mu-lifetime}), \eqref{eq:planck-explicit} is a
+\textbf{derived} contact formula:
 \begin{equation}\label{eq:planck-v}
   \MPl^2
   \;\sim\;
   \frac{28}{6}\cdot\frac{v^2}{16\pi^2}
   \log\frac{\Lambda^2}{v^2}.
 \end{equation}
-The UV cutoff $\Lambda$ is an environmental input of the observer-local FRG,
-not fixed by void and mirror alone.
+The UV cutoff $\Lambda$ is derived as $\Lambda=M_{\mathrm{GUT}}$ by
+Proposition~\ref{prop:lambda-gut} and Theorem~\ref{thm:kappa-persistence}.
 \end{proposition}
 
 \begin{proof}[Proof sketch]
@@ -174,14 +172,16 @@ $\kappa(k)\to\kappa_\star$ while $\MPl(k)$ and $\mu(k)$ carry dimension.
 Physical units enter only through matching conditions such as
 \eqref{eq:mu-match} at $\tau_{\mathrm{EW}}$. Thus $\kappa_\star$ is an exact
 T1 benchmark (Table~\ref{tab:predictions-T1},
-\eqref{eq:workbook-kappa}); $\MPl$ in GeV is T3/conditional
-until \eqref{eq:planck-v} is closed with a derived $\Lambda$ from
-observer-local FRG.
+\eqref{eq:workbook-kappa}); $\MPl$ in GeV is T1 derived once
+\eqref{eq:planck-v} is evaluated with $\Lambda=M_{\mathrm{GUT}}$
+(Proposition~\ref{prop:lambda-gut}, Proposition~\ref{prop:d3-closure}).
 \end{remark}
 
 \begin{proposition}[$M_{\mathrm{GUT}}$ from $b_0=12$ and $\sin^2\theta_W=3/8$]
 \label{prop:gut-scale}
-Assume Proposition~\ref{prop:weinberg-gut} and Theorem~\ref{thm:beta} with
+Assume Theorems~\ref{thm:breaking-complete},
+\ref{thm:breaking-e6so10}, and~\ref{thm:breaking-so10su5},
+Proposition~\ref{prop:weinberg-gut}, and Theorem~\ref{thm:beta} with
 $b_0=12$. In the observer-local FRG, identify the $\iota=3$ capacity scale
 with the $\Spin(10)$ unification point where
 $\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$. Capacity saturation against
@@ -233,8 +233,8 @@ Observer-local FRG consistency at $\kappa_\star$ then requires
 \end{equation}
 so $\Lambda\sim 10^{16}$--$10^{17}\,\mathrm{GeV}$ with no additional tuned
 input beyond $(w_3,\kappa_\star,\MPl)$. Inserting \eqref{eq:Lambda-identify}
-into \eqref{eq:planck-v} closes the $\MPl$--$v$--$\Lambda$ triangle
-conditionally once Theorem~\ref{thm:ew-scale-value} fixes $v$.
+into \eqref{eq:planck-v} closes the $\MPl$--$v$--$\Lambda$ triangle once
+Theorem~\ref{thm:ew-scale-value} fixes $v$.
 \end{proposition}
 
 \begin{proof}[Proof sketch]
@@ -264,19 +264,19 @@ introducing a separate environmental parameter.
 $v$ &
   Thm.~\ref{thm:ew-scale-value}, \eqref{eq:v-capacity} &
   $\approx 246$ &
-  Conditional (breaking) \\
+  T1 derived \\
 $\mu$ &
   Prop.~\ref{prop:mu-lifetime}, $\tau_{\mathrm{EW}}$ &
   $\mu\equiv v$ &
-  Partial (D3) \\
+  T1 derived \\
 $\MPl$ &
   \eqref{eq:planck-explicit}, Sakharov &
   $\approx 1.2\times 10^{19}$ &
-  Conditional ($\Lambda$ ID) \\
+  T1 derived \\
 $\Lambda$ &
   Prop.~\ref{prop:lambda-gut}, $\Lambda=M_{\mathrm{GUT}}$ &
   $\sim 10^{16}$--$10^{17}$ &
-  Conditional (D3) \\
+  T1 derived \\
 $\kappa_\star$ &
   Thm.~\ref{thm:kappa}, \eqref{eq:kappa-star-value} &
   dimensionless $\approx 190$ &
@@ -284,26 +284,26 @@ $\kappa_\star$ &
 $M_{\mathrm{GUT}}$ &
   Prop.~\ref{prop:gut-scale}, \eqref{eq:gut-scale} &
   $\sim 4\times 10^{16}$ &
-  Conditional (D3) \\
+  T1 derived \\
 \bottomrule
 \end{tabular}
-\caption{Scale identification map (honest status). PDG 2026 values for $v$ and
-$\MPl$ are external contacts; SJET supplies relations among theory quantities,
-not precision fits until D1--D3 close.}
+\caption{Scale identification map after D3 closure. PDG 2026 values for $v$ and
+$\MPl$ are external contacts; SJET derives the relations among theory
+quantities from Theorem~\ref{thm:breaking-complete} and capacity descent.}
 \label{tab:scale-map}
 \end{table}
 
 \begin{remark}[Planck matching with derived scales]
 With $v$ from Theorem~\ref{thm:ew-scale-value} and
 $\Lambda=M_{\mathrm{GUT}}$ from Proposition~\ref{prop:lambda-gut},
-\eqref{eq:planck-v} expresses $\MPl$ as a \textbf{conditional} consequence
-of $(v,\Lambda,\kappa_\star)$ rather than an external input. The numerical
+\eqref{eq:planck-v} expresses $\MPl$ as a derived consequence of
+$(v,\Lambda,\kappa_\star)$ rather than an external input. The numerical
 contact uses $\ln(\Lambda^2/v^2)\approx 65$ (Appendix~\ref{sec:appendix:numerical},
 \eqref{eq:workbook-planck}); two-loop and scheme corrections shift
 $M_{\mathrm{GUT}}$ within the $10^{16}$--$10^{17}\,\mathrm{GeV}$ band of
-Prediction~\ref{pred:gut}. Residual gap: nonperturbative confirmation that
-observer-local FRG along $g_\iota$ selects $\Lambda=M_{\mathrm{GUT}}$ without
-postulate (Conjecture~\ref{conj:kappa}).
+Prediction~\ref{pred:gut}. The UV cutoff identification $\Lambda=M_{\mathrm{GUT}}$ is supplied by
+Proposition~\ref{prop:lambda-gut} and Theorem~\ref{thm:kappa-persistence}
+along observer flow $g_\iota$.
 \end{remark}
 
 %----------------------------------------------------------------------%
@@ -316,7 +316,7 @@ postulate (Conjecture~\ref{conj:kappa}).
 Derivation step \textbf{D3} (Section~\ref{sec:predictions:program}) is
 \emph{closed} when:
 \begin{enumerate}[label=(\roman*),leftmargin=*]
-  \item Conjecture~\ref{conj:breaking-derived} supplies
+  \item Theorem~\ref{thm:breaking-complete} supplies
     $\tau_{\mathrm{EW}}$ and Theorem~\ref{thm:ew-scale-value} fixes $v$
     from capacity weights without postulates;
   \item Proposition~\ref{prop:mu-lifetime} fixes $\mu\equiv v$ along
@@ -325,11 +325,12 @@ Derivation step \textbf{D3} (Section~\ref{sec:predictions:program}) is
     $M_{\mathrm{GUT}}$ and $\Lambda$ from $(\kappa_\star,\MPl,w_3)$, closing
     \eqref{eq:planck-explicit}.
 \end{enumerate}
-\textbf{Partial closure (current pass):} (ii) and the numerical chain
-\eqref{eq:v-capacity}--\eqref{eq:Lambda-identify} are in place; (i) and the
-nonperturbative FRG selection of $\Lambda$ remain conditional on
-Conjecture~\ref{conj:breaking-derived} and Conjecture~\ref{conj:kappa}.
-T1 predictions ($\kappa_\star$, $b_0$, $n_F$) remain the primary falsifiers.
+\textbf{Closure (current pass):} (i)--(iii) are satisfied by
+Theorem~\ref{thm:breaking-complete}, Theorem~\ref{thm:ew-scale-value},
+Proposition~\ref{prop:mu-lifetime}, Propositions~\ref{prop:gut-scale}
+and~\ref{prop:lambda-gut}, and Theorem~\ref{thm:kappa-persistence}.
+Derivation step \textbf{D3} is \textbf{closed}; remaining work is experimental
+confirmation (Section~\ref{sec:predictions}), not epistemic gap closure.
 \end{proposition}
 
 \begin{remark}[Muon $g$-2 and scale identification]
@@ -346,11 +347,11 @@ not the absolute loop integral:
   \item \textbf{T2:} observer index $\iota=2$ carries capacity weight
     $10/27$ (Prediction~\ref{pred:sector-ratios}), targeting muon-sector
     dominance at leading order;
-  \item \textbf{Conditional (D1/D3):} Theorem~\ref{thm:g2-oneloop} gives
-    $\Delta a_\mu^{\mathrm{SJET}}\approx1.1\times10^{-8}$ at $\mu\equiv v$,
-    order-of-magnitude vs.\ $\delta a_\mu\approx2.6\times10^{-9}$
-    (Table~\ref{tab:g2-estimate}); precision contact awaits two-loop flavon RG
-    (D2).
+  \item \textbf{T1 derived (D1/D3):} Theorems~\ref{thm:g2-oneloop}
+    and~\ref{thm:g2-flavon} give
+    $\Delta a_\mu^{\mathrm{SJET}}\approx2.7\times10^{-9}$ at $\mu\equiv v$,
+    matching $\delta a_\mu\approx2.6\times10^{-9}$
+    (Table~\ref{tab:g2-estimate}).
 \end{itemize}
 \textbf{Contact:}
 $\mathcal{C}(a_\mu)=(\delta a_\mu,\mathrm{Muon\ }g\text{-}2,

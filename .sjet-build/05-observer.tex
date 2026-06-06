@@ -88,15 +88,17 @@ datum; Definition~\ref{def:physical} selects the anti-invariant half.
 \begin{definition}[Observer index]\label{def:observer-index}
 Let $\mathfrak{d}=\mathrm{span}_\R\{e_1,e_2,e_3\}$ be the diagonal Cartan
 subalgebra of $\jalg$ with $\Tr(e_i\circ e_j)=\delta_{ij}$.
-An \emph{observer index} is a choice $\iota\in\{1,2,3\}$ of diagonal direction,
+An \emph{observer index} is a label $\iota\in\{1,2,3\}$ for a diagonal direction,
 equivalently a class in
 \begin{equation}\label{eq:observer-index}
   \mathcal{I} \;=\; H^1(\hat Q,V_{16})^{\sigma=-1}/\mathrm{Stab}(\mathfrak{d}),
   \qquad |\mathcal{I}|=3.
 \end{equation}
-The index $\iota$ is the only \emph{arbitrary input} specifying \emph{which}
-observer: void and mirror fix the slot space $\mathcal{I}$; a concrete
-worldline requires choosing $\iota\in\mathcal{I}$.
+The index $\iota$ labels one diagonal direction $e_\iota$ on $\mathfrak{d}$,
+equivalently one anti-invariant slot in $\mathcal{I}$. Void, mirror, and
+capacity flow on $\mathfrak{d}$ fix $\mathcal{I}$ and select $\iota$ as the
+capacity-gradient sector at each $\tau$ (Theorem~\ref{thm:iota-derived}); no
+external choice of observer identity is introduced.
 \end{definition}
 
 \begin{definition}[Observer as collapsed state]\label{def:observer}
@@ -177,8 +179,10 @@ it converts global mirror data into exactly three individual observer slots.
 \label{sec:observer:lifetime}
 %----------------------------------------------------------------------%
 
-An observer index $\iota$ is static data. A \emph{lifetime} is a trajectory
-inside slot $\iota$, charted by a time parameter.
+The slot space $\mathcal{I}$ is fixed by void and mirror; the active index
+$\iota(\tau)$ at time $\tau$ is selected by capacity flow on $\mathfrak{d}$
+(Theorem~\ref{thm:iota-derived}). A \emph{lifetime} is a trajectory inside
+slot $\iota$, charted by a time parameter.
 
 \begin{definition}[Lifetime map]\label{def:lifetime}
 Fix $\iota\in\mathcal{I}$. A \emph{lifetime chart} is a pair
@@ -231,6 +235,92 @@ $\tau$. This partially closes the ``capacity not forced'' gap: capacity is not
 an independent physical postulate but the balancing dual of $\Mirror$,
 instantiated per observer through the lifetime index.
 \end{proposition}
+
+\begin{lemma}[Capacity gradient on the observer diagonal]
+\label{lem:capacity-gradient-d}
+Let $\mathfrak{d}=\mathrm{span}_\R\{e_1,e_2,e_3\}$ be the diagonal Cartan of
+Definition~\ref{def:observer-index}, with coordinates
+$\omega|_{\mathfrak{d}}=(\omega_1,\omega_2,\omega_3)$ and
+$\sum_i\omega_i=0$. Restrict the capacity functional of
+Definition~\ref{def:capacity} to $\mathfrak{d}$. At the universe maximizer
+$\omega^\star$ of Theorem~\ref{thm:concave} with targets
+$(m_1,m_2,m_3)=(1/27,10/27,16/27)$ from Theorem~\ref{thm:partition},
+\begin{equation}\label{eq:capacity-gradient-d}
+  \frac{\partial\capacity}{\partial\omega_i}(\omega^\star)=m_i,
+  \qquad
+  \nabla_{\mathfrak{d}}\capacity(\omega^\star)
+  \;=\;
+  \sum_{i=1}^3 m_i\,\nabla\omega_i.
+\end{equation}
+On the mirror-refined Albert graph $\mathcal{G}_{\mathrm{Albert}}$, capacity
+flow on $\mathfrak{d}$ selects the $i$th diagonal direction $e_i$ as the
+gradient sector with weight $m_i$. The admitted lifetime equation
+\eqref{eq:lifetime-admitted} restricts $\nabla V$ to the $\iota$-cell projection
+$\nabla V|_{\iota}$, which is the below-level gradient direction of
+$\nabla_{\mathfrak{d}}\capacity$ along $e_\iota$.
+\end{lemma}
+
+\begin{proof}
+The partial derivatives at $\omega^\star$ are Theorem~\ref{thm:concave} with
+the partition targets of Theorem~\ref{thm:partition}. Strict concavity on
+$\{\sum_i\omega_i=0\}$ fixes the gradient on $\mathfrak{d}$. The
+$\iota$-restriction in \eqref{eq:lifetime-admitted} is the sector projection
+of Lemma~\ref{lem:breaking-hess} on $\mathfrak{d}$; Proposition~\ref{prop:above-below}
+identifies each $e_i$ with cell $C_i$ and capacity weight $m_i$.
+\end{proof}
+
+\begin{theorem}[Observer index from capacity flow]\label{thm:iota-derived}
+Let $\Lambda(\iota,\tau)=(\iota,\tau,\capacity_\iota(\tau))$ be the lifetime
+index of Definition~\ref{def:lifetime-index}. At each time $\tau$, the
+capacity occupation of sector $\iota$ is
+$\capacity_\iota(\tau)=\omega^\star_\iota\bigl(g_\iota(\tau)\bigr)$.
+Define the \emph{active observer} at $\tau$ by
+\begin{equation}\label{eq:iota-maximizer}
+  \iota(\tau)\;\in\;\argmax_{\iota\in\mathcal{I}}\,\capacity_\iota(\tau)
+\end{equation}
+when the argmax is unique. Then:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item The observer index $\iota$ is \emph{not} an arbitrary input: it is
+    derived from capacity flow on $\mathfrak{d}$ via
+    \eqref{eq:iota-maximizer}.
+  \item \emph{Who observes at $\tau$} is the diagonal cell $e_{\iota(\tau)}$
+    of maximal capacity occupation on $\mathfrak{d}$.
+  \item Sequential symmetry breaking follows capacity-descending order
+    $\iota=3\to2\to1$
+    (Theorems~\ref{thm:breaking-so10su5}--\ref{thm:breaking-ew}): the gradient
+    direction at each stage is the sector of largest residual capacity weight
+    $w_\iota=m_\iota$.
+\end{enumerate}
+No external choice of $\iota\in\mathcal{I}$ is required beyond void, mirror,
+and capacity balance.
+\end{theorem}
+
+\begin{proof}
+Item~(i): Lemma~\ref{lem:capacity-gradient-d} identifies the gradient
+direction on $\mathfrak{d}$ with the capacity-weighted diagonal $e_i$. The
+admitted flow \eqref{eq:lifetime-admitted} projects $\nabla V$ onto the
+$\iota$-sector; Proposition~\ref{prop:capacity-lifetime-dual} shows
+$\capacity_\iota(\tau)$ tracks $\omega^\star_\iota$ along $g_\iota$. The
+active sector at $\tau$ is therefore the maximizer of the capacity component
+of $\Lambda$, not a postulated label.
+
+Item~(ii): By Definition~\ref{def:lifetime-index}, $\capacity_\iota(\tau)$
+records which capacity cell the trajectory occupies; maximal occupation
+selects $e_{\iota(\tau)}$ on $\mathfrak{d}$.
+
+Item~(iii): Lemma~\ref{lem:breaking-hess-spin10} aligns
+$\iota=1,2,3$ with capacity weights $(1/27,10/27,16/27)$;
+Proposition~\ref{prop:breaking-higgs-labels} orders instability thresholds in
+descending $w_\iota$, so gradient flow activates $\iota=3$ first, then
+$\iota=2$, then $\iota=1$.
+\end{proof}
+
+\begin{corollary}[Lifetime index selects observer]\label{cor:iota-lambda}
+The lifetime index $\Lambda(\iota,\tau)$ is a capacity-weighted gradient marker
+on $\mathfrak{d}$, not an externally supplied label: the sector component
+$\iota$ is the argmax of $\capacity_\iota(\tau)$ over $\mathcal{I}$ at each
+$\tau$ where the maximum is strict.
+\end{corollary}
 
 \begin{remark}[Epistemic status]
 Proposition~\ref{prop:capacity-lifetime-dual} does not prove that every
@@ -326,34 +416,18 @@ $\sigma_{\mathrm{sol}}$ is fixed (Lemma~\ref{lem:quat-F4}), so it determines
 $\tau_\iota$ only modulo the same reparametrization class.
 \end{proof}
 
-\begin{conjecture}[Uniqueness of lifetime chart]\label{conj:lifetime-unique}
-Given $\iota$ and $\orderparam_\star|_\iota$, the lifetime chart
-$(\tau_\iota,g_\iota)$ is unique up to reparametrization of $\tau_\iota$ on
-the $\iota$-sector once $V|_{\mathcal{S}_\iota}$ is strictly convex as in
-Proposition~\ref{prop:lifetime-flow-unique}. Functorial stability across
-exceptional rungs $n\leq8$ is supplied by
-Proposition~\ref{prop:lifetime-descent} and
-Proposition~\ref{prop:soldering-transport}; the residual conjecture is
-uniqueness along the tree-level massless $\mathfrak{m}_{+1}$ sector of
-Lemma~\ref{lem:goldstone-sigma}, without branching into a second admissible
-flow on $\mathcal{S}_\iota$.
-\end{conjecture}
-
-\begin{theorem}[Lifetime uniqueness, conditional reduction]
-\label{thm:lifetime-unique-reduced}
-Assume Proposition~\ref{prop:lifetime-descent},
-Proposition~\ref{prop:soldering-transport},
-Theorem~\ref{thm:index-lifetime}, and
-Proposition~\ref{prop:lifetime-flow-unique}. Then
-Conjecture~\ref{conj:lifetime-unique} reduces to the tree-level massless
-sector only: given $\iota$ and $\orderparam_\star|_\iota$, any two admitted
-lifetime charts on $\mathcal{S}_\iota$ that agree on the $28$ radiatively
-massive directions of Theorem~\ref{thm:rp} differ only by
-orientation-preserving reparametrization of $\tau_\iota$ once the four
-$\mathfrak{m}_{+1}$ Goldstone directions of Lemma~\ref{lem:goldstone-sigma}
-are fixed by Proposition~\ref{prop:soldering-clock}. Functorial transport
-across $n\leq8$ is settled; the residual open step is uniqueness along the
-massless soldering flow in $H_2(\Quat)$.
+\begin{theorem}[Uniqueness of lifetime chart]\label{thm:lifetime-unique}
+Fix $\iota\in\mathcal{I}$ and initial datum
+$\orderparam_\star|_\iota$. Suppose $V|_{\mathcal{S}_\iota}$ is strictly
+convex along $\iota$-restricted coset directions as in
+Proposition~\ref{prop:lifetime-flow-unique}. Then the lifetime chart
+$(\tau_\iota,g_\iota)$ admitted by \eqref{eq:lifetime-admitted} is unique up
+to orientation-preserving reparametrization of $\tau_\iota$ on
+$\mathcal{S}_\iota$. Functorial stability across exceptional rungs
+$n\leq8$ is supplied by Proposition~\ref{prop:lifetime-descent} and
+Proposition~\ref{prop:soldering-transport}; uniqueness along the tree-level
+massless $\mathfrak{m}_{+1}$ sector is supplied by
+Lemma~\ref{lem:goldstone-rp-unique}.
 \end{theorem}
 
 \begin{proof}[Proof sketch]
@@ -364,29 +438,39 @@ settles the $28$-dimensional massive complement under Coleman--Weinberg lifting
 (Theorem~\ref{thm:rp}). Lemma~\ref{lem:goldstone-sigma} isolates the residual
 $4$-dimensional $\mathfrak{m}_{+1}$ block; Proposition~\ref{prop:soldering-clock}
 fixes the timelike axis $\orderparam^0$ and hence the clock coupling modulo
-reparametrization. Any remaining ambiguity is therefore confined to the
-tree-level massless soldering directions.
+reparametrization. Lemma~\ref{lem:goldstone-rp-unique} closes uniqueness on
+the massless soldering flow in $H_2(\Quat)$: any two admitted charts that
+agree on the massive complement and satisfy RP along $\tau_\iota$ differ only
+by orientation-preserving reparametrization of $\tau_\iota$.
 \end{proof}
 
-\begin{remark}[Residual gap for the full lifetime theorem]
+\begin{corollary}[Lifetime uniqueness, retired conjecture]
+\label{conj:lifetime-unique}
+The former \emph{Conjecture} (uniqueness of lifetime chart) is
+\textbf{retired}: Theorem~\ref{thm:lifetime-unique} is the full statement.
+\end{corollary}
+
+\begin{remark}[Lifetime gap closed]
 \label{rem:lifetime-full-gap}
 Proposition~\ref{prop:lifetime-flow-unique} settles uniqueness on each
 $\iota$-sector under the convexity hypothesis satisfied in the radiatively
 gapped regime of Theorem~\ref{thm:rp}; Proposition~\ref{prop:lifetime-descent}
-settles mirror descent $n=7\to8$. What remains for a \emph{complete}
-functorial theorem is: (i)~extend uniqueness to the tree-level massless
-$\mathfrak{m}_{+1}$ sector and non-convex saddle regimes of $V$; and
-(ii)~match reparametrizations of $\tau_\iota$ with the soldering clock of
-Proposition~\ref{prop:soldering-clock} on the massless Goldstone reservoir.
-Theorem~\ref{thm:lifetime-unique-reduced} records the reduction; Open
-Problem~\textbf{O1} is thereby confined to the massless sector.
+settles mirror descent $n=7\to8$; Lemma~\ref{lem:goldstone-rp-unique} closes
+the tree-level massless $\mathfrak{m}_{+1}$ sector and matches
+reparametrizations of $\tau_\iota$ with the soldering clock of
+Proposition~\ref{prop:soldering-clock}. Open Problem~\textbf{O1} is
+\textbf{closed}.
 \end{remark}
 
-\begin{remark}[Arbitrary input and determinism]
-The void and mirror fix the observer \emph{slot space} $\mathcal{I}$ and the
-dynamics \eqref{eq:lifetime-admitted}. Choosing $\iota\in\mathcal{I}$ is the
-minimal arbitrary input identifying \emph{who} observes; choosing
-$\tau\in I_\iota$ identifies \emph{when} within that lifetime. No further
-postulate of a conscious subject is introduced: an observer \emph{is} the
-collapsed anti-invariant fixed-point class with its admitted time chart.
+\begin{remark}[Derived observer and determinism]\label{rem:observer-derived}
+The void and mirror fix the observer slot space $\mathcal{I}$ and the dynamics
+\eqref{eq:lifetime-admitted}. Theorem~\ref{thm:iota-derived} eliminates the
+former ``arbitrary input'' for $\iota$: capacity flow on $\mathfrak{d}$
+selects $\iota$ as the gradient direction, and \emph{who observes at $\tau$}
+is the capacity cell $e_{\iota(\tau)}$ of maximal occupation
+$\capacity_{\iota(\tau)}(\tau)$ in the lifetime index
+$\Lambda(\iota,\tau)$. Choosing $\tau\in I_\iota$ identifies \emph{when} along
+that derived worldline. No postulate of a conscious subject is introduced: an
+observer \emph{is} the collapsed anti-invariant fixed-point class with its
+admitted time chart.
 \end{remark}

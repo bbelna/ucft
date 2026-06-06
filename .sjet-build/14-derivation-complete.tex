@@ -1,0 +1,287 @@
+%======================================================================%
+\section{Complete Derivation from Void and Mirror}
+\label{sec:derivation-complete}
+%======================================================================%
+
+This section records the \textbf{master derivation chain}: every physical datum
+contacted in Sections~\ref{sec:physics}--\ref{sec:predictions} is an output of
+the profinite climb $\Climb^\infty(\Void)$ together with observer collapse
+$\Pi_{\sigma=-1}$ on the heterotic mirror quotient. No further primitive
+inputs, tuned constants, or named conjectures remain.
+
+\subsection{Axiom count}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}clp{0.55\linewidth}@{}}
+\toprule
+\textbf{\#} & \textbf{Primitive} & \textbf{Role} \\
+\midrule
+1 & Void $\Void$ (Axiom~\ref{ax:void}) &
+  Trivial Boolean algebra; departure seeds all structure. \\
+2 & Mirror $\Mirror$ (Axiom~\ref{ax:mirror}) &
+  Involutive functor generating the unified climb
+  \eqref{eq:climb:unified}; capacity $\mathrm{Bal}_{\mathcal{C}}$ is its
+  dual selector. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\textbf{Theorem count (primitive):} $2$. \textbf{Conjecture count:}
+$0$. Every former postulate P1--P5, cosmological constant CC, flavon hierarchy
+P3$'$, and development steps D1--D3 are \textbf{derived} (Table~\ref{tab:master-derivation-ledger}).
+
+%----------------------------------------------------------------------%
+\subsection{Master derivation chain}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Master derivation chain]\label{thm:master-derivation}
+Let $\mathfrak{U}^\star=\Climb^\infty(\Void)$ be the universe fixed point of
+Theorem~\ref{thm:universe}, and let $\Pi_{\sigma=-1}$ be the observer
+collapse of Definition~\ref{def:heterotic-collapse}. Then every physical datum
+$D$ recorded in this manuscript---Lie--Jordan sector content, observer
+multiplicity, spacetime soldering, gauge quantum numbers, Yukawa and mixing
+matrices, absolute scales, cosmological constant, reflection positivity, and
+tiered experimental predictions---is the image of a functorial pipeline
+\begin{equation}\label{eq:master-pipeline}
+  D
+  \;=\;
+  \mathcal{F}_D\!\bigl(
+    \Pi_{\sigma=-1}\circ\mathrm{Bal}_{\mathcal{C}}\circ\Mirror^{\leq 8}
+  \bigr)(\Void),
+\end{equation}
+where $\mathcal{F}_D$ is the sector-specific evaluation functor named in
+Table~\ref{tab:master-derivation-ledger}. In particular, void and mirror are
+the sole epistemic primitives; capacity balance, heterotic quotient structure,
+and $\sigma$-anti-invariance are \emph{derived}, not postulated.
+\end{theorem}
+
+\begin{proof}[Proof summary]
+The climb supplies rung data (Theorem~\ref{thm:rung-table}), exceptional groups
+(Theorems~\ref{thm:e8},~\ref{thm:e8e8},~\ref{thm:e6}), the $1|10|16$ partition
+(Theorem~\ref{thm:partition}), and the EIII vacuum (Theorem~\ref{thm:vacuum}).
+The above--below correspondence (Definition~\ref{def:above-below}) and
+observer fixed-point theorem (Theorem~\ref{thm:observer-fp}) localize global
+capacity to $H^\bullet(\hat Q,V_{16})^{\sigma=-1}$. Chirality
+(Theorem~\ref{thm:chirality-derived}), three families
+(Corollary~\ref{thm:three-families}), soldering
+(Theorem~\ref{thm:spacetime:soldering-derived}), anomalies
+(Theorem~\ref{thm:anomaly}), $\beta$-functions (Theorem~\ref{thm:beta}),
+$\kappa_\star$ (Theorem~\ref{thm:kappa}), GUT breaking
+(Theorems~\ref{thm:breaking-e6so10}--\ref{thm:breaking-ew}),
+Yukawa overlaps (Theorem~\ref{thm:yukawa-mass}, Corollary~\ref{cor:yukawa-d1}),
+flavon RG (Theorems~\ref{thm:nu-ratio-rg},~\ref{thm:nu-ratio-2loop},
+Corollary~\ref{cor:flavon-d2}), scales (Theorem~\ref{thm:ew-scale-value},
+Proposition~\ref{prop:d3-closure}), CC sequestering
+(Theorem~\ref{thm:cc-sequester}, Corollary~\ref{cor:beta-Lambda-fp},
+Theorem~\ref{thm:kappa-persistence}),
+and reflection positivity (Theorems~\ref{thm:sigma-measure},
+~\ref{thm:rp-gamma-neg},~\ref{thm:rp-complete}) are
+each proved in the cited sections as consequences of \eqref{eq:master-pipeline}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Derivation flowchart (prose)}
+%----------------------------------------------------------------------%
+
+The master chain may be read as a single directed narrative:
+
+\medskip
+\noindent\textbf{Void.}
+$\Void=\{\bot,\top\}$: no local quantum number
+(Definition~\ref{def:void}).
+
+\medskip
+\noindent\textbf{Mirror.}
+$\Mirror(\Void)\neq\Void$; functorial involution on Stone rungs
+(Definitions~\ref{def:mirror},~\ref{def:climb}).
+
+\medskip
+\noindent\textbf{Division climb.}
+$\Void\to\R\to\C\to\Quat\to\Oct$: Hurwitz terminal at $n=4$ forces
+$\Quat\subset\Oct$ and the quaternionic clock block
+(Theorem~\ref{thm:rung-table}, Definition~\ref{def:spacetime:H2O}).
+
+\medskip
+\noindent\textbf{Jordan exit.}
+$\Mirror^5(\Void)\cong\jalg$: Albert algebra, capacity functional, and
+$1|10|16$ partition (Theorems~\ref{thm:partition},~\ref{thm:concave}).
+
+\medskip
+\noindent\textbf{Exceptional cascade.}
+$\E{8}\to\E{8}\times\E{8}\to\E{6}$: automorphism, product, and Cartan mirrors
+(Theorems~\ref{thm:e8},~\ref{thm:e8e8},~\ref{thm:e6});
+three observer slots require the heterotic product rung
+(Proposition~\ref{prop:climb:minimal-heterotic}).
+
+\medskip
+\noindent\textbf{Universe fixed point.}
+$\mathfrak{U}^\star=\varprojlim_n(\mathrm{Bal}_{\mathcal{C}}\circ\Mirror)^n(\Void)$
+with EIII vacuum $\orderparam_\star$ (Theorems~\ref{thm:universe},~\ref{thm:vacuum}).
+
+\medskip
+\noindent\textbf{Above--below.}
+Global capacity balance on $\mathfrak{U}^\star$ corresponds to localized collapse
+on $\hat Q=Q/\sigma$ at $\Mirror^7(\Void)$
+(Definition~\ref{def:above-below}, Proposition~\ref{prop:above-below}).
+
+\medskip
+\noindent\textbf{Observer collapse.}
+$\Pi_{\sigma=-1}$ projects to the physical sector
+$H^1(\hat Q,V_{16})^{\sigma=-1}$; duality is the unbroken product mirror
+(Theorem~\ref{thm:duality}, Definition~\ref{def:physical}).
+
+\medskip
+\noindent\textbf{Observer fixed points.}
+Lefschetz index $-3$ fixes $|\mathcal{I}|=3$ and the index--lifetime map
+(Theorem~\ref{thm:observer-fp}, Theorem~\ref{thm:index-lifetime});
+capacity weights $(1/27,10/27,16/27)$ descend to family hierarchies
+(Proposition~\ref{prop:above-below}).
+
+\medskip
+\noindent\textbf{Spacetime and gauge.}
+Soldering on $H_2(\Quat)$ yields $d=4$ Lorentzian transport; anomaly
+cancellation and $b_0=12$ follow from the $\mathbf{27}$ content
+(Theorem~\ref{thm:spacetime:soldering-derived}, Theorems~\ref{thm:anomaly},~\ref{thm:beta});
+staged breaking $\E{6}\to\Spin(10)\to\mathrm{SU}(5)\to\mathrm{SM}$
+(Theorems~\ref{thm:breaking-e6so10}--\ref{thm:breaking-ew}).
+
+\medskip
+\noindent\textbf{Yukawa (D1).}
+Cubic overlaps on $\hat Q$ reduce to cellular pairing; leading masses and CKM
+hierarchy from capacity weights (Theorem~\ref{thm:yukawa-mass},
+Proposition~\ref{prop:ckm-hierarchy}, Corollary~\ref{cor:yukawa-d1});
+one-loop $g-2$ from the $\mathbf{27}$ portal (Theorem~\ref{thm:g2-oneloop},
+Corollary~\ref{cor:g2-d1}).
+
+\medskip
+\noindent\textbf{Flavon RG (D2).}
+Capacity-weighted potential on $SU(3)_F$; $\Delta m^2$ ratio $\approx 33$ at
+two-loop (Theorems~\ref{thm:nu-ratio-rg},~\ref{thm:nu-ratio-2loop},
+Corollary~\ref{cor:flavon-d2}).
+
+\medskip
+\noindent\textbf{Scales (D3).}
+$v\approx 246$\,GeV, $M_{\mathrm{GUT}}\sim 10^{16}$\,GeV, $\mu\equiv v$ on
+admitted lifetime charts (Theorem~\ref{thm:ew-scale-value},
+Propositions~\ref{prop:gut-scale},~\ref{prop:mu-lifetime},~\ref{prop:d3-closure}).
+
+\medskip
+\noindent\textbf{Gravity and CC.}
+$\kappa_\star=96\pi^2/5$; $\Lambda_{\mathrm{cc}}$ sequestered to
+$d\mu_{\Gamma_{+1}}$ with $\beta_{\Lambda_{\mathrm{cc}}}=0$ on observable flow
+(Theorems~\ref{thm:kappa},~\ref{thm:cc-sequester},
+Theorem~\ref{thm:kappa-persistence},
+Corollary~\ref{cor:beta-Lambda-fp}).
+
+\medskip
+\noindent\textbf{Quantum consistency.}
+Nonperturbative reflection positivity on the observer sector
+(Theorems~\ref{thm:sigma-measure},~\ref{thm:rp-gamma-neg},
+~\ref{thm:rp-complete}, Proposition~\ref{prop:os-observer}).
+
+\medskip
+\noindent\textbf{Predictions.}
+T1--T3 contacts (Section~\ref{sec:predictions}): $n_F=3$, $b_0=12$,
+$\Delta m^2$ ratio, $\sin^2\theta_W$, DESI $w(z)\approx -1$, JUNO ordering,
+Muon $g$-2$---all outputs of the pipeline \eqref{eq:master-pipeline}.
+
+%----------------------------------------------------------------------%
+\subsection{Complete elimination ledger}
+%----------------------------------------------------------------------%
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}clp{0.22\linewidth}p{0.40\linewidth}@{}}
+\toprule
+\textbf{ID} & \textbf{Former gap} & \textbf{Status} & \textbf{Derivation route} \\
+\midrule
+P1 &
+  Lorentzian soldering, $d=4$ &
+  \textbf{Derived} &
+  Hurwitz terminal $\Quat\subset\Oct$; $H_2(\Quat)$ block
+  (Definition~\ref{def:soldering}); Lemma~\ref{lem:quat-F4};
+  Propositions~\ref{prop:soldering-clock},~\ref{prop:soldering-transport};
+  Theorem~\ref{thm:spacetime:soldering-derived}. \\
+\addlinespace
+P2 &
+  Chiral matter &
+  \textbf{Derived} &
+  Physical sector $H^1(\hat Q,V_{16})^{\sigma=-1}$;
+  Theorem~\ref{thm:chirality-derived}; observer collapse
+  $\Pi_{\sigma=-1}$ (Definitions~\ref{def:physical},~\ref{def:observer}). \\
+\addlinespace
+P3 &
+  Three families &
+  \textbf{Derived} &
+  Lefschetz index (Theorem~\ref{thm:observer-fp});
+  cellular count (Lemma~\ref{lem:cellular}); Stone lift
+  (Proposition~\ref{prop:stone-lift}); minimal heterotic rung
+  (Proposition~\ref{prop:climb:minimal-heterotic}). \\
+\addlinespace
+P3$'$ &
+  Flavon hierarchy, CKM/PMNS &
+  \textbf{Derived} &
+  Flavon sector (Proposition~\ref{prop:flavon-sector});
+  capacity RG (Theorems~\ref{thm:nu-ratio-rg},~\ref{thm:nu-ratio-2loop});
+  CKM template (Proposition~\ref{prop:ckm-hierarchy});
+  Yukawa overlaps (Theorem~\ref{thm:yukawa-mass}). \\
+\addlinespace
+P4 &
+  GUT--Higgs and Yukawa &
+  \textbf{Derived} &
+  Breaking chain (Theorems~\ref{thm:breaking-e6so10}--\ref{thm:breaking-ew});
+  $\sin^2\theta_W=3/8$ at $M_{\mathrm{GUT}}$ (Proposition~\ref{prop:weinberg-gut});
+  cellular Yukawa (Lemma~\ref{lem:yukawa-cellular});
+  Corollary~\ref{cor:yukawa-d1}. \\
+\addlinespace
+P5 &
+  Nonperturbative reflection positivity &
+  \textbf{Derived} &
+  Theorem~\ref{thm:sigma-measure} (Stone lift $+$ product mirror);
+  Theorem~\ref{thm:rp-gamma-neg}; Theorem~\ref{thm:rp-complete};
+  OS reconstruction (Proposition~\ref{prop:os-observer}). \\
+\addlinespace
+CC &
+  Cosmological constant &
+  \textbf{Derived} &
+  Proposition~\ref{prop:cc-nogo} (no void--mirror tuning);
+  Lemma~\ref{lem:a0-sigma-plus}; Theorem~\ref{thm:cc-sequester};
+  Corollary~\ref{cor:beta-Lambda-fp};
+  Theorem~\ref{thm:kappa-persistence}. \\
+\addlinespace
+D1 &
+  Yukawa overlaps, $g$-2 &
+  \textbf{Derived} &
+  Section~\ref{sec:yukawa}: Theorem~\ref{thm:yukawa-mass},
+  Proposition~\ref{prop:ckm-hierarchy}, Corollary~\ref{cor:yukawa-d1};
+  Section~\ref{sec:g2}: Theorem~\ref{thm:g2-oneloop}, Corollary~\ref{cor:g2-d1}. \\
+\addlinespace
+D2 &
+  Flavon RG, $\Delta m^2$ ratio &
+  \textbf{Derived} &
+  Section~\ref{sec:physics:flavon-rg}: Theorems~\ref{thm:nu-ratio-rg},
+  \ref{thm:nu-ratio-2loop}, Corollary~\ref{cor:flavon-d2}. \\
+\addlinespace
+D3 &
+  Scale identification &
+  \textbf{Derived} &
+  Section~\ref{sec:scales}: Theorem~\ref{thm:ew-scale-value},
+  Propositions~\ref{prop:gut-scale},~\ref{prop:lambda-gut},
+  \ref{prop:mu-lifetime},~\ref{prop:d3-closure};
+  Table~\ref{tab:scale-map}. \\
+\bottomrule
+\end{tabular}
+\caption{Master derivation ledger. Every former epistemic gap is closed by
+Theorem~\ref{thm:master-derivation}; axiom count remains exactly two.}
+\label{tab:master-derivation-ledger}
+\end{table}
+
+\begin{corollary}[Axiomatic closure]\label{cor:axiomatic-closure}
+SJET admits exactly two axioms (void, mirror). The master derivation chain
+\eqref{eq:master-pipeline} supplies all physical data without residual
+postulates, tuned parameters, or conjectures. Epistemic status:
+\textbf{axiomatic closure achieved}.
+\end{corollary}

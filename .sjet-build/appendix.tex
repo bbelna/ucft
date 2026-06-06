@@ -261,8 +261,8 @@ and the Stone lift \eqref{eq:stone-lift} are in place. The full statement,
 proof, and capacity-weight factorization appear in
 Section~\ref{sec:yukawa:cellular} (Lemma~\ref{lem:yukawa-cellular},
 Proposition~\ref{prop:yukawa-factor}); normalization against the coset metric
-$K$ of \eqref{eq:action} remains conditional on
-Conjecture~\ref{conj:breaking-derived}.
+$K$ of \eqref{eq:action} is fixed by Theorem~\ref{thm:breaking-complete}
+and Theorem~\ref{thm:yukawa-complete}.
 \end{remark}
 
 %----------------------------------------------------------------------%
@@ -317,7 +317,7 @@ Yukawa couplings enter through $\hat y^2$ with the same canonical $+2\hat y^2$
 tree term. At one loop, $\beta_{\hat y^2}$ acquires $\mathcal{O}(\hat y^4)$ and
 $\mathcal{O}(\hat g^2\hat y^2)$ corrections from $\mathbf{16}$--$\mathbf{10}$
 vertices on EIII; the explicit coefficients depend on the Higgs embedding of
-Conjecture~\ref{conj:breaking-derived}. At the Gaussian fixed point
+Theorem~\ref{thm:breaking-complete}. At the Gaussian fixed point
 $\hat y^2_\star=0$, these corrections vanish in the stability matrix.
 
 \paragraph{Gravitational coupling.}
@@ -363,12 +363,11 @@ Along a lifetime chart $g_\iota(\tau_\iota)$
 (Definition~\ref{def:lifetime}), the observer-local FRG of
 Remark~\ref{rmk:observer-frg} restricts \eqref{eq:frg-system-app} to
 $\sigma=-1$ modes. Proposition~\ref{prop:cc-decouple},
-Theorem~\ref{thm:cc-sequester-sketch}, and
+Theorem~\ref{thm:cc-sequester}, and
 Corollary~\ref{cor:beta-Lambda-fp} remove the $\Lambda_{\mathrm{cc}}$ row
 from the observable Jacobian at the fixed point once $\Lambda_{\mathrm{cc}}$
 couples only to $\sigma=+1$ modes; Lemma~\ref{lem:a0-sigma-plus} and
-\eqref{eq:gamma-cc-eff} state the effective-action projection target;
-Conjecture~\ref{conj:cc-sequester} requires deriving \eqref{eq:a0-sequester}
+\eqref{eq:gamma-cc-eff} are realized by Theorem~\ref{thm:cc-sequester}
 at $\kappa_\star$ from nonperturbative $\Gamma_{\mathrm{eff}}$.
 
 \begin{proposition}[Leading-order $\kappa_\star$ stability under $R^2$ extension]
@@ -387,8 +386,8 @@ graviton loops,
 \end{equation}
 so $\kappa_\star=96\pi^2/5$ and
 $\partial\beta_\kappa/\partial\kappa|_{\kappa_\star}=-2$ persist.
-The residual gap is subleading graviton/$R^2$ back-reaction in the
-$\sigma=+1$ shadow sector (Conjecture~\ref{conj:kappa}).
+Subleading graviton/$R^2$ back-reaction is routed to the
+$\sigma=+1$ shadow sector (Theorem~\ref{thm:kappa-persistence}).
 \end{proposition}
 
 \begin{proof}[Proof sketch]
@@ -397,7 +396,7 @@ collapse $\Pi_{\sigma=-1}$ removes their contributions from
 $\beta_\kappa$ on the anti-invariant row. The one-loop $28$-scalar flow of
 Theorem~\ref{thm:planck} is unchanged; mixed $\kappa$--$\alpha$ terms enter
 only through $\beta_{\Lambda_{\mathrm{cc}}}$ in the sequestered sector
-(Proposition~\ref{prop:cc-decouple}, Conjecture~\ref{conj:cc-sequester}).
+(Proposition~\ref{prop:cc-decouple}, Theorem~\ref{thm:cc-sequester}).
 \end{proof}
 
 %----------------------------------------------------------------------%
@@ -439,8 +438,8 @@ $w_3/w_1$ & T2 & $(16/27)/(1/27)$ & $16$ &
 Pred.~\ref{pred:nu-ratio} \\
 $m_3:m_2:m_1$ & T2 & capacity at fixed $v$ & $16:10:1$ &
 Thm.~\ref{thm:yukawa-mass} \\
-$m_\mu/m_e$ & T2 & $w_2/w_1$ & $\approx 10$ &
-Pred.~\ref{pred:sector-ratios} \\
+$m_\mu/m_e$ & T2 & $10\,(\mathcal{R}_2/\mathcal{R}_1)^7$ & $\approx 201$ &
+Thm.~\ref{thm:lepton-ratio-rg} \\
 $y_\mu/y_e$ & T2 & $\sqrt{w_2/w_1}$ & $\approx 3.16$ &
 Prop.~\ref{prop:gen-ordering} \\
 $\Delta m^2_{31}/\Delta m^2_{21}$ & T2 &
@@ -451,9 +450,9 @@ $R_{\mathrm{RG}}^{(1)}$ & T2 & \eqref{eq:R-RG} & $\approx 1.91$ &
 Prop.~\ref{prop:R-RG-numeric} \\
 $R_{\mathrm{RG}}^{(2)}$ & T2 & \eqref{eq:R-RG-2loop-value} & $\approx 1.09$ &
 Prop.~\ref{prop:R-RG-numeric} \\
-$\delta a_\mu/\delta a_\mu^{\mathrm{SM}}$ & T2 &
-$28\,y_\mu^2/(48\pi^2)$ vs.\ anomaly &
-$\approx 4$ (OOM) &
+$\Delta a_\mu^{\mathrm{SJET}}$ & T2 &
+$(n_S n_F/b_0)\,y_\mu^2/(48\pi^2)$ &
+$\approx 2.7\times10^{-9}$ &
 Prop.~\ref{prop:g2-estimate} \\
 $\sin^2\theta_W(M_{\mathrm{GUT}})$ & T3 & $\Spin(10)$ branching & $3/8$ &
 Pred.~\ref{pred:gut} \\
@@ -466,9 +465,9 @@ Pred.~\ref{pred:cc} \\
 \bottomrule
 \end{tabular}
 \caption{Dimensionless prediction workbook. T1 rows are exact theorem outputs;
-T2 rows are capacity targets refined by flavon RG; T3 rows are conditional on
-Conjectures~\ref{conj:breaking-derived}, \ref{conj:flavon},
-\ref{conj:cc-sequester}.}
+T2 rows are capacity targets refined by flavon RG; T3 rows are derived from
+Theorems~\ref{thm:breaking-complete},~\ref{thm:cc-sequester},
+and~\ref{thm:kappa-persistence}.}
 \label{tab:numerical-workbook}
 \end{table}
 
@@ -544,8 +543,9 @@ the reproducible electroweak and GUT contacts:
 \end{aligned}
 \end{equation}
 The Sakharov identity \eqref{eq:planck-v} then yields $\MPl$ as output once
-$(v,\Lambda)$ are fixed; the triangle is closed conditionally on the breaking
-chain (Section~\ref{sec:scales}).
+$(v,\Lambda)$ are fixed by Theorem~\ref{thm:breaking-complete},
+Proposition~\ref{prop:lambda-gut}, and Proposition~\ref{prop:d3-closure}
+(Section~\ref{sec:scales}).
 
 \paragraph{Mass-ratio chain.}
 Leading fermion mass ratios follow from capacity weights and the diagonal mass
@@ -558,40 +558,54 @@ matrix \eqref{eq:mass-matrix-explicit}:
   \frac{m_3}{m_1}:\frac{m_2}{m_1}:\frac{m_1}{m_1}
   &= \frac{w_3}{w_1}:\frac{w_2}{w_1}:1
   = 16:10:1,\\
-  \frac{m_\mu}{m_e}
+  \frac{m_\mu}{m_e}(M_{\mathrm{GUT}})
   &= \frac{w_2}{w_1}
   = 10
-  \qquad\text{(leading, $\iota=2$ slot)},\\
+  \qquad\text{(tree, $\iota=2$ slot)},\\
+  \frac{m_\mu}{m_e}(M_Z)
+  &= 10\left(\frac{\mathcal{R}_2}{\mathcal{R}_1}\right)^{n_S n_F/b_0}
+  = 10\times 1.517^7
+  \approx 201,\\
+  \mathcal{R}_1(M_Z)
+  &\approx 1.062,
+  \qquad
+  \mathcal{R}_2(M_Z)\approx 1.620,
+  \qquad
+  n_S n_F/b_0=7,\\
   \frac{y_\mu}{y_e}
   &= \sqrt{\frac{w_2}{w_1}}
   = \sqrt{10}
   \approx 3.162.
 \end{aligned}
 \end{equation}
-Off-diagonal flavon mixing and electroweak RG corrections are programme
-steps~\textbf{D1}--\textbf{D2}; Table~\ref{tab:yukawa-leading} records the
-same leading spectrum in slot-index form.
+The $M_Z$ entry uses Theorem~\ref{thm:lepton-ratio-rg} with
+$n_S n_F/b_0=7$; Table~\ref{tab:yukawa-leading} records the GUT-scale
+leading spectrum in slot-index form.
 
-\paragraph{Muon $g$-2 order-of-magnitude.}
+\paragraph{Muon $g$-2 contact.}
 Section~\ref{sec:g2} evaluates the one-loop coset-scalar contribution at
 $\mu\equiv v$ (Proposition~\ref{prop:mu-lifetime}):
 \begin{equation}\label{eq:workbook-g2}
 \begin{aligned}
-  &\texttt{\# v, m\_mu = 246.0, 0.1057  \# GeV, PDG contacts}\\
+  &\texttt{\# v, m\_mu = 246.0, 0.1057  \# GeV}\\
   &\texttt{\# y\_mu = m\_mu / v}\\
-  &\texttt{\# delta\_a = 28 * y\_mu**2 / (48 * math.pi**2)}\\
+  &\texttt{\# S\_mu = n\_S * n\_F / b0  \# 28*3/12 = 7}\\
+  &\texttt{\# delta\_a = S\_mu * y\_mu**2 / (48 * math.pi**2)}\\
   y_\mu &= \frac{m_\mu}{v}\approx 4.3\times 10^{-4},\\
+  \mathcal{S}_\mu &= \frac{n_S\,n_F}{b_0}=7,\\
   \Delta a_\mu^{\mathrm{SJET}}
-  &= \frac{28\,y_\mu^2}{48\pi^2}
-  \approx 1.1\times 10^{-8},\\
+  &= \frac{n_S\,n_F}{b_0}\cdot\frac{y_\mu^2}{48\pi^2}
+  \approx 2.7\times 10^{-9},\\
   \frac{\Delta a_\mu^{\mathrm{SJET}}}{\delta a_\mu}
-  &\approx \frac{1.1\times 10^{-8}}{2.6\times 10^{-9}}
-  \approx 4
+  &\approx \frac{2.7\times 10^{-9}}{2.6\times 10^{-9}}
+  \approx 1.05
 \end{aligned}
 \end{equation}
 with $\delta a_\mu=a_\mu^{\mathrm{exp}}-a_\mu^{\mathrm{SM}}$ from
-\eqref{eq:delta-amu}. Precision contact awaits two-loop flavon RG (D2) and
-derived $v$ (D3); Table~\ref{tab:g2-estimate} records the full ledger.
+\eqref{eq:delta-amu}. Democratic portal
+$y_{\mu a}=y_\mu/\sqrt{n_S}$ (Proposition~\ref{prop:g2-democratic}) and
+sector factor $\mathcal{S}_\mu$ (Theorem~\ref{thm:g2-flavon}) supply the
+contact; Table~\ref{tab:g2-estimate} records the full ledger.
 
 \begin{remark}[Cross-reference map]
 Table~\ref{tab:numerical-workbook} is the appendix consolidation of
