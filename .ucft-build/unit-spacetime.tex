@@ -1,0 +1,438 @@
+%======================================================================%
+\section{Emergent Spacetime, Soldering, and Lorentzian Signature}
+\label{sec:spacetime:main}
+%======================================================================%
+
+The dynamics of UCFT live on the compact real form of $E_6$, whose vacuum
+manifold is the rank-1 primitive-idempotent orbit
+$\mathcal M = \EIII = E_6/(\Spin(10)\times\Uone)$, $\dim_{\mathbb R}\mathcal M = 32$
+(\autoref{thm:potential:T4}). The induced metric on $\mathcal M$ --- the
+kinetic/target-space metric of the coset $\sigma$-model --- is
+\emph{positive-definite}: the maximal compact subgroup
+$H = \Spin(10)\times\Uone$ acts on the reductive complement
+$\mathfrak m = \mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$, a real-irreducible
+module of complex type whose Killing restriction $K|_{\mathfrak m}$ is the unique
+(Schur) $H$-invariant form, of signature $(32,0)$. There is \emph{no} Lorentzian
+content in the coset geometry.
+
+This section establishes how a four-dimensional \emph{Lorentzian} spacetime is
+nonetheless \emph{soldered} onto this Euclidean arena. The logical separation, which
+we maintain throughout, is the following. The positive-definite object is the coset
+metric $K|_{\mathfrak m}$ on the $32$-dimensional internal tangent space $\mathfrak m$.
+The indefinite object is the cubic norm $N$ on the matter representation
+$\mathbf{27}=J_3(\mathbb O)$, whose $2\times2$ octonion-Hermitian sub-block
+$H_2(\mathbb O)\cong\mathbb R^{1,9}$ carries a Minkowski quadratic form. These are
+two distinct forms on two distinct spaces; no single form is asked to be both
+definite and indefinite. The soldering map (Postulate~P3) is the bridge that imports
+the indefinite $(1,3)$ structure onto a tangent 4-plane of the world manifold,
+leaving $K|_{\mathfrak m}$ untouched.
+
+We classify every nontrivial claim as a \textbf{theorem} (proved from stated
+hypotheses), \textbf{postulate} (added structure, P1--P6), or
+\textbf{conjecture} (motivated, not controlled). The structural constraint
+recorded in \autoref{thm:spacetime:antikilling} is that \emph{$d=4$ and signature
+$(1,3)$ are added structure (P3), not consequences of the Killing form.}
+
+%----------------------------------------------------------------------%
+\subsection{The Minkowski block inside the Albert algebra}
+\label{sec:spacetime:block}
+%----------------------------------------------------------------------%
+
+Let $\mathbb O$ be the real division octonions, with conjugation $x\mapsto\bar x$,
+norm $n(x)=x\bar x\in\mathbb R_{\ge0}$, and Euclidean inner product
+$\langle x,y\rangle=\tfrac12(x\bar y+y\bar x)$ on $\mathbb O\cong\mathbb R^8$. The
+space of $2\times2$ octonion-Hermitian matrices is
+\begin{equation}\label{eq:spacetime:H2O}
+  H_2(\mathbb O)=\Bigl\{\,X=\begin{pmatrix} a & x\\ \bar x & b\end{pmatrix}
+  \;:\; a,b\in\mathbb R,\; x\in\mathbb O \,\Bigr\},\qquad
+  \dim_{\mathbb R}H_2(\mathbb O)=10,
+\end{equation}
+with the (well-defined, despite non-associativity) determinant
+$\det X = ab - x\bar x = ab - n(x)$.
+
+\begin{theorem}[Minkowski identification of $H_2(\mathbb O)$]
+\label{thm:spacetime:minkowski}
+In light-cone coordinates $a=X^0+X^9$, $b=X^0-X^9$, and $x=(X^1,\dots,X^8)$ in an
+orthonormal octonion basis,
+\begin{equation}\label{eq:spacetime:det19}
+  \det X = (X^0)^2-(X^9)^2-\sum_{i=1}^{8}(X^i)^2 = -\,\eta_{MN}\,X^M X^N,\qquad
+  \eta=\diag(-1,\underbrace{+1,\dots,+1}_{9}),
+\end{equation}
+so that $\bigl(H_2(\mathbb O),\,-\det\bigr)\cong\mathbb R^{1,9}$.
+\end{theorem}
+\begin{proof}
+$\det X = ab-n(x)=(X^0+X^9)(X^0-X^9)-\sum_i(X^i)^2=(X^0)^2-(X^9)^2-\sum_i(X^i)^2$.
+By Sylvester's law of inertia the diagonal entries contribute one $+$ ($X^0$) and one
+$-$ ($X^9$), and $-n(x)$ contributes eight $-$'s; hence $-\det$ has one timelike and
+nine spacelike directions in the convention $(-,+,\dots,+)$.
+\end{proof}
+
+\begin{theorem}[Octonionic exceptional isomorphisms]
+\label{thm:spacetime:exc}
+There are Lie-group isomorphisms, the four members of the classical family
+$\SL(2,\mathbb A)\cong\Spin(n{+}1,1)$ for the normed division algebras
+$\mathbb A=\mathbb R,\mathbb C,\mathbb H,\mathbb O$ of real dimension $n=1,2,4,8$:
+\begin{equation}\label{eq:spacetime:sl2}
+  \SL(2,\mathbb R)\cong\Spin(1,2),\quad
+  \SL(2,\mathbb C)\cong\Spin(1,3),\quad
+  \SL(2,\mathbb H)\cong\Spin(1,5),\quad
+  \SL(2,\mathbb O)\cong\Spin(1,9).
+\end{equation}
+The defining $10$-dimensional representation of $\Spin(1,9)$ on $\mathbb R^{1,9}$ is
+realized on $(H_2(\mathbb O),-\det)$; the two chiral $\mathbf{16}$ spinors are
+realized on $\mathbb O^2\cong\mathbb R^{16}$.
+\end{theorem}
+\begin{proof}
+Classical (Sudbery; Kugo--Townsend; Manogue--Schray; Baez). For $\mathbb A=\mathbb O$
+the group $\SL(2,\mathbb O)$ is \emph{defined} as $\Spin(1,9)$ with its
+$\mathbb R^{1,9}$ action presented by \eqref{eq:spacetime:H2O}--\eqref{eq:spacetime:det19},
+non-associativity precluding a literal matrix group.
+\end{proof}
+
+\begin{theorem}[The physical Lorentz 4-plane]
+\label{thm:spacetime:lorentz4}
+The chain of composition-algebra inclusions $\mathbb R\subset\mathbb C\subset\mathbb H\subset\mathbb O$
+induces $\Spin(1,1)\subset\Spin(1,3)\subset\Spin(1,5)\subset\Spin(1,9)$. In particular
+$\SL(2,\mathbb C)=\Spin(1,3)\subset\SL(2,\mathbb O)=\Spin(1,9)$ via the sub-block
+$H_2(\mathbb C)=\{[\,[a,z],[\bar z,b]\,]:a,b\in\mathbb R,\,z\in\mathbb C\}\subset H_2(\mathbb O)$,
+$\dim_{\mathbb R}H_2(\mathbb C)=4$, with $\det|_{H_2(\mathbb C)}=ab-|z|^2$ the $(1,3)$
+Minkowski form in the convention $(-,+,+,+)$.
+\end{theorem}
+\begin{proof}
+The same light-cone change of variables as \autoref{thm:spacetime:minkowski},
+restricted to $\mathbb C$, gives $\det=(X^0)^2-(X^1)^2-(X^2)^2-(X^3)^2$. The
+$\SL(2,\mathbb C)$ determinant-covariance is the standard four-dimensional statement.
+\end{proof}
+
+The ambient indefinite structure is the octonionic $\mathbb R^{1,9}$; the
+\emph{physical} Lorentz signature $(1,3)$ is a soldered 4-plane inside it
+(\autoref{sec:spacetime:P3}).
+
+%----------------------------------------------------------------------%
+\subsection{Source of indefiniteness: the cubic norm, not the trace form}
+\label{sec:spacetime:norm}
+%----------------------------------------------------------------------%
+
+The Albert algebra $J_3(\mathbb O)$ of $3\times3$ octonion-Hermitian matrices,
+$\dim_{\mathbb R}J_3(\mathbb O)=27$, carries two basic polynomial invariants: the
+quadratic trace form $Q(X)=\Tr(X^2)$ (a sum of real squares and positive-definite
+octonion norms, hence \emph{positive-definite}) and the cubic norm
+$N(X)=\det X$ (a homogeneous cubic). Their invariance groups differ crucially.
+
+\begin{theorem}[Separation of invariance groups]
+\label{thm:spacetime:groups}
+$F_4=\Aut(J_3(\mathbb O))$ (compact, $\dim 52$) preserves the Jordan product, hence
+\emph{both} $Q$ and $N$; since $Q$ is positive-definite, $F_4\subset\SO(27)$. The
+reduced structure group $E_{6(-26)}$ ($\dim 78$) preserves $N$ only up to a real
+character $\lambda(g)$ and does \emph{not} preserve $Q$: were it to, it would lie in
+$\SO(27)$ and be compact, contradicting its non-compactness (maximal compact $F_4$,
+$26$ non-compact directions move $Q$).
+\end{theorem}
+\begin{proof}
+Automorphisms fix $\mathbf 1$, commute with $\circ$, hence fix the characteristic
+coefficients $\Tr$, $Q=\Tr(X^2)$, $N=\det$; Euclidean signature forces
+$F_4\subset\SO(27)$. The reduced structure group is by definition the linear group
+fixing $N$ up to scalar; $\dim E_{6(-26)}=78>52=\dim F_4$ with non-compactness gives
+the second claim.
+\end{proof}
+
+This excludes the incorrect claim that the structure group preserves $Q$ or that
+$(Q,N)$ separates orbits: only $N$ is structure-group invariant (up to a character),
+and real $E_6$-orbits on the $\mathbf{27}$ are classified by \emph{rank}
+$\in\{0,1,2,3\}$ and the value of $N$, via the sharp map $X^\#$
+($\rank X\le1\Leftrightarrow X^\#=0$; $\rank X\le2\Leftrightarrow N(X)=0$), cf.
+\autoref{thm:potential:L1}.
+
+\begin{theorem}[$N$ is genuinely indefinite, and contains the Minkowski block]
+\label{thm:spacetime:Nindef}
+$N$ takes strictly positive, strictly negative, and zero values on
+$J_3(\mathbb O)\cong\mathbb R^{27}$. Restricting $N$ to the upper-left $2\times2$ block
+$Y=[\,[\xi_1,z_3],[\bar z_3,\xi_2]\,]\in H_2(\mathbb O)$ with the third pivot set to
+$\xi_3=1$ and $z_1=z_2=0$,
+\begin{equation}\label{eq:spacetime:Nrestrict}
+  N(X)\big|_{\mathrm{block}}=\xi_1\xi_2-n(z_3)=\det Y,
+\end{equation}
+so the Minkowski form $-\det=-\eta^{(1,9)}$ of \autoref{thm:spacetime:minkowski} is the
+restriction of the cubic norm $N$ to an $H_2(\mathbb O)\cong\mathbb R^{1,9}$ sub-block.
+\end{theorem}
+\begin{proof}
+On $X=\diag(\xi_1,\xi_2,\xi_3)$, $N=\xi_1\xi_2\xi_3$ takes values $+1,-1,0$ at
+$(1,1,1),(-1,1,1),(0,1,1)$; an odd-degree form is necessarily indefinite. The
+restriction \eqref{eq:spacetime:Nrestrict} is the explicit evaluation of
+$N(X)=\xi_1\xi_2\xi_3+2\Re(z_1z_2z_3)-\sum_i\xi_i\,n(z_i)$ at the stated pivot.
+\end{proof}
+
+\begin{theorem}[Definite coset metric and indefinite norm are consistent]
+\label{thm:spacetime:consistent}
+The positive-definite coset metric $K|_{\mathfrak m}$ and the indefinite spacetime
+form are mutually consistent because they live on different modules:
+\begin{center}\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}llll@{}}
+\toprule
+Object & Lives on & Signature & Invariance \\
+\midrule
+Coset metric $K|_{\mathfrak m}$ & $\mathfrak m=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$ ($32$) & $(32,0)$ definite & $H$ (unique, Schur)\\
+Trace form $Q=\Tr(X^2)$ & $J_3(\mathbb O)=\mathbb R^{27}$ & $(27,0)$ definite & $F_4$ (\emph{not} $E_6$)\\
+Cubic norm $N=\det$ & $J_3(\mathbb O)=\mathbb R^{27}$ & indefinite & $E_6$ up to character\\
+Minkowski $-\det$ & $H_2(\mathbb O)\subset J_3(\mathbb O)$ & $(1,9)$ & $\SL(2,\mathbb O)=\Spin(1,9)$\\
+Soldered $\eta$ & 4-plane of $T_x\mathcal M^4$ & $(1,3)$, $(-,+,+,+)$ & $\SO(1,3)$ (postulated, P3)\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{theorem}
+\begin{proof}
+$K|_{\mathfrak m}$ is positive-definite by the compact-real-form choice (compact $E_6$
+has negative-definite Killing form; the induced metric on $\mathfrak m$ is its
+sign-flip), unique by Schur since $\mathfrak m$ is real-irreducible of complex type with
+commutant $\mathbb C$ (\autoref{cor:VacuumOrbit}). The indefinite $N$ lives on the
+$\mathbf{27}$, a representation distinct from the adjoint complement $\mathfrak m$;
+hence ``$K|_{\mathfrak m}$ Euclidean'' and ``$N$ indefinite'' are statements about
+different data on different spaces. The spacetime signature is imported from
+$N|_{H_2(\mathbb O)}$ via P3, and is never asked of $K|_{\mathfrak m}$.
+\end{proof}
+
+This excludes the incorrect $(4,28)$ Killing/coset signature: Lorentzian structure does
+\emph{not} follow from the coset geometry alone.
+
+%----------------------------------------------------------------------%
+\subsection{The soldering postulate P3}
+\label{sec:spacetime:P3}
+%----------------------------------------------------------------------%
+
+We now state P3. It is a \textbf{Postulate} throughout: \emph{added} structure, not a
+theorem of the coset geometry.
+
+\paragraph{Theorem-level inputs.}
+From the dynamics we have: (T-a) the vacuum manifold
+$\mathcal M=\EIII=E_6/(\Spin(10)\times\Uone)$, $\dim_{\mathbb R}=32$, with reductive
+decomposition $\mathfrak e_6=\mathfrak h\oplus\mathfrak m$,
+$\mathfrak h=\mathfrak{so}(10)\oplus\mathfrak u(1)$,
+$\mathfrak m=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$, and Maurer--Cartan
+form $\theta=\theta_{\mathfrak h}+\theta_{\mathfrak m}$ valued in $\mathfrak e_6$;
+(T-b) the matter rep $\mathbf{27}=J_3(\mathbb O)$ carrying the indefinite $N$ with its
+$H_2(\mathbb O)\cong\mathbb R^{1,9}$ and $H_2(\mathbb C)\cong\mathbb R^{1,3}$ sub-blocks
+(\autoref{thm:spacetime:minkowski}--\autoref{thm:spacetime:lorentz4},
+\autoref{thm:spacetime:Nindef}); (T-c) the branching
+$\mathbf{27}=\mathbf 1_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}$ under $H$.
+
+The $32$ clock fields are the coordinates along $\mathfrak m$ (Goldstone directions of
+$\EIII$). Of these, $28$ are physical massive scalars (single common radiative mass by
+Schur on the irreducible $\mathfrak m$, \autoref{thm:gravity:mass}) and $4$ are
+gauge/soldering modes eaten by world-volume diffeomorphism plus local Lorentz. The $4$
+frame modes are \emph{gauge-protected}, not Hessian zeros: $\mathfrak m$ is
+irreducible and contains no $\SO(10)$ singlet, so no $4$-dimensional $H$-invariant
+subspace of $\mathfrak m$ exists. The old rank-four lemma (\texttt{lem:Rank4}) is
+hereby relabeled: $d=4$ is fixed by P3, and its circular $r>4$ branch is deleted.
+
+\begin{postulate}[P3a, soldering / frame identification]\label{post:spacetime:P3a}
+There exists a soldering map $\sigma$ identifying four distinguished clock-field frame
+directions, written $e^a_\mu$ ($a=0,1,2,3$; $\mu$ a world index), with a tangent
+4-plane $\Pi_x\subset T_x\mathcal M^4$ of an emergent four-dimensional world manifold
+$\mathcal M^4$. The vierbein is the pull-back of the Maurer--Cartan form along these
+four directions,
+\begin{equation}\label{eq:spacetime:vierbein}
+  e^a_\mu(x)=\bigl\langle\,\tau^a,\,\theta_{\mathfrak m}(\partial_\mu)\,\bigr\rangle,
+\end{equation}
+where $\{\tau^a\}_{a=0}^{3}$ is the soldering frame --- the image of the
+$H_2(\mathbb C)\cong\mathbb R^{1,3}$ basis under the embedding of
+\autoref{post:spacetime:P3d}. The vierbein \emph{emerges dynamically}.
+\end{postulate}
+
+\begin{postulate}[P3b, induced Minkowski form]\label{post:spacetime:P3b}
+The induced metric on $\Pi_x$ is the Minkowski form inherited from the cubic-norm /
+$H_2(\mathbb O)\cong\mathbb R^{1,9}$ structure:
+\begin{equation}\label{eq:spacetime:metric}
+  g_{\mu\nu}(x)=e^a_\mu(x)\,e^b_\nu(x)\,\eta_{ab},\qquad
+  \eta_{ab}=\diag(-1,+1,+1,+1),
+\end{equation}
+with $\eta$ the restriction of $-\det=-N$ to the $H_2(\mathbb C)$ sub-block
+(\autoref{thm:spacetime:lorentz4}, \autoref{thm:spacetime:Nindef}).
+\end{postulate}
+
+\begin{postulate}[P3c, dimension and signature are added]\label{post:spacetime:P3c}
+The numbers $d=4$ and signature $(1,3)=(-,+,+,+)$ are \emph{part of P3}: added
+structure, \emph{not} consequences of the Killing form, the coset signature, or any
+rank lemma.
+\end{postulate}
+
+\begin{postulate}[P3d, vierbein condensate / frame reduction]\label{post:spacetime:P3d}
+A vierbein condensate (a VEV of the soldering bilinear) selects the
+$H_2(\mathbb C)\cong\mathbb R^{1,3}$ sub-block of $H_2(\mathbb O)\cong\mathbb R^{1,9}$ and
+breaks the ambient frame symmetry
+\begin{equation}\label{eq:spacetime:framebreak}
+  \Spin(1,9)=\SL(2,\mathbb O)\;\longrightarrow\;\Spin(1,3)\times\Spin(6)
+  =\SL(2,\mathbb C)\times\SU(4),
+\end{equation}
+where the orthogonal $\mathbb R^6$ complement of $\mathbb R^{1,3}$ in $\mathbb R^{1,9}$
+is acted on by internal $\Spin(6)\cong\SU(4)$. The residual $\Spin(1,3)=\SL(2,\mathbb C)$
+is the local Lorentz group.
+\end{postulate}
+
+\begin{theorem}[Internal consistency of P3]\label{thm:spacetime:P3consistent}
+Given \autoref{post:spacetime:P3a}--\autoref{post:spacetime:P3d}, the metric
+$g_{\mu\nu}$ of \eqref{eq:spacetime:metric} is a non-degenerate symmetric rank-2 tensor
+of Lorentzian signature $(1,3)$ on $\mathcal M^4$, invariant under the residual local
+Lorentz group $\SO(1,3)$; the four frame modes $e^a_\mu$ carry exactly the gauge
+degrees of freedom eaten by diffeomorphisms plus local Lorentz, consistent with the
+count $32=28\text{ physical}+4\text{ gauge}$.
+\end{theorem}
+\begin{proof}
+Non-degeneracy and signature are inherited from $\eta_{ab}=\diag(-1,+1,+1,+1)$
+(\autoref{thm:spacetime:lorentz4}) for generic condensate $\det(e^a_\mu)\ne0$;
+$\SO(1,3)$-invariance is $\eta_{ab}=\Lambda^c{}_a\Lambda^d{}_b\eta_{cd}$ for
+$\Lambda\in\SO(1,3)$. The gauge count is the Ward identity
+$\nabla_\mu(\delta\Gamma/\delta e^a_\mu)=0$: the four frame directions are protected by
+diffeomorphism plus local Lorentz, not by a Hessian zero.
+\end{proof}
+
+\paragraph{What P3 does not claim.}
+P3 does not make $K|_{\mathfrak m}$ Lorentzian (it stays positive-definite); it does not
+use a $(4,28)$ Lorentzian split of $\mathfrak m$ (the $4$ are gauge, the $28$ are
+Euclidean target coordinates); and it does not build the 4-plane from $\nabla I_2,
+\nabla I_3$ singlets (there are none in $\mathfrak m$, and $\nabla Q|_{X_0}=2X_0\notin\mathfrak m$).
+The 4-plane is the soldered image of $H_2(\mathbb C)\subset\mathbf{27}$, not a submodule
+of $\mathfrak m$.
+
+\begin{theorem}[No Killing-form derivation of dimension or signature]
+\label{thm:spacetime:antikilling}
+There is no derivation of $d=4$ or signature $(1,3)$ from the Killing form of $E_6$,
+from the coset metric $K|_{\mathfrak m}$, or from any rank lemma. The Killing form of
+compact $E_6$ restricted to $\mathfrak m$ is positive-definite of signature $(32,0)$,
+with zero Lorentzian content. Any $(4,28)$ or $(1,3)$ Killing/coset signature claim is
+false. Lorentzian signature enters \emph{only} through P3, rooted in the indefinite
+cubic norm $N$ / $H_2(\mathbb O)\cong\mathbb R^{1,9}$.
+\end{theorem}
+\begin{proof}
+Immediate from \autoref{thm:spacetime:consistent}: $K|_{\mathfrak m}$ is definite, and
+the indefinite datum lives on the disjoint module $\mathbf{27}$.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Emergent time: Page--Wootters clock and Osterwalder--Schrader}
+\label{sec:spacetime:time}
+%----------------------------------------------------------------------%
+
+Lorentzian time is recovered by a relational-clock plus reconstruction-theorem
+mechanism. We use \emph{no} ``multiply $e^0$ by $i$'' Wick trick.
+
+\begin{postulate}[Timelike clock selection]\label{post:spacetime:clock}
+Among the $32$ clock fields, the soldering condensate
+(\autoref{post:spacetime:P3d}) selects a distinguished timelike direction whose clock
+field we call $\phi^0$: the trace/$X^0$ direction of the soldered
+$H_2(\mathbb C)\subset J_3(\mathbb O)$ block (the unique $\eta$-timelike frame leg
+$e^0_\mu$). Its three spacelike companions are $e^i_\mu$, $i=1,2,3$. The selection of
+\emph{one} timelike direction is the $(1,3)$ content of P3.
+\end{postulate}
+
+Promote $\phi^0$ to a \textbf{Page--Wootters clock}: enlarge the kinematical Hilbert
+space to $\mathcal H=\mathcal H_{\mathrm{clock}}\otimes\mathcal H_{\mathrm{sys}}$ and
+impose the induced-gravity Hamiltonian constraint
+\begin{equation}\label{eq:spacetime:constraint}
+  \widehat H_{\mathrm{phys}}\,|\Psi\rangle\!\rangle=0,\qquad
+  \widehat H_{\mathrm{phys}}=\widehat H_{\mathrm{clock}}+\widehat H_{\mathrm{sys}}
+  \;(+\text{ interaction}),
+\end{equation}
+on physical states $|\Psi\rangle\!\rangle$. Conditioning on clock readings $\phi^0=\tau$
+defines the relational state $|\psi(\tau)\rangle_{\mathrm{sys}}=\langle\phi^0{=}\tau|\Psi\rangle\!\rangle$.
+
+\begin{theorem}[Page--Wootters relational evolution]\label{thm:spacetime:PW}
+With a good clock ($\widehat H_{\mathrm{clock}}=\widehat p_{\phi^0}$ canonically
+conjugate to $\widehat\phi^0$), the conditioned state satisfies the Schr\"odinger
+equation in the relational time $\tau$,
+\begin{equation}\label{eq:spacetime:schrodinger}
+  i\,\partial_\tau\,|\psi(\tau)\rangle_{\mathrm{sys}}
+  =\widehat H_{\mathrm{sys}}\,|\psi(\tau)\rangle_{\mathrm{sys}},
+\end{equation}
+and the unitary group $U(\tau)=e^{-i\widehat H_{\mathrm{sys}}\tau}$ is recovered on
+physical states in the semiclassical/background regime where the soldered $g_{\mu\nu}$
+admits a timelike Killing vector and $\widehat H_{\mathrm{sys}}=\int T_{00}$ along it.
+\end{theorem}
+\begin{proof}
+Standard Page--Wootters reduction: under the constraint
+\eqref{eq:spacetime:constraint} with a conjugate clock, the conditioned state obeys
+\eqref{eq:spacetime:schrodinger}. The identification $t\leftrightarrow x^0$ is
+$\widehat H=\int T_{00}$ along the timelike Killing direction. Global hyperbolicity is
+flagged as an assumption.
+\end{proof}
+
+This demotes the original Axiom II (an externally postulated $U(t)=e^{-iHt}$) to a
+theorem: time is emergent.
+
+\paragraph{Euclidean to Lorentzian via Osterwalder--Schrader.}
+The compact-form $\sigma$-model with positive-definite $K|_{\mathfrak m}$ defines a
+Euclidean functional measure. Lorentzian QFT is obtained by Osterwalder--Schrader (OS)
+reconstruction along the selected time $\phi^0$, \emph{not} by rotating
+$e^0\to i\,e^0$. Let $\tau=\phi^0$ be the OS time, and assume the Euclidean Schwinger
+functions satisfy the OS axioms, in particular \emph{reflection positivity} under
+$\theta:\tau\mapsto-\tau$ about a $\phi^0$-slice,
+\begin{equation}\label{eq:spacetime:reflpos}
+  \sum_{i,j}\bar c_i\,c_j\;S\bigl(\theta F_i\cdot F_j\bigr)\ge0,
+  \qquad F_i \text{ supported in }\{\tau>0\}.
+\end{equation}
+
+\begin{theorem}[OS reconstruction $\Rightarrow$ Lorentzian Wightman theory]
+\label{thm:spacetime:OS}
+Given the OS axioms (Euclidean invariance, reflection positivity
+\eqref{eq:spacetime:reflpos}, symmetry, clustering), the OS reconstruction theorem
+produces a Hilbert space $\mathcal H$, a positive self-adjoint Hamiltonian
+$\widehat H\ge0$ generating $\tau$-translations as the contraction semigroup
+$e^{-\widehat H\tau}$, and --- by analytic continuation of the Schwinger functions in
+the clock-time argument $\tau\to it$ --- Lorentzian Wightman functions on
+$(\mathcal M^4,\eta^{(1,3)})$ with unitary evolution $e^{-i\widehat H t}$ satisfying the
+spectrum condition and Lorentz covariance under the reconstructed $\SO(1,3)$.
+\end{theorem}
+\begin{proof}
+Osterwalder--Schrader (1973, 1975): reflection positivity defines a physical inner
+product on $\{F:\tau>0\}/(\text{null})$; $\widehat H$ is the positive self-adjoint
+generator of $e^{-\widehat H\tau}$; the Schwinger functions, analytic in a tube,
+continue to Wightman distributions.
+\end{proof}
+
+\begin{indicative}[Reflection positivity of the UCFT $\sigma$-model]
+\label{ind:spacetime:reflpos}
+The OS theorem (\autoref{thm:spacetime:OS}) is rigorous given its hypotheses. That the
+UCFT $\sigma$-model \emph{satisfies} reflection positivity \eqref{eq:spacetime:reflpos}
+along $\phi^0$ is the precise property to be checked --- it is the rigorous
+replacement for the Wick trick, and is tagged \textbf{Indicative}.
+\end{indicative}
+
+The analytic continuation $\tau\to it$ acts on the Schwinger distributions in the
+clock-time argument (justified by reflection positivity and the resulting analyticity
+tube), \emph{not} on a frame field. The Lorentzian metric $\eta^{(1,3)}$ is the
+soldered form of P3, already Lorentzian before any continuation; OS supplies the
+unitary, positive-energy dynamics, with $\phi^0$ serving as the OS reflection time. The
+two mechanisms dovetail: \autoref{thm:spacetime:PW} gives the relational unitary
+$U(\tau)$ on physical states, and \autoref{thm:spacetime:OS} gives the positive-energy,
+Lorentz-covariant Wightman theory.
+
+%----------------------------------------------------------------------%
+\subsection{Master statement}
+\label{sec:spacetime:master}
+%----------------------------------------------------------------------%
+
+\begin{postulate}[P3, hardened soldering --- master statement]\label{post:spacetime:P3master}
+Given (i) the compact-$E_6$ dynamics with vacuum $\EIII=E_6/(\Spin(10)\times\Uone)$ and
+positive-definite coset metric $K|_{\mathfrak m}$ (Theorem-level inputs), and (ii) the
+matter rep $\mathbf{27}=J_3(\mathbb O)$ with its indefinite cubic norm $N$ containing the
+$H_2(\mathbb O)\cong\mathbb R^{1,9}$ ($\SL(2,\mathbb O)=\Spin(1,9)$) and
+$H_2(\mathbb C)\cong\mathbb R^{1,3}$ ($\SL(2,\mathbb C)=\Spin(1,3)$) sub-blocks
+(\autoref{thm:spacetime:minkowski}--\autoref{thm:spacetime:lorentz4},
+\autoref{thm:spacetime:Nindef}), we postulate a soldering map $\sigma$
+(\autoref{post:spacetime:P3a}) identifying four clock-field frame directions $e^a_\mu$
+(pull-backs of the Maurer--Cartan form) with a tangent 4-plane of an emergent
+four-dimensional world manifold, carrying $g_{\mu\nu}=e^a_\mu e^b_\nu\eta_{ab}$,
+$\eta=\diag(-1,+1,+1,+1)$ (\autoref{post:spacetime:P3b}), with $d=4$ and signature
+$(1,3)$ as added structure (\autoref{post:spacetime:P3c}), realized by a vierbein
+condensate breaking $\Spin(1,9)\to\Spin(1,3)\times\Spin(6)$
+(\autoref{post:spacetime:P3d}). The timelike clock $\phi^0$ is a Page--Wootters clock
+and Lorentzian unitary dynamics follows from Osterwalder--Schrader reconstruction along
+$\phi^0$ (\autoref{thm:spacetime:OS}), not by Wick rotation of the frame.
+\end{postulate}
+
+The vierbein $e^a_\mu$ of \eqref{eq:spacetime:vierbein}, carrying simultaneously a
+world index $\mu$ and a soldering index $a$, is the fundamental gravitational field; its
+$\sigma$-model dynamics and the induced Einstein--Hilbert term are developed in
+\autoref{sec:gravity:main}. The low-energy field content on the soldered spacetime ---
+the $46=\dim\SO(10)+1$ massless gauge bosons, the chiral $\mathbf{16}_{+1}$ fermions,
+and the $28$ massive coset scalars --- transforms under the unbroken
+$H=\Spin(10)\times\Uone$ and is catalogued in \autoref{sec:sm:main}.

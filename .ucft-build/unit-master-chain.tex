@@ -1,0 +1,111 @@
+%======================================================================%
+\section{Overview of the Construction}
+\label{sec:master:chain}
+%======================================================================%
+
+This section summarizes the logical structure of the paper: how the axioms and
+postulates~\textnormal{P1--P6} lead to a four-dimensional quantum field theory
+whose low-energy limit contains the Standard Model coupled to Einstein--Hilbert
+gravitation.
+
+\subsection{Axioms}
+\label{sec:master:axioms}
+
+\begin{axiom}[I: Order parameter]\label{ax:master:I}
+The field $\Phi\in\mathbf{27}=J_3(\mathbb O)$ transforms under compact $E_6$.
+The origin $\Phi=0$ is a strict local maximum of the potential of~\textnormal{P1}
+(\autoref{thm:potential:T5}); dynamics select the rank-one orbit
+(\autoref{thm:potential:T6}).
+\end{axiom}
+
+\begin{axiom}[II: Quantum kinematics]\label{ax:master:II}
+States admit unitary evolution. In the semiclassical regime this evolution is
+realized through a Page--Wootters clock $\clock$ and the Hamiltonian constraint
+of induced gravity (\autoref{sec:spacetime:time}).
+\end{axiom}
+
+\subsection{Postulates \textnormal{P1--P6}}
+\label{sec:master:postulates}
+
+\begin{center}
+\small
+\begin{tabular}{@{}clp{0.54\linewidth}@{}}
+\toprule
+ & Postulate & Content \\
+\midrule
+P1 & Potential & $E_6$-invariant $V(N,X^\#)$; rank-one minimum \\
+P2 & Vacuum & $\mathcal M=\mathrm{EIII}=E_6/(\mathrm{Spin}(10)\times U(1))$;
+proved from P1 \\
+P3 & Soldering & Four clock fields $\to$ Lorentzian $(1,3)$ via $H_2(\mathbb C)$ \\
+P4 & Matter & One chiral $\mathbf{16}$ per family \\
+P5 & Generations & $SU(3)_F$ on $J_3(\mathbb O)\otimes\mathbb C^3$ \\
+P6 & Yukawa & GUT Higgs sector; type-I seesaw \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Logical dependencies}
+\label{sec:master:map}
+
+\begin{table}[t]
+  \centering
+  \small
+  \renewcommand{\arraystretch}{1.22}
+  \begin{tabular}{@{}clll@{}}
+    \toprule
+    Step & Input & Output & Reference \\
+    \midrule
+    0 & Axioms I--II & $J_3(\mathbb O)$, compact $E_6$ & \S\ref{sec:albert:main} \\
+    1 & P1 & Rank-one minimum & \autoref{thm:potential:T4} \\
+    2 & P2 & $\mathcal M=\mathrm{EIII}$, 32 modes & \autoref{sec:coset:main} \\
+    3 & Geometry & $\mathfrak m=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$ & \autoref{thm:coset:irrep} \\
+    4 & Maurer--Cartan & Composite $\mathrm{Spin}(10)\times U(1)$ & \autoref{thm:gauge:composite} \\
+    5 & P3 & Lorentzian $M^4$; spectrum $28+4$ & \autoref{sec:spacetime:main} \\
+    6 & Axiom II, P3 & Emergent time & \autoref{sec:spacetime:time} \\
+    7 & Massive modes & $M_{\mathrm{Pl}}^2>0$ & \autoref{sec:gravity:main} \\
+    8 & Matter content & Asymptotic freedom; $b_0(3)=12$ & \autoref{thm:sm:b0} \\
+    9 & FRG & $\kappa_\star=96\pi^2/5$ & \autoref{sec:frg:main} \\
+    10 & P4--P6 & Standard Model & \autoref{sec:sm:main} \\
+    11 & -- & Heterotic correspondence & \autoref{sec:strings:main} \\
+    \bottomrule
+  \end{tabular}
+  \caption{Main logical dependencies.}
+  \label{tab:master:chain}
+\end{table}
+
+\subsection{Principal parameters}
+\label{sec:master:numbers}
+
+\begin{center}
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+Quantity & Value \\
+\midrule
+Vacuum & $\mathcal M=E_6/(\mathrm{Spin}(10)\times U(1))$, $\dim_{\mathbb R}=32$ \\
+Coset tangent & $\mathfrak m=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$ \\
+Spectrum & $28$ massive scalars $+$ $4$ gauge modes \\
+$M_{\mathrm{Pl}}^2$ &
+  $\tfrac{28}{6}\,f^2\mu^2\log(\Lambda^2/\mu^2)/(16\pi^2)$ \\
+$b_0$ & $26$ (one generation); $12$ (three generations) \\
+$\kappa_\star$ & $96\pi^2/5$ (conjectural) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Summary}
+\label{sec:master:summary}
+
+\begin{theorem}[Embedding]\label{thm:master:embedding}
+Under Axioms~\autoref{ax:master:I}--\autoref{ax:master:II} and
+postulates~\textnormal{P1--P6}, UCFT defines a four-dimensional effective field
+theory with proved vacuum structure, induced gravitation, an asymptotically free
+gauge sector, and an embedded Standard Model. String-theoretic correspondences
+and the gravitational ultraviolet fixed point are conjectural.
+\end{theorem}
+
+\begin{proof}
+See \autoref{tab:master:chain} and \autoref{thm:intro:embedding}.
+\end{proof}
+
+\clearpage

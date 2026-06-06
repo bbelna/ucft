@@ -1,0 +1,309 @@
+%======================================================================%
+% UNIT: axioms  --  Axioms and Added Postulates
+%======================================================================%
+\section{Axioms and Added Postulates}
+\label{sec:axioms:main}
+
+This section fixes the foundation of Universal Coset Field Theory (UCFT).
+We state the single dynamical \emph{axiom} that supplies the arena --- an
+order parameter valued in the matter representation of $\ESix$, together
+with a quantization prescription --- and we then enumerate, once and up
+front, the added postulates $\Pone$--$\Psix$ that convert this arena into a
+four-dimensional Lorentzian quantum field theory. UCFT is formulated as a
+\emph{conditional embedding}: the axiom supplies the kinematical arena,
+$\Pone$--$\Psix$ supply the remaining structure, and every nontrivial claim
+below is classified as a \textbf{theorem} (proved from stated hypotheses),
+\textbf{postulate} (assumed: $\Pone$--$\Psix$), or
+\textbf{conjecture} (motivated, not controlled).
+
+Conventions used throughout the manuscript are fixed here: the spacetime
+metric signature is $(-,+,+,+)$; the decay constant $f$ carries mass
+dimension $[f]=\text{mass}$; the breaking/mass scale is $\mu$, the UV cutoff
+is $\Lambda$, and the breaking-VEV (GUT) scale tied to $f$ is $\MGUT$; the
+couplings $\ghat^2$, $\xi$, $\yhat^2$, $\kappa$, $\Lambda_{\mathrm{cc}}$ are
+dimensionless. The $32$ Goldstone directions of the symmetry-breaking coset
+are called the \emph{clock fields}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Axiom I: the order parameter and the \texorpdfstring{$\ESix$}{E6}/Albert arena}
+\label{sec:axioms:axiomI}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The arena of UCFT is the exceptional Jordan (Albert) algebra
+$\jalg$, the $27$-dimensional formally real Jordan algebra of
+$3\times3$ Hermitian octonionic matrices,
+\[
+  \jalg=\bigl\{X\in M_3(\Oct): X=X^{\dagger}\bigr\},
+  \qquad X\circ Y=\tfrac12(XY+YX),
+  \qquad \dim_{\mathbb R}\jalg=27 .
+\]
+Its reduced structure group --- the group preserving the cubic norm
+$N(X)=\det_{\Oct}X$ up to a real character --- is the exceptional Lie group
+$\ESix$, and the $27$ is its defining (matter) representation. We commit to
+\emph{two real forms} (see \autoref{sec:axioms:realform}): the
+\textbf{compact} $\ESix$ (equivalently $E_{6(-14)}$) for all dynamics, and
+the split-signature $E_{6(-26)}$ used \emph{only} as the rigid classifier of
+the real orbits.
+
+\begin{axiom}[Order parameter]\label{ax:axioms:I}
+The fundamental order parameter of UCFT is a field $\Phi$ that is a section
+of an $\ESix$ vector bundle valued in the matter representation
+$\Rep{27}\cong\jalg$. Locally, $\Phi:\,U\to\jalg$.
+\end{axiom}
+
+\paragraph{Quantization prescription (theorem-grade kinematics).}
+The quantum theory is defined by the Euclidean functional integral over
+configurations of $\Phi$ with the $\ESix$-invariant weight $e^{-S_E[\Phi]}$,
+$S_E=\int\!\bigl(\tfrac12\,K_{\!AB}\,\partial\Phi^A\partial\Phi^B+V(\Phi)\bigr)$,
+treated as the generating functional of connected correlators. Its physical
+(Lorentzian, unitary, positive-energy) content is recovered not by any naive
+``$e^0\mapsto i\,e^0$'' Wick trick but by Osterwalder--Schrader (OS)
+reconstruction along the soldered timelike clock field $\clock$
+(\autoref{sec:axioms:time}, and \autoref{sec:soldering:os}). The OS
+reconstruction theorem is a \textbf{theorem} given its hypotheses; that the
+UCFT $\sigma$-model \emph{satisfies} reflection positivity is
+\textbf{indicative}, a property to be verified, not assumed.
+
+\begin{remark}[Axiom~I and emergent time]\label{rem:axioms:honest}
+Earlier formulations posited a second axiom asserting a global unitary
+$U(t)=e^{-iHt}$ with an external time parameter. In the present foundation
+that statement is \textbf{realized as a theorem}: time is emergent, recovered
+as a Page--Wootters clock on physical states subject to the induced-gravity
+Hamiltonian constraint (\autoref{thm:axioms:time}). UCFT therefore rests on the
+\emph{single} dynamical Axiom~\ref{ax:axioms:I} together with the quantization
+prescription; the axiom supplies the arena and $\Pone$--$\Psix$ supply the
+added structure required for contact with four-dimensional physics.
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Real form, invariants, and the vacuum manifold}
+\label{sec:axioms:realform}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Two facts must not be conflated. The automorphism group of $\jalg$ (the group
+preserving the Jordan product, hence \emph{both} $Q(X)=\Tr(X^2)$ and $N(X)$)
+is the compact $F_4$, $\dim 52$. The reduced structure group preserving
+\emph{only} $N$ (up to a character) is the larger $\ESix$, $\dim 78$; it does
+\textbf{not} preserve $Q=\Tr(X^2)$. Consequently:
+
+\begin{theorem}[Invariants and orbit classification]\label{thm:axioms:orbits}
+Only the cubic norm $N$ is $\ESix$ structure-group invariant, up to a real
+character $\lambda(g)$; the quadratic form $Q(X)=\Tr(X^2)$ is
+$F_4$-invariant only. Real $\ESix$-orbits in $\jalg$ are classified by
+$\mathrm{rank}\,X\in\{0,1,2,3\}$ together with $N(X)$ ---
+\emph{not} by the pair $(Q,N)$. Moreover
+\[
+  \mathrm{rank}\,X\le1\iff X^{\#}=0,\qquad
+  \mathrm{rank}\,X\le2\iff N(X)=0,\qquad
+  \mathrm{rank}\,X=3\iff N(X)\neq0,
+\]
+where $X^{\#}=\nabla N(X)$ is the $\ESix$-covariant sharp (adjoint) map.
+\end{theorem}
+
+\begin{remark}[Real form committed to]\label{rem:axioms:compact}
+For the dynamics we use the \textbf{compact} $\ESix$ (equivalently
+$E_{6(-14)}$, whose maximal compact subgroup is exactly
+$H=\SOTen\times\UOne$). On the compact form the $27$ is unitary, the trace
+form $Q$ is the invariant metric, the norm character is identically $1$, and
+the coset metric is \emph{positive-definite} --- giving a healthy kinetic
+term and a unitary gauge sector. Coercivity and boundedness-below of $V$ are
+statements about the compact form (non-compact orbits cannot be coercive).
+The split form $E_{6(-26)}$ is invoked \emph{only} in
+\autoref{thm:axioms:orbits} as the rigid classifier of the real $27$ by rank
+and $N$.
+\end{remark}
+
+\begin{theorem}[Vacuum manifold $=$ EIII]\label{thm:axioms:eiii}
+The symmetry-breaking vacuum manifold of UCFT is the rank-$1$
+primitive-idempotent orbit
+\begin{equation}\label{eq:axioms:eiii}
+  \M \;=\; \frac{\ESix}{\SOTen\times\UOne} \;=\; \mathrm{EIII},
+  \qquad \dim_{\mathbb R}\M = 78-46 = 32,
+\end{equation}
+the closed minimal $\ESix$-orbit in $\mathbb P(27_{\mathbb C})$ --- the
+complex Cayley plane. This is the orbit of a rank-$1$ primitive idempotent,
+\textbf{not} the orbit of $\diag(1,1,1)$ (whose stabiliser is $F_4$ and whose
+orbit $\ESix/F_4$ has real dimension $26$).
+\end{theorem}
+
+The defining datum of the breaking is the branching of the adjoint and the
+fundamental under $H=\SOTen\times\UOne$:
+\begin{align}
+  \Rep{78} &= \Rep{45}_{0}\oplus\Rep{1}_{0}
+              \oplus\Rep{16}_{-3}\oplus\Repbar{16}_{+3}, \label{eq:axioms:adj}\\
+  \Rep{27} &= \Rep{1}_{+4}\oplus\Rep{10}_{-2}\oplus\Rep{16}_{+1}.
+              \label{eq:axioms:fund}
+\end{align}
+The coset tangent space is therefore
+\begin{equation}\label{eq:axioms:tangent}
+  \mathfrak m \;=\; \Rep{16}_{-3}\oplus\Repbar{16}_{+3}
+  \qquad (32\ \text{real}),
+\end{equation}
+a real-irreducible module of complex type (commutant $=\mathbb C$). The
+$\UOne$ charge forbids the symmetric $\Rep{16}\times\Rep{16}$ and
+$\Repbar{16}\times\Repbar{16}$ invariants, leaving the unique charge-zero
+cross-pairing; by Schur the invariant coset metric $K|_{\mathfrak m}$ is
+unique and \emph{positive-definite}. Crucially, $\mathfrak m$ contains
+\textbf{no} $\SOTen$ singlet: it is \emph{not} $2\times\Rep{10}+4$, nor
+$\Rep{10}+\Repbar{10}+4$, nor anything with a singlet. The $32$ Goldstones
+spanning $\mathfrak m$ are the clock fields.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The added postulates \texorpdfstring{$\Pone$--$\Psix$}{P1--P6}}
+\label{sec:axioms:postulates}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We now state, once and explicitly, the added structure. These are
+\textbf{postulates}, not theorems; the manuscript cites them as
+$\Pone$--$\Psix$ wherever they are used.
+
+\begin{postulate}[Potential class]\label{post:axioms:P1}
+($\Pone$) The dynamics for $\Phi$ are governed by an $\ESix$-invariant
+polynomial potential built from the cubic norm $N$ and the sharp map
+$X^{\#}$,
+\begin{equation}\label{eq:axioms:V}
+  V(X)\;=\;\alpha\,\langle X^{\#},X^{\#}\rangle
+          \;+\;\beta\,\bigl[\Tr(X^2)-c_2\bigr]^2
+          \;+\;\gamma\,\Tr(X^2)^{k},
+  \qquad \alpha,\beta,\gamma>0,\ \ k\ge2\ \text{even},
+\end{equation}
+whose global minimum is the rank-$1$ idempotent orbit. The covariant term
+$\langle X^{\#},X^{\#}\rangle\ge0$ vanishes exactly on $\mathrm{rank}\le1$;
+the $\Tr(X^2)$ terms are $F_4$-invariant selectors fixing the nonzero scale
+and representative. On the compact real form every term of
+\eqref{eq:axioms:V} is a genuine $\ESix$ invariant.
+\end{postulate}
+
+\begin{postulate}[Vacuum selection]\label{post:axioms:P2}
+($\Ptwo$) The vacuum is the minimal orbit
+$\M=\ESix/(\SOTen\times\UOne)=\mathrm{EIII}$, $\dim_{\mathbb R}\M=32$. This is
+\emph{proved} from $\Pone$ as the vacuum-selection theorem
+(\autoref{thm:potential:T4}); see also \autoref{thm:axioms:eiii}.
+\end{postulate}
+
+\begin{postulate}[Soldering and signature]\label{post:axioms:P3}
+($\Pthree$) A soldering map identifies four clock-field frame directions
+$e^{a}{}_{\mu}$ ($a=0,1,2,3$) with a tangent $4$-plane of an emergent
+$4$-manifold $\mathcal M^4$, with vierbein
+$e^{a}{}_{\mu}(x)=\langle\tau^a,\theta_{\mathfrak m}(\partial_\mu)\rangle$
+the pull-back of the Maurer--Cartan form, and induced metric
+$g_{\mu\nu}=e^{a}{}_{\mu}e^{b}{}_{\nu}\,\eta_{ab}$,
+$\eta=\diag(-1,+1,+1,+1)$. The Minkowski form $\eta$ is the restriction of
+the cubic norm $N$ to the sub-block $H_2(\Oct)\cong\mathbb R^{1,9}$, reduced
+to $H_2(\mathbb C)\cong\mathbb R^{1,3}$ by a vierbein condensate. The
+spacetime dimension $d=4$ and signature $(1,3)=(-,+,+,+)$ enter \emph{here},
+as added structure --- not as Killing-form, coset, or rank-lemma
+consequences. See \autoref{sec:soldering:main}.
+\end{postulate}
+
+\begin{postulate}[Matter content and chirality]\label{post:axioms:P4}
+($\Pfour$) Each family contributes one chiral $\Rep{16}$ of $\SOTen$, with
+the $\UOne$ charges of \eqref{eq:axioms:fund} (the family lives in
+$\Rep{16}_{+1}\subset\Rep{27}$); there are no mirror partners.
+\end{postulate}
+
+\begin{postulate}[Family symmetry]\label{post:axioms:P5}
+($\Pfive$) There are three generations, realized (primary route) by an
+$SU(3)_F$ horizontal symmetry acting on $\jalg\otimes\mathbb C^3$,
+yielding three chiral $\Rep{16}$s with no mirrors. This is corroborated
+(a correspondence, not a second mechanism) by the heterotic count
+$h^1(\widehat Q,V_{16})=3$. See \autoref{sec:sm:generations}.
+\end{postulate}
+
+\begin{postulate}[GUT-Higgs / Yukawa sector]\label{post:axioms:P6}
+($\Psix$) Fermion masses arise from a real $\SOTen$ Higgs/Yukawa sector
+($\Rep{45}_H$ or $\Rep{54}_H$, and $\Rep{126}_H$, with electroweak
+$\Rep{10}_H$), generating Dirac masses and the type-I seesaw. The naive
+coupling $-y\,\bar\psi\,\phi^a T_a\,\psi$ with $\phi\in\{\Rep{16},\Repbar{16}\}$
+is forbidden: $\Rep{16}\times\Rep{16}=\Rep{10}+\Rep{120}+\Rep{126}$ and
+$\Rep{16}\times\Repbar{16}=\Rep{1}+\Rep{45}+\Rep{210}$ contain no $H$-singlet
+from such a scalar, and $H$ is unbroken. See \autoref{sec:sm:yukawa}.
+\end{postulate}
+
+\begin{remark}[Epistemic status of the postulates]\label{rem:axioms:tagging}
+Of these, $\Ptwo$ is \emph{proved} from $\Pone$ (\autoref{thm:potential:T4});
+$\Pthree$--$\Psix$ are \emph{added structure}. The gravitational
+fixed point of \autoref{sec:gravity:as} is \emph{conjectural}, and the
+Standard Model is \emph{embedded} under $\Pfour$--$\Psix$.
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{From Axiom I to a broken vacuum}
+\label{sec:axioms:broken}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The $27$ is a non-trivial irreducible $\ESix$ representation, so the
+\emph{only} vector fixed by the whole structure group is the origin
+$\Phi=0$. Maximal symmetry is therefore not a stable ground state: the
+potential $\Pone$ makes $\Phi=0$ a strict local maximum.
+
+\begin{theorem}[The symmetric origin is a strict maximum]\label{thm:axioms:origin}
+For $V$ as in \eqref{eq:axioms:V},
+\[
+  \Hess V(0)=-4\beta c_2\,\mathbb 1\prec0,
+\]
+i.e.\ all $27$ eigenvalues equal $-4\beta c_2<0$, so $\Phi=0$ is a strict
+local maximum. Since $V(0)=\beta c_2^2$ strictly exceeds the value
+$W(q_\star)$ attained on the rank-$1$ orbit, the broken vacuum
+$\M=\mathrm{EIII}$ beats the origin both locally and globally.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The covariant term contributes $\langle X^{\#},X^{\#}\rangle=O(\|X\|^4)$, so
+its Hessian vanishes at the origin; only the selector $\beta[\Tr(X^2)-c_2]^2$
+contributes at quadratic order, giving $\Hess V(0)=-4\beta c_2\,\mathbb 1$.
+The global statement is the vacuum-selection theorem
+\autoref{thm:potential:T4}: $V=\alpha\langle X^{\#},X^{\#}\rangle+W(\Tr(X^2))$
+with $W$ strictly convex and $W(q_\star)<W(0)=\beta c_2^2$, so every global
+minimizer has $X^{\#}=0$ (rank $\le1$) and $\Tr(X^2)=q_\star>0$ (rank
+exactly $1$).
+\end{proof}
+
+\begin{remark}[Forward reference to roll-down]\label{rem:axioms:rolldown}
+Because $\Phi=0$ is linearly unstable (growth rate $4\beta c_2$) and $V$ is a
+strict Lyapunov function that is coercive on the compact real form, generic
+initial data flow under the equations of motion to the broken vacuum $\M$.
+The roll-down dynamics, the tree-level vanishing of $\Hess V|_{\mathfrak m}$
+(the $32$ exact Goldstone/clock fields), and the single common radiative mass
+fixed by Schur on the irreducible $\mathfrak m$, are established in
+\autoref{thm:potential:T5} and \autoref{thm:potential:T6}, with the spectrum
+analysed in \autoref{sec:gravity:spectrum}.
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Reconciliation of axiomatic and emergent time}
+\label{sec:axioms:time}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The legacy ``Axiom~II'' posited a global unitary $U(t)=e^{-iHt}$ acting along
+an external time. UCFT has no external time: time is one of the soldered
+clock fields ($\Pthree$). We reconcile the two pictures by realizing the
+unitary-evolution statement as a theorem on physical states.
+
+\begin{theorem}[Emergent time as a Page--Wootters clock]\label{thm:axioms:time}
+Induced gravity supplies a diffeomorphism/Hamiltonian constraint
+$\widehat H_{\mathrm{phys}}\,\dket{\Psi}=0$ on physical states. Designate the
+soldered timelike clock field $\clock$ a Page--Wootters clock. Conditioning,
+\[
+  \ket{\psi(\tau)}=\dbra{\clock=\tau}\Psi\rangle\!\rangle,
+  \qquad
+  i\,\partial_\tau\ket{\psi(\tau)}=\widehat H_{\mathrm{sys}}\ket{\psi(\tau)},
+\]
+so the one-parameter unitary group $U(\tau)=e^{-i\widehat H_{\mathrm{sys}}\tau}$
+is recovered on physical states in the semiclassical regime, with the
+identification $t\leftrightarrow x^0$ via
+$H=\int T_{00}$ along the timelike Killing direction. Global hyperbolicity is
+an assumption.
+\end{theorem}
+
+\begin{remark}[Euclidean to Lorentzian]\label{rem:axioms:os}
+The passage to Lorentzian, unitary, positive-energy dynamics is via
+Osterwalder--Schrader reconstruction along $\clock$ (reflection positivity),
+\emph{not} by the ill-defined ``multiply $e^0$ by $i$'' Wick prescription.
+The metric $\eta^{(1,3)}$ is already the soldered ($\Pthree$) Lorentzian form
+before any continuation; OS reconstruction then supplies unitary,
+positive-energy evolution. As noted under the quantization prescription, OS
+reconstruction is a \textbf{theorem} given its hypotheses, while reflection
+positivity of the UCFT $\sigma$-model is \textbf{indicative}. See
+\autoref{sec:soldering:os}.
+\end{remark}

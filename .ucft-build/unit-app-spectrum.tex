@@ -1,0 +1,388 @@
+%======================================================================%
+\section{Branchings and the Coset Module}
+\label{sec:app-spectrum:main}
+%======================================================================%
+
+This appendix collects the representation-theoretic facts on which the
+dynamical claims of the manuscript rest: the branching of the
+$\mathbf{78}$ (adjoint) and $\mathbf{27}$ (fundamental) of $E_6$ under
+the maximal compact subgroup $H=\Spin(10)\times U(1)$, the
+$U(1)$ charge normalization, and the structural fact that the coset
+tangent module
+\[
+  \mathfrak m \;=\; \mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}
+\]
+is \emph{real-irreducible of complex type}, with real commutant
+$\End_H(\mathfrak m)\cong\mathbb C$.  These results fix (i) that the
+invariant coset metric $K|_{\mathfrak m}$ is unique up to scale and
+positive-definite (\autoref{thm:app-spectrum:metric}); and (ii) that one
+radiative Coleman--Weinberg loop produces a \emph{single common mass} on
+all $32$ clock fields by Schur's lemma, the input used in the mass-spectrum
+and induced-gravity units (\autoref{thm:app-spectrum:schurmass}).
+
+Throughout, $H=\Spin(10)\times U(1)$ is the (compact) stabilizer of a
+rank-one primitive idempotent, so the relevant real form for the dynamics
+is the compact $E_6$ (equivalently $E_{6(-14)}$, whose maximal compact is
+exactly $H$); see \autoref{sec:realform:main}. The Killing form on this
+real form is negative-definite on $\mathfrak e_6$, hence
+\emph{positive-definite} on the coset $\mathfrak m$ once the standard
+sign for symmetric spaces of compact type is taken. There is no
+$(4,28)$ Killing signature and no Lorentzian content in $\mathfrak m$;
+Lorentzian signature is supplied separately by the soldering postulate
+P3 (\autoref{sec:soldering:main}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The $U(1)$ charge normalization}
+\label{sec:app-spectrum:u1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Fix the abelian generator $Y\in\mathfrak u(1)\subset\mathfrak h$ that
+commutes with $\mathfrak{so}(10)$. We normalize $Y$ so that the
+$\Spin(10)$ spinor $\mathbf{16}$ appearing in the \emph{fundamental}
+$\mathbf{27}$ carries charge $+1$:
+\begin{equation}
+  q\bigl(\mathbf{16}\subset\mathbf{27}\bigr) \;=\; +1 .
+  \label{eq:app-spectrum:norm}
+\end{equation}
+This is the smallest charge quantum appearing in the $\mathbf{27}$ and
+is the convenient unit because it makes every charge in the
+$\mathbf{27}$ and the $\mathbf{78}$ an integer. With this choice the
+remaining charges are fixed by requiring (a) that the cubic invariant
+$N$ (the $E_6$ singlet in $\Sym^3(\mathbf{27})$) be neutral, and (b)
+that the adjoint decomposition close consistently. We record both
+branchings, then verify these two conditions.
+
+\begin{theorem}[Branchings under $H=\Spin(10)\times U(1)$]
+\label{thm:app-spectrum:branchings}
+With the normalization \eqref{eq:app-spectrum:norm}, the fundamental and
+adjoint of $E_6$ decompose as
+\begin{align}
+  \mathbf{27}
+    &= \mathbf{1}_{+4}\;\oplus\;\mathbf{10}_{-2}\;\oplus\;\mathbf{16}_{+1},
+    \label{eq:app-spectrum:27}\\[2pt]
+  \mathbf{78}
+    &= \mathbf{45}_{0}\;\oplus\;\mathbf{1}_{0}\;\oplus\;
+       \mathbf{16}_{-3}\;\oplus\;\overline{\mathbf{16}}_{+3}.
+    \label{eq:app-spectrum:78}
+\end{align}
+The coset (broken) directions are
+\begin{equation}
+  \mathfrak h = \mathfrak{so}(10)\oplus\mathfrak u(1)
+     = \mathbf{45}_{0}\oplus\mathbf{1}_{0},
+  \qquad
+  \mathfrak m = \mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3},
+  \qquad \dim_{\mathbb R}\mathfrak m = 32 .
+  \label{eq:app-spectrum:hm}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+\emph{Dimensions and $\Spin(10)$ content.}
+$1+10+16=27$ and $45+1+16+16=78$, matching $\dim\mathbf{27}=27$ and
+$\dim\mathbf{78}=78$. The $\Spin(10)$ pieces are forced by the chain
+$E_6\supset\Spin(10)\times U(1)$: the adjoint $\mathbf{78}$ contains
+$\mathfrak{so}(10)=\mathbf{45}$, the abelian generator $\mathbf{1}$, and
+the off-diagonal coset which is the unique pair of chiral half-spinors
+$\mathbf{16}\oplus\overline{\mathbf{16}}$ (a Hermitian symmetric pair,
+since $E_6/H=\mathrm{EIII}$ is Hermitian symmetric of complex type). The
+$\mathbf{27}$ is the smallest faithful rep; under $\Spin(10)$ it is the
+sum of a singlet, a vector $\mathbf{10}$, and a spinor $\mathbf{16}$.
+
+\emph{Charge assignment.} Set $q(\mathbf{16}\subset\mathbf{27})=+1$ by
+\eqref{eq:app-spectrum:norm}. The cubic $E_6$ singlet
+$N\in\Sym^3(\mathbf{27})$ contains a $\Spin(10)$-singlet coupling
+$\mathbf{1}\cdot\mathbf{10}\cdot\mathbf{10}$ and a coupling
+$\mathbf{10}\cdot\mathbf{16}\cdot\mathbf{16}$ (the unique
+$\Spin(10)$-invariants in $\mathbf{10}\otimes\mathbf{16}\otimes\mathbf{16}$
+and in $\mathbf{1}\otimes\mathbf{10}\otimes\mathbf{10}$). Charge
+neutrality of $N$ requires
+\[
+  q(\mathbf 1)+2\,q(\mathbf{10})=0,
+  \qquad
+  q(\mathbf{10})+2\,q(\mathbf{16})=0 .
+\]
+With $q(\mathbf{16})=+1$ the second gives $q(\mathbf{10})=-2$, and the
+first gives $q(\mathbf 1)=-2\,q(\mathbf{10})=+4$, yielding
+\eqref{eq:app-spectrum:27}.
+
+For the adjoint, the coset $\mathfrak m$ transforms in the
+$\mathbf{16}\oplus\overline{\mathbf{16}}$ that maps
+$\mathbf{27}\to\mathbf{27}$ raising/lowering the $\Spin(10)$ grading by
+one spinor step. Acting on the graded $\mathbf{27}$
+\eqref{eq:app-spectrum:27}, the raising operator carries the
+$\mathbf{16}_{+1}$ piece into the $\mathbf{1}_{+4}\oplus\mathbf{10}_{-2}$
+pieces; matching $U(1)$ charges across the three components forces the
+coset spinor to carry charge $-3$ and its conjugate $+3$:
+\[
+  q(\mathbf{16}\subset\mathfrak m)
+   = q(\mathbf{1}_{+4})-q(\mathbf{16}_{+1}) = 4-1 = 3
+   \;\;(\text{or}\;\; q(\mathbf{10}_{-2})-q(\mathbf{16}_{+1})=-3),
+\]
+which are conjugate, so $\mathfrak m=\mathbf{16}_{-3}\oplus
+\overline{\mathbf{16}}_{+3}$ with the diagonal $H$ at charge $0$. This is
+\eqref{eq:app-spectrum:78} and \eqref{eq:app-spectrum:hm}.
+\end{proof}
+
+\begin{remark}\label{rem:app-spectrum:nosinglet}
+The coset $\mathfrak m=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$
+contains \emph{no} $\Spin(10)$ singlet, and indeed no $\Spin(10)$ vector.
+Any decomposition of the form $2\times\mathbf{10}+\mathbf 4$,
+$\mathbf{10}+\overline{\mathbf{10}}+\mathbf 4$, or one containing a
+singlet-in-$\mathfrak m$ is therefore \emph{false}: those would neither
+reproduce the chiral spinor content of $\mathrm{EIII}$ nor sum correctly
+($32=16+16$, not $2\cdot10+4=24$). The absence of a singlet in
+$\mathfrak m$ is what makes $\mathfrak m$ irreducible and forces the
+single-common-mass conclusion below.
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Relevant tensor products of $\Spin(10)$ spinors}
+\label{sec:app-spectrum:tensor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We record the $\Spin(10)$ tensor products used repeatedly in the gauge,
+metric, and Yukawa arguments. Writing $\mathbf{16}$ for a chiral
+half-spinor:
+\begin{align}
+  \mathbf{16}\otimes\mathbf{16}
+    &= \mathbf{10}\;\oplus\;\mathbf{120}\;\oplus\;\mathbf{126},
+    \label{eq:app-spectrum:1616}\\
+  \mathbf{16}\otimes\overline{\mathbf{16}}
+    &= \mathbf{1}\;\oplus\;\mathbf{45}\;\oplus\;\mathbf{210}.
+    \label{eq:app-spectrum:16bar}
+\end{align}
+Dimension checks: $16\cdot16=256=10+120+126$ and
+$16\cdot16=256=1+45+210$. In \eqref{eq:app-spectrum:1616} the
+$\mathbf{10}$ is symmetric, the $\mathbf{126}$ is symmetric (self-dual
+$5$-form), and the $\mathbf{120}$ ($3$-form) is antisymmetric:
+\begin{equation}
+  \Sym^2(\mathbf{16}) = \mathbf{10}\oplus\mathbf{126},
+  \qquad
+  \wedge^2(\mathbf{16}) = \mathbf{120}.
+  \label{eq:app-spectrum:symanti}
+\end{equation}
+In \eqref{eq:app-spectrum:16bar} the singlet $\mathbf 1$ is the
+$H$-invariant Hermitian pairing of a spinor with its conjugate.
+
+\begin{remark}[Yukawa consequence]\label{rem:app-spectrum:yukawa}
+The decompositions \eqref{eq:app-spectrum:1616}--\eqref{eq:app-spectrum:16bar}
+imply there is \emph{no} $H$-singlet in
+$\mathbf{16}\otimes\mathbf{16}\otimes\{\mathbf{16},\overline{\mathbf{16}}\}$:
+a scalar valued in $\mathbf{16}$ or $\overline{\mathbf{16}}$ cannot form
+an invariant Yukawa coupling $-y\,\bar\psi\,\phi\,\psi$. Since $H$ is
+unbroken at the vacuum, fermion masses must come instead from the real
+$\Spin(10)$ Higgs/Yukawa sector ($\mathbf{10}_H$ for Dirac masses via the
+$\mathbf{10}\subset\mathbf{16}\otimes\mathbf{16}$, and
+$\overline{\mathbf{126}}_H$ for Majorana masses via the
+$\mathbf{126}\subset\mathbf{16}\otimes\mathbf{16}$), as assumed in
+Postulate~P6 (\autoref{sec:sm:yukawa}). This is an embedding, not a
+derivation.
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Reality type and commutant of the coset module}
+\label{sec:app-spectrum:reality}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We now establish the structural fact that controls both the coset metric
+and the radiative mass spectrum.
+
+\begin{theorem}[$\mathfrak m$ is real-irreducible of complex type]
+\label{thm:app-spectrum:complextype}
+The real $32$-dimensional $H$-module
+$\mathfrak m=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$ is
+\emph{irreducible over $\mathbb R$} and is of \emph{complex type}: its
+real endomorphism algebra is
+\[
+  \End_H(\mathfrak m)\;\cong\;\mathbb C .
+\]
+\end{theorem}
+
+\begin{proof}
+The complex $\Spin(10)$ spinor $\mathbf{16}$ is a representation of
+\emph{complex type} (it is not self-conjugate;
+$\overline{\mathbf{16}}\not\cong\mathbf{16}$ for $\Spin(10)$, since
+$5\equiv1\pmod 4$ places $\Spin(10)$ in the class with inequivalent chiral
+spinors). The $U(1)$ factor multiplies the two summands by the opposite
+characters $e^{-3i\theta}$ and $e^{+3i\theta}$. As a \emph{complex}
+$H$-representation, $\mathfrak m_{\mathbb C}=\mathbf{16}_{-3}\oplus
+\overline{\mathbf{16}}_{+3}$ is a sum of two \emph{inequivalent}
+irreducibles (different $\Spin(10)$ type \emph{and} opposite $U(1)$
+charge), so $\End_{H,\mathbb C}(\mathfrak m_{\mathbb C})\cong
+\mathbb C\oplus\mathbb C$.
+
+Now $\mathfrak m$ is the \emph{real} module obtained by viewing
+$\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$ as the realification
+of the single complex irreducible $\mathbf{16}_{-3}$: complex conjugation
+on the underlying real space is an antilinear $H$-map that exchanges the
+two summands (it sends $\mathbf{16}_{-3}\mapsto\overline{\mathbf{16}}_{+3}$,
+respecting both the conjugate $\Spin(10)$ type and the sign-reversed
+$U(1)$ charge). Hence $\mathfrak m\cong(\mathbf{16}_{-3})_{\mathbb R}$,
+the realification of one complex irreducible. The standard reality
+trichotomy then gives, for a complex irreducible $W$ that is not
+self-conjugate,
+\[
+  \End_H\bigl(W_{\mathbb R}\bigr)\cong\mathbb C ,
+\]
+i.e.\ complex type, and $W_{\mathbb R}$ is irreducible over $\mathbb R$
+(its only real-invariant subspaces are $0$ and the whole space, because
+any proper one would have to be one of the two complex summands, which are
+not $\mathbb R$-invariant under the conjugation map). This proves
+irreducibility over $\mathbb R$ and $\End_H(\mathfrak m)\cong\mathbb C$.
+\end{proof}
+
+The commutant being $\mathbb C$ (rather than $\mathbb R$ or
+$\mathbb H$) is the precise sense in which $\mathfrak m$ is ``of complex
+type.'' It supplies exactly one $\mathbb R$-linear complex structure
+$J\in\End_H(\mathfrak m)$ with $J^2=-\mathbf 1$ commuting with $H$ --- the
+complex structure of the Hermitian symmetric space $\mathrm{EIII}$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Uniqueness and definiteness of the invariant metric}
+\label{sec:app-spectrum:metric}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{theorem}[Unique definite invariant metric]
+\label{thm:app-spectrum:metric}
+The space of $H$-invariant real symmetric bilinear forms on
+$\mathfrak m$ is \emph{one-dimensional}. Its generator is the restriction
+of the Killing form of (compact) $E_6$ to $\mathfrak m$, and is
+\emph{positive-definite}. Consequently the coset/target-space metric
+\begin{equation}
+  \mathfrak g_{\alpha\beta} \;=\; f^2\,K_{\alpha\beta}\big|_{\mathfrak m},
+  \qquad f^2>0,
+  \label{eq:app-spectrum:metric}
+\end{equation}
+is the unique (up to the positive scale $f^2$) admissible
+$\sigma$-model kinetic metric, and it is Euclidean.
+\end{theorem}
+
+\begin{proof}
+\emph{Counting invariants via the $U(1)$ charge.} An $H$-invariant
+symmetric bilinear form on $\mathfrak m$ is an $H$-invariant element of
+$\Sym^2(\mathfrak m^\ast)$. Decompose
+\[
+  \Sym^2\bigl(\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}\bigr)
+   = \underbrace{\Sym^2(\mathbf{16}_{-3})}_{\text{charge }-6}
+   \;\oplus\;
+   \underbrace{\Sym^2(\overline{\mathbf{16}}_{+3})}_{\text{charge }+6}
+   \;\oplus\;
+   \underbrace{\mathbf{16}_{-3}\otimes\overline{\mathbf{16}}_{+3}}_{\text{charge }0}.
+\]
+The first two blocks carry net $U(1)$ charge $\mp6\neq0$, so they contain
+\emph{no} $U(1)$-singlet and hence no $H$-invariant: the $U(1)$ charge
+\emph{forbids} the symmetric $\mathbf{16}\times\mathbf{16}$ and
+$\overline{\mathbf{16}}\times\overline{\mathbf{16}}$ invariants. The only
+charge-$0$ block is the cross-pairing
+$\mathbf{16}_{-3}\otimes\overline{\mathbf{16}}_{+3}$, whose $\Spin(10)$
+content is $\mathbf 1\oplus\mathbf{45}\oplus\mathbf{210}$ by
+\eqref{eq:app-spectrum:16bar}. Exactly one $\Spin(10)$ singlet $\mathbf 1$
+appears, and it is symmetric under the exchange that defines a bilinear
+\emph{form}. Hence there is a \emph{unique} $H$-invariant symmetric form,
+the charge-$0$ cross-pairing.
+
+\emph{Identification with the Killing form and definiteness.} The Killing
+form of $E_6$ restricted to $\mathfrak m$ is an $H$-invariant symmetric
+form; by the uniqueness just proved it must coincide (up to scale) with
+the cross-pairing. On the \emph{compact} real form of $E_6$ the Killing
+form is negative-definite on all of $\mathfrak e_6$, hence on the symmetric
+complement $\mathfrak m$ the induced metric of the symmetric space of
+compact type is positive-definite; equivalently the Hermitian pairing
+$\langle v,v\rangle=\sum_i|v_i|^2$ furnished by the cross-pairing is
+strictly positive. Schur's lemma (in the strong form
+$\End_H(\mathfrak m)\cong\mathbb C$, \autoref{thm:app-spectrum:complextype})
+guarantees there is no second, independent invariant form to spoil
+definiteness. Positivity of the $\sigma$-model kinetic term then fixes the
+scale to $f^2>0$, giving \eqref{eq:app-spectrum:metric}.
+\end{proof}
+
+\begin{remark}\label{rem:app-spectrum:nolorentz}
+The metric \eqref{eq:app-spectrum:metric} has signature $(32,0)$ ---
+Euclidean, with \emph{zero} Lorentzian content. There is no $(4,28)$
+Killing/coset signature, and the physical Lorentzian signature $(1,3)$ in
+the convention $(-,+,+,+)$ does \emph{not} fall out of the coset geometry.
+Signature enters only through the soldering postulate~P3, soldered from the
+cubic norm $N$ via $H_2(\mathbb O)\cong\mathbb R^{1,9}$
+(\autoref{sec:soldering:main}).
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{One common radiative mass (Schur)}
+\label{sec:app-spectrum:mass}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{theorem}[Single common scalar mass]
+\label{thm:app-spectrum:schurmass}
+At tree level the $32$ clock fields are exact Goldstone modes,
+$\Hess V_{\mathrm{tree}}|_{\mathfrak m}=0$. The one-loop Coleman--Weinberg
+Hessian on $\mathfrak m$ is an $H$-invariant symmetric operator; by
+irreducibility of $\mathfrak m$ over $\mathbb R$
+(\autoref{thm:app-spectrum:complextype}) and Schur's lemma it is a
+\emph{single scalar multiple of the identity}. Hence all clock fields
+acquire one common radiative mass. After removing the four gauge/soldering
+frame modes (eaten by diffeomorphism + local Lorentz, P3), the physical
+spectrum is
+\begin{equation}
+  32\ \text{real}\;=\;\underbrace{28\ \text{massive scalars (single common mass)}}_{\text{use }28\text{ in all loop sums}}
+  \;+\;4\ \text{gauge/soldering (eaten)} .
+  \label{eq:app-spectrum:count}
+\end{equation}
+With $[f]=\mathrm{mass}$, the dimension-$4$ Hessian eigenvalue is
+$f^2\mu^2$, so the canonically normalized physical mass is
+\begin{equation}
+  m^2=\mu^2 .
+  \label{eq:app-spectrum:mass}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Tree-level masslessness is Goldstone's theorem for the broken $E_6/H$
+directions. The one-loop effective potential is built from $H$-invariant
+data (the vacuum preserves $H$), so its Hessian
+$\mathcal H\in\End_H(\mathfrak m)$ is an $H$-equivariant symmetric
+operator. Over the \emph{real} commutant
+$\End_H(\mathfrak m)\cong\mathbb C$ a symmetric (self-adjoint) operator is
+real, hence lies in $\mathbb R\cdot\mathbf 1\subset\mathbb C$: it is a
+real scalar times the identity. (Equivalently, the only $H$-invariant
+symmetric forms are multiples of the unique metric of
+\autoref{thm:app-spectrum:metric}, so $\mathcal H=m^2\,\mathfrak g$.) Thus
+all $32$ modes share one eigenvalue.
+
+The four frame directions are not Hessian zeros of an internal singlet
+subspace --- $\mathfrak m$ has no $\Spin(10)$ singlet
+(\autoref{rem:app-spectrum:nosinglet}) --- but are gauge modes protected
+by the Ward identity $\nabla_\mu(\delta\Gamma/\delta e^a_\mu)=0$ and eaten
+by the diffeomorphism $+$ local-Lorentz gauge symmetry. Removing them
+leaves $28$ massive physical scalars, all of common mass, giving
+\eqref{eq:app-spectrum:count}. Canonical normalization of the
+kinetic term \eqref{eq:app-spectrum:metric} divides the dimension-$4$
+Hessian eigenvalue $f^2\mu^2$ by $f^2$, yielding
+\eqref{eq:app-spectrum:mass}.
+\end{proof}
+
+\begin{remark}\label{rem:app-spectrum:downstream}
+The count $28$ in \eqref{eq:app-spectrum:count} and the mass
+\eqref{eq:app-spectrum:mass} are the inputs to the induced Planck mass
+$M_{\mathrm{Pl}}^2=(28/6)\,f^2\mu^2\log(\Lambda^2/\mu^2)/(16\pi^2)>0$ and
+to the gauge $\beta$-function scalar count $n_S=28$
+(\autoref{sec:gravity:main}). The $27\times27$ scalar block likewise
+inherits the multiplicities of \eqref{eq:app-spectrum:27},
+$M=\diag(\mu_1\,\mathbf 1_1,\ \mu_{10}\,\mathbf 1_{10},\
+\mu_{16}\,\mathbf 1_{16})$, the residual symmetry being $H$, not $E_6$.
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Status of the claims in this appendix}
+\label{sec:app-spectrum:status}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+All statements of this appendix are \textbf{theorems}: the branchings
+\eqref{eq:app-spectrum:27}--\eqref{eq:app-spectrum:78}, the tensor
+products \eqref{eq:app-spectrum:1616}--\eqref{eq:app-spectrum:16bar}, the
+complex-type/commutant result (\autoref{thm:app-spectrum:complextype}),
+the unique definite metric (\autoref{thm:app-spectrum:metric}), and the
+single-common-mass result (\autoref{thm:app-spectrum:schurmass}) follow
+from the representation theory of $E_6\supset\Spin(10)\times U(1)$ on the
+compact real form. The \emph{use} of these facts to assert the physical
+$(1,3)$ signature, three generations, and the Yukawa sector relies on the
+added postulates P3, P5, P6 and is flagged where invoked.

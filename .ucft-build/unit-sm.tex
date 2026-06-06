@@ -1,0 +1,314 @@
+\section{Standard Model Descent, Generations, and Fermion Masses}
+\label{sec:sm:main}
+
+This section develops the Standard Model descent within UCFT. We start
+from the vacuum-selection theorem (\autoref{sec:potential:main}), which fixes
+the residual gauge group $H = \mathrm{Spin}(10)\times U(1)$ and the matter
+kinematics, and we spell out the symmetry-breaking cascade down to
+$SU(3)_c\times U(1)_{\mathrm{em}}$. The descent chain, the branchings, and the
+anomaly arithmetic are \emph{theorems} given the residual group and the assigned
+charges; chirality (P4), the three-generation horizontal symmetry (P5), and the
+GUT--Higgs/Yukawa sector (P6) are \emph{added postulates}; the heterotic
+generation match and the listed phenomenology are \emph{conjectural
+correspondences}. \autoref{sec:sm:summary} summarizes the epistemic status.
+Conventions are fixed globally: metric signature $(-,+,+,+)$, $[f]=$ mass, the
+$32$ coset Goldstones are the \emph{clock fields}, and $M_{\mathrm{GUT}}$ denotes
+the breaking-VEV scale tied to the decay constant $f$.
+
+\subsection{The explicit symmetry-breaking chain}
+\label{sec:sm:descent}
+
+\begin{postulate}[GUT--Higgs sector, P6 part I]\label{post:sm:P6higgs}
+The descent below $H=\mathrm{Spin}(10)\times U(1)$ proceeds through the real
+$SO(10)$ Higgs multiplets $45_H$ \emph{or} $54_H$, $126_H$, and $10_H$, whose VEVs
+realize the cascade of \autoref{thm:sm:descent}. These multiplets are added
+structure, not consequences of the two axioms.
+\end{postulate}
+
+\begin{theorem}[Descent chain]\label{thm:sm:descent}
+With the residual group $H=\mathrm{Spin}(10)\times U(1)$ fixed by the proved
+rank-$1$ idempotent vacuum $M=E_6/(\mathrm{Spin}(10)\times U(1))=\mathrm{EIII}$
+(\autoref{thm:potential:vacuum}), and granting the Higgs content of
+\autoref{post:sm:P6higgs}, the gauge symmetry descends as
+\begin{equation}\label{eq:sm:chain}
+\begin{aligned}
+E_6
+ &\;\xrightarrow{\;\text{P1: rank-}1\text{ idempotent vacuum }M=\mathrm{EIII}\;}\;
+ \mathrm{Spin}(10)\times U(1) \\
+ &\;\xrightarrow{\;45_H\ \text{or}\ 54_H\;}\;
+ SU(5)\times U(1)_X \\
+ &\;\xrightarrow{\;126_H\ (\text{breaks }B\!-\!L\text{ and rank})\;}\;
+ SU(3)_c\times SU(2)_L\times U(1)_Y \\
+ &\;\xrightarrow{\;10_H\ (\text{electroweak},\ v=246\ \mathrm{GeV})\;}\;
+ SU(3)_c\times U(1)_{\mathrm{em}}\,.
+\end{aligned}
+\end{equation}
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Step $0$ ($E_6\to \mathrm{Spin}(10)\times U(1)$) is not a Higgs VEV in the GUT sense
+but the vacuum-selection step: the $E_6$-invariant potential $V$ of P1 has its global
+minimum on the rank-$1$ primitive-idempotent orbit, whose stabilizer is exactly
+$H=\mathrm{Spin}(10)\times U(1)$ (\autoref{thm:potential:vacuum}). Steps $1$--$3$
+are standard $SO(10)$ symmetry breaking by real Higgs reps: $\langle 45_H\rangle$ (or
+$\langle 54_H\rangle$) reduces $SO(10)$ to its $SU(5)$ subgroup; the SM-singlet,
+$B\!-\!L=2$ component of $126_H$ acquires a VEV $v_R\sim M_{\mathrm{GUT}}$, breaking
+$B\!-\!L$ and lowering the rank by one (removing the extra Abelian factor and supplying
+$M_R$, \autoref{thm:sm:seesaw}); $\langle 10_H\rangle=v=246$~GeV is ordinary
+electroweak breaking. Each embedding is a standard maximal/regular subgroup chain;
+no step uses a forbidden $\{16,16bar\}$ Higgs.
+\end{proof}
+
+\begin{theorem}[Hypercharge embedding and GUT normalization]\label{thm:sm:hypercharge}
+Hypercharge is the standard $SU(5)$-embedded Cartan combination. Acting on the
+$SU(5)$ fundamental $5$,
+\begin{equation}\label{eq:sm:TY}
+T_Y \;=\; \tfrac{1}{\sqrt{60}}\,\mathrm{diag}(-2,-2,-2,\,3,\,3)\,,
+\qquad
+Y \;=\; \mathrm{diag}\!\big(-\tfrac13,-\tfrac13,-\tfrac13,\,\tfrac12,\tfrac12\big)
+\end{equation}
+on $5bar=(d^c,l)$. In the canonical group-theoretic (GUT) normalization the unified
+$U(1)$ coupling obeys
+\begin{equation}\label{eq:sm:alpha1}
+\alpha_1 \;=\; \tfrac{5}{3}\,\alpha_Y\,,
+\qquad\Longleftrightarrow\qquad
+g_1^2 \;=\; \tfrac{5}{3}\,g_Y^2 .
+\end{equation}
+\end{theorem}
+
+The orthogonal $U(1)_X$ (the $SO(10)/SU(5)$ Abelian factor, orthogonal to $Y$) is
+broken at the $126_H$ scale as a heavy $Z'$, or kept light only if separately
+anomaly-checked. A scale remark that we use repeatedly downstream: $M_{\mathrm{GUT}}$
+is the \emph{breaking-VEV scale tied to $f$}, \emph{not} the imported MSSM
+$2\times10^{16}$~GeV crossing. Below $M_{\mathrm{GUT}}$ one runs the \emph{three}
+Standard-Model $\beta$-functions, not a single $b_0$.
+
+\subsection{One family from the \texorpdfstring{$16$}{16}}
+\label{sec:sm:family}
+
+\begin{theorem}[$16$ = one SM family $+$ $\nu^c$]\label{thm:sm:family}
+Under $SO(10)\to SU(5)\times U(1)_X$ the chiral spinor decomposes as
+\begin{equation}\label{eq:sm:16branch}
+16 \;\longrightarrow\; 10_{+1}\;+\;\overline{5}_{-3}\;+\;1_{+5}\,,
+\end{equation}
+and further under $SU(5)\to SU(3)_c\times SU(2)_L\times U(1)_Y$ (with $Q=T_3+Y$) the
+content is exactly one Standard-Model family plus a singlet:
+\begin{equation}\label{eq:sm:family}
+\begin{aligned}
+10 &\;\supset\; q=(3,2)_{+1/6},\quad u^c=(\bar3,1)_{-2/3},\quad e^c=(1,1)_{+1},\\
+\overline{5} &\;\supset\; d^c=(\bar3,1)_{+1/3},\quad l=(1,2)_{-1/2},\\
+1 &\;=\; \nu^c=(1,1)_{0}\ \ (\text{right-handed neutrino, $SU(5)$ singlet}).
+\end{aligned}
+\end{equation}
+Thus $10+\overline{5}+1=16$ Weyl fermions $=(q,u^c,d^c,l,e^c)+\nu^c$: one SM family
+plus a right-handed neutrino, with no mirror partners.
+\end{theorem}
+
+The chiral family sits inside $16_{+1}$ of the matter $27$ of $E_6$, whose canonical
+UCFT branching (\autoref{sec:potential:branchings}) is
+\begin{equation}\label{eq:sm:27branch}
+27 \;=\; 1_{+4}\;+\;10_{-2}\;+\;16_{+1}\,,
+\end{equation}
+where the $1_{+4}$ is an extra SM-singlet modulus available as a right-handed-neutrino
+modulus. That a single $16$ rather than a vector-like $16\oplus\overline{16}$ appears
+per family is the content of the chirality postulate:
+
+\begin{postulate}[Matter content and chirality, P4]\label{post:sm:P4}
+Each family is one chiral $16$ of $\mathrm{Spin}(10)$ with the $U(1)$ charge of
+\eqref{eq:sm:27branch}; there are no mirror partners.
+\end{postulate}
+
+\subsection{Three generations: \texorpdfstring{$SU(3)_F$}{SU(3)F} on
+\texorpdfstring{$J_3(\mathbb{O})\otimes\mathbb{C}^3$}{J3(O)xC3}}
+\label{sec:sm:generations}
+
+\begin{postulate}[Family symmetry, P5]\label{post:sm:P5}
+The matter carries an $SU(3)_F$ horizontal (family) symmetry acting on
+$J_3(\mathbb{O})\otimes\mathbb{C}^3$; the three copies in the $\mathbb{C}^3$ factor are
+three chiral $16$s of $\mathrm{Spin}(10)$, with no mirror partners. Three generations
+are \emph{not} a consequence of the two axioms; they are added structure.
+\end{postulate}
+
+\begin{theorem}[Recomputed $n_F$ and three-generation $b_0$]\label{thm:sm:b0}
+With one chiral $\mathbf{16}$ per family (P4, P5), the fermion count $n_F$ in the
+one-loop $\mathrm{Spin}(10)$ $\beta$-function is the number of chiral
+$\mathbf{16}$ \emph{representations} (one per generation), not the Weyl-fermion
+dimension:
+\begin{equation}\label{eq:sm:nF}
+n_F \;=\; \#\text{generations} \;=\; 3
+\qquad\text{(three chiral $\mathbf{16}$s, each weighted at $T(\mathbf{16})=2$).}
+\end{equation}
+The gauge $\beta$-function (canonical $+2$ term restored; asymptotically free, no
+interacting fixed point) is
+\begin{equation}\label{eq:sm:beta}
+\beta_{\hat g^{2}} \;=\; 2\,\hat g^{2} \;+\; \frac{b_0}{48\pi^2}\,\hat g^{4},
+\qquad
+b_0 \;=\; \tfrac{11}{3}C_A \;-\; \tfrac{4}{3}T\,n_F \;-\; \tfrac{1}{6}T\,n_S\,,
+\end{equation}
+with the locked Casimirs $C_A(\mathrm{Spin}(10))=8$, $T(\mathbf{16})=2$,
+$C_2(\mathbf{16})=45/8$. At the GUT matching scale with the full UCFT scalar
+content, $n_S=28$ massive coset scalars enter the loop. Direct evaluation gives
+\begin{equation}\label{eq:sm:b0three}
+\boxed{\,
+b_0(3\,\mathrm{gen})
+=\tfrac{11}{3}(8)-\tfrac{4}{3}(2)(3)-\tfrac{1}{6}(2)(28)
+=\tfrac{88-24-28}{3}=12\,.}
+\end{equation}
+The canonical one-generation anchor $b_0(1\,\mathrm{gen})=26$ uses $n_F=1$ and
+$n_S=2$ (minimal GUT Higgs/Yukawa scalars at that scale):
+\begin{equation}\label{eq:sm:b0one}
+b_0(1\,\mathrm{gen})
+=\tfrac{11}{3}(8)-\tfrac{4}{3}(2)(1)-\tfrac{1}{6}(2)(2)=\tfrac{78}{3}=26.
+\end{equation}
+We use $b_0=12$ for three-generation running below $M_{\mathrm{GUT}}$ and in the
+AS stability check of \autoref{sec:gravity:stability}.
+\end{theorem}
+
+\begin{remark}
+The gauge sector is asymptotically \emph{free}: the canonical $+2\,\hat g^{2}$
+term in \eqref{eq:sm:beta} drives a Gaussian UV point $\hat g^{2}_\star=0$; there
+is no interacting gauge fixed point. More fermions \emph{decrease} $b_0$ in
+\eqref{eq:sm:beta}, so $b_0(3)<b_0(1)$. UV completeness is asymptotic freedom
+plus the (indicative) gravitational fixed point $\kappa_\star=96\pi^2/5$
+(\autoref{sec:gravity:AS}) plus irrelevant higher operators.
+\end{remark}
+
+\begin{postulate}[Hierarchy and mixing from flavon VEVs, P5 part II]\label{post:sm:flavons}
+$SU(3)_F$ is broken sequentially ($SU(3)_F\to SU(2)_F\to \mathbf{1}$) by flavon VEVs,
+generating the inter-generation Yukawa hierarchy and the CKM (quark) and PMNS (lepton)
+mixing matrices as ratios of flavon VEVs to the family scale.
+\end{postulate}
+
+\begin{indicative}[Heterotic corroboration]\label{ind:sm:heterotic}
+The heterotic $\mathbb{Z}_5$ quintic $\hat Q=Q/\mathbb{Z}_5$ compactification with the
+tangent-bundle $SU(3)$ embedding gives the same generation count,
+\begin{equation}\label{eq:sm:het}
+h^1(\hat Q,V_{16})=3,\qquad h^1(\hat Q,V_{10})=14,\qquad h^1(\hat Q,\mathbf{1})=1,
+\end{equation}
+with the single bundle singlet an overall right-handed-neutrino modulus and the
+$4+28=32$ heterotic moduli matching the $4$ clock-field Goldstone $+$ $28$ massive
+coset scalars of UCFT. The low-energy central charges $(c_L,c_R)=(16,10)$ enter here.
+This is a correspondence, not a duality, and not a derivation of the generation number.
+\end{indicative}
+
+\subsection{Yukawa and seesaw sector (P6)}
+\label{sec:sm:yukawa}
+
+\begin{theorem}[No $\{16,16bar\}$ Yukawa]\label{thm:sm:noyukawa}
+The naive Yukawa $-y\,\bar\psi\,\phi^a T_a\,\psi$ with $\phi\in\{16,16bar\}$ is
+forbidden: it is non-$H$-invariant and gives zero mass, because
+\begin{equation}\label{eq:sm:tensor}
+16\times 16 \;=\; 10+120+126\,,
+\qquad
+16\times \overline{16} \;=\; 1+45+210\,,
+\end{equation}
+so a $\{16,16bar\}$ scalar furnishes no $H$-singlet, and $H=\mathrm{Spin}(10)\times
+U(1)$ is unbroken at the vacuum. The viable couplings use the real GUT-Higgs reps.
+\end{theorem}
+
+\begin{postulate}[Yukawa couplings, P6 part II]\label{post:sm:P6yukawa}
+The family-indexed Yukawa Lagrangian is
+\begin{align}
+\mathcal{L}^{\mathrm{Dirac}}_{\mathrm{Yuk}}
+ &\;=\; y^{(10)}_{ij}\,16_i\,16_j\,10_H \;+\; \mathrm{h.c.}\,,
+ \label{eq:sm:Ldirac}\\
+\mathcal{L}^{\mathrm{Maj}}_{\mathrm{Yuk}}
+ &\;=\; y^{(126)}_{ij}\,16_i\,16_j\,\overline{126}_H \;+\; \mathrm{h.c.}
+ \;\;\;\Big(\text{or}\;\; \tfrac{1}{M_*}\,16_i\,16_j\,\overline{16}_H\,\overline{16}_H\Big)\,,
+ \label{eq:sm:Lmaj}
+\end{align}
+both $SO(10)$-invariant since $16\times 16\supset 10$ and $16\times 16\supset 126$,
+with $i,j$ the $SU(3)_F$ family indices.
+\end{postulate}
+
+\begin{theorem}[Type-I seesaw]\label{thm:sm:seesaw}
+After electroweak breaking $\langle 10_H\rangle=v=246$~GeV the Dirac masses are
+$m_D\sim y^{(10)}v$. The SM-singlet, $B\!-\!L=2$ component of $126_H$ takes
+$\langle\,\cdot\,\rangle=v_R\sim M_{\mathrm{GUT}}$ (step~2 of \eqref{eq:sm:chain}),
+giving the right-handed Majorana mass $M_R\sim y^{(126)}v_R$ (equivalently
+$M_R\sim v_R^2/M_*$ from the dim-$5$ operator). The $(\nu,\nu^c)$ mass matrix
+\begin{equation}\label{eq:sm:matrix}
+\mathcal{M}_\nu \;=\;
+\begin{pmatrix} 0 & m_D \\ m_D^{\mathsf T} & M_R \end{pmatrix}
+\end{equation}
+yields, to leading order in $m_D/M_R$, the light-neutrino mass
+\begin{equation}\label{eq:sm:mnu}
+m_\nu \;\simeq\; \frac{m_D^2}{M_R} \;\sim\; 0.05\ \mathrm{eV}\,,
+\end{equation}
+the observed atmospheric scale for $m_D\sim v$ and $M_R\sim 10^{14}$--$10^{15}$~GeV.
+PMNS mixing follows from the flavon structure (\autoref{post:sm:flavons}).
+\end{theorem}
+
+These multiplets are added physics; stating them is what makes the construction an
+embedding rather than a derivation.
+
+\subsection{Anomaly arithmetic}
+\label{sec:sm:anomaly}
+
+\begin{theorem}[Anomaly cancellation]\label{thm:sm:anomaly}
+The composite $SO(10)\times U(1)$ gauge sector is anomaly-free. With Dynkin indices
+$A_{16}=A_{10}=1$, $A_1=0$ and the $27$-charges of \eqref{eq:sm:27branch}, the mixed
+$U(1)$--$SO(10)^2$ coefficient is
+\begin{equation}\label{eq:sm:mixed}
+(+1)A_{16}+(-2)A_{10}+(+4)A_1
+ \;=\;(+1)(1)+(-2)(1)+(+4)(0)\;=\;-1\,,
+\end{equation}
+cancelled by the Green--Schwarz mechanism: the $E_6$-invariant $3$-form $\Omega_3$
+pulls back to $dB=(1/2\pi)F_1$, and
+$S_{\mathrm{GS}}=\int B\wedge \mathrm{Tr}(F\wedge F)/(8\pi^2)$ has a gauge variation
+exactly cancelling the $-1$. The cubic $U(1)^3$ coefficient vanishes identically,
+\begin{equation}\label{eq:sm:cubic}
+16(+1)^3+10(-2)^3+1(+4)^3 \;=\; 16-80+64 \;=\; 0\,.
+\end{equation}
+Below $M_{\mathrm{GUT}}$ each family is the anomaly-free $16$ (the $\nu^c$ is exactly
+what makes the SM hypercharge anomalies cancel family-by-family).
+\end{theorem}
+
+\begin{remark}[Strings and topology, correspondence]\label{rem:sm:strings}
+The composite $SO(10)\times U(1)$ connection (Maurer--Cartan), the Green--Schwarz
+cancellation, the vortex strings, and the heterotic worldsheet CFT with
+$(c_L,c_R)=(16,10)$ are retained as a low-energy correspondence. Topology caveat:
+$\mathrm{EIII}$ is simply connected, so $\pi_1(M)=\mathbb{Z}$ is \emph{false} of
+$\mathrm{EIII}$ itself; the vortex strings arise from the gauged $U(1)$-quotient
+configuration space (or are softened to a correspondence).
+\end{remark}
+
+\subsection{Phenomenology (indicative)}
+\label{sec:sm:pheno}
+
+\begin{indicative}[Proton decay, leptogenesis, monopole dilution]\label{ind:sm:pheno}
+Once descent and seesaw exist, the leading observables are, all indicative:
+\begin{equation}\label{eq:sm:proton}
+\tau(p\to e^+\pi^0)\;\sim\;\frac{M_{\mathrm{GUT}}^4}{\alpha_{\mathrm{GUT}}^2\,m_p^5}\,,
+\end{equation}
+to be confronted with Super-/Hyper-Kamiokande, with the scalar-leptoquark channel
+forbidden by matter parity / $B\!-\!L$; baryogenesis via leptogenesis from the heavy
+$\nu^c$ decays (\autoref{thm:sm:seesaw}); and monopole dilution by inflation, with the
+inflaton identified as one of the $28$ massive coset scalars
+(\autoref{sec:gravity:spectrum}) and inflation occurring \emph{after} the GUT
+transition. Here $M_{\mathrm{GUT}}$ is the breaking-VEV scale tied to $f$.
+\end{indicative}
+
+\subsection{Summary of results}
+\label{sec:sm:summary}
+
+\begin{itemize}
+\item \textbf{Theorems (proved within UCFT):} the $E_6\to\mathrm{Spin}(10)\times U(1)$
+vacuum selection (\autoref{thm:potential:vacuum}); the descent
+(\autoref{thm:sm:descent}); the branchings of $27$ and $16$
+(\autoref{thm:sm:family}); the anomaly arithmetic
+(\autoref{thm:sm:anomaly}, mixed $=-1$ cancelled by GS, cubic $=0$); and the
+three-generation $b_0=12$ (\autoref{thm:sm:b0}).
+\item \textbf{Postulates (added structure):} P4 (one chiral $16$/family, no mirrors,
+\autoref{post:sm:P4}); P5 ($SU(3)_F\to$ three generations, $n_F=3$,
+\autoref{post:sm:P5}); P6 ($10_H$ Dirac, $126_H$/dim-$5$ Majorana, type-I seesaw,
+\autoref{post:sm:P6higgs}, \autoref{post:sm:P6yukawa}).
+\item \textbf{Correspondence (indicative):} heterotic $h^1(V_{16})=3$ and the
+$4+28=32$ moduli match (\autoref{ind:sm:heterotic}); the phenomenology of
+\autoref{ind:sm:pheno}.
+\end{itemize}
+
+\noindent\textbf{Conclusion.} Under postulates P4--P6, UCFT embeds the Standard
+Model: three anomaly-free chiral families, standard hypercharge with GUT
+normalization $\alpha_1=\tfrac53\alpha_Y$, electroweak breaking at $v=246$~GeV, and a
+type-I seesaw $m_\nu\sim0.05$~eV.

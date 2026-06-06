@@ -1,0 +1,237 @@
+%======================================================================%
+\section{Introduction}
+\label{sec:intro:main}
+%======================================================================%
+
+\subsection{Motivation}
+\label{sec:intro:motivation}
+
+Exceptional Lie algebras and Jordan algebras provide a natural mathematical
+framework for unification. The exceptional Jordan (Albert) algebra
+$J_{3}(\mathbb{O})$---the algebra of $3\times 3$ Hermitian octonionic
+matrices---is the unique finite-dimensional formally real Jordan algebra that is
+not special. It has dimension $27$, automorphism group $F_4$, and is preserved
+by the exceptional group $E_6$ through its cubic norm $N(X)=\det X$ (up to a
+real character). Under the maximal subgroup $H=\mathrm{Spin}(10)\times U(1)$,
+the fundamental representation branches as
+\begin{equation}
+  \mathbf{27} \;=\; \mathbf{1}_{+4}\,\oplus\,\mathbf{10}_{-2}\,\oplus\,\mathbf{16}_{+1},
+  \label{eq:intro:27branch}
+\end{equation}
+which contains a single chiral spinor $\mathbf{16}$ of $\mathrm{Spin}(10)$---one
+Standard Model generation together with a right-handed neutrino. The adjoint
+$\mathbf{78}$ decomposes as
+\begin{equation}
+  \mathbf{78} \;=\; \mathbf{45}_{0}\,\oplus\,\mathbf{1}_{0}\,\oplus\,
+  \mathbf{16}_{-3}\,\oplus\,\overline{\mathbf{16}}_{+3}
+  \qquad (\text{under } H=\mathrm{Spin}(10)\times U(1)),
+  \label{eq:intro:78branch}
+\end{equation}
+exhibiting the coset tangent space $\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$
+of real dimension $32$. The appearance of a viable grand-unified gauge group
+together with the chiral matter content of one family motivates the present
+construction.
+
+\subsection{Axioms and scope}
+\label{sec:intro:axioms}
+
+Universal Coset Field Theory (UCFT) is formulated on the compact real form of
+$E_6$, with order parameter $\Phi\in\mathbf{27}=J_3(\mathbb{O})$. The theory is
+specified by two axioms and six additional postulates \textnormal{P1--P6}, stated
+below. The axioms determine the algebraic arena and the kinematical framework;
+the postulates supply the potential, vacuum geometry, spacetime structure,
+matter content, and symmetry-breaking data required for contact with four-dimensional
+physics.
+
+\begin{axiom}[Order parameter]\label{ax:intro:I}
+The order parameter is a field $\Phi$ valued in the matter representation
+$\mathbf{27}=J_3(\mathbb{O})$ of $E_6$. The symmetric configuration $\Phi=0$ is
+the unique $E_6$-fixed point; the potential of postulate~\textnormal{P1} renders
+it a strict local maximum (\autoref{thm:potential:T5}), so that the rank-one
+orbit is selected dynamically (\autoref{thm:potential:T6}).
+\end{axiom}
+
+\begin{axiom}[Quantum kinematics]\label{ax:intro:II}
+Physical states $\psi\in\mathcal{H}$ are acted on by a one-parameter unitary
+family $\{U(\tau)\}_{\tau\in\mathbb{R}}$ with $U(0)=\mathrm{Id}$,
+$U(\tau+s)=U(\tau)U(s)$, and strong continuity.
+\end{axiom}
+
+In the main development, Axiom~II is realized through emergent time: a
+Page--Wootters clock field $\varphi^{0}$ together with the Hamiltonian constraint
+$\hat{H}_{\mathrm{phys}}\lvert\Psi\rangle\!\rangle=0$ of induced gravity, with
+$U(\tau)$ recovered on physical states in the semiclassical regime via a timelike
+Killing vector (\autoref{sec:spacetime:time}). The Standard Model and
+gravitation are not consequences of the axioms alone; they follow upon imposing
+postulates~\textnormal{P1--P6}.
+
+\subsection{Postulates \textnormal{P1--P6}}
+\label{sec:intro:postulates}
+
+\begin{description}
+  \item[\textnormal{P1} (Potential).] An $E_6$-invariant polynomial potential
+    built from the cubic norm $N$ and the sharp map $X^{\#}$, of the form
+    \begin{equation}
+      V(X)\;=\;\alpha\,\langle X^{\#},X^{\#}\rangle
+        \;+\;\beta\,\bigl[\,\mathrm{Tr}(X^{2})-c_2\,\bigr]^{2}
+        \;+\;\gamma\,\mathrm{Tr}(X^{2})^{k},
+      \qquad \alpha,\beta,\gamma>0,\;\; k\ge 2 \text{ even},
+      \label{eq:intro:V}
+    \end{equation}
+    whose global minimum is the rank-one idempotent orbit. Coercivity is
+    established on the compact real form (\autoref{sec:potential:main}).
+  \item[\textnormal{P2} (Vacuum).] The vacuum manifold is
+    \begin{equation}
+      \mathcal{M}\;=\;E_6/\bigl(\mathrm{Spin}(10)\times U(1)\bigr)\;=\;\mathrm{EIII},
+      \qquad \dim_{\mathbb{R}}\mathcal{M}=32,
+      \label{eq:intro:vacuum}
+    \end{equation}
+    the rank-one primitive-idempotent orbit (the complex Cayley plane). This is
+    proved from~\textnormal{P1} as \autoref{thm:potential:T4}.
+  \item[\textnormal{P3} (Soldering).] A soldering map identifies four
+    clock-field directions with a tangent frame carrying the Minkowski form
+    inherited from $N$ via $H_2(\mathbb{O})\cong\mathbb{R}^{1,9}$. The
+    dimension $d=4$ and signature $(1,3)$ are part of this postulate
+    (\autoref{sec:spacetime:main}).
+  \item[\textnormal{P4} (Matter).] One chiral $\mathbf{16}$ of
+    $\mathrm{Spin}(10)$ per family, with charges as in
+    \eqref{eq:intro:27branch}.
+  \item[\textnormal{P5} (Generations).] Three families via an $SU(3)_F$
+    horizontal symmetry on $J_3(\mathbb{O})\otimes\mathbb{C}^{3}$, corroborated
+    by the heterotic index $h^{1}(\hat Q,V_{16})=3$.
+  \item[\textnormal{P6} (Yukawa sector).] Standard $\mathrm{Spin}(10)$ Higgs and
+    Yukawa multiplets ($\mathbf{45}_H/\mathbf{54}_H$, $\mathbf{126}_H$,
+    $\mathbf{10}_H$) generating fermion masses and the type-I seesaw.
+\end{description}
+
+\subsection{Status of results}
+\label{sec:intro:convention}
+
+Results are classified as follows.
+\begin{description}
+  \item[Theorem.] Proved from explicitly stated hypotheses.
+  \item[Postulate.] Additional structure beyond the axioms (P1--P6).
+  \item[Conjecture / indicative.] Motivated by explicit but uncontrolled
+    calculations, or low-energy correspondences not established as dualities.
+\end{description}
+
+\begin{table}[t]
+  \centering
+  \begin{tabular}{@{}lll@{}}
+    \toprule
+    Result & Content & Status \\
+    \midrule
+    Vacuum selection
+      & P1$\Rightarrow$P2: global minimum $=$ rank-one EIII orbit
+      & Theorem \\
+    Origin instability
+      & $\mathrm{Hess}\,V(0)\prec 0$, roll-down to $\mathcal{M}$
+      & Theorem \\
+    Minkowski block
+      & $H_2(\mathbb{O})\cong\mathbb{R}^{1,9}$, $SL(2,\mathbb{O})\cong\mathrm{Spin}(1,9)$
+      & Theorem \\
+    Signature $(1,3)$, $d=4$
+      & Soldering postulate P3
+      & Postulate \\
+    Emergent time
+      & Page--Wootters clock; OS reconstruction
+      & Theorem / conjecture \\
+    Induced Planck mass
+      & $M_{\mathrm{Pl}}^{2}=\tfrac{28}{6}\,f^{2}\mu^{2}\log(\Lambda^{2}/\mu^{2})/(16\pi^{2})>0$
+      & Theorem \\
+    Gauge running
+      & Asymptotically free; $b_0(1)=26$, $b_0(3)=12$
+      & Theorem \\
+    Gravitational fixed point
+      & $\kappa_\star=96\pi^{2}/5$
+      & Conjecture \\
+    Standard Model content
+      & One family per $\mathbf{16}$; anomaly cancellation
+      & Theorem \\
+    Flavour sector
+      & Three generations; Yukawa; $m_\nu\sim 0.05\,\mathrm{eV}$
+      & Postulate \\
+    Heterotic correspondence
+      & $(c_L,c_R)=(16,10)$, $h^{1}(V_{16})=3$
+      & Correspondence \\
+    \bottomrule
+  \end{tabular}
+  \caption{Classification of the principal results.}
+  \label{tab:intro:grades}
+\end{table}
+
+\subsection{Main theorem}
+\label{sec:intro:claim}
+
+\begin{theorem}[Conditional embedding]\label{thm:intro:embedding}
+Assume Axioms~\autoref{ax:intro:I} and~\autoref{ax:intro:II} on the compact real
+form of $E_6$, together with postulates~\textnormal{P1--P6}. Then:
+\begin{enumerate}[label=\textup{(\roman*)}]
+  \item \textnormal{(\autoref{thm:potential:T4}).}
+    The global minimum of~\eqref{eq:intro:V} is the orbit
+    $\mathcal{M}=E_6/(\mathrm{Spin}(10)\times U(1))=\mathrm{EIII}$,
+    with $32$ Goldstone modes spanning
+    \begin{equation}
+      \mathfrak{m}\;=\;\mathbf{16}_{-3}\,\oplus\,\overline{\mathbf{16}}_{+3},
+      \label{eq:intro:coset}
+    \end{equation}
+    and positive-definite coset metric $K|_{\mathfrak{m}}$.
+  \item \textnormal{(P3, \autoref{sec:spacetime:main}).}
+    Soldering yields a four-dimensional Lorentzian manifold of signature
+    $(-,+,+,+)$ with $28$ physical massive scalars of mass $m^{2}=\mu^{2}$.
+  \item \textnormal{(\autoref{sec:gravity:main}).}
+    One-loop fluctuations induce
+    \begin{equation}
+      M_{\mathrm{Pl}}^{2}\;=\;\frac{28}{6}\,
+      \frac{f^{2}\mu^{2}\,\log(\Lambda^{2}/\mu^{2})}{16\pi^{2}}\;>\;0.
+      \label{eq:intro:MPl}
+    \end{equation}
+  \item \textnormal{(\autoref{sec:gravity:main}, \autoref{sec:frg:main}).}
+    The composite $\mathrm{Spin}(10)\times U(1)$ gauge sector is asymptotically
+    free with $\hat g^{2}_\star=0$ and
+    \begin{equation}
+      b_0=\tfrac{11}{3}C_A-\tfrac{4}{3}T\,n_F-\tfrac{1}{6}T\,n_S,
+      \label{eq:intro:betag}
+    \end{equation}
+    where $b_0=26$ for one generation and $b_0=12$ for three.
+  \item \textnormal{(P4--P6, \autoref{sec:sm:main}).}
+    The model reduces to the Standard Model with three chiral families and
+    neutrino masses via the type-I seesaw.
+  \item \textnormal{(\autoref{sec:frg:main}).}
+    The gravitational coupling possesses a conjectural ultraviolet fixed point
+    $\kappa_\star=96\pi^{2}/5$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Parts~(i), (iii), (iv), and the anomaly structure of~(v) are established in the
+sections cited. Part~(ii) combines the soldering postulate with the algebraic
+theorems of \autoref{sec:spacetime:main}. The flavour content of~(v) is
+postulated. Part~(vi) rests on a one-loop truncation.
+\end{proof}
+
+\begin{remark}[Scope]\label{rem:intro:caveats}
+(i)~Lorentzian signature is not inherited from the coset metric $K|_{\mathfrak{m}}$,
+which is positive-definite; it enters through~\textnormal{P3}.
+(ii)~The vacuum is the rank-one EIII orbit~\eqref{eq:intro:vacuum}, not the
+$26$-dimensional $E_6/F_4$ orbit of $\mathrm{diag}(1,1,1)$.
+(iii)~The cosmological constant is a tunable parameter; the fine-tuning problem is
+not addressed here.
+\end{remark}
+
+\subsection{Organization}
+\label{sec:intro:roadmap}
+
+\autoref{sec:master:chain} gives an overview of the logical dependencies.
+\autoref{sec:albert:main} reviews the Albert algebra and $E_6$ structure.
+\autoref{sec:potential:main} proves vacuum selection; \autoref{sec:coset:main}
+develops the coset $\sigma$-model. \autoref{sec:spacetime:main} treats soldering
+and emergent time. \autoref{sec:gravity:main} and \autoref{sec:frg:main} compute
+induced gravitation and renormalization-group flow. \autoref{sec:sm:main}
+carries out $\mathrm{Spin}(10)$ descent to the Standard Model;
+\autoref{sec:strings:main} discusses string-theoretic correspondences. Appendices
+collect the underlying octonionic and representation-theoretic results.
+
+We use signature $(-,+,+,+)$ throughout; $[f]=\mathrm{mass}$, and
+$\hat g^{2}$, $\xi$, $\hat y^{2}$, $\kappa$, $\Lambda_{\mathrm{cc}}$ are
+dimensionless. The $32$ coset Goldstone coordinates are termed \emph{clock fields}.

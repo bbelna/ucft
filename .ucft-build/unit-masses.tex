@@ -1,0 +1,242 @@
+%======================================================================%
+\section{Radiative Masses and the Physical Spectrum}
+\label{sec:masses:main}
+%======================================================================%
+
+The vacuum manifold of UCFT is the rank-one primitive-idempotent orbit
+\[
+  \mathcal{M} \;=\; E_{6}/\bigl(\mathrm{Spin}(10)\times U(1)\bigr) \;=\; \mathrm{EIII},
+  \qquad \dim_{\mathbb R}\mathcal{M} = 32,
+\]
+established as the global minimum of the $E_{6}$-invariant potential in
+\autoref{thm:ExplicitBreaking} (vacuum-selection theorem; cf.\ the locked
+foundation, Hardened Result~A). The $32$ coset Goldstones --- the
+\emph{clock fields} --- span the tangent module
+\begin{equation}\label{eq:masses:tangent}
+  \mathfrak m \;=\; T_{X_{0}}\mathcal{M}
+  \;=\; \mathbf{16}_{-3}\,\oplus\,\overline{\mathbf{16}}_{+3},
+  \qquad \dim_{\mathbb R}\mathfrak m = 32,
+\end{equation}
+under the unbroken $H=\mathrm{Spin}(10)\times U(1)$ (\autoref{thm:InvariantMetric}).
+This section determines their physical mass spectrum. The central structural
+fact, used throughout, is that \eqref{eq:masses:tangent} is a \emph{single}
+real-irreducible $H$-module: the $U(1)$ charge forbids the symmetric
+$\mathbf{16}\times\mathbf{16}$ and $\overline{\mathbf{16}}\times\overline{\mathbf{16}}$
+invariants, leaving only the charge-zero cross pairing, so the commutant of
+$H$ on $\mathfrak m$ is $\mathbb C$ (real-irreducible of complex type) and
+$\mathfrak m$ contains \emph{no} $\mathrm{Spin}(10)$ singlet.
+
+We work on the compact real form (equivalently $E_{6(-14)}$, whose maximal
+compact subgroup is precisely $H$), so the coset metric $K|_{\mathfrak m}$ is
+positive-definite and the gauge sector is unitary. Throughout, $[f]=\text{mass}$
+is the decay constant, $\mu$ the breaking/mass scale, and $\Lambda$ the UV
+cutoff; the signature is $(-,+,+,+)$.
+
+%----------------------------------------------------------------------%
+\subsection{Tree level: thirty-two exact Goldstones}
+\label{sec:masses:tree}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Tree-level Goldstone degeneracy]\label{thm:masses:tree}
+At any vacuum $X_{0}\in\mathcal{M}$ the Hessian of the $E_{6}$-invariant
+tree potential $V$ vanishes identically on the coset tangent space,
+\begin{equation}\label{eq:masses:treehess}
+  \operatorname{Hess}_{X_{0}}V\big|_{\mathfrak m} \;=\; 0,
+\end{equation}
+so that all $32$ clock fields are exact Goldstone bosons.
+\end{theorem}
+
+\begin{proof}
+$V$ is constant along the $E_{6}$-orbit $\mathcal{M}$ of the minimizer
+(\autoref{thm:ExplicitBreaking}), so its directional derivatives along the
+broken generators, which span $\mathfrak m$, vanish to all orders in the
+flat directions; \eqref{eq:masses:treehess} is Goldstone's theorem applied to
+the spontaneously broken $E_{6}\to H$. The unbroken directions
+$\mathfrak h=\mathfrak{so}_{10}\oplus\mathfrak u_{1}$ produce no scalars.
+\end{proof}
+
+The degeneracy \eqref{eq:masses:treehess} is exact only at tree level; the
+physical spectrum is fixed by the one-loop effective potential.
+
+%----------------------------------------------------------------------%
+\subsection{One loop: a single common radiative mass}
+\label{sec:masses:oneloop}
+%----------------------------------------------------------------------%
+
+The Coleman--Weinberg effective potential $V_{\mathrm{eff}}$ is built from the
+$H$-invariant fluctuation operator about $X_{0}$ and is therefore itself
+$H$-invariant. Its Hessian on $\mathfrak m$ is consequently an
+$H$-intertwiner. We exploit irreducibility \emph{positively}: it forces a
+single eigenvalue, rather than splitting off any singlet subspace.
+
+\begin{theorem}[Common radiative mass via Schur]\label{thm:masses:schur}
+The one-loop Hessian on the coset is a multiple of the identity,
+\begin{equation}\label{eq:masses:schur}
+  \operatorname{Hess}_{X_{0}}V_{\mathrm{eff}}\big|_{\mathfrak m}
+  \;=\; m_{\mathfrak m}^{2}\,\mathbf 1_{32},
+  \qquad m_{\mathfrak m}^{2}\in\mathbb R_{\ge 0},
+\end{equation}
+i.e.\ there is one common radiative mass on all $32$ coset directions.
+\end{theorem}
+
+\begin{proof}
+$\operatorname{Hess}_{X_{0}}V_{\mathrm{eff}}|_{\mathfrak m}$ is a symmetric
+$H$-equivariant endomorphism of $\mathfrak m$. By \eqref{eq:masses:tangent},
+$\mathfrak m$ is a single real-irreducible $H$-module of complex type, with
+commutant $\operatorname{End}_{H}(\mathfrak m)\cong\mathbb C$. A symmetric (real,
+self-adjoint with respect to the positive-definite $K|_{\mathfrak m}$)
+intertwiner must lie in the real part of the commutant, hence is a real scalar
+multiple of the identity; this is Schur's lemma for the complex-type case
+restricted to self-adjoint operators. Thus the Hessian equals
+$m_{\mathfrak m}^{2}\mathbf 1_{32}$. Stability of the vacuum
+(\autoref{thm:ExplicitBreaking}) and positivity of $K|_{\mathfrak m}$ give
+$m_{\mathfrak m}^{2}\ge 0$.
+\end{proof}
+
+\begin{remark}[No internal singlet subspace]\label{rmk:masses:nosinglet}
+Because $\mathfrak m$ carries \emph{no} $\mathrm{Spin}(10)$ singlet, there is no
+$H$-invariant four-dimensional subspace of $\mathfrak m$ on which the Hessian
+could independently vanish, and in particular no subspace spanned by gradients
+of independent invariants $\nabla I_{2},\nabla I_{3}$. Any decomposition of
+$\mathfrak m$ as $2\times\mathbf{10}\oplus\mathbf 4$, $\mathbf{10}\oplus
+\overline{\mathbf{10}}\oplus\mathbf 4$, or with any singlet factor is
+representation-theoretically false. The earlier ``$4\oplus 28$'' Hessian
+splitting of $\mathfrak m$ into an internally massless quartet and a massive
+$28$-plet is therefore \emph{not} the mechanism; the four light directions are
+gauge artefacts, treated next.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{The four frame directions are gauge, not Hessian zeros}
+\label{sec:masses:frame}
+%----------------------------------------------------------------------%
+
+Four of the $32$ clock fields are the soldering/frame directions identified by
+Postulate~P3 (\autoref{thm:Lorentz}): the soldering map $\sigma$ aligns four
+clock-field frame directions $e^{a}{}_{\mu}$ ($a=0,1,2,3$) with a tangent
+$4$-plane of the emergent spacetime $M^{4}$, providing the composite vierbein
+$e^{a}{}_{\mu}(x)=\langle\tau^{a},\theta_{\mathfrak m}(\partial_{\mu})\rangle$.
+These four directions are not lifted by the Hessian; they are removed by
+\emph{gauge} symmetry.
+
+\begin{postulate}[Frame gauge protection, P3]\label{post:masses:frame}
+The four soldered frame directions are gauge degrees of freedom of the emergent
+geometry: they are the modes eaten under world-volume diffeomorphisms and local
+Lorentz transformations $\mathrm{SO}(1,3)$. They satisfy the Ward identity
+\begin{equation}\label{eq:masses:ward}
+  \nabla_{\mu}\!\left(\frac{\delta\Gamma}{\delta e^{a}{}_{\mu}}\right) \;=\; 0,
+\end{equation}
+which removes them from the physical spectrum (cf.\ \autoref{thm:Lorentz}).
+\end{postulate}
+
+\begin{theorem}[Physical count]\label{thm:masses:count}
+Of the $32$ real clock fields, four are eaten as gauge/soldering modes under
+diffeomorphism $+$ local Lorentz, and the remaining $28$ are physical massive
+scalars carrying the single common mass of \autoref{thm:masses:schur}:
+\begin{equation}\label{eq:masses:count}
+  \underbrace{32}_{\dim_{\mathbb R}\mathfrak m}
+  \;=\;
+  \underbrace{28}_{\text{physical massive scalars}}
+  \;+\;
+  \underbrace{4}_{\text{gauge / soldering (eaten)}} .
+\end{equation}
+The unbroken $H=\mathrm{Spin}(10)\times U(1)$ is not affected: its
+$46=\dim(\mathbf{45})+1$ gauge bosons remain massless.
+\end{theorem}
+
+\begin{proof}
+By \autoref{thm:masses:schur} the one-loop Hessian is $m_{\mathfrak m}^{2}
+\mathbf 1_{32}$, so \emph{no} internal direction is a Hessian zero
+(\autoref{rmk:masses:nosinglet}). The reduction of the physical count is purely
+gauge-theoretic: by Postulate~P3 (\autoref{post:masses:frame},
+\autoref{thm:Lorentz}) the four soldered frame directions are gauge artefacts
+removed by diffeomorphism and local Lorentz invariance through
+\eqref{eq:masses:ward}, leaving $32-4=28$ propagating physical scalars. Since
+the vacuum preserves $H$, no $H$ gauge boson is eaten and the $46$ adjoint
+gauge bosons stay massless.
+\end{proof}
+
+\begin{remark}[Logical separation]\label{rmk:masses:separation}
+It is essential to distinguish the two reductions. Schur's lemma
+(\autoref{thm:masses:schur}) uses \emph{irreducibility} to fix ONE common mass
+on all $32$ directions; it never produces a massless internal subspace. The
+$28$ vs.\ $4$ split (\autoref{thm:masses:count}) is a \emph{gauge} statement
+(\autoref{post:masses:frame}), not a statement about the internal Hessian. The
+two are independent: the same $28$ massive scalars all share the one common
+mass, and the four removed modes were never internal zeros.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Canonical normalization of the mass}
+\label{sec:masses:canonical}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Canonical physical mass]\label{thm:masses:canonical}
+With $[f]=\text{mass}$, the dimension-four Hessian eigenvalue on the coset is
+$f^{2}\mu^{2}$, and the canonically normalized physical mass of each of the
+$28$ massive scalars is
+\begin{equation}\label{eq:masses:m2}
+  m^{2} \;=\; \mu^{2}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The $\sigma$-model kinetic term carries the dimensionful prefactor $f^{2}$
+(\autoref{eq:sigma}), so the clock fields $\pi^{\alpha}$ are not canonically
+normalized; the canonical fields are $\phi^{\alpha}=f\,\pi^{\alpha}$. The
+$E_{6}$-invariant effective potential contributes a Hessian whose dimension-four
+eigenvalue on $\mathfrak m$ is $m_{\mathfrak m}^{2}=f^{2}\mu^{2}$ in terms of
+the non-canonical fields. Re-expressing in the canonical field $\phi^{\alpha}$
+divides the mass-squared by $f^{2}$, giving $m^{2}=f^{2}\mu^{2}/f^{2}=\mu^{2}$.
+The spurious extra factor of $f^{2}$ is thereby removed.
+\end{proof}
+
+The residual symmetry of the full $27$-dimensional scalar block is $H$, not
+$E_{6}$, so off the coset the mass matrix is block-diagonal along the
+fundamental branching
+$\mathbf{27}=\mathbf 1_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}$,
+\begin{equation}\label{eq:masses:27block}
+  \mathcal{M}_{27}
+  \;=\;
+  \operatorname{diag}\!\bigl(\mu_{1}\,\mathbf 1_{1},\;
+  \mu_{10}\,\mathbf 1_{10},\;\mu_{16}\,\mathbf 1_{16}\bigr),
+\end{equation}
+with one common eigenvalue per $H$-irreducible factor (Schur, applied factorwise).
+
+%----------------------------------------------------------------------%
+\subsection{Consequence: the loop sum uses twenty-eight scalars}
+\label{sec:masses:loopsum}
+%----------------------------------------------------------------------%
+
+The physical count \eqref{eq:masses:count} and the canonical mass
+\eqref{eq:masses:m2} fix the input to every downstream loop sum: \emph{only}
+the $28$ massive scalars, each with $m^{2}=\mu^{2}$ (i.e.\ dimension-four
+eigenvalue $f^{2}\mu^{2}$, signature factor $s=+1$), enter. In particular the
+Sakharov-induced Planck mass (\autoref{thm:GravitySummary}; cf.\ Hardened
+Result~C) is built from precisely these $28$ scalars,
+\begin{equation}\label{eq:masses:mpl}
+  M_{\mathrm{Pl}}^{2}
+  \;=\;
+  \frac{1}{16\pi^{2}}\,\frac{1}{6}\,
+  \sum_{\text{massive }i} s_{i}\,m_{i}^{2}\,\log\frac{\Lambda^{2}}{m_{i}^{2}}
+  \;=\;
+  \frac{28}{6}\,\frac{f^{2}\mu^{2}\,\log(\Lambda^{2}/\mu^{2})}{16\pi^{2}}
+  \;>\;0,
+\end{equation}
+with prefactor $28/6$ (not $32$), keeping the conformal coefficient $1/6$, the
+scale $\mu^{2}$, and the $\log$. Massless fields do not produce the $m^{2}\log$
+term, since the heat-kernel $a_{2}$ ($R$-coefficient) is mass-independent;
+hence the four eaten frame modes do not contribute. Every factor in
+\eqref{eq:masses:mpl} is positive for $\Lambda>\mu$, so the induced Newton
+constant has the correct sign.
+
+\begin{remark}[Status]\label{rmk:masses:status}
+\autoref{thm:masses:tree}, \autoref{thm:masses:schur},
+\autoref{thm:masses:count}, and \autoref{thm:masses:canonical} are
+\emph{theorems} given the locked branchings, the irreducibility of
+\eqref{eq:masses:tangent}, and Postulate~P3. The reduction $32\to 28$ rests on
+the soldering postulate P3 (added structure), labelled as
+\autoref{post:masses:frame}. The downstream
+use of $28$ in \eqref{eq:masses:mpl} and in the gauge $\beta$-function scalar
+count $n_{S}=28$ is fixed once and for all by \autoref{thm:masses:count}.
+\end{remark}

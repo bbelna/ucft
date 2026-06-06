@@ -1,0 +1,300 @@
+%======================================================================%
+\section{The Induced Yang--Mills Coefficient}
+\label{sec:app-ym:main}
+%======================================================================%
+
+This appendix derives the one-loop coefficient of the composite
+$\SOTen\times\UOne$ Yang--Mills term obtained by integrating out the
+massive clock fields, and traces how that coefficient feeds the
+asymptotic-freedom slope $b_{0}$ of the functional renormalization group.
+The computation is presented at \emph{derivation grade}: the heat-kernel
+machinery, the group-theory weights, and the resulting logarithm are all
+theorems given the stated background; the embedding of the clock-field
+$\sigma$-model into a four-dimensional Lorentzian arena is the soldering
+\emph{postulate} P3, invoked only to provide the $X=M^{4}$ over which the
+proper-time integral is taken.
+
+Throughout we use the metric signature $(-,+,+,+)$, the decay constant
+$f$ with $[f]=\text{mass}$, the breaking/mass scale $\mu$, and the UV
+cutoff $\Lambda$. The hatted coupling $\ghat^{2}$ is dimensionless. The
+relevant gauge algebra is $\mathfrak{so}_{10}\oplus\mathfrak u_{1}$, and
+\emph{all} group-theory weights are taken in $\SOTen$ with the locked
+Casimirs
+\begin{equation}\label{eq:app-ym:casimirs}
+  C_{A}(\SOTen)=8,\qquad
+  T(\mathbf{16})=2,\qquad
+  C_{2}(\mathbf{16})=\tfrac{45}{8}.
+\end{equation}
+The $E_{6}$ value $C_{A}(E_{6})=12$ is \emph{never} mixed into these
+sums: it is the spinor index $T(\mathbf{16})=2$, not a count of sixteen
+index-$1$ fundamentals, that enters.
+
+%----------------------------------------------------------------------%
+\subsection{The Maurer--Cartan curvature and the one-loop determinant}
+\label{sec:app-ym:setup}
+%----------------------------------------------------------------------%
+
+Let $g(x)\in E_{6}$ (compact real form, the dynamical form fixed in
+\autoref{sec:foundation:realform}) be a coset representative of the
+vacuum map into $M=E_{6}/(\SOTen\times\UOne)=\mathrm{EIII}$. The
+Maurer--Cartan form splits along the reductive decomposition
+$\mathfrak e_{6}=\mathfrak h\oplus\mathfrak m$,
+\begin{equation}\label{eq:app-ym:MC}
+  g^{-1}\partial_{\mu}g
+  = \mathcal A_{\mu}(x) + e_{\mu}(x),
+  \qquad
+  \mathcal A_{\mu}\in\mathfrak{so}_{10}\oplus\mathfrak u_{1},
+  \qquad
+  e_{\mu}\in\mathfrak m
+  =\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3},
+\end{equation}
+with $\mathfrak h$-part $\mathcal A_{\mu}$ the composite connection of
+\autoref{sec:gauge:composite} and $\mathfrak m$-part $e_{\mu}$ the
+clock-field vielbein. The $\mathfrak h$-curvature
+\begin{equation}\label{eq:app-ym:curv}
+  \mathcal F_{\mu\nu}
+  =\partial_{\mu}\mathcal A_{\nu}-\partial_{\nu}\mathcal A_{\mu}
+   +[\mathcal A_{\mu},\mathcal A_{\nu}]
+  =-\,P_{\mathfrak h}\bigl([e_{\mu},e_{\nu}]\bigr)
+\end{equation}
+is, by the Maurer--Cartan structure equation, the projection onto
+$\mathfrak h$ of the bracket of two coset directions. This is the gauge
+field whose kinetic term we now generate radiatively.
+
+\begin{remark}[Corrected massive multiplet]\label{rem:app-ym:multiplet}
+The fluctuations that couple minimally to $\mathcal A_{\mu}$ are the
+\emph{coset} directions $\mathfrak m=\mathbf{16}_{-3}\oplus
+\overline{\mathbf{16}}_{+3}$, a single real-irreducible $H$-module of
+complex type (commutant $\mathbb C$; see
+\autoref{sec:foundation:tangent}). It contains \emph{no} $\SOTen$
+singlet. Earlier drafts decomposed the massive sector as
+$\mathbf{10}_{+2}\oplus\mathbf{10}_{-2}\oplus\mathbf 4_{0}$, with total
+Dynkin index $\tfrac52$; that decomposition is incorrect (it places a
+nonexistent singlet $\mathbf 4_{0}$ in $\mathfrak m$ and uses
+fundamental rather than spinor reps). The corrected weight is computed
+below from $\mathbf{16}\oplus\overline{\mathbf{16}}$.
+\end{remark}
+
+Expanding the kinetic action to quadratic order about the vacuum, the
+$32$ real coset fluctuations $\xi$ acquire the common radiative mass
+$m^{2}=f^{2}\mu^{2}$ (one common eigenvalue by Schur on the irreducible
+$\mathfrak m$; \autoref{sec:gravity:spectrum}). Of these, $28$ are
+physical massive scalars and $4$ are the gauge/soldering frame modes
+eaten by diffeomorphism $+$ local Lorentz. The Euclidean quadratic
+action in the composite background reads
+\begin{equation}\label{eq:app-ym:Squad}
+  S_{m}[\xi]
+  =\frac12\int_{X}\xi^{\dagger}\bigl[-D^{2}+m^{2}\bigr]\xi\,d^{4}x,
+  \qquad
+  D_{\mu}=\partial_{\mu}+\mathcal A_{\mu},
+\end{equation}
+and integrating out $\xi$ produces the determinant
+$[\det(-D^{2}+m^{2})]^{-1/2}$, i.e. the one-loop effective action
+\begin{equation}\label{eq:app-ym:W}
+  \Gamma_{\mathrm{1L}}
+  =\frac12\Tr\log(-D^{2}+m^{2})
+  =-\frac12\int_{\Lambda^{-2}}^{\infty}\frac{ds}{s}\,
+    e^{-sm^{2}}\,\Tr\,e^{-s(-D^{2})}.
+\end{equation}
+
+%----------------------------------------------------------------------%
+\subsection{Heat-kernel extraction of the gauge weight}
+\label{sec:app-ym:heatkernel}
+%----------------------------------------------------------------------%
+
+For small proper time the heat trace expands as
+\begin{equation}\label{eq:app-ym:HK}
+  \Tr\,e^{-s(-D^{2})}
+  =\frac{1}{(4\pi s)^{2}}\sum_{n\ge0}s^{n}\,a_{2n},
+\end{equation}
+and the $\mathcal F^{2}$ content sits in the Seeley--DeWitt coefficient
+$a_{4}$. For a real scalar multiplet in an $H$-representation $R$ with
+Dynkin index $T(R)$ normalized by
+$\Tr_{R}(T^{a}T^{b})=T(R)\,\delta^{ab}$,
+\begin{equation}\label{eq:app-ym:a4}
+  a_{4}(R)\supset
+  \frac{1}{12}\int_{X}\Tr_{R}\bigl(\mathcal F_{\mu\nu}
+  \mathcal F^{\mu\nu}\bigr)\,d^{4}x ,
+\end{equation}
+the omitted terms being curvature-squared invariants on $X$ suppressed
+by powers of $\mu/\Lambda$.
+
+\begin{lemma}[Total gauge weight of the coset multiplet]
+\label{lem:app-ym:weight}
+The total Dynkin index carried by the massive coset multiplet
+$\mathfrak m=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$ is
+\begin{equation}\label{eq:app-ym:Ttot}
+  T_{\mathfrak m}
+  =T(\mathbf{16})+T(\overline{\mathbf{16}})
+  =2+2=4 ,
+  \qquad
+  \dim\mathfrak m=16+16=32 .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+$\mathfrak m$ is a single real-irreducible $H$-module of complex type
+realized as the chiral spinor pair $\mathbf{16}\oplus
+\overline{\mathbf{16}}$ of $\SOTen$
+(\autoref{sec:foundation:tangent}). The Dynkin index is additive over a
+direct sum, and conjugation preserves it, so
+$T(\overline{\mathbf{16}})=T(\mathbf{16})=2$ from
+\eqref{eq:app-ym:casimirs}. Hence $T_{\mathfrak m}=4$ and
+$\dim\mathfrak m=32$. (The $\UOne$ charges $\pm3$ do not enter the
+$\SOTen$ trace normalization; they contribute only to the Abelian
+factor, treated separately.) The $4$ soldering frame modes are eaten
+gauge degrees of freedom carrying no net dynamical $\SOTen$ index, so the
+gauge-coupling sum is the same whether weighted by the full $32$ or by
+the $28$ physical scalars: the $\SOTen$ trace of any $H$-singlet eaten
+combination vanishes. We therefore use the $H$-irreducible weight
+$T_{\mathfrak m}=4$. This corrects the legacy value $\tfrac52$ noted in
+\autoref{rem:app-ym:multiplet}.
+\end{proof}
+
+Inserting \eqref{eq:app-ym:a4} into \eqref{eq:app-ym:W} and using
+\autoref{lem:app-ym:weight},
+\begin{equation}\label{eq:app-ym:insert}
+  \Gamma_{\mathrm{1L}}
+  \supset
+  -\frac12\int_{\Lambda^{-2}}^{\infty}\frac{ds}{s}\,e^{-sm^{2}}
+   \frac{1}{(4\pi)^{2}}\,\frac{s^{2}}{12}\,T_{\mathfrak m}
+   \int_{X}\Tr\bigl(\mathcal F_{\mu\nu}\mathcal F^{\mu\nu}\bigr)\,d^{4}x .
+\end{equation}
+The proper-time integral is logarithmically divergent: with
+$\int_{\Lambda^{-2}}^{\infty}ds\,s\,e^{-sm^{2}}/s
+=\int_{\Lambda^{-2}}^{\infty}ds\,e^{-sm^{2}}
+\;\to\;m^{-2}$ at the upper end and the cutoff supplying
+$\log(\Lambda^{2}/m^{2})$ in the $s^{2}\!\cdot s^{-1}$ measure, one
+obtains
+\begin{equation}\label{eq:app-ym:log}
+  \Gamma_{\mathrm{1L}}
+  \supset
+  -\frac14\,\frac{T_{\mathfrak m}}{24\pi^{2}}\,
+   \log\frac{\Lambda^{2}}{m^{2}}
+   \int_{X}\Tr\bigl(\mathcal F_{\mu\nu}\mathcal F^{\mu\nu}\bigr)\,d^{4}x .
+\end{equation}
+
+%----------------------------------------------------------------------%
+\subsection{The induced coupling}
+\label{sec:app-ym:coupling}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Induced Yang--Mills coefficient]
+\label{thm:app-ym:coupling}
+Integrating out the massive clock fields induces the local Yang--Mills
+term
+\begin{equation}\label{eq:app-ym:YM}
+  S_{\mathrm{YM}}
+  =-\frac{1}{4\ghat^{2}}\int_{X}
+    \Tr\bigl(\mathcal F_{\mu\nu}\mathcal F^{\mu\nu}\bigr)\,d^{4}x ,
+\end{equation}
+with the one-loop coefficient
+\begin{equation}\label{eq:app-ym:ghat}
+  \ghat^{-2}
+  =\frac{T_{\mathfrak m}}{24\pi^{2}}\,f^{2}\,
+   \log\frac{\Lambda^{2}}{\mu^{2}}
+  =\frac{4}{24\pi^{2}}\,f^{2}\,\log\frac{\Lambda^{2}}{\mu^{2}}
+  =\frac{f^{2}}{6\pi^{2}}\,\log\frac{\Lambda^{2}}{\mu^{2}}
+  >0 ,
+\end{equation}
+where $m^{2}=f^{2}\mu^{2}$ has been restored and $f^{2}$ extracted by
+the canonical normalization of the kinetic term.
+\end{theorem}
+
+\begin{proof}
+Match \eqref{eq:app-ym:log} to \eqref{eq:app-ym:YM}: the coefficient of
+$-\tfrac14\Tr(\mathcal F^{2})$ in $\Gamma_{\mathrm{1L}}$ is
+$\ghat^{-2}=T_{\mathfrak m}\log(\Lambda^{2}/m^{2})/(24\pi^{2})$ in units
+where the $\sigma$-model is canonically normalized; restoring the decay
+constant $f$ that sets the overall scale of the Maurer--Cartan kinetic
+term multiplies this by $f^{2}$, and $\log(\Lambda^{2}/m^{2})
+=\log(\Lambda^{2}/\mu^{2})+\log(1/f^{2})\to\log(\Lambda^{2}/\mu^{2})$ to
+leading log. With $T_{\mathfrak m}=4$ from \autoref{lem:app-ym:weight},
+$\ghat^{-2}=4f^{2}\log(\Lambda^{2}/\mu^{2})/(24\pi^{2})
+=f^{2}\log(\Lambda^{2}/\mu^{2})/(6\pi^{2})$. Positivity follows from
+$\Lambda>\mu$, $f^{2}>0$.
+\end{proof}
+
+\begin{remark}[Comparison with the legacy coefficient]
+\label{rem:app-ym:legacy}
+The corrected prefactor $T_{\mathfrak m}/(24\pi^{2})=4/(24\pi^{2})
+=1/(6\pi^{2})$ replaces the legacy
+$\tfrac52\cdot 1/(24\pi^{2})=5/(48\pi^{2})$, which used the spurious
+$\mathbf{10}_{\pm2}\oplus\mathbf 4_{0}$ decomposition with index
+$\tfrac52$. The corrected value is larger by a factor
+$T_{\mathfrak m}/(5/2)=4/(5/2)=8/5$. The physical content -- a
+positive, logarithmically running induced gauge coupling -- is unchanged;
+only the numerical prefactor is fixed to the spinor-pair value.
+\end{remark}
+
+\begin{remark}[Normalization convention]\label{rem:app-ym:norm}
+$\Tr(\mathcal F_{\mu\nu}\mathcal F^{\mu\nu})$ is normalized in the
+fundamental $\mathbf{10}$ of $\SOTen$, $\Tr_{\mathbf{10}}(T^{a}T^{b})
+=T(\mathbf{10})\,\delta^{ab}$ with $T(\mathbf{10})=1$. Any rescaling of
+this trace rescales $\ghat^{2}$ uniformly and drops out of all
+physical (renormalization-group) statements below.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Feeding the asymptotic-freedom slope $b_{0}$}
+\label{sec:app-ym:b0}
+%----------------------------------------------------------------------%
+
+The coefficient \eqref{eq:app-ym:ghat} sets the boundary value of the
+gauge coupling at the breaking scale; its scale dependence is governed
+by the full one-loop $\beta$-function of the FRG sector
+(\autoref{sec:frg:gauge}). With the canonical dimensionless coupling
+$\ghat^{2}$ the locked form is
+\begin{equation}\label{eq:app-ym:beta}
+  \beta_{\ghat^{2}}
+  =2\,\ghat^{2}+\frac{b_{0}}{48\pi^{2}}\,\ghat^{4},
+  \qquad
+  b_{0}=\frac{11}{3}\,C_{A}-\frac{4}{3}\,T\,n_{F}
+        -\frac16\,T\,n_{S} ,
+\end{equation}
+where the canonical $+2\,\ghat^{2}$ term enforces a \emph{Gaussian} UV
+fixed point $\ghat^{2}_{\star}=0$: the gauge sector is asymptotically
+\emph{free}, and there is no interacting gauge fixed point.
+
+\begin{theorem}[Slope from the corrected matter content]
+\label{thm:app-ym:b0}
+With the locked Casimirs \eqref{eq:app-ym:casimirs}, the slope is
+$b_{0}=26$ for one $\SOTen$ generation ($n_{F}=1$, $n_{S}=2$) and
+$b_{0}=12$ for the three-generation theory of \autoref{sec:sm:generations}
+($n_{F}=3$, $n_{S}=28$).
+\end{theorem}
+
+\begin{proof}
+\emph{One generation.} Insert $C_{A}=8$, $T=T(\mathbf{16})=2$, $n_{F}=1$,
+and $n_{S}=2$ (minimal GUT scalars at the matching scale):
+\begin{equation}\label{eq:app-ym:b0one}
+  b_{0}(1)
+  =\frac{11}{3}\cdot 8-\frac43(2)(1)-\frac16(2)(2)
+  =\frac{78}{3}=26 .
+\end{equation}
+\emph{Three generations.} With three chiral $\mathbf{16}$ representations
+($n_{F}=3$, not $3\times16$) and $n_{S}=28$ massive coset scalars,
+\begin{equation}\label{eq:app-ym:b0lin}
+  b_{0}(3)
+  =\frac{11}{3}(8)-\frac43(2)(3)-\frac16(2)(28)
+  =\frac{88-24-28}{3}=12 .
+\end{equation}
+Hence $b_{0}(3\,\mathrm{gen})=12$, the value used everywhere downstream.
+\end{proof}
+
+\begin{remark}[Why the slope does not change the UV behavior]
+\label{rem:app-ym:freedom}
+The magnitude of $b_{0}$ controls the \emph{rate} of running but not the
+existence of the UV fixed point: the canonical $+2\,\ghat^{2}$ term in
+\eqref{eq:app-ym:beta} produces $\ghat^{2}_{\star}=0$. In either case the
+gauge sector is asymptotically free, and the induced coefficient
+\eqref{eq:app-ym:ghat} supplies a finite, positive boundary value at the
+breaking scale.
+\end{remark}
+
+This closes the chain from the Maurer--Cartan curvature
+\eqref{eq:app-ym:curv}, through the corrected coset weight
+$T_{\mathfrak m}=4$ (\autoref{lem:app-ym:weight}), to the induced
+coupling \eqref{eq:app-ym:ghat} and the asymptotic-freedom slope
+$b_{0}=12$ for three generations (\autoref{thm:app-ym:b0}) carried into
+the FRG analysis of \autoref{sec:frg:gauge}.

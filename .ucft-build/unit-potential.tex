@@ -1,0 +1,332 @@
+\section{The Invariant Potential and Vacuum Selection}
+\label{sec:potential:main}
+
+The order parameter of UCFT is a field $\Phi$ valued in the matter representation
+$27=J_3(\mathbb O)$ of $E_6$ (Axiom~I). This section presents the $E_6$-invariant potential
+$V$ of postulate~\textbf{P1} and proves the vacuum-selection statement~\textbf{P2}: the
+global-minimum locus of $V$ is exactly the rank-$1$ primitive-idempotent orbit
+$\mathcal M=\mathrm{EIII}=E_6/(\mathrm{Spin}(10)\times U(1))$ of real dimension $32$. We also
+show that the symmetric origin $\Phi=0$ is a strict local \emph{maximum}, which supplies the
+roll-down dynamics. The potential class is the added postulate; that the chosen member of the
+class selects the rank-$1$ orbit is a \textbf{theorem}. Throughout, the dynamics live on the
+\emph{compact} real form $E_6$ (equivalently $E_{6(-14)}$, maximal compact
+$H=\mathrm{Spin}(10)\times U(1)$); the non-compact $E_{6(-26)}$ enters only as the rigid
+orbit classifier (rank and $N$ only). The vacuum geometry and its tangent space are used in
+\autoref{sec:soldering:main} (signature) and \autoref{sec:gravity:main} (spectrum, induced
+gravity).
+
+\subsection{Albert-algebra setup and the two real forms}
+\label{sec:potential:setup}
+
+Let $\mathbb O$ be the real octonions with conjugation $x\mapsto\bar x$ and norm
+$n(x)=x\bar x$. The real Albert algebra is the $27$-dimensional Euclidean (formally real)
+Jordan algebra
+\begin{equation}
+\label{eq:potential:albert}
+J_3(\mathbb O)=\left\{
+X=\begin{pmatrix}\xi_1 & x_3 & \bar x_2\\ \bar x_3 & \xi_2 & x_1\\ x_2 & \bar x_1 & \xi_3\end{pmatrix}
+:\ \xi_i\in\mathbb R,\ x_i\in\mathbb O\right\},
+\qquad X\circ Y=\tfrac12(XY+YX).
+\end{equation}
+Its two basic invariants are the \emph{trace form} (a Euclidean, positive-definite bilinear
+form) and the \emph{cubic norm}:
+\begin{equation}
+\label{eq:potential:invariants}
+\langle X,Y\rangle=\operatorname{Tr}(X\circ Y),\qquad
+Q(X):=\operatorname{Tr}(X^2)=\langle X,X\rangle\ge0,\qquad
+N(X)=\det X\ \ (\text{cubic}).
+\end{equation}
+With the linear trace $\operatorname{tr}(X)=\xi_1+\xi_2+\xi_3$ and identity
+$E=\operatorname{diag}(1,1,1)$, every $X$ obeys the cubic characteristic identity
+$X^{\circ3}-\operatorname{tr}(X)\,X^{\circ2}+\sigma_2(X)\,X-N(X)\,E=0$ with
+$\sigma_2(X)=\tfrac12(\operatorname{tr}(X)^2-Q(X))$. The Jordan eigenvalues
+$\lambda_1,\lambda_2,\lambda_3\in\mathbb R$ satisfy
+$\operatorname{tr}(X)=\sum_i\lambda_i$, $Q(X)=\sum_i\lambda_i^2$,
+$N(X)=\lambda_1\lambda_2\lambda_3$.
+
+The \emph{sharp map} (Jordan adjoint) $X\mapsto X^\#$ is the unique quadratic map with
+\begin{equation}
+\label{eq:potential:sharp}
+X^\#\circ X=N(X)\,E,\qquad (X^\#)^\#=N(X)\,X,\qquad X^\#=\nabla N(X),
+\end{equation}
+and is the matrix $2\times2$-cofactor (adjugate): in a Jordan frame
+$\operatorname{diag}(\lambda_1,\lambda_2,\lambda_3)^\#
+=\operatorname{diag}(\lambda_2\lambda_3,\lambda_3\lambda_1,\lambda_1\lambda_2)$.
+
+\paragraph{The two $E_6$'s (a locked distinction).}
+The reduced structure group is the non-compact $E_{6(-26)}$ (dim $78$); it preserves $N$ only
+up to a scalar character, $N(gX)=\lambda(g)N(X)$, and covariantly transforms the sharp map.
+It does \emph{not} preserve $Q=\operatorname{Tr}(X^2)$; indeed $\operatorname{Aut}(J_3(\mathbb O))=F_4$
+(compact, dim $52$) is exactly the subgroup preserving both $Q$ and $N$. We use $E_{6(-26)}$
+solely to classify orbits of the real $27$ by \textbf{rank and $N$}. The \emph{dynamics}, by
+contrast, live on the \textbf{compact} $E_6$: there $H=\mathrm{Spin}(10)\times U(1)$ is
+compact, so the coset metric is positive-definite and the gauge sector unitary; on the
+compact form $Q=\langle X,X\rangle$ is the invariant trace form and the norm character is
+identically $1$. Orbits are classified by rank and $N$ (\emph{not} by $(Q,N)$):
+\begin{equation}
+\label{eq:potential:rank}
+\operatorname{rank}(X)\le1\iff X^\#=0,\qquad
+\operatorname{rank}(X)\le2\iff N(X)=0,\qquad
+\operatorname{rank}(X)=3\iff N(X)\neq0.
+\end{equation}
+
+\subsection{The potential class (Postulate P1)}
+\label{sec:potential:class}
+
+\begin{postulate}[Potential class, P1]
+\label{post:potential:P1}
+The order parameter $\Phi$ is governed by the $E_6$-invariant polynomial potential
+\begin{equation}
+\label{eq:potential:v}
+V(X)=\alpha\,\langle X^\#,X^\#\rangle
++\beta\,\bigl(\operatorname{Tr}(X^2)-c_2\bigr)^2
++\gamma\,\bigl(\operatorname{Tr}(X^2)\bigr)^k,
+\qquad \alpha,\beta,\gamma>0,\ \ k\ge2\ \text{even},
+\end{equation}
+built from the cubic norm (through the sharp map $X^\#=\nabla N$) and the trace form $Q$.
+On the compact real form every term is a genuine $E_6$-invariant.
+\end{postulate}
+
+The first term is genuinely $E_6$-covariant and vanishes precisely on rank $\le1$; the
+$Q$-terms are $F_4$-invariant selectors that fix the scale and the representative. Postulate
+P1 asserts that one is \emph{allowed} to write such a potential; the theorems below establish
+\emph{what it selects}.
+
+\subsection{The vacuum-selection theorem (P1 \texorpdfstring{$\Rightarrow$}{=>} P2)}
+\label{sec:potential:theorem}
+
+\begin{lemma}[Zero locus of the sharp map]
+\label{lem:potential:L1}
+For $X\in J_3(\mathbb O)$, \ $X^\#=0\iff\operatorname{rank}(X)\le1$. The normalized
+($\operatorname{tr}=1$) rank-$1$ elements are exactly the primitive idempotents, forming the
+single $F_4$-orbit $F_4/\mathrm{Spin}(9)\cong\mathbb{OP}^2$ (real dim $16$); the
+projective $E_6$-orbit of a rank-$1$ line in $\mathbb P(27_{\mathbb C})$ is the complex
+Cayley plane $\mathrm{EIII}=E_6/(\mathrm{Spin}(10)\times U(1))$, real dim $32$.
+\end{lemma}
+
+\begin{proof}
+In a Jordan frame $X=\operatorname{diag}(\lambda_1,\lambda_2,\lambda_3)$, the sharp map gives
+$X^\#=\operatorname{diag}(\lambda_2\lambda_3,\lambda_3\lambda_1,\lambda_1\lambda_2)$, which
+vanishes iff at most one $\lambda_i\neq0$, i.e. $\operatorname{rank}(X)\le1$; $F_4$-equivariance
+transports this to all of $J_3(\mathbb O)$. The orbit statements are the standard
+identifications of the real rank-$1$ idempotents ($\mathbb{OP}^2$, dim $16$) and the minimal
+$E_6$-orbit / complex Cayley plane (EIII, dim $32$).
+\end{proof}
+
+\begin{theorem}[Positivity of the sharp term]
+\label{thm:potential:T1}
+For all $X\in J_3(\mathbb O)$, \ $\langle X^\#,X^\#\rangle\ge0$, with equality iff $X^\#=0$
+iff $\operatorname{rank}(X)\le1$. Explicitly
+\begin{equation}
+\label{eq:potential:sharpsq}
+\langle X^\#,X^\#\rangle=(\lambda_2\lambda_3)^2+(\lambda_3\lambda_1)^2+(\lambda_1\lambda_2)^2
+=\sigma_2(X)^2-2\,\operatorname{tr}(X)\,N(X)\ \ (\text{a sum of squares}).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The trace form is positive-definite on the Euclidean Jordan algebra, so $\langle Y,Y\rangle\ge0$
+with equality iff $Y=0$; take $Y=X^\#$ and apply \autoref{lem:potential:L1}. The frame
+expression \eqref{eq:potential:sharpsq} is manifestly a sum of squares.
+\end{proof}
+
+\begin{theorem}[Compact-$E_6$ invariance of the sharp term]
+\label{thm:potential:T2}
+The scalar $\langle X^\#,X^\#\rangle$ is invariant under the compact real form $E_6$ (and
+$E_{6(-14)}$): \ $\langle(gX)^\#,(gX)^\#\rangle=\langle X^\#,X^\#\rangle$ for all
+$g\in E_6^{\,\mathrm{compact}}$.
+\end{theorem}
+
+\begin{proof}
+On the compact form the $27$ is unitary, with invariant positive-definite form whose real
+part is the trace form; hence the compact $E_6$ preserves $\langle\cdot,\cdot\rangle$. As a
+degree-$4$ relative invariant, $\langle X^\#,X^\#\rangle$ transforms by a power of the norm
+character $\lambda(g)$; but a continuous homomorphism from a compact connected group to
+$\mathbb R_{>0}$ is identically $1$, so $\lambda\equiv1$ and the relative invariant is a
+genuine invariant. (Under $E_{6(-26)}$, $\lambda$ is unbounded and $\langle\cdot,\cdot\rangle$
+is not preserved; this is precisely why the dynamics use the compact form.)
+\end{proof}
+
+\paragraph{Status of $Q$.}
+$Q=\operatorname{Tr}(X^2)$ is $F_4$-invariant only and is \emph{not} preserved by the
+non-compact structure group; we never claim otherwise, nor that $(Q,N)$ separates $E_6$-orbits.
+On the compact form, however, $Q=\langle X,X\rangle$ \emph{is} the invariant trace form, so
+$V$ in \eqref{eq:potential:v} is a genuine compact-$E_6$ invariant potential.
+
+\begin{lemma}[The selector has a unique positive minimizer]
+\label{lem:potential:L2}
+Set $W(q)=\beta(q-c_2)^2+\gamma q^k$ for $q\ge0$, $\beta,\gamma>0$, $k\ge2$ even. There is a
+$c_2^{\,\star}>0$ such that for $c_2>c_2^{\,\star}$, $W$ is strictly convex on $[0,\infty)$ and
+attains its global minimum at a unique interior point $q_\star\in(0,c_2)$ with $W'(q_\star)=0$,
+$W''(q_\star)>0$, and $W(q_\star)<W(0)=\beta c_2^2$. Moreover
+\begin{equation}
+\label{eq:potential:qstar}
+q_\star=c_2-\frac{\gamma k}{2\beta}\,c_2^{\,k-1}+O(c_2^{\,2k-3}),
+\qquad q_\star\xrightarrow[\gamma\to0^+]{}c_2.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+$W(0)=\beta c_2^2>0$ and $W(q)\to+\infty$, so a minimum exists on a compact set. Since
+$W''(q)=2\beta+\gamma k(k-1)q^{k-2}>0$ for all $q\ge0$ ($k\ge2$ even), $W$ is strictly convex;
+with $W'(0)=-2\beta c_2<0$ it has a unique stationary point $q_\star>0$, the global minimizer,
+and $W(q_\star)<W(0)$. As $W'(c_2)=\gamma k c_2^{k-1}>0$, the root lies below $c_2$; the
+expansion follows by solving $2\beta(q_\star-c_2)=-\gamma k q_\star^{k-1}$ perturbatively.
+\end{proof}
+
+The selector thus \emph{fixes the scale}: among rank-$1$ elements $X=\lambda P$ (with
+$Q=\lambda^2$, $N=0$, $X^\#=0$), the minimizers have $\lambda^2=q_\star$, a fixed nonzero
+norm; in particular the origin ($q=0$, $W(0)=\beta c_2^2>W(q_\star)$) is excluded.
+
+\begin{lemma}[Coercivity requires the compact form]
+\label{lem:potential:L3}
+On $J_3(\mathbb O)$ with the compact-$E_6$ Euclidean norm $\|X\|^2=Q(X)$, the potential $V$ is
+coercive and bounded below: $V(X)\ge\gamma\|X\|^{2k}\to+\infty$. On a non-compact real-form
+orbit, where $Q$ is not preserved and not a proper exhaustion, $V$ need not be coercive.
+\end{lemma}
+
+\begin{proof}
+$V\ge\gamma Q^k=\gamma\|X\|^{2k}$ from \eqref{eq:potential:v} ($\alpha$-term and the square
+are $\ge0$), giving coercivity on the compact form. Under $E_{6(-26)}$ the character
+$\lambda(g)$ is unbounded, so a fixed $X$ with $N(X)\neq0$ can be driven to $Q\to0$ along a
+fixed $N$-level set; $Q$ is not proper there and sublevel sets are unbounded.
+\end{proof}
+
+\begin{theorem}[Global-minimum locus is the rank-$1$ EIII orbit; P2]
+\label{thm:potential:T4}
+With $\alpha,\beta,\gamma>0$, $k\ge2$ even, and $c_2>c_2^{\,\star}$
+(\autoref{lem:potential:L2}), every global minimizer $X_\star$ of $V$ on $J_3(\mathbb O)$
+satisfies $X_\star^\#=0$ and $\operatorname{Tr}(X_\star^2)=q_\star$; equivalently
+\begin{equation}
+\label{eq:potential:argmin}
+\arg\min_{X\in J_3(\mathbb O)}V(X)
+=\{\,X=\lambda P:\ P\ \text{primitive idempotent},\ \lambda^2=q_\star\,\},
+\end{equation}
+whose projective $E_6$-orbit is the vacuum manifold
+\begin{equation}
+\label{eq:potential:vacuum}
+\mathcal M=\mathrm{EIII}=\frac{E_6}{\mathrm{Spin}(10)\times U(1)},
+\qquad \dim_{\mathbb R}\mathcal M=32.
+\end{equation}
+This proves postulate~\textbf{P2} from \autoref{post:potential:P1}.
+\end{theorem}
+
+\begin{proof}
+By \autoref{lem:potential:L3} a global minimum is attained. For any $X$,
+\begin{equation*}
+V(X)=\underbrace{\alpha\,\langle X^\#,X^\#\rangle}_{\ge0}+W(Q(X))\ge W(Q(X))\ge W(q_\star),
+\end{equation*}
+using \autoref{thm:potential:T1} and \autoref{lem:potential:L2}. Equality in the first step
+forces $X^\#=0$, i.e. $\operatorname{rank}(X)\le1$ (\autoref{lem:potential:L1}); equality in
+the second forces $Q(X)=q_\star>0$, excluding $X=0$ and forcing rank exactly $1$. Both hold
+iff $X=\lambda P$ with $\lambda^2=q_\star$, and every such $X$ achieves $V=W(q_\star)$. The
+projective orbit of these rank-$1$ idempotents is EIII (\autoref{lem:potential:L1}).
+\end{proof}
+
+\paragraph{Why rank $2$ and rank $3$ strictly lose.}
+For $\operatorname{rank}(X)\ge2$, \autoref{lem:potential:L1} gives $X^\#\neq0$, so
+$\langle X^\#,X^\#\rangle>0$ strictly (\autoref{thm:potential:T1}) and
+$V(X)>W(q_\star)$ by a deficit at least $\alpha\langle X^\#,X^\#\rangle>0$. In particular
+$\operatorname{diag}(1,1,1)$ (rank $3$, $\langle X^\#,X^\#\rangle=3>0$, orbit $E_6/F_4$ of
+real dimension $26$) is \emph{not} a minimizer. The vacuum is the rank-$1$ idempotent EIII
+orbit (dim $32$), \emph{not} the $E_6/F_4$ orbit of $\operatorname{diag}(1,1,1)$ (dim $26$).
+
+\begin{remark}[Coset tangent and metric]
+\label{rmk:potential:tangent}
+The tangent space to $\mathcal M$ at the base idempotent is the coset module
+\begin{equation}
+\label{eq:potential:cosettangent}
+\mathfrak m=16_{-3}\oplus\overline{16}_{+3}\quad(32\ \text{real}),
+\end{equation}
+read off from the adjoint branching $78=45_0\oplus1_0\oplus16_{-3}\oplus\overline{16}_{+3}$
+under $H=\mathrm{Spin}(10)\times U(1)$. It is real-irreducible of complex type (commutant
+$\mathbb C$) and contains \emph{no} $\mathrm{SO}(10)$ singlet; the $U(1)$ charge forbids the
+symmetric $16\times16$ and $\overline{16}\times\overline{16}$ invariants, leaving a unique
+charge-$0$ cross-pairing. The induced coset metric $K|_{\mathfrak m}$ is therefore unique and
+positive-definite (Schur), and serves as the kinetic/target-space metric for the $32$ clock
+fields (Goldstones). It carries \emph{no} Lorentzian content: the $(1,3)$ signature is added
+structure (P3), soldered from the cubic norm via $H_2(\mathbb O)\cong\mathbb R^{1,9}$, not a
+Killing-form consequence; see \autoref{sec:soldering:main}.
+\end{remark}
+
+\subsection{The symmetric origin is a strict local maximum}
+\label{sec:potential:origin}
+
+\begin{theorem}[Origin is a strict local maximum]
+\label{thm:potential:T5}
+At $X=0$,
+\begin{equation}
+\label{eq:potential:hess0}
+\nabla V(0)=0,\qquad
+\operatorname{Hess}V(0)=-4\beta c_2\,\mathbb 1\ \prec\ 0
+\quad(\text{negative-definite, }\beta,c_2>0),
+\end{equation}
+so $X=0$ is a strict local maximum, all $27$ Hessian eigenvalues equal to $-4\beta c_2<0$.
+Since $V(0)=\beta c_2^2>W(q_\star)$, the rank-$1$ orbit beats the origin locally and globally.
+\end{theorem}
+
+\begin{proof}
+$V$ has no linear part. The $\alpha\langle X^\#,X^\#\rangle$ term is homogeneous of degree $4$
+and the $\gamma Q^k$ term of degree $2k\ge4$, so both have vanishing Hessian at $0$. Only the
+quadratic piece $-2\beta c_2 Q$ of $\beta(Q-c_2)^2$ contributes; with $Q$ having Hessian
+$2\,\mathbb 1$ in the trace metric this gives $\operatorname{Hess}V(0)=-4\beta c_2\,\mathbb 1$,
+negative-definite.
+\end{proof}
+
+\begin{theorem}[Roll-down to $\mathcal M$]
+\label{thm:potential:T6}
+Under gradient flow $\dot X=-\nabla V(X)$ (or the EOM with damping), the origin is linearly
+unstable with growth rate $4\beta c_2>0$ in all $27$ directions; $V$ is a strict Lyapunov
+function, coercivity (\autoref{lem:potential:L3}) confines trajectories to compact sublevel
+sets, and by LaSalle the $\omega$-limit set lies in $\{\nabla V=0\}$. The unique stable
+critical set is the global minimum $\mathcal M$ (\autoref{thm:potential:T4}); the origin
+(maximum, \autoref{thm:potential:T5}) and the rank-$2$/rank-$3$ saddles ($X^\#\neq0$) are all
+unstable. Hence generic initial data roll down to $\mathcal M=\mathrm{EIII}$.
+\end{theorem}
+
+\begin{proof}
+Linearization at $0$ uses $\operatorname{Hess}V(0)\prec0$ (\autoref{thm:potential:T5}), giving
+positive growth in every direction. $\dot V=-\|\nabla V\|^2\le0$ vanishes only at critical
+points; LaSalle plus coercivity confine $\omega$-limits to the critical set, of which only
+$\mathcal M$ is Lyapunov-stable. The basin of $\mathcal M$ is open and dense.
+\end{proof}
+
+\paragraph{Tree-level Goldstone consistency.}
+On $\mathcal M$, $V$ is $E_6$-invariant and constant along the orbit, so
+$\operatorname{Hess}V|_{\mathfrak m}=0$ at tree level: the $32$ clock fields are exact
+Goldstones. Radiative (Coleman--Weinberg) corrections are $H$-invariant; by Schur on the
+real-irreducible module $\mathfrak m$ they give \emph{one} common mass on all $32$ directions.
+Of these, $28$ are physical massive scalars (single common mass) and $4$ are the
+gauge/soldering modes eaten by diffeomorphism and local Lorentz; this $28+4$ split and the
+common radiative mass are carried into the spectrum and induced-gravity analysis of
+\autoref{sec:gravity:main}. The origin's $27$ negative modes and the vacuum's flat coset
+directions are not in tension: they live at different points of field space.
+
+\subsection{Summary of the logical chain}
+\label{sec:potential:summary}
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+step & statement & type \\
+\midrule
+\autoref{lem:potential:L1} & $X^\#=0\iff\operatorname{rank}(X)\le1$; rank-$1$ orbit $=$ EIII (dim $32$) & Theorem \\
+\autoref{thm:potential:T1} & $\langle X^\#,X^\#\rangle\ge0$, $=0\iff\operatorname{rank}\le1$ & Theorem \\
+\autoref{thm:potential:T2} & $\langle X^\#,X^\#\rangle$ is compact-$E_6$ invariant & Theorem \\
+\autoref{lem:potential:L2} & selector $W$ strictly convex, unique $q_\star>0$, $W(q_\star)<W(0)$ & Theorem \\
+\autoref{lem:potential:L3} & coercivity holds on the compact form, fails on non-compact orbits & Theorem \\
+\autoref{thm:potential:T4} & \textbf{global-min locus $=$ rank-$1$ EIII orbit, dim $32$ (P2)} & \textbf{Theorem} \\
+\autoref{thm:potential:T5} & $\operatorname{Hess}V(0)=-4\beta c_2\,\mathbb1\prec0$: origin strict max & Theorem \\
+\autoref{thm:potential:T6} & roll-down: generic flows attract to $\mathcal M$ & Theorem \\
+\autoref{post:potential:P1} & the potential class is added structure & Postulate \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Given the postulated potential class P1, \autoref{thm:potential:T4} proves P2: the unique
+global-minimum locus of $V$ is the rank-$1$ primitive-idempotent orbit
+$\mathcal M=\mathrm{EIII}=E_6/(\mathrm{Spin}(10)\times U(1))$, real dimension $32$. The sharp
+term enforces rank $\le1$; the $Q$-selector fixes the nonzero scale and excludes the origin;
+the compact real form supplies coercivity and a definite invariant metric; and the origin is
+a strict local maximum driving the roll-down. No rank-$2$/rank-$3$ point --- in particular
+none on the $E_6/F_4$ orbit of $\operatorname{diag}(1,1,1)$ (dim $26$) --- can be a minimizer.

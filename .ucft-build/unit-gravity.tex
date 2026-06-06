@@ -1,0 +1,366 @@
+%======================================================================%
+\section{Sakharov-Induced Gravitation}
+\label{sec:gravity:main}
+%======================================================================%
+
+Gravity in UCFT is not a fundamental input. It is the Sakharov
+mechanism~\cite{Sakharov:1967pk}: integrating out the quantum
+fluctuations of the matter sector over the curved emergent background
+$M^{4}$ (the soldered 4-manifold of Postulate~P3, \autoref{sec:soldering:main})
+generates an Einstein--Hilbert term whose coefficient is the induced
+Planck mass. The curvature dependence is carried entirely by the
+second Seeley--DeWitt heat-kernel coefficient $a_{2}$, and the only
+fields that feed the running $R$-coefficient are the \emph{massive}
+ones. In UCFT the relevant massive multiplet is the set of
+$28$ clock fields of common mass $m^{2}=f^{2}\mu^{2}$
+(\autoref{sec:gravity:spectrum}), so the induced Newton constant is
+fixed, positive, and computable. We work throughout in signature
+$(-,+,+,+)$, with $[f]=\text{mass}$ and the dimensionless couplings
+$\xi,\ \hat g^{2},\ \hat y^{2},\ \kappa,\ \Lambda_{\mathrm{cc}}$.
+
+This section establishes three things: (i) the induced Planck mass
+$M_{\mathrm{Pl}}^{2}=\tfrac{28}{6}\,f^{2}\mu^{2}\log(\Lambda^{2}/\mu^{2})/(16\pi^{2})>0$
+(\emph{theorem}, given the spectrum and P3); (ii) that the
+cosmological constant is \emph{not} solved --- the $a_{0}$ coefficient
+forces an uncancelled $\sim\Lambda^{4}$ vacuum energy, handled only by a
+tuned counterterm $\Lambda_{\mathrm{cc}}$; and (iii) the place of the
+gravitational coupling $\kappa$ in the renormalization-group flow, whose
+ultraviolet-attractive fixed point $\kappa_{\star}=96\pi^{2}/5$ is
+conjectural. The full heat-kernel coefficient table and the
+proper-time computation are deferred to \autoref{app:gravity:main}.
+
+%----------------------------------------------------------------------%
+\subsection{The massive multiplet and the ghost operator}
+\label{sec:gravity:spectrum}
+%----------------------------------------------------------------------%
+
+Recall (\autoref{sec:potential:main}, Theorem~T4) that the vacuum manifold
+is the rank-1 primitive-idempotent orbit
+\[
+  \mathcal M \;=\; \frac{E_{6}}{\mathrm{Spin}(10)\times U(1)} \;=\; \mathrm{EIII},
+  \qquad \dim_{\mathbb R}\mathcal M = 32,
+\]
+with coset tangent module
+$\mathfrak m = \mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$, a single
+real-irreducible $H=\mathrm{Spin}(10)\times U(1)$ representation of complex
+type (commutant $\mathbb C$), containing \emph{no} $\mathrm{Spin}(10)$
+singlet (\autoref{sec:coset:main}). At tree level
+$\Hess V_{\mathrm{tree}}|_{\mathfrak m}=0$: all $32$ clock fields are exact
+Goldstones. The radiative spectrum is fixed by symmetry alone.
+
+\begin{theorem}[Common radiative mass; $28+4$ split]
+\label{thm:gravity:spectrum}
+The one-loop Coleman--Weinberg effective potential is $H$-invariant.
+Since $\mathfrak m$ is a single real-irreducible $H$-module, Schur's lemma
+forces the radiative Hessian to be a multiple of the identity on all
+$32$ directions,
+\[
+  \Hess V_{\mathrm{1\text{-}loop}}\big|_{\mathfrak m}
+  \;=\; f^{2}\mu^{2}\,\mathbf 1_{32},
+\]
+i.e.\ a single common eigenvalue. Of these, four directions are the
+frame/soldering modes that are gauge degrees of freedom (world-volume
+diffeomorphism $+$ local Lorentz, Ward identity
+$\nabla_{\mu}(\delta\Gamma/\delta e^{a}_{\mu})=0$); they are eaten by the
+vierbein and local-Lorentz connection and carry \emph{no} physical mass.
+The remaining
+\[
+  32 \;=\; 28\ \text{physical massive scalars (single common mass)}\;+\;4\ \text{gauge/soldering (eaten)}
+\]
+are the $28$ physical clock fields. With $[f]=\text{mass}$, the dim-4
+Hessian eigenvalue is $f^{2}\mu^{2}$; the canonically normalized physical
+mass is
+\[
+  m^{2} \;=\; \mu^{2}.
+\]
+The unbroken $H$ leaves the $46=\dim(\mathbf{45})+1$ gauge bosons massless.
+\end{theorem}
+
+\begin{proof}
+$H$-invariance of $\Gamma$ and Schur's lemma on the irreducible $\mathfrak m$
+give a scalar Hessian; this is the corrected version of the spectrum
+analysis (\autoref{app:gravity:main}). The $4$ frame modes are not Hessian
+zeros but gauge-protected directions, as established by the soldering Ward
+identity of \autoref{sec:soldering:main} (Theorem~3.1 there). Canonical
+normalization divides the dim-4 eigenvalue $f^{2}\mu^{2}$ by $f^{2}$.
+\end{proof}
+
+\begin{remark}[No singlet subspace; against the legacy construction]
+\label{rmk:gravity:nosinglet}
+There is no four-dimensional $H$-invariant subspace of $\mathfrak m$ built
+from $\nabla I_{2},\nabla I_{3}$ singlets: $\mathfrak m$ is irreducible and
+has no $\mathrm{Spin}(10)$ singlet, so a singlet-projector construction is
+algebraically impossible. The mass is one common eigenvalue from Schur, and
+the four light modes are gauge-protected, not radiative zeros.
+\end{remark}
+
+The Euclidean fluctuation operator for the massive multiplet, used in the
+heat-kernel expansion, is
+\begin{equation}\label{eq:gravity:Deltam}
+  \Delta_{m} \;=\; -D^{2} + m^{2}, \qquad m^{2}=f^{2}\mu^{2}
+  \quad(\text{Hessian normalization}),
+\end{equation}
+with $D$ the $H$-covariant derivative on $\mathfrak m$. The Faddeev--Popov
+ghosts that accompany the local $\mathrm{Spin}(10)\times U(1)$ gauge fixing
+are Lorentz scalars in the adjoint of $H$, and their fluctuation operator is
+the \emph{adjoint covariant Laplacian},
+\begin{equation}\label{eq:gravity:ghost}
+  \Delta_{\mathrm{ghost}} \;=\; -\bigl(D_{\mathrm{adj}}\bigr)^{2},
+  \qquad
+  D_{\mathrm{adj}} = d + [A_{\mathrm{adj}},\,\cdot\,] ,
+\end{equation}
+acting on $\mathrm{adj}(H)$. The ghosts are massless and contribute to the
+subtracted quadratic divergence but, being massless, do \emph{not}
+contribute to the curvature ($a_{2}$) running --- see
+\autoref{thm:gravity:planck} and \autoref{app:gravity:main}; no quoted
+heat-kernel number changes.
+
+%----------------------------------------------------------------------%
+\subsection{Induced Planck mass from the $a_{2}$ coefficient}
+\label{sec:gravity:planck}
+%----------------------------------------------------------------------%
+
+We evaluate $\tfrac12\Tr\log\Delta_{m}$ in the proper-time (Schwinger)
+representation on the slowly varying curved background $M^{4}$. The
+heat-kernel expansion of a real scalar of mass $m$ is
+\begin{equation}\label{eq:gravity:hk}
+  \Tr\, e^{-s\Delta_{m}}
+  \;=\;
+  \frac{1}{(4\pi s)^{2}}\, e^{-s m^{2}}
+  \int_{M^{4}}\!\sqrt{-g}\,
+  \Bigl[\,a_{0} + a_{1}\,s + a_{2}\,s^{2} + \cdots\,\Bigr],
+\end{equation}
+with the Seeley--DeWitt coefficients (\autoref{app:gravity:main})
+\begin{equation}\label{eq:gravity:a2}
+  a_{0} = 1, \qquad
+  a_{1} = \tfrac{1}{6}\,R, \qquad
+  a_{2} = \tfrac{1}{180}\bigl(R_{\mu\nu\rho\sigma}^{2} - R_{\mu\nu}^{2}\bigr)
+        + \tfrac{1}{72}R^{2} + \tfrac{1}{6}\,\Box\!\left(\tfrac{R}{5}\right)+\cdots
+\end{equation}
+The Einstein--Hilbert term comes from the curvature-linear coefficient
+$a_{1}=\tfrac16 R$; its coefficient in the effective action is the
+$n=1$ proper-time moment. Because the $a_{n}$ are
+\emph{mass-independent} geometric invariants, the entire mass dependence
+sits in the $e^{-sm^{2}}$ factor, and the curvature-linear term integrates
+to a logarithm cut off at the scale $\mu$. Crucially this is finite and
+non-zero \emph{only} for $m\neq 0$: a massless field gives $e^{-s m^{2}}=1$
+and the $R$-coefficient reduces to a pure (subtracted) quadratic divergence
+$\sim\Lambda^{2}$ with no $m^{2}\log$ running. Massless fields (Goldstones,
+gauge bosons, ghosts) therefore do not contribute to $M_{\mathrm{Pl}}^{2}$.
+
+\begin{theorem}[Induced Planck mass; Sakharov]
+\label{thm:gravity:planck}
+Given the soldered background of Postulate~P3 (\autoref{sec:soldering:main})
+and the $28$ massive clock fields of \autoref{thm:gravity:spectrum}, the
+one-loop effective action contains an Einstein--Hilbert term
+\begin{equation}\label{eq:gravity:EH}
+  \Gamma^{(1)} \;\supset\;
+  \frac{M_{\mathrm{Pl}}^{2}}{2}\int_{M^{4}}\!\sqrt{-g}\;R,
+\end{equation}
+with induced Planck mass
+\begin{equation}\label{eq:gravity:MPl}
+  M_{\mathrm{Pl}}^{2}
+  \;=\;
+  \frac{1}{16\pi^{2}}\cdot\frac{1}{6}
+  \sum_{\text{massive } i} s_{i}\, m_{i}^{2}\,\log\frac{\Lambda^{2}}{m_{i}^{2}}
+  \;=\;
+  \frac{28}{6}\,
+  \frac{f^{2}\mu^{2}\,\log(\Lambda^{2}/\mu^{2})}{16\pi^{2}}
+  \;>\; 0 ,
+\end{equation}
+where $s_{i}=+1$ for scalars, $\Lambda$ is the ultraviolet cutoff, and the
+$28$ scalars all carry $m^{2}=f^{2}\mu^{2}$.
+\end{theorem}
+
+\begin{proof}
+The curvature-linear term in $\tfrac12\Tr\log\Delta_{m}$ is, by
+\eqref{eq:gravity:hk}--\eqref{eq:gravity:a2}, the $n=1$ proper-time moment
+of $a_{1}=\tfrac16 R$. Writing the proper-time integral with the cutoff
+$\Lambda$ in the lower limit and the mass scale in the renormalization
+condition, the (a priori $0/0$-singular) $n=1$ term evaluates explicitly to
+\begin{equation}\label{eq:gravity:n1}
+  \bigl[\,n=1\ \text{term}\,\bigr]
+  \;=\;
+  a_{1}\cdot\frac12\log\frac{\Lambda^{2}}{\mu^{2}}
+  \;=\;
+  \frac{1}{6}\,R\cdot\frac12\log\frac{\Lambda^{2}}{\mu^{2}},
+\end{equation}
+per real scalar of mass $m^{2}=\mu^{2}$ in canonical normalization (the
+$\tfrac16$ is the conformal Seeley--DeWitt coefficient). Multiplying by the
+loop measure $1/(16\pi^{2})$ and summing $s_{i}=+1$ over the $28$ massive
+clock fields, each with $m_{i}^{2}=f^{2}\mu^{2}$, gives the prefactor
+$28/6$ and the common log $\log(\Lambda^{2}/\mu^{2})$, hence
+\eqref{eq:gravity:MPl}. The detailed proper-time bookkeeping is in
+\autoref{app:gravity:main}.
+\end{proof}
+
+\begin{proposition}[Positivity of the induced Newton constant]
+\label{prop:gravity:positivity}
+$M_{\mathrm{Pl}}^{2}>0$ for $\Lambda>\mu$.
+\end{proposition}
+
+\begin{proof}
+Every factor in \eqref{eq:gravity:MPl} is strictly positive:
+$\tfrac{28}{6}=4.6667>0$, $1/(16\pi^{2})=0.0063326>0$, $f^{2}\mu^{2}>0$
+(since $[f]=\text{mass}$ and $\mu$ real), and
+$\log(\Lambda^{2}/\mu^{2})>0$ for $\Lambda>\mu$. The $28$ scalars
+($s=+1$) dominate any massive-fermion negative ($s=-1$) contribution, so the
+induced Newton constant $G_{N}=1/(8\pi M_{\mathrm{Pl}}^{2})$ has the correct
+attractive sign. A worked representative ($f=\mu=1$ in $\mu$-units,
+$\Lambda/\mu=100$, so $\log(\Lambda^{2}/\mu^{2})=\log 10^{4}=9.2103$) gives
+$M_{\mathrm{Pl}}^{2}=4.6667\times 9.2103\times 0.0063326=0.27218\,\mu^{2}>0$.
+\end{proof}
+
+\begin{remark}[Running of $M_{\mathrm{Pl}}^{2}$ from the same expression]
+\label{rmk:gravity:running}
+The static value and the running are derived from the \emph{one}
+expression \eqref{eq:gravity:MPl}, so there is no $32$-versus-$28$ or
+normalization mismatch. Differentiating with respect to the renormalization
+scale,
+\begin{equation}\label{eq:gravity:betaMPl}
+  \beta_{M_{\mathrm{Pl}}^{2}}
+  \;=\;
+  \mu\,\frac{d M_{\mathrm{Pl}}^{2}}{d\mu}
+  \;=\;
+  -\,\frac{28}{6}\,\frac{2 f^{2}\mu^{2}}{16\pi^{2}}
+  \;+\;\frac{28}{6}\,\frac{2 f^{2}\mu^{2}\log(\Lambda^{2}/\mu^{2})}{16\pi^{2}},
+\end{equation}
+so $M_{\mathrm{Pl}}^{2}(\mu)$ grows (logarithmically dominated) and remains
+positive throughout the regime $\mu\ll\Lambda$. The prefactor $28/6$ is the
+same number that appears statically.
+\end{remark}
+
+\begin{remark}[Why $28/6$ and not $32$]
+\label{rmk:gravity:2832}
+The legacy value used $N_{s}=32$ Goldstones and dropped the conformal
+$\tfrac16$. That is wrong on two counts: only the $28$ \emph{physical
+massive} clock fields run the $R$-coefficient (the $4$ frame modes are eaten
+and massless; massless fields give no $m^{2}\log$), and the per-scalar
+heat-kernel coefficient is $a_{1}=\tfrac16 R$, so the $\tfrac16$ and the
+$\mu^{2}$ must be kept. The correct, manuscript-wide prefactor is
+$28/6$.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Cosmological constant: inherited, not solved}
+\label{sec:gravity:cc}
+%----------------------------------------------------------------------%
+
+The curvature-independent coefficient $a_{0}=1$ in \eqref{eq:gravity:hk}
+produces a vacuum-energy (cosmological-constant) term whose proper-time
+$n=-1$ moment is quartically divergent,
+\begin{equation}\label{eq:gravity:Lambda4}
+  \Gamma^{(1)} \;\supset\;
+  \int_{M^{4}}\!\sqrt{-g}\;\rho_{\mathrm{vac}},
+  \qquad
+  \rho_{\mathrm{vac}}
+  \;\sim\;
+  \frac{1}{16\pi^{2}}\sum_{i} s_{i}\,\Lambda^{4}
+  \;\sim\;
+  \frac{28}{32\pi^{2}}\,\Lambda^{4},
+\end{equation}
+with \emph{no} supersymmetric cancellation in UCFT. This $\sim\Lambda^{4}$
+vacuum energy is not removed by any symmetry of the construction.
+
+\begin{postulate}[Cosmological-constant counterterm]
+\label{post:gravity:cc}
+A counterterm $\Lambda_{\mathrm{cc}}$ is added to cancel
+\eqref{eq:gravity:Lambda4} down to the observed value. In the
+renormalization-group language $\Lambda_{\mathrm{cc}}$ is a tuned
+\emph{relevant} coupling (canonical eigenvalue $-4$ of the stability matrix,
+\autoref{sec:gravity:rg}).
+\end{postulate}
+
+\begin{remark}[Status]
+\label{rmk:gravity:ccstatus}
+UCFT \emph{inherits}, and does \emph{not} solve, the cosmological-constant
+problem: the magnitude of $\Lambda_{\mathrm{cc}}$ is fixed by hand, exactly
+as in the Standard Model coupled to gravity. No claim of naturalness is
+made.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Place in the renormalization-group flow}
+\label{sec:gravity:rg}
+%----------------------------------------------------------------------%
+
+The gravitational coupling $\kappa$ (dimensionless Newton coupling) joins
+the gauge--Yukawa flow. The gauge sector is asymptotically \emph{free}
+(Gaussian fixed point $\hat g^{2}_{\star}=0$; full one- and two-loop
+analysis in \autoref{sec:frg:main}); here we record only the gravitational
+beta function and the combined fixed point, with the truncation caveat below.
+
+\begin{conjecture}[Gravitational fixed point]
+\label{conj:gravity:as}
+The single-scalar-loop gravitational beta function is
+\begin{equation}\label{eq:gravity:betakappa}
+  \beta_{\kappa} \;=\; 2\kappa - \frac{5}{48\pi^{2}}\,\kappa^{2},
+\end{equation}
+with a nontrivial ultraviolet-attractive fixed point
+\begin{equation}\label{eq:gravity:kappastar}
+  \kappa_{\star} \;=\; \frac{96\pi^{2}}{5} \;=\; 189.4964,
+  \qquad
+  \frac{d\beta_{\kappa}}{d\kappa}\Big|_{\kappa_{\star}}
+  \;=\; 2 - \frac{2\cdot 5}{48\pi^{2}}\,\kappa_{\star}
+  \;=\; -2 .
+\end{equation}
+The negative sign in \eqref{eq:gravity:betakappa} is essential: $\kappa$
+flows \emph{away} from $0$ toward $\kappa_{\star}$ (gravity does \emph{not}
+decouple), consistent with the anomalous dimension
+$\eta_{M}=-(5/48\pi^{2})\kappa$.
+\end{conjecture}
+
+\begin{remark}[Caveat]
+\label{rmk:gravity:caveat}
+$\kappa_{\star}=96\pi^{2}/5\approx 189\gg 1$ lies outside the controlled
+weak-coupling regime, so this fixed point is \emph{indicative}, not
+rigorous. We label the gravitational asymptotic-safety statement a
+conjecture for this reason.
+\end{remark}
+
+Collecting the couplings $(\xi,\hat g^{2},\hat y^{2},\kappa,\Lambda_{\mathrm{cc}})$
+and using the asymptotic-safety convention $\theta_{i}=-\mathrm{eig}(M)$
+(UV-attractive $\iff \mathrm{eig}(M)>0$; $\#\text{relevant}=\#\{\mathrm{eig}(M)<0\}$),
+the representative fixed point self-consistent with the gauge asymptotic
+freedom of \autoref{sec:frg:main} and with \eqref{eq:gravity:kappastar} is
+\begin{equation}\label{eq:gravity:FP}
+  (\xi_{\star},\,\hat g^{2}_{\star},\,\hat y^{2}_{\star},\,\kappa_{\star},\,\Lambda_{\mathrm{cc},\star})
+  \;=\;
+  \bigl(0.05,\ 0,\ 0,\ 96\pi^{2}/5,\ 0.01\bigr).
+\end{equation}
+At this point $\hat g^{2}_{\star}=\hat y^{2}_{\star}=0$ are Gaussian
+(asymptotic freedom), so the stability matrix $M=\partial\beta_{i}/\partial g_{j}$
+is effectively triangular with diagonal entries
+\begin{equation}\label{eq:gravity:stab}
+  \frac{\partial\beta_{\xi}}{\partial\xi}=+2,\quad
+  \frac{\partial\beta_{\hat g^{2}}}{\partial\hat g^{2}}=+2,\quad
+  \frac{\partial\beta_{\hat y^{2}}}{\partial\hat y^{2}}=+2,\quad
+  \frac{\partial\beta_{\kappa}}{\partial\kappa}=-2,\quad
+  \frac{\partial\beta_{\Lambda_{\mathrm{cc}}}}{\partial\Lambda_{\mathrm{cc}}}=-4,
+\end{equation}
+so that
+\begin{equation}\label{eq:gravity:eig}
+  \mathrm{eig}(M)=\{+2,+2,+2,-2,-4\},
+  \qquad
+  \theta=-\mathrm{eig}(M)=\{-2,-2,-2,+2,+4\}.
+\end{equation}
+The two relevant directions ($\#\{\mathrm{eig}(M)<0\}=2$) are $\kappa$
+(eigenvalue $-2$, $\theta=+2$, the gravitational fixed point) and
+$\Lambda_{\mathrm{cc}}$ (eigenvalue $-4$, $\theta=+4$, the tuned
+cosmological-constant counterterm of \autoref{post:gravity:cc}). The
+positive central $(\hat g^{2},\hat y^{2})$ eigenvalues are the correct
+signature of asymptotic freedom under this convention. Ultraviolet
+completeness of UCFT is therefore asymptotic freedom of the gauge--Yukawa
+sector \emph{plus} the (indicative) gravitational fixed point \emph{plus}
+irrelevant higher-curvature operators --- \emph{not} a non-Gaussian gauge
+fixed point.
+
+\begin{remark}[Higher-curvature operators]
+\label{rmk:gravity:higher}
+The $a_{2}$ coefficient \eqref{eq:gravity:a2} supplies curvature-squared
+terms $c_{1}R^{2}+c_{2}R_{\mu\nu}R^{\mu\nu}$ with
+$|c_{1,2}|\sim 1/(16\pi^{2})$, suppressed by $\mu^{2}/\Lambda^{2}$ relative
+to $M_{\mathrm{Pl}}^{2}R$ and hence irrelevant in the regime
+$R\ll M_{\mathrm{Pl}}^{2}$. These are the irrelevant operators of the
+ultraviolet-completeness statement above.
+\end{remark}

@@ -1,0 +1,466 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Albert Algebra and Exceptional Structure}
+\label{sec:albert:main}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+This section assembles the algebraic foundation on which the whole
+construction rests: the exceptional Jordan (Albert) algebra
+$J_{3}(\mathbb{O})$, its trace and cubic invariants, the sharp map, the
+notion of rank, and the four real forms of the exceptional groups that
+act on it. We isolate, with care, \emph{which} invariant is preserved by
+\emph{which} group, since the entire vacuum-selection argument
+(\autoref{sec:potential:main}) and the Lorentzian soldering
+(\autoref{sec:soldering:main}) depend on getting this exactly right. The
+heavy octonionic identities (associator gymnastics, the explicit cubic
+norm in components, the Freudenthal cross product) are deferred to
+\autoref{app:albert:main}; here we state the structural facts and prove
+the ones that are short. Throughout, the metric signature is
+$(-,+,+,+)$, $[f]=\mathrm{mass}$, and the dimensionless couplings are
+$\hat g^{2},\xi,\hat y^{2},\kappa$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The exceptional Jordan algebra \texorpdfstring{$J_{3}(\mathbb{O})$}{J3(O)}}
+\label{sec:albert:def}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Let $\mathbb{O}$ denote the (real, division) octonions, with conjugation
+$x\mapsto \bar x$, norm $n(x)=x\bar x\in\mathbb{R}_{\ge 0}$, and real part
+$\operatorname{Re} x=\tfrac12(x+\bar x)$. Octonionic multiplication is
+nonassociative; this nonassociativity is exactly what forces the
+\emph{exceptional} structure below and obstructs any matrix-algebra
+shortcut.
+
+\begin{definition}[Albert algebra]\label{def:albert:J3O}
+The \emph{Albert algebra} is the space of $3\times 3$ octonionic
+Hermitian matrices
+\begin{equation}\label{eq:albert:J3Odef}
+  J_{3}(\mathbb{O})
+  =\Bigl\{\,X=X^{\dagger}\in M_{3}(\mathbb{O})\,\Bigr\}
+  =\left\{
+  \begin{pmatrix}
+   \xi_{1} & z_{3} & \bar z_{2}\\
+   \bar z_{3} & \xi_{2} & z_{1}\\
+   z_{2} & \bar z_{1} & \xi_{3}
+  \end{pmatrix}
+  : \xi_{i}\in\mathbb{R},\; z_{i}\in\mathbb{O}\right\},
+\end{equation}
+equipped with the commutative \emph{Jordan product}
+\begin{equation}\label{eq:albert:jordanprod}
+  X\circ Y=\tfrac12\,(XY+YX).
+\end{equation}
+\end{definition}
+
+The three real diagonal entries and three octonionic off-diagonal
+entries give
+\begin{equation}\label{eq:albert:dim}
+  \dim_{\mathbb{R}} J_{3}(\mathbb{O})
+  = 3\cdot 1 + 3\cdot 8 = 27 .
+\end{equation}
+
+\begin{theorem}[Formally real Jordan algebra]\label{thm:albert:formallyreal}
+$\bigl(J_{3}(\mathbb{O}),\circ\bigr)$ is a $27$-dimensional, commutative,
+formally real (Euclidean) Jordan algebra: the Jordan identity
+$X\circ\bigl(Y\circ X^{\circ 2}\bigr)=\bigl(X\circ Y\bigr)\circ X^{\circ 2}$
+holds, and $\sum_{i} X_{i}\circ X_{i}=0$ implies every $X_{i}=0$. It is
+the unique exceptional simple formally real Jordan algebra (it is not
+special, i.e.\ not a Jordan subalgebra of any associative algebra under
+the symmetrised product).
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Commutativity is manifest from \eqref{eq:albert:jordanprod}. The Jordan
+identity is a power-associativity statement that, by linearisation,
+reduces to relations involving at most two octonions at a time; since any
+two octonions generate an associative (indeed commutative) subalgebra
+$\cong\mathbb{C}$ or $\mathbb{H}$ (Artin's theorem), the identity holds
+despite global nonassociativity. Formal reality follows from positivity
+of the trace form \eqref{eq:albert:traceform} below. Exceptionality
+(non-speciality) is the Albert--Jacobson theorem; see
+\autoref{app:albert:main} and \cite{Albert:1934,Jacobson:1968,McCrimmon:2004}.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Trace form, cubic norm, and the sharp map}
+\label{sec:albert:invariants}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Three invariant objects organise the algebra: a quadratic trace form, a
+cubic norm, and a quadratic-in-$X$ \emph{sharp} (adjoint) map. Their
+distinct invariance groups are the crux of the whole construction.
+
+\paragraph{Linear and quadratic traces.}
+Define the linear trace and the symmetric \emph{trace form}
+\begin{align}
+  \operatorname{tr}(X) &= \xi_{1}+\xi_{2}+\xi_{3},
+  \label{eq:albert:lintrace}\\[2pt]
+  \langle X,Y\rangle &= \operatorname{Tr}(X\circ Y),
+  \qquad
+  Q(X)\equiv \operatorname{Tr}(X^{2})=\langle X,X\rangle .
+  \label{eq:albert:traceform}
+\end{align}
+In components,
+\begin{equation}\label{eq:albert:Qcomp}
+  Q(X)=\operatorname{Tr}(X^{2})
+  =\sum_{i}\xi_{i}^{2}+2\sum_{i} n(z_{i}) \;\ge 0 ,
+\end{equation}
+so $Q$ is positive-definite: $J_{3}(\mathbb{O})$ is Euclidean, and $Q$ is
+the natural $\mathrm{O}(27)$-type inner product. This positivity is what
+makes the dynamical coset metric definite later
+(\autoref{sec:coset:main}).
+
+\paragraph{Cubic norm.}
+The \emph{cubic norm} (the octonionic ``determinant'') is
+\begin{equation}\label{eq:albert:Ndef}
+  N(X)=\det\nolimits_{\mathbb{O}}(X)
+  =\xi_{1}\xi_{2}\xi_{3}
+   -\sum_{i}\xi_{i}\,n(z_{i})
+   +2\,\operatorname{Re}\!\bigl(z_{1}z_{2}z_{3}\bigr).
+\end{equation}
+The bracketing of the cubic term $z_{1}z_{2}z_{3}$ is unambiguous under
+$\operatorname{Re}(\cdot)$ despite nonassociativity (a standard
+octonionic identity; \autoref{app:albert:main}). Unlike $Q$, the cubic
+norm is \emph{odd} under $X\mapsto -X$ and is genuinely indefinite; its
+restriction to the $H_{2}(\mathbb{O})$ sub-block supplies the Minkowski
+form used in soldering (\autoref{sec:soldering:main}).
+
+\paragraph{Sharp map.}
+The \emph{sharp} (adjoint) map $X\mapsto X^{\#}$ is the gradient of $N$
+with respect to the trace form,
+\begin{equation}\label{eq:albert:sharpdef}
+  \langle X^{\#}, Y\rangle = \operatorname{D}N(X)[Y]
+  \quad\Longleftrightarrow\quad
+  X^{\#}=\nabla N(X),
+\end{equation}
+equivalently the quadratic map characterised by
+\begin{equation}\label{eq:albert:sharpid}
+  X\circ X^{\#}=N(X)\,\mathbf 1,
+  \qquad
+  (X^{\#})^{\#}=N(X)\,X .
+\end{equation}
+In a \emph{Jordan frame} $X=\operatorname{diag}(\lambda_{1},\lambda_{2},\lambda_{3})$,
+\begin{equation}\label{eq:albert:sharpframe}
+  X^{\#}=\operatorname{diag}\!\bigl(\lambda_{2}\lambda_{3},\,
+  \lambda_{3}\lambda_{1},\,\lambda_{1}\lambda_{2}\bigr),
+  \qquad
+  \langle X^{\#},X^{\#}\rangle
+  =(\lambda_{2}\lambda_{3})^{2}+(\lambda_{3}\lambda_{1})^{2}+(\lambda_{1}\lambda_{2})^{2}\ge 0 .
+\end{equation}
+The combination $\langle X^{\#},X^{\#}\rangle$ is a sum of squares,
+hence non-negative; this is the quantity whose vanishing characterises
+the vacuum orbit.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Rank, idempotents, and the rank-one criterion}
+\label{sec:albert:rank}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{definition}[Rank]\label{def:albert:rank}
+The \emph{rank} of $X\in J_{3}(\mathbb{O})$ is the degree of its minimal
+polynomial; equivalently, in a Jordan frame it is the number of nonzero
+eigenvalues $\lambda_{i}$. Thus $\operatorname{rank}(X)\in\{0,1,2,3\}$,
+with $\operatorname{rank}(0)=0$. A \emph{primitive idempotent} is a
+rank-one $E$ with $E\circ E=E$ (equivalently $E^{2}=E$, $\operatorname{tr}E=1$).
+\end{definition}
+
+\begin{theorem}[Rank-one criterion]\label{thm:albert:rankone}
+For all $X\in J_{3}(\mathbb{O})$,
+\begin{equation}\label{eq:albert:rankone}
+  \operatorname{rank}(X)\le 1
+  \quad\Longleftrightarrow\quad
+  X^{\#}=0 .
+\end{equation}
+Moreover $\operatorname{rank}(X)\le 2\Leftrightarrow N(X)=0$ (with
+$X^{\#}\neq 0$), and $\operatorname{rank}(X)=3\Leftrightarrow N(X)\neq 0$.
+\end{theorem}
+
+\begin{proof}
+Every $X$ is conjugate by $F_{4}=\operatorname{Aut}(J_{3}(\mathbb{O}))$
+(\autoref{thm:albert:fourforms}) to a Jordan frame
+$\operatorname{diag}(\lambda_{1},\lambda_{2},\lambda_{3})$
+(spectral theorem for Euclidean Jordan algebras). By
+\eqref{eq:albert:sharpframe}, $X^{\#}=0$ iff all three pairwise products
+$\lambda_{i}\lambda_{j}$ vanish, i.e.\ at most one $\lambda_{i}$ is
+nonzero, i.e.\ $\operatorname{rank}(X)\le1$. The norm statements follow
+from $N(X)=\lambda_{1}\lambda_{2}\lambda_{3}$ in a frame: $N=0$ iff some
+$\lambda_{i}=0$ (rank $\le 2$), and $N\neq0$ iff all nonzero (rank $3$).
+Since $F_{4}$ preserves both $N$ and $X^{\#}$, the criteria are
+frame-independent.
+\end{proof}
+
+\begin{remark}[Scope]\label{rmk:albert:scope}
+\autoref{thm:albert:rankone} is a \emph{theorem} of Jordan algebra, used
+verbatim in the vacuum-selection argument: the $E_{6}$-covariant term
+$\langle X^{\#},X^{\#}\rangle$ in the potential $V$ vanishes
+\emph{exactly} on the rank-$\le1$ cone (\autoref{sec:potential:main}).
+The selection of the rank-one orbit as the global minimum is proved
+there; here we only supply the algebraic criterion.
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The four real forms and what each preserves}
+\label{sec:albert:groups}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The single most consequential fact of this section is that
+\emph{different groups preserve different invariants}. Conflating them
+(in particular, asserting that the structure group preserves the trace
+form $Q$, or that $(Q,N)$ separates orbits) is the root error against
+which the entire construction is hardened.
+
+\begin{theorem}[Four real forms]\label{thm:albert:fourforms}
+The following groups act on $J_{3}(\mathbb{O})$ and the real $27$:
+\begin{enumerate}
+\item\label{it:albert:F4}
+  $F_{4}=\operatorname{Aut}\bigl(J_{3}(\mathbb{O}),\circ\bigr)$ is the
+  \textbf{compact} exceptional group, $\dim F_{4}=52$. It preserves the
+  full Jordan product, hence \emph{both} the trace form
+  $Q=\operatorname{Tr}(X^{2})$ \emph{and} the cubic norm $N$, and acts as
+  $F_{4}\subset\mathrm{SO}(27)$ (it is the stabiliser of the identity
+  $\mathbf 1$).
+\item\label{it:albert:E6m26}
+  The \textbf{reduced structure group}
+  $E_{6(-26)}$ is the \textbf{non-compact} real form,
+  $\dim E_{6(-26)}=78$. It preserves the cubic norm $N$ \emph{up to a
+  real positive character} $\lambda(g)$,
+  \begin{equation}\label{eq:albert:Ncharacter}
+    N(g\cdot X)=\lambda(g)\,N(X),\qquad \lambda:E_{6(-26)}\to\mathbb{R}_{>0},
+  \end{equation}
+  and does \emph{not} preserve $Q$. (If it did, it would lie in
+  $\mathrm{SO}(27)$ and be compact, a contradiction.)
+\item\label{it:albert:E6c}
+  The \textbf{compact} real form, here denoted compact $E_{6}$,
+  $\dim E_{6}=78$, acts unitarily on the complexified $27_{\mathbb{C}}$;
+  on it the norm character is identically $1$ (a continuous homomorphism
+  from a compact connected group to $\mathbb{R}_{>0}$ is trivial), and
+  $Q$ is the invariant Hermitian form.
+\item\label{it:albert:E6m14}
+  The real form $E_{6(-14)}$, $\dim=78$, has \textbf{maximal compact
+  subgroup} $\operatorname{Spin}(10)\times\mathrm{U}(1)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+\ref{it:albert:F4} An automorphism of the Jordan product preserves
+powers, hence the trace form (via $Q(X)=\operatorname{Tr}X^{2}$) and the
+norm (via Cayley--Hamilton in the algebra); compactness and $\dim 52$ are
+classical \cite{Springer:2000}. \ref{it:albert:E6m26} The reduced
+structure group is by definition the norm-similarity group;
+\eqref{eq:albert:Ncharacter} is its defining property, and non-compactness
+follows because a non-trivial similarity character exists. \ref{it:albert:E6c}
+Triviality of the character on a compact group is the homomorphism
+argument given. \ref{it:albert:E6m14} is the standard real-form
+classification; the maximal compact of $E_{6(-14)}$ is
+$\operatorname{Spin}(10)\times\mathrm{U}(1)$
+\cite{Springer:2000,Slansky:1981,Helgason:1978}.
+\end{proof}
+
+\begin{postulate}[Real form for dynamics]\label{post:albert:realform}
+For the \emph{dynamics} of UCFT we commit to the \textbf{compact} real
+form (equivalently $E_{6(-14)}$, whose maximal compact is exactly
+$H=\operatorname{Spin}(10)\times\mathrm{U}(1)$). Then $H$ is compact, the
+coset metric on $E_{6}/H$ is positive-definite, the kinetic term is
+healthy, and the gauge sector is unitary. The non-compact form
+$E_{6(-26)}$ is used \textbf{only} as the rigid orbit-classifier of the
+real $27$. This choice is part of the postulate set (it is the form on
+which the potential $V$ is coercive; non-compact orbits cannot be
+coercive, since the norm character \eqref{eq:albert:Ncharacter} is then
+unbounded). Cf.\ \hyperref[post:potential:P1]{P1} and the vacuum theorem
+in \autoref{sec:potential:main}.
+\end{postulate}
+
+\begin{theorem}[Orbit classification by rank and norm]\label{thm:albert:orbits}
+The orbits of $E_{6(-26)}$ on the real $27=J_{3}(\mathbb{O})$ are
+classified by the pair $\bigl(\operatorname{rank}(X),\,N(X)\bigr)$, and
+\emph{not} by $\bigl(Q(X),N(X)\bigr)$. Explicitly, the nonzero orbit
+strata are
+\begin{equation}\label{eq:albert:orbitstrata}
+  \underbrace{\operatorname{rank}=1}_{X^{\#}=0}\;\subset\;
+  \underbrace{\operatorname{rank}=2}_{X^{\#}\neq 0,\,N=0}\;\subset\;
+  \underbrace{\operatorname{rank}=3}_{N\neq 0}\,,
+\end{equation}
+the rank-$3$ stratum further refined by the sign / value of $N$. The
+trace form $Q$ is \textbf{not} an $E_{6}$-invariant (only an
+$F_{4}$-invariant), so any ``$(Q,N)$ separates orbits'' statement is
+false.
+\end{theorem}
+
+\begin{proof}
+$E_{6(-26)}$ preserves $N$ up to the character
+\eqref{eq:albert:Ncharacter} and acts transitively on each rank stratum
+of fixed $N$-class (Springer; \autoref{app:albert:main}). The rank is an
+algebraic invariant (\autoref{def:albert:rank}), preserved because the
+sharp map is $E_{6}$-covariant: $(g\cdot X)^{\#}=\lambda(g)\,
+(g^{\#})\!\cdot X^{\#}$ in the appropriate contragredient action, so
+$X^{\#}=0$ is a group-invariant condition (and likewise $N=0$). That $Q$
+is not invariant is \autoref{thm:albert:fourforms}\ref{it:albert:E6m26}:
+a structure-group element with $\lambda(g)\neq1$ generically rescales
+$\operatorname{Tr}(X^{2})$.
+\end{proof}
+
+\begin{corollary}[Closed minimal orbit]\label{cor:albert:minorbit}
+The unique closed nonzero $E_{6}$-orbit in $\mathbb{P}(27_{\mathbb{C}})$
+is the rank-one (primitive-idempotent) orbit, the \emph{complex Cayley
+plane}
+\begin{equation}\label{eq:albert:EIII}
+  \mathcal{M}
+  = E_{6}/\bigl(\operatorname{Spin}(10)\times\mathrm{U}(1)\bigr)
+  = \mathrm{EIII},
+  \qquad
+  \dim_{\mathbb{R}}\mathcal{M}=32 .
+\end{equation}
+This is the orbit of a rank-one primitive idempotent, characterised by
+$X^{\#}=0$ (\autoref{thm:albert:rankone}); it is \textbf{not} the orbit
+of $\operatorname{diag}(1,1,1)$ (which is rank $3$, has
+$\langle X^{\#},X^{\#}\rangle=3>0$, stabiliser $F_{4}$, orbit $E_{6}/F_{4}$
+of real dimension $26$).
+\end{corollary}
+
+\begin{proof}
+The closed orbit of a reductive group in a projective space is the orbit
+of a highest-weight line; for the $27$ of $E_{6}$ this is the rank-one
+line, with stabiliser the parabolic whose reductive part fixes the
+$H$-decomposition \eqref{eq:albert:adjbranch}. Over the compact form the
+isotropy is $H=\operatorname{Spin}(10)\times\mathrm{U}(1)$, and
+$\dim_{\mathbb{R}}E_{6}-\dim_{\mathbb{R}}H=78-46=32$. The real rank-one
+idempotents alone form $F_{4}/\operatorname{Spin}(9)\cong
+\mathbb{OP}^{2}$ of dimension $16$; the full complex line under $E_{6}$
+sweeps the larger $32$-dimensional $\mathrm{EIII}$
+\cite{Helgason:1978,Springer:2000}.
+\end{proof}
+
+\begin{remark}[Consistency constraints]\label{rmk:albert:forbidden}
+Three statements are \emph{false} and are never used:
+(i) that the structure group preserves $Q=\operatorname{Tr}(X^{2})$
+(only $F_{4}$ does);
+(ii) that $(Q,N)$ separates $E_{6}$-orbits (orbits are classified by rank
+and $N$, \autoref{thm:albert:orbits});
+(iii) that the $32$-dimensional vacuum is the orbit of
+$\operatorname{diag}(1,1,1)$ with stabiliser $F_{4}$ (that orbit is
+$E_{6}/F_{4}$, dimension $26$; the vacuum is the rank-one EIII orbit,
+\autoref{cor:albert:minorbit}).
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Branchings under \texorpdfstring{$H=\operatorname{Spin}(10)\times\mathrm{U}(1)$}{H = Spin(10) x U(1)}}
+\label{sec:albert:branchings}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The isotropy group $H=\operatorname{Spin}(10)\times\mathrm{U}(1)$ of the
+vacuum orbit \eqref{eq:albert:EIII} is exactly the gauge group of the
+construction. The relevant representations branch as follows; these are
+the canonical decompositions used everywhere downstream.
+
+\begin{theorem}[Defining branchings]\label{thm:albert:branchings}
+Under $H=\operatorname{Spin}(10)\times\mathrm{U}(1)$ (subscripts are the
+$\mathrm{U}(1)$ charges),
+\begin{align}
+  \mathbf{78}
+   &= \mathbf{45}_{0}\oplus\mathbf{1}_{0}
+      \oplus\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}
+      \qquad\text{(adjoint),}
+   \label{eq:albert:adjbranch}\\[2pt]
+  \mathbf{27}
+   &= \mathbf{1}_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}
+      \qquad\text{(fundamental / matter).}
+   \label{eq:albert:fundbranch}
+\end{align}
+Consequently the coset tangent space is
+\begin{equation}\label{eq:albert:cosettangent}
+  \mathfrak{m}
+   = \mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}
+   \qquad(\,32\text{ real dimensions}\,),
+\end{equation}
+which contains \textbf{no} $\operatorname{Spin}(10)$ singlet.
+\end{theorem}
+
+\begin{proof}
+The decompositions \eqref{eq:albert:adjbranch}--\eqref{eq:albert:fundbranch}
+are the standard $E_{6}\downarrow\operatorname{Spin}(10)\times\mathrm{U}(1)$
+branchings \cite{Slansky:1981}; the $\mathrm{U}(1)$ charges are fixed by
+requiring the cubic $E_{6}$-invariant $\mathbf{27}^{3}$ and the adjoint
+commutators to be charge-neutral. The coset directions are the
+non-$H$ generators in \eqref{eq:albert:adjbranch}, namely
+$\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$, of real dimension
+$16+16=32=\dim_{\mathbb{R}}\mathcal{M}$ (\autoref{cor:albert:minorbit}).
+Dimension and charge counting exclude any singlet in $\mathfrak{m}$.
+\end{proof}
+
+\begin{theorem}[Irreducibility and the definite coset metric]\label{thm:albert:irrep}
+The coset tangent module $\mathfrak{m}=\mathbf{16}_{-3}\oplus
+\overline{\mathbf{16}}_{+3}$ is real-irreducible \emph{of complex type}
+(its commutant is $\mathbb{C}$). The $H$-invariant metric on
+$\mathfrak{m}$ is therefore \textbf{unique up to scale} and, on the
+compact real form (\autoref{post:albert:realform}),
+\textbf{positive-definite}.
+\end{theorem}
+
+\begin{proof}
+The $\mathrm{U}(1)$ charge $\pm3$ forbids the symmetric self-pairings
+$\mathbf{16}_{-3}\!\otimes\!\mathbf{16}_{-3}$ and
+$\overline{\mathbf{16}}_{+3}\!\otimes\!\overline{\mathbf{16}}_{+3}$
+(charges $\mp6\neq0$), leaving only the charge-$0$ cross-pairing
+$\mathbf{16}_{-3}\!\otimes\!\overline{\mathbf{16}}_{+3}$, which is the
+restriction of the Killing form. Hence the invariant bilinear is
+one-dimensional (Schur, complex type), so unique up to scale. On the
+compact form the Killing form is definite; restricted to $\mathfrak{m}$
+it is positive-definite, giving the Euclidean target-space metric
+$K|_{\mathfrak{m}}$ used in \autoref{sec:coset:main}.
+\end{proof}
+
+\begin{remark}[No Lorentzian content in the coset metric]\label{rmk:albert:nolorentz}
+The coset metric $K|_{\mathfrak{m}}$ is positive-definite, signature
+$(32,0)$: it carries \emph{zero} Lorentzian content. In particular there
+is no $(4,28)$ Killing/coset signature, and the physical $(1,3)$ Minkowski
+signature does \emph{not} fall out of the coset geometry. Lorentzian
+signature enters only through the soldering postulate
+\hyperref[post:soldering:P3]{P3}, which uses the indefinite cubic norm
+$N$ restricted to $H_{2}(\mathbb{O})\cong\mathbb{R}^{1,9}$ on a
+\emph{different} module (\autoref{sec:soldering:main}). The two forms
+(definite $K|_{\mathfrak{m}}$, indefinite $N$) live on distinct spaces;
+there is no tension.
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Summary of canonical structure}
+\label{sec:albert:summary}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+For reference, \autoref{tab:albert:summary} collects the canonical
+algebraic data established above; every downstream section uses these
+values.
+
+\begin{table}[ht]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{ll}
+\hline
+Object & Canonical value / property \\
+\hline
+$\dim_{\mathbb{R}} J_{3}(\mathbb{O})$ & $27$ \\
+Trace form $Q=\operatorname{Tr}(X^{2})$ & positive-definite; $F_{4}$-invariant \emph{only} \\
+Cubic norm $N=\det_{\mathbb{O}}X$ & indefinite; $E_{6}$-invariant up to character $\lambda(g)$ \\
+Sharp map $X^{\#}=\nabla N$ & $E_{6}$-covariant; $X^{\#}=0\Leftrightarrow\operatorname{rank}\le1$ \\
+$F_{4}=\operatorname{Aut}(J_{3}(\mathbb{O}))$ & compact, $\dim 52$; preserves $Q$ and $N$ \\
+$E_{6(-26)}$ (orbit classifier) & non-compact, $\dim 78$; preserves $N$ only \\
+compact $E_{6}$ / $E_{6(-14)}$ (dynamics) & $\dim 78$; max.\ compact $\operatorname{Spin}(10)\times\mathrm{U}(1)$ \\
+Vacuum manifold $\mathcal{M}$ & $E_{6}/(\operatorname{Spin}(10)\times\mathrm{U}(1))=\mathrm{EIII}$, $\dim 32$ \\
+Adjoint branching & $\mathbf{78}=\mathbf{45}_{0}\oplus\mathbf{1}_{0}\oplus\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$ \\
+Fundamental branching & $\mathbf{27}=\mathbf{1}_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}$ \\
+Coset tangent $\mathfrak{m}$ & $\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$ (32 real); no singlet \\
+Coset metric $K|_{\mathfrak{m}}$ & positive-definite (Euclidean), unique up to scale \\
+\hline
+\end{tabular}
+\caption{Canonical algebraic data of the Albert algebra and its
+exceptional structure, as used throughout UCFT.}
+\label{tab:albert:summary}
+\end{table}
+
+These facts are purely algebraic theorems, with the single
+\emph{postulate} being the commitment to the compact real form for the
+dynamics (\autoref{post:albert:realform}, part of
+\hyperref[post:potential:P1]{P1}). The vacuum-selection theorem that
+promotes \eqref{eq:albert:EIII} from ``a distinguished orbit'' to ``the
+global minimum of $V$'' is proved in \autoref{sec:potential:main}; the
+Lorentzian soldering that uses $N$ to install signature $(-,+,+,+)$ is in
+\autoref{sec:soldering:main}; the gauge/clock-field dynamics on
+$\mathfrak{m}$ are in \autoref{sec:coset:main}.

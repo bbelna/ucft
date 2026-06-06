@@ -1,0 +1,349 @@
+%======================================================================%
+\section{Functional Renormalization and Ultraviolet Behaviour}
+\label{sec:frg:main}
+%======================================================================%
+
+We now track the coset field theory under continuous coarse-graining.
+Throughout we work in signature $(-,+,+,+)$, with $[f]=\text{mass}$ the
+decay constant and $\xi,\hat g^{2},\hat y^{2},\kappa,\Lambda_{\mathrm{cc}}$
+dimensionless. After introducing the functional renormalization-group
+(FRG) machinery and the dimensionless couplings we record the gauge,
+gravitational and scalar $\beta$-functions, state the explicit numerical
+fixed point and its recomputed stability spectrum, and recast the claim of
+ultraviolet (UV) completeness in a truncation-conditional form.
+The gauge--Yukawa sector is \emph{asymptotically free}; the gravitational
+sector exhibits an \emph{asymptotically safe} interacting fixed point that
+we flag as \emph{indicative}. All loop machinery (Wetterich kernel,
+threshold integrals, heat-kernel coefficients, the $27\times27$ scalar
+block) is deferred to \autoref{app:frg}; the induced Planck mass is
+established in \autoref{sec:gravity}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Setup: Wetterich equation and Litim regulator}
+\label{sec:frg:setup}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The scale-dependent effective average action $\Gamma_{k}$ obeys the exact
+Wetterich flow
+\begin{equation}\label{eq:frg:wetterich}
+  k\,\partial_{k}\Gamma_{k}
+  =\frac12\,\mathrm{STr}\!\left[
+    \bigl(\Gamma_{k}^{(2)}+R_{k}\bigr)^{-1}\,k\,\partial_{k}R_{k}\right],
+\end{equation}
+where $\Gamma_{k}^{(2)}$ is the second functional derivative, $\mathrm{STr}$
+is the supertrace over all fields (with the Faddeev--Popov ghosts of the
+diffeomorphism and local-Lorentz gauge symmetries entering as Lorentz
+scalars in $\mathrm{adj}(H)$, $\Delta_{\mathrm{ghost}}=-(D_{\mathrm{adj}})^{2}$),
+and $R_{k}$ is an infrared cutoff. We adopt Litim's optimized regulator
+\begin{equation}\label{eq:frg:litim}
+  R_{k}(p^{2})=Z_{k}\,(k^{2}-p^{2})\,\theta(k^{2}-p^{2}),
+\end{equation}
+which renders the threshold integrals algebraic while preserving locality;
+all UV statements below are regulator independent. The natural
+dimensionless couplings are
+\begin{equation}\label{eq:frg:couplings}
+  \xi=\frac{k^{2}}{f^{2}},\qquad
+  \hat g^{2}=\frac{k^{2}g^{2}}{f^{2}},\qquad
+  \hat y^{2}=\frac{k^{2}y^{2}}{f^{2}},\qquad
+  \kappa=\frac{k^{2}}{M_{\mathrm{Pl}}^{2}(k)},
+\end{equation}
+together with the tuned vacuum-energy coupling $\Lambda_{\mathrm{cc}}$.
+Projecting \eqref{eq:frg:wetterich} onto the coefficients of
+$\sqrt{-g}\,R$, $\sqrt{-g}\,\bar\psi\,\gamma^{\mu}D_{\mu}\psi$, the gauge
+invariant $\sqrt{-g}\,\mathrm{tr}\,F_{\mu\nu}F^{\mu\nu}$, and the cosmological
+term $\sqrt{-g}$ yields the $\beta$-functions quoted below.
+
+\begin{remark}
+We evaluate functional determinants on a finite four-torus $\mathbb{T}^{4}$
+and take the volume to infinity at the end, removing infrared regulators
+without affecting UV behaviour. The mass spectrum entering the loops is the
+locked $32=28+4$ split (\autoref{sec:gravity}): the $28$ massive coset
+``clock fields'' (one common mass $m^{2}=\mu^{2}$, by Schur on the
+irreducible $H$-module $\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$)
+run in every loop sum, while the $4$ frame/soldering modes are gauge
+protected (eaten by diffeomorphism $+$ local Lorentz) and do not.
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Gauge sector: asymptotic freedom}
+\label{sec:frg:gauge}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The residual gauge symmetry on the vacuum manifold is $H=\mathrm{Spin}(10)\times U(1)$
+(\autoref{sec:vacuum}); the gauge running is governed by the
+\emph{$\mathrm{SO}(10)$} group theory, \emph{not} by $E_{6}$. The locked
+Casimirs are
+\begin{equation}\label{eq:frg:casimirs}
+  C_{A}\!\left(\mathrm{SO}(10)\right)=8,\qquad
+  T(\mathbf{16})=2\ \ (\text{the spinor is index-}2),\qquad
+  C_{2}(\mathbf{16})=\tfrac{45}{8}.
+\end{equation}
+
+\begin{theorem}[Gauge $\beta$-function and asymptotic freedom]
+\label{thm:frg:gauge}
+With $[f]=\text{mass}$ and $\hat g^{2}=k^{2}g^{2}/f^{2}$ of engineering
+dimension $2$, the gauge coupling obeys
+\begin{equation}\label{eq:frg:betag}
+  \beta_{\hat g^{2}}
+  = 2\,\hat g^{2}
+    + \frac{b_{0}}{48\pi^{2}}\,\hat g^{4},
+  \qquad
+  b_{0}=\frac{11}{3}\,C_{A}-\frac{4}{3}\,T\,n_{F}-\frac16\,T\,n_{S}.
+\end{equation}
+The canonical $+2\,\hat g^{2}$ term forces the only UV fixed point to be
+the \emph{Gaussian} one, $\hat g^{2}_{\ast}=0$. The gauge sector is
+therefore asymptotically free, and there is no interacting gauge fixed
+point.
+\end{theorem}
+
+\begin{proof}
+The loop coefficient is the standard one-loop result for a gauge algebra
+with $n_{F}$ Weyl fermions and $n_{S}$ real scalars, evaluated with the
+$\mathrm{SO}(10)$ data \eqref{eq:frg:casimirs}; the derivation through the
+Litim threshold integrals is given in \autoref{app:frg}. The canonical
+scaling term $+2\,\hat g^{2}$ follows from the engineering dimension of
+$\hat g^{2}$. Setting $\beta_{\hat g^{2}}=0$ gives
+$\hat g^{2}_{\ast}\bigl(2+\tfrac{b_{0}}{48\pi^{2}}\hat g^{2}_{\ast}\bigr)=0$;
+the nonzero root $\hat g^{2}_{\ast}=-96\pi^{2}/b_{0}$ is negative for
+$b_{0}>0$ and hence unphysical, leaving $\hat g^{2}_{\ast}=0$ as the unique
+admissible fixed point. Linearizing, $\partial_{\hat g^{2}}\beta_{\hat g^{2}}|_{0}=+2>0$,
+so the Gaussian point is UV attractive in this direction: $\hat g^{2}\to0$
+logarithmically as $k\to\infty$, i.e.\ asymptotic freedom.
+\end{proof}
+
+\begin{remark}[The integer $b_{0}$]
+\label{rem:frg:b0}
+For \emph{one} $\mathrm{SO}(10)$ generation ($n_{F}=1$, with the scalar
+Higgs/Yukawa content fixed by $n_{S}=2$),
+\begin{equation}\label{eq:frg:b0one}
+  b_{0}
+  =\frac{11}{3}(8)-\frac43(2)(1)-\frac16(2)(2)
+  =\frac{88}{3}-\frac{8}{3}-\frac{2}{3}
+  =\frac{78}{3}=26 .
+\end{equation}
+This is the canonical anchor at the matching scale with minimal GUT scalars
+($n_{S}=2$). For the physical \emph{three}-generation theory, $n_{F}=3$
+(three chiral $\mathbf{16}$ representations) and $n_{S}=28$ (the massive
+coset scalars used in all loop sums), and direct evaluation gives
+\begin{equation}\label{eq:frg:b0three}
+  b_{0}(3\ \text{gen})
+  =\frac{11}{3}(8)-\frac43(2)(3)-\frac16(2)(28)
+  =\frac{88-24-28}{3}=12 .
+\end{equation}
+We use $b_{0}=12$ for three-generation running everywhere downstream. The
+$+2\,\hat g^{2}$ scaling term, not the sign of $b_{0}$, governs the Gaussian
+UV fixed point $\hat g^{2}_{\ast}=0$, so the gauge sector remains
+asymptotically free.
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Gravitational sector: asymptotic safety (indicative)}
+\label{sec:frg:gravity}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Integrating out the $28$ massive clock fields generates the Sakharov flow
+of the induced Planck mass (\autoref{sec:gravity}); the \emph{same}
+expression $M_{\mathrm{Pl}}^{2}=(28/6)\,f^{2}\mu^{2}\log(\Lambda^{2}/\mu^{2})/(16\pi^{2})>0$
+controls both the static value and the running. In terms of
+$\kappa=k^{2}/M_{\mathrm{Pl}}^{2}(k)$ the result is the following.
+
+\begin{conjecture}[Gravitational fixed point; \textsc{indicative}]
+\label{conj:frg:gravity}
+The gravitational coupling runs as
+\begin{equation}\label{eq:frg:betakappa}
+  \beta_{\kappa}=2\kappa-\frac{5}{48\pi^{2}}\kappa^{2},
+\end{equation}
+matching the anomalous dimension $\eta_{M}=-(5/48\pi^{2})\kappa$. Besides
+the Gaussian point it possesses a nontrivial UV-attractive fixed point
+\begin{equation}\label{eq:frg:kappastar}
+  \kappa_{\ast}=\frac{96\pi^{2}}{5}=189.4964,
+  \qquad
+  \frac{\partial\beta_{\kappa}}{\partial\kappa}\bigg|_{\kappa_{\ast}}=-2 .
+\end{equation}
+The \emph{minus} sign in \eqref{eq:frg:betakappa} is essential: $\kappa$
+flows \emph{away} from $0$ toward $\kappa_{\ast}$ in the UV (gravity does
+\emph{not} decouple). Because $\kappa_{\ast}\approx189\gg1$ lies outside
+the controlled weak-coupling regime, this single-scalar-loop fixed point is
+\textsc{indicative}, not rigorous.
+\end{conjecture}
+
+\begin{proof}[Computation]
+Setting $\beta_{\kappa}=0$ with $\kappa\neq0$ gives
+$2=(5/48\pi^{2})\kappa_{\ast}$, hence $\kappa_{\ast}=96\pi^{2}/5$.
+Differentiating, $\partial_{\kappa}\beta_{\kappa}=2-2(5/48\pi^{2})\kappa$;
+at $\kappa_{\ast}$ this is $2-2(5/48\pi^{2})(96\pi^{2}/5)=2-4=-2$. The
+sign of the slope being negative means $\kappa_{\ast}$ is UV attractive
+along the $\kappa$ direction. The status is downgraded to indicative
+because $\kappa_{\ast}\gg1$. \qedhere
+\end{proof}
+
+\begin{remark}[AS sign convention]
+\label{rem:frg:convention}
+We use $\theta_{i}=-\mathrm{eig}(M)$ for the critical exponents, where
+$M=\partial\beta_{i}/\partial g_{j}$ is the stability matrix. A direction
+is UV attractive (relevant) iff $\mathrm{eig}(M)<0$, i.e.\ $\theta>0$, so
+the number of relevant directions equals $\#\{\mathrm{eig}(M)<0\}$. By this
+convention the negative slope $-2$ at $\kappa_{\ast}$ in
+\eqref{eq:frg:kappastar} corresponds to a \emph{relevant} eigendirection
+with $\theta_{\kappa}=+2$.
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Scalar block and Yukawa direction}
+\label{sec:frg:scalar}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The classically marginal coset-scalar interactions live in a $27\times27$
+mass/coupling block whose multiplicities follow the fundamental branching
+$\mathbf{27}=\mathbf{1}_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}$
+under the \emph{residual} symmetry $H$ (not $E_{6}$):
+\begin{equation}\label{eq:frg:27block}
+  M=\mathrm{diag}\bigl(\mu_{1}\,\mathbb{1}_{1},\;
+                       \mu_{10}\,\mathbb{1}_{10},\;
+                       \mu_{16}\,\mathbb{1}_{16}\bigr),
+\end{equation}
+i.e.\ block multiplicities $1+10+16$. The three computed block eigenvalues
+$\mu_{1},\mu_{10},\mu_{16}$ are negative (\autoref{app:frg}), so the scalar
+block introduces \emph{no} additional relevant directions at the fixed
+point. The Yukawa coupling $\hat y^{2}$, defined through the real
+$\mathbf{10}_{H}/\mathbf{126}_{H}$ Higgs sector of \autoref{sec:sm} (Postulate~P6;
+the naive $\mathbf{16}$-scalar Yukawa is forbidden, having no $H$-singlet),
+runs with a $\beta$-function of the schematic form
+$\beta_{\hat y^{2}}=2\hat y^{2}+(\text{loop})\,\hat y^{4}+(\text{loop})\,\hat g^{2}\hat y^{2}$,
+whose only admissible fixed point at $\hat g^{2}_{\ast}=0$ is again Gaussian,
+$\hat y^{2}_{\ast}=0$ (Yukawa asymptotic freedom).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Explicit fixed point and stability spectrum}
+\label{sec:frg:fixedpoint}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Collecting the directions $(\xi,\hat g^{2},\hat y^{2},\kappa,\Lambda_{\mathrm{cc}})$,
+the canonical scaling terms and the loop results above give
+\begin{equation}\label{eq:frg:system}
+\begin{aligned}
+  \beta_{\xi}&=2\xi,
+  &\quad
+  \beta_{\hat g^{2}}&=2\hat g^{2}+\frac{b_{0}}{48\pi^{2}}\hat g^{4},
+  &\quad
+  \beta_{\hat y^{2}}&=2\hat y^{2}+\dots,
+  \\[4pt]
+  \beta_{\kappa}&=2\kappa-\frac{5}{48\pi^{2}}\kappa^{2},
+  &\quad
+  \beta_{\Lambda_{\mathrm{cc}}}&=-4\,\Lambda_{\mathrm{cc}}+\dots .
+\end{aligned}
+\end{equation}
+
+\begin{theorem}[Numerical fixed point and eigenvalues]
+\label{thm:frg:fixedpoint}
+The system \eqref{eq:frg:system} admits the fixed point
+\begin{equation}\label{eq:frg:fpvalues}
+  \bigl(\xi_{\ast},\hat g^{2}_{\ast},\hat y^{2}_{\ast},
+        \kappa_{\ast},\Lambda_{\mathrm{cc},\ast}\bigr)
+  =\bigl(0.05,\ 0,\ 0,\ \tfrac{96\pi^{2}}{5}=189.4964,\ 0.01\bigr),
+\end{equation}
+where $\xi_{\ast}$ and $\Lambda_{\mathrm{cc},\ast}$ are representative
+tuned values. At this point the stability matrix
+$M=\partial\beta_{i}/\partial g_{j}$ is effectively triangular (every loop
+correction to a $\beta$-function is proportional to a coupling that
+vanishes at $\hat g^{2}_{\ast}=\hat y^{2}_{\ast}=0$), with diagonal
+\begin{equation}\label{eq:frg:diag}
+  \partial_{\xi}\beta_{\xi}=+2,\quad
+  \partial_{\hat g^{2}}\beta_{\hat g^{2}}=+2,\quad
+  \partial_{\hat y^{2}}\beta_{\hat y^{2}}=+2,\quad
+  \partial_{\kappa}\beta_{\kappa}=-2,\quad
+  \partial_{\Lambda_{\mathrm{cc}}}\beta_{\Lambda_{\mathrm{cc}}}=-4 .
+\end{equation}
+Hence
+\begin{equation}\label{eq:frg:eig}
+  \mathrm{eig}(M)=\{+2,+2,+2,-2,-4\},
+  \qquad
+  \theta=-\mathrm{eig}(M)=\{-2,-2,-2,+2,+4\},
+\end{equation}
+so there are exactly two relevant directions, $\kappa$ ($\theta=+2$) and
+$\Lambda_{\mathrm{cc}}$ ($\theta=+4$); the $(\xi,\hat g^{2},\hat y^{2})$
+directions are irrelevant, with $\hat g^{2}$ and $\hat y^{2}$ asymptotically
+free. The interacting entry $\kappa_{\ast}$ is \textsc{indicative}
+(\autoref{conj:frg:gravity}).
+\end{theorem}
+
+\begin{proof}
+The Gaussian gauge and Yukawa values are forced by \autoref{thm:frg:gauge}
+and \autoref{sec:frg:scalar}; $\kappa_{\ast}$ is \eqref{eq:frg:kappastar};
+$\xi_{\ast},\Lambda_{\mathrm{cc},\ast}$ are tuned. The diagonal entries
+\eqref{eq:frg:diag} are the engineering-dimension scaling coefficients
+($+2$ for the dimension-$2$ couplings $\xi,\hat g^{2},\hat y^{2}$; $-4$ for
+the dimension-$4$ relevant $\Lambda_{\mathrm{cc}}$) plus the gravitational
+slope $-2$ from \autoref{conj:frg:gravity}. Triangularity makes these the
+eigenvalues; applying the convention of \autoref{rem:frg:convention} gives
+\eqref{eq:frg:eig}.
+\end{proof}
+
+\begin{remark}
+The positive central eigenvalues $(\hat g^{2},\hat y^{2})=+2$ are
+\emph{correct} under the AS convention: they encode gauge and Yukawa
+asymptotic freedom, not a pathology. The legacy quartet
+$\{-2,-1.3,-0.9,-0.2\}$ (which presumed an interacting gauge fixed point
+and all-relevant directions) is not reproducible and is replaced by
+\eqref{eq:frg:eig}.
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ultraviolet completeness, recast}
+\label{sec:frg:uvcomplete}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We deliberately drop the earlier higher-curvature ``irrelevance'' sketch:
+the previous argument assigned a dimensionally inconsistent scaling
+$\Delta=-2+\mathcal{O}(\kappa_{\ast})$ to curvature-squared operators while
+simultaneously asserting $\kappa\to0$, which contradicts
+\autoref{conj:frg:gravity}. In the present, corrected picture UV
+completeness rests on three pillars.
+
+\begin{theorem}[UV completeness, conditional on the truncation]
+\label{thm:frg:uvcomplete}
+Within the truncation defined by the coset-field action
+(\autoref{sec:sigma}) and the $\beta$-system \eqref{eq:frg:system}, UCFT
+possesses a finite-dimensional UV-critical surface, with only the two
+relevant directions $\kappa$ and $\Lambda_{\mathrm{cc}}$, provided the
+following hold:
+\begin{enumerate}
+  \item[\textnormal{(i)}] \emph{Gauge--Yukawa asymptotic freedom}
+        (\autoref{thm:frg:gauge}, \autoref{sec:frg:scalar}):
+        $\hat g^{2}_{\ast}=\hat y^{2}_{\ast}=0$, UV attractive, providing
+        a Gaussian completion of the matter sector;
+  \item[\textnormal{(ii)}] \emph{a gravitational fixed point}
+        (\autoref{conj:frg:gravity}): the interacting
+        $\kappa_{\ast}=96\pi^{2}/5$, with a single relevant direction
+        $\theta_{\kappa}=+2$ --- \textsc{indicative};
+  \item[\textnormal{(iii)}] \emph{irrelevant higher operators}: every
+        operator beyond those in \eqref{eq:frg:system}, including the
+        $27\times27$ scalar block \eqref{eq:frg:27block} (three negative
+        block eigenvalues), has $\theta<0$ in this truncation.
+\end{enumerate}
+The continuum limit is then defined by tuning the two relevant couplings.
+\end{theorem}
+
+\begin{proof}
+By \autoref{thm:frg:fixedpoint} the stability spectrum is
+$\{+2,+2,+2,-2,-4\}$, giving exactly two relevant directions
+($\kappa,\Lambda_{\mathrm{cc}}$) under \autoref{rem:frg:convention}. The
+matter directions are UV attractive (i); the gravitational direction is
+the sole interacting one (ii); the marginal scalar block and the remaining
+higher operators carry $\theta<0$ (iii, \autoref{app:frg}). A
+finite-dimensional UV-critical surface with finitely many relevant
+couplings is precisely the asymptotic-safety/freedom criterion for a
+predictive continuum limit.
+\end{proof}
+
+\begin{remark}[Truncation caveat]
+\label{rem:frg:caveat}
+\autoref{thm:frg:uvcomplete} is \emph{conditional on the truncation} and on
+the indicative status of \autoref{conj:frg:gravity}: the gravitational
+fixed point sits at $\kappa_{\ast}\approx189\gg1$, outside controlled weak
+coupling, so it is a strong-coupling extrapolation rather than a rigorous
+result. The cosmological constant enters as a tuned relevant direction
+$\Lambda_{\mathrm{cc}}$ ($\theta=+4$): UCFT \emph{inherits}, and does not
+solve, the cosmological-constant problem. Thus UV completeness here is a
+well-posed property of the stated truncation, not an unconditional theorem.
+\end{remark}

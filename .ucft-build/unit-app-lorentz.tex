@@ -1,0 +1,465 @@
+\section{Minkowski Structure and the Soldering Map}
+\label{sec:app-lorentz:main}
+
+This appendix establishes, with explicit mathematics and consistent epistemic labels, the chain
+by which a Lorentzian four-manifold is \emph{soldered} onto the
+$E_{6}$/Albert-algebra arena. We prove the algebraic facts
+$H_{2}(\mathbb{O})\cong\mathbb{R}^{1,9}$ and $SL(2,\mathbb{O})\cong\mathrm{Spin}(1,9)$
+as theorems; we state the choice of a four-plane, the dimension $d=4$, and the
+signature $(1,3)$ as the soldering postulate (P3); and we give the
+Osterwalder--Schrader/Page--Wootters route to Lorentzian unitary dynamics in place
+of any ``$e^{0}\mapsto i\,e^{0}$'' Wick trick.
+
+The governing logical separation, enforced throughout, is the following. The
+\emph{positive-definite} object is the coset/target metric $K|_{\mathfrak{m}}$ on
+the $32$-dimensional internal tangent space
+$\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$ of
+$M=E_{6}/(\mathrm{Spin}(10)\times U(1))=\mathrm{EIII}$ (see
+\autoref{cor:VacuumManifold} and \autoref{thm:uniqueMetric}). The \emph{indefinite}
+object is the cubic norm $N$ on the matter representation $\mathbf{27}=J_{3}(\mathbb{O})$,
+whose $2\times2$ octonion-Hermitian sub-block carries a Minkowski form on the
+\emph{different} space $\mathbb{R}^{1,9}$. No single form is asked to be both
+definite and indefinite; the soldering map (P3) is the bridge importing the
+indefinite $(1,3)$ structure onto a four-plane of the world-tangent bundle, leaving
+$K|_{\mathfrak{m}}$ untouched and Euclidean. Conventions are fixed globally:
+signature $(-,+,+,+)$; the dynamics live on the \emph{compact} real form of $E_{6}$
+(maximal compact $H=\mathrm{Spin}(10)\times U(1)$), and $E_{6(-26)}$ enters only as
+the rigid orbit-classifier of the real $\mathbf{27}$.
+
+\subsection{The Minkowski block: \texorpdfstring{$H_{2}(\mathbb{O})\cong\mathbb{R}^{1,9}$}{H2(O) = R(1,9)}}
+\label{subsec:app-lorentz:h2o}
+
+Let $\mathbb{O}$ be the real division octonions, a non-associative composition
+algebra of real dimension $8$, with conjugation $x\mapsto\bar{x}$, norm
+$n(x)=x\bar{x}=\bar{x}x\in\mathbb{R}_{\ge0}$, and trace $t(x)=x+\bar{x}\in\mathbb{R}$.
+Define the space of $2\times2$ octonion-Hermitian matrices
+\begin{equation}
+\label{eq:app-lorentz:h2def}
+H_{2}(\mathbb{O})
+ =\left\{\,X=\begin{pmatrix} a & x \\ \bar{x} & b \end{pmatrix}
+   \;:\; a,b\in\mathbb{R},\ x\in\mathbb{O}\,\right\},
+ \qquad X^{\dagger}=X,
+\end{equation}
+so that as a real vector space
+$\dim_{\mathbb{R}}H_{2}(\mathbb{O})=1+1+8=10$. The determinant is well defined
+despite non-associativity (the off-diagonal entry and its conjugate associate with
+the scalar diagonal):
+\begin{equation}
+\label{eq:app-lorentz:det}
+\det X = ab-x\bar{x}=ab-n(x).
+\end{equation}
+
+\begin{theorem}[Minkowski identification; \texorpdfstring{$H_{2}(\mathbb{O})\cong\mathbb{R}^{1,9}$}{H2(O)=R(1,9)}]
+\label{thm:app-lorentz:Mink}
+Introduce light-cone-adapted coordinates $a=X^{0}+X^{9}$, $b=X^{0}-X^{9}$, and write
+$x=(X^{1},\dots,X^{8})\in\mathbb{R}^{8}$ in an orthonormal basis of $\mathbb{O}$, so
+that $n(x)=\sum_{i=1}^{8}(X^{i})^{2}$. Then
+\begin{equation}
+\label{eq:app-lorentz:detmink}
+\det X = (X^{0})^{2}-(X^{9})^{2}-\sum_{i=1}^{8}(X^{i})^{2}
+       = -\,\eta_{\mu\nu}\,X^{\mu}X^{\nu},
+\qquad
+\eta=\mathrm{diag}(-1,\underbrace{+1,\dots,+1}_{9}),
+\end{equation}
+so the quadratic form $-\det$ on the ten-dimensional space $H_{2}(\mathbb{O})$ has
+Lorentzian signature $(1,9)$ in the $(-,+,\dots,+)$ convention:
+$(H_{2}(\mathbb{O}),-\det)\cong\mathbb{R}^{1,9}$. \emph{[Theorem.]}
+\end{theorem}
+
+\begin{proof}
+By \eqref{eq:app-lorentz:det},
+$\det X=ab-n(x)=(X^{0}+X^{9})(X^{0}-X^{9})-\sum_{i}(X^{i})^{2}
+=(X^{0})^{2}-(X^{9})^{2}-\sum_{i}(X^{i})^{2}$, which is the displayed Minkowski
+form. By Sylvester's law of inertia the diagonal pair contributes one $+$ (the
+$X^{0}$ mode) and one $-$ (the $X^{9}$ mode), and $-n(x)$ contributes eight further
+$-$'s; hence $\det$ has signature $(1,9)$ and $-\det$ is the single-timelike
+$\mathbb{R}^{1,9}$.
+\end{proof}
+
+\begin{theorem}[Octonionic exceptional isomorphism; \texorpdfstring{$SL(2,\mathbb{O})\cong\mathrm{Spin}(1,9)$}{SL(2,O)=Spin(1,9)}]
+\label{thm:app-lorentz:SL2O}
+There is a Lie-group isomorphism $SL(2,\mathbb{O})\cong\mathrm{Spin}(1,9)$, under
+which the defining $10$-dimensional vector representation acts on
+$(H_{2}(\mathbb{O}),-\det)\cong\mathbb{R}^{1,9}$ and the two chiral
+$16$-dimensional spinor representations are realised on
+$\mathbb{O}^{2}\cong\mathbb{R}^{16}$. This is the octonionic ($n=8$) member of the
+classical family $SL(2,\mathbb{A})\cong\mathrm{Spin}(n+1,1)$ for the normed
+division algebras $\mathbb{A}=\mathbb{R},\mathbb{C},\mathbb{H},\mathbb{O}$ of
+dimension $n=1,2,4,8$:
+\begin{equation}
+\label{eq:app-lorentz:family}
+\begin{aligned}
+SL(2,\mathbb{R}) &\cong \mathrm{Spin}(2,1), &
+SL(2,\mathbb{C}) &\cong \mathrm{Spin}(3,1), \\
+SL(2,\mathbb{H}) &\cong \mathrm{Spin}(5,1), &
+SL(2,\mathbb{O}) &\cong \mathrm{Spin}(9,1),
+\end{aligned}
+\end{equation}
+with $\mathrm{Spin}(9,1)=\mathrm{Spin}(1,9)$ up to convention. \emph{[Theorem.]}
+\end{theorem}
+
+\begin{proof}[Proof (statement and status)]
+The set of determinant- and Hermiticity-preserving actions on
+$H_{2}(\mathbb{O})$ does not close under naive matrix multiplication, since
+octonion non-associativity obstructs $g\,X\,g^{\dagger}$. Accordingly
+$SL(2,\mathbb{O})$ is \emph{defined} as $\mathrm{Spin}(1,9)$ acting through
+left/right octonion-multiplication generators chosen so that the determinant
+\eqref{eq:app-lorentz:det} and the spinor bilinears $\psi^{\dagger}X\psi$ on
+$\psi\in\mathbb{O}^{2}$ are covariant; the double cover
+$\mathrm{Spin}(1,9)\to SO(1,9)$ is the statement that the spinor action is
+two-valued on the vector action of \autoref{thm:app-lorentz:Mink}. These
+isomorphisms are classical (Sudbery; Kugo--Townsend; Manogue--Schray; Baez).
+\end{proof}
+
+\begin{theorem}[The physical Lorentz four-plane; \texorpdfstring{$SL(2,\mathbb{C})\subset SL(2,\mathbb{O})$}{SL(2,C) in SL(2,O)}]
+\label{thm:app-lorentz:SL2C}
+The chain of composition-algebra inclusions
+$\mathbb{R}\subset\mathbb{C}\subset\mathbb{H}\subset\mathbb{O}$ induces a chain of
+spin inclusions; in particular
+\begin{equation}
+\label{eq:app-lorentz:c-in-o}
+\mathrm{Spin}(1,3)=SL(2,\mathbb{C})\ \subset\ SL(2,\mathbb{O})=\mathrm{Spin}(1,9)
+\end{equation}
+via the sub-block $H_{2}(\mathbb{C})\subset H_{2}(\mathbb{O})$, where
+$H_{2}(\mathbb{C})=\{[[a,z],[\bar{z},b]]:a,b\in\mathbb{R},\,z\in\mathbb{C}\}$ has
+real dimension $4$, $\det=ab-|z|^{2}$ is the $(1,3)$ Minkowski form, and
+$\det|_{H_{2}(\mathbb{C})}$ is $SL(2,\mathbb{C})$-covariant in the standard
+four-dimensional way. The ambient $\mathbb{R}^{1,9}$ is the indefinite arena; the
+\emph{physical} $(1,3)$ is a soldered four-plane inside it. \emph{[Theorem.]}
+\end{theorem}
+
+\begin{proof}
+Restrict the change of variables of \autoref{thm:app-lorentz:Mink} to
+$z\in\mathbb{C}\subset\mathbb{O}$: $\det=ab-|z|^{2}=(X^{0})^{2}-(X^{3})^{2}-(X^{1})^{2}-(X^{2})^{2}$
+is the $(1,3)$ form. The covariance of the $SL(2,\mathbb{C})$ action on
+$H_{2}(\mathbb{C})$ is the textbook 4D statement $X\mapsto gXg^{\dagger}$,
+$\det(gXg^{\dagger})=|\det g|^{2}\det X=\det X$ for $g\in SL(2,\mathbb{C})$.
+\end{proof}
+
+\subsection{The cubic norm \texorpdfstring{$N$}{N} is genuinely indefinite}
+\label{subsec:app-lorentz:cubic}
+
+The Albert algebra $J_{3}(\mathbb{O})$ of $3\times3$ octonion-Hermitian matrices,
+$\dim_{\mathbb{R}}=3+3\cdot8=27$, carries the quadratic trace form
+$Q(X)=\mathrm{Tr}(X^{2})$ and the cubic norm $N(X)=\det X$
+(see \autoref{thm:Invs} and \autoref{thm:OrbitClass}). On a diagonal Jordan frame
+$X=\mathrm{diag}(\xi_{1},\xi_{2},\xi_{3})$ one has $Q=\sum_{i}\xi_{i}^{2}$ and
+$N=\xi_{1}\xi_{2}\xi_{3}$.
+
+\begin{theorem}[Separation of invariance groups]
+\label{thm:app-lorentz:groups}
+The automorphism group $F_{4}=\mathrm{Aut}(J_{3}(\mathbb{O}))$ (compact, $\dim 52$)
+preserves the Jordan product, hence preserves \emph{both} $Q=\mathrm{Tr}(X^{2})$ and
+$N$; since $Q$ is positive-definite, $F_{4}\subset SO(27)$. The reduced structure
+group $E_{6(-26)}$ ($\dim 78$) preserves the cubic norm $N$ \emph{only up to a real
+character} $\lambda(g)$, $N(gX)=\lambda(g)N(X)$, and does \emph{not} preserve $Q$.
+\emph{[Theorem.]}
+\end{theorem}
+
+\begin{proof}
+Automorphisms fix $\mathbb{1}$, commute with $\circ$, and hence fix every
+coefficient of the characteristic polynomial, in particular $\mathrm{Tr}(X^{2})$ and
+$\det=N$; Euclidean signature of $Q$ then forces $F_{4}\subset SO(27)$. The reduced
+structure group is by definition the linear group fixing $N$ up to scalar. If it also
+preserved $Q$ it would lie in $SO(27)$ and be compact, contradicting
+$\dim E_{6(-26)}=78>52=\dim F_{4}$ together with the non-compactness of the real form
+$E_{6(-26)}$ (its maximal compact is exactly $F_{4}$, so the $26$ non-compact
+directions move $Q$). Hence $Q$ is not $E_{6}$-invariant; only $N$ is.
+\end{proof}
+
+\begin{remark}[Orbits are classified by rank and \texorpdfstring{$N$}{N}, not by \texorpdfstring{$(Q,N)$}{(Q,N)}]
+\label{rmk:app-lorentz:orbits}
+Real $E_{6}$-orbits on the $\mathbf{27}$ are classified by
+$\mathrm{rank}\in\{0,1,2,3\}$ and the value of $N$, via the $E_{6}$-covariant
+sharp map $X^{\#}$ ($\mathrm{rank}\,X\le1\Leftrightarrow X^{\#}=0$;
+$\mathrm{rank}\,X\le2\Leftrightarrow N(X)=0$). It is \emph{not} the pair $(Q,N)$
+that separates orbits, since $Q$ is $F_{4}$-invariant only. This corrects any
+statement to the contrary (cf. \autoref{thm:OrbitClass}).
+\end{remark}
+
+\begin{theorem}[Indefiniteness, and the Minkowski block inside \texorpdfstring{$N$}{N}]
+\label{thm:app-lorentz:indef}
+The cubic norm $N$ takes strictly positive, strictly negative, and zero values on
+$J_{3}(\mathbb{O})\cong\mathbb{R}^{27}$ (it is an odd-degree form,
+$N(-X)=-N(X)$), so it is genuinely indefinite. Moreover, restricting $N$ to the
+block obtained by fixing the third pivot idempotent, $\xi_{3}=1$, $z_{1}=z_{2}=0$,
+and freezing $Y=\begin{psmallmatrix}\xi_{1}&z_{3}\\ \bar z_{3}&\xi_{2}\end{psmallmatrix}\in H_{2}(\mathbb{O})$,
+\begin{equation}
+\label{eq:app-lorentz:block}
+N(X)\big|_{\mathrm{block}}=\xi_{1}\xi_{2}-n(z_{3})=\det Y,
+\end{equation}
+so the indefinite Minkowski form $-\det=-\eta$ of \autoref{thm:app-lorentz:Mink} is
+the restriction of the cubic norm $N$ to an $H_{2}(\mathbb{O})\cong\mathbb{R}^{1,9}$
+sub-block of $J_{3}(\mathbb{O})$. \emph{[Theorem.]}
+\end{theorem}
+
+\begin{proof}
+$N(\mathrm{diag}(1,1,1))=1>0$, $N(\mathrm{diag}(-1,1,1))=-1<0$,
+$N(\mathrm{diag}(0,1,1))=0$, and oddness is immediate from the cubic homogeneity;
+\eqref{eq:app-lorentz:block} is the direct evaluation of $N$ on the stated block.
+\end{proof}
+
+\begin{theorem}[Consistency: definite \texorpdfstring{$K|_{\mathfrak{m}}$}{K|m} and indefinite \texorpdfstring{$N$}{N} live on different spaces]
+\label{thm:app-lorentz:consistency}
+The positive-definite coset/target metric $K|_{\mathfrak{m}}$ and the indefinite
+spacetime form are mutually consistent because they are forms on \emph{different}
+representation spaces. The coset metric is positive-definite on
+$\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$ (the adjoint
+complement, the $32$-dimensional internal tangent of EIII), and is unique by Schur
+($\mathfrak{m}$ is real-irreducible of complex type, commutant $\mathbb{C}$; see
+\autoref{thm:uniqueMetric}). The cubic norm $N$ is indefinite and lives on the
+$\mathbf{27}$, a \emph{different} module. Therefore ``the coset metric is Euclidean''
+and ``the cubic norm is indefinite'' are statements about distinct bilinear data on
+distinct modules; there is no tension. The Lorentzian signature used for spacetime is
+imported from $N|_{H_{2}(\mathbb{O})}$ via the soldering map P3, and is \emph{never}
+asked of $K|_{\mathfrak{m}}$. \emph{[Theorem.]}
+\end{theorem}
+
+\subsection{The soldering postulate (P3)}
+\label{subsec:app-lorentz:p3}
+
+We now state the soldering precisely. Throughout, P3 is a \emph{postulate}: added
+structure, not a theorem of the coset geometry. The theorem-level inputs are: a
+vacuum manifold $M=\mathrm{EIII}=E_{6}/(\mathrm{Spin}(10)\times U(1))$, $\dim_{\mathbb{R}}M=32$,
+with reductive split $\mathfrak{e}_{6}=\mathfrak{h}\oplus\mathfrak{m}$,
+$\mathfrak{h}=\mathfrak{so}(10)\oplus\mathfrak{u}(1)$,
+$\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$, and Maurer--Cartan
+form $\theta=\theta_{\mathfrak{h}}+\theta_{\mathfrak{m}}$
+(\autoref{cor:VacuumManifold}, \autoref{eq:MC}); together with the Minkowski-block
+facts of \autoref{thm:app-lorentz:Mink}--\autoref{thm:app-lorentz:SL2C} and
+\autoref{thm:app-lorentz:indef}. The $32$ clock fields are the coordinates along
+$\mathfrak{m}$: $28$ are physical massive scalars (single common radiative mass,
+Schur on the irreducible $\mathfrak{m}$) and $4$ are gauge/soldering modes eaten by
+world-volume diffeomorphism plus local Lorentz (see \autoref{thm:MassSpectrum}).
+
+\begin{postulate}[Soldering / frame identification, P3a]
+\label{post:app-lorentz:P3a}
+There exists a soldering map $\sigma$ identifying four distinguished clock-field
+frame directions, written $e^{a}{}_{\mu}$ ($a=0,1,2,3$; $\mu$ a world index), with a
+tangent four-plane $\Pi_{x}\subset T_{x}\mathcal{M}^{4}$ of an emergent four-manifold
+$\mathcal{M}^{4}$. The vierbein is the pull-back of the Maurer--Cartan component
+along these directions,
+\begin{equation}
+\label{eq:app-lorentz:vierbein}
+e^{a}{}_{\mu}(x)=\big\langle\,\tau^{a},\,\theta_{\mathfrak{m}}(\partial_{\mu})\,\big\rangle,
+\end{equation}
+where $\{\tau^{a}\}_{a=0}^{3}$ is the image of the $H_{2}(\mathbb{C})\cong\mathbb{R}^{1,3}$
+basis under the embedding of \autoref{post:app-lorentz:P3d}. The vierbein
+\emph{emerges dynamically}, as the pull-back of $\theta_{\mathfrak{m}}$. \emph{[Postulate P3.]}
+\end{postulate}
+
+\begin{postulate}[Induced Minkowski form, P3b]
+\label{post:app-lorentz:P3b}
+The induced quadratic form on $\Pi_{x}$ is the Minkowski form inherited from the
+cubic norm via the $H_{2}(\mathbb{C})$ block,
+\begin{equation}
+\label{eq:app-lorentz:metric}
+g_{\mu\nu}(x)=e^{a}{}_{\mu}(x)\,e^{b}{}_{\nu}(x)\,\eta_{ab},
+\qquad \eta_{ab}=\mathrm{diag}(-1,+1,+1,+1),
+\end{equation}
+with $\eta$ the restriction of $-\det=-N$ to the $H_{2}(\mathbb{C})$ sub-block
+(\autoref{thm:app-lorentz:SL2C}, \autoref{thm:app-lorentz:indef}). \emph{[Postulate P3.]}
+\end{postulate}
+
+\begin{postulate}[Dimension and signature are added, P3c]
+\label{post:app-lorentz:P3c}
+The numbers $d=4$ and signature $(1,3)=(-,+,+,+)$ are \emph{part of P3}: added
+structure. They are \emph{not} consequences of the Killing form, the coset metric, or
+any rank lemma. \emph{[Postulate P3.]}
+\end{postulate}
+
+\begin{postulate}[Frame reduction by a vierbein condensate, P3d]
+\label{post:app-lorentz:P3d}
+A vierbein condensate (a VEV of the soldering bilinear) selects the
+$H_{2}(\mathbb{C})\cong\mathbb{R}^{1,3}$ sub-block of
+$H_{2}(\mathbb{O})\cong\mathbb{R}^{1,9}$ and breaks the ambient frame symmetry
+\begin{equation}
+\label{eq:app-lorentz:reduction}
+\mathrm{Spin}(1,9)=SL(2,\mathbb{O})\ \longrightarrow\
+SL(2,\mathbb{C})\times \mathrm{Spin}(6)=\mathrm{Spin}(1,3)\times\mathrm{Spin}(6),
+\end{equation}
+the orthogonal complement of $\mathbb{R}^{1,3}$ in $\mathbb{R}^{1,9}$ being the
+six-dimensional spacelike $\mathbb{R}^{6}$ acted on by $\mathrm{Spin}(6)\cong SU(4)$
+(internal). The residual $\mathrm{Spin}(1,3)=SL(2,\mathbb{C})$ is the local Lorentz
+group of the soldered four-plane. \emph{[Postulate P3.]}
+\end{postulate}
+
+\begin{theorem}[Internal consistency of P3]
+\label{thm:app-lorentz:P3consistency}
+Given \autoref{post:app-lorentz:P3a}--\autoref{post:app-lorentz:P3d}, the tensor
+$g_{\mu\nu}$ of \eqref{eq:app-lorentz:metric} is a non-degenerate symmetric rank-$2$
+tensor of Lorentzian signature $(1,3)$ on $\mathcal{M}^{4}$, invariant under the
+residual local Lorentz group $SO(1,3)$; the four frame modes $e^{a}{}_{\mu}$ carry
+exactly the gauge degrees of freedom eaten by world-volume diffeomorphisms together
+with local Lorentz, consistent with the count $32=28\ \text{physical}+4\ \text{gauge/soldering}$.
+\emph{[Theorem (conditional on P3).]}
+\end{theorem}
+
+\begin{proof}
+Non-degeneracy and signature are inherited from
+$\eta_{ab}=\mathrm{diag}(-1,+1,+1,+1)$ (\autoref{thm:app-lorentz:SL2C}) whenever
+$\det(e^{a}{}_{\mu})\ne0$, which holds for a generic condensate;
+$SO(1,3)$-invariance is the defining relation
+$\eta_{ab}=\Lambda^{c}{}_{a}\Lambda^{d}{}_{b}\eta_{cd}$ for
+$\Lambda\in SO(1,3)$. The gauge count is the Ward identity
+$\nabla_{\mu}\big(\delta\Gamma/\delta e^{a}{}_{\mu}\big)=0$, so the four frame
+directions are protected by diffeomorphism plus local Lorentz, not by a Hessian zero.
+\end{proof}
+
+\begin{remark}[What P3 does not claim]
+\label{rmk:app-lorentz:notclaim}
+P3 does not claim that $K|_{\mathfrak{m}}$ is Lorentzian: it stays positive-definite,
+the kinetic/target-space metric of the $\sigma$-model. P3 does not use a $(4,28)$
+split of $\mathfrak{m}$ with Lorentzian signature: the $4$ are gauge soldering modes,
+the $28$ are Euclidean target coordinates. P3 does not build the four-plane from
+$\nabla I_{2},\nabla I_{3}$ singlets: $\mathfrak{m}$ contains no $SO(10)$ singlet, and
+$\nabla Q|_{X_{0}}=2X_{0}\notin\mathfrak{m}$. The four-plane is the soldered image of
+$H_{2}(\mathbb{C})\subset\mathbf{27}$, not a sub-module of $\mathfrak{m}$.
+\end{remark}
+
+\begin{remark}[Anti-theorem: there is no Killing-form derivation of \texorpdfstring{$(1,3)$}{(1,3)}]
+\label{rmk:app-lorentz:anti}
+There is \emph{no} derivation of $d=4$ or of the signature $(1,3)$ from the Killing
+form of $E_{6}$, from the coset metric $K|_{\mathfrak{m}}$, or from any rank lemma.
+The Killing form of compact $E_{6}$ is negative-definite; its restriction to
+$\mathfrak{m}$ is (sign-flipped to) positive-definite of signature $(32,0)$ --- zero
+Lorentzian content. Any claim of a $(4,28)$ or $(1,3)$ Killing/coset signature is
+false. Lorentzian signature enters only through P3, rooted in the indefinite cubic
+norm $N$ / $H_{2}(\mathbb{O})\cong\mathbb{R}^{1,9}$.
+\end{remark}
+
+\subsection{Emergent time: Page--Wootters clock and Osterwalder--Schrader reconstruction}
+\label{subsec:app-lorentz:time}
+
+Lorentzian time is recovered by a relational-clock plus reconstruction-theorem
+mechanism; no ``multiply $e^{0}$ by $i$'' Wick trick is used. The soldered metric
+$\eta^{(1,3)}$ is already Lorentzian \emph{before} any continuation; the role of
+analytic continuation is confined to the correlation functions in the clock-time
+argument, justified by reflection positivity.
+
+\begin{postulate}[Timelike clock selection, P3e]
+\label{post:app-lorentz:clock}
+Among the $32$ clock fields, the soldering condensate
+(\autoref{post:app-lorentz:P3d}) selects a distinguished timelike direction, whose
+clock field we call $\phi^{0}$ --- concretely the trace/$X^{0}$ direction of the
+soldered $H_{2}(\mathbb{C})\subset J_{3}(\mathbb{O})$ block (the unique
+$\eta$-timelike soldering leg $e^{0}{}_{\mu}$). The selection of \emph{one} timelike
+direction is precisely the $(1,3)$ (rather than $(2,8)$, etc.) content of P3.
+\emph{[Postulate P3.]}
+\end{postulate}
+
+\begin{theorem}[Page--Wootters relational evolution]
+\label{thm:app-lorentz:PW}
+Promote $\phi^{0}$ to a Page--Wootters clock: enlarge the kinematical Hilbert space
+to $\mathcal{H}=\mathcal{H}_{\mathrm{clock}}\otimes\mathcal{H}_{\mathrm{sys}}$ and
+impose the induced-gravity Hamiltonian constraint
+\begin{equation}
+\label{eq:app-lorentz:constraint}
+\hat{H}_{\mathrm{phys}}\,|\Psi\rangle\!\rangle=0,
+\qquad
+\hat{H}_{\mathrm{phys}}=\hat{H}_{\mathrm{clock}}+\hat{H}_{\mathrm{sys}}
+\ (+\ \text{interaction}),
+\end{equation}
+on physical states. Conditioning on clock readings $\phi^{0}=\tau$,
+$|\psi(\tau)\rangle_{\mathrm{sys}}=\langle\phi^{0}=\tau|\Psi\rangle\!\rangle$, yields
+the Schr\"odinger equation in relational time,
+\begin{equation}
+\label{eq:app-lorentz:schrodinger}
+i\,\partial_{\tau}|\psi(\tau)\rangle_{\mathrm{sys}}
+ =\hat{H}_{\mathrm{sys}}|\psi(\tau)\rangle_{\mathrm{sys}},
+\end{equation}
+with the unitary group $U(\tau)=e^{-i\hat{H}_{\mathrm{sys}}\tau}$ recovered on
+physical states in the semiclassical regime where the soldered $g_{\mu\nu}$ admits a
+timelike Killing vector and $\hat{H}_{\mathrm{sys}}=\int T_{00}$ along it.
+\emph{[Theorem (Page--Wootters), conditional on the constraint and a good clock; global hyperbolicity assumed.]}
+\end{theorem}
+
+\begin{proof}
+Under \eqref{eq:app-lorentz:constraint} with a good clock
+($\hat{H}_{\mathrm{clock}}=\hat{p}_{\phi^{0}}$ canonically conjugate to
+$\hat{\phi}^{0}$), the conditioned state obeys \eqref{eq:app-lorentz:schrodinger};
+this is the Page--Wootters theorem. The identification $t\leftrightarrow X^{0}$ is
+$\hat{H}_{\mathrm{sys}}=\int T_{00}$ along the timelike Killing direction.
+\end{proof}
+
+\begin{construction}[Osterwalder--Schrader reconstruction along \texorpdfstring{$\phi^{0}$}{phi0}]
+\label{con:app-lorentz:OS}
+The Euclidean $\sigma$-model built on the positive-definite $K|_{\mathfrak{m}}$
+defines a Euclidean functional measure with Schwinger functions
+$S_{n}(x_{1},\dots,x_{n})$. Take $\tau=\phi^{0}$ as Osterwalder--Schrader time and
+assume the axioms: (OS0) Euclidean invariance of the spatial slice; (OS1) reflection
+positivity with respect to $\theta:\tau\mapsto-\tau$ about a $\phi^{0}$-slice,
+\begin{equation}
+\label{eq:app-lorentz:rp}
+\sum_{i,j}\bar{c}_{i}\,c_{j}\,S\!\left(\theta F_{i}\cdot F_{j}\right)\ \ge\ 0,
+\qquad \mathrm{supp}\,F_{i}\subset\{\tau>0\};
+\end{equation}
+(OS2) symmetry and clustering.
+\end{construction}
+
+\begin{theorem}[OS reconstruction \texorpdfstring{$\Rightarrow$}{=>} Lorentzian Wightman theory]
+\label{thm:app-lorentz:OS}
+Given (OS0)--(OS2), the Osterwalder--Schrader reconstruction theorem produces a
+Hilbert space $\mathcal{H}$, a positive self-adjoint Hamiltonian $\hat{H}\ge0$
+generating $\tau$-translations as the contraction semigroup $e^{-\hat{H}\tau}$, and,
+by analytic continuation of the Schwinger functions in the time argument
+$\tau\to it$, Lorentzian Wightman functions on $(\mathcal{M}^{4},\eta^{(1,3)})$ with
+unitary evolution $e^{-i\hat{H}t}$ covariant under the reconstructed $SO(1,3)$. The
+OS theorem itself is rigorous given its hypotheses \emph{[Theorem]}; that the UCFT
+$\sigma$-model \emph{satisfies} reflection positivity \eqref{eq:app-lorentz:rp} along
+$\phi^{0}$ is \emph{[Indicative]} --- the precise property to be checked, and the
+rigorous replacement for the Wick trick.
+\end{theorem}
+
+\begin{proof}[Proof (theorem part)]
+Reflection positivity \eqref{eq:app-lorentz:rp} induces a physical inner product on
+the quotient $\{F:\tau>0\}/(\text{null})$; the generator of the resulting contraction
+semigroup $e^{-\hat{H}\tau}$ is self-adjoint and positive. The Schwinger functions,
+analytic in a tube, continue to Wightman distributions satisfying the Wightman axioms,
+including the spectrum condition and Lorentz covariance under the reconstructed
+$SO(1,3)$ (Osterwalder--Schrader, 1973, 1975).
+\end{proof}
+
+\begin{remark}[Why this is not the Wick trick]
+\label{rmk:app-lorentz:notwick}
+The continuation $\tau\to it$ acts on the correlation functions in the
+\emph{clock-time argument}, justified by reflection positivity
+\eqref{eq:app-lorentz:rp} and the resulting analyticity tube --- it is \emph{not} the
+ad hoc replacement $e^{0}{}_{\mu}\mapsto i\,e^{0}{}_{\mu}$ of a frame field. The
+metric $\eta^{(1,3)}$ is the soldered (P3) form, Lorentzian before any continuation;
+OS reconstruction supplies the unitary dynamics $e^{-i\hat{H}t}$ and the
+positive-energy spectrum, with $\phi^{0}$ (the Page--Wootters clock) serving as the
+OS reflection time. The two mechanisms dovetail:
+\autoref{thm:app-lorentz:PW} gives relational unitarity $U(\tau)$ on physical states,
+and \autoref{thm:app-lorentz:OS} gives the positive-energy, Lorentz-covariant
+Wightman theory.
+\end{remark}
+
+\subsection{Summary: theorem versus postulate}
+\label{subsec:app-lorentz:summary}
+
+The division of labour is as follows.
+\begin{itemize}
+\item \textbf{Theorems} (proved): $(H_{2}(\mathbb{O}),-\det)\cong\mathbb{R}^{1,9}$
+  (\autoref{thm:app-lorentz:Mink}); $SL(2,\mathbb{O})\cong\mathrm{Spin}(1,9)$ and
+  $SL(2,\mathbb{C})\cong\mathrm{Spin}(1,3)$
+  (\autoref{thm:app-lorentz:SL2O}, \autoref{thm:app-lorentz:SL2C}); $F_{4}$ preserves
+  $Q$, $E_{6}$ preserves only $N$ (\autoref{thm:app-lorentz:groups}); $N$ indefinite
+  and the Minkowski block $\det Y\subset N$ (\autoref{thm:app-lorentz:indef});
+  definite $K|_{\mathfrak{m}}$ and indefinite $N$ are consistent
+  (\autoref{thm:app-lorentz:consistency}); internal consistency of $g_{\mu\nu}$ given
+  P3 (\autoref{thm:app-lorentz:P3consistency}); the Page--Wootters and OS
+  reconstruction theorems (\autoref{thm:app-lorentz:PW}, \autoref{thm:app-lorentz:OS}).
+\item \textbf{Postulate} (P3, added structure, cf. P1--P6): the soldering map, the
+  choice of a four-plane, $d=4$, signature $(1,3)$, the vierbein condensate and frame
+  reduction, and the timelike clock selection
+  (\autoref{post:app-lorentz:P3a}--\autoref{post:app-lorentz:P3d},
+  \autoref{post:app-lorentz:clock}).
+\item \textbf{Indicative}: that the UCFT $\sigma$-model satisfies reflection
+  positivity along $\phi^{0}$ (\autoref{thm:app-lorentz:OS}).
+\end{itemize}
+In short, the Lorentzian arena is a \emph{conditional embedding}: the algebra
+$H_{2}(\mathbb{O})\cong\mathbb{R}^{1,9}$ and $SL(2,\mathbb{O})\cong\mathrm{Spin}(1,9)$
+are theorems, while the selection of the physical $(1,3)$ four-plane and the recovery
+of unitary Lorentzian dynamics rest on the soldering postulate P3 plus an indicative
+reflection-positivity assumption.

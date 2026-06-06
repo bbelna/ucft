@@ -1,0 +1,308 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% UNIT: coset  --  Coset Geometry and the Clock Fields
+%% Self-contained section fragment (no preamble / documentclass).
+%% Cross-references to other units use stable labels via \autoref/\cref.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Coset Geometry and the Clock Fields}
+\label{sec:coset:main}
+
+The vacuum-selection theorem (\autoref{thm:vacuum:T4}) establishes that the
+global minimum of the $E_{6}$-invariant potential of Postulate~P1 is the closed
+rank-$1$ primitive-idempotent orbit in $\mathbb P(\mathbf{27}_{\mathbb C})$, namely
+the Hermitian symmetric space
+\begin{equation}\label{eq:coset:vacuum}
+  \mathcal M \;=\; \frac{E_{6}}{\Spin(10)\times U(1)} \;=\; \mathrm{EIII},
+  \qquad \dim_{\mathbb R}\mathcal M = 32 .
+\end{equation}
+Here and throughout the \emph{dynamics} are carried by the \emph{compact} real
+form of $E_{6}$ (equivalently $E_{6(-14)}$, whose maximal compact subgroup is
+exactly $H = \Spin(10)\times U(1)$); the non-compact $E_{6(-26)}$ enters only as
+the rigid classifier of orbits in the real $\mathbf{27}$ by rank and cubic norm
+$N$ (\autoref{sec:vacuum}). Because $H$ is compact, the isotropy
+representation carries an invariant \emph{positive-definite} metric, which we
+will identify as the kinetic/target-space metric of the $\sigma$-model.
+
+This section is geometric and tree-level. We (i) identify the tangent space
+$\mathfrak m$ of $\mathcal M$ and prove, from the $U(1)$ charge structure of a
+Hermitian symmetric space, that the invariant metric $K|_{\mathfrak m}$ is unique
+and positive-definite; (ii) build the nonlinear $\sigma$-model from the
+Maurer--Cartan form, with its $32$ Goldstone \emph{clock fields}; and (iii)
+record that at tree level all $32$ clock fields are exact massless Goldstone
+modes. The Lorentzian frame of four of them (Postulate~P3) is supplied in
+\autoref{sec:soldering}; their one-loop spectrum (Schur, $28$ massive $+\,4$
+gauge/soldering) in \autoref{sec:gravity}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The tangent space \texorpdfstring{$\mathfrak m$}{m}}
+\label{sec:coset:tangent}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The orbit \eqref{eq:coset:vacuum} is defined by the Cartan involution
+$\vartheta$ whose $(+1)$-eigenspace is $\mathfrak h = \mathfrak{so}(10)\oplus
+\mathfrak u(1)$ and whose $(-1)$-eigenspace $\mathfrak m$ is the tangent space at
+the base point. The branching of the adjoint $\mathbf{78}$ of $E_{6}$ under
+$H = \Spin(10)\times U(1)$ is the involution datum
+\begin{equation}\label{eq:coset:adjoint}
+  \mathbf{78}
+  \;=\; \underbrace{\mathbf{45}_{0}\oplus\mathbf 1_{0}}_{\mathfrak h}
+       \;\oplus\;
+        \underbrace{\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}}_{\mathfrak m},
+\end{equation}
+so that
+\begin{equation}\label{eq:coset:tangent}
+  \mathfrak m \;=\; \mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3},
+  \qquad \dim_{\mathbb R}\mathfrak m = 32 .
+\end{equation}
+The two summands are the chiral spinor and antispinor of $\Spin(10)$, carrying
+opposite $U(1)$ charges $\mp 3$. For comparison, the matter representation
+branches as
+\begin{equation}\label{eq:coset:fund}
+  \mathbf{27} \;=\; \mathbf 1_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1},
+\end{equation}
+the $\mathbf{16}_{+1}$ of which will house one chiral family
+(\autoref{sec:sm}).
+
+\begin{remark}\label{rem:coset:nosinglet}
+$\mathfrak m$ contains \emph{no} $\Spin(10)$ singlet. In particular $\mathcal M$
+is \emph{not} the orbit $E_{6}/F_{4}$ of $\mathrm{diag}(1,1,1)$ (real dimension
+$26$), and $\mathfrak m$ admits no decomposition of the spurious form
+$2\times\mathbf{10}\oplus\mathbf 4$ or $\mathbf{10}\oplus\overline{\mathbf{10}}
+\oplus\mathbf 4$. The four Lorentzian frame directions of
+\autoref{sec:soldering} are \emph{not} an $H$-invariant subspace of
+$\mathfrak m$; they are selected by the soldering map $\sigma$ (Postulate~P3),
+not by the branching \eqref{eq:coset:tangent}.
+\end{remark}
+
+The decisive structural fact is the type of $\mathfrak m$ as a real
+$H$-representation.
+
+\begin{theorem}[Real-irreducibility of $\mathfrak m$]\label{thm:coset:irrep}
+As a real representation of $H = \Spin(10)\times U(1)$, the tangent space
+$\mathfrak m = \mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$ is irreducible
+of \emph{complex type}: its commutant algebra is $\mathbb C$.
+\end{theorem}
+
+\begin{proof}
+The complexified module $\mathfrak m_{\mathbb C}$ is the sum of the two distinct
+complex-irreducible $H$-modules $\mathbf{16}_{-3}$ and
+$\overline{\mathbf{16}}_{+3}$, which are interchanged by complex conjugation
+(the $U(1)$ charge flips sign and $\mathbf{16}\leftrightarrow\overline{\mathbf{16}}$).
+A real-irreducible module whose complexification is $V\oplus\overline V$ with
+$V\not\cong\overline V$ is irreducible of \emph{complex type}; its commutant is
+$\mathbb C$, acting as the complex structure $J$ that rotates the
+$\mathbf{16}_{-3}$ phase by $e^{i\theta}$ and the $\overline{\mathbf{16}}_{+3}$
+phase by $e^{-i\theta}$. (This $J$ is precisely the action of the $\mathfrak u(1)$
+generator $\mathbf 1_{0}$ in \eqref{eq:coset:adjoint}; it is the integrable
+almost-complex structure that makes $\mathcal M=\mathrm{EIII}$ Hermitian
+symmetric.) No real $H$-invariant subspace of $\mathfrak m$ other than $0$ and
+$\mathfrak m$ exists, since any such subspace would complexify to a proper
+nonzero $H$-submodule of $\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$
+stable under conjugation, hence to $\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$
+itself.
+\end{proof}
+
+\begin{remark}\label{rem:coset:hermitian}
+\autoref{thm:coset:irrep} replaces, with a cleaner argument, the older
+``single weight orbit'' claim of $\mathrm{lem}{:}\mathrm{Irrep}$: irreducibility
+follows directly from the Hermitian-symmetric-space structure (a single
+$\mathbb C$-line $\mathfrak m^{(1,0)} = \mathbf{16}_{-3}$ and its conjugate),
+without inspecting the root diagram.
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The invariant metric}
+\label{sec:coset:metric}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{theorem}[Unique positive-definite coset metric]\label{thm:coset:metric}
+Up to an overall positive constant $f^{2}$, there is a unique $E_{6}$-invariant
+symmetric bilinear form on $\mathfrak m$,
+\begin{equation}\label{eq:coset:metric}
+  \mathfrak g_{\alpha\beta} \;=\; f^{2}\,K_{\alpha\beta},
+  \qquad
+  K_{\alpha\beta} \;=\; \bigl(K_{E_{6}}\bigr)\big|_{\mathfrak m},
+\end{equation}
+the restriction to $\mathfrak m$ of the Killing form of (compact) $E_{6}$. For
+$f^{2}>0$ this metric is positive-definite (Euclidean signature
+$(32,0)$); it is the kinetic/target-space metric of the $\sigma$-model. Here
+$[f] = \text{mass}$.
+\end{theorem}
+
+\begin{proof}
+\emph{Existence and the charge selection rule.} An $H$-invariant symmetric form
+on $\mathfrak m$ is an element of $\bigl(\Sym^{2}\mathfrak m^{*}\bigr)^{H}$.
+Complexifying, $\Sym^{2}\mathfrak m_{\mathbb C}^{*}$ decomposes through
+\begin{equation}\label{eq:coset:sym2}
+  \Sym^{2}\!\bigl(\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}\bigr)
+  = \underbrace{\Sym^{2}\mathbf{16}_{-3}}_{U(1)\text{ charge }-6}
+    \;\oplus\;
+    \underbrace{\bigl(\mathbf{16}_{-3}\otimes\overline{\mathbf{16}}_{+3}\bigr)}_{\text{charge }0}
+    \;\oplus\;
+    \underbrace{\Sym^{2}\overline{\mathbf{16}}_{+3}}_{\text{charge }+6}.
+\end{equation}
+The first and third summands carry nonzero $U(1)$ charge ($\mp 6$) and therefore
+contain \emph{no} $H$-singlet: the symmetric $\mathbf{16}\times\mathbf{16}$ and
+$\overline{\mathbf{16}}\times\overline{\mathbf{16}}$ invariants are forbidden by
+the $U(1)$ charge. Only the charge-$0$ cross-pairing $\mathbf{16}_{-3}\otimes
+\overline{\mathbf{16}}_{+3}\supset\mathbf 1_{0}$ contributes an $H$-singlet, and
+it does so exactly once (the $\Spin(10)$ contraction
+$\langle\,\cdot\,,\,\overline{\,\cdot\,}\,\rangle$ is unique up to scale). Hence
+$\dim\bigl(\Sym^{2}\mathfrak m^{*}\bigr)^{H} = 1$. This unique invariant is the
+Killing restriction $K|_{\mathfrak m}$.
+
+\emph{Uniqueness (Schur).} By \autoref{thm:coset:irrep}, $\mathfrak m$ is
+real-irreducible, so Schur's lemma gives at most a one-dimensional space of
+invariant symmetric forms; the count above shows it is exactly one-dimensional.
+Any two are proportional, $\mathfrak g_{\alpha\beta} = c\,K_{\alpha\beta}$.
+
+\emph{Definiteness.} On the compact real form of $E_{6}$ the Killing form is
+negative-definite, so $-K_{E_{6}}$ is a positive-definite invariant inner
+product on $\mathfrak e_{6}$; its restriction to $\mathfrak m$ is therefore
+positive-definite. Fixing the sign and scale by the kinetic normalization,
+$c = f^{2}>0$, gives \eqref{eq:coset:metric}.
+\end{proof}
+
+\begin{remark}\label{rem:coset:nolorentz}
+\autoref{thm:coset:metric} forbids any $(4,28)$ or $(1,3)$ ``Killing/coset
+signature.'' The compact-$E_{6}$ Killing form on $\mathfrak m$ has signature
+$(32,0)$ and zero Lorentzian content. Lorentzian signature enters \emph{only}
+through the soldering Postulate~P3 (\autoref{sec:soldering}), rooted in the cubic
+norm $N$ on $J_{3}(\mathbb O)$ via $H_{2}(\mathbb O)\cong\mathbb R^{1,9}$, not in
+the coset geometry.
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The Maurer--Cartan form and the clock-field \texorpdfstring{$\sigma$}{sigma}-model}
+\label{sec:coset:sigma}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Following the coset construction of nonlinear realizations, choose a local
+representative $g(x)\in E_{6}$ of the map $x\mapsto\pi(x)\in\mathcal M$. The
+$32$ broken generators $X_{\alpha}\in\mathfrak m$ furnish local coordinates
+$\phi^{\alpha}(x)$ on $\mathcal M$; these are the \emph{clock fields}. The
+left-invariant Maurer--Cartan one-form
+\begin{equation}\label{eq:coset:MC}
+  \theta_{\mu}(x) \;=\; g^{-1}(x)\,\partial_{\mu}g(x)\;\in\;\mathfrak e_{6}
+\end{equation}
+decomposes into unbroken ($\mathfrak h$) and broken ($\mathfrak m$) parts,
+\begin{equation}\label{eq:coset:MCsplit}
+  \theta_{\mu}
+   \;=\; \underbrace{A_{\mu}{}^{i}\,H_{i}}_{\mathfrak h\text{-connection}}
+        \;+\;
+         \underbrace{e_{\mu}{}^{\alpha}\,X_{\alpha}}_{\mathfrak m\text{-vielbein}},
+  \qquad i = 1,\dots,46,\;\; \alpha = 1,\dots,32 .
+\end{equation}
+Under a local $H$ transformation $g(x)\mapsto g(x)h(x)^{-1}$, the $\mathfrak
+h$-part $A_{\mu}$ transforms as a $\Spin(10)\times U(1)$ gauge connection and the
+$\mathfrak m$-part $e_{\mu}{}^{\alpha}$ transforms covariantly; the composite
+gauge sector built from $A_{\mu}$ is developed in \autoref{sec:gauge}, and the
+soldering of four components of $e_{\mu}{}^{\alpha}$ to a spacetime vierbein in
+\autoref{sec:soldering}.
+
+The $H$-covariant derivative of the clock fields and the field strength of the
+composite connection are
+\begin{equation}\label{eq:coset:covD}
+  D_{\mu}\phi^{\alpha}
+    = \partial_{\mu}\phi^{\alpha}
+      + A_{\mu}{}^{i}\,(t_{i})^{\alpha}{}_{\beta}\,\phi^{\beta},
+  \qquad
+  F_{\mu\nu}
+    = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu} + [A_{\mu},A_{\nu}],
+\end{equation}
+with $(t_{i})^{\alpha}{}_{\beta}$ the matrices of $\mathfrak h$ acting on
+$\mathfrak m = \mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$. The most
+general two-derivative action consistent with global $E_{6}$, local $H$, and
+(after Postulate~P3) local Lorentz invariance is fixed up to the couplings to be
+the gauged nonlinear $\sigma$-model
+\begin{equation}\label{eq:coset:action}
+  S_{\sigma}[\phi,A]
+   = \int \dd^{4}x\,\sqrt{-g}\;
+     \frac12\, g^{\mu\nu}\,\mathfrak g_{\alpha\beta}\,
+       D_{\mu}\phi^{\alpha}\,D_{\nu}\phi^{\beta}
+     \;-\;\frac14\,\hat g^{-2}\,\Tr\!\bigl(F_{\mu\nu}F^{\mu\nu}\bigr),
+\end{equation}
+with the target metric $\mathfrak g_{\alpha\beta} = f^{2}K_{\alpha\beta}$ of
+\autoref{thm:coset:metric} and signature convention $(-,+,+,+)$. The matter
+(Weyl-fermion) and Yukawa sectors are added in
+\autoref{sec:sm} (Postulates~P4, P6); the gauge coupling $\hat g^{2}$,
+the dimensionless $\xi,\hat y^{2},\kappa$, and the running of $f$ are studied in
+\autoref{sec:gravity}.
+
+\begin{lemma}[Healthy kinetic term]\label{lem:coset:positivity}
+For $f^{2}>0$ the clock-field kinetic term in \eqref{eq:coset:action} is
+positive-definite, and the classical $\sigma$-model energy is bounded below.
+\end{lemma}
+
+\begin{proof}
+Immediate from \autoref{thm:coset:metric}: $\mathfrak g_{\alpha\beta}$ is
+positive-definite on $\mathfrak m$, so for the spatial gradient and time
+derivative the energy density
+$\tfrac12\mathfrak g_{\alpha\beta}\bigl(\dot\phi^{\alpha}\dot\phi^{\beta}
++\partial_{i}\phi^{\alpha}\partial_{i}\phi^{\beta}\bigr)\ge 0$, and the gauge
+term enters at most quadratically. (This is where the \emph{compact} real form
+is essential; a non-compact form would render $K|_{\mathfrak m}$ indefinite.)
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Tree-level massless Goldstones}
+\label{sec:coset:goldstone}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{theorem}[Tree-level Goldstone theorem]\label{thm:coset:goldstone}
+At tree level the potential $V$ of Postulate~P1 is $E_{6}$-invariant, and
+$\mathcal M$ is an orbit of broken vacua. Hence the Hessian of $V$ vanishes
+along the coset directions,
+\begin{equation}\label{eq:coset:hess}
+  \mathrm{Hess}\,V_{\mathrm{tree}}\big|_{\mathfrak m} = 0,
+\end{equation}
+and all $32$ clock fields $\phi^{\alpha}$ are exact massless Goldstone bosons.
+\end{theorem}
+
+\begin{proof}
+The vacuum $X_{0}\in\mathcal M$ minimizes $V$ (\autoref{thm:vacuum:T4}). For any
+broken generator $X_{\alpha}\in\mathfrak m$ the curve
+$t\mapsto e^{tX_{\alpha}}\!\cdot X_{0}$ lies in the minimizing orbit, so $V$ is
+constant along it; differentiating twice gives
+$X_{\alpha}{}^{\!\top}\,\mathrm{Hess}\,V(X_{0})\,X_{\beta}=0$ for all
+$X_{\alpha},X_{\beta}\in\mathfrak m$. Thus the $32$ coset directions are exact
+null eigenvectors of the tree Hessian, i.e.\ massless Goldstone modes
+(Goldstone's theorem). The $46$ unbroken directions in $\mathfrak h$ produce the
+massless $\Spin(10)\times U(1)$ gauge bosons of \autoref{sec:gauge}.
+\end{proof}
+
+\begin{remark}[What lifts the masses, and what stays massless]\label{rem:coset:loop}
+The tree degeneracy \eqref{eq:coset:hess} is lifted radiatively. Because the
+one-loop Coleman--Weinberg potential is $H$-invariant and $\mathfrak m$ is a
+\emph{single} real-irreducible $H$-module (\autoref{thm:coset:irrep}), Schur's
+lemma forces a \emph{single common eigenvalue} on all of $\mathfrak m$: one
+common radiative mass, with no $\Spin(10)$-singlet subspace to split off. Of the
+$32$ clock fields, four are then identified by the soldering map (Postulate~P3,
+\autoref{sec:soldering}) with the spacetime frame and are protected by gauge
+symmetry (diffeomorphism $+$ local Lorentz, Ward identity
+$\nabla_{\mu}(\delta\Gamma/\delta e^{a}{}_{\mu})=0$); they are eaten, not Hessian
+zeros. This yields the locked count $32 = 28\;(\text{massive, common mass})
++ 4\;(\text{gauge/soldering})$, with the canonical mass $m^{2}=\mu^{2}$
+($[f]=\text{mass}$; the dim-$4$ Hessian eigenvalue is $f^{2}\mu^{2}$). The
+spectrum is established in \autoref{thm:gravity:mass}; we do \emph{not} claim a
+four-dimensional $H$-invariant Goldstone subspace here.
+\end{remark}
+
+\begin{remark}[Topology of the clock-field manifold]\label{rem:coset:topology}
+$\mathcal M = \mathrm{EIII}$ is simply connected as a compact Hermitian
+symmetric space, so $\pi_{1}(\mathcal M)$ is trivial; in particular
+$\pi_{1}(\mathcal M)=\mathbb Z$ is \emph{false} of $\mathrm{EIII}$ itself. The
+vortex/string configurations of \autoref{sec:strings} therefore arise from the
+\emph{gauged} (U(1)-quotient) configuration space rather than from
+$\pi_{1}(\mathcal M)$, and are presented there as a low-energy correspondence.
+\end{remark}
+
+\paragraph{Status of the claims.}
+\autoref{thm:coset:irrep}, \autoref{thm:coset:metric},
+\autoref{lem:coset:positivity}, and \autoref{thm:coset:goldstone} are
+\textbf{theorems}, proved from the locked branching \eqref{eq:coset:adjoint} and
+the compact real form. The four-direction soldering invoked in
+\autoref{rem:coset:nosinglet} and \autoref{rem:coset:loop} is
+\textbf{Postulate~P3} (added structure, \autoref{sec:soldering}); the matter and
+Yukawa content is \textbf{Postulates~P4, P6} (\autoref{sec:sm}). The coset geometry and its unique positive-definite
+metric are derived; $d=4$, signature $(1,3)$, and the Standard-Model
+content are added postulates.

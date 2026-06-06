@@ -1,0 +1,306 @@
+%======================================================================%
+\section{The composite \texorpdfstring{$\Spin(10)\times\Uone$}{Spin(10) x U(1)} gauge sector}
+\label{sec:gauge:main}
+%======================================================================%
+
+Having fixed the vacuum manifold as the rank-one primitive-idempotent
+orbit
+\[
+  \mathcal M \;=\; \ESix/\bigl(\Spin(10)\times\Uone\bigr) \;=\; \mathrm{EIII},
+  \qquad \dim_{\mathbb R}\mathcal M = 32,
+\]
+(\autoref{thm:potential:T4}), we now show that the \emph{same} geometric
+data --- the Maurer--Cartan form of $\ESix$ pulled back along a coset map
+--- generate a composite $H=\Spin(10)\times\Uone$ Yang--Mills theory.
+The gauge bosons are not fundamental: they are the unbroken-subalgebra
+components of the canonical connection on the homogeneous bundle
+$\ESix\to\mathcal M$. We establish (i) the composite connection and the
+$\mathbf{45}_{0}\oplus\mathbf{1}_{0}$ gauge content, (ii) the induced
+Yang--Mills term with the \emph{corrected} coefficient computed from the
+massive multiplet $\mathfrak m=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$,
+(iii) that $H$ remains \emph{unbroken} at the vacuum so that the
+$\dim\mathbf{45}+\dim\mathbf 1 = 46$ gauge bosons stay massless, and
+(iv) Green--Schwarz cancellation of the residual mixed anomaly. Throughout
+we work on the \emph{compact} real form of $\ESix$, so that $H$ is compact,
+the coset metric is positive-definite, and the gauge sector is unitary
+(\autoref{sec:foundations:realform}). Signature is $(-,+,+,+)$ and
+$[f]=\text{mass}$.
+
+%----------------------------------------------------------------------%
+\subsection{The composite connection from the Maurer--Cartan form}
+\label{sec:gauge:MC}
+%----------------------------------------------------------------------%
+
+The Lie algebra splits, $H$-equivariantly, as the reductive sum
+\begin{equation}\label{eq:gauge:split}
+  \mathfrak e_6
+  \;=\;
+  \underbrace{\mathfrak{so}_{10}\oplus\mathfrak u_{1}}_{\mathfrak h}
+  \;\oplus\;
+  \underbrace{\mathfrak m}_{\text{coset}},
+  \qquad
+  [\mathfrak h,\mathfrak m]\subseteq\mathfrak m,
+\end{equation}
+with the branching of the adjoint under $H=\Spin(10)\times\Uone$ fixed by
+the involution datum
+\begin{equation}\label{eq:gauge:adjoint}
+  \mathbf{78}
+  \;=\;
+  \underbrace{\mathbf{45}_{0}\oplus\mathbf 1_{0}}_{\mathfrak h}
+  \;\oplus\;
+  \underbrace{\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}}_{\mathfrak m}.
+\end{equation}
+Here the subscripts are the $\Uone$ charges; $\mathfrak m$ is real-irreducible
+of complex type and contains \emph{no} $\Spin(10)$ singlet
+(\autoref{sec:foundations:coset}). The $46$ generators of $\mathfrak h$ are
+exactly the composite gauge degrees of freedom.
+
+Let $g(x)\in\ESix$ be a smooth local section of the principal $H$-bundle,
+representing the coset map $\pi_-(x)\in\mathcal M$. The Maurer--Cartan
+form decomposes along \eqref{eq:gauge:split},
+\begin{equation}\label{eq:gauge:MCdecomp}
+  g^{-1}\partial_\mu g
+  \;=\;
+  A_\mu(x) \;+\; e_\mu(x),
+  \qquad
+  A_\mu\in\mathfrak{so}_{10}\oplus\mathfrak u_{1},
+  \quad
+  e_\mu\in\mathfrak m,
+\end{equation}
+where $A_\mu$ is the $\mathfrak h$-part (the canonical connection) and
+$e_\mu$ is the $\mathfrak m$-part (the soldering one-form of the clock
+fields, used in \autoref{sec:soldering:main}).
+
+\begin{theorem}[Composite connection; \textsc{theorem}]\label{thm:gauge:composite}
+Under a change of local section $g\mapsto g\,h^{-1}(x)$ with
+$h(x)\in H$, the $\mathfrak h$-component of \eqref{eq:gauge:MCdecomp}
+transforms as a genuine $H$ gauge potential,
+\begin{equation}\label{eq:gauge:transform}
+  \mathcal A_\mu \;:=\; A_\mu
+  \;\longmapsto\;
+  h\,\mathcal A_\mu\,h^{-1} - (\partial_\mu h)\,h^{-1},
+\end{equation}
+while $e_\mu\mapsto h\,e_\mu\,h^{-1}$ transforms homogeneously (in the
+$\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$). Its curvature
+\begin{equation}\label{eq:gauge:F}
+  \mathcal F_{\mu\nu}
+  =\partial_\mu\mathcal A_\nu-\partial_\nu\mathcal A_\mu
+   +[\mathcal A_\mu,\mathcal A_\nu]
+  = -\,\mathrm P_{\mathfrak h}\!\left(g^{-1}[\partial_\mu,\partial_\nu]g\right)
+    + [e_\mu,e_\nu]_{\mathfrak h}
+\end{equation}
+is the $\mathfrak h$-valued field strength of a $\Spin(10)\times\Uone$
+gauge theory.
+\end{theorem}
+
+\begin{proof}
+Equation \eqref{eq:gauge:transform} is the standard transformation of the
+canonical (reductive) connection on a homogeneous bundle: writing
+$g\mapsto gh^{-1}$ gives
+$g^{-1}\partial g\mapsto h(g^{-1}\partial g)h^{-1}-(\partial h)h^{-1}$,
+and projecting onto $\mathfrak h$ (which is $H$-stable by
+\eqref{eq:gauge:split}) yields \eqref{eq:gauge:transform}; the
+$\mathfrak m$-projection transforms homogeneously since
+$[\mathfrak h,\mathfrak m]\subseteq\mathfrak m$. The Maurer--Cartan
+equation $d(g^{-1}dg)+\tfrac12[g^{-1}dg,g^{-1}dg]=0$, projected onto
+$\mathfrak h$, gives \eqref{eq:gauge:F} (the Gauss--Codazzi relation:
+the $\mathfrak h$-curvature receives the soldering contribution
+$[e_\mu,e_\nu]_{\mathfrak h}$). Both are intrinsic to the reductive split.
+\end{proof}
+
+The composite gauge content is therefore precisely $\mathbf{45}_{0}\oplus\mathbf 1_{0}$:
+the $\mathbf{45}$ adjoint of $\Spin(10)$ and the $\Uone$ singlet,
+$46$ vector fields in all.
+
+%----------------------------------------------------------------------%
+\subsection{Induced Yang--Mills term --- corrected coefficient}
+\label{sec:gauge:YM}
+%----------------------------------------------------------------------%
+
+Fluctuating the massive clock fields around the vacuum and integrating
+them out at one loop produces the functional determinant
+$[\det(-D^{2}+m^{2})]^{-1/2}$ with $D_\mu=\partial_\mu+\mathcal A_\mu$ and
+$m^{2}=f^{2}\mu^{2}$ (\autoref{sec:gravity:spectrum}). The Seeley--DeWitt
+$a_4$ coefficient supplies a local Yang--Mills counterterm,
+\begin{equation}\label{eq:gauge:YM}
+  S_{\text{YM}}
+  = -\frac{1}{4g^{2}}\int_{X}\Tr\!\bigl(\mathcal F_{\mu\nu}\mathcal F^{\mu\nu}\bigr)\,d^{4}x,
+\end{equation}
+whose logarithmic coefficient is fixed by the total Dynkin index of the
+fields running in the loop.
+
+\begin{remark}[The corrected loop multiplet; \textsc{theorem}]
+\label{rem:gauge:correctedindex}
+The integrated-out matter is the \emph{massive coset multiplet}
+$\mathfrak m=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$
+($\dim 32$), the chiral spinor pair of $\Spin(10)$, \emph{not} a
+spurious $\mathbf{10}\oplus\overline{\mathbf{10}}\oplus\mathbf 4$.
+With the $\Spin(10)$ Dynkin indices $T(\mathbf{16})=2$ for each spinor
+(and the $\Uone$ singlet $\mathbf 1$ not contributing to the
+$\Spin(10)$ trace), the total index is
+\begin{equation}\label{eq:gauge:totalindex}
+  \sum_{R\subset\mathfrak m}\mathrm{mult}(R)\,T(R)
+  \;=\; T(\mathbf{16})+T(\overline{\mathbf{16}})
+  \;=\; 2+2 \;=\; 4,
+\end{equation}
+the value used everywhere. The previously quoted $\tfrac52$, obtained
+from the (forbidden) decomposition $\mathbf{10}\oplus\overline{\mathbf{10}}\oplus\mathbf 4$
+with indices $1,1,\tfrac12$, is wrong: that multiplet is not the coset
+tangent (which carries no $\Spin(10)$ singlet, \autoref{sec:foundations:coset}).
+\end{remark}
+
+\begin{theorem}[Induced gauge coupling; \textsc{theorem}]\label{thm:gauge:coupling}
+Integrating out $\mathfrak m=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$
+at one loop induces \eqref{eq:gauge:YM} with
+\begin{equation}\label{eq:gauge:gm2}
+  g^{-2}
+  \;=\;
+  \frac{4}{1}\,\frac{f^{2}}{48\pi^{2}}\,
+  \log\!\frac{\Lambda^{2}}{\mu^{2}}
+  \;+\;\mathcal O(\Lambda^{0})
+  \;=\;
+  \frac{f^{2}}{12\pi^{2}}\,\log\!\frac{\Lambda^{2}}{\mu^{2}}
+  \;+\;\mathcal O(\Lambda^{0}),
+\end{equation}
+with $\Lambda$ the UV cutoff and $\mu$ the breaking scale. In particular
+$g^{-2}>0$ for $\Lambda>\mu$, so the induced gauge sector is healthy.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The proper-time representation of $\Gamma_{1L}=\tfrac12\Tr\log(-D^2+m^2)$,
+expanded with the heat-kernel coefficient
+$a_4(R)=\tfrac{1}{12}\int_X\Tr_R(\mathcal F_{\mu\nu}\mathcal F^{\mu\nu})$
+and the cutoff $s\ge\Lambda^{-2}$, gives a logarithmically divergent
+$\Tr(\mathcal F\mathcal F)$ coefficient proportional to the total index
+\eqref{eq:gauge:totalindex}. Collecting the factors $\tfrac12\cdot\tfrac1{12}\cdot\tfrac1{(4\pi)^2}$
+and the index $4$ reproduces \eqref{eq:gauge:gm2}; the full computation,
+including normalization of $\Tr(\mathcal F\mathcal F)$ to the
+$\Spin(10)$ vector, is deferred to \autoref{app:ym:main}.
+\end{proof}
+
+The renormalization-group running of $g^{2}$ --- gauge \emph{asymptotic
+freedom}, with $\beta_{g^2}=2g^2+(b_0/48\pi^2)g^4$, $b_0=26$ for one
+generation and $b_0=12$ for three (\autoref{thm:sm:b0}) --- follows
+from this same induced action and is treated alongside the gravitational
+flow; there is no interacting gauge fixed point.
+
+%----------------------------------------------------------------------%
+\subsection{$H$ is unbroken at the vacuum}
+\label{sec:gauge:unbroken}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Unbroken gauge group; \textsc{theorem}]\label{thm:gauge:unbroken}
+At the vacuum $\langle\Phi\rangle\in\mathcal M$ the stabilizer is exactly
+$H=\Spin(10)\times\Uone$. Consequently none of the $46$ gauge bosons of
+$\mathbf{45}_{0}\oplus\mathbf 1_{0}$ acquires a mass: the gauge sector
+remains massless and $H$ is unbroken.
+\end{theorem}
+
+\begin{proof}
+By construction $\mathcal M=\ESix/H$ is the orbit of a rank-one primitive
+idempotent, whose isotropy group is $H$ (\autoref{thm:potential:T4}).
+A vector boson associated with a generator $T\in\mathfrak e_6$ becomes
+massive only if $T$ moves the vacuum, i.e.\ if $T\in\mathfrak m$; the
+would-be Goldstone--Higgs mechanism eats a coset scalar for each broken
+generator. The unbroken generators $\mathfrak h$ annihilate
+$\langle\Phi\rangle$ and the corresponding $46$ vectors stay massless.
+There is no Higgsing of $\mathfrak h$: the $32$ coset Goldstones
+(``clock fields'') are not in $\mathfrak h$, and the scalar potential is
+$H$-invariant, so the one-loop scalar mass matrix is $H$-invariant and
+commutes with the $\mathfrak h$-action. Schur's lemma on the irreducible
+$\mathfrak m$ gives a single common scalar mass with no $\mathfrak h$
+admixture (\autoref{sec:gravity:spectrum}), preserving $H$.
+\end{proof}
+
+\begin{remark}[Ward identity; \textsc{theorem}]\label{rem:gauge:ward}
+Masslessness is protected to all orders by the $H$ Ward identity. With
+the BRST-gauge-fixed effective action $\Gamma$, current conservation
+$D_\mu\langle J^{\mu}_{a}\rangle=0$ for $a$ ranging over $\mathfrak h$
+forces the transverse vacuum polarization $\Pi_{ab}(p)$ to vanish at
+$p^2=0$; no $H$-invariant scalar condensate in $\mathfrak m$ exists to
+generate a mass term (there is no $\Spin(10)$ singlet in $\mathfrak m$),
+so the $46$ gauge bosons remain exactly massless. This is consistent with
+the count $32 = 28\ \text{massive scalars} + 4\ \text{gauge/soldering}$:
+the $4$ frame modes are eaten by diffeomorphism $+$ local Lorentz, not by
+$H$ (\autoref{sec:soldering:main}).
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Green--Schwarz anomaly cancellation}
+\label{sec:gauge:gs}
+%----------------------------------------------------------------------%
+
+The chiral matter is one family in the SO(10) generation, the
+$\mathbf{16}_{+1}$ together with the remaining components of the
+fundamental,
+\begin{equation}\label{eq:gauge:matter}
+  \mathbf{27}
+  \;=\;
+  \mathbf 1_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}
+  \qquad(\text{under }H),
+\end{equation}
+with $\Uone$ charges as shown. The cubic norm $N$ on $J_3(\mathbb O)$
+furnishes a closed, $\ESix$-invariant $3$-form $\Omega_3$ on $\mathcal M$;
+let $B$ be a two-form on $X$ with $dB=\pi_-^{*}\Omega_3$. The
+Chern--Simons transgression of \eqref{eq:gauge:MCdecomp} produces the
+Green--Schwarz coupling
+\begin{equation}\label{eq:gauge:GS}
+  S_{GS}
+  \;=\;
+  \int_{X} B\wedge\frac{\Tr(\mathcal F\wedge\mathcal F)}{8\pi^{2}},
+  \qquad
+  dB=\frac{1}{2\pi}F_{1},
+\end{equation}
+where $F_1$ is the $\Uone$ field strength.
+
+\begin{theorem}[Anomaly cancellation; \textsc{theorem}]\label{thm:gauge:anomaly}
+The combined gauge variation
+$\delta_H\bigl(\Gamma_{1L}+S_{\text{YM}}+S_{GS}\bigr)$ vanishes. The only
+nonvanishing one-loop gauge anomaly is the mixed $\Uone$--$\Spin(10)^{2}$
+anomaly, with coefficient $-1$, and it is cancelled by the inflow from
+$S_{GS}$; the cubic $\Uone^{3}$ anomaly vanishes identically.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+For a chiral Weyl fermion in rep $R$ of $\Spin(10)$ with $\Uone$ charge
+$q$, the relevant six-form is
+$I_6(R,q)=q\,A_R\,\frac{F_1}{2\pi}\wedge\frac{\Tr(\mathcal F\wedge\mathcal F)}{8\pi^2}$,
+with $A_{\mathbf{16}}=A_{\mathbf{10}}=1$, $A_{\mathbf 1}=0$. Summing over
+\eqref{eq:gauge:matter},
+\begin{equation}\label{eq:gauge:mixed}
+  (+1)A_{\mathbf{16}}+(-2)A_{\mathbf{10}}+(+4)A_{\mathbf 1}
+  = 1-2+0 = -1,
+\end{equation}
+giving $I_6^{\text{tot}}=-\frac{F_1}{2\pi}\wedge\frac{\Tr(\mathcal F\wedge\mathcal F)}{8\pi^2}$.
+The cubic abelian anomaly cancels,
+\begin{equation}\label{eq:gauge:cubic}
+  16\cdot(+1)^{3}+10\cdot(-2)^{3}+1\cdot(+4)^{3}
+  = 16 - 80 + 64 = 0.
+\end{equation}
+Under an abelian gauge shift $B\mapsto B+\Lambda_1/2\pi$ the variation of
+\eqref{eq:gauge:GS} is
+$\delta_\Lambda S_{GS}=\int_X\frac{\Lambda_1}{2\pi}\wedge\frac{\Tr(\mathcal F\wedge\mathcal F)}{8\pi^2}=-\int_X I_6^{\text{tot}}=-\delta_\Lambda\Gamma_{1L}$,
+exactly cancelling the mixed anomaly. The descent equations and the full
+arithmetic appear in \autoref{app:anomaly:main}.
+\end{proof}
+
+\begin{theorem}[Emergent gauge sector; \textsc{theorem}]\label{thm:gauge:sector}
+The functional $S_{\text{tot}}=S_{\text{eff}}+S_{\text{YM}}+S_{GS}$
+describes a local, unitary, anomaly-free $\Spin(10)\times\Uone$
+Yang--Mills theory coupled to the clock-field $\sigma$-model, with the
+dynamically induced coupling \eqref{eq:gauge:gm2}. Locality and unitarity
+follow from those of the scalar $\sigma$-model (\autoref{thm:foundations:qft})
+together with compactness of $H$ and standard BRST gauge fixing; anomaly
+freedom is \autoref{thm:gauge:anomaly}.
+\end{theorem}
+
+\paragraph{Status.} The composite connection
+(\autoref{thm:gauge:composite}), the unbroken-$H$ statement
+(\autoref{thm:gauge:unbroken}), the corrected total index
+(\autoref{rem:gauge:correctedindex}), and the anomaly cancellation
+(\autoref{thm:gauge:anomaly}) are \emph{theorems} given the vacuum
+$\mathcal M=\mathrm{EIII}$ and the compact real form. The chiral matter
+assignment \eqref{eq:gauge:matter} with no mirror partners is
+\emph{postulate}~P4. The detailed Yang--Mills coefficient is in
+\autoref{app:ym:main} and the full anomaly arithmetic in
+\autoref{app:anomaly:main}.
