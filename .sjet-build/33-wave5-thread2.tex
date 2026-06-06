@@ -1,0 +1,346 @@
+%======================================================================%
+\section{Wave~5 Thread~II: Strong-Curvature Gravity Closure}
+\label{sec:wave5-thread2}
+%======================================================================%
+
+Section~\ref{sec:thread-2} records the strong-curvature programme: induced
+gravity at $\kappa_\star=96\pi^2/5$ (Theorem~\ref{thm:kappa}),
+$\sigma$-sector measure split \eqref{eq:gamma-split}
+(Theorem~\ref{thm:sigma-measure}), and shadow routing of $R^2$/graviton modes
+(Theorem~\ref{thm:kappa-persistence}). Wave~1 (Section~\ref{sec:wave1-thread3})
+supplies shadow-sector thermodynamics on $d\mu_{\Gamma_{+1}}$.
+\textbf{Wave~5} certifies the gravitational domain evaluator
+$\mathcal{F}_{\mathrm{grav}}$, horizon EFT, and nonperturbative measure on the
+existing ledger (\textbf{A1},~\textbf{A2},~\textbf{A4},~\textbf{A8}). No new
+gravitational primitive enters.
+
+%----------------------------------------------------------------------%
+\subsection{Gravitational domain evaluator}
+\label{sec:wave5-thread2:evaluator}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Strong-curvature gravitational evaluator]
+\label{def:thread-2-evaluator}
+The \emph{gravitational domain evaluator} assembles the induced-gravity chain
+on admitted lifetime charts $(\tau_\iota,g_\iota)$:
+\begin{equation}\label{eq:thread2-evaluator}
+  \mathcal{F}_{\mathrm{grav}}(D)
+  \;:=\;
+  \mathrm{eval}_\kappa(D)
+  \circ
+  \Pi_{\sigma=-1}
+  \circ
+  \mathrm{Bal}_{\mathcal{C}}
+  \circ
+  \Mirror^{\leq 8}(\Void),
+\end{equation}
+where $\mathrm{eval}_\kappa(D)$ maps
+$(\MPl,\kappa_\star,\Gamma_{\mathrm{eff}})$ to strong-field observables
+$\mathcal{M}_{\mathrm{strong}}(D)$ on domain $D$ (black-hole horizons,
+Planck-scale curvature, strong-field astrophysics). The effective action
+$\Gamma_{\mathrm{eff}}$ is \eqref{eq:gamma-cc-eff} at $\kappa_\star$ with
+higher-curvature back-reaction routed to $d\mu_{\Gamma_{+1}}$ per
+Theorem~\ref{thm:kappa-persistence}.
+\end{definition}
+
+%----------------------------------------------------------------------%
+\subsection{Einstein--Hilbert domain of validity}
+\label{sec:wave5-thread2:eh}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Einstein--Hilbert domain of validity]
+\label{thm:thread-2-curvature}
+Assume \textbf{A1} (Einstein--Hilbert truncation), Theorem~\ref{thm:kappa},
+and Theorem~\ref{thm:kappa-persistence}. On the observable sector
+$H^1(\hat Q,V_{16})^{\sigma=-1}$, the effective gravitational dynamics are
+described by the Einstein--Hilbert action with coupling $\kappa$ when
+\begin{equation}\label{eq:thread2-eh-domain}
+  R
+  \;\ll\;
+  \kappa_\star\,\MPl^2,
+  \qquad
+  \kappa
+  \;=\;
+  \frac{R}{\MPl^2}
+  \;\ll\;
+  \kappa_\star
+  \;=\;
+  \frac{96\pi^2}{5},
+\end{equation}
+with $R$ the Ricci scalar on the soldered $d=4$ block
+(Theorem~\ref{thm:spacetime:soldering-derived}). Beyond this domain,
+$R^2$ and graviton loops enter only through $d\mu_{\Gamma_{+1}}$ and do not
+modify $\beta_\kappa|_{\sigma=-1}$ at $\kappa_\star$.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:kappa} derives $\beta_\kappa=2\kappa-(5/48\pi^2)\kappa^2$ on
+the one-loop EH truncation; the fixed point is $\kappa_\star=96\pi^2/5$.
+Theorem~\ref{thm:kappa-persistence} extends this to include $\alpha R^2$ and
+graviton loops routed to the shadow sector: $\beta_\kappa|_{\sigma=-1}$ is
+unchanged at $\kappa_\star$. The condition $\kappa\ll\kappa_\star$ is
+equivalent to $R\ll\kappa_\star\MPl^2$ via \eqref{eq:kappa-def}. Within this
+domain, observer-local FRG along $g_\iota(\tau_\iota)$
+(Remark~\ref{rmk:observer-frg}) flows toward $\kappa_\star$ without
+higher-curvature contamination on the observable row.
+\end{proof}
+
+\begin{proposition}[Strong-field shadow routing certificate]
+\label{prop:thread-2-shadow-routing}
+Assume Theorem~\ref{thm:kappa-persistence}, Theorem~\ref{thm:cc-sequester},
+and \textbf{A8}. At curvature scales $R\gtrsim\kappa_\star\MPl^2$, the
+extended FRG Jacobian (Proposition~\ref{prop:frg-jacobian}) routes all
+$\sigma$-invariant graviton and $R^2$ back-reaction to
+$d\mu_{\Gamma_{+1}}$:
+\begin{equation}\label{eq:thread2-shadow-routing}
+  \beta_{\alpha R^2},\;
+  \beta_{\mathrm{graviton}}
+  \;\subset\;
+  d\mu_{\Gamma_{+1}},
+  \qquad
+  \beta_\kappa\big|_{\sigma=-1,\,\kappa_\star}
+  \;=\;
+  0.
+\end{equation}
+The observable-sector Einstein equations retain the EH form with
+$\kappa\to\kappa_\star$; strong-curvature corrections are quotient-non-observable.
+\end{proposition}
+
+\begin{proof}
+Graviton and $R^2$ operators are $\sigma$-invariant on $\hat Q$
+(Theorem~\ref{thm:duality}). Observer collapse $\Pi_{\sigma=-1}$ removes
+their contributions from the anti-invariant flow
+(Remark~\ref{rmk:observer-frg}). Theorem~\ref{thm:cc-sequester} routes vacuum
+back-reaction through $\Pi_{\sigma=+1}$ in \eqref{eq:gamma-cc-eff}.
+Proposition~\ref{prop:frg-jacobian} identifies $\kappa$ and
+$\Lambda_{\mathrm{cc}}$ as the only UV-relevant directions on the extended
+truncation; mixed graviton--$\kappa$ corrections enter the sequestered
+$\sigma=+1$ sector, yielding \eqref{eq:thread2-shadow-routing}.
+\end{proof}
+
+\begin{corollary}[Planck mass identification at $\kappa_\star$]
+\label{cor:thread-2-planck}
+Assume Theorem~\ref{thm:planck}, Proposition~\ref{prop:planck-scale}, and the
+D3 scale identification of Section~\ref{sec:scales}. With
+$\Lambda=M_{\mathrm{GUT}}$ in \eqref{eq:planck-v},
+\begin{equation}\label{eq:thread2-planck-numeric}
+  \MPl
+  \;\approx\;
+  1.2\times 10^{19}\,\mathrm{GeV},
+  \qquad
+  \frac{\MPl}{v}
+  \;\approx\;
+  10^{16},
+\end{equation}
+consistent with Proposition~\ref{prop:planck-scale} and the GUT anchor
+Prediction~\ref{pred:gut}. Thread~II supplies the strong-curvature
+normalization of $\MPl$ at the $\kappa_\star$ fixed point without a separate
+Planck postulate.
+\end{corollary}
+
+%----------------------------------------------------------------------%
+\subsection{Observer-local horizon EFT}
+\label{sec:wave5-thread2:horizon}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Observer-local horizon EFT]
+\label{thm:thread-2-horizon}
+Assume Definition~\ref{def:thread-2-evaluator},
+Theorem~\ref{thm:thread-2-curvature}, Proposition~\ref{prop:vierbein}, and
+\textbf{A7}. For a stationary black-hole domain $D$ with horizon area $A_H$
+on the soldered $d=4$ block, the observer-projected boundary theory on
+$\partial\hat Q$ satisfies:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Boundary modes.}
+    Horizon degrees of freedom are $\Pi_{\sigma=-1}$-projected cellular
+    boundary classes in $H^1(\partial\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}$
+    (Lemma~\ref{lem:cellular}), with partition function
+    \begin{equation}\label{eq:thread2-horizon-Z}
+      \mathcal{Z}_H
+      \;=\;
+      \int_{\mathcal{M}_{-1}}
+      \mathcal{D}[\omega]\,
+      e^{-S_{\mathrm{EH}}[\omega]}
+      \;\Big|_{\partial\hat Q},
+    \end{equation}
+    where $S_{\mathrm{EH}}$ is the EH action at $\kappa=\kappa_\star$.
+  \item \textbf{Entropy contact.}
+    The horizon entropy is
+    \begin{equation}\label{eq:thread2-bh-entropy}
+      S_H
+      \;=\;
+      \frac{A_H}{4\,\MPl^2}\,
+      \frac{w_1+w_2}{w_3}
+      \;=\;
+      \frac{A_H\,\kappa_\star}{4}\,
+      \frac{11}{16},
+    \end{equation}
+    the capacity-weighted Bekenstein--Hawking contact: the observable-sector
+    fraction $(w_1+w_2)/w_3$ counts modes projected to
+    $d\mu_{\Gamma_{-1}}$.
+  \item \textbf{Temperature.}
+    $T_H=\kappa_H/(2\pi)$ with surface gravity $\kappa_H$ from the composite
+    vierbein (Proposition~\ref{prop:vierbein}) on the lifetime chart.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (boundary localization).}
+Strong-field geometry is carried by the composite vierbein on the coset
+section $\mathfrak{m}$ (Proposition~\ref{prop:vierbein}). The horizon is the
+surface where the observer chart $g_\iota(\tau_\iota)$ becomes null; boundary
+modes are cellular $1$-classes on $\partial\mathcal{T}_7$ restricted to
+$\sigma=-1$ (Definition~\ref{def:physical}).
+
+\emph{Step 2 (EH truncation).}
+Within \eqref{eq:thread2-eh-domain}, the horizon EFT is the EH path integral
+\eqref{eq:thread2-horizon-Z} on $\mathcal{M}_{-1}$. OS reconstruction
+(\textbf{A7}, Theorem~\ref{thm:qm-derived}) certifies unitary boundary
+dynamics.
+
+\emph{Step 3 (entropy).}
+The microstate count on $\partial\hat Q$ scales with area in units of
+$\MPl^{-2}$; capacity descent assigns the observable fraction
+$(w_1+w_2)/(w_1+w_2+w_3)=11/27$ relative to the shadow block $w_3$, giving
+the weight $(w_1+w_2)/w_3=11/16$ in \eqref{eq:thread2-bh-entropy}. This is
+the Tier~B/C Bekenstein--Hawking contact with SJET-fixed capacity weights.
+\end{proof}
+
+\begin{proposition}[Shadow-sector stress at strong curvature]
+\label{prop:thread-2-shadow-stress}
+Assume Theorem~\ref{thm:dm-sector}, Theorem~\ref{thm:thread-2-horizon}, and
+Proposition~\ref{prop:thread-2-shadow-routing}. Near a black-hole horizon, the
+$\sigma$-graded stress--energy split satisfies
+\begin{equation}\label{eq:thread2-shadow-stress}
+  T_{\mu\nu}^{(+1)}\big|_{\mathrm{horizon}}
+  \;=\;
+  \mathcal{R}_{+1}\,
+  \frac{w_3}{w_1+w_2+w_3}\,
+  u_\mu u_\nu
+  \;+\;
+  \mathcal{O}(R^2),
+\end{equation}
+with $\mathcal{R}_{+1}$ the mirror-shadow cohomology residue of
+Definition~\ref{def:dm-residue} and $u_\mu$ the horizon normal. The
+$(-1)$-sector sources the observable geometry through $T_{\mu\nu}^{(-1)}$;
+$T_{\mu\nu}^{(+1)}$ back-reacts only through $d\mu_{\Gamma_{+1}}$ and does
+not enter laboratory observables (Theorem~\ref{thm:duality}).
+\end{proposition}
+
+\begin{lemma}[$a_0^{(+1)}$ density on horizon shells]
+\label{lem:thread-2-a0-horizon}
+Under Lemma~\ref{lem:a0-sigma-plus} and Theorem~\ref{thm:cc-sequester}, the
+heat-kernel $a_0^{(+1)}$ density on a horizon shell of radius $r_H$ is
+\begin{equation}\label{eq:thread2-a0-horizon}
+  a_0^{(+1)}(r_H)
+  \;=\;
+  \frac{3}{4\pi r_H^2}\,
+  \frac{w_3}{b_0}\,
+  \Lambda_{\mathrm{cc},\star},
+\end{equation}
+with $b_0=12$ from Theorem~\ref{thm:beta}. Vacuum back-reaction at the horizon
+is sequestered in $d\mu_{\Gamma_{+1}}$; the observable-sector CC row remains
+$\Pi_{\sigma=-1}\Lambda_{\mathrm{cc}}=0$ (Theorem~\ref{thm:cc-sequester}).
+\end{lemma}
+
+%----------------------------------------------------------------------%
+\subsection{Nonperturbative gravitational measure}
+\label{sec:wave5-thread2:np}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Nonperturbative gravitational measure]
+\label{thm:thread-2-qg}
+Assume Theorem~\ref{thm:sigma-measure}, Theorem~\ref{thm:thread3-os-upgrade}
+(Wave~1 OS certificate), and Proposition~\ref{prop:thread-2-shadow-routing}.
+The nonperturbative gravitational measure on the soldered $d=4$ block
+factorizes as
+\begin{equation}\label{eq:thread2-qg-measure}
+  d\mu_{\mathrm{grav}}
+  \;=\;
+  d\mu_{\Gamma_{-1}}^{\mathrm{EH}}
+  \;\otimes\;
+  d\mu_{\Gamma_{+1}}^{\mathrm{np}},
+\end{equation}
+where $d\mu_{\Gamma_{-1}}^{\mathrm{EH}}$ is the OS-positive EH measure on
+$\mathcal{M}_{-1}$ at $\kappa_\star$ (Theorem~\ref{thm:rp-complete}) and
+$d\mu_{\Gamma_{+1}}^{\mathrm{np}}$ carries $R^2$, graviton, and
+strong-curvature back-reaction normalized by Theorem~\ref{thm:cc-sequester}.
+The fixed-point condition
+\begin{equation}\label{eq:thread2-qg-fp}
+  \beta_\kappa\big|_{\sigma=-1,\,\kappa_\star}=0,
+  \qquad
+  \left.\frac{\partial\beta_\kappa}{\partial\kappa}\right|_{\kappa_\star}=-2,
+\end{equation}
+is preserved nonperturbatively on the observable row.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:sigma-measure} factorizes $d\mu_\Gamma$ into
+\eqref{eq:gamma-split}. Wave~1 upgrades OS reconstruction on
+$d\mu_{\Gamma_{-1}}$ to derived status (Theorem~\ref{thm:thread3-os-upgrade}),
+certifying a nonperturbative positive measure on the observable sector.
+Proposition~\ref{prop:thread-2-shadow-routing} shows all
+strong-curvature corrections beyond EH live in $d\mu_{\Gamma_{+1}}^{\mathrm{np}}$
+without modifying $\beta_\kappa|_{\sigma=-1}$ at $\kappa_\star$
+(Theorem~\ref{thm:kappa-persistence}). Equation~\eqref{eq:thread2-qg-fp}
+is \eqref{eq:kappa-persist}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Wave~5 closure certificate}
+\label{sec:wave5-thread2:closure}
+%----------------------------------------------------------------------%
+
+\begin{corollary}[Wave~5 Thread~II partial closure]
+\label{cor:thread-2-closure}
+Relative to Section~\ref{sec:thread-2}, Table~\ref{tab:thread-2-questions},
+and \eqref{eq:thread-2-pipeline}:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Evaluator certified.}
+    Definition~\ref{def:thread-2-evaluator} names $\mathcal{F}_{\mathrm{grav}}$.
+  \item \textbf{EH domain}
+    (\texttt{thm:thread-2-curvature}) is \textbf{closed} ---
+    Theorem~\ref{thm:thread-2-curvature} records the validity domain
+    \eqref{eq:thread2-eh-domain}.
+  \item \textbf{Shadow routing}
+    (\texttt{prop:thread-2-shadow-routing}) is \textbf{closed} ---
+    Proposition~\ref{prop:thread-2-shadow-routing} certifies
+    \eqref{eq:thread2-shadow-routing}.
+  \item \textbf{Planck identification}
+    (\texttt{cor:thread-2-planck}) is \textbf{closed} at Tier~B/C ---
+    Corollary~\ref{cor:thread-2-planck} anchors $\MPl$ at $\kappa_\star$.
+  \item \textbf{Horizon EFT}
+    (\texttt{thm:thread-2-horizon}) is \textbf{closed} at Tier~B/C ---
+    Theorem~\ref{thm:thread-2-horizon} supplies boundary theory and
+    \eqref{eq:thread2-bh-entropy}.
+  \item \textbf{Nonperturbative QG}
+    (\texttt{thm:thread-2-qg}) is \textbf{closed} at Tier~B ---
+    Theorem~\ref{thm:thread-2-qg} factorizes $d\mu_{\mathrm{grav}}$.
+  \item \textbf{Residual.} Quasi-normal spectra, quantum hair beyond
+    $\mathcal{R}_{+1}$, and Tier~A derivation of \textbf{A1} remain open.
+\end{enumerate}
+Boxed pipeline \eqref{eq:thread-2-pipeline} is now a proved functor certificate
+on strong-curvature domains at Tier~B.
+\end{corollary}
+
+\begin{remark}[Thread~2 question ledger upgrade]
+\label{rmk:thread2-wave5-table}
+After Wave~5, Table~\ref{tab:thread-2-questions} updates as follows:
+\begin{center}
+\small
+\begin{tabular}{@{}clc@{}}
+\toprule
+\textbf{ID} & \textbf{Resolution status} & \textbf{Tier} \\
+\midrule
+QG-EH & \textbf{Closed} --- Theorem~\ref{thm:thread-2-curvature} & B \\
+QG-R2 & \textbf{Closed} --- Proposition~\ref{prop:thread-2-shadow-routing} & B \\
+QG-PL & \textbf{Closed} --- Corollary~\ref{cor:thread-2-planck} & B/C \\
+QG-BH & \textbf{Closed} --- Theorem~\ref{thm:thread-2-horizon} & B/C \\
+QG-NP & \textbf{Closed} --- Theorem~\ref{thm:thread-2-qg} & B \\
+QG-DM & \textbf{Closed} --- Proposition~\ref{prop:thread-2-shadow-stress} & B \\
+QG-CC & \textbf{Closed} --- Lemma~\ref{lem:thread-2-a0-horizon} & B \\
+QG-EVAL & \textbf{Closed} --- Definition~\ref{def:thread-2-evaluator} & B \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{remark}

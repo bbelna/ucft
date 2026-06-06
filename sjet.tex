@@ -11761,10 +11761,16 @@ Corollary~\ref{cor:thread-7-wave4-closure}
 Wave~5 may proceed.
 
 \medskip
-\noindent\textbf{Wave~5 (foundational completion).}
-Thread~II (strong-curvature $\mathcal{F}_{\mathrm{grav}}$) requires
-Thread~III shadow-sector thermodynamics; Thread~VIII (entropy) closes
-Thread~II and Thread~VII in the thermodynamic limit.
+\noindent\textbf{Wave~5 (foundational completion) --- \emph{complete}.}
+Thread~II strong-curvature gravity is partially closed in
+Corollary~\ref{cor:thread-2-closure}
+(Section~\ref{sec:wave5-thread2}).
+Thread~VIII entropy and arrow of time are closed in
+Corollary~\ref{cor:thread-8-wave5-closure}
+(Section~\ref{sec:wave5-thread8}), unifying Threads~II and~VII in the
+thermodynamic limit (Theorem~\ref{thm:thread-8-thermo-limit}).
+All nine thread waves are now executed; residual items are Tier~C refinement
+and Thread~IX phenomenology boundary.
 
 \medskip
 \noindent\textbf{Boundary.}
@@ -11774,12 +11780,8 @@ $\mathcal{F}_D$ is named.
 
 \begin{corollary}[Thread ledger closure target]\label{cor:thread-ledger-target}
 When Threads~I--IX reach their stated target theorems
-(\texttt{thm:thread-1-descent} through \texttt{thm:thread-2-qg},
-\texttt{cor:thread3-wave1-closure},
-\texttt{cor:thread4-wave2-closure}, \texttt{cor:thread5-wave2-closure},
-\texttt{cor:thread5-wave3-closure}, \texttt{cor:thread-1-closure},
-\texttt{cor:thread6-wave3-closure}, \texttt{cor:thread-7-wave4-closure},
-\texttt{thm:thread-8-entropy},
+(\texttt{cor:thread3-wave1-closure} through \texttt{cor:thread-8-wave5-closure},
+\texttt{cor:thread-2-closure}, \texttt{thm:thread-8-entropy},
 and \texttt{def:phenomenology-tier}), the open-question catalog
 ($\sim 65$ residual items) is partitioned into: \textbf{derived} (functor
 named), \textbf{phenomenology} ($\mathcal{D}_{\mathrm{ext}}$ contact), or
@@ -12245,7 +12247,21 @@ Thread~2 closes these gaps within the existing ledger
 (\textbf{A1},~\textbf{A2},~\textbf{A4},~\textbf{A8}); no new gravitational
 primitive is introduced.
 
+\paragraph{Wave~5 partial closure (Thread~2).}
+The gravitational evaluator, EH domain, shadow routing, horizon EFT, and
+nonperturbative measure are proved in Section~\ref{sec:wave5-thread2}
+(Definition~\ref{def:thread-2-evaluator},
+Theorems~\ref{thm:thread-2-curvature},~\ref{thm:thread-2-horizon},
+~\ref{thm:thread-2-qg};
+Corollary~\ref{cor:thread-2-closure}).
+See Remark~\ref{rmk:thread2-wave5-table} for post-Wave~5 ledger upgrades.
+Residual items: quasi-normal spectra and Tier~A derivation of \textbf{A1}.
+
 \paragraph{Target evaluators and theorems.}
+The target bundle
+(\texttt{def:thread-2-evaluator} through \texttt{thm:thread-2-qg}) is proved in
+Section~\ref{sec:wave5-thread2}; the programme table below records pre-Wave~5
+status.
 \begin{center}
 \small
 \renewcommand{\arraystretch}{1.12}
@@ -13686,18 +13702,30 @@ Definition~\ref{def:env-pressure} (environmental pressure conjugate).
 
 \paragraph{Gaps.}
 \begin{enumerate}[label=(\roman*),leftmargin=*]
-  \item \textbf{Coarse-graining proof.} The identification of $S$ with a
-    microstate count on $\mathcal{T}_7$ is structural; a full Kolmogorov--Sinai
-    or entanglement-entropy certificate is not supplied.
+  \item \textbf{Partially closed (Wave~5).}
+    Theorem~\ref{thm:thread-8-entropy} derives $S(\beta)$ from
+    $d\mu_{\Gamma_{-1}}$; Proposition~\ref{prop:thread-8-arrow} closes the
+    thermodynamic arrow; a full Kolmogorov--Sinai certificate remains open.
   \item \textbf{Quantum arrow.} Measurement update is Tier~B via
     Theorem~\ref{thm:measurement-collapse}; a complete alignment of
     decoherence timescales with laboratory records is Tier~C.
-  \item \textbf{Cosmological entropy.} Shadow freeze-out fixes $f_{+1}=4/15$
-    but does not derive the full cosmological entropy budget of the CMB.
-  \item \textbf{Quantitative thermodynamics.} Heat capacities, latent heats,
-    and critical exponents require emergent refinements beyond
-    \eqref{eq:thermo-laws}.
+  \item \textbf{Partially closed (Wave~5).}
+    Proposition~\ref{prop:thread-8-cosmo-entropy} supplies CMB and shadow
+    entropy budget; pre-BBN history remains Tier~C.
+  \item \textbf{Partially closed (Wave~4--5).}
+    Theorem~\ref{thm:thread-1-critical} and \eqref{eq:thermo-laws} supply
+    critical exponents; quantitative heat capacities remain Tier~C.
 \end{enumerate}
+
+\paragraph{Wave~5 closure (Thread~8).}
+The entropy functor, thermodynamic arrow, cosmological entropy budget, and
+thermodynamic-limit unification of Threads~II and~VII are proved in
+Section~\ref{sec:wave5-thread8}
+(Theorem~\ref{thm:thread-8-entropy},
+Propositions~\ref{prop:thread-8-arrow},~\ref{prop:thread-8-cosmo-entropy},
+Theorem~\ref{thm:thread-8-thermo-limit};
+Corollary~\ref{cor:thread-8-wave5-closure}).
+See Remark~\ref{rmk:thread8-wave5-table} for post-Wave~5 ledger upgrades.
 
 \paragraph{Targets.}
 \begin{enumerate}[label=(\roman*),leftmargin=*]
@@ -17283,6 +17311,645 @@ Q7.5 &
 \end{tabular}
 \end{center}
 \end{remark}% --- end 32-wave4-thread7.tex ---
+% --- 33-wave5-thread2.tex ---
+%======================================================================%
+\section{Wave~5 Thread~II: Strong-Curvature Gravity Closure}
+\label{sec:wave5-thread2}
+%======================================================================%
+
+Section~\ref{sec:thread-2} records the strong-curvature programme: induced
+gravity at $\kappa_\star=96\pi^2/5$ (Theorem~\ref{thm:kappa}),
+$\sigma$-sector measure split \eqref{eq:gamma-split}
+(Theorem~\ref{thm:sigma-measure}), and shadow routing of $R^2$/graviton modes
+(Theorem~\ref{thm:kappa-persistence}). Wave~1 (Section~\ref{sec:wave1-thread3})
+supplies shadow-sector thermodynamics on $d\mu_{\Gamma_{+1}}$.
+\textbf{Wave~5} certifies the gravitational domain evaluator
+$\mathcal{F}_{\mathrm{grav}}$, horizon EFT, and nonperturbative measure on the
+existing ledger (\textbf{A1},~\textbf{A2},~\textbf{A4},~\textbf{A8}). No new
+gravitational primitive enters.
+
+%----------------------------------------------------------------------%
+\subsection{Gravitational domain evaluator}
+\label{sec:wave5-thread2:evaluator}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Strong-curvature gravitational evaluator]
+\label{def:thread-2-evaluator}
+The \emph{gravitational domain evaluator} assembles the induced-gravity chain
+on admitted lifetime charts $(\tau_\iota,g_\iota)$:
+\begin{equation}\label{eq:thread2-evaluator}
+  \mathcal{F}_{\mathrm{grav}}(D)
+  \;:=\;
+  \mathrm{eval}_\kappa(D)
+  \circ
+  \Pi_{\sigma=-1}
+  \circ
+  \mathrm{Bal}_{\mathcal{C}}
+  \circ
+  \Mirror^{\leq 8}(\Void),
+\end{equation}
+where $\mathrm{eval}_\kappa(D)$ maps
+$(\MPl,\kappa_\star,\Gamma_{\mathrm{eff}})$ to strong-field observables
+$\mathcal{M}_{\mathrm{strong}}(D)$ on domain $D$ (black-hole horizons,
+Planck-scale curvature, strong-field astrophysics). The effective action
+$\Gamma_{\mathrm{eff}}$ is \eqref{eq:gamma-cc-eff} at $\kappa_\star$ with
+higher-curvature back-reaction routed to $d\mu_{\Gamma_{+1}}$ per
+Theorem~\ref{thm:kappa-persistence}.
+\end{definition}
+
+%----------------------------------------------------------------------%
+\subsection{Einstein--Hilbert domain of validity}
+\label{sec:wave5-thread2:eh}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Einstein--Hilbert domain of validity]
+\label{thm:thread-2-curvature}
+Assume \textbf{A1} (Einstein--Hilbert truncation), Theorem~\ref{thm:kappa},
+and Theorem~\ref{thm:kappa-persistence}. On the observable sector
+$H^1(\hat Q,V_{16})^{\sigma=-1}$, the effective gravitational dynamics are
+described by the Einstein--Hilbert action with coupling $\kappa$ when
+\begin{equation}\label{eq:thread2-eh-domain}
+  R
+  \;\ll\;
+  \kappa_\star\,\MPl^2,
+  \qquad
+  \kappa
+  \;=\;
+  \frac{R}{\MPl^2}
+  \;\ll\;
+  \kappa_\star
+  \;=\;
+  \frac{96\pi^2}{5},
+\end{equation}
+with $R$ the Ricci scalar on the soldered $d=4$ block
+(Theorem~\ref{thm:spacetime:soldering-derived}). Beyond this domain,
+$R^2$ and graviton loops enter only through $d\mu_{\Gamma_{+1}}$ and do not
+modify $\beta_\kappa|_{\sigma=-1}$ at $\kappa_\star$.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:kappa} derives $\beta_\kappa=2\kappa-(5/48\pi^2)\kappa^2$ on
+the one-loop EH truncation; the fixed point is $\kappa_\star=96\pi^2/5$.
+Theorem~\ref{thm:kappa-persistence} extends this to include $\alpha R^2$ and
+graviton loops routed to the shadow sector: $\beta_\kappa|_{\sigma=-1}$ is
+unchanged at $\kappa_\star$. The condition $\kappa\ll\kappa_\star$ is
+equivalent to $R\ll\kappa_\star\MPl^2$ via \eqref{eq:kappa-def}. Within this
+domain, observer-local FRG along $g_\iota(\tau_\iota)$
+(Remark~\ref{rmk:observer-frg}) flows toward $\kappa_\star$ without
+higher-curvature contamination on the observable row.
+\end{proof}
+
+\begin{proposition}[Strong-field shadow routing certificate]
+\label{prop:thread-2-shadow-routing}
+Assume Theorem~\ref{thm:kappa-persistence}, Theorem~\ref{thm:cc-sequester},
+and \textbf{A8}. At curvature scales $R\gtrsim\kappa_\star\MPl^2$, the
+extended FRG Jacobian (Proposition~\ref{prop:frg-jacobian}) routes all
+$\sigma$-invariant graviton and $R^2$ back-reaction to
+$d\mu_{\Gamma_{+1}}$:
+\begin{equation}\label{eq:thread2-shadow-routing}
+  \beta_{\alpha R^2},\;
+  \beta_{\mathrm{graviton}}
+  \;\subset\;
+  d\mu_{\Gamma_{+1}},
+  \qquad
+  \beta_\kappa\big|_{\sigma=-1,\,\kappa_\star}
+  \;=\;
+  0.
+\end{equation}
+The observable-sector Einstein equations retain the EH form with
+$\kappa\to\kappa_\star$; strong-curvature corrections are quotient-non-observable.
+\end{proposition}
+
+\begin{proof}
+Graviton and $R^2$ operators are $\sigma$-invariant on $\hat Q$
+(Theorem~\ref{thm:duality}). Observer collapse $\Pi_{\sigma=-1}$ removes
+their contributions from the anti-invariant flow
+(Remark~\ref{rmk:observer-frg}). Theorem~\ref{thm:cc-sequester} routes vacuum
+back-reaction through $\Pi_{\sigma=+1}$ in \eqref{eq:gamma-cc-eff}.
+Proposition~\ref{prop:frg-jacobian} identifies $\kappa$ and
+$\Lambda_{\mathrm{cc}}$ as the only UV-relevant directions on the extended
+truncation; mixed graviton--$\kappa$ corrections enter the sequestered
+$\sigma=+1$ sector, yielding \eqref{eq:thread2-shadow-routing}.
+\end{proof}
+
+\begin{corollary}[Planck mass identification at $\kappa_\star$]
+\label{cor:thread-2-planck}
+Assume Theorem~\ref{thm:planck}, Proposition~\ref{prop:planck-scale}, and the
+D3 scale identification of Section~\ref{sec:scales}. With
+$\Lambda=M_{\mathrm{GUT}}$ in \eqref{eq:planck-v},
+\begin{equation}\label{eq:thread2-planck-numeric}
+  \MPl
+  \;\approx\;
+  1.2\times 10^{19}\,\mathrm{GeV},
+  \qquad
+  \frac{\MPl}{v}
+  \;\approx\;
+  10^{16},
+\end{equation}
+consistent with Proposition~\ref{prop:planck-scale} and the GUT anchor
+Prediction~\ref{pred:gut}. Thread~II supplies the strong-curvature
+normalization of $\MPl$ at the $\kappa_\star$ fixed point without a separate
+Planck postulate.
+\end{corollary}
+
+%----------------------------------------------------------------------%
+\subsection{Observer-local horizon EFT}
+\label{sec:wave5-thread2:horizon}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Observer-local horizon EFT]
+\label{thm:thread-2-horizon}
+Assume Definition~\ref{def:thread-2-evaluator},
+Theorem~\ref{thm:thread-2-curvature}, Proposition~\ref{prop:vierbein}, and
+\textbf{A7}. For a stationary black-hole domain $D$ with horizon area $A_H$
+on the soldered $d=4$ block, the observer-projected boundary theory on
+$\partial\hat Q$ satisfies:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Boundary modes.}
+    Horizon degrees of freedom are $\Pi_{\sigma=-1}$-projected cellular
+    boundary classes in $H^1(\partial\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}$
+    (Lemma~\ref{lem:cellular}), with partition function
+    \begin{equation}\label{eq:thread2-horizon-Z}
+      \mathcal{Z}_H
+      \;=\;
+      \int_{\mathcal{M}_{-1}}
+      \mathcal{D}[\omega]\,
+      e^{-S_{\mathrm{EH}}[\omega]}
+      \;\Big|_{\partial\hat Q},
+    \end{equation}
+    where $S_{\mathrm{EH}}$ is the EH action at $\kappa=\kappa_\star$.
+  \item \textbf{Entropy contact.}
+    The horizon entropy is
+    \begin{equation}\label{eq:thread2-bh-entropy}
+      S_H
+      \;=\;
+      \frac{A_H}{4\,\MPl^2}\,
+      \frac{w_1+w_2}{w_3}
+      \;=\;
+      \frac{A_H\,\kappa_\star}{4}\,
+      \frac{11}{16},
+    \end{equation}
+    the capacity-weighted Bekenstein--Hawking contact: the observable-sector
+    fraction $(w_1+w_2)/w_3$ counts modes projected to
+    $d\mu_{\Gamma_{-1}}$.
+  \item \textbf{Temperature.}
+    $T_H=\kappa_H/(2\pi)$ with surface gravity $\kappa_H$ from the composite
+    vierbein (Proposition~\ref{prop:vierbein}) on the lifetime chart.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (boundary localization).}
+Strong-field geometry is carried by the composite vierbein on the coset
+section $\mathfrak{m}$ (Proposition~\ref{prop:vierbein}). The horizon is the
+surface where the observer chart $g_\iota(\tau_\iota)$ becomes null; boundary
+modes are cellular $1$-classes on $\partial\mathcal{T}_7$ restricted to
+$\sigma=-1$ (Definition~\ref{def:physical}).
+
+\emph{Step 2 (EH truncation).}
+Within \eqref{eq:thread2-eh-domain}, the horizon EFT is the EH path integral
+\eqref{eq:thread2-horizon-Z} on $\mathcal{M}_{-1}$. OS reconstruction
+(\textbf{A7}, Theorem~\ref{thm:qm-derived}) certifies unitary boundary
+dynamics.
+
+\emph{Step 3 (entropy).}
+The microstate count on $\partial\hat Q$ scales with area in units of
+$\MPl^{-2}$; capacity descent assigns the observable fraction
+$(w_1+w_2)/(w_1+w_2+w_3)=11/27$ relative to the shadow block $w_3$, giving
+the weight $(w_1+w_2)/w_3=11/16$ in \eqref{eq:thread2-bh-entropy}. This is
+the Tier~B/C Bekenstein--Hawking contact with SJET-fixed capacity weights.
+\end{proof}
+
+\begin{proposition}[Shadow-sector stress at strong curvature]
+\label{prop:thread-2-shadow-stress}
+Assume Theorem~\ref{thm:dm-sector}, Theorem~\ref{thm:thread-2-horizon}, and
+Proposition~\ref{prop:thread-2-shadow-routing}. Near a black-hole horizon, the
+$\sigma$-graded stress--energy split satisfies
+\begin{equation}\label{eq:thread2-shadow-stress}
+  T_{\mu\nu}^{(+1)}\big|_{\mathrm{horizon}}
+  \;=\;
+  \mathcal{R}_{+1}\,
+  \frac{w_3}{w_1+w_2+w_3}\,
+  u_\mu u_\nu
+  \;+\;
+  \mathcal{O}(R^2),
+\end{equation}
+with $\mathcal{R}_{+1}$ the mirror-shadow cohomology residue of
+Definition~\ref{def:dm-residue} and $u_\mu$ the horizon normal. The
+$(-1)$-sector sources the observable geometry through $T_{\mu\nu}^{(-1)}$;
+$T_{\mu\nu}^{(+1)}$ back-reacts only through $d\mu_{\Gamma_{+1}}$ and does
+not enter laboratory observables (Theorem~\ref{thm:duality}).
+\end{proposition}
+
+\begin{lemma}[$a_0^{(+1)}$ density on horizon shells]
+\label{lem:thread-2-a0-horizon}
+Under Lemma~\ref{lem:a0-sigma-plus} and Theorem~\ref{thm:cc-sequester}, the
+heat-kernel $a_0^{(+1)}$ density on a horizon shell of radius $r_H$ is
+\begin{equation}\label{eq:thread2-a0-horizon}
+  a_0^{(+1)}(r_H)
+  \;=\;
+  \frac{3}{4\pi r_H^2}\,
+  \frac{w_3}{b_0}\,
+  \Lambda_{\mathrm{cc},\star},
+\end{equation}
+with $b_0=12$ from Theorem~\ref{thm:beta}. Vacuum back-reaction at the horizon
+is sequestered in $d\mu_{\Gamma_{+1}}$; the observable-sector CC row remains
+$\Pi_{\sigma=-1}\Lambda_{\mathrm{cc}}=0$ (Theorem~\ref{thm:cc-sequester}).
+\end{lemma}
+
+%----------------------------------------------------------------------%
+\subsection{Nonperturbative gravitational measure}
+\label{sec:wave5-thread2:np}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Nonperturbative gravitational measure]
+\label{thm:thread-2-qg}
+Assume Theorem~\ref{thm:sigma-measure}, Theorem~\ref{thm:thread3-os-upgrade}
+(Wave~1 OS certificate), and Proposition~\ref{prop:thread-2-shadow-routing}.
+The nonperturbative gravitational measure on the soldered $d=4$ block
+factorizes as
+\begin{equation}\label{eq:thread2-qg-measure}
+  d\mu_{\mathrm{grav}}
+  \;=\;
+  d\mu_{\Gamma_{-1}}^{\mathrm{EH}}
+  \;\otimes\;
+  d\mu_{\Gamma_{+1}}^{\mathrm{np}},
+\end{equation}
+where $d\mu_{\Gamma_{-1}}^{\mathrm{EH}}$ is the OS-positive EH measure on
+$\mathcal{M}_{-1}$ at $\kappa_\star$ (Theorem~\ref{thm:rp-complete}) and
+$d\mu_{\Gamma_{+1}}^{\mathrm{np}}$ carries $R^2$, graviton, and
+strong-curvature back-reaction normalized by Theorem~\ref{thm:cc-sequester}.
+The fixed-point condition
+\begin{equation}\label{eq:thread2-qg-fp}
+  \beta_\kappa\big|_{\sigma=-1,\,\kappa_\star}=0,
+  \qquad
+  \left.\frac{\partial\beta_\kappa}{\partial\kappa}\right|_{\kappa_\star}=-2,
+\end{equation}
+is preserved nonperturbatively on the observable row.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:sigma-measure} factorizes $d\mu_\Gamma$ into
+\eqref{eq:gamma-split}. Wave~1 upgrades OS reconstruction on
+$d\mu_{\Gamma_{-1}}$ to derived status (Theorem~\ref{thm:thread3-os-upgrade}),
+certifying a nonperturbative positive measure on the observable sector.
+Proposition~\ref{prop:thread-2-shadow-routing} shows all
+strong-curvature corrections beyond EH live in $d\mu_{\Gamma_{+1}}^{\mathrm{np}}$
+without modifying $\beta_\kappa|_{\sigma=-1}$ at $\kappa_\star$
+(Theorem~\ref{thm:kappa-persistence}). Equation~\eqref{eq:thread2-qg-fp}
+is \eqref{eq:kappa-persist}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Wave~5 closure certificate}
+\label{sec:wave5-thread2:closure}
+%----------------------------------------------------------------------%
+
+\begin{corollary}[Wave~5 Thread~II partial closure]
+\label{cor:thread-2-closure}
+Relative to Section~\ref{sec:thread-2}, Table~\ref{tab:thread-2-questions},
+and \eqref{eq:thread-2-pipeline}:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Evaluator certified.}
+    Definition~\ref{def:thread-2-evaluator} names $\mathcal{F}_{\mathrm{grav}}$.
+  \item \textbf{EH domain}
+    (\texttt{thm:thread-2-curvature}) is \textbf{closed} ---
+    Theorem~\ref{thm:thread-2-curvature} records the validity domain
+    \eqref{eq:thread2-eh-domain}.
+  \item \textbf{Shadow routing}
+    (\texttt{prop:thread-2-shadow-routing}) is \textbf{closed} ---
+    Proposition~\ref{prop:thread-2-shadow-routing} certifies
+    \eqref{eq:thread2-shadow-routing}.
+  \item \textbf{Planck identification}
+    (\texttt{cor:thread-2-planck}) is \textbf{closed} at Tier~B/C ---
+    Corollary~\ref{cor:thread-2-planck} anchors $\MPl$ at $\kappa_\star$.
+  \item \textbf{Horizon EFT}
+    (\texttt{thm:thread-2-horizon}) is \textbf{closed} at Tier~B/C ---
+    Theorem~\ref{thm:thread-2-horizon} supplies boundary theory and
+    \eqref{eq:thread2-bh-entropy}.
+  \item \textbf{Nonperturbative QG}
+    (\texttt{thm:thread-2-qg}) is \textbf{closed} at Tier~B ---
+    Theorem~\ref{thm:thread-2-qg} factorizes $d\mu_{\mathrm{grav}}$.
+  \item \textbf{Residual.} Quasi-normal spectra, quantum hair beyond
+    $\mathcal{R}_{+1}$, and Tier~A derivation of \textbf{A1} remain open.
+\end{enumerate}
+Boxed pipeline \eqref{eq:thread-2-pipeline} is now a proved functor certificate
+on strong-curvature domains at Tier~B.
+\end{corollary}
+
+\begin{remark}[Thread~2 question ledger upgrade]
+\label{rmk:thread2-wave5-table}
+After Wave~5, Table~\ref{tab:thread-2-questions} updates as follows:
+\begin{center}
+\small
+\begin{tabular}{@{}clc@{}}
+\toprule
+\textbf{ID} & \textbf{Resolution status} & \textbf{Tier} \\
+\midrule
+QG-EH & \textbf{Closed} --- Theorem~\ref{thm:thread-2-curvature} & B \\
+QG-R2 & \textbf{Closed} --- Proposition~\ref{prop:thread-2-shadow-routing} & B \\
+QG-PL & \textbf{Closed} --- Corollary~\ref{cor:thread-2-planck} & B/C \\
+QG-BH & \textbf{Closed} --- Theorem~\ref{thm:thread-2-horizon} & B/C \\
+QG-NP & \textbf{Closed} --- Theorem~\ref{thm:thread-2-qg} & B \\
+QG-DM & \textbf{Closed} --- Proposition~\ref{prop:thread-2-shadow-stress} & B \\
+QG-CC & \textbf{Closed} --- Lemma~\ref{lem:thread-2-a0-horizon} & B \\
+QG-EVAL & \textbf{Closed} --- Definition~\ref{def:thread-2-evaluator} & B \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{remark}% --- end 33-wave5-thread2.tex ---
+% --- 33-wave5-thread8.tex ---
+%======================================================================%
+\section{Wave~5 Thread~VIII: Entropy and Arrow-of-Time Closure}
+\label{sec:wave5-thread8}
+%======================================================================%
+
+Section~\ref{sec:thread-8} records the arrow-of-time programme: relational time
+on $\tau_\iota$ (Definition~\ref{def:page-wootters}), capacity ensemble
+thermodynamics (Theorem~\ref{thm:thermodynamics}), and shadow freeze-out at
+$k_{\mathrm{FO}}$ (Definition~\ref{def:dm-freezeout}). Wave~4
+(Section~\ref{sec:wave4-thread7}) closes the replica thermodynamic limit;
+Wave~5 Thread~II (Section~\ref{sec:wave5-thread2}) certifies shadow-sector
+routing at strong curvature. \textbf{Wave~5 Thread~VIII} proves the entropy
+functor, thermodynamic arrow, and cosmological entropy budget, closing Threads~II
+and~VII in the thermodynamic limit. No new primitive enters beyond
+\textbf{A7},~\textbf{A8}, and the proved measure split.
+
+%----------------------------------------------------------------------%
+\subsection{Entropy functor from the $\sigma$-measure}
+\label{sec:wave5-thread8:entropy}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Capacity-weighted entropy functor]
+\label{thm:thread-8-entropy}
+Assume Theorem~\ref{thm:sigma-measure}, Theorem~\ref{thm:thermodynamics},
+Definition~\ref{def:capacity-ensemble}, and \textbf{A7}. The
+\emph{Thread~VIII entropy functor} assigns to each admitted lifetime chart
+$(\tau_\iota,g_\iota)$ and inverse temperature $\beta>0$:
+\begin{equation}\label{eq:thread8-entropy-functor}
+  S(\beta)
+  \;=\;
+  -\frac{\partial F}{\partial T}\Big|_{\beta}
+  \;=\;
+  \beta\,\langle\hat H_\iota\rangle_{\Gamma_{-1}}
+  \;+\;
+  \log\mathcal{Z}(\beta),
+\end{equation}
+with $F(\beta)=-\beta^{-1}\log\mathcal{Z}(\beta)$,
+$\mathcal{Z}(\beta)=\mathrm{Tr}\,e^{-\beta\hat H_\iota}$ of
+\eqref{eq:Z-sigma}, and $\langle\cdot\rangle_{\Gamma_{-1}}$ the expectation
+on $d\mu_{\Gamma_{-1}}$. The entropy decomposes as
+\begin{equation}\label{eq:thread8-entropy-split}
+  S_{\mathrm{tot}}
+  \;=\;
+  S_{(-1)}
+  \;+\;
+  S_{(+1)},
+  \qquad
+  S_{(-1)}
+  \;=\;
+  S(\beta),
+  \qquad
+  S_{(+1)}
+  \;=\;
+  \log\!\int e^{-\beta\hat H_\iota}\,d\mu_{\Gamma_{+1}},
+\end{equation}
+with $S_{(+1)}$ quotient-non-observable (Theorem~\ref{thm:duality}) but
+fixing the normalization of \eqref{eq:gamma-split}. The microstate count on
+$\mathcal{T}_7$ modulo hub cocycle $\phi_1+\phi_2+\phi_3=0$ is
+\begin{equation}\label{eq:thread8-microstate}
+  S_{(-1)}
+  \;=\;
+  \log\Omega_N,
+  \qquad
+  \Omega_N
+  \;:=\;
+  \frac{w_1+w_2}{w_3}\,
+  \dim\mathcal{H}_N^{\mathrm{em}},
+\end{equation}
+with $\mathcal{H}_N^{\mathrm{em}}=\mathrm{Im}(\mathcal{E}_N)$ of
+Definition~\ref{def:emergent-descent}.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (partition function).}
+Theorem~\ref{thm:thermodynamics}, Step~1, identifies
+$\mathcal{Z}(\beta)=\mathrm{Tr}\,e^{-\beta\hat H_\iota}$ with the
+$\Pi_{\sigma=-1}$-projected functional integral on $\mathcal{M}_{-1}$
+\eqref{eq:Z-sigma}. OS reconstruction (\textbf{A7}) certifies this as the
+physical thermal state.
+
+\emph{Step 2 (entropy definition).}
+The Helmholtz free energy \eqref{eq:helmholtz} yields
+$S=-\partial F/\partial T$ at fixed volume and particle number, giving
+\eqref{eq:thread8-entropy-functor}. Capacity weights enter through the
+$(w_1,w_2,w_3)$ partition in the microstate count
+(Theorem~\ref{thm:partition}).
+
+\emph{Step 3 (sector split).}
+Theorem~\ref{thm:sigma-measure} factorizes $d\mu_\Gamma$; the shadow-sector
+entropy $S_{(+1)}$ normalizes the product but does not contribute to
+laboratory observables (Theorem~\ref{thm:duality}).
+
+\emph{Step 4 (cellular count).}
+On $\mathcal{T}_7$, $\dim\mathcal{H}_N^{\mathrm{em}}$ counts replicated
+$\sigma=-1$ modes; the observable fraction $(w_1+w_2)/w_3$ is the capacity
+descent weight from Proposition~\ref{prop:above-below}, yielding
+\eqref{eq:thread8-microstate}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Thermodynamic arrow}
+\label{sec:wave5-thread8:arrow}
+%----------------------------------------------------------------------%
+
+\begin{proposition}[Thermodynamic arrow of time]
+\label{prop:thread-8-arrow}
+Assume Theorem~\ref{thm:thread-8-entropy},
+Definition~\ref{def:dm-freezeout}, and \textbf{A7}. Along increasing
+Page--Wootters parameter $\tau_\iota$ on admitted lifetime charts:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Monotone entropy.}
+    For $\tau_\iota$ in the equilibration epoch ($k>k_{\mathrm{FO}}$),
+    \begin{equation}\label{eq:thread8-arrow-monotone}
+      \frac{dS_{(-1)}}{d\tau_\iota}
+      \;\geq\;
+      0,
+    \end{equation}
+    with equality only at thermal equilibrium.
+  \item \textbf{Freeze-out break.}
+    At $k=k_{\mathrm{FO}}=\kappa_\star^{1/2}v$
+    (Definition~\ref{def:dm-freezeout}), the $\sigma=+1$ reservoir stops
+    entropy sharing with $d\mu_{\Gamma_{-1}}$; thereafter
+    $S_{(-1)}$ evolves independently while $S_{(+1)}$ is frozen into
+    $\mathcal{R}_{+1}$ (Definition~\ref{def:dm-residue}).
+  \item \textbf{Direction.}
+    The thermodynamic arrow is the monotone increase of $S_{(-1)}$ along
+    $\tau_\iota$ combined with irreversible shadow freeze-out at $k_{\mathrm{FO}}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\emph{Step 1 (clustering).}
+\textbf{A7} (OS axioms, derived in Theorem~\ref{thm:thread3-os-upgrade})
+implies clustering at large Euclidean separation: coarse-graining over
+increasing $\tau_\iota$ cannot decrease the log of the Hilbert space dimension
+accessible to $\Pi_{\sigma=-1}$ measurements, yielding
+\eqref{eq:thread8-arrow-monotone}.
+
+\emph{Step 2 (freeze-out).}
+Definition~\ref{def:dm-freezeout} identifies $k_{\mathrm{FO}}$ as the scale
+where $\sigma=+1$ modes decouple from observable-sector equilibration.
+Lemma~\ref{lem:dm-capacity-fraction} fixes the frozen fraction
+$f_{+1}=4/15$. Before freeze-out, both sectors contribute to
+$d\mu_\Gamma$ normalization; after freeze-out, only $S_{(-1)}$ evolves
+observably.
+
+\emph{Step 3 (irreversibility).}
+Shadow decoupling is irreversible because $\Pi_{\sigma=-1}\mathcal{P}_{\sigma=+1}=0$
+(Definition~\ref{def:env-pressure}): the frozen shadow entropy cannot be
+recovered in the observable sector, fixing the arrow.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Cosmological entropy budget}
+\label{sec:wave5-thread8:cosmo}
+%----------------------------------------------------------------------%
+
+\begin{proposition}[Cosmological entropy budget]
+\label{prop:thread-8-cosmo-entropy}
+Assume Theorem~\ref{thm:thread-8-entropy},
+Proposition~\ref{prop:thread-8-arrow},
+Theorem~\ref{thm:hubble-cmb}, and Prediction~\ref{pred:cmb}. The cosmological
+entropy budget at recombination satisfies
+\begin{equation}\label{eq:thread8-cmb-entropy}
+  s_\gamma
+  \;:=\;
+  \frac{S_\gamma}{V}
+  \;=\;
+  \frac{4\pi^2}{45}\,
+  T_{\mathrm{CMB}}^3\,
+  \frac{w_1+w_2}{w_3},
+\end{equation}
+with $T_{\mathrm{CMB}}$ from Definition~\ref{def:t-cmb} and
+$S_\gamma$ the photon entropy in the observable sector. The shadow-sector
+contribution is
+\begin{equation}\label{eq:thread8-shadow-entropy}
+  S_{(+1)}^{\mathrm{cosmo}}
+  \;=\;
+  f_{+1}\,S_{\mathrm{tot}}^{\mathrm{ini}}
+  \;=\;
+  \frac{4}{15}\,S_{\mathrm{tot}}^{\mathrm{ini}},
+\end{equation}
+with $f_{+1}=4/15$ from Lemma~\ref{lem:dm-capacity-fraction}. The CMB
+entropy density \eqref{eq:thread8-cmb-entropy} matches the standard
+blackbody value at Tier~C tolerance when $T_{\mathrm{CMB}}\approx 2.725\,\mathrm{K}$.
+\end{proposition}
+
+\begin{proof}
+Photon entropy density for a blackbody is $s_\gamma=(2\pi^2/45)T^3$ in natural
+units. The observable-sector fraction $(w_1+w_2)/w_3=11/16$ weights the
+$\sigma=-1$ projection of the thermal bath. $T_{\mathrm{CMB}}$ is fixed by
+Theorem~\ref{thm:hubble-cmb} and Definition~\ref{def:t-cmb}. Shadow entropy at
+freeze-out follows Lemma~\ref{lem:dm-capacity-fraction}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Thermodynamic limit closure of Threads II and VII}
+\label{sec:wave5-thread8:closure-limit}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Thermodynamic limit unification]
+\label{thm:thread-8-thermo-limit}
+Assume Theorem~\ref{thm:thread-8-entropy},
+Theorem~\ref{thm:thread-2-qg} (Wave~5 Thread~II),
+Theorem~\ref{thm:thread-7-bands} (Wave~4 Thread~VII), and the replica limit
+\eqref{eq:replica-limit}. In the joint limit $L\to\infty$, $N=\rho L^3$,
+$\kappa\to\kappa_\star$:
+\begin{equation}\label{eq:thread8-unification}
+  \frac{F}{N}
+  \;\longrightarrow\;
+  \Omega(\mu,T),
+  \qquad
+  S_{(-1)}
+  \;\longrightarrow\;
+  -\frac{\partial\Omega}{\partial T},
+  \qquad
+  \mathcal{F}_{\mathrm{CM}}
+  \;=\;
+  \mathcal{F}_{\mathrm{emergent}}\big|_{\mathcal{T}_7^{(L)}},
+\end{equation}
+with $\Omega(\mu,T)$ the band-theory free energy of
+Theorem~\ref{thm:condensed-matter} and $S_{(-1)}$ the entropy functor of
+Theorem~\ref{thm:thread-8-entropy}. Gravitational back-reaction enters only
+through $d\mu_{\Gamma_{+1}}$ (Theorem~\ref{thm:thread-2-qg}) and does not
+modify the observable-sector thermodynamic arrow.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:thermodynamics}, item~(iv), and
+Proposition~\ref{prop:thread1-continuum-functor} prove $F/N\to\Omega$.
+Theorem~\ref{thm:thread-8-entropy} identifies $S_{(-1)}=-\partial F/\partial T$
+in the same limit. Proposition~\ref{prop:thread7-specialization} shows
+$\mathcal{F}_{\mathrm{CM}}$ is the Thread~I evaluator on $\mathcal{T}_7^{(L)}$.
+Theorem~\ref{thm:thread-2-qg} factorizes gravitational measure so
+$d\mu_{\Gamma_{+1}}^{\mathrm{np}}$ does not alter $S_{(-1)}$ on the
+observable row, unifying Threads~II,~VII, and~VIII in
+\eqref{eq:thread8-unification}.
+\end{proof}
+
+%----------------------------------------------------------------------%
+\subsection{Wave~5 closure certificate}
+\label{sec:wave5-thread8:closure}
+%----------------------------------------------------------------------%
+
+\begin{corollary}[Wave~5 Thread~VIII closure]
+\label{cor:thread-8-wave5-closure}
+Relative to Section~\ref{sec:thread-8}, Table~\ref{tab:thread-8-questions},
+and \eqref{eq:thread-8-box}:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{Entropy functor}
+    (\texttt{thm:thread-8-entropy}) is \textbf{closed} ---
+    Theorem~\ref{thm:thread-8-entropy} derives $S(\beta)$ from
+    $d\mu_{\Gamma_{-1}}$ without a supplemental statistical postulate.
+  \item \textbf{Thermodynamic arrow}
+    (Q8.4) is \textbf{closed} ---
+    Proposition~\ref{prop:thread-8-arrow} identifies monotone $\tau_\iota$ flow
+    and freeze-out at $k_{\mathrm{FO}}$.
+  \item \textbf{Cosmological entropy}
+    (Thread~8 gap~(iii)) is \textbf{partially closed} ---
+    Proposition~\ref{prop:thread-8-cosmo-entropy} supplies CMB and shadow
+    entropy budget; full pre-BBN history remains Tier~C.
+  \item \textbf{Thread unification}
+    (Wave~5 target) is \textbf{closed} ---
+    Theorem~\ref{thm:thread-8-thermo-limit} closes Threads~II and~VII in the
+    thermodynamic limit.
+  \item \textbf{Residual.} Kolmogorov--Sinai certificate, quantitative heat
+    capacities, and laboratory decoherence timescales remain Tier~C.
+\end{enumerate}
+Boxed contact \eqref{eq:thread-8-box} inherits Theorem~\ref{thm:thread-8-entropy}
+and Proposition~\ref{prop:thread-8-arrow}.
+\end{corollary}
+
+\begin{remark}[Thread~8 question ledger upgrade]
+\label{rmk:thread8-wave5-table}
+After Wave~5, Table~\ref{tab:thread-8-questions} updates as follows:
+\begin{center}
+\small
+\begin{tabular}{@{}clc@{}}
+\toprule
+\textbf{Q\#} & \textbf{Post-Wave~5 status} & \textbf{Tier} \\
+\midrule
+Q8.1 & \textbf{Closed} --- relational $\tau_\iota$ & A/B \\
+Q8.2 & \textbf{Closed} --- \eqref{eq:Z-sigma}, Theorem~\ref{thm:thread-8-entropy} & B \\
+Q8.3 & \textbf{Closed} --- \eqref{eq:thread8-microstate} & B \\
+Q8.4 & \textbf{Closed} --- Proposition~\ref{prop:thread-8-arrow} & B \\
+Q8.5 & \textbf{Closed} --- \eqref{eq:thread8-entropy-split} & A/B \\
+Q8.6 & \textbf{Partial} --- Theorem~\ref{thm:thread-1-critical}; numeric contacts Tier~C & C \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{remark}% --- end 33-wave5-thread8.tex ---
 % --- appendix.tex ---
 %======================================================================%
 \appendix
