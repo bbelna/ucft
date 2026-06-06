@@ -1,0 +1,48 @@
+%======================================================================%
+\appendix
+\section{Albert Algebra Identities}
+\label{sec:appendix}
+%======================================================================%
+
+%----------------------------------------------------------------------%
+\subsection{Matrix model}
+\label{sec:appendix:matrix}
+%----------------------------------------------------------------------%
+
+Elements of $\jalg$ are
+\begin{equation}\label{eq:appendix:matrix}
+X=\begin{pmatrix}
+  \xi_1 & x_3 & \bar x_2\\
+  \bar x_3 & \xi_2 & x_1\\
+  x_2 & \bar x_1 & \xi_3
+\end{pmatrix},
+\qquad \xi_i\in\R,\ x_i\in\Oct,
+\end{equation}
+with Jordan product $X\circ Y=\tfrac12(XY+YX)$. The trace inner product is
+$\langle X,Y\rangle=\Tr(X\circ Y)$ and $Q(X)=\Tr(X^2)$.
+
+%----------------------------------------------------------------------%
+\subsection{Sharp map and rank}
+\label{sec:appendix:sharp}
+%----------------------------------------------------------------------%
+
+The cubic norm is $N(X)=\det X$ (octonionic determinant). The sharp map is
+\begin{equation}\label{eq:appendix:sharp}
+X^{\#}=\adj(X),\qquad X^{\#}\circ X=N(X)\,E,\qquad (X^{\#})^{\#}=N(X)\,X,
+\end{equation}
+with $E=\mathrm{diag}(1,1,1)$. In diagonal form
+$X=\mathrm{diag}(\lambda_1,\lambda_2,\lambda_3)$,
+$X^{\#}=\mathrm{diag}(\lambda_2\lambda_3,\lambda_3\lambda_1,\lambda_1\lambda_2)$.
+Thus $\rank X\leq1\iff X^{\#}=0$.
+
+%----------------------------------------------------------------------%
+\subsection{Freudenthal identity}
+\label{sec:appendix:freudenthal}
+%----------------------------------------------------------------------%
+
+For the quadratic adjoint $X\mapsto X^{\#}$,
+\begin{equation}
+  (X\circ Y)^{\#}=(N(X)Y+N(Y)X-X^{\#}\circ Y^{\#}),
+\end{equation}
+which characterizes $\jalg$ among cubic vector spaces. Any $\E{6}$-invariant
+quartic vanishing on $\{X^{\#}=0\}$ is proportional to $\langle X^{\#},X^{\#}\rangle$.

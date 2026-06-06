@@ -3,33 +3,37 @@
 \label{sec:sm}
 %======================================================================%
 
-Matter content and symmetry breaking below the GUT scale are added
-structure (Postulates P2--P4), stated once. Anomaly cancellation
-(\autoref{thm:gauge-gravity:gs}) is a \textbf{theorem}.
+Matter and electroweak symmetry breaking are \textbf{postulated} (P2--P4).
+Anomaly cancellation is a \textbf{theorem} once the $\mathbf{27}$ content is
+fixed.
 
 %----------------------------------------------------------------------%
-\subsection{Postulates P2--P4: matter and families}
+\subsection{Postulates P2--P4}
 \label{sec:sm:postulates}
 %----------------------------------------------------------------------%
 
-\begin{postulate}[Matter content, P2]\label{post:sm:P2}
-One chiral $\mathbf{16}$ of $\Spin(10)$ per family, with standard $U(1)$
-charges from \eqref{eq:foundations:27branch}. No mirror partners.
+\begin{postulate}[Chiral matter, P2]\label{post:sm:P2}
+Each family furnishes one chiral $\mathbf{16}$ of $\Spin(10)$ with charges from
+\eqref{eq:foundations:27branch}. No mirror $\overline{\mathbf{16}}$ partners.
 \end{postulate}
 
 \begin{postulate}[Three families, P3]\label{post:sm:P3}
-Matter carries $SU(3)_F$ horizontal symmetry on $\jalg\otimes\C^3$; the
-three copies are three chiral $\mathbf{16}$s. Three generations are added
-structure, not a consequence of Axioms I--III.
+Horizontal $SU(3)_F$ acts on $\jalg\otimes\C^3$; the three factors are three
+chiral $\mathbf{16}$s. Three generations are \emph{not} derived from
+Axioms~I--III.
 \end{postulate}
 
-\begin{postulate}[GUT--Higgs sector, P4]\label{post:sm:P4}
-Symmetry breaking proceeds via explicit Higgs multiplets:
-$\mathbf{45}_H$ or $\mathbf{54}_H$ ($\Spin(10)\to SU(5)\times U(1)_X$),
-$\mathbf{126}_H$ (breaks $B-L$, rank), and $\mathbf{10}_H$ (electroweak).
-Yukawa couplings $y_{ij}\,\mathbf{16}_i\,\mathbf{16}_j\,H$ generate fermion
-masses; type-I seesaw from $\mathbf{126}_H$ or dim-5 operators gives
-neutrino masses $m_\nu\sim m_D^2/M_R\sim 0.05\,\mathrm{eV}$.
+\begin{postulate}[GUT--Higgs and Yukawa, P4]\label{post:sm:P4}
+Breaking proceeds via $\mathbf{45}_H$ or $\mathbf{54}_H$
+($\Spin(10)\to SU(5)\times U(1)_X$), $\mathbf{126}_H$ (breaks $B-L$), and
+$\mathbf{10}_H$ (electroweak). Yukawas $y_{ij}\,\mathbf{16}_i\mathbf{16}_j H$
+generate fermion masses; type-I seesaw from $\mathbf{126}_H$ gives
+$m_\nu\sim m_D^2/M_R$.
+\end{postulate}
+
+\begin{postulate}[Flavon hierarchy, P3$'$]\label{post:sm:flavons}
+Sequential $SU(3)_F$ breaking by flavon VEVs generates Yukawa hierarchy and
+CKM/PMNS mixing.
 \end{postulate}
 
 %----------------------------------------------------------------------%
@@ -37,47 +41,45 @@ neutrino masses $m_\nu\sim m_D^2/M_R\sim 0.05\,\mathrm{eV}$.
 \label{sec:sm:descent}
 %----------------------------------------------------------------------%
 
-\begin{theorem}[Gauge descent]\label{thm:sm:descent}
-The breaking chain
+\begin{theorem}[SM gauge structure under P4]\label{thm:sm:descent}
+Assume P4. The breaking chain
 \[
   \E{6}\xrightarrow{V}\Spin(10)\times U(1)
   \xrightarrow{\mathbf{45}_H}\mathrm{SU}(5)\times U(1)_X
-  \xrightarrow{\mathbf{126}_H}\mathrm{SU}(3)_c\times\mathrm{SU}(2)_L
-  \times U(1)_Y
+  \xrightarrow{\mathbf{126}_H}\mathrm{SU}(3)_c\times\mathrm{SU(2)}_L\times U(1)_Y
   \xrightarrow{\mathbf{10}_H}\mathrm{SU}(3)_c\times U(1)_{\mathrm{em}}
 \]
-yields the Standard Model gauge group with hypercharge
-$Y$ the standard $\mathrm{SU}(5)$-embedded combination and
-$\alpha_1=(5/3)\alpha_Y$ (GUT normalization).
+yields the SM gauge group with GUT normalization $\alpha_1=(5/3)\alpha_Y$.
 \end{theorem}
 
-Per family: $\mathbf{16}=(q,u^c,d^c,\ell,e^c,\nu^c)$; $\mathbf{10}_H$ gives
-electroweak doublets with $v=246\,\mathrm{GeV}$.
+Per family $\mathbf{16}=(q,u^c,d^c,\ell,e^c,\nu^c)$; $\mathbf{10}_H$ supplies
+$v=246\,\mathrm{GeV}$.
+
+\begin{remark}[Yukawa source term]
+A bare coupling $\bar\psi\,\orderparam^a T_a\,\psi$ with $\orderparam$ in
+$\{\mathbf{16},\overline{\mathbf{16}}\}$ is \emph{not} $H$-invariant and does not
+generate masses at the $\orderparam_\star$ vacuum. Masses require P4 Higgs
+multiplets~\cite{GeorgiGlashow1974}.
+\end{remark}
 
 %----------------------------------------------------------------------%
-\subsection{Masses and mixing}
+\subsection{Scalar spectrum}
 \label{sec:sm:masses}
 %----------------------------------------------------------------------%
 
 \begin{theorem}[Tree-level Goldstones]\label{thm:sm:tree}
-All $32$ coset scalars are massless at tree level
-(\autoref{cor:dynamics:goldstone}). Fermion masses arise from P4 Yukawa
-couplings, not from the $\E{6}$ potential.
+At $\orderparam_\star\in\mathcal{M}$, all $32$ coset directions are massless at
+tree level (Corollary~\ref{cor:dynamics:goldstone}).
 \end{theorem}
 
-\begin{theorem}[Radiative coset mass]\label{thm:sm:radiative}
-The Coleman--Weinberg one-loop potential is $H$-invariant. Since
-$\mathfrak{m}$ is a single real-irreducible $H$-module, Schur gives one
-common eigenvalue on all $28$ physical massive scalars (excluding $4$
-soldering modes). Canonical mass $m^2=\mu^2$.
+\begin{theorem}[Radiative degeneracy]\label{thm:sm:radiative}
+The Coleman--Weinberg potential~\cite{ColemanWeinberg1973} is $H$-invariant.
+Since $\mathfrak{m}$ is a single real-irreducible $H$-module
+(Theorem~\ref{thm:spacetime:irrep}), Schur gives one eigenvalue on all $28$
+physical massive scalars; canonical mass $m^2=\mu^2$.
 \end{theorem}
-
-\begin{postulate}[Flavon hierarchy, P3 part II]\label{post:sm:flavons}
-$SU(3)_F$ breaks sequentially via flavon VEVs, generating inter-generation
-Yukawa hierarchy and CKM/PMNS mixing.
-\end{postulate}
 
 \begin{remark}[Heterotic corroboration]\label{rem:sm:heterotic}
-The heterotic $\mathbb{Z}_5$ quintic gives $h^1(\hat Q,V_{16})=3$,
-independent support for three generations. \textbf{Conjecture.}
+The heterotic $\mathbb{Z}_5$ quintic gives $h^1(\hat Q,V_{16})=3$~\cite{Witten1985}.
+\textbf{Conjecture}, not a derivation of P3.
 \end{remark}

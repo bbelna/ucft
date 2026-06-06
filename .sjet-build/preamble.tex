@@ -8,7 +8,7 @@
 \usepackage{booktabs}
 \usepackage{enumitem}
 \usepackage{hyperref}
-\hypersetup{colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black}
 
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
@@ -23,22 +23,37 @@
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
 
+\numberwithin{equation}{section}
+
+%--- Division algebras (avoid \O, \H LaTeX conflicts) -----------------
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Quat}{\mathbb{H}}
 \newcommand{\Oct}{\mathbb{O}}
+
+%--- Lie / algebra ----------------------------------------------------
 \newcommand{\jalg}{J_3(\mathbb{O})}
 \newcommand{\E}[1]{\mathrm{E}_{#1}}
 \newcommand{\Spin}{\mathrm{Spin}}
 \newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\tr}{\operatorname{tr}}
 \newcommand{\rank}{\operatorname{rank}}
 \newcommand{\Hess}{\operatorname{Hess}}
 \newcommand{\argmax}{\operatorname*{arg\,max}}
 \newcommand{\argmin}{\operatorname*{arg\,min}}
 \newcommand{\Rep}[1]{\mathbf{#1}}
+\newcommand{\adj}{\mathrm{adj}}
 
-\title{Stone--Jordan Exceptional Theory\\[0.3em]
-\large A Verifiable Framework for Fundamental Physics}
+% Order parameter field vs.\ capacity functional (no symbol collision)
+\newcommand{\orderparam}{\Phi}
+\newcommand{\capacity}{\mathcal{C}}
+
+% Scales
+\newcommand{\MGUT}{M_{\mathrm{GUT}}}
+\newcommand{\MPl}{M_{\mathrm{Pl}}}
+
+\title{Stone--Jordan Exceptional Theory\\[0.4em]
+\large A Conditional Unified Framework from Exceptional Jordan Algebras}
 \author{Brandon Belna}
 \date{June 6, 2026}
 
@@ -46,24 +61,28 @@
 \maketitle
 
 \begin{abstract}
-We present \emph{Stone--Jordan Exceptional Theory} (SJET), a mathematically
-closed framework for fundamental physics. Three axioms specify (i)~a profinite
-graph arena with Stone spectrum, (ii)~an order parameter $\Phi\in\jalg$ under
-compact $E_6$, and (iii)~dynamics as the fixed point of a concave capacity
-functional. From these, we \emph{derive} the $E_6$-invariant potential, prove
-vacuum selection on the rank-one orbit $\mathcal{M}=\mathrm{EIII}$
-($\dim_{\R}\mathcal{M}=32$), solder four-dimensional Lorentzian spacetime,
-induce Einstein--Hilbert gravitation, and embed the Standard Model with three
-chiral families. The theory is organized by epistemic status (theorem,
-derived, postulate, conjecture) and accompanied by an explicit verification
-ledger: anomaly cancellation, renormalization-group coefficients, mass
-hierarchies, and falsifiable predictions. The universe is the unique fixed point
-$\mathfrak{U}^\star$ of a master operator $\mathbb{U}$ composing capacity
-balancing, gradient flow, and gauge descent.
+We formulate \emph{Stone--Jordan Exceptional Theory} (SJET), a conditional
+unification program in mathematical physics. Three axioms specify a profinite
+graph arena with Stone spectrum, an order parameter $\orderparam\in\jalg$ under
+compact $\E{6}$, and dynamics as the fixed point of a concave capacity
+functional $\capacity$. From the graph--Albert identification we \emph{derive}
+the $\E{6}$-invariant potential class and prove vacuum selection on the
+rank-one orbit $\mathcal{M}=\mathrm{EIII}$ ($\dim_{\R}\mathcal{M}=32$). A small,
+explicitly enumerated set of postulates then supplies four-dimensional
+Lorentzian soldering, chiral $\Spin(10)$ matter, three families, and a
+GUT--Higgs sector; under these hypotheses the Maurer--Cartan data induce a
+composite $\Spin(10)\times U(1)$ gauge theory with Green--Schwarz anomaly
+cancellation, Sakharov-type induced gravitation, and Standard Model gauge
+descent. Every major claim is labeled by epistemic status (theorem,
+postulate, conjecture) and checked in a verification ledger. SJET is a
+derivation-grade \emph{embedding}, not an unconditional theory of everything
+from three axioms alone.
 \end{abstract}
 
-\noindent\textbf{Keywords:} theory of everything; exceptional Jordan algebra;
-Stone duality; $E_6$ coset; induced gravity; Standard Model; verifiability.
+\noindent\textbf{Keywords:} exceptional Jordan algebra; Stone duality;
+$E_6$ coset; induced gravity; grand unification; Standard Model.
+
+\noindent\textbf{MSC 2020:} 17C27, 22E46, 81T13, 81T30.
 
 \tableofcontents
 \clearpage

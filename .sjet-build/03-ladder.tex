@@ -1,96 +1,82 @@
 %======================================================================%
-\section{The Division and Exceptional Ladders}
+\section{Division and Exceptional Ladders}
 \label{sec:ladder}
 %======================================================================%
 
-The profinite graph tower carries two intertwined arithmetic structures:
-the Hurwitz division-algebra ladder and the exceptional Lie-group cascade.
-Both are \textbf{derived} from standard mathematics; neither is postulated.
+The profinite tower carries standard arithmetic structure. Neither ladder is
+postulated; both organize the identification map
+Theorem~\ref{thm:foundations:stone-lift}.
 
 %----------------------------------------------------------------------%
-\subsection{The Hurwitz ladder}
+\subsection{Hurwitz ladder}
 \label{sec:ladder:hurwitz}
 %----------------------------------------------------------------------%
 
 \begin{theorem}[Hurwitz]\label{thm:ladder:hurwitz}
-The only finite-dimensional normed division algebras over $\R$ are
+The only finite-dimensional normed division algebras over $\R$ are, up to
+isomorphism,
 \[
-  0\;\longrightarrow\;\R\;\longrightarrow\;\C\;\longrightarrow\;\Quat
-  \;\longrightarrow\;\Oct,
+  \R,\quad\C,\quad\Quat,\quad\Oct,
 \]
-with dimensions $1,2,4,8$. No further extension exists.
+of dimensions $1,2,4,8$. No bilinear composition law extends beyond $\Oct$.
 \end{theorem}
 
-\begin{definition}[Division ladder on Stone spectra]
-\label{def:ladder:division}
-Associate to each rung $D\in\{0,\R,\C,\Quat,\Oct\}$ a Stone spectrum
-$S_D=\mathrm{Spec}(\mathcal{B}(\mathcal{G}_D))$ with
-$\dim S_D=\dim D$. Refinement maps
-$S_0\leftarrow S_{\R}\leftarrow S_{\C}\leftarrow S_{\Quat}\leftarrow S_{\Oct}$
-are quotient maps of Boolean algebras induced by norm-preserving inclusions.
-\end{definition}
-
-\begin{proposition}[Albert algebra as terminal object]
-\label{prop:ladder:terminal}
-The $3\times3$ Hermitian matrices over $\Oct$,
-$\jalg=H_3(\Oct)$, are the unique formally real Jordan algebra whose
-off-diagonal entries carry the octonionic multiplication. The Stone lift
-(\autoref{thm:foundations:stone-lift}) identifies
-$S_\infty\cong S_{\Oct}$ at the $27$-dimensional terminal rung.
+\begin{proposition}[Terminal Jordan rung]\label{prop:ladder:terminal}
+The algebra $\jalg=H_3(\Oct)$ is the unique formally real Jordan algebra whose
+off-diagonal entries carry octonionic multiplication and whose dimension is
+$27=1+8+8+8+2$. The Stone lift identifies the profinite limit with this terminal
+rung.
 \end{proposition}
 
 %----------------------------------------------------------------------%
-\subsection{The exceptional cascade}
+\subsection{Exceptional cascade}
 \label{sec:ladder:exceptional}
 %----------------------------------------------------------------------%
 
 \begin{definition}[Exceptional cascade]\label{def:ladder:cascade}
-The \emph{exceptional cascade} is the chain of maximal symmetric-space
-reductions
+Write the symmetry-reduction chain
 \begin{equation}\label{eq:ladder:cascade}
-  \E{8}\;\longrightarrow\;\E{8}\times\E{8}\;\longrightarrow\;\E{6}
-  \;\longrightarrow\;\E{5}\;\longrightarrow\;\E{4}\;\longrightarrow\;0,
+  \E{8}\to\E{8}\times\E{8}\to\E{6}\to\E{5}\to\E{4},
 \end{equation}
-with intermediate steps $\E{7}$, $F_4$, $G_2$ realized as stabilizers of
-successive norm and determinant data on the Albert tower.
+with $\E{7}$, $F_4$, $G_2$ as intermediate stabilizers of norm data on the
+Albert tower. SJET dynamics are anchored at the $\E{6}$ node.
 \end{definition}
 
-\begin{theorem}[Cascade branchings at $\E{6}$]\label{thm:ladder:e6branch}
-At the $\E{6}$ node, the matter representation decomposes under
-$H=\Spin(10)\times U(1)$ as \eqref{eq:foundations:27branch}, and the
-adjoint as \eqref{eq:foundations:adjoint}. The coset
-$\E{6}/H$ is the Hermitian symmetric space EIII of real dimension $32$.
-\end{theorem}
+\begin{proposition}[Branchings at $\E{6}$]\label{prop:ladder:e6branch}
+Under $H=\Spin(10)\times U(1)$, the branchings are
+\eqref{eq:foundations:27branch}--\eqref{eq:foundations:adjoint}. The coset
+$\E{6}/H$ is EIII, $\dim_{\R}\mathcal{M}=32$.
+\end{proposition}
 
-\begin{remark}[Connection to heterotic string theory]
-\label{rem:ladder:heterotic}
-The cascade $\E{8}\times\E{8}\to\E{6}$ parallels the gauge group of
-heterotic string theory. The $\mathbb{Z}_5$ orbifold quintic
-$\hat Q=Q/\mathbb{Z}_5$ gives $h^1(\hat Q,V_{16})=3$, corroborating three
-generations (\autoref{rem:sm:heterotic}). This correspondence is a
-\textbf{conjecture}, not a derivation.
+\begin{remark}[Heterotic parallel]\label{rem:ladder:heterotic}
+The product $\E{8}\times\E{8}$ matches the heterotic gauge group. The
+$\mathbb{Z}_5$ orbifold quintic compactification gives
+$h^1(\hat Q,V_{16})=3$~\cite{Witten1985}, corroborating three generations
+(Remark~\ref{rem:sm:heterotic}). This is a \textbf{conjecture}, not a derivation.
 \end{remark}
 
 %----------------------------------------------------------------------%
-\subsection{Capacity functional (preview)}
+\subsection{Capacity functional}
 \label{sec:ladder:capacity}
 %----------------------------------------------------------------------%
 
-\begin{definition}[Entropy and capacity]\label{def:ladder:capacity}
-For $\omega\in\mathbb{R}^k$ on $\mathcal{G}$ with workload $\mu$ and costs
-$c_i(a)$, define
-\begin{equation}\label{eq:ladder:phi}
-  \Phi(\omega)=-\sum_{a\in V}\mu(a)\log\!\Bigl(\sum_{i=1}^k
-  e^{c_i(a)-\omega_i}\Bigr),
+\begin{definition}[Capacity functional]\label{def:ladder:capacity}
+For $\omega\in\R^k$, workload $\mu$, and costs $c_i(a)$,
+\begin{equation}\label{eq:ladder:capacity}
+  \capacity(\omega)=-\sum_{a\in V}\mu(a)\log\!\Bigl(\sum_{i=1}^k
+  e^{c_i(a)-\omega_i}\Bigr).
 \end{equation}
-the negative entropy of the Gibbs distribution at dual prices $\omega$.
 \end{definition}
 
-\begin{theorem}[Concavity and existence]\label{thm:ladder:concave}
-$\Phi$ is strictly concave on $\{\omega:\sum_i\omega_i=0\}$. For targets
-$m_i>0$ with $\sum_i m_i=1$, there exists a unique maximizer
-$\omega^\star$ with $\partial\Phi/\partial\omega_i=m_i$.
+\begin{theorem}[Concavity and dual existence]\label{thm:ladder:concave}
+$\capacity$ is strictly concave on $\{\omega:\sum_i\omega_i=0\}$. For targets
+$m_i>0$, $\sum_i m_i=1$, there exists a unique $\omega^\star$ with
+$\partial\capacity/\partial\omega_i(\omega^\star)=m_i$.
 \end{theorem}
 
-The capacity functional is the discrete shadow of the $\E{6}$-invariant
-potential derived in \autoref{sec:dynamics}.
+\begin{proof}
+The Hessian $\partial^2\capacity/\partial\omega_i\partial\omega_j$ is negative
+semidefinite and negative definite on the sum-zero hyperplane (standard entropy
+concavity). Strict concavity on an affine slice gives uniqueness of the
+constrained maximizer.
+\end{proof}

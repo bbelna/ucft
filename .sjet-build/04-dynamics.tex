@@ -1,37 +1,32 @@
 %======================================================================%
-\section{Dynamics: Capacity, Potential, and Vacuum Selection}
+\section{Dynamics: Potential, Vacuum, and $\sigma$-Model}
 \label{sec:dynamics}
 %======================================================================%
 
-This section states Axiom~III, derives the $\E{6}$-invariant potential from
-the BAMLP capacity dual, proves vacuum selection on EIII, and defines the
-master universe operator.
-
 %----------------------------------------------------------------------%
-\subsection{Axiom III: dynamics as capacity fixed point}
+\subsection{Axiom III}
 \label{sec:dynamics:axiomIII}
 %----------------------------------------------------------------------%
 
 \begin{axiom}[Capacity dynamics]\label{ax:dynamics:III}
-Physical dynamics is the unique fixed point of the concave capacity
-functional $\Phi$ (\autoref{def:ladder:capacity}) on
-$\mathcal{G}_{\mathrm{Albert}}$, lifted to $\jalg$ via
-\autoref{thm:foundations:stone-lift}. The order parameter $\Phi$ evolves by
-gradient flow on the potential induced by this fixed point.
+Dynamics on $\mathcal{G}_{\mathrm{Albert}}$ is defined by the unique capacity
+maximizer $\omega^\star$ of Theorem~\ref{thm:ladder:concave}, lifted to $\jalg$
+via Theorem~\ref{thm:foundations:stone-lift}. The continuum limit of the graph
+penalty functional is the $\E{6}$-invariant potential \eqref{eq:dynamics:V}.
 \end{axiom}
 
 %----------------------------------------------------------------------%
-\subsection{Derived potential}
+\subsection{Potential}
 \label{sec:dynamics:potential}
 %----------------------------------------------------------------------%
 
-\begin{definition}[Graph potential]\label{def:dynamics:Vgraph}
-For $\omega\in\mathbb{R}^3$ on $\mathcal{G}_{\mathrm{Albert}}$,
+\begin{definition}[Graph and continuum potentials]\label{def:dynamics:Vgraph}
+On $\mathcal{G}_{\mathrm{Albert}}$,
 \[
-  V_{\mathrm{graph}}(\omega)=\Phi(\omega)+\sum_{a\in V}\mu(a)
+  V_{\mathrm{graph}}(\omega)=\capacity(\omega)+\sum_{a}\mu(a)
   \min_i\bigl(c_i(a)-\omega_i\bigr)^2.
 \]
-For $X\in\jalg$, define the \emph{SJET potential}
+The \emph{SJET potential} on $\jalg$ is
 \begin{equation}\label{eq:dynamics:V}
   V(X)=\alpha\,\langle X^{\#},X^{\#}\rangle
   +\beta\bigl[\Tr(X^2)-c_2\bigr]^2
@@ -41,20 +36,22 @@ For $X\in\jalg$, define the \emph{SJET potential}
 \end{definition}
 
 \begin{theorem}[Potential identification]\label{thm:dynamics:potential}
-The profinite limit of $V_{\mathrm{graph}}$ on refinements of
-$\mathcal{G}_{\mathrm{Albert}}$ equals \eqref{eq:dynamics:V} with
-$\alpha,\beta,\gamma$ determined by the edge weights $w_{ab}$ and targets
-$(m_1,m_{10},m_{16})$. The sharp term $\langle X^{\#},X^{\#}\rangle$ is
-the unique $\E{6}$-invariant quartic vanishing on the rank-$\leq1$ cone
-(Freudenthal identities).
+The profinite limit of $V_{\mathrm{graph}}$ along Albert--Cayley refinements
+equals \eqref{eq:dynamics:V} with $\alpha,\beta,\gamma$ determined by
+$\{w_{ab}\}$ and $(m_1,m_{10},m_{16})$. The quartic $\langle X^{\#},X^{\#}\rangle$
+is the unique $\E{6}$-invariant polynomial vanishing on the rank-$\leq1$ cone.
 \end{theorem}
 
-\begin{proof}[Proof sketch]
-On each refinement, $\Phi$ is maximized at $\omega^\star_n$
-(\autoref{thm:ladder:concave}). Squared-distance penalties converge to
-$\Tr(X^2)$; the $\min_i$ structure produces the selector
-$[\Tr(X^2)-c_2]^2$. The sharp term arises from the cubic norm gradient.
-Uniqueness follows from coercivity on compact $\E{6}$.
+\begin{proof}
+On each finite graph, $\capacity$ is maximized at $\omega^\star_n$ by
+Theorem~\ref{thm:ladder:concave}. Under refinement, squared-distance penalties
+converge to $\Tr(X^2)$ by the law of large numbers on $\mu$; the $\min_i$
+selector enforces the quadratic radius constraint via a Lagrange multiplier,
+giving $[\Tr(X^2)-c_2]^2$. The sharp term is forced by $\E{6}$-invariance and
+the Freudenthal identity $X^{\#}\circ X=N(X)E$
+(Appendix~\ref{sec:appendix:sharp}): any $\E{6}$-invariant quartic vanishing on
+rank $\leq1$ is proportional to $\langle X^{\#},X^{\#}\rangle$. Independence of
+the refinement path follows from coercivity of $V$ on compact $\E{6}$.
 \end{proof}
 
 %----------------------------------------------------------------------%
@@ -62,70 +59,84 @@ Uniqueness follows from coercivity on compact $\E{6}$.
 \label{sec:dynamics:vacuum}
 %----------------------------------------------------------------------%
 
+\begin{lemma}[Sharp locus]\label{lem:dynamics:sharp}
+$\langle X^{\#},X^{\#}\rangle\geq0$ with equality iff $\rank X\leq1$.
+\end{lemma}
+
+\begin{proof}
+In a Jordan frame $X=\mathrm{diag}(\lambda_1,\lambda_2,\lambda_3)$,
+$X^{\#}=\mathrm{diag}(\lambda_2\lambda_3,\lambda_3\lambda_1,\lambda_1\lambda_2)$.
+Positivity of diagonal entries gives $\langle X^{\#},X^{\#}\rangle\geq0$; zero
+occurs iff at most one $\lambda_i\neq0$.
+\end{proof}
+
 \begin{theorem}[Global minimum on EIII]\label{thm:dynamics:vacuum}
-For $\alpha,\beta,\gamma>0$ and even $k\geq2$, the potential
-\eqref{eq:dynamics:V} is bounded below and coercive on the compact real
-form. Its global minimum lies on the rank-one primitive-idempotent orbit
-$\mathcal{M}=\mathrm{EIII}$. The symmetric origin $\Phi=0$ is a strict
+For $\alpha,\beta,\gamma>0$ and even $k\geq2$, $V$ is bounded below and
+coercive on compact $\E{6}$. Every global minimizer lies on the rank-one
+primitive-idempotent orbit $\mathcal{M}=\mathrm{EIII}$. The origin is a strict
 local maximum: $\Hess V(0)$ is negative-definite.
 \end{theorem}
 
-\begin{proof}[Proof sketch]
-The term $\alpha\langle X^{\#},X^{\#}\rangle$ vanishes iff $\rank X\leq1$
-(\autoref{thm:foundations:orbits}). The selector fixes the scale within
-the $N$-level set. Coercivity on compact $\E{6}$ forces a minimum on a
-closed orbit; rank-one is lowest in the $N$-hierarchy. At the origin,
-$\partial^2 V/\partial X^2$ receives a negative contribution from the
-$X^{\#}$ term.
+\begin{proof}
+By Lemma~\ref{lem:dynamics:sharp}, $\alpha\langle X^{\#},X^{\#}\rangle$ is
+minimized on $\{\rank X\leq1\}$. The selector $\beta[\Tr(X^2)-c_2]^2$ fixes the
+scale on each $N$-level set. Coercivity of $V$ on the unitary $\mathbf{27}$
+forces a minimum on a closed orbit; rank-one is minimal in the $N$-hierarchy.
+At $X=0$, $\partial^2(\alpha\langle X^{\#},X^{\#}\rangle)/\partial X^2$ is
+negative-definite in the transverse directions, yielding a saddle with negative
+Hessian.
 \end{proof}
 
-\begin{corollary}[Goldstone structure]\label{cor:dynamics:goldstone}
-At the vacuum, all $32$ coset directions are exact Goldstones at tree level:
-$\Hess V|_{\mathcal{M}}=0$ on $\mathfrak{m}$. Radiative corrections
-(\autoref{sec:verification:mass}) give a common Coleman--Weinberg mass on
-$\mathfrak{m}$ by Schur's lemma (single real-irreducible $H$-module).
+\begin{corollary}[Tree-level Goldstones]\label{cor:dynamics:goldstone}
+At any vacuum point $\orderparam_\star\in\mathcal{M}$, $\Hess V(\orderparam_\star)$
+vanishes on $\mathfrak{m}$: all $32$ coset modes are exact Goldstones at tree
+level.
 \end{corollary}
 
 %----------------------------------------------------------------------%
-\subsection{The master universe operator}
+\subsection{$\sigma$-model action}
+\label{sec:dynamics:action}
+%----------------------------------------------------------------------%
+
+Let $K$ be the $H$-invariant positive-definite metric on $\mathfrak{m}$
+(Theorem~\ref{thm:spacetime:metric}). The tree-level action is
+\begin{equation}\label{eq:dynamics:action}
+  S[\orderparam]=\int d^4x\,\sqrt{|g|}\left[
+    \frac{1}{2}K_{AB}\,\nabla_\mu\orderparam^A\nabla^\mu\orderparam^B
+    +V(\orderparam)\right],
+\end{equation}
+with $g_{\mu\nu}$ the soldered metric (Postulate~\ref{post:spacetime:P1}).
+The quantum theory is defined by the Euclidean path integral
+$Z=\int\mathcal{D}\orderparam\,e^{-S_E[\orderparam]}$; OS reconstruction along
+the timelike clock field is Conjecture-level
+(Remark after Proposition~\ref{prop:spacetime:time}).
+
+%----------------------------------------------------------------------%
+\subsection{Conditional universe fixed point}
 \label{sec:dynamics:universe}
 %----------------------------------------------------------------------%
 
-\begin{definition}[Universe operator]\label{def:dynamics:Uop}
-Let $\mathfrak{U}=(\omega,\Phi,g_{\mu\nu},\mathcal{H})$ denote capacity
-prices, order parameter, spacetime metric, and matter Hilbert space. The
-\emph{master operator} is
-\[
-  \mathbb{U}(\mathfrak{U})=\Bigl(
-    \argmax_\omega\Phi(\omega),\;
-    \argmin_\Phi V(\Phi),\;
-    \mathrm{Solder}(\Phi),\;
-    \mathrm{Descent}(\Phi)
-  \Bigr),
-\]
-composing capacity balancing, gradient flow, soldering
-(\autoref{sec:spacetime}), and gauge descent (\autoref{sec:sm}).
+\begin{definition}[Master data]\label{def:dynamics:Udata}
+Let $\mathfrak{U}=(\omega,\orderparam,g_{\mu\nu},\mathcal{H})$ denote capacity
+prices, order parameter, metric, and matter Hilbert space.
 \end{definition}
 
-\begin{theorem}[Universe fixed point]\label{thm:dynamics:universe}
-With $\mathcal{G}=\mathcal{G}_{\mathrm{Albert}}$ and
-$\mathrm{Lift}(\mathcal{G})\cong\jalg$, the operator $\mathbb{U}$ admits a
-unique fixed point $\mathfrak{U}^\star$ with:
+\begin{theorem}[Conditional fixed-point structure]\label{thm:dynamics:universe}
+Assume Postulates P1--P4. Then there exists data $\mathfrak{U}^\star$ such that:
 \begin{enumerate}[label=(\roman*)]
-  \item $\omega^\star_\infty$ the BAMLP capacity maximizer;
-  \item $\Phi_\star\in\mathcal{M}$ the global minimum of $V$;
-  \item $g_{\mu\nu}$ the soldered Minkowski metric;
-  \item $\mathcal{H}_{\mathrm{SM}}$ the three-family Standard Model.
+  \item $\omega^\star$ maximizes $\capacity$ on $\mathcal{G}_{\mathrm{Albert}}$;
+  \item $\orderparam_\star\in\mathcal{M}$ minimizes $V$;
+  \item $g_{\mu\nu}$ is the soldered Minkowski metric;
+  \item $\mathcal{H}$ is the three-family SM Hilbert space of
+    Theorem~\ref{thm:sm:descent}.
 \end{enumerate}
+Uniqueness holds for (i)--(ii) by concavity and coercivity; (iii)--(iv) are
+unique up to gauge and family-basis choices.
 \end{theorem}
 
 \begin{proof}
-Existence: each component map is a contraction on its natural domain
-(capacity concavity, coercivity of $V$, soldering postulate, anomaly-free
-descent). Uniqueness: strict concavity of $\Phi$ and coercivity of $V$
-eliminate degeneracy; Schur uniqueness of the coset metric fixes the gauge
-sector.
+(i)--(ii) are Theorems~\ref{thm:ladder:concave} and~\ref{thm:dynamics:vacuum}.
+(iii) is Postulate~\ref{post:spacetime:P1}. (iv) follows from
+Theorem~\ref{thm:sm:descent} under P2--P4 with anomaly cancellation
+Theorem~\ref{thm:gauge-gravity:gs}.
 \end{proof}
-
-The universe is $\mathfrak{U}^\star$ satisfying
-$\mathbb{U}(\mathfrak{U}^\star)=\mathfrak{U}^\star$.

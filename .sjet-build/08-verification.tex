@@ -3,51 +3,51 @@
 \label{sec:verification}
 %======================================================================%
 
-This section records every major claim with epistemic status and an
-explicit check. A reader can verify each entry independently.
+This section records epistemic status and independent checks. The ledger is
+the referee-facing summary of what is proved, assumed, or conjectured.
 
 %----------------------------------------------------------------------%
-\subsection{Ledger table}
+\subsection{Status table}
 \label{sec:verification:ledger}
 %----------------------------------------------------------------------%
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \small
-\begin{tabular}{@{}llll@{}}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}p{0.28\linewidth}p{0.12\linewidth}p{0.22\linewidth}p{0.18\linewidth}@{}}
 \toprule
 \textbf{Claim} & \textbf{Status} & \textbf{Check} & \textbf{Ref.} \\
 \midrule
-Stone duality & Theorem & Standard & \autoref{thm:foundations:stone} \\
-Hurwitz ladder & Theorem & Dim.\ 1,2,4,8 only & \autoref{thm:ladder:hurwitz} \\
-$1|10|16$ partition & Theorem & BAMLP Voronoi & \autoref{thm:foundations:partition} \\
-Lift $\cong\jalg$ & Theorem & 27 idempotent cuts & \autoref{thm:foundations:stone-lift} \\
-Orbit classification & Theorem & $N$, rank & \autoref{thm:foundations:orbits} \\
-Vacuum $=\mathrm{EIII}$ & Theorem & Coercivity & \autoref{thm:dynamics:vacuum} \\
-Potential from capacity & Theorem & Limit $V_{\mathrm{graph}}$ & \autoref{thm:dynamics:potential} \\
-$\mathbb{U}^\star$ fixed point & Theorem & Contraction & \autoref{thm:dynamics:universe} \\
-Unique coset metric & Theorem & Schur & \autoref{thm:spacetime:metric} \\
-Composite gauge & Theorem & Maurer--Cartan & \autoref{thm:gauge-gravity:composite} \\
-$U(1)^3$ anomaly $=0$ & Theorem & $16-80+64$ & \autoref{thm:gauge-gravity:gs} \\
-GS mixed anomaly & Theorem & Coeff.\ $-1$ & \autoref{thm:gauge-gravity:gs} \\
-$M_{\mathrm{Pl}}^2>0$ & Theorem & 28 scalars & \eqref{eq:gauge-gravity:planck} \\
-$b_0(3\,\mathrm{gen})=12$ & Theorem & $(88-24-28)/3$ & \autoref{thm:gauge-gravity:beta-g} \\
-$b_0(1\,\mathrm{gen})=26$ & Theorem & $(88-8-4)/3$ & \autoref{thm:gauge-gravity:beta-g} \\
-Asymptotic freedom & Theorem & $b_0>0$ & \autoref{thm:gauge-gravity:beta-g} \\
-SM gauge group & Theorem & Descent chain & \autoref{thm:sm:descent} \\
-Common CW mass & Theorem & Schur on $\mathfrak{m}$ & \autoref{thm:sm:radiative} \\
+Stone representation & Theorem & Standard & \S\ref{sec:foundations:axiomI} \\
+Hurwitz ladder & Theorem & dims $1,2,4,8$ & \ref{thm:ladder:hurwitz} \\
+$1|10|16$ partition & Prop. & Voronoi masses & \ref{prop:foundations:partition} \\
+Lift $\cong\jalg$ & Theorem & 27 coords & \ref{thm:foundations:stone-lift} \\
+Orbit classification & Theorem & rank, $N$ & \ref{thm:foundations:orbits} \\
+Potential from $\capacity$ & Theorem & limit & \ref{thm:dynamics:potential} \\
+EIII vacuum & Theorem & coercivity & \ref{thm:dynamics:vacuum} \\
+$\mathfrak{m}$ irreducible & Theorem & Schur & \ref{thm:spacetime:irrep} \\
+Unique coset metric & Theorem & charge pairing & \ref{thm:spacetime:metric} \\
+Composite gauge & Theorem & Maurer--Cartan & \ref{thm:gauge-gravity:composite} \\
+$U(1)^3$ anomaly $=0$ & Theorem & $16-80+64$ & \ref{thm:gauge-gravity:gs} \\
+Mixed GS anomaly & Theorem & coeff.\ $-1$ & \ref{thm:gauge-gravity:gs} \\
+$\MPl^2>0$ & Theorem & 28 scalars & \eqref{eq:gauge-gravity:planck} \\
+$b_0(3)=12$ & Theorem & \eqref{eq:gauge-gravity:b0} & \ref{thm:gauge-gravity:beta-g} \\
+Asymptotic freedom & Theorem & $b_0>0$ & \ref{thm:gauge-gravity:beta-g} \\
+CW mass degeneracy & Theorem & Schur & \ref{thm:sm:radiative} \\
 \midrule
-Soldering $(1,3)$ & Postulate & P1 & \autoref{post:spacetime:P1} \\
-Three families & Postulate & P3 & \autoref{post:sm:P3} \\
-GUT--Higgs/Yukawa & Postulate & P4 & \autoref{post:sm:P4} \\
-$\Lambda_{\mathrm{cc}}$ tuned & Postulate & CC counterterm & \autoref{sec:gauge-gravity:gravity} \\
+Soldering $(1,3)$, $d=4$ & Postulate & P1 & \ref{post:spacetime:P1} \\
+Chiral $\mathbf{16}$, 3 families & Postulate & P2--P3 & \S\ref{sec:sm:postulates} \\
+GUT--Higgs/Yukawa & Postulate & P4 & \ref{post:sm:P4} \\
+$\Lambda_{\mathrm{cc}}$ & Postulate & tuned & \S\ref{sec:gauge-gravity:gravity} \\
 \midrule
-$\kappa_\star=96\pi^2/5$ & Conjecture & 1-loop $\beta_\kappa$ & \autoref{conj:gauge-gravity:kappa} \\
-OS reflection positivity & Conjecture & Full $\sigma$-model & \autoref{sec:spacetime:time} \\
-Heterotic $h^1=3$ & Conjecture & String corr. & \autoref{rem:sm:heterotic} \\
+SM gauge (full masses) & Under P4 & descent & \ref{thm:sm:descent} \\
+$\kappa_\star=96\pi^2/5$ & Conjecture & 1-loop RG & \ref{conj:gauge-gravity:kappa} \\
+OS positivity & Conjecture & $\sigma$-model & \S\ref{sec:spacetime:time} \\
+Heterotic $h^1=3$ & Conjecture & string & \ref{rem:sm:heterotic} \\
 \bottomrule
 \end{tabular}
-\caption{Verification ledger: epistemic status of major SJET claims.}
+\caption{Epistemic ledger for SJET.}
 \label{tab:verification:ledger}
 \end{table}
 
@@ -56,49 +56,29 @@ Heterotic $h^1=3$ & Conjecture & String corr. & \autoref{rem:sm:heterotic} \\
 \label{sec:verification:algebra}
 %----------------------------------------------------------------------%
 
-\paragraph{Anomaly arithmetic.}
-Cubic: $16+10\cdot(-8)+64=0$. Mixed: $1\cdot1+(-2)\cdot1+4\cdot0=-1$,
-cancelled by GS.
+\paragraph{Anomalies.}
+Cubic: $16-80+64=0$. Mixed: $1-2+0=-1$ (GS).
 
 \paragraph{$\beta$-function.}
-$b_0=\tfrac{11}{3}(8)-\tfrac{4}{3}(2)(3)-\tfrac{1}{6}(2)(28)
-=\tfrac{88-24-28}{3}=12$.
+$b_0=(88-24-28)/3=12$; one generation: $(88-8-4)/3=26$.
 
-\paragraph{Branching dimensions.}
-$\dim\mathbf{78}=45+1+16+16=78$;
-$\dim\mathbf{27}=1+10+16=27$;
-$\dim\mathfrak{m}=16+16=32$.
-
-\paragraph{Mass count.}
-$32=28$ physical massive $+4$ soldering/gauge-protected.
-
-%----------------------------------------------------------------------%
-\subsection{Radiative mass}
-\label{sec:verification:mass}
-%----------------------------------------------------------------------%
-
-\begin{theorem}[Schur mass degeneracy]\label{thm:verification:schur}
-The one-loop Coleman--Weinberg potential restricted to $\mathfrak{m}$ has
-a single $H$-invariant eigenvalue. All $28$ physical coset scalars share
-mass $\mu$ at one loop.
-\end{theorem}
+\paragraph{Dimensions.}
+$45+1+16+16=78$; $1+10+16=27$; $16+16=32$; $28+4=32$.
 
 %----------------------------------------------------------------------%
 \subsection{Falsifiable predictions}
 \label{sec:verification:predictions}
 %----------------------------------------------------------------------%
 
-\begin{enumerate}[label=\textbf{P\arabic*.},leftmargin=*]
-  \item \textbf{Proton decay.} $\tau(p\to e^+\pi^0)\sim M_{\mathrm{GUT}}^4/
-    (\alpha_{\mathrm{GUT}}^2 m_p^5)$; Super-/Hyper-K bounds constrain
-    $M_{\mathrm{GUT}}\gtrsim10^{34}\,\mathrm{GeV}$.
-  \item \textbf{Neutrino masses.} Seesaw with $M_R\sim10^{14}\,\mathrm{GeV}$
-    gives $m_\nu\sim0.05\,\mathrm{eV}$, consistent with oscillation data.
-  \item \textbf{No fourth generation.} $SU(3)_F$ with exactly three copies;
-    a fourth would shift $b_0$ and destroy asymptotic-freedom window.
-  \item \textbf{Gravitational fixed point.} If $\kappa_\star$ is physical,
-    higher-curvature couplings flow to zero in the UV (testable via
-    effective-field-theory bounds on $R^2$ terms).
-  \item \textbf{Common coset mass.} All $28$ scalars degenerate at one loop;
-    split only from $H$-breaking effects below $M_{\mathrm{GUT}}$.
+\begin{enumerate}[label=\textbf{F\arabic*.},leftmargin=*]
+  \item \textbf{Proton decay.} $\tau(p\to e^+\pi^0)\sim\MGUT^4/(\alpha_{\mathrm{GUT}}^2 m_p^5)$;
+    Super-K/Hyper-K constrain $\MGUT\gtrsim10^{34}\,\mathrm{GeV}$.
+  \item \textbf{Neutrino mass scale.} Seesaw with $M_R\sim10^{14}\,\mathrm{GeV}$ gives
+    $m_\nu\sim0.05\,\mathrm{eV}$.
+  \item \textbf{No fourth generation.} A fourth $\mathbf{16}$ shifts $b_0$ and
+    threatens asymptotic freedom.
+  \item \textbf{Coset mass degeneracy.} One-loop CW mass $\mu$ on all $28$ scalars;
+    splittings only below $\MGUT$ from $H$-breaking.
+  \item \textbf{$R^2$ bounds.} If Conjecture~\ref{conj:gauge-gravity:kappa} holds,
+    higher-curvature couplings are suppressed in the UV.
 \end{enumerate}

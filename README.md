@@ -1,22 +1,16 @@
 # Stone–Jordan Exceptional Theory (SJET)
 
-A verifiable framework for fundamental physics, by Brandon Belna.
+A conditional unified framework in mathematical physics (Brandon Belna).
 
-SJET is a mathematically closed theory of everything built from three axioms:
-a profinite graph arena with Stone spectrum, an order parameter in the exceptional
-Jordan algebra \(J_3(\mathbb{O})\), and dynamics as the fixed point of a concave
-capacity functional. From these, the framework derives the \(E_6\)-invariant
-potential, vacuum selection on EIII, composite \(\mathrm{Spin}(10)\times U(1)\)
-gauge theory, induced gravitation, and Standard Model descent with three chiral
-families.
+SJET is an \(E_6\)/Albert-algebra–motivated **derivation-grade embedding** of gravitation and the Standard Model. Three axioms fix the profinite graph arena, the order parameter \(\Phi\in J_3(\mathbb{O})\), and capacity dynamics; postulates P1–P4 supply soldering, chiral matter, three families, and the GUT–Higgs sector. Major claims are labeled theorem / postulate / conjecture and checked in Section 8.
 
-## Repository layout
+## Layout
 
 | Path | Description |
 |------|-------------|
-| `sjet.tex` / `sjet.pdf` | Main manuscript (assembled from `.sjet-build/`) |
-| `.sjet-build/` | Modular LaTeX units and `assemble-sjet.sh` |
-| `old/` | Prior UCFT/BAMLP work (archived) |
+| `sjet.tex` / `sjet.pdf` | Main manuscript |
+| `.sjet-build/` | Modular units + `assemble-sjet.sh` |
+| `old/` | Archived UCFT/BAMLP work |
 
 ## Build
 
@@ -25,19 +19,14 @@ bash .sjet-build/assemble-sjet.sh
 toolbox run -c latex bash -lc 'cd /var/home/bbelna/ucft && latexmk -pdf -f sjet.tex'
 ```
 
-## Epistemic status
+## Epistemic summary
 
-| Category | Examples |
-|----------|----------|
-| **Theorem** | Stone lift \(\cong J_3(\mathbb{O})\), EIII vacuum, anomaly cancellation, \(b_0(3\,\mathrm{gen})=12\) |
-| **Derived** | Potential from BAMLP capacity dual, universe fixed point \(\mathbb{U}(\mathfrak{U}^\star)=\mathfrak{U}^\star\) |
-| **Postulate** | Soldering (P1), three families (P3), GUT–Higgs/Yukawa (P4) |
-| **Conjecture** | Gravitational UV fixed point \(\kappa_\star=96\pi^2/5\), heterotic correspondence |
-
-See Section 8 (Verification Ledger) in the manuscript for the full table.
+| Status | Content |
+|--------|---------|
+| **Theorem** | Potential identification, EIII vacuum, anomaly cancellation, \(b_0(3)=12\), \(\mathfrak{m}\) irreducibility |
+| **Postulate** | P1 soldering; P2–P4 matter/Higgs; \(\Lambda_{\mathrm{cc}}\) |
+| **Conjecture** | \(\kappa_\star=96\pi^2/5\); OS positivity; heterotic correspondence |
 
 ## Remote
 
-```text
-git@github.com:bbelna/ucft.git
-```
+`git@github.com:bbelna/ucft.git`
