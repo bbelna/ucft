@@ -128,8 +128,12 @@ inline_unit() {
 \maketitle
 
 \begin{abstract}
-We formulate Universal Coset Field Theory (UCFT) on the exceptional Jordan
-algebra $J_3(\mathbb O)$ with compact $E_6$ structure. Two axioms specify the
+We formulate Universal Coset Field Theory (UCFT) on a foundational graph--Stone
+substrate and the exceptional Jordan algebra $J_3(\mathbb O)$ with compact $E_6$
+structure. A pre-axiomatic layer (BAMLP: Barrier-Aware Metric--Laguerre
+Partitioning) posits a weighted cosmic graph, a division-algebra ladder
+$0\to\mathbb{R}\to\mathbb{C}\to\mathbb{H}\to\mathbb{O}$, and an exceptional
+cascade $0\to E_8\to E_8\times E_8\to E_6\to\cdots\to 0$. Two axioms specify the
 order parameter and quantum kinematics; six postulates \textbf{P1--P6} supply the
 $E_6$-invariant potential, vacuum manifold, Lorentzian soldering, chiral matter
 content, three generations, and GUT--Yukawa sector. Under these hypotheses we
@@ -148,9 +152,9 @@ collected in appendices.
 \end{abstract}
 
 \noindent\textbf{Keywords:}
-exceptional Jordan algebra; $E_6$ coset; induced gravity; $\mathrm{Spin}(10)$
-grand unification; Standard Model embedding; clock fields; heterotic
-correspondence.
+BAMLP; Stone spaces; graph universe; exceptional ladder; exceptional Jordan
+algebra; $E_6$ coset; induced gravity; $\mathrm{Spin}(10)$ grand unification;
+Standard Model embedding.
 
 \tableofcontents
 \clearpage
@@ -160,6 +164,7 @@ PREAMBLE
   echo '% Part: Foundations and the Master Chain'
   echo '%----------------------------------------------------------------------%'
   echo '\part{Foundations and the Master Chain}'
+  inline_unit unit-bamlp.tex
   inline_unit unit-master-chain.tex
   inline_unit unit-intro.tex
   inline_unit unit-axioms.tex
@@ -222,6 +227,11 @@ in the sections and algebraic appendices above. This section preserves stable
 cross-reference anchors for those computations.
 
 \begin{thebibliography}{99}
+
+\bibitem{BAMLP:2026}
+B.~Belna,
+Barrier-Aware Metric--Laguerre Partitioning,
+manuscript, 2026.
 
 \bibitem{Albert:1934}
 A.~A.~Albert,
