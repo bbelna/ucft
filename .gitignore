@@ -1,4 +1,4 @@
-# LaTeX build artifacts
+# LaTeX
 *.aux
 *.bbl
 *.blg
@@ -8,19 +8,10 @@
 *.out
 *.toc
 *.synctex.gz
-*.synctex(busy)
-*.nav
-*.snm
-*.vrb
-*.bcf
-*.run.xml
 
-# Editor / tooling
-.agents/
-.codex/
-*.bak
-*~
+# Python
+.venv/
+__pycache__/
 
 # OS
 .DS_Store
-Thumbs.db

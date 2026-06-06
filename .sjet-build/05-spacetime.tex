@@ -1,0 +1,73 @@
+%======================================================================%
+\section{Emergent Spacetime and Time}
+\label{sec:spacetime}
+%======================================================================%
+
+Four-dimensional Lorentzian spacetime is not assumed. It emerges from a
+soldering map (Postulate~P1) applied to the positive-definite coset metric
+and the indefinite cubic-norm structure of $\jalg$.
+
+%----------------------------------------------------------------------%
+\subsection{Coset geometry}
+\label{sec:spacetime:coset}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Unique coset metric]\label{thm:spacetime:metric}
+The restriction of the Killing form to
+$\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$ is the
+unique $H$-invariant positive-definite metric (Schur: real-irreducible of
+complex type; $U(1)$ charge forbids symmetric pairings). This is the target
+(kinetic) metric of the $\sigma$-model.
+\end{theorem}
+
+\begin{remark}
+The coset metric is \textbf{Euclidean}, not Lorentzian. Signature $(1,3)$
+enters through soldering, not through the Killing form.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Postulate P1: soldering and signature}
+\label{sec:spacetime:soldering}
+%----------------------------------------------------------------------%
+
+Inside $\jalg$, the $2\times2$ Hermitian-octonionic block satisfies
+$H_2(\Oct)\cong\R^{1,9}$ with determinant equal to the Minkowski norm and
+$\mathrm{SL}(2,\Oct)\cong\Spin(1,9)$.
+
+\begin{postulate}[Soldering and dimension, P1]\label{post:spacetime:P1}
+A soldering map identifies four clock-field frame directions $e^a_\mu$
+($a=0,1,2,3$) with a $4$-plane in $H_2(\Oct)$ carrying the Minkowski form
+$\eta_{ab}=\mathrm{diag}(-1,+1,+1,+1)$. The world manifold has
+dimension $d=4$. The vierbein $e^a_\mu$ emerges dynamically as the
+pull-back of the Maurer--Cartan $\mathfrak{m}$-component
+(\autoref{sec:gauge-gravity}).
+\end{postulate}
+
+\begin{theorem}[Emergent vierbein]\label{thm:spacetime:vierbein}
+Let $g(x)\in\E{6}$ be a coset section with Maurer--Cartan decomposition
+$g^{-1}\partial_\mu g=A_\mu+e_\mu$. The $\mathfrak{m}$-component $e_\mu$
+defines a composite vierbein. Four linearly independent components solder to
+$\eta_{\mu\nu}=e^a_\mu e^b_\nu\eta_{ab}$ with signature $(-,+,+,+)$.
+\end{theorem}
+
+%----------------------------------------------------------------------%
+\subsection{Emergent time}
+\label{sec:spacetime:time}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Page--Wootters clock]\label{thm:spacetime:time}
+Induced gravity (\autoref{sec:gauge-gravity}) implies the Hamiltonian
+constraint $H_{\mathrm{phys}}|\psi\rangle=0$ on physical states. The
+timelike clock field $\phi^0$ (the soldered $a=0$ direction) serves as a
+Page--Wootters internal clock: conditional evolution
+$U(\tau)=e^{-iH_\tau\tau}$ on physical states in the semiclassical regime
+recovers standard quantum dynamics. Global unitary time is \textbf{derived},
+not axiomatized.
+\end{theorem}
+
+\begin{remark}[Osterwalder--Schrader]
+The Euclidean functional integral over $\Phi$ is the generating functional of
+correlators. Lorentzian, unitary dynamics is recovered by OS reconstruction
+along the timelike clock $\phi^0$, provided reflection positivity holds
+(\textbf{conjecture} for the full $\sigma$-model).
+\end{remark}

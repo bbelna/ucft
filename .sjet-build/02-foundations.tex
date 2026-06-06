@@ -1,0 +1,164 @@
+%======================================================================%
+\section{Foundations: Graph, Stone, and the Albert Arena}
+\label{sec:foundations}
+%======================================================================%
+
+SJET rests on three axioms stated in this section and
+\autoref{sec:dynamics}. Axiom~I fixes the discrete arena; Axiom~II fixes
+the order parameter; Axiom~III (in \autoref{sec:dynamics}) fixes dynamics.
+All further structure is \emph{derived} (follows by construction) or
+\emph{postulated} (named once, used thereafter).
+
+%----------------------------------------------------------------------%
+\subsection{Axiom I: the profinite graph arena}
+\label{sec:foundations:axiomI}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Weighted graph]\label{def:foundations:graph}
+A \emph{weighted graph} is a triple $\mathcal{G}=(V,E,w)$ with finite
+vertex set $V$, edge set $E\subseteq\{\{a,b\}:a\neq b\}$, and symmetric
+weights $w_{ab}=w_{ba}>0$ for $\{a,b\}\in E$. The \emph{workload measure}
+is a probability $\mu=\sum_{a\in V}p_a\delta_a$ with $p_a>0$,
+$\sum_a p_a=1$.
+\end{definition}
+
+\begin{definition}[Graph Boolean algebra and Stone spectrum]
+\label{def:foundations:stone}
+For $\mathcal{G}$, let $\mathcal{B}(\mathcal{G})$ be the Boolean algebra of
+vertex cuts (subsets $S\subseteq V$ with complement $S^c$ also connected in
+the induced subgraph). The \emph{Stone spectrum}
+$\mathrm{Spec}(\mathcal{B}(\mathcal{G}))$ is the profinite compact Hausdorff
+space of ultrafilters on $\mathcal{B}(\mathcal{G})$.
+\end{definition}
+
+\begin{theorem}[Stone duality]\label{thm:foundations:stone}
+The assignment $\mathcal{G}\mapsto\mathrm{Spec}(\mathcal{B}(\mathcal{G}))$
+is contravariantly equivalent to the category of Boolean algebras. For a
+tower of refinements $\mathcal{G}_0\leftarrow\mathcal{G}_1\leftarrow\cdots$
+the inverse limit $S_\infty=\varprojlim_n\mathrm{Spec}(\mathcal{B}(\mathcal{G}_n))$
+is nonempty, compact, and totally disconnected.
+\end{theorem}
+
+\begin{axiom}[Profinite graph arena]\label{ax:foundations:I}
+Physical configuration space is a weighted graph $\mathcal{G}$ with Stone
+spectrum $S=\mathrm{Spec}(\mathcal{B}(\mathcal{G}))$. Observables are
+functions on $S$ (or on its clopen cylinder algebra). Dynamics is defined
+on the profinite limit of a refinement tower stabilizing at dimension $27$.
+\end{axiom}
+
+%----------------------------------------------------------------------%
+\subsection{The Albert--Cayley graph}
+\label{sec:foundations:albert-graph}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Albert--Cayley graph]\label{def:foundations:albert}
+Fix the standard basis $\{e_a\}_{a=1}^{27}$ of $\jalg$. The
+\emph{Albert--Cayley graph} $\mathcal{G}_{\mathrm{Albert}}=(V,E,w)$ has
+$V=\{1,\ldots,27\}$,
+\[
+  E=\bigl\{\{a,b\}:a\neq b,\ 
+  \exists\,X\in\jalg\ \text{with}\ 
+  \partial_a\partial_b\,\Tr(X^2)\neq0\bigr\},
+\]
+edge weights $w_{ab}=\|\partial_a\partial_b\,\Tr(X^2)\|$, and uniform
+$\mu=\sum_{a=1}^{27}\tfrac{1}{27}\delta_a$.
+\end{definition}
+
+Three territory generators $z_1,z_{10},z_{16}$ label the
+$\Spin(10)\times U(1)$ sectors of
+$\mathbf{27}=\mathbf{1}_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}$.
+Target masses $m_i=\dim(\mathrm{irrep}_i)/27$ give
+$(m_1,m_{10},m_{16})=(1/27,10/27,16/27)$.
+
+\begin{theorem}[BAMLP partition]\label{thm:foundations:partition}
+Under cost $c_i(a)=d_{\mathcal{G}}(a,z_i)^2$, the capacity-maximizing
+assignment partitions $V$ into cells of sizes $1$, $10$, and $16$, matching
+the $\mathbf{27}$ branching. The maximizer $\omega^\star\in\mathbb{R}^3$ is
+unique up to the gauge $\sum_i\omega_i=0$.
+\end{theorem}
+
+%----------------------------------------------------------------------%
+\subsection{Axiom II: the order parameter}
+\label{sec:foundations:axiomII}
+%----------------------------------------------------------------------%
+
+The exceptional Jordan (Albert) algebra is
+\[
+  \jalg=\{X\in M_3(\Oct): X=X^\dagger\},\quad
+  X\circ Y=\tfrac12(XY+YX),\quad \dim_{\R}\jalg=27.
+\]
+Its reduced structure group (preserving the cubic norm $N(X)=\det_{\Oct}X$ up
+to a character) is $\E{6}$; the $27$ is the matter representation.
+
+\begin{axiom}[Order parameter]\label{ax:foundations:II}
+The fundamental order parameter is a field $\Phi$ valued in $\jalg$,
+transforming in the $\mathbf{27}$ of compact $\E{6}$. Locally,
+$\Phi:U\to\jalg$.
+\end{axiom}
+
+\begin{theorem}[Invariants and orbit classification]\label{thm:foundations:orbits}
+Only $N$ is $\E{6}$-invariant (up to character); $Q(X)=\Tr(X^2)$ is
+$F_4$-invariant only. Real $\E{6}$-orbits are classified by
+$\rank X\in\{0,1,2,3\}$ and $N(X)$. Moreover
+\[
+  \rank X\leq1\iff X^{\#}=0,\quad
+  \rank X\leq2\iff N(X)=0,\quad
+  \rank X=3\iff N(X)\neq0,
+\]
+where $X^{\#}=\nabla N(X)$ is the $\E{6}$-covariant sharp map.
+\end{theorem}
+
+\begin{remark}[Real form]\label{rem:foundations:realform}
+Dynamics uses \textbf{compact} $\E{6}$ (equivalently $E_{6(-14)}$, maximal
+compact $H=\Spin(10)\times U(1)$). The split form $E_{6(-26)}$ classifies
+real orbits only. On the compact form the coset metric is positive-definite.
+\end{remark}
+
+\begin{theorem}[Vacuum manifold]\label{thm:foundations:eiii}
+The symmetry-breaking vacuum is the rank-one primitive-idempotent orbit
+\begin{equation}\label{eq:foundations:eiii}
+  \mathcal{M}=\frac{\E{6}}{\Spin(10)\times U(1)}=\mathrm{EIII},
+  \qquad \dim_{\R}\mathcal{M}=32.
+\end{equation}
+\end{theorem}
+
+The adjoint branches under $H$ as
+\begin{equation}\label{eq:foundations:adjoint}
+  \mathbf{78}=\mathbf{45}_0\oplus\mathbf{1}_0
+  \oplus\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3},
+\end{equation}
+and the matter representation as
+\begin{equation}\label{eq:foundations:27branch}
+  \mathbf{27}=\mathbf{1}_{+4}\oplus\mathbf{10}_{-2}\oplus\mathbf{16}_{+1}.
+\end{equation}
+The coset tangent space is
+$\mathfrak{m}=\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}$ (32 real
+dimensions, real-irreducible of complex type).
+
+%----------------------------------------------------------------------%
+\subsection{Stone lift to the Albert algebra}
+\label{sec:foundations:lift}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Profinite Stone limit]\label{thm:foundations:stone-lift}
+Let $\{\mathcal{G}_n\}$ be Albert--Cayley refinements preserving the
+$1|10|16$ partition. The profinite limit
+$S_\infty=\varprojlim_n\mathrm{Spec}(\mathcal{B}(\mathcal{G}_n))$ embeds
+into the Jordan--von Neumann algebra generated by the $27$ coordinates of
+$\jalg$. The lift
+\[
+  \mathrm{Lift}(\mathcal{G}_\infty)\;\cong\;\jalg
+\]
+identifies graph observables with order-parameter coordinates.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Each refinement preserves \autoref{thm:foundations:partition}; the inverse
+limit is nonempty and compact by \autoref{thm:foundations:stone}. The $27$
+diagonal and off-diagonal coordinates are minimal nonzero idempotent cuts;
+Hurwitz's theorem (\autoref{thm:ladder:hurwitz}) forbids further normed
+division-algebra extension, so the tower stabilizes at dimension $27$.
+\end{proof}
+
+This theorem closes the identification between the discrete arena
+(Axiom~I) and the Albert arena (Axiom~II).

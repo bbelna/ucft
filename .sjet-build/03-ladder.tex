@@ -1,0 +1,96 @@
+%======================================================================%
+\section{The Division and Exceptional Ladders}
+\label{sec:ladder}
+%======================================================================%
+
+The profinite graph tower carries two intertwined arithmetic structures:
+the Hurwitz division-algebra ladder and the exceptional Lie-group cascade.
+Both are \textbf{derived} from standard mathematics; neither is postulated.
+
+%----------------------------------------------------------------------%
+\subsection{The Hurwitz ladder}
+\label{sec:ladder:hurwitz}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Hurwitz]\label{thm:ladder:hurwitz}
+The only finite-dimensional normed division algebras over $\R$ are
+\[
+  0\;\longrightarrow\;\R\;\longrightarrow\;\C\;\longrightarrow\;\Quat
+  \;\longrightarrow\;\Oct,
+\]
+with dimensions $1,2,4,8$. No further extension exists.
+\end{theorem}
+
+\begin{definition}[Division ladder on Stone spectra]
+\label{def:ladder:division}
+Associate to each rung $D\in\{0,\R,\C,\Quat,\Oct\}$ a Stone spectrum
+$S_D=\mathrm{Spec}(\mathcal{B}(\mathcal{G}_D))$ with
+$\dim S_D=\dim D$. Refinement maps
+$S_0\leftarrow S_{\R}\leftarrow S_{\C}\leftarrow S_{\Quat}\leftarrow S_{\Oct}$
+are quotient maps of Boolean algebras induced by norm-preserving inclusions.
+\end{definition}
+
+\begin{proposition}[Albert algebra as terminal object]
+\label{prop:ladder:terminal}
+The $3\times3$ Hermitian matrices over $\Oct$,
+$\jalg=H_3(\Oct)$, are the unique formally real Jordan algebra whose
+off-diagonal entries carry the octonionic multiplication. The Stone lift
+(\autoref{thm:foundations:stone-lift}) identifies
+$S_\infty\cong S_{\Oct}$ at the $27$-dimensional terminal rung.
+\end{proposition}
+
+%----------------------------------------------------------------------%
+\subsection{The exceptional cascade}
+\label{sec:ladder:exceptional}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Exceptional cascade]\label{def:ladder:cascade}
+The \emph{exceptional cascade} is the chain of maximal symmetric-space
+reductions
+\begin{equation}\label{eq:ladder:cascade}
+  \E{8}\;\longrightarrow\;\E{8}\times\E{8}\;\longrightarrow\;\E{6}
+  \;\longrightarrow\;\E{5}\;\longrightarrow\;\E{4}\;\longrightarrow\;0,
+\end{equation}
+with intermediate steps $\E{7}$, $F_4$, $G_2$ realized as stabilizers of
+successive norm and determinant data on the Albert tower.
+\end{definition}
+
+\begin{theorem}[Cascade branchings at $\E{6}$]\label{thm:ladder:e6branch}
+At the $\E{6}$ node, the matter representation decomposes under
+$H=\Spin(10)\times U(1)$ as \eqref{eq:foundations:27branch}, and the
+adjoint as \eqref{eq:foundations:adjoint}. The coset
+$\E{6}/H$ is the Hermitian symmetric space EIII of real dimension $32$.
+\end{theorem}
+
+\begin{remark}[Connection to heterotic string theory]
+\label{rem:ladder:heterotic}
+The cascade $\E{8}\times\E{8}\to\E{6}$ parallels the gauge group of
+heterotic string theory. The $\mathbb{Z}_5$ orbifold quintic
+$\hat Q=Q/\mathbb{Z}_5$ gives $h^1(\hat Q,V_{16})=3$, corroborating three
+generations (\autoref{rem:sm:heterotic}). This correspondence is a
+\textbf{conjecture}, not a derivation.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Capacity functional (preview)}
+\label{sec:ladder:capacity}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Entropy and capacity]\label{def:ladder:capacity}
+For $\omega\in\mathbb{R}^k$ on $\mathcal{G}$ with workload $\mu$ and costs
+$c_i(a)$, define
+\begin{equation}\label{eq:ladder:phi}
+  \Phi(\omega)=-\sum_{a\in V}\mu(a)\log\!\Bigl(\sum_{i=1}^k
+  e^{c_i(a)-\omega_i}\Bigr),
+\end{equation}
+the negative entropy of the Gibbs distribution at dual prices $\omega$.
+\end{definition}
+
+\begin{theorem}[Concavity and existence]\label{thm:ladder:concave}
+$\Phi$ is strictly concave on $\{\omega:\sum_i\omega_i=0\}$. For targets
+$m_i>0$ with $\sum_i m_i=1$, there exists a unique maximizer
+$\omega^\star$ with $\partial\Phi/\partial\omega_i=m_i$.
+\end{theorem}
+
+The capacity functional is the discrete shadow of the $\E{6}$-invariant
+potential derived in \autoref{sec:dynamics}.
