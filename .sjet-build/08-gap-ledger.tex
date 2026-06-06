@@ -21,12 +21,15 @@ observer theory; routes name the above--below mechanism.
 \midrule
 P1 &
   Lorentzian soldering, $d=4$ &
-  \textbf{Derived} &
+  \textbf{Derived} (partial uniqueness) &
   \emph{Below:} mirror-fixed $\Quat\subset\Oct$ at Hurwitz terminal
   ($n=4$) supplies $H_2(\Quat)$ and the clock block
-  (Definition~\ref{def:soldering}); \emph{above:} quaternionic sector of
-  $\mathfrak{U}^\star$ capacity flow. Functorial uniqueness remains open
-  (Open Problem~\textbf{O2} in Section~\ref{sec:conclusions}). \\
+  (Definition~\ref{def:soldering}); Lemma~\ref{lem:quat-F4} fixes the
+  $\iota$-local embedding; Proposition~\ref{prop:soldering-clock} fixes
+  the timelike axis $\orderparam^0$. \emph{Above:} quaternionic sector of
+  $\mathfrak{U}^\star$ capacity flow. Residual: functorial transport on
+  $n=6,7,8$ (Conj.~\ref{conj:soldering-unique},
+  Remark~\ref{rem:soldering-full-gap}; Open Problem~\textbf{O2}). \\
 \addlinespace
 P2 &
   Chiral matter &
@@ -40,10 +43,11 @@ P2 &
 P3 &
   Three families &
   \textbf{Eliminated} &
-  \emph{Below:} Lefschetz fixed-point theorem,
-  $\dim H^1(\hat Q,V_{16})^{\sigma=-1}=3$
-  (Theorem~\ref{thm:observer-fp}); minimal heterotic rung
-  (Proposition~\ref{prop:climb:minimal-heterotic}).
+  \emph{Below:} cellular count Lemma~\ref{lem:cellular} (full proof,
+  Appendix~\ref{sec:appendix:quotient}), Stone lift
+  (Proposition~\ref{prop:stone-lift}), Lefschetz index
+  (Theorem~\ref{thm:mirror-index}, Theorem~\ref{thm:observer-fp}); minimal
+  heterotic rung (Proposition~\ref{prop:climb:minimal-heterotic}).
   \emph{Above:} three diagonal directions of $\mathfrak{d}\subset\jalg$
   and capacity weights $(1/27,10/27,16/27)$
   (Proposition~\ref{prop:above-below}). \\
@@ -59,25 +63,35 @@ P3$'$ &
 P4 &
   GUT--Higgs and Yukawa &
   \textbf{Conjecture} &
-  \emph{Above:} gradient flow of $V$ on EIII
-  (Conjecture~\ref{conj:breaking-derived}); \emph{below:}
-  $\iota$-restricted chiral breaking via $\Pi_{\sigma=-1}$
-  (Theorem~\ref{thm:breaking-e6so10}, Section~\ref{sec:physics:breaking}). \\
+  \emph{Above:} staged chain \eqref{eq:breaking-chain} with
+  $\mathbf{45}_H/\mathbf{126}_H/\mathbf{10}_H$ labels
+  (Lemma~\ref{lem:breaking-hess-spin10},
+  Proposition~\ref{prop:breaking-higgs-labels},
+  Conjecture~\ref{conj:breaking-derived}); \emph{below:}
+  $\E{6}\!\to\!\Spin(10)$ (Thm.~\ref{thm:breaking-e6so10}),
+  $\Spin(10)\!\to\!\mathrm{SU}(5)$ from $\iota{=}3$ (Thm.~\ref{thm:breaking-so10su5}),
+  electroweak from $\mathbf{10}_H$ (Thm.~\ref{thm:breaking-ew});
+  $\mathrm{SU}(5)\!\to\!$SM via $\mathbf{126}_H$, cellular Yukawa
+  (Lemma~\ref{lem:yukawa-cellular}), and full matrices remain open
+  (Conjecture~\ref{conj:yukawa-full}). \\
 \addlinespace
 P5 &
   Nonperturbative reflection positivity &
   \textbf{Conjecture} &
   Semiclassical RP on EIII is \textbf{derived}
-  (Theorem~\ref{thm:rp}); full OS reconstruction remains
-  Conjecture~\ref{conj:rp}. The below-level gap is unitary Lorentzian
-  completion beyond the soldered semiclassical regime. \\
+  (Theorem~\ref{thm:rp}); Proposition~\ref{prop:sigma-measure} and
+  Lemma~\ref{lem:goldstone-sigma} reduce full OS reconstruction to RP of
+  $d\mu_{\Gamma_{-1}}$ (Conjecture~\ref{conj:rp}). The below-level gap is
+  nonperturbative verification of \eqref{eq:gamma-split} with gauge measure. \\
 \addlinespace
 CC &
   Cosmological constant &
   \textbf{Conjecture} &
   Proposition~\ref{prop:cc-nogo}: not derivable from void--mirror alone.
-  Target: Conjecture~\ref{conj:cc-sequester} routes $\Lambda_{\mathrm{cc}}$
-  to the $\sigma=+1$ mirror-partner sector at $\kappa_\star$
+  Proposition~\ref{prop:cc-decouple} gives
+  $\beta_{\Lambda_{\mathrm{cc}}}|_{\sigma=-1}=0$ when $\Lambda_{\mathrm{cc}}$
+  couples only to $\sigma=+1$ modes; Conjecture~\ref{conj:cc-sequester}
+  targets derivation of that projection at $\kappa_\star$
   (Theorem~\ref{thm:duality}). \\
 \bottomrule
 \end{tabular}

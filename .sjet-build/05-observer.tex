@@ -256,19 +256,65 @@ collapse above determines the admissible time range $I_\iota$ below.
 
 \begin{proof}[Proof sketch]
 Existence of $g_\iota$ is standard gradient flow of $V$ on the
-$\iota$-restricted coset. Functoriality follows because
+$\iota$-restricted coset; uniqueness up to reparametrization on each sector
+follows from Proposition~\ref{prop:lifetime-flow-unique} under convex $V$.
+Functoriality follows because
 $\mathrm{Bal}_{\mathcal{C}}$ at $n=8$ fixes $\omega^\star$ and hence the
 initial datum $\orderparam_\star|_\iota$; soldering
 (Definition~\ref{def:soldering}) supplies the clock direction
 $\partial_{\tau_\iota}\sigma_{\mathrm{sol}}\subset H_2(\Quat)$.
 \end{proof}
 
+\begin{proposition}[Gradient-flow uniqueness on the $\iota$-sector]
+\label{prop:lifetime-flow-unique}
+Fix $\iota\in\mathcal{I}$ and suppose $V|_{\mathcal{S}_\iota}$ is strictly
+convex along $\iota$-restricted coset directions and
+$\Hess_\iota V(\orderparam_\star)\succ 0$ on the massive complement of the
+soldering block (as after Coleman--Weinberg lifting in
+Lemma~\ref{lem:breaking-hess}). Then for initial datum
+$g_\iota(\tau_{\mathrm{birth}})=\orderparam_\star|_\iota$, any two admitted
+solutions of \eqref{eq:lifetime-admitted} on a common interval differ only
+by an orientation-preserving reparametrization of $\tau_\iota$. The soldering
+clock term $\partial_{\tau_\iota}\sigma_{\mathrm{sol}}|_{H_2(\Quat)}$ is
+tangent to the $4$-dimensional block and does not affect uniqueness of the
+coset trajectory in the $28$ massive directions.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+Write $g_\iota=(g_\iota^{\mathrm{cos}},g_\iota^{\mathrm{sol}})$ for the
+split into coset and soldering components. Strict convexity of
+$V|_{\mathcal{S}_\iota}$ in the coset directions yields a unique gradient
+trajectory $g_\iota^{\mathrm{cos}}$ for each initial datum; standard
+arguments for strictly convex functionals on Hilbert manifolds give uniqueness
+up to time reparametrization when the velocity norm is fixed along the flow.
+The soldering term is independent of $\nabla V$ on the coset complement once
+$\sigma_{\mathrm{sol}}$ is fixed (Lemma~\ref{lem:quat-F4}), so it determines
+$\tau_\iota$ only modulo the same reparametrization class.
+\end{proof}
+
 \begin{conjecture}[Uniqueness of lifetime chart]\label{conj:lifetime-unique}
 Given $\iota$ and $\orderparam_\star|_\iota$, the lifetime chart
-$(\tau_\iota,g_\iota)$ is unique up to reparametrization of $\tau_\iota$ among
-all $F_4$-equivariant flows compatible with mirror functoriality and the
-above--below correspondence \eqref{eq:above-below}.
+$(\tau_\iota,g_\iota)$ is unique up to reparametrization of $\tau_\iota$ on
+the $\iota$-sector once $V|_{\mathcal{S}_\iota}$ is strictly convex as in
+Proposition~\ref{prop:lifetime-flow-unique}. The residual conjecture is
+\emph{functorial stability}: the same chart class is selected by mirror
+descent $\E{8}\times\E{8}\to\E{6}$ and is compatible with $F_4$ transport on
+exceptional rungs $n\leq8$, without branching into a second admissible flow
+on $\mathcal{S}_\iota$.
 \end{conjecture}
+
+\begin{remark}[Residual gap for the full lifetime theorem]
+\label{rem:lifetime-full-gap}
+Proposition~\ref{prop:lifetime-flow-unique} settles uniqueness on each
+$\iota$-sector under the convexity hypothesis satisfied in the radiatively
+gapped regime of Theorem~\ref{thm:rp}. What remains for a \emph{complete}
+functorial theorem is: (i)~extend uniqueness to the tree-level massless
+sector and non-convex saddle regimes of $V$; (ii)~prove that mirror descent
+preserves the chart class across $n=7\to8$; and (iii)~match
+reparametrizations of $\tau_\iota$ with the soldering clock of
+Proposition~\ref{prop:soldering-clock} on all of $\mathcal{S}_\iota$. Open
+Problem~\textbf{O1} is thereby reduced to these global transport steps.
+\end{remark}
 
 \begin{remark}[Arbitrary input and determinism]
 The void and mirror fix the observer \emph{slot space} $\mathcal{I}$ and the

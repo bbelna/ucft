@@ -7,8 +7,9 @@ inline() { echo "% --- $1 ---"; cat "$BUILD/$1"; echo "% --- end $1 ---"; }
 {
   cat "$BUILD/preamble.tex"
   for u in 01-introduction.tex 02-mirror.tex 03-climb.tex 04-universe.tex \
-           05-observer.tex 06-physics.tex 09-predictions.tex \
-           07-conclusions.tex 08-gap-ledger.tex appendix.tex; do
+           05-observer.tex 06-physics.tex 10-yukawa.tex 11-flavon-rg.tex \
+           12-scales.tex 09-predictions.tex 07-conclusions.tex \
+           08-gap-ledger.tex appendix.tex; do
     inline "$u"
   done
   cat "$BUILD/bibliography.tex"

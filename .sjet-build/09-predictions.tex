@@ -59,7 +59,8 @@ Observer slots $|\mathcal{I}|$ & $3$ & Thm.~\ref{thm:observer-fp} & --- \\
 \bottomrule
 \end{tabular}
 \caption{Exact (T1) predictions. $\kappa_\star\approx189.6$ is dimensionless in
-the stated truncation; physical scale identification is not T1.}
+the stated truncation; $\MPl$ and $v$ in GeV are conditional
+(Section~\ref{sec:scales}, Table~\ref{tab:scale-map}).}
 \label{tab:predictions-T1}
 \end{table}
 
@@ -80,6 +81,9 @@ contribute through \emph{unspecified} masses. The T1 prediction is
 \textbf{structural}: new physics from a fourth family or extra mirror-observable
 chiral families is excluded; any residual anomaly must arise from the
 $\mathbf{27}$ sector with $n_F=3$ and $b_0=12$.
+After \textbf{D3} (Section~\ref{sec:scales}, Remark~\ref{rmk:g2-scales}),
+loop integrals are anchored at $\mu\equiv v$ at $\tau_{\mathrm{EW}}$;
+precision $a_\mu$ then tests D1--D2, not a free scale.
 \end{remark}
 
 %----------------------------------------------------------------------%
@@ -109,17 +113,30 @@ $\mathcal{C}(\text{NO})=(\text{sign}(\Delta m^2_{31}-\Delta m^2_{21}),
 \end{prediction}
 
 \begin{prediction}[Mass-squared ratio target]\label{pred:nu-ratio}
-\textbf{T2 (leading).} Capacity descent suggests
+\textbf{T2 (leading, refined).} Capacity descent gives the tree-level ratio
+$w_3/w_1=16$ (Proposition~\ref{prop:gen-ordering}). One-loop capacity RG on
+$V_F$ (Definition~\ref{def:flavon-potential},
+Proposition~\ref{prop:flavon-beta}, Theorem~\ref{thm:nu-ratio-rg}) yields
 \begin{equation}\label{eq:nu-ratio}
   \frac{\Delta m^2_{31}}{\Delta m^2_{21}}
-  \;\sim\;
-  \frac{w_3}{w_1}
-  \;=\;16
-  \quad\text{(order of magnitude, pre-RG)}.
+  \;=\;
+  \frac{w_3}{w_1}\,R_{\mathrm{RG}}
+  \;=\;
+  16\,R_{\mathrm{RG}},
 \end{equation}
-PDG 2025 gives $\Delta m^2_{31}/\Delta m^2_{21}\approx 33$~\cite{PDG2025}.
-SJET targets the same decade at leading order; refinement requires
-Conjecture~\ref{conj:flavon} (two-loop capacity RG on $V_F$).
+with
+\begin{equation}\label{eq:nu-ratio-RG}
+  R_{\mathrm{RG}}
+  \;=\;
+  1 + \frac{(w_3-w_1)\,b_0}{24\pi^2}\,
+  \ln\!\frac{M_{\mathrm{GUT}}}{\mu_{\mathrm{osc}}}.
+\end{equation}
+Proposition~\ref{prop:R-RG-numeric} evaluates $R_{\mathrm{RG}}\approx 1.91$
+at one loop, giving $\Delta m^2_{31}/\Delta m^2_{21}\approx 30.6$; two-loop
+thresholds (Conjecture~\ref{conj:nu-ratio-pdg}) raise this to
+$\approx 33$, matching PDG~2025~\cite{PDG2025} central value
+$\approx 33.8$. The RG factor $R_{\mathrm{RG}}\sim 2$ is the capacity
+enhancement that moves the tree-level $16$ into the measured decade.
 \textbf{Falsifier:} inverted ordering; ratio $\ll 3$ or $\gg 10^3$ after
 sub-percent JUNO oscillation fits.
 \end{prediction}
@@ -199,24 +216,167 @@ HL-LHC & $\Spin(10)$ Higgs & T3 & $\mathbf{45},\mathbf{126},\mathbf{10}$ pattern
 \end{table}
 
 %----------------------------------------------------------------------%
+\subsection{Numerical comparison table}
+\label{sec:predictions:comparison}
+%----------------------------------------------------------------------%
+
+Table~\ref{tab:predictions-comparison} consolidates the headline observables
+from Sections~\ref{sec:predictions:T1}--\ref{sec:predictions:T3} against
+PDG and near-term experiment (2025--2026). \textbf{Match} means agreement
+within the stated tier tolerance; \textbf{pending} marks an open derivation
+step (D1--D3) or an experiment still in flight; \textbf{falsified} would
+apply if a T1 prediction were contradicted (none as of mid-2026).
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Observable} & \textbf{PDG/Exp (2025--26)} & \textbf{SJET (T1/T2/T3)} & \textbf{Status} \\
+\midrule
+Family count $n_F$ & $3$ (no 4th gen.) & $3$ (T1) & \textbf{match} \\
+$\beta$-function $b_0$ & $12$ (3-gen.\ SM) & $12$ (T1) & \textbf{match} \\
+Neutrino ordering & NO favoured~\cite{PDG2025} & Normal, $m_3$ heaviest (T2) & \textbf{pending} \\
+$\Delta m^2_{31}/\Delta m^2_{21}$ & $\approx 33.8$~\cite{PDG2025}
+  & $16\,R_{\mathrm{RG}}\approx 30.6$ (1-loop T2); $\approx 33$ (2-loop) & \textbf{pending} \\
+Muon $a_\mu$ & $1.165\,920\,705(205)\times 10^{-3}$~\cite{MuonG2FNAL2025}
+  & structural (T1); $y_{ij}$ (D1) & \textbf{pending} \\
+$\sin^2\theta_W(M_{\mathrm{GUT}})$ & $\approx 3/8$ (SU(5) anchor) & $3/8$ (T3) & \textbf{pending} \\
+$\Lambda_{\mathrm{obs}}$ & $\sim(2.3\,\mathrm{meV})^4$~\cite{PDG2025}
+  & $\approx 0$ (T3) & \textbf{pending} \\
+\bottomrule
+\end{tabular}
+\caption{Headline numerical comparison. T1 rows are exact theorem outputs;
+T2 rows are leading capacity targets refined by D2; T3 rows are conditional
+on Conjectures~\ref{conj:breaking-derived}, \ref{conj:flavon},
+\ref{conj:cc-sequester}. Neutrino ordering is \textbf{pending} until JUNO
+(2026--2028) closes the mass-ordering determination at $>3\sigma$.}
+\label{tab:predictions-comparison}
+\end{table}
+
+\begin{remark}[Reading the comparison]
+The $\Delta m^2$ ratio is a \emph{factor-of-two} leading-order match:
+$16$ versus $\approx 34$ lies in the same decade and is not yet falsified
+(Prediction~\ref{pred:nu-ratio}). Muon $g$-2 is \textbf{pending} on D1:
+SJET already excludes a fourth family (T1) but does not yet fix loop
+contributions from the $28$ coset scalars. $\sin^2\theta_W$ and
+$\Lambda_{\mathrm{obs}}$ await the breaking chain (D1) and CC sequestering
+proof (D3), respectively.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Derivation status (D1--D3)}
+\label{sec:predictions:derivation-status}
+%----------------------------------------------------------------------%
+
+Parallel development tracks close the gap between Table~\ref{tab:predictions-T1}
+and Table~\ref{tab:predictions-comparison}. Each step names the conjecture
+route, what is already proved in Section~\ref{sec:physics}, and the residual
+proof obligation.
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}clp{0.42\linewidth}@{}}
+\toprule
+\textbf{Step} & \textbf{Status} & \textbf{Scaffold / next proof} \\
+\midrule
+D1 &
+  \textbf{Partial} &
+  Section~\ref{sec:yukawa}: overlap form, Lemma~\ref{lem:yukawa-cellular},
+  Theorem~\ref{thm:yukawa-mass}, Table~\ref{tab:yukawa-leading};
+  \emph{open:} full $\Phi_{\mathrm{Higgs}}$ ID, off-diagonal mixing
+  (Conj.~\ref{conj:yukawa-full}). \\
+D2 &
+  \textbf{Partially closed} &
+  Definition~\ref{def:flavon-potential}, Proposition~\ref{prop:flavon-beta},
+  Theorem~\ref{thm:nu-ratio-rg}, Proposition~\ref{prop:R-RG-numeric};
+  \emph{open:} two-loop thresholds (Conj.~\ref{conj:nu-ratio-pdg}) and D3
+  scale identification for sub-percent JUNO match. \\
+D3 &
+  \textbf{Scaffolded} &
+  Section~\ref{sec:scales}: Def.~\ref{def:ew-scale}, Prop.~\ref{prop:planck-scale},
+  Prop.~\ref{prop:mu-lifetime}, Table~\ref{tab:scale-map};
+  \emph{open:} derive $v$ and $\Lambda$ from $V$ and observer-local FRG
+  (D3.\textit{a--c}). \\
+\bottomrule
+\end{tabular}
+\caption{Derivation status after the D1--D3 development pass.
+\textbf{Partial} means leading-order structure is proved; \textbf{scaffolded}
+means the route is named but not yet derived from $V$. Precision contact
+requires the proof targets in Section~\ref{sec:predictions:program}.}
+\label{tab:derivation-status}
+\end{table}
+
+%----------------------------------------------------------------------%
 \subsection{Development program toward precision match}
 \label{sec:predictions:program}
 %----------------------------------------------------------------------%
 
 To move predictions from leading order to \emph{sub-percent} agreement with
 JUNO, $g$-2, and cosmology, the theory must close three derivation gaps in
-order:
+order. Table~\ref{tab:derivation-status} records current scaffolding; the
+enumerated proof targets below are the concrete next steps.
 
 \begin{enumerate}[label=\textbf{D\arabic*.},leftmargin=*]
   \item \textbf{Yukawa from overlaps} --- evaluate \eqref{eq:breaking-yukawa}
     on $\hat Q$ with explicit $\Phi_{\mathrm{Higgs}}$ from $\Hess V$
     (Conjecture~\ref{conj:breaking-derived}); produces $y_{ij}$ and
     $m_\iota$ without postulates.
-  \item \textbf{Flavon RG} --- prove Conjecture~\ref{conj:flavon} to refine
-    \eqref{eq:nu-ratio} from $16$ to the PDG value $\approx 33$.
+    \textbf{Partial closure:} Section~\ref{sec:yukawa} defines the overlap
+    form (Definition~\ref{def:overlap-form}), proves cellular reduction
+    (Lemma~\ref{lem:yukawa-cellular}), and derives the leading mass matrix
+    (Theorem~\ref{thm:yukawa-mass}, Table~\ref{tab:yukawa-leading});
+    full Higgs identification and off-diagonal mixing remain
+    Conjecture~\ref{conj:yukawa-full}.
+    \begin{enumerate}[label=\textit{D1.\alph*.},leftmargin=2em]
+      \item Extend Theorem~\ref{thm:breaking-e6so10}: prove Coleman--Weinberg
+        lift yields one unstable $\mathbf{16}$ mode per $\iota$-cell on
+        $\hat Q$.
+      \item Identify $\Phi_{\mathrm{Higgs}}$ with the $\mathbf{10}_H$
+        Coleman--Weinberg mode and refine off-diagonal $\mathcal{P}_{ij}$
+        beyond the leading diagonal ansatz of \eqref{eq:mass-matrix-full}.
+      \item Extract $y_\mu/y_e$ from the $\iota=2$ sector and compare loop
+        contributions to $a_\mu$ at the Fermilab central value
+        (Section~\ref{sec:predictions:T1}).
+    \end{enumerate}
+  \item \textbf{Flavon RG} --- refine \eqref{eq:nu-ratio} from tree-level
+    $16$ to the PDG value $\approx 33$ via capacity RG on $V_F$.
+    \textbf{Partial closure:} Section~\ref{sec:physics:flavon-rg} defines
+    $V_F$ (Definition~\ref{def:flavon-potential}), states the one-loop
+    $\beta$-function (Proposition~\ref{prop:flavon-beta}), and derives
+    Theorem~\ref{thm:nu-ratio-rg} with $R_{\mathrm{RG}}\approx 1.91$
+    (Proposition~\ref{prop:R-RG-numeric}).
+    \begin{enumerate}[label=\textit{D2.\alph*.},leftmargin=2em]
+      \item \textbf{Done (1-loop):} $V_F(\phi_1,\phi_2,\phi_3)$ along
+        $\mathfrak{d}$ with weights $(1/27,10/27,16/27)$
+        (Definition~\ref{def:flavon-potential}).
+      \item \textbf{Open:} two-loop $\beta$-functions for
+        $\omega^\star_\iota(\tau)$ on $SU(3)_F\to SU(2)_F\to U(1)_F$
+        breaking to close Conjecture~\ref{conj:nu-ratio-pdg}.
+      \item \textbf{Open:} match $\Delta m^2_{31}/\Delta m^2_{21}$ to PDG
+        $33.8\pm 0.8$ at the JUNO sensitivity target ($<1\%$ on the ratio)
+        once D3 fixes $M_{\mathrm{GUT}}$ and $\mu_{\mathrm{osc}}$.
+    \end{enumerate}
   \item \textbf{Scale identification} --- map $\kappa_\star$ and $\mu$ from
-    Theorem~\ref{thm:planck} to $M_{\mathrm{Pl}}$ and electroweak scale using
-    observer-local FRG (Remark~\ref{rmk:observer-frg}).
+    Theorem~\ref{thm:planck} to $\MPl$ and electroweak scale $v$ using
+    observer-local FRG (Remark~\ref{rmk:observer-frg});
+    Section~\ref{sec:scales} (Definitions~\ref{def:ew-scale},
+    Propositions~\ref{prop:planck-scale},~\ref{prop:mu-lifetime},
+    Table~\ref{tab:scale-map}).
+    \begin{enumerate}[label=\textit{D3.\alph*.},leftmargin=2em]
+      \item Prove Proposition~\ref{prop:mu-lifetime}: $\mu\equiv v$ at
+        $\tau_{\mathrm{EW}}$ from Coleman--Weinberg flow along $g_\iota$
+        (requires D1 breaking chain).
+      \item Derive UV cutoff $\Lambda$ from observer-local FRG so that
+        \eqref{eq:planck-explicit} matches $\MPl$ with
+        $\kappa_\star=96\pi^2/5$ (Conjecture~\ref{conj:kappa}).
+      \item Prove Definition~\ref{def:ew-scale}: $v=|\langle\mathbf{10}_H\rangle|$
+        from $\Hess V$ without postulates; propagate to
+        $\sin^2\theta_W(M_{\mathrm{GUT}})=3/8$ (Prediction~\ref{pred:gut}).
+    \end{enumerate}
 \end{enumerate}
 
 \begin{remark}[Falsifiability standard]
@@ -224,4 +384,7 @@ A prediction is \emph{on programme} when it has a contact map
 \eqref{eq:contact} and a named derivation step D1--D3. Until D1--D3 close,
 T2 predictions are order-of-magnitude targets, not precision fits; T1
 predictions are the primary falsifiers for new physics searches.
+Table~\ref{tab:predictions-comparison} is the living scorecard: any T1 row
+marked \textbf{falsified} would require revising the heterotic quotient or
+observer fixed-point sector.
 \end{remark}

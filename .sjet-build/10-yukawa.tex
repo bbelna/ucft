@@ -1,0 +1,285 @@
+%======================================================================%
+\section{Yukawa from Overlap Integrals}
+\label{sec:yukawa}
+%======================================================================%
+
+This section develops the programme step \textbf{D1} of
+Section~\ref{sec:predictions:program}: evaluate the cubic overlap
+\eqref{eq:breaking-yukawa} on $\hat Q$ with Higgs data from $\Hess V$.
+What is \textbf{proved} below is the reduction of the overlap to cellular
+pairing on $\mathcal{T}_7$ and the leading-order capacity-weight structure of
+$y_{ij}$. What remains \textbf{conditional} is identification of
+$\Phi_{\mathrm{Higgs}}$ with a specific unstable Hessian mode and the full
+GUT breaking chain (Conjecture~\ref{conj:breaking-derived}).
+
+%----------------------------------------------------------------------%
+\subsection{Overlap form on the mirror quotient}
+\label{sec:yukawa:overlap}
+%----------------------------------------------------------------------%
+
+Fix the stabilized Stone lift $Q$ and mirror quotient $\hat Q=Q/\sigma$
+(Definition~\ref{def:Qhat}). Let $\omega_\iota\in
+H^1(\hat Q,V_{16})^{\sigma=-1,\,\iota}$ denote the observer $1$-class of
+Definition~\ref{def:observer}, represented by a $\sigma$-anti-invariant
+Dolbeault--Serre $1$-form on $(Q,V_{16})$.
+
+\begin{definition}[Observer overlap form]\label{def:overlap-form}
+The \emph{observer overlap form} on $\hat Q$ is the antisymmetric pairing
+\begin{equation}\label{eq:overlap-form}
+  \langle\alpha,\beta\rangle_{\mathrm{ov}}
+  \;:=\;
+  \int_{\hat Q}\alpha\wedge\beta\wedge\omega_{\mathrm{vol}},
+  \qquad
+  \alpha,\beta\in H^1(\hat Q,V_{16})^{\sigma=-1},
+\end{equation}
+where $\omega_{\mathrm{vol}}$ is the $\sigma$-invariant K\"ahler volume form
+induced by the $H$-invariant coset metric $K$ on the $\mathbf{16}$-bundle.
+For a Higgs fluctuation $\Phi_{\mathrm{Higgs}}\in\Omega^0(\hat Q,V_{16})$
+drawn from the unstable $\Hess V$ spectrum at $\orderparam_\star$
+(Lemma~\ref{lem:breaking-hess}), the \emph{cubic Yukawa overlap} is
+\begin{equation}\label{eq:yukawa-overlap}
+  \mathcal{Y}_{ij}
+  \;:=\;
+  \int_{\hat Q}\omega_i\wedge\omega_j\wedge\Phi_{\mathrm{Higgs}},
+  \qquad i,j\in\{1,2,3\},
+\end{equation}
+with $\omega_i$ the representative of $|\omega_i\rangle$. This is the
+precise form of \eqref{eq:breaking-yukawa}.
+\end{definition}
+
+\begin{remark}[Epistemic split at the definition]
+The overlap form \eqref{eq:overlap-form} is a standard cup-product pairing
+on $H^\bullet(\hat Q,V_{16})$ restricted to the anti-invariant sector; it is
+\textbf{defined}, not conjectured. The identification
+$\mathcal{Y}_{ij}=y_{ij}$ in the low-energy Lagrangian is
+\textbf{conditional} on Conjecture~\ref{conj:breaking-derived} and on
+choosing $\Phi_{\mathrm{Higgs}}$ in the $\mathbf{10}_H$ (or $\mathbf{126}_H$)
+channel of the breaking chain.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Cellular reduction on $\mathcal{T}_7$}
+\label{sec:yukawa:cellular}
+%----------------------------------------------------------------------%
+
+On the stabilized Albert tower $\mathcal{T}_7$ at $\Mirror^7(\Void)$, write
+$C_1,C_2,C_3$ for the three $\mathbf{16}$-cells attached to diagonal
+directions $e_1,e_2,e_3$ of $\mathfrak{d}$ (Lemma~\ref{lem:cellular}).
+Let $\mathcal{F}_{16}$ be the cellular cosheaf of Appendix
+\ref{sec:appendix:quotient}.
+
+\begin{lemma}[Cubic overlap as cellular pairing]\label{lem:yukawa-cellular}
+Let $\omega_i$ be the cellular cocycle representative of
+$|\omega_i\rangle\in H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1,\,i}$.
+Then the cubic overlap \eqref{eq:yukawa-overlap} reduces to a finite sum
+over $\mathcal{T}_7$:
+\begin{equation}\label{eq:yukawa-cellular}
+  \mathcal{Y}_{ij}
+  \;=\;
+  \sum_{k=1}^3
+  \mathrm{pair}\!\bigl(C_i,C_j,C_k;\Phi_{\mathrm{Higgs}}\bigr),
+\end{equation}
+where $\mathrm{pair}(C_i,C_j,C_k;\Phi)$ is the oriented triple intersection
+number of the three $1$-cells at the $\mathbf{10}$-hub, weighted by the
+$\Phi$-value on the shared $0$-simplex. Under the Stone lift
+(Proposition~\ref{prop:stone-lift}),
+$H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}\cong
+H^1(\hat Q,V_{16})^{\sigma=-1}$, and \eqref{eq:yukawa-cellular} agrees with
+the continuum integral \eqref{eq:yukawa-overlap}.
+\end{lemma}
+
+\begin{proof}
+On $\mathcal{T}_7$, $1$-cochains are triples $(\phi_1,\phi_2,\phi_3)$ with
+cocycle constraint $\phi_1+\phi_2+\phi_3=0$ at the hub $H_{10}$
+(Lemma~\ref{lem:cellular}, \eqref{eq:cell-cocycle}). The quotient
+\eqref{eq:cell-quotient} identifies
+$H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}$ with three
+$e_i$-weight classes; Proposition~\ref{prop:triality} fixes their orientation.
+The wedge product of two observer $1$-forms and a $0$-form localizes to the hub
+$0$-simplex where all three cells meet: only terms with distinct cell indices
+contribute, and $\sigma$-anti-invariance forces
+$\mathrm{pair}(C_i,C_j,C_k)=0$ unless $\{i,j,k\}=\{1,2,3\}$ with orientation
+$\epsilon_{ijk}$. Proposition~\ref{prop:stone-lift} identifies cellular
+cohomology with $H^1(\hat Q,V_{16})^{\sigma=-1}$, transporting the sum to the
+integral \eqref{eq:yukawa-overlap}.
+\end{proof}
+
+\begin{corollary}[Diagonal dominance at tree level]\label{cor:yukawa-diagonal}
+At the EIII vacuum $\orderparam_\star$, tree-level $\Hess V=0$ on
+$\mathfrak{m}$ (Lemma~\ref{lem:breaking-hess}). If
+$\Phi_{\mathrm{Higgs}}$ is the leading unstable mode localized to cell
+$\iota$ after Coleman--Weinberg lifting, then
+$\mathcal{Y}_{ij}\neq0$ only when $i=j=\iota$ at tree level; off-diagonal
+entries arise at higher order in the radiative expansion or from sequential
+$SU(3)_F$ breaking (Conjecture~\ref{conj:flavon}).
+\end{corollary}
+
+%----------------------------------------------------------------------%
+\subsection{Capacity-weight structure}
+\label{sec:yukawa:weights}
+%----------------------------------------------------------------------%
+
+Descend the sector masses $(1/27,10/27,16/27)$ of Theorem~\ref{thm:partition}
+through the above--below correspondence (Proposition~\ref{prop:above-below})
+to observer-slot weights
+\begin{equation}\label{eq:yukawa-weights}
+  w_1:w_2:w_3 = 1:10:16,
+  \qquad
+  w_\iota := \frac{m_\iota}{1/27},
+\end{equation}
+with $(m_1,m_{10},m_{16})=(1/27,10/27,16/27)$ the capacity targets of
+Theorem~\ref{thm:partition} on $\mathbf{27}=\mathbf{1}\oplus\mathbf{10}\oplus\mathbf{16}$.
+
+\begin{proposition}[Leading Yukawa factorization]\label{prop:yukawa-factor}
+Assume Lemma~\ref{lem:yukawa-cellular} and that $\Phi_{\mathrm{Higgs}}$ is
+$H$-invariant with VEV $\langle\Phi_{\mathrm{Higgs}}\rangle$ at the
+$\iota$-restricted breaking minimum. Then the cubic overlap factorizes at
+leading order as
+\begin{equation}\label{eq:yukawa-factor}
+  \mathcal{Y}_{ij}
+  \;=\;
+  y_0\,\sqrt{w_i\,w_j}\,\mathcal{P}_{ij}
+  \;+\;\mathcal{O}(\text{radiative}),
+\end{equation}
+where $y_0$ is a dimensionless coupling set by the unstable-mode residue of
+$\Hess V$ and $\mathcal{P}_{ij}\in\{0,1\}$ encodes the oriented hub pairing
+of Lemma~\ref{lem:yukawa-cellular}. In the diagonal-dominant regime of
+Corollary~\ref{cor:yukawa-diagonal}, $\mathcal{P}_{ij}=\delta_{ij}$.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+Each observer class $|\omega_\iota\rangle$ is normalized on cell $C_\iota$ with
+weight $\|{\omega_\iota}\|^2\propto w_\iota$ by capacity balance on
+$\mathcal{G}_{\mathrm{Albert}}$ (Definition~\ref{def:lifetime-index},
+Proposition~\ref{prop:capacity-lifetime-dual}). The hub pairing is bilinear
+in the two $1$-forms and linear in $\Phi_{\mathrm{Higgs}}$; leading-order
+multiplicativity of capacity weights under $\mathrm{Bal}_{\mathcal{C}}$ on
+the $1|10|16$ partition yields the $\sqrt{w_i w_j}$ structure. The square
+root arises because $1$-forms carry capacity weight $\sqrt{w_\iota}$ while
+masses scale as $w_\iota$ at fixed Higgs VEV
+(Proposition~\ref{prop:gen-ordering}).
+\end{proof}
+
+\begin{remark}[Theorem vs.\ conjecture]
+Lemma~\ref{lem:yukawa-cellular} is a \textbf{theorem} (cellular cohomology
+plus Stone lift). Proposition~\ref{prop:yukawa-factor} is a
+\textbf{proposition} contingent on the Higgs-mode identification of
+Conjecture~\ref{conj:breaking-derived}; the $\sqrt{w_i w_j}$ scaling itself is
+\textbf{leading-order} capacity descent, not yet a sub-percent fit.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Mass matrix at $\orderparam_\star$}
+\label{sec:yukawa:mass-matrix}
+%----------------------------------------------------------------------%
+
+\begin{theorem}[Leading mass matrix, conditional]\label{thm:yukawa-mass}
+Assume Conjecture~\ref{conj:breaking-derived}, Proposition~\ref{prop:yukawa-factor},
+and a common electroweak Higgs VEV $v$. Define the fermion mass matrix by
+\begin{equation}\label{eq:mass-matrix-def}
+  M_{ij}
+  \;:=\;
+  v\,\mathcal{Y}_{ij}
+  \;=\;
+  v\,y_0\,\sqrt{w_i\,w_j}\,\mathcal{P}_{ij}
+  \;+\;\mathcal{O}(\text{radiative}).
+\end{equation}
+At the EIII reference $\orderparam_\star$ with diagonal-dominant hub pairing
+($\mathcal{P}_{ij}=\delta_{ij}$), $M$ is positive semidefinite and
+eigenvalues satisfy
+\begin{equation}\label{eq:mass-eigenvalues}
+  m_1:m_2:m_3 \;=\; w_1:w_2:w_3 \;=\; 1:10:16
+\end{equation}
+at leading order. The theorem is \textbf{conditional}: it does not prove the
+breaking chain or the Higgs quantum numbers; given those inputs, the mass
+hierarchy follows from capacity weights already fixed by
+Theorem~\ref{thm:partition}.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+With $\mathcal{P}_{ij}=\delta_{ij}$, $M=\mathrm{diag}(v y_0\sqrt{w_1},
+v y_0\sqrt{w_2}, v y_0\sqrt{w_3})$. Squaring,
+$M_{ii}^2\propto w_i$, hence eigenmass ordering $m_3>m_2>m_1$. The ratio
+$m_3:m_2:m_1=w_3:w_2:w_1=16:10:1$ is exact at this order.
+\end{proof}
+
+\begin{equation}\label{eq:mass-matrix-explicit}
+  M
+  \;=\;
+  v\,y_0
+  \begin{pmatrix}
+    \sqrt{w_1} & 0 & 0 \\
+    0 & \sqrt{w_2} & 0 \\
+    0 & 0 & \sqrt{w_3}
+  \end{pmatrix}
+  \;=\;
+  v\,y_0
+  \begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & \sqrt{10} & 0 \\
+    0 & 0 & 4
+  \end{pmatrix},
+\end{equation}
+using $w_1:w_2:w_3=1:10:16$ so $\sqrt{w_1}:\sqrt{w_2}:\sqrt{w_3}=1:\sqrt{10}:4$.
+Off-diagonal entries are $\mathcal{O}(\text{flavon})$ once sequential
+$SU(3)_F$ breaking activates (Conjecture~\ref{conj:flavon}); the full
+symmetric leading ansatz is
+\begin{equation}\label{eq:mass-matrix-full}
+  M_{ij} \;=\; v\,y_0\,\sqrt{w_i\,w_j}\,\mathcal{P}_{ij},
+  \qquad
+  \mathcal{P}_{ij}\in\{0,1\}.
+\end{equation}
+
+%----------------------------------------------------------------------%
+\subsection{Numerical leading spectrum}
+\label{sec:yukawa:numerical}
+%----------------------------------------------------------------------%
+
+Table~\ref{tab:yukawa-leading} records the leading-order spectrum implied by
+Theorem~\ref{thm:yukawa-mass}. Slot $\iota=2$ carries capacity weight
+$w_2=10/27$; under the sector map of Prediction~\ref{pred:sector-ratios},
+this is the \textbf{muon} slot: $m_\mu/m_e\sim\sqrt{w_2/w_1}=\sqrt{10}\approx
+3.2$ at the Yukawa level and $m_\mu/m_e\sim w_2/w_1=10$ at the mass level
+(Proposition~\ref{prop:gen-ordering}).
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}cccccc@{}}
+\toprule
+\textbf{Slot $\iota$} & $w_\iota$ & $\sqrt{w_\iota}$ (rel.) &
+$\mathcal{Y}_{\iota\iota}$ (rel.) & $m_\iota$ (rel.) &
+\textbf{Leading identification} \\
+\midrule
+$1$ & $1/27$  & $1$        & $1$        & $1$  & lightest (e.g.\ $e$) \\
+$2$ & $10/27$ & $\sqrt{10}$ & $\sqrt{10}$ & $10$ & muon slot \\
+$3$ & $16/27$ & $4$        & $4$        & $16$ & heaviest (e.g.\ $\tau$) \\
+\bottomrule
+\end{tabular}
+\caption{Leading-order Yukawa and mass hierarchy from overlap factorization
+\eqref{eq:yukawa-factor} at $\orderparam_\star$. Absolute scales require
+step~\textbf{D3} (scale identification). Ratios are exact at this order;
+RG and flavon corrections are programme step~\textbf{D2}.}
+\label{tab:yukawa-leading}
+\end{table}
+
+\begin{corollary}[D1 contact with predictions]\label{cor:yukawa-d1}
+Section~\ref{sec:yukawa} \textbf{partially closes} development step~\textbf{D1}
+of Section~\ref{sec:predictions:program}: the cubic overlap
+\eqref{eq:breaking-yukawa} is defined on $\hat Q$
+(Definition~\ref{def:overlap-form}), reduced to $\mathcal{T}_7$
+(Lemma~\ref{lem:yukawa-cellular}), and evaluated at leading order
+(Proposition~\ref{prop:yukawa-factor}, Theorem~\ref{thm:yukawa-mass}).
+Precision match to PDG masses and to JUNO $\Delta m^2$ ratios remains
+\textbf{conditional} on steps~\textbf{D2}--\textbf{D3}.
+\end{corollary}
+
+\begin{conjecture}[Full Yukawa sector]\label{conj:yukawa-full}
+Radiatively lifted $\Hess V$ on the $\mathbf{27}$-sector, filtered through
+$\Pi_{\sigma=-1}$, selects $\Phi_{\mathrm{Higgs}}\in\mathbf{10}_H$ with
+VEV $v$, and generates the complete $3\times3$ Yukawa matrices for quarks
+and leptons (including CKM/PMNS from off-diagonal $\mathcal{P}_{ij}$) with
+no additional Yukawa postulate. This upgrades Conjecture~\ref{conj:breaking-derived}
+from a schematic overlap to a calculable mass spectrum.
+\end{conjecture}

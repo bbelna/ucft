@@ -104,6 +104,43 @@ identifies four clock components $\orderparam^0,\ldots,\orderparam^3$ with
 $\mathrm{Im}(\sigma_{\mathrm{sol}})$; the world manifold has $d=4$.
 \end{definition}
 
+\begin{lemma}[$F_4$ equivariance fixes the quaternionic embedding]
+\label{lem:quat-F4}
+Let $\iota_{\Quat}:\Quat\hookrightarrow\Oct$ be an associative subalgebra
+embedding. Extend it to the Jordan--octonionic block
+$H_2(\Quat)\hookrightarrow H_2(\Oct)\hookrightarrow\jalg$ by placing
+quaternion entries in a single off-diagonal slot. Among such embeddings
+compatible with
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item mirror functoriality on the climb, in particular the
+    $4\to5$ Jordan exit that carries $\Mirror^3(\Void)=\Quat$ into
+    $\Mirror^5(\Void)\cong\jalg$ (Theorem~\ref{thm:rung-table});
+  \item $F_4=\mathrm{Aut}(\jalg)$ equivariance of the soldering map
+    $\sigma_{\mathrm{sol}}$ (Definition~\ref{def:soldering}); and
+  \item the above--below correspondence on the diagonal Cartan
+    $\mathfrak{d}=\mathrm{span}\{e_1,e_2,e_3\}$
+    (Definition~\ref{def:above-below}),
+\end{enumerate}
+the orbit under $F_4$ is a single $G_2$-conjugacy class, with
+$G_2=\mathrm{Aut}(\Oct)\subset F_4$ the stabilizer of a generic
+diagonal frame. Fixing an observer index $\iota\in\mathcal{I}$
+(Definition~\ref{def:observer-index}) selects a unique representative
+$\Quat_\iota\subset\Oct$ and hence a unique soldered block
+$H_2(\Quat)\subset H_2(\Oct)$.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+Associative subalgebras $\Quat\subset\Oct$ form one $G_2$-orbit
+\cite{SpringerVeldkamp2000}. The Jordan envelope $\jalg$ carries three
+off-diagonal octonion slots; $F_4$ permutes them while preserving
+$\mathfrak{d}$. Mirror descent at $n=4\to5$ singles out the associative
+subalgebra from rung $3$, so the $F_4$-admissible embeddings are those
+$G_2$-conjugates compatible with capacity weights on $\mathfrak{d}$
+(Proposition~\ref{prop:above-below}). Observer index $\iota$ labels one
+diagonal direction $e_\iota$, breaking the residual triality and pinning
+$\Quat_\iota$ uniquely.
+\end{proof}
+
 \begin{proposition}[Coset metric]\label{prop:coset-metric}
 $K|_{\mathfrak{m}}$ is positive-definite and $H$-invariant. Lorentzian
 signature is carried by $\sigma_{\mathrm{sol}}$, not by Wick rotation of $K$.
@@ -140,9 +177,10 @@ observer collapse---not postulated.
 $\dim_{\R}\Quat=4$, the first Hurwitz rung with an associative non-real
 division algebra (Theorem~\ref{thm:rung-table}).
 
-\emph{Step 2 (Jordan embedding).} The Jordan exit carries a unique
-quaternionic diagonal frame; mirror involution at $n=4\to5$ fixes
-$\Quat\subset\Oct$ as the associative subalgebra from rung $3$.
+\emph{Step 2 (Jordan embedding).} Lemma~\ref{lem:quat-F4} fixes
+$\Quat_\iota\subset\Oct$ and $H_2(\Quat)\subset H_2(\Oct)$ once the
+observer index $\iota$ is chosen; mirror involution at $n=4\to5$ carries
+the rung-$3$ datum $\Mirror^3(\Void)=\Quat$ into this block.
 
 \emph{Step 3 (signature).} The restriction of $\det$ on $H_2(\Quat)$ is the
 Minkowski norm; the four imaginary quaternion units supply the clock
@@ -158,12 +196,14 @@ the initial datum $\orderparam_\star|_\iota$ and thereby selects the soldered
 bundle $\mathcal{S}_\iota$ over which $g_\iota$ evolves
 (Section~\ref{sec:observer:lifetime}).
 
-\emph{Remaining gap.} Uniqueness of the $\Quat$ embedding up to $F_4$ and
-functoriality across exceptional rungs is
-Conjecture~\ref{conj:soldering-unique}.
+\emph{Remaining gap.} Functorial transport of the soldered block across
+exceptional rungs $n=6,7,8$ and global $F_4$-equivariant category
+uniqueness is Conjecture~\ref{conj:soldering-unique}; the
+$\iota$-local embedding is settled by Lemma~\ref{lem:quat-F4}.
 \end{proof}
 
-\begin{proposition}[Soldering clock along $g_\iota$]\label{prop:soldering-clock}
+\begin{proposition}[Unique timelike soldering direction in $H_2(\Quat)$]
+\label{prop:soldering-clock}
 Fix $\iota\in\mathcal{I}$ and an admitted lifetime chart
 $(\tau_\iota,g_\iota)$ of Definition~\ref{def:lifetime}. Along $g_\iota$,
 the soldering time parameter $\tau_\iota$ couples to the zeroth clock
@@ -173,24 +213,26 @@ component $\orderparam^0$ via
   \;=\;
   \partial_{\tau_\iota}\sigma_{\mathrm{sol}}\big|_{H_2(\Quat)}.
 \end{equation}
-Among directions of $H_2(\Quat)$, the timelike axis $\orderparam^0$ is the
-\emph{unique} soldering direction admitted by observer collapse: the
-$\sigma$-anti-invariant sector of $\hat Q$ breaks the $\Spin(1,9)$ frame to
-the $\iota$-restricted diagonal cell, and capacity flow on
-$\mathcal{G}_{\mathrm{Albert}}$ fixes the sign convention of
-$\det|_{H_2(\Quat)}$. Spatial components
-$\orderparam^1,\ldots,\orderparam^3$ are spacelike within the same block.
+In the Lorentzian block $H_2(\Quat)$ of
+Definition~\ref{def:spacetime:H2O}, the zeroth clock component
+$\orderparam^0$ is the \emph{unique} timelike soldering direction admitted
+by observer collapse: the $\sigma$-anti-invariant sector of $\hat Q$
+breaks the $\Spin(1,9)$ frame to the $\iota$-restricted diagonal cell, and
+capacity flow on $\mathcal{G}_{\mathrm{Albert}}$ fixes the sign convention
+of $\det|_{H_2(\Quat)}$. The spatial components
+$\orderparam^1,\ldots,\orderparam^3$ are the remaining spacelike directions
+of the same block and do not carry the Page--Wootters clock.
 \end{proposition}
 
 \begin{proof}[Proof sketch]
-Equation~\eqref{eq:soldering-clock} is the $\orderparam^0$-component of the
-admitted flow \eqref{eq:lifetime-admitted}. Uniqueness of the timelike
-direction follows from: (i) $\det|_{H_2(\Quat)}$ has signature
-$(-,+,+,+)$ (Definition~\ref{def:spacetime:H2O}); (ii) observer index
-$\iota$ selects one diagonal class in $\mathfrak{d}$, fixing the
-$F_4$-equivariant orientation of the block; (iii) the above--below
-correspondence (Definition~\ref{def:above-below}) identifies global capacity
-balance with the $\iota$-cell orientation below.
+Equation~\eqref{eq:soldering-clock} is the $\orderparam^0$-component of
+\eqref{eq:lifetime-admitted}. On $H_2(\Quat)$, $\det$ has signature
+$(-,+,+,+)$, so the timelike cone is one-dimensional up to sign;
+Lemma~\ref{lem:quat-F4} and observer index $\iota$ fix the
+$F_4$-equivariant orientation, and the above--below correspondence
+(Definition~\ref{def:above-below}) aligns the negative eigen-direction
+with the $\iota$-cell clock. No other component of
+$\mathrm{Im}(\sigma_{\mathrm{sol}})$ is timelike.
 \end{proof}
 
 \begin{proposition}[Emergent vierbein]\label{prop:vierbein}
@@ -202,22 +244,41 @@ $\eta_{\mu\nu}=e^a_\mu e^b_\nu\eta_{ab}$ has signature $(-,+,+,+)$.
 
 \begin{conjecture}[Functorial uniqueness of soldering]
 \label{conj:soldering-unique}
-The soldering of Theorem~\ref{thm:spacetime:soldering-derived} is the unique
-$F_4$-equivariant map compatible with mirror functoriality on the climb,
-capacity balancing on $\mathcal{G}_{\mathrm{Albert}}$, and the uniqueness of
-lifetime charts (Conjecture~\ref{conj:lifetime-unique}). Equivalently:
-given $\iota$ and $\orderparam_\star|_\iota$, the soldering block
-$H_2(\Quat)\subset H_2(\Oct)$ and the clock coupling
-\eqref{eq:soldering-clock} are fixed up to reparametrization of
-$\tau_\iota$.
+Given $\iota\in\mathcal{I}$ and $\orderparam_\star|_\iota$, the soldering
+block $H_2(\Quat)\subset H_2(\Oct)$, the clock coupling
+\eqref{eq:soldering-clock}, and the timelike axis $\orderparam^0$ are
+\textbf{already unique} by Lemma~\ref{lem:quat-F4} and
+Proposition~\ref{prop:soldering-clock}. The residual conjecture is
+\emph{functorial transport}: the soldering of
+Theorem~\ref{thm:spacetime:soldering-derived} is the unique
+$F_4$-equivariant extension compatible with mirror functoriality on
+exceptional rungs $n=6,7,8$ and with $\iota$-sector lifetime charts
+(Conjecture~\ref{conj:lifetime-unique}).
 \end{conjecture}
+
+\begin{remark}[Residual gap for the full soldering theorem]
+\label{rem:soldering-full-gap}
+Lemma~\ref{lem:quat-F4}, Proposition~\ref{prop:soldering-clock}, and
+Theorem~\ref{thm:spacetime:soldering-derived} supply $d=4$, Lorentzian
+signature, and $\iota$-local clock coupling without postulate. What
+remains for a \emph{complete} functorial theorem is: (i)~show that
+automorphism/product/Cartan mirrors at $n=6,7,8$ transport
+$\sigma_{\mathrm{sol}}$ without introducing a second soldered block;
+(ii)~identify the resulting vierbein with the composite of
+Proposition~\ref{prop:vierbein} on $\E{6}/H$; and (iii)~close
+Conjecture~\ref{conj:lifetime-unique} to match reparametrizations of
+$\tau_\iota$ across descent. Open Problem~\textbf{O2} is thereby reduced
+to this transport step.
+\end{remark}
 
 \begin{remark}[Epistemic status of P1]
 Proposition~\ref{prop:coset-nogo} records the honest no-go for the coset
 metric alone. Theorem~\ref{thm:spacetime:soldering-derived} \textbf{derives}
-soldering and $d=4$ from mirror climb plus observer lifetime charts; the
-residual open input is functorial uniqueness
-(Conjecture~\ref{conj:soldering-unique}, Open Problem~\textbf{O2} in
+soldering and $d=4$ from mirror climb plus observer lifetime charts;
+$\iota$-local uniqueness is supplied by Lemma~\ref{lem:quat-F4} and
+Proposition~\ref{prop:soldering-clock}. The residual open input is
+functorial transport (Conjecture~\ref{conj:soldering-unique},
+Remark~\ref{rem:soldering-full-gap}, Open Problem~\textbf{O2} in
 Section~\ref{sec:conclusions}).
 \end{remark}
 
@@ -257,22 +318,67 @@ tree-level massless sector or the nonperturbative gauge measure
 (Conjecture~\ref{conj:rp}).
 \end{remark}
 
+\begin{proposition}[$\sigma$-sector split of the Euclidean measure]
+\label{prop:sigma-measure}
+Let $\sigma$ denote the product-mirror involution on the EIII configuration
+space $\mathcal{M}$ and on the composite gauge bundle, acting consistently with
+Theorem~\ref{thm:duality}. The Euclidean path measure for \eqref{eq:action},
+formally
+\begin{equation}\label{eq:gamma-full}
+  d\mu_\Gamma[\orderparam,A]
+  \;\propto\;
+  \exp\!\bigl(-S[\orderparam,A]\bigr)\,\mathcal{D}\orderparam\,\mathcal{D}A,
+\end{equation}
+admits a $\sigma$-sector decomposition
+\begin{equation}\label{eq:gamma-split}
+  d\mu_\Gamma
+  \;=\;
+  d\mu_{\Gamma_{-1}}\otimes d\mu_{\Gamma_{+1}},
+\end{equation}
+where $d\mu_{\Gamma_{\pm1}}$ is the restriction to $\sigma=\pm1$
+fluctuations about $\orderparam_\star$ and
+$\Pi_{\sigma=-1}\,d\mu_{\Gamma_{-1}}=d\mu_{\Gamma_{-1}}$.
+Observable correlators are $\Pi_{\sigma=-1}$-matrix elements of
+$d\mu_{\Gamma_{-1}}$ only; the $\sigma=+1$ factor is a mirror-shadow
+reservoir (Theorem~\ref{thm:duality}).
+\end{proposition}
+
+\begin{lemma}[Goldstones in the $\sigma$-invariant coset sector]
+\label{lem:goldstone-sigma}
+At the tree-level EIII saddle of Theorem~\ref{thm:vacuum}, the $32$
+Hessian-null coset directions split under $\sigma$ as
+\begin{equation}\label{eq:goldstone-split}
+  \mathfrak{m}
+  \;=\;
+  \mathfrak{m}_{-1}\oplus\mathfrak{m}_{+1},
+  \qquad
+  \dim\mathfrak{m}_{-1}=28,\quad \dim\mathfrak{m}_{+1}=4,
+\end{equation}
+with $\mathfrak{m}_{+1}$ the four massless Goldstones of the soldering block
+$H_2(\Quat)$ and their $\sigma$-invariant mirror doubles on
+$\overline{\mathbf{16}}_{+3}$. After Coleman--Weinberg gapping, the
+$28$ massive directions lie in $\mathfrak{m}_{-1}$ and are covered by
+Theorem~\ref{thm:rp}. Full reflection positivity along $\tau_\iota$ on the
+\emph{observable} sector therefore reduces to RP for $d\mu_{\Gamma_{-1}}$
+(Proposition~\ref{prop:sigma-measure}); the $\sigma=+1$ Goldstone reservoir
+enters only through normalization of the product \eqref{eq:gamma-split}.
+\end{lemma}
+
 \begin{conjecture}[Nonperturbative reflection positivity]\label{conj:rp}
-The nonperturbative Euclidean measure for \eqref{eq:action}, including the
-tree-level massless Goldstone sector of Theorem~\ref{thm:vacuum} and the
-composite $\Spin(10)\times U(1)$ gauge measure, satisfies full reflection
-positivity along the soldered observer clock $\tau_\iota$ of
-Definition~\ref{def:lifetime}. The residual gap is organized by mirror parity:
-the $32$ EIII directions split into $28$ massive coset scalars (covered
-semiclassically by Theorem~\ref{thm:rp}) and $4$ massless Goldstones. We
-conjecture that the massless modes are carried by the
-\emph{$\sigma$-invariant} sector of $\hat Q$---mirror partners and their
-Goldstone doubles are quotient-non-observable
-(Theorem~\ref{thm:duality})---while the $\sigma$-anti-invariant observer
-sector supplies the observable matter and clock. Full OS
-reconstruction~\cite{OsterwalderSchrader1973} then requires only the
-anti-invariant measure factor; the $\sigma$-invariant reservoir is a
-mirror-shadow sector, not an independent postulate.
+Proposition~\ref{prop:sigma-measure} and Lemma~\ref{lem:goldstone-sigma}
+reduce full OS reconstruction~\cite{OsterwalderSchrader1973} to reflection
+positivity of the observable factor $d\mu_{\Gamma_{-1}}$ along the soldered
+observer clock $\tau_\iota$ of Definition~\ref{def:lifetime}. The residual
+gap is nonperturbative verification of \eqref{eq:gamma-split} for the
+composite $\Spin(10)\times U(1)$ gauge measure together with the tree-level
+massless sector of Theorem~\ref{thm:vacuum}: we conjecture that
+\eqref{eq:gamma-split} holds exactly and that $d\mu_{\Gamma_{-1}}$ is
+reflection-positive once the $28$ radiatively gapped directions of
+Theorem~\ref{thm:rp} and the $\sigma=-1$ matter sector are included. The
+$\sigma=+1$ mirror-shadow factor $d\mu_{\Gamma_{+1}}$ carries the four
+massless Goldstones of Lemma~\ref{lem:goldstone-sigma} and is
+quotient-non-observable (Theorem~\ref{thm:duality}); it is not an independent
+postulate.
 \end{conjecture}
 
 %----------------------------------------------------------------------%
@@ -293,7 +399,14 @@ $b_0=(88-24-28)/3=12$.
 
 \begin{theorem}[Induced Planck mass]\label{thm:planck}
 Sakharov induction from $28$ massive coset scalars gives
-$\MPl^2\propto 28\mu^2/(6\cdot16\pi^2)\log(\Lambda^2/\mu^2)$.
+\begin{equation}\label{eq:planck}
+  \MPl^2
+  \;=\;
+  \frac{28}{6}\cdot\frac{\mu^2}{16\pi^2}
+  \log\frac{\Lambda^2}{\mu^2}.
+\end{equation}
+Physical scale identification ($\mu$, $\MPl$ in GeV) is deferred to
+Section~\ref{sec:scales} (derivation step \textbf{D3}).
 \end{theorem}
 
 \begin{definition}[Dimensionless Newton coupling]\label{def:kappa}
@@ -354,16 +467,6 @@ $\Lambda_{\mathrm{cc}}$ remains a tuned environmental coupling in the
 observer sector.
 \end{proposition}
 
-\begin{conjecture}[CC sequestering at $\kappa_\star$]\label{conj:cc-sequester}
-At the gravitational fixed point $\kappa_\star=96\pi^2/5$
-(Theorem~\ref{thm:kappa}), the induced vacuum energy of the coset
-$\sigma$-model flows into the $\sigma$-invariant (mirror-partner) sector of
-$\hat Q$. By Theorem~\ref{thm:duality}, $\sigma$-invariant modes are
-quotient-non-observable; sequestered vacuum energy does not appear in
-$\Pi_{\sigma=-1}$-projected observables, yielding
-$\Lambda_{\mathrm{obs}}\approx0$ without tuning the anti-invariant sector.
-\end{conjecture}
-
 \begin{remark}[Observer-local FRG]\label{rmk:observer-frg}
 Mirror collapse $\Pi_{\sigma=-1}$ (Definition~\ref{def:heterotic-collapse})
 splits the effective action into $\sigma=\pm1$ sectors. An \emph{observer-local}
@@ -373,6 +476,37 @@ $g_\iota(\tau_\iota)$ (Definition~\ref{def:lifetime}). $\sigma$-invariant
 couplings---notably $\Lambda_{\mathrm{cc}}$---without entering the observable
 Hilbert space.
 \end{remark}
+
+\begin{proposition}[$\Lambda_{\mathrm{cc}}$ decoupling in the $\sigma=+1$ sector]
+\label{prop:cc-decouple}
+Suppose the cosmological coupling $\Lambda_{\mathrm{cc}}$ couples only to
+$\sigma$-invariant modes in the heat-kernel $a_0$ sector of
+Definition~\ref{def:cc}---equivalently, its insertions in the effective
+action are $\Pi_{\sigma=+1}$-projected along the observer-local FRG of
+Remark~\ref{rmk:observer-frg}. Then along the $\sigma=-1$ observer flow
+$g_\iota(\tau_\iota)$,
+\begin{equation}\label{eq:beta-Lambda-decouple}
+  \beta_{\Lambda_{\mathrm{cc}}}\Big|_{\sigma=-1}=0,
+\end{equation}
+and $\Lambda_{\mathrm{cc}}$ is not a relevant coupling in the observable
+Jacobian row: the $\Lambda_{\mathrm{cc}}$ entry of $J$ vanishes on
+$H^1(\hat Q,V_{16})^{\sigma=-1}$. Vacuum energy RG flows entirely within
+$d\mu_{\Gamma_{+1}}$ (Proposition~\ref{prop:sigma-measure}), consistent with
+Proposition~\ref{prop:cc-nogo}.
+\end{proposition}
+
+\begin{conjecture}[CC sequestering at $\kappa_\star$]\label{conj:cc-sequester}
+At the gravitational fixed point $\kappa_\star=96\pi^2/5$
+(Theorem~\ref{thm:kappa}), the induced vacuum energy of the coset
+$\sigma$-model is routed into the $\sigma$-invariant (mirror-partner) sector
+of $\hat Q$, realizing the $\Pi_{\sigma=+1}$ coupling hypothesis of
+Proposition~\ref{prop:cc-decouple}. By Theorem~\ref{thm:duality},
+$\sigma$-invariant modes are quotient-non-observable; sequestered vacuum
+energy does not appear in $\Pi_{\sigma=-1}$-projected observables, yielding
+$\Lambda_{\mathrm{obs}}\approx0$ without tuning the anti-invariant sector.
+The residual gap is to derive $\Pi_{\sigma=+1}$ projection of the $a_0$
+term from the effective action at $\kappa_\star$.
+\end{conjecture}
 
 Collect dimensionless couplings
 $(\xi,\hat g^2,\hat y^2,\kappa,\Lambda_{\mathrm{cc}})$ with
@@ -409,16 +543,19 @@ Appendix~\ref{sec:appendix:frg}.
 
 \begin{conjecture}[Graviton/$R^2$ persistence of $\kappa_\star$]
 \label{conj:kappa}
-Beyond the one-loop truncation of Theorem~\ref{thm:kappa}, include $R^2$,
-$R_{\mu\nu}^2$, and graviton self-interaction in curved-background FRG. The
-fixed point $\kappa_\star=96\pi^2/5$ with
-$\partial\beta_\kappa/\partial\kappa|_{\kappa_\star}=-2$ persists if
-$\sigma$-invariant gravitational modes decouple from the observer-local flow on
-$H^1(\hat Q,V_{16})^{\sigma=-1}$ (Remark~\ref{rmk:observer-frg}). Sequestered
-$\sigma=+1$ contributions may modify $\beta_{\Lambda_{\mathrm{cc}}}$
-(Conjecture~\ref{conj:cc-sequester}) but leave $\beta_\kappa$ unchanged at
-leading order. Because $\kappa_\star\approx189\gg1$, such persistence is not a
-consequence of void and mirror; it requires nonperturbative FRG input.
+Proposition~\ref{prop:kappa-R2} establishes leading-order stability of
+$\kappa_\star=96\pi^2/5$ with
+$\partial\beta_\kappa/\partial\kappa|_{\kappa_\star}=-2$ once
+$\sigma$-invariant graviton and $R^2$ modes decouple from the observer-local
+flow on $H^1(\hat Q,V_{16})^{\sigma=-1}$
+(Remark~\ref{rmk:observer-frg}). The residual gap is nonperturbative
+curved-background FRG: subleading graviton/$R^2$ back-reaction in the
+$\sigma=+1$ shadow sector may modify $\beta_{\Lambda_{\mathrm{cc}}}$
+(Conjecture~\ref{conj:cc-sequester}) but is conjectured to leave
+$\beta_\kappa$ unchanged at $\kappa_\star$. Because
+$\kappa_\star\approx189\gg1$, such persistence is not a consequence of void
+and mirror; it requires the extended FRG input of
+Appendix~\ref{sec:appendix:frg}.
 \end{conjecture}
 
 %----------------------------------------------------------------------%
@@ -509,24 +646,167 @@ $\mathbf{78}=\mathbf{45}\oplus\mathbf{1}\oplus\mathbf{16}\oplus\overline{\mathbf
 pattern at the $\Spin(10)$-invariant vacuum~\cite{Witten1985,GeorgiGlashow1974}.
 \end{proof}
 
+\begin{lemma}[Unstable Hessian directions under $\Spin(10)$ branching]
+\label{lem:breaking-hess-spin10}
+Let $V_{\mathrm{eff}}$ denote the Coleman--Weinberg effective potential about
+$\orderparam_\star$ (Theorem~\ref{thm:rp}). Write Jordan fluctuations
+$\delta\orderparam\in\mathbf{27}=\mathbf{1}\oplus\mathbf{10}\oplus\mathbf{16}$
+(Theorem~\ref{thm:partition}) and restrict to the observer diagonal
+$\mathfrak{d}$ as in \eqref{eq:breaking-hess-iota}. After radiative lifting,
+each $\Hess_\iota V_{\mathrm{eff}}(\orderparam_\star)$ is
+$H$-equivariant on its $\iota$-cell. Under the standard $\Spin(10)$ branching
+\begin{equation}\label{eq:breaking-adjoint-branch}
+  \mathbf{78}
+  \;=\;
+  \mathbf{45}\oplus\mathbf{1}\oplus\mathbf{16}\oplus\overline{\mathbf{16}},
+  \qquad
+  \mathbf{27}=\mathbf{1}\oplus\mathbf{10}\oplus\mathbf{16},
+\end{equation}
+and the observer projector $\Pi_{\sigma=-1}$, unstable directions classify as
+follows:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item $\iota=3$ ($\mathbf{16}$-sector, capacity weight $16/27$): unstable
+    modes lie in $\mathbf{16}_{-3}$ and embed in the adjoint
+    $\mathbf{16}\subset\mathbf{78}$; they couple to the $\mathbf{45}$ adjoint
+    orbit of $\Spin(10)$.
+  \item $\iota=2$ ($\mathbf{10}$-sector, weight $10/27$): unstable modes lie in
+    $\mathbf{10}_{-2}\subset\mathbf{27}$ and embed in the antisymmetric
+    $\mathbf{126}$ via $\mathbf{16}\times\mathbf{16}\supset\mathbf{126}$
+    (with $\overline{\mathbf{16}}$ suppressed by $\Pi_{\sigma=-1}$).
+  \item $\iota=1$ ($\mathbf{1}$-sector, weight $1/27$): unstable trace modes
+    couple to the $\mathbf{10}$ fundamental through the Yukawa portal
+    $\mathbf{16}\times\mathbf{16}\times\mathbf{10}$ and the residual
+    $\mathbf{10}\subset\mathbf{27}$ block.
+\end{enumerate}
+Mirror partners $\overline{\mathbf{16}}_{+3}$ do not appear in the unstable
+spectrum of the observable sector.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+$V_{\mathrm{eff}}$ is $H$-invariant, so each $\Hess_\iota V_{\mathrm{eff}}$ is
+an $H$-intertwiner on the $\iota$-cell. The capacity partition aligns
+$\iota=1,2,3$ with the $\mathbf{1}$, $\mathbf{10}$, $\mathbf{16}$ blocks of
+$\mathbf{27}$ (Proposition~\ref{prop:above-below}). Items (i)--(iii) follow
+from \eqref{eq:breaking-adjoint-branch}, the standard $\Spin(10)$ tensor
+products $\mathbf{16}\times\mathbf{16}=\mathbf{1}\oplus\mathbf{45}\oplus
+\mathbf{126}$ and $\mathbf{16}\times\mathbf{10}=\mathbf{16}\oplus\mathbf{144}$,
+and Proposition~\ref{prop:breaking-chiral}.
+\end{proof}
+
+\begin{proposition}[Higgs labels from $\mathbf{27}$-sector Hessians]
+\label{prop:breaking-higgs-labels}
+Under Lemma~\ref{lem:breaking-hess-spin10}, radiatively unstable
+$\Hess_\iota V_{\mathrm{eff}}$ directions map to observable Higgs multiplets
+of the $\Spin(10)$ chain:
+\begin{equation}\label{eq:breaking-higgs-map}
+  \Hess_3 V_{\mathrm{eff}}\;\longmapsto\;\Phi_{\mathbf{45}}\in\mathbf{45}_H,
+  \qquad
+  \Hess_2 V_{\mathrm{eff}}\;\longmapsto\;\Phi_{\mathbf{126}}\in\mathbf{126}_H,
+  \qquad
+  \Hess_1 V_{\mathrm{eff}}\;\longmapsto\;\Phi_{\mathbf{10}}\in\mathbf{10}_H.
+\end{equation}
+Each label is the $\Pi_{\sigma=-1}$-projected unstable mode of the
+corresponding $\mathbf{27}$ block, with capacity weight
+$w_\iota\in\{1/27,10/27,16/27\}$ fixing the relative scale of the induced
+VEV along $g_\iota$.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+The $\mathbf{45}_H$ identification uses the adjoint embedding
+$\mathbf{16}\subset\mathbf{78}$: an $\iota=3$ fluctuation is a
+$\Spin(10)$-breaking direction in $\mathfrak{so}_{10}$. The $\mathbf{126}_H$
+identification uses $\mathbf{16}\times\mathbf{16}\supset\mathbf{126}$ on the
+$\iota=2$ cell. The $\mathbf{10}_H$ identification follows from the residual
+$\mathbf{10}$ block at $\iota=1$ and the cubic portal
+$\mathbf{16}\times\mathbf{16}\times\mathbf{10}$. Capacity weights set the
+ordering of instability thresholds along the lifetime chart.
+\end{proof}
+
+\begin{theorem}[Second breaking, conditional]\label{thm:breaking-so10su5}
+Assume Theorem~\ref{thm:breaking-e6so10} and a $\Spin(10)\times U(1)$
+intermediate vacuum. If Coleman--Weinberg lifting produces an unstable
+$\Hess_3 V_{\mathrm{eff}}$ mode on the $\iota=3$ cell---the
+$\mathbf{16}$-sector with largest capacity weight $16/27$---then gradient flow
+of $V$ along $g_3$ triggers
+\begin{equation}\label{eq:breaking-so10su5}
+  \Spin(10)\times U(1)\;\longrightarrow\;\mathrm{SU}(5)\times U(1)_X,
+\end{equation}
+with Higgs fluctuation $\Phi_{\mathbf{45}}\in\mathbf{45}_H$ of
+Proposition~\ref{prop:breaking-higgs-labels}. The residual gauge algebra is
+$\mathfrak{su}_5\oplus\mathfrak{u}_1$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The $\iota=3$ unstable mode lies in $\mathbf{16}_{-3}$ and embeds in
+$\mathbf{45}\subset\mathbf{78}$ (Lemma~\ref{lem:breaking-hess-spin10}(i)).
+Flow along $\Phi_{\mathbf{45}}$ aligns the vacuum with a $\mathrm{SU}(5)$
+subalgebra of $\mathfrak{so}_{10}$; the standard branching
+$\mathbf{45}\to\mathbf{24}\oplus\mathbf{1}\oplus\cdots$ under
+$\mathrm{SU}(5)\times U(1)_X$ matches Georgi--Glashow
+$\Spin(10)\to\mathrm{SU}(5)\times U(1)_X$~\cite{GeorgiGlashow1974}. The
+$16/27$ weight dominates the $\iota=2$ and $\iota=1$ thresholds, so this is
+the second step after \eqref{eq:breaking-e6so10}.
+\end{proof}
+
+\begin{theorem}[Electroweak breaking, sketch]\label{thm:breaking-ew}
+Assume Theorems~\ref{thm:breaking-so10su5} and a subsequent
+$\mathrm{SU}(5)\to\mathrm{SU}(3)_c\times\mathrm{SU}(2)_L\times U(1)_Y$
+stage driven by $\Phi_{\mathbf{126}}\in\mathbf{126}_H$ on the $\iota=2$ cell.
+If radiative lifting yields an unstable $\Hess_1 V_{\mathrm{eff}}$ mode on the
+$\iota=1$ cell, then gradient flow along $g_1$ with
+$\Phi_{\mathbf{10}}\in\mathbf{10}_H$ triggers
+\begin{equation}\label{eq:breaking-ew}
+  \mathrm{SU}(2)_L\times U(1)_Y
+  \;\longrightarrow\;
+  U(1)_{\mathrm{em}},
+\end{equation}
+with $\mathrm{SU}(3)_c$ unbroken. The electroweak scale is set by the
+$1/27$ capacity weight on the final $\iota=1$ breaking stage.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+$\mathbf{10}_H$ contains the $\mathrm{SU}(5)$ Higgs doublet
+$\mathbf{5}\oplus\overline{\mathbf{5}}$; an $\iota=1$ fluctuation in
+$\Phi_{\mathbf{10}}$ breaks the electroweak subgroup while leaving
+$\mathrm{SU}(3)_c$ intact. The ordering $\iota=3\to2\to1$ follows capacity
+weights $(16/27,10/27,1/27)$; the electroweak step is last because the
+$\mathbf{1}$-sector carries the smallest weight.
+\end{proof}
+
 \begin{conjecture}[Derived GUT--Higgs chain]\label{conj:breaking-derived}
 Sequential $\iota$-restricted gradient flow on the $28$ radiatively massive
-coset directions (Coleman--Weinberg, as in Theorem~\ref{thm:rp}) triggers the
-full chain
+coset directions (Coleman--Weinberg, as in Theorem~\ref{thm:rp}) realizes the
+staged chain
 \begin{equation}\label{eq:breaking-chain}
   \E{6}\to\Spin(10)\times U(1)\to SU(5)\to SU(3)_c\times SU(2)_L\times U(1)_Y
   \to SU(3)_c\times U(1)_{\mathrm{em}}
 \end{equation}
-with observable Higgs content $\mathbf{45}_H$, $\mathbf{126}_H$, $\mathbf{10}_H$
-realized as unstable $\Hess V$ directions in the $\mathbf{27}$-sector of
-Theorem~\ref{thm:partition}, filtered through $\Pi_{\sigma=-1}$. Yukawa
-matrices $y_{ij}$ arise from cubic overlap integrals
+as follows:
+\begin{enumerate}[label=\textbf{(\arabic*)},leftmargin=*]
+  \item \textbf{$\E{6}\to\Spin(10)\times U(1)$} --- any $\iota$-cell unstable
+    $\mathbf{16}$ mode (Theorem~\ref{thm:breaking-e6so10}).
+  \item \textbf{$\Spin(10)\to\mathrm{SU}(5)\times U(1)_X$} --- $\iota=3$
+    $\mathbf{45}_H$ direction, largest weight $16/27$
+    (Theorem~\ref{thm:breaking-so10su5}).
+  \item \textbf{$\mathrm{SU}(5)\to\mathrm{SU}(3)_c\times\mathrm{SU}(2)_L
+    \times U(1)_Y$} --- $\iota=2$ $\mathbf{126}_H$ direction, weight $10/27$
+    (Lemma~\ref{lem:breaking-hess-spin10}(ii),
+    Proposition~\ref{prop:breaking-higgs-labels}).
+  \item \textbf{Electroweak} --- $\iota=1$ $\mathbf{10}_H$ direction, weight
+    $1/27$ (Theorem~\ref{thm:breaking-ew}).
+\end{enumerate}
+Observable Higgs content $\mathbf{45}_H$, $\mathbf{126}_H$, $\mathbf{10}_H$ is
+the $\Pi_{\sigma=-1}$-projected unstable spectrum of
+\eqref{eq:breaking-higgs-map}. Yukawa matrices $y_{ij}$ arise from cubic
+overlap integrals
 \begin{equation}\label{eq:breaking-yukawa}
   y_{ij}\;\propto\;\int_{\hat Q}\omega_\iota\wedge\omega_j\wedge\Phi_{\mathrm{Higgs}},
 \end{equation}
 of observer modes $|\omega_\iota\rangle$ on $\hat Q$
-(Definition~\ref{def:observer}) against Higgs fluctuations
-$\Phi_{\mathrm{Higgs}}$ drawn from the unstable Hessian spectrum.
+(Definition~\ref{def:observer}) against $\Phi_{\mathrm{Higgs}}\in\{\Phi_{\mathbf{45}},
+\Phi_{\mathbf{126}},\Phi_{\mathbf{10}}\}$. Section~\ref{sec:yukawa} develops
+the leading-order evaluation of \eqref{eq:breaking-yukawa}; the
+$\mathrm{SU}(5)\to$SM stage remains conjectural.
 \end{conjecture}
 
 \begin{conjecture}[GUT breaking]\label{conj:breaking}
@@ -534,7 +814,11 @@ Gradient flow of $V$ on $\iota$-restricted coset directions triggers
 \eqref{eq:breaking-chain} with Higgs content $\mathbf{45}_H$, $\mathbf{126}_H$,
 $\mathbf{10}_H$; Conjecture~\ref{conj:breaking-derived} supplies the
 observer-derived mechanism (Lemma~\ref{lem:breaking-hess},
-Proposition~\ref{prop:breaking-chiral}, Theorem~\ref{thm:breaking-e6so10}).
+Lemma~\ref{lem:breaking-hess-spin10},
+Proposition~\ref{prop:breaking-chiral},
+Proposition~\ref{prop:breaking-higgs-labels},
+Theorems~\ref{thm:breaking-e6so10},~\ref{thm:breaking-so10su5},
+~\ref{thm:breaking-ew}).
 \end{conjecture}
 
 \begin{remark}[As above, so below]\label{rem:breaking-above-below}

@@ -1,0 +1,237 @@
+%======================================================================%
+\section{Scale Identification}
+\label{sec:scales}
+%======================================================================%
+
+Theorem~\ref{thm:planck} and Theorem~\ref{thm:kappa} fix the \emph{form} of
+gravitational induction and the dimensionless UV coupling $\kappa_\star$, but
+not absolute energy units. This section closes derivation step \textbf{D3}
+(Section~\ref{sec:predictions:program}): map $(\mu,\kappa_\star,\MPl)$ to
+electroweak and Planck scales using observer-local FRG along admitted lifetime
+charts (Remark~\ref{rmk:observer-frg}, Definition~\ref{def:lifetime}). All
+GeV contacts below are \textbf{conditional} on Conjecture~\ref{conj:breaking}
+and the Sakharov truncation of Theorem~\ref{thm:planck}.
+
+%----------------------------------------------------------------------%
+\subsection{Electroweak scale from EIII breaking}
+\label{sec:scales:ew}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Electroweak scale, conditional]\label{def:ew-scale}
+Assume Conjecture~\ref{conj:breaking-derived} and the breaking chain
+\eqref{eq:breaking-chain}. Let $\mathbf{10}_H$ be the electroweak Higgs
+multiplet realized as an unstable $\Hess V$ direction in the
+$\mathbf{10}$-sector of Theorem~\ref{thm:partition}, filtered through
+$\Pi_{\sigma=-1}$. The \emph{electroweak scale} is the vacuum expectation
+value
+\begin{equation}\label{eq:ew-vev}
+  v \;:=\; \bigl|\langle \mathbf{10}_H\rangle\bigr|,
+\end{equation}
+at the step $SU(2)_L\times U(1)_Y\to U(1)_{\mathrm{em}}$ of
+\eqref{eq:breaking-chain}. The scale is \textbf{conditional}: void and mirror
+fix the symmetry pattern and Higgs \emph{representation content}; the numeric
+value of $v$ requires Yukawa overlap integrals \eqref{eq:breaking-yukawa}
+(derivation gap \textbf{D1}) and flavon RG (gap \textbf{D2}).
+\end{definition}
+
+\begin{remark}[Observer lifetime at electroweak breaking]
+\label{rmk:tau-ew}
+Fix observer index $\iota\in\mathcal{I}$ and an admitted lifetime chart
+$(\tau_\iota,g_\iota)$ of Definition~\ref{def:lifetime}. Write
+$\tau_{\mathrm{EW}}$ for the lifetime parameter at which the trajectory
+$g_\iota(\tau_\iota)$ crosses the electroweak breaking step of
+\eqref{eq:breaking-chain}, i.e.\ when the $\mathbf{10}_H$ fluctuation
+acquires VEV \eqref{eq:ew-vev}. The index--lifetime map
+(Theorem~\ref{thm:index-lifetime}) identifies $\tau_{\mathrm{EW}}$ as the
+\emph{below}-level avatar of capacity descent through the $10/27$ sector
+(Proposition~\ref{prop:flavon-sector}): electroweak breaking is not an
+external input but a stage along $g_\iota$, localized to slot $\iota$.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Sakharov Planck mass and $\mu$}
+\label{sec:scales:planck}
+%----------------------------------------------------------------------%
+
+\begin{proposition}[Induced Planck mass at $\mu\sim v$]
+\label{prop:planck-scale}
+In the heat-kernel truncation of Theorem~\ref{thm:planck}, with $28$ physical
+massive coset scalars of common Coleman--Weinberg mass $m^2=\mu^2$ and UV
+cutoff $\Lambda$,
+\begin{equation}\label{eq:planck-explicit}
+  \MPl^2
+  \;=\;
+  \frac{28}{6}\cdot\frac{\mu^2}{16\pi^2}
+  \log\frac{\Lambda^2}{\mu^2}
+  \;>\;0.
+\end{equation}
+If Conjecture~\ref{conj:breaking} holds and the radiative mass $\mu$ is
+identified with the electroweak scale $v$ of Definition~\ref{def:ew-scale}
+at $\tau_{\mathrm{EW}}$ (Proposition~\ref{prop:mu-lifetime}), then
+\eqref{eq:planck-explicit} is a \textbf{conditional} contact formula:
+\begin{equation}\label{eq:planck-v}
+  \MPl^2
+  \;\sim\;
+  \frac{28}{6}\cdot\frac{v^2}{16\pi^2}
+  \log\frac{\Lambda^2}{v^2}.
+\end{equation}
+The UV cutoff $\Lambda$ is an environmental input of the observer-local FRG,
+not fixed by void and mirror alone.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+Expand the massive-mode $a_2$ heat-kernel sum as in
+Theorem~\ref{thm:planck}: $28$ modes with $s_i=+1$ and $m_i^2=\mu^2$ yield
+the stated coefficient $28/(6\cdot16\pi^2)$. Matching $\mu$ to $v$ uses
+Proposition~\ref{prop:mu-lifetime}.
+\end{proof}
+
+\begin{proposition}[$\mu$ from observer lifetime flow at $\tau_{\mathrm{EW}}$]
+\label{prop:mu-lifetime}
+Fix $\iota\in\mathcal{I}$ and an admitted chart $g_\iota$ satisfying
+\eqref{eq:lifetime-admitted}. Along the $\iota$-restricted gradient flow,
+the Coleman--Weinberg scale $\mu$ of Theorem~\ref{thm:rp} is the
+\emph{observer-local} mass parameter of the $28$ coset scalars evaluated on
+the trajectory at electroweak breaking:
+\begin{equation}\label{eq:mu-tau-ew}
+  \mu^2
+  \;=\;
+  \frac{1}{28}\sum_{a=1}^{28}
+  \left.\frac{\partial^2 V}{\partial\varphi_a^2}\right|_{g_\iota(\tau_{\mathrm{EW}})},
+\end{equation}
+where $\varphi_a$ are coset coordinates orthogonal to the four soldering
+directions of Theorem~\ref{thm:planck}. In the observer-local FRG of
+Remark~\ref{rmk:observer-frg}, the matching condition at scale $k=v$ is
+\begin{equation}\label{eq:mu-match}
+  \mu\;\equiv\;v
+  \qquad\text{at}\qquad
+  \tau_\iota=\tau_{\mathrm{EW}},
+\end{equation}
+so Sakharov induction \eqref{eq:planck-explicit} is anchored to the same
+lifetime stage that defines the Higgs VEV \eqref{eq:ew-vev}. This partially
+closes \textbf{D3}: $\mu$ is not a free parameter but the radiative curvature
+of $V$ along $g_\iota$ at electroweak breaking.
+\end{proposition}
+
+\begin{remark}[$\kappa_\star$ as dimensionless UV organizing point]
+\label{rmk:kappa-star-organizing}
+Theorem~\ref{thm:kappa} gives the dimensionless fixed point
+\begin{equation}\label{eq:kappa-star-value}
+  \kappa_\star \;=\; \frac{96\pi^2}{5} \;\approx\; 189.6,
+\end{equation}
+independent of $\mu$, $v$, and $\Lambda$. It is the UV \emph{organizing}
+coupling of the one-loop truncation: at $k\to\infty$,
+$\kappa(k)\to\kappa_\star$ while $\MPl(k)$ and $\mu(k)$ carry dimension.
+Physical units enter only through matching conditions such as
+\eqref{eq:mu-match} at $\tau_{\mathrm{EW}}$. Thus $\kappa_\star$ is an exact
+T1 benchmark (Table~\ref{tab:predictions-T1}); $\MPl$ in GeV is T3/conditional
+until \eqref{eq:planck-v} is closed with a derived $\Lambda$ from
+observer-local FRG.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Scale contact table}
+\label{sec:scales:table}
+%----------------------------------------------------------------------%
+
+\begin{table}[ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Quantity} & \textbf{Theory anchor} & \textbf{Scale (GeV)} &
+\textbf{Status} \\
+\midrule
+$v$ &
+  Def.~\ref{def:ew-scale}, $\langle\mathbf{10}_H\rangle$ &
+  $\approx 246$ &
+  Conditional (D1, D2) \\
+$\mu$ &
+  Prop.~\ref{prop:mu-lifetime}, $\tau_{\mathrm{EW}}$ &
+  $\mu\equiv v$ &
+  Conditional (D3) \\
+$\MPl$ &
+  \eqref{eq:planck-explicit}, Sakharov &
+  $\approx 1.2\times 10^{19}$ &
+  Conditional ($\Lambda$ input) \\
+$\Lambda$ &
+  Observer-local FRG cutoff &
+  $\gtrsim v$ (open) &
+  Environmental \\
+$\kappa_\star$ &
+  Thm.~\ref{thm:kappa}, \eqref{eq:kappa-star-value} &
+  dimensionless $\approx 190$ &
+  T1 exact \\
+$M_{\mathrm{GUT}}$ &
+  Pred.~\ref{pred:gut}, Conj.~\ref{conj:breaking-derived} &
+  $\sim 10^{16}$--$10^{17}$ &
+  Conditional \\
+\bottomrule
+\end{tabular}
+\caption{Scale identification map (honest status). PDG 2026 values for $v$ and
+$\MPl$ are external contacts; SJET supplies relations among theory quantities,
+not precision fits until D1--D3 close.}
+\label{tab:scale-map}
+\end{table}
+
+\begin{remark}[Planck matching with PDG $v$]
+Taking $v=246\,\mathrm{GeV}$ and $\MPl=1.22\times 10^{19}\,\mathrm{GeV}$
+(PDG reduced Planck mass convention), \eqref{eq:planck-v} implies
+\begin{equation}\label{eq:Lambda-solve}
+  \log\frac{\Lambda^2}{v^2}
+  \;\approx\;
+  \frac{6\cdot16\pi^2}{28}\cdot\frac{\MPl^2}{v^2}
+  \;\sim\; 10^{32},
+\end{equation}
+so $\Lambda\sim 10^{16+\delta}\,\mathrm{GeV}$ with $\delta\sim\mathcal{O}(1)$
+from scheme and two-loop corrections. This is \emph{consistent} with a GUT-scale
+cutoff (Prediction~\ref{pred:gut}) but not \emph{derived}: $\Lambda$ remains
+an FRG environmental input until curved-background flow
+(Conjecture~\ref{conj:kappa}) fixes the observer-local trajectory.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsection{Contact with predictions and Muon $g$-2}
+\label{sec:scales:contact}
+%----------------------------------------------------------------------%
+
+\begin{proposition}[D3 closure criterion]
+\label{prop:d3-closure}
+Derivation step \textbf{D3} (Section~\ref{sec:predictions:program}) is
+\emph{closed} when:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item Conjecture~\ref{conj:breaking-derived} supplies
+    $\tau_{\mathrm{EW}}$ and $v$ from $V$ without postulates;
+  \item Proposition~\ref{prop:mu-lifetime} fixes $\mu\equiv v$ along
+    $g_\iota$ at $\tau_{\mathrm{EW}}$;
+  \item observer-local FRG (Remark~\ref{rmk:observer-frg}) determines
+    $\Lambda$ or equivalently the $\MPl$--$v$ hierarchy from
+    \eqref{eq:planck-explicit} and $\kappa_\star$.
+\end{enumerate}
+Until then, Table~\ref{tab:scale-map} records conditional contacts; T1
+predictions ($\kappa_\star$, $b_0$, $n_F$) remain the primary falsifiers.
+\end{proposition}
+
+\begin{remark}[Muon $g$-2 and scale identification]
+\label{rmk:g2-scales}
+Fermilab reports $a_\mu=0.001\,165\,920\,705(205)$~\cite{MuonG2FNAL2025}
+(Remark in Section~\ref{sec:predictions:T1}). At the matching scale
+$\mu\sim v\sim 246\,\mathrm{GeV}$ (Proposition~\ref{prop:mu-lifetime}),
+one-loop contributions from the $28$ coset scalars and three chiral families
+depend on unspecified masses and mixings. SJET constrains the \emph{sector}
+not the absolute loop integral:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{T1:} $n_F=3$, $b_0=12$, $n_S=28$---no fourth family or extra
+    observable chiral multiplets;
+  \item \textbf{T2:} observer index $\iota=2$ carries capacity weight
+    $10/27$ (Prediction~\ref{pred:sector-ratios}), targeting muon-sector
+    dominance at leading order;
+  \item \textbf{Conditional (D3):} once $\mu\equiv v$ at $\tau_{\mathrm{EW}}$
+    is derived, $a_\mu$ becomes a precision test of flavon RG (D2) and
+    Yukawa overlaps (D1) at the electroweak scale, not a free-parameter fit.
+\end{itemize}
+\textbf{Contact:}
+$\mathcal{C}(a_\mu)=(a_\mu,\mathrm{Muon\ }g\text{-}2,\delta a_\mu)$ with
+$\delta a_\mu$ set by two-loop capacity flow on $V_F$ after D1--D3 close.
+\end{remark}

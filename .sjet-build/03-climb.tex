@@ -69,6 +69,13 @@ $\Mirror_{\mathrm{arith}}(\Oct)$ is $16$-dimensional and not division.
 On $\jalg$, the stabilizer tower is $G_2\subset F_4\subset\E{6}$. The
 Freudenthal diagonal $\mathfrak{M}(\Oct,\Oct)=\mathfrak{e}_8$ yields:
 
+\begin{lemma}[Freudenthal closure]\label{lem:freudenthal}
+Let $\mathfrak{M}(\Oct,\Oct)$ be the Freudenthal--Tits magic square entry for
+the octonion--octonion pair. Then $\mathfrak{M}(\Oct,\Oct)=\mathfrak{e}_8$,
+simply connected, and contains $G_2\times F_4\subset\E{8}$ as the stabilizer of
+the diagonal $\jalg$ chart~\cite{Freudenthal1954,Tits1966}.
+\end{lemma}
+
 \begin{theorem}[$\Mirror^6(\Void)=\E{8}$]\label{thm:e8}
 Automorphism mirror on the octonion--Jordan pair gives $\E{8}$, $d_6=248$.
 \end{theorem}
@@ -97,14 +104,30 @@ $n=7$ and only transported below by descent. Thus observer multiplicity is a
 seventh rung.
 \end{proposition}
 
-\begin{proof}[Proof sketch]
+\begin{proof}
+\emph{Minimality at $n\leq6$.}
 For $n\leq6$, $\Mirror^n(\Void)$ is a single simple Lie datum or division
-algebra; involution stabilizes within one chart, not across a heterotic pair.
-For $n=7$, $\sigma$ acts on $Q$ and antiholomorphically on $V_{16}$; the
-equivariant Lefschetz index on $H^1(Q,V_{16})$ counts three anti-invariant
-contributions (Section~\ref{sec:observer:fixed-point}). For $n=8$,
-$\Pi_{\mathrm{het}}:\E{8}\times\E{8}\to\E{6}$ preserves the slot basis on
-$\hat Q$ while reducing the gauge group.
+algebra. Involution stabilizes within one chart (automorphism mirror at $n=6$),
+not across a heterotic pair. The cellular graph has no product-mirror
+$\mathbb{Z}_2$ quotient with three independent $\mathbf{16}$-cells
+(Definition~\ref{def:tower7} exists only at $n=7$), so
+$\dim H^1(\hat Q,V_{16})^{\sigma=-1}$ is undefined and
+$\Pi_{\sigma=-1}$ has no observer sector
+(Section~\ref{sec:observer:definition}).
+
+\emph{Existence at $n=7$.}
+Product mirror gives $\E{8}\times\E{8}$ with involution
+$\sigma:(g_1,g_2)\mapsto(g_2,g_1)$. On $\mathcal{T}_7$,
+Lemma~\ref{lem:cellular} yields
+$\dim H^1(\mathcal{T}_7,\mathcal{F}_{16})^{\sigma=-1}=3$; Proposition~\ref{prop:stone-lift}
+and Theorem~\ref{thm:mirror-index} transport this to
+$\dim H^1(\hat Q,V_{16})^{\sigma=-1}=3$.
+
+\emph{Descent at $n=8$.}
+Cartan mirror $\Pi_{\mathrm{het}}:\E{8}\times\E{8}\to\E{6}$
+(Theorem~\ref{thm:e6}) reduces the gauge group but preserves the
+$\sigma$-anti-invariant slot basis on $\hat Q$: the three observer indices are
+fixed at the heterotic rung and only transported below by descent.
 \end{proof}
 
 \begin{theorem}[$\Mirror^8(\Void)=\E{6}$]\label{thm:e6}
@@ -116,37 +139,48 @@ $H=\Spin(10)\times U(1)$, $\mathcal{M}=\E{6}/H$ (EIII), $\dim\mathcal{M}=32$.
 \emph{$E_8$ (Steps 1--3).}
 \emph{(i)} On $\jalg$, the stabilizer tower $G_2\subset F_4\subset\E{6}$ is
 mirror-refined; the octonion measure before Jordan projection carries an
-automorphism mirror $\Mirror_{\mathrm{aut}}$ coupling the two $\Oct$ sectors.
-\emph{(ii)} Freudenthal--Tits identifies
-$\mathfrak{M}(\Oct,\Oct)=\mathfrak{e}_8$ as the unique simply connected simple
-Lie algebra closed under this coupling; $G_2\times F_4\subset\E{8}$ is maximal
-among candidates containing the tower together with the mirrored octonion
-sector~\cite{Freudenthal1954,Tits1966}.
-\emph{(iii)} $d_6=248$; Stone chart dimension $\chi(S_6)=248$
+automorphism mirror $\Mirror_{\mathrm{aut}}$ coupling the two $\Oct$ sectors of
+\eqref{eq:matrix} (Appendix~\ref{sec:appendix:albert}).
+\emph{(ii)} Among simple Lie algebras containing $G_2\times F_4$ and closed
+under octonion--octonion coupling, Lemma~\ref{lem:freudenthal} identifies
+$\mathfrak{e}_8$ uniquely; this is classical Freudenthal--Tits data, not an
+independent SJET postulate. Mirror functoriality selects
+$\Mirror_{\mathrm{aut}}$ as mode~\textbf{M4} on Lie data at the first
+exceptional rung.
+\emph{(iii)} $d_6=\dim\E{8}=248$; Stone chart dimension $\chi(S_6)=248$
 (Definition~\ref{def:chart-dim}).
 
-\emph{$E_8\times E_8$ (Steps 1--2).}
+\emph{$E_8\times E_8$ (Steps 1--3).}
 \emph{(i)} Apply $\Mirror_{\mathrm{prod}}$ (Definition~\ref{def:prod-mirror})
 to the stabilized datum of Theorem~\ref{thm:e8}; functoriality of $\Mirror$
-gives $\Mirror^7(\Void)=\Mirror(\Mirror^6(\Void))\cong\E{8}\times\E{8}$.
-\emph{(ii)} $d_7=2\cdot248=496$; involutivity
-(Proposition~\ref{prop:mirror:involution}) holds factorwise, with $\sigma$
-implementing $\Mirror^2\cong\mathrm{id}$ up to diagonal gauge.
+(Definition~\ref{def:mirror}) gives
+$\Mirror^7(\Void)=\Mirror(\Mirror^6(\Void))\cong\E{8}\times\E{8}$.
+\emph{(ii)} At a simple exceptional rung, product mirror is the unique
+\textbf{M4} doubling compatible with involution
+(Proposition~\ref{prop:mirror:involution}); no smaller Lie datum carries a
+heterotic $\mathbb{Z}_2$ quotient.
+\emph{(iii)} $d_7=2\cdot248=496$; $\sigma:(g_1,g_2)\mapsto(g_2,g_1)$
+implements $\Mirror^2\cong\mathrm{id}$ up to diagonal gauge on
+$\delta(\E{8})\subset\E{8}\times\E{8}$.
 
-\emph{$E_6$ (Steps 1--3).}
+\emph{$E_6$ (Steps 1--4).}
 \emph{(i)} On $\E{8}\times\E{8}$, the diagonal embedding
 $\delta:\E{8}\hookrightarrow\E{8}\times\E{8}$ is the $\sigma$-stabilized
-subgroup; $\mathrm{Bal}_{\mathcal{C}}$ on $\mathcal{G}_{\mathrm{Albert}}$ at
+subgroup. $\mathrm{Bal}_{\mathcal{C}}$ on $\mathcal{G}_{\mathrm{Albert}}$ at
 the $\jalg$ rung fixes the $1|10|16$ partition
 (Theorem~\ref{thm:partition}).
 \emph{(ii)} Among exceptional groups, only $\E{6}$ admits
 $H=\Spin(10)\times U(1)$ with branching
 $\mathbf{27}=\mathbf{1}\oplus\mathbf{10}\oplus\mathbf{16}$ and coset mirror
-$\mathbf{16}\leftrightarrow\overline{\mathbf{16}}$; heterotic collapse is
-indexed by the rank-$3$ diagonal of $\jalg$, not by the two $\E{8}$ factors
-(Proposition~\ref{prop:climb:minimal-heterotic}).
+$\mathbf{16}\leftrightarrow\overline{\mathbf{16}}$; this branching is
+classical~\cite{SpringerVeldkamp2000}. Cartan mirror selects $\E{6}$ as the
+capacity-balanced collapse indexed by the rank-$3$ diagonal of $\jalg$, not by
+the two $\E{8}$ factors alone (Proposition~\ref{prop:climb:minimal-heterotic}).
 \emph{(iii)} $d_8=\dim\E{6}=78$, $\mathcal{M}=\E{6}/H$ (EIII),
 $\dim\mathcal{M}=32$.
+\emph{(iv)} Descent preserves the three observer slots on $\hat Q$
+(Proposition~\ref{prop:stone-lift}); dynamics below $n=7$ does not regenerate
+them.
 \end{proof}
 
 \begin{proposition}[Exceptional mirror steps]\label{prop:climb:exceptional}

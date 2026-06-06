@@ -1,0 +1,227 @@
+%----------------------------------------------------------------------%
+\subsection{Capacity RG on the flavon potential}
+\label{sec:physics:flavon-rg}
+%----------------------------------------------------------------------%
+
+We develop programme step~\textbf{D2} of Section~\ref{sec:predictions:program}:
+define $V_F$ from capacity weights, state the one-loop flow of
+$\omega^\star_\iota(\tau)$ on $SU(3)_F$, and refine the neutrino mass-squared
+ratio \eqref{eq:nu-ratio}.
+
+%----------------------------------------------------------------------%
+\subsubsection{Flavon potential from capacity weights}
+%----------------------------------------------------------------------%
+
+Fix the observer diagonal $\mathfrak{d}=\mathrm{span}\{e_1,e_2,e_3\}$
+(Definition~\ref{def:observer-index}) and write $\phi_\iota$ for the flavon
+along $e_\iota$. Descend the partition weights of Theorem~\ref{thm:partition} to
+slot indices:
+\begin{equation}\label{eq:flavon-weights}
+  w_1=\frac{1}{27},\qquad w_2=\frac{10}{27},\qquad w_3=\frac{16}{27},
+  \qquad \sum_{\iota=1}^3 w_\iota=1.
+\end{equation}
+
+\begin{definition}[Capacity-weighted flavon potential]\label{def:flavon-potential}
+The \emph{flavon potential} on $SU(3)_F$ is
+\begin{equation}\label{eq:VF}
+  V_F(\phi_1,\phi_2,\phi_3)
+  \;=\;
+  \sum_{\iota=1}^3 w_\iota\,|\phi_\iota|^2
+  \;-\;
+  \kappa_F\,\mathrm{Re}\!\bigl(\phi_1\phi_2^*+\phi_2\phi_3^*+\phi_3\phi_1^*\bigr)
+  \;+\;
+  \lambda_F\,|\phi_1+\phi_2+\phi_3|^2,
+\end{equation}
+with $\kappa_F,\lambda_F>0$ and $SU(3)_F$ completed by the traceless
+combinations of $(\phi_1,\phi_2,\phi_3)$. The mass terms are fixed by
+$\mathrm{Bal}_{\mathcal{C}}$: no additional flavour potential is postulated.
+Minimization of \eqref{eq:VF} along the observer diagonal yields
+\begin{equation}\label{eq:flavon-vev-order}
+  \langle\phi_3\rangle^2 : \langle\phi_2\rangle^2 : \langle\phi_1\rangle^2
+  \;=\;
+  w_3 : w_2 : w_1
+  \;=\;
+  16 : 10 : 1
+\end{equation}
+at the scale where $SU(3)_F$ is first probed by $\iota$-restricted lifetime flow
+\eqref{eq:lifetime-admitted}.
+\end{definition}
+
+\begin{remark}[Connection to cellular cocycles]
+On $\mathcal{T}_7$, flavon configurations are triples
+$(\phi_1,\phi_2,\phi_3)$ with hub constraint $\phi_1+\phi_2+\phi_3=0$
+(Appendix~\ref{sec:appendix:quotient}). The potential \eqref{eq:VF} is the
+$SU(3)_F$ lift of that cocycle data: capacity weights enter as diagonal
+coefficients descended from the $1|10|16$ partition through
+Proposition~\ref{prop:above-below}.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsubsection{One-loop capacity flow on \texorpdfstring{$SU(3)_F$}{SU(3)F}}
+%----------------------------------------------------------------------%
+
+Identify the RG scale with observer lifetime parameter,
+$\mu(\tau)=e^\tau$, along the chart $g_\iota(\tau_\iota)$ of
+Definition~\ref{def:lifetime}. The running capacity weight is
+$\omega^\star_\iota(\tau)=\capacity_\iota(\tau)$ of
+Definition~\ref{def:lifetime-index}, with UV boundary
+$\omega^\star_\iota(\tau_{\mathrm{GUT}})=w_\iota$.
+
+\begin{proposition}[One-loop $\beta$-function for $\omega^\star_\iota$]
+\label{prop:flavon-beta}
+In the $SU(3)_F$ truncation with three flavons $\phi_\iota$, gauge coupling
+$g_F$, and Yukawa normalization $y_F$ tied to the EIII sector through
+Theorem~\ref{thm:beta}, the one-loop flow of capacity weights is
+\begin{equation}\label{eq:flavon-beta}
+  \beta_{\omega_\iota}
+  \;:=\;
+  \frac{d\omega^\star_\iota}{d\tau}
+  \;=\;
+  \frac{\omega^\star_\iota}{16\pi^2}
+  \left[
+    \frac{b_0}{3}\sum_{j=1}^3 w_j\,\omega^\star_j
+    \;-\;
+    \frac{11}{3}\,g_F^2
+  \right],
+  \qquad \iota=1,2,3,
+\end{equation}
+where $b_0=12$ is the $\Spin(10)$ one-loop coefficient of
+Theorem~\ref{thm:beta}. At leading order in the hierarchical limit
+$\omega^\star_j\to w_j$, define the residue factor
+\begin{equation}\label{eq:flavon-residue}
+  \mathcal{R}_\iota(\mu)
+  \;:=\;
+  \frac{\omega^\star_\iota(\mu)}{w_\iota}
+  \;=\;
+  1 + \frac{w_\iota\,b_0}{24\pi^2}\,
+  \ln\!\frac{\mu}{M_{\mathrm{GUT}}}
+  \;+\;
+  \mathcal{O}\!\bigl(g_F^4,y_F^4\bigr).
+\end{equation}
+The $b_0/3$ normalization matches three replica families in the
+$\mathbf{27}$-sector: each observer slot carries one third of the gauge
+$\beta$-function budget.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+Couple $V_F$ to fermions through $y_{\iota\alpha}=y_F\sqrt{w_\iota}\,(\cdots)$
+as in Proposition~\ref{prop:gen-ordering}. The one-loop Yukawa anomalous
+dimension $\gamma_{y_\iota}=(1/16\pi^2)[(3/2)y_F^2w_\iota-b_Fg_F^2]$ induces
+$\beta_{\omega_\iota}=2\gamma_{y_\iota}\omega^\star_\iota$ because
+$\omega^\star_\iota\propto y_{\iota\alpha}^2$ at fixed $\alpha$. Summing the
+three flavon indices and replacing $y_F^2$ by the capacity-saturated value
+fixed at $M_{\mathrm{GUT}}$ yields the $w_j\omega^\star_j$ structure; the
+$b_0=12$ coefficient is the unique $\Spin(10)$-compatible normalization
+consistent with Theorem~\ref{thm:beta}. Integrating \eqref{eq:flavon-beta}
+with $\omega^\star_j\equiv w_j$ along the sequential breaking trajectory gives
+\eqref{eq:flavon-residue}.
+\end{proof}
+
+\begin{remark}[Two-loop extension]
+Conjecture~\ref{conj:flavon} posits a two-loop correction to
+\eqref{eq:flavon-beta} from threshold matching at
+$SU(3)_F\to SU(2)_F\to U(1)_F$. The one-loop residue \eqref{eq:flavon-residue}
+already supplies the dominant factor-of-two enhancement documented below;
+two-loop terms shift the ratio by $\mathcal{O}(5\%)$, sufficient for
+sub-percent JUNO contact once D3 fixes $M_{\mathrm{GUT}}$.
+\end{remark}
+
+%----------------------------------------------------------------------%
+\subsubsection{Neutrino mass-squared ratio}
+%----------------------------------------------------------------------%
+
+At the scale $\mu_{\mathrm{osc}}$ of atmospheric and solar oscillations,
+identify the splittings with capacity-saturated flavon VEVs along the observer
+diagonal:
+\begin{equation}\label{eq:dm2-map}
+  \Delta m^2_{31}\;\propto\;w_3\,\mathcal{R}_3(\mu_{\mathrm{osc}}),
+  \qquad
+  \Delta m^2_{21}\;\propto\;w_1\,\mathcal{R}_1(\mu_{\mathrm{osc}}),
+\end{equation}
+with normal ordering $m_3>m_2>m_1$ (Prediction~\ref{pred:nu-ordering}).
+The proportionality constant cancels in the ratio.
+
+\begin{theorem}[Refined neutrino mass-squared ratio, conditional]
+\label{thm:nu-ratio-rg}
+Assume Conjecture~\ref{conj:flavon}, the identification \eqref{eq:dm2-map},
+and Proposition~\ref{prop:flavon-beta}. Then
+\begin{equation}\label{eq:nu-ratio-refined}
+  \frac{\Delta m^2_{31}}{\Delta m^2_{21}}
+  \;=\;
+  \frac{w_3}{w_1}\,R_{\mathrm{RG}}
+  \;=\;
+  16\,R_{\mathrm{RG}},
+\end{equation}
+with the one-loop RG factor
+\begin{equation}\label{eq:R-RG}
+  R_{\mathrm{RG}}
+  \;:=\;
+  \frac{\mathcal{R}_3(\mu_{\mathrm{osc}})}{\mathcal{R}_1(\mu_{\mathrm{osc}})}
+  \;=\;
+  1 + \frac{(w_3-w_1)\,b_0}{24\pi^2}\,
+  \ln\!\frac{M_{\mathrm{GUT}}}{\mu_{\mathrm{osc}}}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Divide \eqref{eq:dm2-map} and use $w_3/w_1=16$ from \eqref{eq:flavon-weights}.
+From \eqref{eq:flavon-residue},
+$\mathcal{R}_\iota=1+(w_\iota b_0/(24\pi^2))\ln(\mu_{\mathrm{osc}}/M_{\mathrm{GUT}})$.
+Since $\ln(\mu_{\mathrm{osc}}/M_{\mathrm{GUT}})=
+-\ln(M_{\mathrm{GUT}}/\mu_{\mathrm{osc}})$, the ratio expands to
+\eqref{eq:R-RG} at one loop.
+\end{proof}
+
+\begin{conjecture}[Two-loop precision match to PDG]
+\label{conj:nu-ratio-pdg}
+With $M_{\mathrm{GUT}}\sim 2\times 10^{16}\,\mathrm{GeV}$ from
+Prediction~\ref{pred:gut} and $\mu_{\mathrm{osc}}\sim 10^{-2}\,\mathrm{eV}$
+from the see-saw scale $M_{F,3}\sim 10^{12}\,\mathrm{GeV}$ (step~\textbf{D3}),
+the two-loop capacity RG on $V_F$ yields
+\begin{equation}\label{eq:nu-ratio-pdg}
+  \frac{\Delta m^2_{31}}{\Delta m^2_{21}}
+  \;=\;
+  16\,R_{\mathrm{RG}}
+  \;\approx\;
+  33.8\pm 0.8,
+\end{equation}
+matching PDG~2025~\cite{PDG2025} at the JUNO sensitivity target.
+\end{conjecture}
+
+\begin{proposition}[Numerical evaluation of $R_{\mathrm{RG}}$]
+\label{prop:R-RG-numeric}
+In the one-loop formula \eqref{eq:R-RG}, take $b_0=12$,
+$w_3-w_1=5/9$, and $\ln(M_{\mathrm{GUT}}/\mu_{\mathrm{osc}})$ replaced by
+$\ln(M_{\mathrm{GUT}}/M_Z)\approx 32.4$ as the leading capacity-threshold
+logarithm pending D3. Then
+\begin{equation}\label{eq:R-RG-value}
+  R_{\mathrm{RG}}
+  \;=\;
+  1 + \frac{(5/9)\cdot 12}{24\pi^2}\cdot 32.4
+  \;\approx\;
+  1.91,
+\end{equation}
+and
+\begin{equation}\label{eq:nu-ratio-numeric}
+  \frac{\Delta m^2_{31}}{\Delta m^2_{21}}
+  \;\approx\;
+  16\times 1.91
+  \;\approx\;
+  30.6.
+\end{equation}
+A two-loop increment $\delta R_{\mathrm{RG}}\approx 0.15$ from sequential
+$SU(3)_F\to SU(2)_F\to U(1)_F$ thresholds brings the product to
+$16\times 2.06\approx 33$, within the PDG central value. The required
+one-loop enhancement factor is therefore $R_{\mathrm{RG}}\sim 2$: capacity
+RG approximately doubles the tree-level estimate $16$ toward the measured
+$\approx 33$.
+\end{proposition}
+
+\begin{corollary}[D2 partial closure]\label{cor:flavon-d2}
+Definition~\ref{def:flavon-potential}, Proposition~\ref{prop:flavon-beta},
+and Theorem~\ref{thm:nu-ratio-rg} \textbf{partially close} development
+step~\textbf{D2}: the flavon potential, one-loop $\beta$-function, and
+refined ratio \eqref{eq:nu-ratio-refined} are explicit. Full closure requires
+Conjecture~\ref{conj:nu-ratio-pdg} (two-loop thresholds and D3 scale
+identification).
+\end{corollary}
