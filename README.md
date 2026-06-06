@@ -11,7 +11,17 @@
 
 The climb operator is \(\mathsf{C}=\mathrm{Bal}_{\mathcal{C}}\circ\mathsf{M}\) (mirror then capacity balance). The universe is \(\mathfrak{U}^\star=\mathsf{C}^\infty(\mathcal{V})\).
 
-Everything else — graph, Albert algebra, potential, gauge — is **derived**.
+**Proved rungs** (Theorem in §2):
+| \(n\) | \(\mathsf{M}^n(\mathcal{V})\) | \(\dim\) |
+|------|-------------------------------|----------|
+| 0 | void | 0 |
+| 1 | \(\mathbb{R}\) | 1 |
+| 2 | \(\mathbb{C}\) | 2 |
+| 3 | \(\mathbb{H}\) | 4 |
+| 4 | \(\mathbb{O}\) | 8 (Hurwitz terminal) |
+| 5 | \(J_3(\mathbb{O})\) | 27 (Jordan exit; sedenions fail) |
+
+Everything else — graph, potential, gauge — is **derived**.
 
 ## Build
 

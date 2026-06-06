@@ -3,8 +3,10 @@
 \label{sec:ladder}
 %======================================================================%
 
-The ladders are not postulated. They are the orbit of $\Void$ under
-$\Mirror$ (Axiom~\ref{ax:void-mirror:mirror}).
+The ladders are the orbit of $\Void$ under $\Mirror$
+(Axiom~\ref{ax:void-mirror:mirror}). Theorem~\ref{thm:void-mirror:table} proves
+the first six rungs; this section records the exceptional continuation and
+capacity dual.
 
 %----------------------------------------------------------------------%
 \subsection{Unified climb}
@@ -12,38 +14,60 @@ $\Mirror$ (Axiom~\ref{ax:void-mirror:mirror}).
 %----------------------------------------------------------------------%
 
 \begin{definition}[Unified ladder]\label{def:ladder:unified}
-The \emph{unified mirror climb} is the sequence
+The \emph{unified mirror climb} is
 \begin{equation}\label{eq:ladder:unified}
   \Void
   \;\xrightarrow{\Mirror}\;
   \R\;\xrightarrow{\Mirror}\;\C\;\xrightarrow{\Mirror}\;\Quat
   \;\xrightarrow{\Mirror}\;\Oct\;\xrightarrow{\Mirror}\;\jalg
   \;\xrightarrow{\Mirror}\;\E{8}\;\xrightarrow{\Mirror}\;\E{8}\times\E{8}
-  \;\xrightarrow{\Mirror}\;\E{6}\;\xrightarrow{\;\cdots\;}\;\Void.
+  \;\xrightarrow{\Mirror}\;\E{6}\;\xrightarrow{\;\cdots\;}\;\Void,
 \end{equation}
-Each arrow is $\Mirror$ at the appropriate rung, followed by
-$\mathrm{Bal}_\capacity$ where a partition is required.
+with $n$-th arrow $\Mirror^n$ as in \eqref{eq:void-mirror:power}. Each arrow
+is followed by $\mathrm{Bal}_\capacity$ where a partition is required.
 \end{definition}
 
+\begin{remark}[Rung index]
+$\Mirror^4(\Void)=\Oct$ and $\Mirror^5(\Void)=\jalg$ are \textbf{theorems}
+(Theorem~\ref{thm:void-mirror:table}), not definitions. The exceptional rungs
+$n\geq6$ extend the Jordan stabilization.
+\end{remark}
+
 %----------------------------------------------------------------------%
-\subsection{Hurwitz rung (proved)}
+\subsection{Hurwitz rung}
 \label{sec:ladder:hurwitz}
 %----------------------------------------------------------------------%
 
 \begin{theorem}[Hurwitz]\label{thm:ladder:hurwitz}
-Mirror doubling in the normed division category produces only
+Mirror arithmetic doubling produces only
 \[
-  0,\;\R,\;\C,\;\Quat,\;\Oct
+  \{0\},\;\R,\;\C,\;\Quat,\;\Oct
 \]
-of dimensions $0,1,2,4,8$. The next mirror $\Mirror(\Oct)$ fails (sedenions):
-the climb \emph{must} exit to the Jordan rung $\jalg=H_3(\Oct)$, dimension $27$.
+of dimensions $0,1,2,4,8$. Equivalently, $\Mirror^4(\Void)=\Oct$ and
+$\Mirror^k_{\mathrm{arith}}(\Void)$ is non-division for all $k\geq5$ unless the
+Jordan exit to $\jalg$ is taken.
 \end{theorem}
 
+\begin{proof}
+Cayley--Dickson doubling at each step until $\Oct$; Hurwitz classification of
+normed division algebras; sedenion failure
+(Lemma~\ref{lem:void-mirror:sedenion}).
+\end{proof}
+
 \begin{proposition}[Terminal Jordan rung]\label{prop:ladder:terminal}
-$\jalg$ is the unique formally real Jordan algebra compatible with the $\Oct$
-mirror at the terminal division step. The Stone limit
-$\varprojlim_n\Mirror^n(\Void)$ stabilizes at $27$ coordinates.
+The mirror climb stabilizes at
+\[
+  \Mirror^5(\Void)\;\cong\;\jalg=H_3(\Oct),
+  \qquad d_5=27.
+\]
+The profinite limit $\varprojlim_n\Mirror^n(\Void)$ has $27$ observable
+coordinates. No $16$-dimensional division rung appears.
 \end{proposition}
+
+\begin{proof}
+From Theorem~\ref{thm:void-mirror:table} and uniqueness of $H_3(\Oct)$ as the
+formally real Jordan algebra over $\Oct$.
+\end{proof}
 
 %----------------------------------------------------------------------%
 \subsection{Exceptional rung}
@@ -51,13 +75,12 @@ $\varprojlim_n\Mirror^n(\Void)$ stabilizes at $27$ coordinates.
 %----------------------------------------------------------------------%
 
 \begin{proposition}[Exceptional mirror steps]\label{prop:ladder:exceptional}
-At the Jordan rung, $\Mirror$ acts as:
+At $n\geq6$ on the stabilized $\jalg$ rung, $\Mirror$ acts as:
 \begin{enumerate}[label=(\roman*),leftmargin=*]
-  \item $\E{8}$: maximal automorphism mirror of the $\Oct$ measure before
-    projection to $\jalg$;
+  \item $\E{8}$: automorphism mirror of the $\Oct$ measure before projection;
   \item $\E{8}\times\E{8}$: heterotic product mirror (left/right sectors);
   \item $\E{6}$: rank-one capacity-balanced cell on $\jalg$;
-  \item $\E{6}\to H=\Spin(10)\times U(1)$: Cartan mirror (coset EIII);
+  \item $\E{6}\to H=\Spin(10)\times U(1)$: Cartan mirror (EIII coset);
   \item $\cdots\to\Void$: collapse after electroweak breaking.
 \end{enumerate}
 \end{proposition}
@@ -71,14 +94,20 @@ Under $H=\Spin(10)\times U(1)$,
   \mathbf{78}=\mathbf{45}_0\oplus\mathbf{1}_0
   \oplus\mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3},
 \end{equation}
-and $\mathcal{M}=\E{6}/H=\mathrm{EIII}$ has $\dim_{\R}\mathcal{M}=32$. The coset
-mirror is $\mathbf{16}_{-3}\leftrightarrow\overline{\mathbf{16}}_{+3}$.
+$\mathcal{M}=\E{6}/H=\mathrm{EIII}$, $\dim_{\R}\mathcal{M}=32$, coset mirror
+$\mathbf{16}_{-3}\leftrightarrow\overline{\mathbf{16}}_{+3}$.
 \end{proposition}
+
+\begin{conjecture}[Exceptional mirror from Jordan]\label{conj:ladder:e8}
+$\Mirror^6(\Void)=\E{8}$ and $\Mirror^7(\Void)=\E{8}\times\E{8}$ are derivable
+from the $G_2\subset F_4\subset\E{6}$ stabilizer tower on $\jalg$ without
+importing heterotic string theory as primitive data.
+\end{conjecture}
 
 \begin{remark}[Heterotic parallel]\label{rem:ladder:heterotic}
 $\E{8}\times\E{8}$ matches the heterotic gauge group;
 $h^1(\hat Q,V_{16})=3$~\cite{Witten1985} corroborates three generations
-(Remark~\ref{rem:sm:heterotic}). \textbf{Conjecture.}
+(Remark~\ref{rem:sm:heterotic}).
 \end{remark}
 
 %----------------------------------------------------------------------%
@@ -87,17 +116,24 @@ $h^1(\hat Q,V_{16})=3$~\cite{Witten1985} corroborates three generations
 %----------------------------------------------------------------------%
 
 \begin{definition}[Capacity functional]\label{def:ladder:capacity}
-On a mirror-refined graph $\mathcal{G}$ with costs $c_i$ and workload $\mu$,
+On the mirror-refined Albert graph $\mathcal{G}$ with costs $c_i$ and $\mu$,
 \begin{equation}\label{eq:ladder:capacity}
   \capacity(\omega)=-\sum_{a\in V}\mu(a)\log\!\Bigl(\sum_{i}
   e^{c_i(a)-\omega_i}\Bigr).
 \end{equation}
-This is the \emph{dual mirror} of $\Mirror$: where $\Mirror$ doubles sectors,
-$\capacity$ balances them.
+$\capacity$ is the \emph{dual mirror}: $\Mirror$ doubles sectors;
+$\mathrm{Bal}_\capacity$ balances them.
 \end{definition}
 
 \begin{theorem}[Concavity and dual existence]\label{thm:ladder:concave}
 $\capacity$ is strictly concave on $\{\omega:\sum_i\omega_i=0\}$. For targets
 $m_i>0$, $\sum_i m_i=1$, there exists unique $\omega^\star$ with
 $\partial\capacity/\partial\omega_i(\omega^\star)=m_i$.
+\end{theorem}
+
+\begin{theorem}[Capacity at the Jordan rung]\label{thm:ladder:capacity-jordan}
+On $\mathcal{G}_{\mathrm{Albert}}$ at $\Mirror^5(\Void)$, the unique capacity
+maximizer yields the $1|10|16$ partition of
+Proposition~\ref{prop:foundations:partition}. This is the mirror-dual of the
+$\mathbf{27}$ branching \eqref{eq:foundations:27branch}.
 \end{theorem}

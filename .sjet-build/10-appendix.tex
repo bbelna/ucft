@@ -1,8 +1,39 @@
 %======================================================================%
 \appendix
-\section{Albert Algebra Identities}
+\section{Albert Algebra and Cayley--Dickson Mirror}
 \label{sec:appendix}
 %======================================================================%
+
+%----------------------------------------------------------------------%
+\subsection{Cayley--Dickson mirror}
+\label{sec:appendix:cayley}
+%----------------------------------------------------------------------%
+
+\begin{definition}[Cayley--Dickson doubling]\label{def:appendix:cd}
+Given a normed algebra $(D,\bar{\ },|\cdot|)$, the \emph{mirror double} is
+$D^{\Mirror}=D\oplus D$ with product
+\begin{equation}\label{eq:appendix:cd}
+  (x,y)\cdot(u,v)=(xu-\bar v\,y,\;vx+y\bar u),
+  \qquad \overline{(x,y)}=(\bar x,-y).
+\end{equation}
+Then $\dim D^{\Mirror}=2\dim D$ and $(x,y)\cdot\overline{(x,y)}=(|x|^2+|y|^2,0)$.
+\end{definition}
+
+\begin{proposition}[Mirror chain]\label{prop:appendix:cdchain}
+Starting from $\R$ with complex conjugation trivial,
+\begin{equation}
+  \R^{\Mirror}=\C,\quad
+  \C^{\Mirror}=\Quat,\quad
+  \Quat^{\Mirror}=\Oct,\quad
+  \Oct^{\Mirror}=\mathbb{S}\ (\text{sedenions, not division}).
+\end{equation}
+Dimensions $1,2,4,8,16$; only the first four are division algebras (Hurwitz).
+\end{proposition}
+
+\begin{proof}
+Direct computation of \eqref{eq:appendix:cd}; for $\mathbb{S}$, the pair
+$(0,e_{10})$ and $(e_3,0)$ multiply to zero in the standard sedenion basis.
+\end{proof}
 
 %----------------------------------------------------------------------%
 \subsection{Matrix model}
@@ -26,7 +57,7 @@ $\langle X,Y\rangle=\Tr(X\circ Y)$ and $Q(X)=\Tr(X^2)$.
 \label{sec:appendix:sharp}
 %----------------------------------------------------------------------%
 
-The cubic norm is $N(X)=\det X$ (octonionic determinant). The sharp map is
+The cubic norm is $N(X)=\det X$. The sharp map is
 \begin{equation}\label{eq:appendix:sharp}
 X^{\#}=\adj(X),\qquad X^{\#}\circ X=N(X)\,E,\qquad (X^{\#})^{\#}=N(X)\,X,
 \end{equation}
@@ -40,9 +71,8 @@ Thus $\rank X\leq1\iff X^{\#}=0$.
 \label{sec:appendix:freudenthal}
 %----------------------------------------------------------------------%
 
-For the quadratic adjoint $X\mapsto X^{\#}$,
 \begin{equation}
   (X\circ Y)^{\#}=(N(X)Y+N(Y)X-X^{\#}\circ Y^{\#}),
 \end{equation}
-which characterizes $\jalg$ among cubic vector spaces. Any $\E{6}$-invariant
-quartic vanishing on $\{X^{\#}=0\}$ is proportional to $\langle X^{\#},X^{\#}\rangle$.
+characterizing $\jalg$. Any $\E{6}$-invariant quartic vanishing on
+$\{X^{\#}=0\}$ is proportional to $\langle X^{\#},X^{\#}\rangle$.
